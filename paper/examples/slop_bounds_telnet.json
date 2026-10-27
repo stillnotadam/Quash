@@ -1,0 +1,6 @@
+{"id":"example-slop-telnet-overflow",
+ "target":{"project":"curl/curl","version":"8.23.0"},
+ "location":{"function":"suboption","file":"lib/telnet.c","decision_point":"copy into temp[2048]"},
+ "claim":{"family":"bounds",
+   "predicate":"TTYPE suboption string overflows the 2048-byte stack buffer",
+   "predicate_bound":{"var":"_17","op":">","cap":1000,"sink_line":996}}}

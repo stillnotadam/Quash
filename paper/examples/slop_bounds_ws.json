@@ -1,0 +1,6 @@
+{"id":"example-slop-ws-handshake-3392174",
+ "target":{"project":"curl/curl","version":"8.16.0"},
+ "location":{"function":"Curl_ws_request","file":"lib/ws.c","decision_point":"strcpy into keyval"},
+ "claim":{"family":"bounds",
+   "predicate":"base64 Sec-WebSocket-Key overflows the fixed keyval buffer",
+   "predicate_bound":{"var":"randlen.0_1","op":">","cap":39,"sink_line":1261}}}

@@ -1,0 +1,1493 @@
+[
+ {
+  "cve": "CVE-2026-107929",
+  "summary": "local interface connection reuse mixup",
+  "cwe": "CWE-488",
+  "git_fixed": [
+   "d37d79df1e01066417aff0a9e6bc675edad3edba"
+  ],
+  "fixed_versions": [
+   "8.14.3",
+   "8.16.2",
+   "8.20.2",
+   "8.23.0"
+  ],
+  "dims": [
+   "interface",
+   "host"
+  ],
+  "h1": "https://hackerone.com/reports/4099618",
+  "files": [
+   "lib/cf-socket.c",
+   "lib/setopt.c",
+   "lib/url.c"
+  ],
+  "funcs": [
+   "Curl_conn_free",
+   "Curl_parse_interface",
+   "Curl_socket_close",
+   "allocate_conn",
+   "bindlocal",
+   "setstropt_userpwd",
+   "url_match_connect_config"
+  ],
+  "fix_fields": [
+   "interface_opts",
+   "localport",
+   "localportrange"
+  ],
+  "parent": "048ebab40910e27fbe9e9528f163f9dd402bbfa6"
+ },
+ {
+  "cve": "CVE-2026-92389",
+  "summary": "TFTP direction confusion",
+  "cwe": "CWE-200",
+  "git_fixed": [
+   "63dd390fab905a239a97e2700532929343ebc4e9"
+  ],
+  "fixed_versions": [
+   "8.14.3",
+   "8.16.2",
+   "8.20.2",
+   "8.23.0"
+  ],
+  "dims": [
+   "service"
+  ],
+  "h1": "https://hackerone.com/reports/4022568",
+  "files": [
+   "lib/tftp.c"
+  ],
+  "funcs": [
+   "tftp_receive_packet",
+   "tftp_send_first",
+   "tftp_tx"
+  ],
+  "fix_fields": [],
+  "parent": "3a397f7a05a46521b2772670b92ffda53fe05598"
+ },
+ {
+  "cve": "CVE-2026-92388",
+  "summary": "FTP wildcard write callback mixup",
+  "cwe": "CWE-416",
+  "git_fixed": [
+   "ba8f8a7f27a5c5e19e4ef212b90b35a93559163e"
+  ],
+  "fixed_versions": [
+   "8.14.3",
+   "8.16.2",
+   "8.20.2",
+   "8.23.0"
+  ],
+  "dims": [
+   "service",
+   "host"
+  ],
+  "h1": "https://hackerone.com/reports/4022070",
+  "files": [
+   "lib/cw-out.c",
+   "lib/ftp.c",
+   "lib/ftplistparser.c"
+  ],
+  "funcs": [
+   "cw_get_writefunc",
+   "init_wc_data",
+   "parse_winnt",
+   "wc_statemach"
+  ],
+  "fix_fields": [
+   "wildcardmatch"
+  ],
+  "parent": "63dd390fab905a239a97e2700532929343ebc4e9"
+ },
+ {
+  "cve": "CVE-2026-86415",
+  "summary": "auto client cert connection reuse mixup",
+  "cwe": "CWE-201",
+  "git_fixed": [
+   "00271cfcb95b6481a1f91ce0a0dad5d64d2e89a9"
+  ],
+  "fixed_versions": [
+   "8.23.0"
+  ],
+  "dims": [
+   "credentials",
+   "tls",
+   "host"
+  ],
+  "h1": "https://hackerone.com/reports/3993870",
+  "files": [
+   "lib/vtls/schannel.c",
+   "lib/vtls/vtls_config.c"
+  ],
+  "funcs": [
+   "clone_ssl_primary_config",
+   "match_ssl_primary_config",
+   "schannel_acquire_credential_handle",
+   "schannel_connect_step1",
+   "ssl_easy_config_compl_options"
+  ],
+  "fix_fields": [
+   "auto_client_cert"
+  ],
+  "parent": "7c0c7ca57b9774bff5e17f8ecf00db0cf5d7b67b"
+ },
+ {
+  "cve": "CVE-2026-86411",
+  "summary": "FTP connection reuse inherits client-certificate",
+  "cwe": "CWE-488",
+  "git_fixed": [
+   "72352daba01ba8072b6c1c0254cb77860ed1ab06"
+  ],
+  "fixed_versions": [
+   "8.22.0"
+  ],
+  "dims": [
+   "credentials",
+   "tls",
+   "service"
+  ],
+  "h1": "https://hackerone.com/reports/3973190",
+  "files": [
+   "lib/url.c"
+  ],
+  "funcs": [
+   "url_match_ssl_use"
+  ],
+  "fix_fields": [],
+  "parent": "bdda3a268f0fd1a1bb4b16b9322aa6bc055b8e76"
+ },
+ {
+  "cve": "CVE-2026-87861",
+  "summary": "cross-origin reuse of a Negotiate connection",
+  "cwe": "CWE-201",
+  "git_fixed": [
+   "7c11f1a1bd53e2cd983fe153e45991302d097647"
+  ],
+  "fixed_versions": [
+   "8.23.0"
+  ],
+  "dims": [
+   "credentials",
+   "host"
+  ],
+  "h1": "https://hackerone.com/reports/3972094",
+  "files": [
+   "lib/conncache.c",
+   "lib/url.c"
+  ],
+  "funcs": [
+   "Curl_cpool_find",
+   "url_match_auth_nego",
+   "url_match_auth_ntlm",
+   "url_match_conn",
+   "url_match_http_multiplex",
+   "url_match_http_version",
+   "url_match_proxy_use",
+   "url_match_result"
+  ],
+  "fix_fields": [
+   "This",
+   "connection_id",
+   "lastconnect_id"
+  ],
+  "parent": "c0c4971fceb41f312065b96be623d24dcc399892"
+ },
+ {
+  "cve": "CVE-2026-80231",
+  "summary": "native CA store conn reuse",
+  "cwe": "CWE-488",
+  "git_fixed": [
+   "7be1e70cb6bcd83e130ecfe8cb91b6a7dcdeff42"
+  ],
+  "fixed_versions": [
+   "8.14.2",
+   "8.16.1",
+   "8.20.1",
+   "8.22.0"
+  ],
+  "dims": [
+   "tls",
+   "host"
+  ],
+  "h1": "https://hackerone.com/reports/3969368",
+  "files": [
+   "lib/vtls/gtls.c",
+   "lib/vtls/openssl.c",
+   "lib/vtls/rustls.c",
+   "lib/vtls/vtls_config.c",
+   "lib/vtls/wolfssl.c"
+  ],
+  "funcs": [
+   "Curl_gtls_client_trust_setup",
+   "Curl_ossl_check_peer_cert",
+   "Curl_ssl_easy_config_complete",
+   "Curl_ssl_setup_x509_store",
+   "Curl_wssl_setup_x509_store",
+   "clone_ssl_primary_config",
+   "cr_init_backend",
+   "gtls_populate_creds",
+   "gtls_verify_cert",
+   "match_ssl_primary_config",
+   "ossl_apply_session",
+   "ossl_load_trust_anchors",
+   "ssl_easy_config_compl_options",
+   "wssl_populate_x509_store"
+  ],
+  "fix_fields": [
+   "native_ca_store"
+  ],
+  "parent": "7ea37abc6ac0120ba5f6d94be8d196f7cf1506bb"
+ },
+ {
+  "cve": "CVE-2026-19931",
+  "summary": "Negotiate ambient user conn reuse",
+  "cwe": "CWE-488",
+  "git_fixed": [
+   "7103a93b05bc69ea98ed9d05d02fa9eeba533f2f"
+  ],
+  "fixed_versions": [
+   "8.14.2",
+   "8.16.1",
+   "8.20.1",
+   "8.22.0"
+  ],
+  "dims": [
+   "credentials",
+   "host"
+  ],
+  "h1": "https://hackerone.com/reports/3923520",
+  "files": [
+   "lib/conncache.c",
+   "lib/cshutdn.c",
+   "lib/curl_share.c",
+   "lib/curl_trc.c",
+   "lib/easy.c",
+   "lib/getinfo.c",
+   "lib/multi.c",
+   "lib/url.c"
+  ],
+  "funcs": [
+   "Curl_conn_meta_get",
+   "Curl_connect_only_attach",
+   "Curl_cpool_check_limits",
+   "Curl_cpool_conn_now_idle",
+   "Curl_cpool_conn_seems_healthy",
+   "Curl_cpool_destroy",
+   "Curl_cpool_do_locked",
+   "Curl_cpool_find",
+   "Curl_cshutdn_add",
+   "Curl_cshutdn_add_pollfds",
+   "Curl_cshutdn_add_waitfds",
+   "Curl_cshutdn_close_oldest",
+   "Curl_cshutdn_dest_count",
+   "Curl_cshutdn_destroy",
+   "Curl_cshutdn_init",
+   "Curl_cshutdn_setfds",
+   "Curl_cshutdn_terminate",
+   "Curl_detach_connection",
+   "Curl_easy_recv",
+   "Curl_multi_add_perform",
+   "Curl_multi_handle",
+   "Curl_multi_remove_handle",
+   "Curl_open",
+   "Curl_senddata",
+   "Curl_share_lock",
+   "Curl_share_unlock",
+   "conn_upkeep",
+   "cpool_bundle_free_entry",
+   "cpool_discard_conn",
+   "cpool_foreach",
+   "cpool_get_oldest_idle",
+   "cpool_reap_dead_cb",
+   "cshutdn_destroy_oldest",
+   "cshutdn_perform",
+   "cshutdn_run_once",
+   "cshutdn_terminate_all",
+   "cshutdn_wait",
+   "curl_easy_duphandle",
+   "curl_easy_reset",
+   "curl_multi_cleanup",
+   "curl_multi_fdset",
+   "curl_multi_setopt",
+   "curl_multi_waitfds",
+   "curl_share_cleanup",
+   "curl_share_setopt",
+   "easy_perform",
+   "getinfo_offt",
+   "is_finished",
+   "multi_done_locked",
+   "multi_runsingle",
+   "multi_wait",
+   "share_destroy",
+   "url_allow_sspi_empty_creds",
+   "url_attach_existing",
+   "url_find_or_create_conn",
+   "url_match_conn",
+   "url_match_result"
+  ],
+  "fix_fields": [
+   "connection_id",
+   "found",
+   "lastconnect_id"
+  ],
+  "parent": "6e9880366fb2d6cccca532262e4c8218860203e4"
+ },
+ {
+  "cve": "CVE-2026-11564",
+  "summary": "Native CA trust persist",
+  "cwe": "CWE-295",
+  "git_fixed": [
+   "d69bfad3fa3daf5e72331f6870667607828d5891"
+  ],
+  "fixed_versions": [
+   "8.20.1",
+   "8.21.0"
+  ],
+  "dims": [
+   "tls"
+  ],
+  "h1": "https://hackerone.com/reports/3788984",
+  "files": [
+   "lib/doh.c",
+   "lib/setopt.c",
+   "lib/vtls/vtls_config.c"
+  ],
+  "funcs": [
+   "Curl_ssl_easy_config_complete",
+   "clone_ssl_primary_config",
+   "doh_probe_run",
+   "setopt_RTSP_REQUEST",
+   "setopt_long_ssl"
+  ],
+  "fix_fields": [],
+  "parent": "435fb96dcf787335626ada95dc02eb26afcf7bca"
+ },
+ {
+  "cve": "CVE-2026-9546",
+  "summary": "sending old referer",
+  "cwe": "CWE-200",
+  "git_fixed": [
+   "862e8a74a84478d82973471b4f49dc2746c1780e"
+  ],
+  "fixed_versions": [
+   "8.20.1",
+   "8.21.0"
+  ],
+  "dims": [],
+  "h1": "https://hackerone.com/reports/3754343",
+  "files": [
+   "lib/transfer.c"
+  ],
+  "funcs": [
+   "Curl_pretransfer"
+  ],
+  "fix_fields": [],
+  "parent": "a4d8fd7a2a6b799a8e8064c11cefcd9b5c7ec1c9"
+ },
+ {
+  "cve": "CVE-2026-8932",
+  "summary": "incomplete mTLS config matching in conn reuse",
+  "cwe": "CWE-305",
+  "git_fixed": [
+   "7541ae569d82fb308a5e2d94916027da4fa3ba3e"
+  ],
+  "fixed_versions": [
+   "8.14.2",
+   "8.16.1",
+   "8.20.1",
+   "8.21.0"
+  ],
+  "dims": [
+   "tls"
+  ],
+  "h1": "https://hackerone.com/reports/3733910",
+  "files": [
+   "lib/ldap.c",
+   "lib/vssh/libssh.c",
+   "lib/vssh/libssh2.c",
+   "lib/vtls/gtls.c",
+   "lib/vtls/mbedtls.c",
+   "lib/vtls/openssl.c",
+   "lib/vtls/rustls.c",
+   "lib/vtls/schannel.c",
+   "lib/vtls/vtls.c",
+   "lib/vtls/vtls_scache.c",
+   "lib/vtls/wolfssl.c"
+  ],
+  "funcs": [
+   "Curl_ossl_ctx_init",
+   "Curl_ssl_easy_config_complete",
+   "Curl_ssl_peer_key_make",
+   "Curl_ssl_session_import",
+   "cf_ssl_add_peer",
+   "cf_ssl_cache_peer_update",
+   "cf_ssl_peer_key_is_global",
+   "cf_ssl_scache_clear_peer",
+   "cf_ssl_scache_match_auth",
+   "cf_ssl_scache_peer_init",
+   "clone_ssl_primary_config",
+   "cr_init_backend",
+   "free_primary_ssl_config",
+   "get_client_cert",
+   "gtls_client_init",
+   "init_config_builder_client_auth",
+   "ldap_do",
+   "match_ssl_primary_config",
+   "mbed_configure_ssl",
+   "mbed_load_cacert",
+   "mbed_load_clicert",
+   "mbed_load_privkey",
+   "myssh_in_AUTH_PKEY_INIT",
+   "ssh_state_pkey_init",
+   "wssl_client_cert"
+  ],
+  "fix_fields": [
+   "cert_type",
+   "key",
+   "key_blob",
+   "key_passwd",
+   "key_type",
+   "pinned_key",
+   "primary",
+   "ssl"
+  ],
+  "parent": "a4dca608e185e2831dcf18ca0c0149484a554206"
+ },
+ {
+  "cve": "CVE-2026-8458",
+  "summary": "wrong reuse for different services",
+  "cwe": "CWE-488",
+  "git_fixed": [
+   "5e99b73cf441d9c369768b9cd48b5389b9a2503d"
+  ],
+  "fixed_versions": [
+   "8.14.2",
+   "8.16.1",
+   "8.20.1",
+   "8.21.0"
+  ],
+  "dims": [
+   "credentials",
+   "service"
+  ],
+  "h1": "https://hackerone.com/reports/3721183",
+  "files": [
+   "lib/creds.c",
+   "lib/curl_sasl.c",
+   "lib/http_negotiate.c",
+   "lib/http_ntlm.c",
+   "lib/imap.c",
+   "lib/netrc.c",
+   "lib/openldap.c",
+   "lib/pop3.c",
+   "lib/socks.c",
+   "lib/socks_gssapi.c",
+   "lib/socks_sspi.c",
+   "lib/url.c",
+   "lib/vauth/digest.c",
+   "lib/vauth/digest_sspi.c",
+   "lib/vauth/krb5_gssapi.c",
+   "lib/vauth/krb5_sspi.c",
+   "lib/vauth/ntlm.c",
+   "lib/vauth/ntlm_sspi.c",
+   "lib/vauth/spnego_gssapi.c",
+   "lib/vauth/spnego_sspi.c"
+  ],
+  "funcs": [
+   "Curl_SOCKS5_gssapi_negotiate",
+   "Curl_auth_create_digest_md5_message",
+   "Curl_auth_create_gssapi_user_message",
+   "Curl_auth_create_ntlm_type1_message",
+   "Curl_auth_decode_spnego_message",
+   "Curl_auth_is_digest_supported",
+   "Curl_auth_is_gssapi_supported",
+   "Curl_auth_is_ntlm_supported",
+   "Curl_auth_is_spnego_supported",
+   "Curl_creds_create",
+   "Curl_creds_merge",
+   "Curl_creds_same",
+   "Curl_input_negotiate",
+   "Curl_output_ntlm",
+   "Curl_sasl_continue",
+   "check_sspi_err",
+   "imap_perform_login",
+   "netrc_finalize",
+   "oldap_perform_bind",
+   "override_login",
+   "parse_proxy",
+   "pop3_perform_user",
+   "sasl_choose_krb5",
+   "sasl_choose_ntlm",
+   "socks5_gss_negotiate_enc",
+   "socks5_sspi_encrypt",
+   "unicodecpy",
+   "url_set_conn_login",
+   "url_set_data_creds"
+  ],
+  "fix_fields": [
+   "oauth_bearer",
+   "sasl_service"
+  ],
+  "parent": "b2476a07128fc1e83a0b322fe6eb9dfa761db53d"
+ },
+ {
+  "cve": "CVE-2026-8286",
+  "summary": "wrong STARTTLS connection reuse",
+  "cwe": "CWE-295",
+  "git_fixed": [
+   "a86efdd7ca5433de9231e650f18247de8319ad16"
+  ],
+  "fixed_versions": [
+   "8.14.2",
+   "8.16.1",
+   "8.20.1",
+   "8.21.0"
+  ],
+  "dims": [
+   "tls",
+   "service"
+  ],
+  "h1": "https://hackerone.com/reports/3718195",
+  "files": [
+   "lib/url.c"
+  ],
+  "funcs": [
+   "url_attach_existing",
+   "url_match_destination",
+   "url_match_ssl_use"
+  ],
+  "fix_fields": [
+   "may_tls",
+   "require_tls",
+   "use_ssl"
+  ],
+  "parent": "ef3b7903aa7cc45cf012a3f222f102414e4c5037"
+ },
+ {
+  "cve": "CVE-2026-6429",
+  "summary": "netrc credential leak with reused proxy connection",
+  "cwe": "CWE-200",
+  "git_fixed": [
+   "b4024bf808bd558026fdc6096e8457f199ace306"
+  ],
+  "fixed_versions": [
+   "8.14.2",
+   "8.16.1",
+   "8.20.0"
+  ],
+  "dims": [
+   "credentials",
+   "host"
+  ],
+  "h1": "https://hackerone.com/reports/3677759",
+  "files": [
+   "lib/http.c"
+  ],
+  "funcs": [
+   "Curl_http_follow"
+  ],
+  "fix_fields": [
+   "allow_auth_to_other_hosts"
+  ],
+  "parent": "3e0e2cc1ab6f3f44c7d35e84256858edc2ef73f5"
+ },
+ {
+  "cve": "CVE-2026-5773",
+  "summary": "wrong reuse of SMB connection",
+  "cwe": "CWE-488",
+  "git_fixed": [
+   "74a169575d6412dc0ff532acdf94de35a6c2a571"
+  ],
+  "fixed_versions": [
+   "8.14.2",
+   "8.16.1",
+   "8.20.0"
+  ],
+  "dims": [
+   "credentials",
+   "service"
+  ],
+  "h1": "https://hackerone.com/reports/3650689",
+  "files": [
+   "lib/protocol.c"
+  ],
+  "funcs": [],
+  "fix_fields": [],
+  "parent": "a0d5d8fea393d65c4cafc4feb6bc4ec0eb8e1b1d"
+ },
+ {
+  "cve": "CVE-2026-5545",
+  "summary": "wrong reuse of HTTP Negotiate connection",
+  "cwe": "CWE-305",
+  "git_fixed": [
+   "33e43985b8f3b9e66691d06e70be0395849856cd"
+  ],
+  "fixed_versions": [
+   "8.14.2",
+   "8.16.1",
+   "8.20.0"
+  ],
+  "dims": [
+   "credentials",
+   "host"
+  ],
+  "h1": "https://hackerone.com/reports/3642555",
+  "files": [
+   "lib/url.c"
+  ],
+  "funcs": [
+   "url_match_auth_ntlm"
+  ],
+  "fix_fields": [
+   "http_negotiate_state",
+   "http_ntlm_state"
+  ],
+  "parent": "b27e828b938777b75cf627093e1c9c9d4af2cbd2"
+ },
+ {
+  "cve": "CVE-2026-4873",
+  "summary": "connection reuse ignores TLS requirement",
+  "cwe": "CWE-319",
+  "git_fixed": [
+   "507e7be573b0a76fca597b75ff7cb27a66e7d865"
+  ],
+  "fixed_versions": [
+   "8.14.2",
+   "8.16.1",
+   "8.20.0"
+  ],
+  "dims": [
+   "tls",
+   "host"
+  ],
+  "h1": "https://hackerone.com/reports/3621851",
+  "files": [
+   "lib/url.c"
+  ],
+  "funcs": [
+   "url_attach_existing",
+   "url_match_ssl_use"
+  ],
+  "fix_fields": [
+   "req_tls",
+   "use_ssl"
+  ],
+  "parent": "62d77b12fce55d3481bb0b2e70e0f921c8cbfe5e"
+ },
+ {
+  "cve": "CVE-2026-3805",
+  "summary": "use after free in SMB connection reuse",
+  "cwe": "CWE-416",
+  "git_fixed": [
+   "e090be9f73a7a71459ef678c7cc4b1f75e3ea883"
+  ],
+  "fixed_versions": [
+   "8.14.2",
+   "8.16.1",
+   "8.19.0"
+  ],
+  "dims": [
+   "service",
+   "host"
+  ],
+  "h1": "https://hackerone.com/reports/3591944",
+  "files": [
+   "lib/smb.c"
+  ],
+  "funcs": [
+   "smb_easy_dtor",
+   "smb_parse_url_path"
+  ],
+  "fix_fields": [],
+  "parent": "22b0cbe65f6738bdf002f0331895aba52ae0633e"
+ },
+ {
+  "cve": "CVE-2026-3784",
+  "summary": "wrong proxy connection reuse with credentials",
+  "cwe": "CWE-305",
+  "git_fixed": [
+   "5f13a7645e565c5c1a06f3ef86e97afb856fb364"
+  ],
+  "fixed_versions": [
+   "8.14.2",
+   "8.16.1",
+   "8.19.0"
+  ],
+  "dims": [
+   "credentials",
+   "host"
+  ],
+  "h1": "https://hackerone.com/reports/3584903",
+  "files": [
+   "lib/url.c"
+  ],
+  "funcs": [
+   "proxy_info_matches",
+   "url_match_proxy_use"
+  ],
+  "fix_fields": [
+   "host",
+   "name",
+   "passwd",
+   "socks_proxy",
+   "user"
+  ],
+  "parent": "e47b6e657aa5dda6dfb79d495ba3ee7b0534532a"
+ },
+ {
+  "cve": "CVE-2026-1965",
+  "summary": "bad reuse of HTTP Negotiate connection",
+  "cwe": "CWE-305",
+  "git_fixed": [
+   "f1a39f221d57354990e3eeeddc3404aede2aff70"
+  ],
+  "fixed_versions": [
+   "8.14.2",
+   "8.16.1",
+   "8.19.0"
+  ],
+  "dims": [
+   "credentials",
+   "host"
+  ],
+  "h1": "",
+  "files": [
+   "lib/url.c"
+  ],
+  "funcs": [
+   "url_match_auth_nego"
+  ],
+  "fix_fields": [],
+  "parent": "a0244c536ecd5307316ae0cfcc74ba9602438d3b"
+ },
+ {
+  "cve": "CVE-2025-14819",
+  "summary": "OpenSSL partial chain store policy bypass",
+  "cwe": "CWE-295",
+  "git_fixed": [
+   "cd046f6c93b39d673a58c18648d8906e954c4f5d"
+  ],
+  "fixed_versions": [
+   "8.14.2",
+   "8.16.1",
+   "8.18.0"
+  ],
+  "dims": [
+   "credentials",
+   "tls"
+  ],
+  "h1": "",
+  "files": [
+   "lib/vtls/openssl.c"
+  ],
+  "funcs": [
+   "ossl_cached_x509_store_expired",
+   "ossl_get_cached_x509_store",
+   "ossl_set_cached_x509_store"
+  ],
+  "fix_fields": [
+   "no_partialchain"
+  ],
+  "parent": "be3c226bb0c4b73879a6dffbb35f60065a48a9a2"
+ },
+ {
+  "cve": "CVE-2024-0853",
+  "summary": "OCSP verification bypass with TLS session reuse",
+  "cwe": "CWE-299",
+  "git_fixed": [
+   "c28e9478cb2548848eca9b765d0d409bfb18668c"
+  ],
+  "fixed_versions": [
+   "8.6.0"
+  ],
+  "dims": [
+   "tls",
+   "host"
+  ],
+  "h1": "https://hackerone.com/reports/2298922",
+  "files": [
+   "lib/vtls/openssl.c"
+  ],
+  "funcs": [
+   "servercert"
+  ],
+  "fix_fields": [],
+  "parent": "3f08d80b2244524646ce86915c585509ac54fb4c"
+ },
+ {
+  "cve": "CVE-2023-28322",
+  "summary": "more POST-after-PUT confusion",
+  "cwe": "CWE-440",
+  "git_fixed": [
+   "7815647d6582c0a4900be2e1de6c5e61272c496b"
+  ],
+  "fixed_versions": [
+   "8.1.0"
+  ],
+  "dims": [],
+  "h1": "https://hackerone.com/reports/1954658",
+  "files": [
+   "lib/curl_rtmp.c",
+   "lib/file.c",
+   "lib/ftp.c",
+   "lib/http.c",
+   "lib/imap.c",
+   "lib/rtsp.c",
+   "lib/setopt.c",
+   "lib/smb.c",
+   "lib/smtp.c",
+   "lib/tftp.c",
+   "lib/transfer.c",
+   "lib/vssh/libssh.c",
+   "lib/vssh/libssh2.c",
+   "lib/vssh/wolfssh.c"
+  ],
+  "funcs": [
+   "Curl_follow",
+   "Curl_http_body",
+   "Curl_http_method",
+   "Curl_init_CONNECT",
+   "Curl_retry_request",
+   "Curl_vsetopt",
+   "file_connect",
+   "file_do",
+   "ftp_do_more",
+   "ftp_done",
+   "ftp_parse_url_path",
+   "ftp_state_prepare_transfer",
+   "imap_done",
+   "imap_perform",
+   "myssh_statemach_act",
+   "rtmp_connect",
+   "rtmp_do",
+   "rtsp_do",
+   "smb_request_state",
+   "smb_send_open",
+   "smtp_done",
+   "smtp_perform",
+   "ssh_statemach_act",
+   "tftp_parse_option_ack",
+   "tftp_send_first",
+   "wssh_statemach_act"
+  ],
+  "fix_fields": [
+   "file",
+   "httpreq",
+   "infilesize",
+   "kind",
+   "mimepost",
+   "transfer",
+   "upload"
+  ],
+  "parent": "e5af5b7905900a49522428f914ade3c28152bfd9"
+ },
+ {
+  "cve": "CVE-2023-27538",
+  "summary": "SSH connection too eager reuse still",
+  "cwe": "CWE-305",
+  "git_fixed": [
+   "af369db4d3833272b8ed443f7fcc2e757a0872eb"
+  ],
+  "fixed_versions": [
+   "8.0.0"
+  ],
+  "dims": [
+   "service"
+  ],
+  "h1": "https://hackerone.com/reports/1898475",
+  "files": [
+   "lib/url.c"
+  ],
+  "funcs": [
+   "ConnectionExists"
+  ],
+  "fix_fields": [],
+  "parent": "fcee070cb110cd6cd2c52a5e2c4ccb5b10fcf75e"
+ },
+ {
+  "cve": "CVE-2023-27536",
+  "summary": "GSS delegation too eager connection reuse",
+  "cwe": "CWE-305",
+  "git_fixed": [
+   "cb49e67303dbafbab1cebf4086e3ec15b7d56ee5"
+  ],
+  "fixed_versions": [
+   "8.0.0"
+  ],
+  "dims": [
+   "credentials"
+  ],
+  "h1": "https://hackerone.com/reports/1895135",
+  "files": [
+   "lib/url.c"
+  ],
+  "funcs": [
+   "ConnectionExists",
+   "allocate_conn"
+  ],
+  "fix_fields": [
+   "gssapi_delegation"
+  ],
+  "parent": "b725fe1944b45406676ea3aff333ae3085a848d9"
+ },
+ {
+  "cve": "CVE-2023-27535",
+  "summary": "FTP too eager connection reuse",
+  "cwe": "CWE-305",
+  "git_fixed": [
+   "8f4608468b890dce2dad9f91d5607ee7e9c1aba1"
+  ],
+  "fixed_versions": [
+   "8.0.0"
+  ],
+  "dims": [
+   "credentials",
+   "service"
+  ],
+  "h1": "https://hackerone.com/reports/1892780",
+  "files": [
+   "lib/ftp.c",
+   "lib/setopt.c",
+   "lib/url.c"
+  ],
+  "funcs": [
+   "ConnectionExists",
+   "Curl_vsetopt",
+   "ftp_disconnect",
+   "ftp_setup_connection"
+  ],
+  "fix_fields": [
+   "account",
+   "alternative_to_user",
+   "ccc",
+   "ftpc",
+   "proto",
+   "use_ssl"
+  ],
+  "parent": "0cbfe32fb1f55dae154cb5fb84c1af97318d2ebe"
+ },
+ {
+  "cve": "CVE-2022-32221",
+  "summary": "POST following PUT confusion",
+  "cwe": "CWE-440",
+  "git_fixed": [
+   "a64e3e59938abd7d667e4470a18072a24d7e9de9"
+  ],
+  "fixed_versions": [
+   "7.86.0"
+  ],
+  "dims": [],
+  "h1": "https://hackerone.com/reports/1704017",
+  "files": [
+   "lib/setopt.c"
+  ],
+  "funcs": [
+   "Curl_vsetopt"
+  ],
+  "fix_fields": [],
+  "parent": "c04c78ac87c4d46737934345af50868bcc4e1ba4"
+ },
+ {
+  "cve": "CVE-2022-27782",
+  "summary": "TLS and SSH connection too eager reuse",
+  "cwe": "CWE-305",
+  "git_fixed": [
+   "1645e9b44505abd5cbaf65da5282c3f33b5924a5"
+  ],
+  "fixed_versions": [
+   "7.83.1"
+  ],
+  "dims": [
+   "tls",
+   "service"
+  ],
+  "h1": "https://hackerone.com/reports/1555796",
+  "files": [
+   "lib/url.c"
+  ],
+  "funcs": [
+   "ConnectionExists",
+   "prune_dead_connections"
+  ],
+  "fix_fields": [
+   "handler",
+   "proto",
+   "rsa",
+   "rsa_pub",
+   "sshc"
+  ],
+  "parent": "f18af4f874cecab82a9797e8c7541e0990c7a64c"
+ },
+ {
+  "cve": "CVE-2022-27775",
+  "summary": "Bad local IPv6 connection reuse",
+  "cwe": "CWE-200",
+  "git_fixed": [
+   "058f98dc3fe595f21dc26a5b9b1699e519ba5705"
+  ],
+  "fixed_versions": [
+   "7.83.0"
+  ],
+  "dims": [
+   "interface",
+   "host"
+  ],
+  "h1": "https://hackerone.com/reports/1546268",
+  "files": [
+   "lib/conncache.c"
+  ],
+  "funcs": [
+   "hashkey"
+  ],
+  "fix_fields": [],
+  "parent": "852aa5ad351ea53e5f01d2f44b5b4370c2bf5425"
+ },
+ {
+  "cve": "CVE-2022-22576",
+  "summary": "OAUTH2 bearer bypass in connection reuse",
+  "cwe": "CWE-305",
+  "git_fixed": [
+   "852aa5ad351ea53e5f01d2f44b5b4370c2bf5425"
+  ],
+  "fixed_versions": [
+   "7.83.0"
+  ],
+  "dims": [
+   "credentials",
+   "service"
+  ],
+  "h1": "https://hackerone.com/reports/1526328",
+  "files": [
+   "lib/strcase.c",
+   "lib/url.c",
+   "lib/vtls/vtls.c"
+  ],
+  "funcs": [
+   "ConnectionExists",
+   "Curl_ssl_config_matches",
+   "Curl_strntolower",
+   "blobcmp",
+   "conn_free",
+   "create_conn"
+  ],
+  "fix_fields": [
+   "CAfile",
+   "CApath",
+   "Return",
+   "clientcert",
+   "egdsocket",
+   "issuercert",
+   "oauth_bearer",
+   "passwd",
+   "random_file",
+   "sasl_authzid"
+  ],
+  "parent": "ff2f3e836702daa82e2356195482fcc95f4257dc"
+ },
+ {
+  "cve": "CVE-2021-22926",
+  "summary": "CURLOPT_SSLCERT mix-up with Secure Transport",
+  "cwe": "CWE-295",
+  "git_fixed": [
+   "fd9b40bf8dfd43edcbc0d254d613d95a11061c05"
+  ],
+  "fixed_versions": [
+   "7.78.0"
+  ],
+  "dims": [
+   "credentials",
+   "tls"
+  ],
+  "h1": "https://hackerone.com/reports/1234760",
+  "files": [
+   "lib/vtls/sectransp.c"
+  ],
+  "funcs": [
+   "sectransp_connect_step1"
+  ],
+  "fix_fields": [],
+  "parent": "894f6ec730597eb243618d33cc84d71add8d6a8a"
+ },
+ {
+  "cve": "CVE-2021-22924",
+  "summary": "Bad connection reuse due to flawed path name checks",
+  "cwe": "CWE-295",
+  "git_fixed": [
+   "5ea3145850ebff1dc2b13d17440300a01ca38161"
+  ],
+  "fixed_versions": [
+   "7.78.0"
+  ],
+  "dims": [
+   "tls"
+  ],
+  "h1": "https://hackerone.com/reports/1223565",
+  "files": [
+   "lib/url.c",
+   "lib/vtls/gtls.c",
+   "lib/vtls/nss.c",
+   "lib/vtls/openssl.c",
+   "lib/vtls/vtls.c"
+  ],
+  "funcs": [
+   "Curl_clone_primary_ssl_config",
+   "Curl_free_primary_ssl_config",
+   "Curl_ssl_config_matches",
+   "blobcmp",
+   "create_conn",
+   "gtls_connect_step3",
+   "nss_do_connect",
+   "servercert"
+  ],
+  "fix_fields": [
+   "CAfile",
+   "CApath",
+   "clientcert",
+   "egdsocket",
+   "issuercert",
+   "issuercert_blob",
+   "random_file"
+  ],
+  "parent": "fd9b40bf8dfd43edcbc0d254d613d95a11061c05"
+ },
+ {
+  "cve": "CVE-2021-22901",
+  "summary": "TLS session caching disaster",
+  "cwe": "CWE-416",
+  "git_fixed": [
+   "7f4a9a9b2a49547eae24d2e19bc5c346e9026479"
+  ],
+  "fixed_versions": [
+   "7.77.0"
+  ],
+  "dims": [
+   "credentials",
+   "tls"
+  ],
+  "h1": "https://hackerone.com/reports/1180380",
+  "files": [
+   "lib/multi.c",
+   "lib/vtls/gskit.c",
+   "lib/vtls/gtls.c",
+   "lib/vtls/mbedtls.c",
+   "lib/vtls/mesalink.c",
+   "lib/vtls/nss.c",
+   "lib/vtls/openssl.c",
+   "lib/vtls/rustls.c",
+   "lib/vtls/schannel.c",
+   "lib/vtls/sectransp.c",
+   "lib/vtls/vtls.c",
+   "lib/vtls/wolfssl.c"
+  ],
+  "funcs": [
+   "Curl_attach_connnection",
+   "Curl_multiplex_wanted",
+   "Curl_ssl_addsessionid",
+   "get_alg_id_by_name",
+   "ossl_connect_step1",
+   "ossl_get_internals"
+  ],
+  "fix_fields": [],
+  "parent": "39ce47f219b09c380b81f89fe54ac586c8db6bde"
+ },
+ {
+  "cve": "CVE-2021-22890",
+  "summary": "TLS 1.3 session ticket proxy host mix-up",
+  "cwe": "CWE-290",
+  "git_fixed": [
+   "b09c8ee15771c614c4bf3ddac893cdb12187c844"
+  ],
+  "fixed_versions": [
+   "7.76.0"
+  ],
+  "dims": [
+   "tls",
+   "host"
+  ],
+  "h1": "https://hackerone.com/reports/1129529",
+  "files": [
+   "lib/vtls/bearssl.c",
+   "lib/vtls/gtls.c",
+   "lib/vtls/mbedtls.c",
+   "lib/vtls/mesalink.c",
+   "lib/vtls/openssl.c",
+   "lib/vtls/schannel.c",
+   "lib/vtls/sectransp.c",
+   "lib/vtls/vtls.c",
+   "lib/vtls/wolfssl.c"
+  ],
+  "funcs": [
+   "Curl_ssl_addsessionid",
+   "Curl_ssl_delsessionid",
+   "Curl_ssl_getsessionid",
+   "Curl_ssl_sessionid_unlock",
+   "bearssl_connect_step1",
+   "bearssl_connect_step3",
+   "gtls_connect_step1",
+   "gtls_connect_step3",
+   "mbed_connect_step1",
+   "mbed_connect_step3",
+   "mesalink_connect_step1",
+   "mesalink_connect_step3",
+   "ossl_connect_step1",
+   "ossl_get_ssl_conn_index",
+   "ossl_init",
+   "ossl_new_session_cb",
+   "schannel_connect_step1",
+   "schannel_connect_step3",
+   "sectransp_connect_step1",
+   "wolfssl_connect_step1",
+   "wolfssl_connect_step3"
+  ],
+  "fix_fields": [],
+  "parent": "7214288898f5625a6cc196e22a74232eada7861c"
+ },
+ {
+  "cve": "CVE-2020-8231",
+  "summary": "wrong connect-only connection",
+  "cwe": "CWE-825",
+  "git_fixed": [
+   "3c9e021f86872baae412a427e807fbfa2f3e8a22"
+  ],
+  "fixed_versions": [
+   "7.72.0"
+  ],
+  "dims": [
+   "host"
+  ],
+  "h1": "https://hackerone.com/reports/948876",
+  "files": [
+   "lib/connect.c",
+   "lib/easy.c",
+   "lib/multi.c",
+   "lib/url.c"
+  ],
+  "funcs": [
+   "Curl_connecthost",
+   "Curl_getconnectinfo",
+   "Curl_open",
+   "close_connect_only",
+   "curl_easy_duphandle",
+   "curl_multi_add_handle",
+   "curl_multi_remove_handle",
+   "multi_done"
+  ],
+  "fix_fields": [
+   "connection_id",
+   "id_tofind",
+   "lastconnect_id",
+   "multi",
+   "multi_easy"
+  ],
+  "parent": "687908c6e6332b2bf4ba74b271e795f9c65a5a61"
+ },
+ {
+  "cve": "CVE-2016-8624",
+  "summary": "invalid URL parsing with '#'",
+  "cwe": "CWE-172",
+  "git_fixed": [
+   "3bb273db7e40ebc284cff45f3ce3f0475c8339c2"
+  ],
+  "fixed_versions": [
+   "7.51.0"
+  ],
+  "dims": [
+   "credentials",
+   "service",
+   "host"
+  ],
+  "h1": "",
+  "files": [
+   "lib/url.c"
+  ],
+  "funcs": [
+   "parseurlandfillconn"
+  ],
+  "fix_fields": [],
+  "parent": "164ee10b0b734b350f05114b78327d6985b880cc"
+ },
+ {
+  "cve": "CVE-2016-8616",
+  "summary": "case insensitive password comparison",
+  "cwe": "CWE-178",
+  "git_fixed": [],
+  "fixed_versions": [
+   "7.51.0"
+  ],
+  "dims": [
+   "credentials",
+   "service"
+  ],
+  "h1": ""
+ },
+ {
+  "cve": "CVE-2016-7141",
+  "summary": "Incorrect reuse of client certificates",
+  "cwe": "CWE-305",
+  "git_fixed": [],
+  "fixed_versions": [
+   "7.50.2"
+  ],
+  "dims": [
+   "tls",
+   "service"
+  ],
+  "h1": ""
+ },
+ {
+  "cve": "CVE-2016-5420",
+  "summary": "Reusing connections with wrong client cert",
+  "cwe": "CWE-305",
+  "git_fixed": [],
+  "fixed_versions": [
+   "7.50.1"
+  ],
+  "dims": [
+   "credentials",
+   "tls"
+  ],
+  "h1": ""
+ },
+ {
+  "cve": "CVE-2016-0755",
+  "summary": "NTLM credentials not-checked for proxy connection reuse",
+  "cwe": "CWE-305",
+  "git_fixed": [],
+  "fixed_versions": [
+   "7.47.0"
+  ],
+  "dims": [
+   "interface",
+   "credentials",
+   "host"
+  ],
+  "h1": ""
+ },
+ {
+  "cve": "CVE-2015-3236",
+  "summary": "lingering HTTP credentials in connection reuse",
+  "cwe": "CWE-305",
+  "git_fixed": [],
+  "fixed_versions": [
+   "7.43.0"
+  ],
+  "dims": [
+   "interface",
+   "credentials",
+   "host"
+  ],
+  "h1": ""
+ },
+ {
+  "cve": "CVE-2015-3148",
+  "summary": "Negotiate not treated as connection-oriented",
+  "cwe": "CWE-305",
+  "git_fixed": [],
+  "fixed_versions": [
+   "7.42.0"
+  ],
+  "dims": [
+   "credentials"
+  ],
+  "h1": ""
+ },
+ {
+  "cve": "CVE-2015-3143",
+  "summary": "Reusing authenticated connection when unauthenticated",
+  "cwe": "CWE-305",
+  "git_fixed": [],
+  "fixed_versions": [
+   "7.42.0"
+  ],
+  "dims": [
+   "credentials",
+   "host"
+  ],
+  "h1": ""
+ },
+ {
+  "cve": "CVE-2014-8151",
+  "summary": "Secure Transport certificate check bypass",
+  "cwe": "CWE-297",
+  "git_fixed": [],
+  "fixed_versions": [
+   "7.40.0"
+  ],
+  "dims": [
+   "tls",
+   "host"
+  ],
+  "h1": ""
+ },
+ {
+  "cve": "CVE-2014-3707",
+  "summary": "duphandle read out of bounds",
+  "cwe": "CWE-126",
+  "git_fixed": [
+   "b3875606925536f82fc61f3114ac42f29eaf6945"
+  ],
+  "fixed_versions": [
+   "7.39.0"
+  ],
+  "dims": [
+   "service",
+   "host"
+  ],
+  "h1": "",
+  "files": [
+   "lib/formdata.c",
+   "lib/strdup.c",
+   "lib/url.c"
+  ],
+  "funcs": [
+   "ContentTypeForFilename",
+   "Curl_dupset",
+   "Curl_freeset",
+   "FormAdd",
+   "curl_win32_idn_to_ascii",
+   "curlx_strdup"
+  ],
+  "fix_fields": [],
+  "parent": "d997c8b2f6521d78c6ef63411cfeb226f7927281"
+ },
+ {
+  "cve": "CVE-2014-0138",
+  "summary": "wrong reuse of connections",
+  "cwe": "CWE-305",
+  "git_fixed": [],
+  "fixed_versions": [
+   "7.36.0"
+  ],
+  "dims": [
+   "credentials",
+   "service",
+   "host"
+  ],
+  "h1": ""
+ },
+ {
+  "cve": "CVE-2014-0015",
+  "summary": "reuse of wrong HTTP NTLM connection",
+  "cwe": "CWE-305",
+  "git_fixed": [
+   "8ae35102c43d8d06572c3a1292eb6e27e663c78d"
+  ],
+  "fixed_versions": [
+   "7.35.0"
+  ],
+  "dims": [
+   "credentials",
+   "host"
+  ],
+  "h1": "",
+  "files": [
+   "lib/url.c"
+  ],
+  "funcs": [
+   "ConnectionExists"
+  ],
+  "fix_fields": [],
+  "parent": "fc0b4b0d3141f20435bef35338248af077a9ed54"
+ }
+]

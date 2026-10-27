@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Claim-Carrying Vulnerability Report (CCVR) v0.1",
+  "description": "A machine-checkable claim attached to a vulnerability report. The checker (CRDS) returns REFUTED with an unsat-core certificate, CONFIRMED if a witness reproduces, or ESCALATE. Prose stays for humans; the claim is what the machine triages. Carrying the claim is what makes sound automatic triage possible: the checker binds to the exact function, decision point, and field-level predicate instead of mining them from prose.",
+  "type": "object",
+  "required": ["target", "location", "claim"],
+  "properties": {
+    "target": {
+      "type": "object",
+      "required": ["project", "version"],
+      "properties": {
+        "project": {"type": "string", "examples": ["curl/curl"]},
+        "version": {"type": "string", "description": "release or commit the claim is made against", "examples": ["8.21.0"]},
+        "build_config": {"type": "string", "description": "feature flags that must hold for the path to exist"}
+      }
+    },
+    "location": {
+      "type": "object",
+      "required": ["function"],
+      "properties": {
+        "function": {"type": "string", "examples": ["url_match_auth_nego", "do_SOCKS5"]},
+        "file": {"type": "string", "examples": ["lib/url.c"]},
+        "decision_point": {"type": "string", "description": "the branch / match-success / sink the claim is about",
+          "examples": ["match-success return", "memcpy at lib/ws.c:907", "if(conn->creds) credential compare"]}
+      }
+    },
+    "claim": {
+      "type": "object",
+      "required": ["family", "predicate"],
+      "properties": {
+        "family": {"enum": ["bounds", "equality_reuse", "reachability", "other"]},
+        "predicate": {"type": "string",
+          "description": "the field-level condition asserted to hold at the decision point under the bug outcome",
+          "examples": [
+            "creds inequality is reachable at match-success (credential compare skipped when conn->creds==NULL)",
+            "length into fixed buffer can exceed its capacity at the sink",
+            "connections differing in field X are matched"]},
+        "dimension_fields": {"type": "array", "items": {"type": "string"},
+          "description": "the exact record fields the claim concerns (not a coarse dimension word)",
+          "examples": [["creds", "creds_origin"]]},
+        "branch_outcome": {"type": "string", "description": "which way the decision goes for the bug to manifest"}
+      }
+    },
+    "witness": {
+      "type": "object",
+      "description": "optional reproduction the checker can run in a sandbox (verdict only). If present and it reproduces on target and not on the fixed build, the report is CONFIRMED.",
+      "properties": {"kind": {"enum": ["input", "unit_test", "server_script"]}, "ref": {"type": "string"}}
+    }
+  },
+  "x-checker-outcomes": {
+    "REFUTED": "PC(decision_point, branch_outcome) AND predicate is UNSAT; the returned unsat core is the set of guards in the maintainer's own code that make the claim impossible. A grounded-slop report that carries a precise but false claim lands here, with a proof.",
+    "ESCALATE": "cannot refute and no witness: the claim names an unenforced path (as in a genuine bug) or lies outside the decidable fragment. Human time is spent only here.",
+    "CONFIRMED": "a carried witness reproduces on the target and not on the fixed build."
+  },
+  "x-worked-example-CVE-2026-19931": {
+    "target": {"project": "curl/curl", "version": "8.21.0"},
+    "location": {"function": "url_match_auth_nego", "file": "lib/url.c", "decision_point": "credential compare under if(conn->creds)"},
+    "claim": {"family": "equality_reuse", "predicate": "creds inequality reaches match-success when conn->creds==NULL",
+      "dimension_fields": ["creds", "creds_origin"], "branch_outcome": "conn->creds == NULL"},
+    "checker_result": "ESCALATE: forced_fields(url_match_auth) = {} on 8.21.0, so the credential equality is NOT forced on the match path; the checker correctly does not refute, and the genuine report is preserved. The prose-mined dimension route wrongly REFUTED it because credentials are forced by other gates (proxy_info_matches), on other paths. Carrying the function-and-field-precise claim restores soundness."
+  }
+}

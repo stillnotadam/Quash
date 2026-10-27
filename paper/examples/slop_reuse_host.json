@@ -1,0 +1,6 @@
+{"id":"example-slop-host-reuse",
+ "target":{"project":"curl/curl","version":"8.23.0"},
+ "location":{"function":"url_match_destination","file":"lib/url.c","decision_point":"match-success return"},
+ "claim":{"family":"equality_reuse",
+   "predicate":"connections to different destination hosts are reused",
+   "dimension_fields":["host"]}}

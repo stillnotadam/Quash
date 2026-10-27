@@ -1,0 +1,685 @@
+databaseId,title,substate
+4125043,netrc credentials leaked to a cross-host redirect target on the Basic auth path (not covered by redirect credential protections),not-applicable
+4122227,wolfSSL TLS sessions retain native-CA trust after the application narrows trust,informative
+4125601,OpenSSL `--cert-status` accepts indefinitely stale GOOD OCSP staples,not-applicable
+4124276,GnuTLS + Apple SecTrust discards authenticated OCSP failure,not-applicable
+4123304,OpenSSL+Apple SecTrust: SecTrust accepts certificates that the app's CURLOPT_SSL_CTX_FUNCTION trust store or verify callback rejected,not-applicable
+4123474,Cross-protocol redirect to imap:// or smtp:// uploads the -F/MIMEPOST form and the custom Authorization/Cookie headers to the redirect target,not-applicable
+4118643,OpenSSL provider OSSL_LIB_CTX used after free via the connection shutdown list (CVE-2026-80229 fix incomplete),duplicate
+4105790,FTP authentication options leak to a cross-origin FTP redirect with unrestricted auth disabled,not-applicable
+3973124,14: HSTS cache import silently drops a longer-lived child beneath an includeSubDomains parent,duplicate
+3971551,20: HTAB before `Secure` attribute silently drops the Secure cookie flag,duplicate
+3938190, Windows SSPI connection-pool probe can reuse a connection under the wrong user,not-applicable
+4127231,Derived cookie Path aborts cookie jar loading in curl 8.23.0,not-applicable
+4130124, server filename with control characters printed to terminal (`-J`),not-applicable
+4136767,CVE-2026-115529: Schannel TLS auto client session resumption,resolved
+4123190,CVE-2026-111954: upload reader failed redirect UAF,resolved
+4122300,CVE-2026-111953: GnuTLS SecTrust OCSP staple bypass,resolved
+4122175,CVE-2026-111950: TLS session cache diff scheme reuse,resolved
+4118610,CVE-2026-111484: OpenSSL with SecTrust accepts bad OCSP staples,resolved
+4112709,CVE-2026-111482: libssh2 knownhosts prefix match,resolved
+4112912,CVE-2026-111481: server-set cookie still aborts cookie jar,resolved
+4102061,CVE-2026-111480: pause UAF from within callback,resolved
+4122239,CVE-2026-111952: OpenSSL provider use-after-free again,resolved
+4116527,CVE-2026-111878: OpenSSL provider UAF on TLS shutdown,resolved
+4124849,CVE-2026-111951: curl -OJ truncate without filename,resolved
+4128428,CVE-2026-115528: wolfSSL TLS connect without cert,resolved
+4116076,CVE-2026-111483: GnuTLS accepts non-successful OCSP staples,resolved
+4137523,CURL_NETRC_REQUIRED sends the URL password when the .netrc file has no matching entry,not-applicable
+4135291,Heap-use-after-free in libcurl's multi event machinery (curl_multi_remove_handle() from a socket callback nested under a notify callback),informative
+4135826,--cert-status with OpenSSL accepts a stapled OCSP response of any age when it lacks nextUpdate (revoked certificate keeps passing),not-applicable
+4125065,curl EXPIRE_SHUTDOWN timer never armed for silent servers: connection-shutdown timeout bypass in cshutdn (event-driven mode),informative
+4122567,passive FTPS data connection handshake blocks curl_multi_perform() with no timeout (regression in 8.19.0),informative
+4128701,Pinned public key check passes for a key the server does not hold with the wolfSSL backend,not-applicable
+4131903,"A server response that answers nothing is used as the next transfer's reply — and with IMAP, a fully compliant server does this by accident",not-applicable
+4129950,IDN decoding inserts authority delimiters and can redirect proxy CONNECT to a different host,informative
+4123571,Redirect to imap/pop3/smtp (SASL) or sftp/scp (libssh) authenticates to the attacker's host with the user's ambient Kerberos credentials,informative
+4123050,CVE-2026-11586 fix is incomplete: auto-PONG memory grows without limit through curl_ws_recv() (CONNECT_ONLY),informative
+4132132,POP3: data after the end-of-body terminator is written into the retrieved message,not-applicable
+4128703,curl reuses an HTTPS connection when a response is already buffered in the TLS stack,not-applicable
+4129638,TLS session cache ignores CURLOPT_SSL_CTX_FUNCTION identity and resumes one client's session for another,not-applicable
+4129642,HSTS cache file: three trailing dots silently disable HSTS for that host,informative
+4123646,TLS session cache key omits native_ca_store: a session validated with CURLSSLOPT_NATIVE_CA can be resumed by a transfer that disabled it (incomplete f,informative
+4124549,CURLOPT_PROXYHEADER is not part of the HTTP-proxy connection reuse key: a second CONNECT-tunnel transfer silently reuses the first tunnel's Proxy-Auth,not-applicable
+4124722, WebSocket send queue use-after-free during nested curl_ws_send(),informative
+4124583,SSH (SCP/SFTP) host-key verification is skipped on connection reuse — a pinned/known_hosts transfer silently reuses a previously-unverified connection,not-applicable
+4127399,wolfSSL Backend Silently Ignores --cert-status (OCSP Stapling Bypass),not-applicable
+4125257,"Symlink-following truncation of arbitrary files in `Curl_fopen()` when saving cookie jars, HSTS, or alt-svc caches",not-applicable
+4123749,WebSocket decoder use-after-free when curl_easy_pause() unpauses from a debug callback,informative
+4126768,SSH host-key policy is missing from the connection-reuse tuple: strict pins and knownhosts are silently skipped on reused SFTP/SCP connections,not-applicable
+4123654,SCP upload with --crlf sends more bytes than the size declared to the server (same class curl refused for IMAP CVE-2026-87864 and RTSP),informative
+4053116,curl CONNECT response header colon-check bypass in cf-h1-proxy single_header — proxy authentication bypass via injected HTTP/1.x status line,not-applicable
+4127756,urlapi: CURLUPART_HOST accepts text after an IPv6 zone ip and URL round trip changes the host,not-applicable
+4124486,RTSP ANNOUNCE/SET_PARAMETER upload with --use-ascii / CURLOPT_TRANSFERTEXT sends more body bytes than the declared Content-Length (incomplete fix of e,informative
+4121685,curl RTSP connection reuse routes response headers to the RTP callback (rtsp_conn state machine not reset between sessions),informative
+4105853,libcurl TLS shorter-retry mismatch discloses client heap memory during cancelled IMAPS upload,informative
+4122039,libcurl shared-HSTS-cache race leads to use-after-free with attacker-controlled function-pointer call,not-applicable
+4121689,CRLF injection in the HTTP request-line via `CURLOPT_REQUEST_TARGET` (`--request-target`),not-applicable
+4121675,CRLF injection in the RTSP request-line and Transport header via `CURLOPT_RTSP_STREAM_URI` and `CURLOPT_RTSP_TRANSPORT`,not-applicable
+4113412,libcurl RTSP `CURLOPT_CRLF` conversion allows a request body to become a second RTSP request,informative
+4114965,Explicit NO_PROXY /0 CIDR rules fail to bypass HTTP proxy for IP-literal requests,informative
+4103651,TFTP accepts a first response from an IP other than the requested server,not-applicable
+4098761,HTTP/1.1 connection reuse returns unsolicited server data as the next request's response (regression in 8.22.0),informative
+4021854,IMAP custom FETCH literals can spoof tagged responses and desynchronize reused connections,duplicate
+4007917," One Strict-Transport-Security response header empties the victim's entire HSTS store, silently,",not-applicable
+3981716,Cross-origin redirect reuses a pooled Negotiate-authenticated connection from an unrelated transfer,not-applicable
+4033108,Retry-independent time-condition HTTP/2 UAF,duplicate
+4099194,CVE-2026-107928: info leak uploading over WebSockets with GnuTLS,resolved
+4099618,CVE-2026-107929: local interface connection reuse mixup,resolved
+3993549,CVE-2026-86413: Negotiate credentials sent to redirected origin,resolved
+4024222,CVE-2026-92391: curl_mime_free stack overflow by recursion,resolved
+4021979,CVE-2026-92386: server-set cookie aborts cookie jar load,resolved
+4022003,CVE-2026-92387: never-ending loop via server response omission,resolved
+3972373,CVE-2026-87863: HSTS response erases persisted entries,resolved
+3972403,CVE-2026-87864: IMAP APPEND plus CRLF conversion command injection,resolved
+3993870,CVE-2026-86415: auto client cert connection reuse mixup,resolved
+3972357,CVE-2026-87862: HSTS cache import drops longer-lived child,resolved
+3993566,CVE-2026-86414: leaking host credentials to HTTP proxy,resolved
+3973201,CVE-2026-86412: server-set cookie erases cookie jar,resolved
+3973190,CVE-2026-86411: FTP connection reuse inherits client-certificate,resolved
+4022568,CVE-2026-92389: TFTP direction confusion,resolved
+3973135,CVE-2026-86409: stale SigV4 headers sent unintended,resolved
+3973176,CVE-2026-86410:  redirect to SFTP or SCP bypasses host verification,resolved
+4023192,CVE-2026-92390: -J no-clobber guarantee bypassed with 103 early hints,resolved
+4022070,CVE-2026-92388: FTP wildcard write callback mixup,resolved
+3989514,CVE-2026-87866: wolfSSL public-key pinning bypass,resolved
+3975408,CVE-2026-87865: knownhost callback mismatches key as missing,resolved
+4041053,CVE-2026-94266: password leak in CURLINFO_EFFECTIVE_URL,resolved
+4040551,CVE-2026-94265: Authorization: Negotiate sent to foreign origin,resolved
+3972094,CVE-2026-87861: cross-origin reuse of a Negotiate connection,resolved
+4030333,CVE-2026-92392: HTTP/2 upload Use-After-Free,resolved
+4093443, Cookie attribute truncation in curl drops Secure/HttpOnly protections,informative
+4063328,curl tool: --hsts is ignored for a schemeless URL starting with a slash under --proto-default http,informative
+4071872,libcurl: Secure=1 cookie flag bypasses the 8.22.0 fix and leaks over HTTP,informative
+4064040, Use-after-free read of the freed referer buffer in `curl_easy_setopt(CURLOPT_REFERER)` — stale heap bytes transmitted in an outbound `Referer:` heade,not-applicable
+4085412,Rustls backend discloses out-of-bounds heap data during legal IMAP upload cancellation,not-applicable
+4059104,IMAP literal size truncation on 32-bit platforms corrupts downloads and desynchronizes the response parser,informative
+4057637,[HIGH] CWE-22 — Path Traversal in FTP Wildcard Download via Unencoded `.` in Escaped Filenames,informative
+4053066,Missing applicability validation allows non-applicable HTTPS RR to reach ECH processing,not-applicable
+4040799,Windows filename sanitizer misses Unicode COM/LPT reserved device names,informative
+4025056,HTTP/1.1 response framing violation and unsafe connection reuse when transfer decoding is disabled,informative
+4033971,Use-after-free of the internal multi->admin easy handle via the documented CURLMOPT_NOTIFYFUNCTION callback,informative
+4021960,TELNET control and environment data bypass HTTPS-proxy TLS,informative
+4021952,Socket API drops expired timeouts for transfers queued behind a connection limit,informative
+4023506,"libcurl LDAP LDIF: entry DN and attribute names written without RFC 2849 base64 encoding, allowing server line injection",informative
+4024268,Out-of-bounds read in curl_formadd when CURLFORM_NAMELENGTH is explicitly 0,informative
+4027511,Encoded slash traversal in the IPFS/IPNS URL rewrite escapes the configured gateway namespace,informative
+4016541,TLS session resumption client cert bypass with CURLOPT_SSL_CTX_FUNCTION,informative
+3968853,OpenSSL ENGINE selection omitted from mTLS connection matching,informative
+3971462,Heap-use-after-free in CURLOPT_REFERER when passed a CURLINFO_REFERER pointer,informative
+3973234,53: HTTP/1 CONNECT chunked-407 trailers bypass CURLOPT_SUPPRESS_CONNECT_HEADERS and lose CURLH_CONNECT classification,informative
+3973249,56: IBM i CL wrapper `parse_command_line()` never enters quote mode,informative
+3972323,10: CURLOPT_MAXLIFETIME_CONN bypass on active HTTP/2 connections,informative
+3973152,"37: `curl_mprintf` `%F` format specifier not consumed, causing variadic argument desynchronization",informative
+3973245,55: Heap-buffer-overflow read in `curl_formadd_ccsid()` with binary form data,informative
+3972338,12: SASL DIGEST-MD5 does not validate the server's `rspauth` proof,informative
+3976342,IMAP connection reuse runs requests in the wrong case-sensitive mailbox,informative
+3971538,"27: IMAP custom FETCH listing classification skips literal boundaries, enabling response desynchronization",informative
+3973143,"22:  FTP wildcard matching decodes server-provided filenames, enabling directory traversal",informative
+3973194,49: Cookie-jar save transfers group access to a different GID,informative
+3971518,29: CURLOPT_ISSUERCERT accepts a different-key certificate when issuer metadata collides,informative
+3973111,08: CVE-2026-7009 fix incomplete for AWS-LC: `--cert-status` bypass on SecTrust path,informative
+3993850,"Apple SecTrust fallback ignores CURLOPT_CRLFILE, letting a revoked cert pass",informative
+3993973,HTTP Digest nonce reused across an https→http scheme change on the same handle,informative
+3973213,54: Rejected HTTP/2 push destroys MIME callback state still used by parent (use-after-free),informative
+3973219,57: Heap out-of-bounds read in `curl_easy_escape_ccsid()` / `curl_easy_unescape_ccsid()`,informative
+3972293,43: HTTP proxy CONNECT header chooses the `-OJ` filename after a redirect,informative
+3971706,36: HTTP upload resume offset consumed twice after early 307/308 redirect,informative
+3973121,11: `CURLOPT_FORBID_REUSE` silently lost on multiplexed HTTP/2 connection when the forbidding transfer finishes first,informative
+3972385,CVE-2026-82209: domain-scoped PSL domain cookie,resolved
+3923520,CVE-2026-19931: Negotiate ambient user conn reuse,resolved
+3969255,CVE-2026-80229: OpenSSL provider use-after-free,resolved
+3969300,CVE-2026-80230: OpenSSL pinning bypass,resolved
+3969368,CVE-2026-80231: native CA store conn reuse,resolved
+3973090,CVE-2026-82208: wolfSSL CA-cache hit overrides callback,resolved
+3972395,CVE-2026-80255: secure cookie attribute bypass with tab,resolved
+3822248,CVE-2026-13608: OpenLDAP SASL authentication bypass,resolved
+3969820,CVE-2026-80256: wcurl backslash bypass,resolved
+3916059,CVE-2026-18924: HTTP/2 server push UAF,resolved
+3973098,07: GnuTLS 0-RTT early data bypasses file-backed public-key pin verification,not-applicable
+3973127,18:  Explicit IPv6 proxy zone ID silently ignored — proxy credentials sent to wrong interface,informative
+3971585,33: CONNECT_ONLY raw I/O selects wrong connection after CURLOPT_SHARE detach (incomplete fix for CVE-2020-8231),informative
+3973158,41: `main_checkfds()` pipe reuse leaks proxy credentials into HTTPS upload body,informative
+3973093,06: Incomplete fix for CVE-2026-7009: GCC/SecTrust builds silently discard stapled OCSP responses,informative
+3973228,50: CMake `HTTP_ONLY` does not disable SSH backends — SCP and SFTP remain usable,informative
+3973169,42: `VMS_STS` macro typo (`< 3` vs `<< 3`) turns curl failures into successful OpenVMS conditions,informative
+3972316,46: `--libcurl` output carries `--insecure` across `--next` boundaries,informative
+3971496,"28: HTTP/3 UDP path ignores CURL_SOCKOPT_ALREADY_CONNECTED, reconnects callback-provided socket",informative
+3972196,34: `curl_mprintf` reads `double` for documented `long double` conversions — uninitialized value disclosure,informative
+3970639,--etag-save - truncates append-redirected stdout,informative
+3970650,Stacked --proto modifiers leave denied protocol enabled,informative
+3968729,Unbound cross-peer HTTP Digest challenge state,informative
+3968431,ARG_CLEAR credential scrubbing wipes only UTF-8 copies on Windows Unicode builds,not-applicable
+3955945, curl_share TOCTOU > RCE via Curl_llist _dtor Function Pointer Hijack,not-applicable
+3966955,TLS session cache case-folds CA paths and bypasses the active trust profile,informative
+3963330,libcurl Digest/NTLM authentication ignores an explicit Authorization header,informative
+3963494,RTSP CRLF injection in libcurl allows CURLOPT_RTSP_* values to inject commands into independent sessions,not-applicable
+3963725,wolfSSL backend disables hostname verification when CURLOPT_SSL_VERIFYPEER is 0,not-applicable
+3952619,Domainless COOKIEFILE cookie leaks to unrelated IP-literal hosts,informative
+3938185,Windows SSPI connection-pool probe can reuse a connection under the wrong user,not-applicable
+3938220,libcurl cache updates follow symlinks and truncate their targets,not-applicable
+3920276,Cookie jar load skips public suffix check on PSL builds,informative
+3923212,URL API: triple-slash parses path segment as hostname,not-applicable
+3917775,curl Missing Sec-WebSocket-Accept Verification Enables MITM WebSocket Session Hijacking,not-applicable
+3911968,Heap use-after-free (write) in mev_forget_socket() via reentrant curl_easy_pause() — incomplete fix for CVE-2026-9080,not-applicable
+3911605,SMTP CRLF injection in custom SMTP recipient operand allows additional SMTP commands after authentication,not-applicable
+3833577,heap-use-after-free in curl_easy_cleanup() called from callback,not-applicable
+3831432,setopt(VERIFYPEER) from callback bypasses TLS verify on connection reuse,not-applicable
+3826843,ssh_config_matches is dead code: unauthorized SSH key reuse,informative
+3831345,CURLSHOPT_UNSHARE race can cause UAF in shared SSL session cache during HTTPS transfer,informative
+3832393,"libcurl upload read callbacks miss recursive API guard, allowing prohibited multi API reentry and ASAN-confirmed UAF",not-applicable
+3824303,UAF read in mev_pollset_diff() trace path after curl_easy_pause() in socket callback,informative
+3823985,Use-after-free in `mev_forget_socket` when `curl_easy_pause()` is called from a `CURL_POLL_REMOVE` socket callback (incomplete fix of CVE-2026-9080),informative
+3826199,mbedTLS / wolfSSL / rustls backends silently skip hostname verification when CURLOPT_SSL_VERIFYPEER=0,not-applicable
+3823932,"CURLOPT_HAPROXY_CLIENT_IP lacks input validation, enabling HAProxy PROXY protocol injection",not-applicable
+3735180,HTTPS proxy connection reuse lets one easy handle inherit another handle's mTLS-authenticated proxy session,duplicate
+3788984,CVE-2026-11564: Native CA trust persist,resolved
+3797526,CVE-2026-12064: proto-default skips SSH verification,resolved
+3788931,CVE-2026-11586: WS Auto-PONG memory exhaustion,resolved
+3783438,CVE-2026-11352: QUIC zero-length UDP datagrams busy-loop,resolved
+3751697,CVE-2026-10536: HTTP/2 stream-dependency tree UAF,resolved
+3733905,CVE-2026-8924: trailing dot domain super cookie,resolved
+3751712,CVE-2026-9547: SSH improper host validation,resolved
+3754343,CVE-2026-9546: sending old referer,resolved
+3750295,CVE-2026-9079: stale proxy password leak,resolved
+3749204,CVE-2026-9080: UAF after pause in socket callback,resolved
+3718195,CVE-2026-8286: wrong STARTTLS connection reuse,resolved
+3733910,CVE-2026-8932: incomplete mTLS config matching in conn reuse,resolved
+3744543,CVE-2026-8927: env-set cross-proxy Digest auth state leak,resolved
+3735193,CVE-2026-8925: SASL double-free,resolved
+3735184,CVE-2026-8926: password leak with netrc and user in URL,resolved
+3721183,CVE-2026-8458: wrong reuse for different services,resolved
+3752888,CVE-2026-9545: exposing HTTP/3 early data,resolved
+3793260,CVE-2026-11856: cross-origin Digest auth state leak,resolved
+3802645,"verify-release rebuilds from the tarball under verification, enabling pre-check command execution and false OK for a malicious curl release tarball",not-applicable
+3804525,Vulnerability Report: Buffer Overflow in Path Sanitization,not-applicable
+3793495,Incomplete Suppression of  Transfer-Encoding: chunked Header in HTTP/2 After Redirect From HTTP/1.1,not-applicable
+3803415, Secure cookies leaked to HTTP origins through HTTPS forwarding proxy,not-applicable
+3795615,Duplicate chunked Transfer-Encoding lets a malicious origin smuggle a response across reused HTTP proxy connections,informative
+3741744,CRLF Injection via Custom HTTP Headers,not-applicable
+3774279,heap-use-after-free in state.referer when CURLOPT_REFERER replaced or cleared after perform,informative
+3791168,curl-ipv4-percent-normalization-SSRF,informative
+3791191,Trailing-Dot Hostname in Redirect Silently Strips Client Certificate and Auth Credentials,informative
+1826392,curl/libcurl vulnerable to TLS truncation attacks,not-applicable
+3788506,SSH/SFTP connection reuse can bypass SSH key identity after ssh_config_matches removal,informative
+3786077,SOCKS5 no-auth accepted despite username/password-only authentication,not-applicable
+3785919,"libcurl: HTTP/1.x bare LF byte in response header value enables cookie jar pollution and POST body/credential exfiltration via redirect — RC=0, curl 8",not-applicable
+3780733,DNS domain search list followed for extant domain missing A or AAAA records,not-applicable
+3781305,OpenSSL TLS 1.2 session resumption accepts expired server certificates in libcurl,informative
+3749428,curl cross-origin HTTPS redirect reuses TLS client certificate for unintended second-origin mTLS authentication,informative
+3766392,curl External-Controlled Filename in `--url @file` Leads to Arbitrary File Overwrite,not-applicable
+3784125,GnuTLS OCSP stapling accepts unrelated SingleResponse (no cert-ID binding),not-applicable
+3717552,CURLOPT_PROXY_CRLFILE / CURLOPT_PROXY_ISSUERCERT / CURLOPT_PROXY_ISSUERCERT_BLOB silently ignored on backends that don't support them,informative
+3718265,Shared HSTS cache accessed without lock,not-applicable
+3776535,RTSP Digest auth state leaks across origins on reused libcurl easy handle,informative
+3776433,TFTP upload ignores --continue-at / CURLOPT_RESUME_FROM and leaks skipped local file prefix,not-applicable
+3774977,libcurl 8.20.0 ignores HTTP Digest domain protection space and preemptively leaks Digest auth outside the declared scope,informative
+3766065,CURLOPT_COOKIE leaked to cross-origin redirect target — CURLOPT_UNRESTRICTED_AUTH bypass for the STRING_COOKIE path,informative
+3777381,PRE_PROXY change leaks stale Proxy Digest state across proxy-chain boundary,not-applicable
+3773293,curl/libcurl 8.20.0 NOPROXY bypass via uppercase-hex IPv4 aliases leaks off-proxy Basic credentials to the configured proxy,informative
+3770979,SMTP connection reuse ignores --ssl-reqd / CURLOPT_USE_SSL and reuses a clear-text STARTTLS session on current master,not-applicable
+3767963,Proxy CONNECT response poisoning via authentication retry in cf-h1-proxy.c (libcurl),informative
+3761789,Mentioned unites are at the same time .Then we have to increase the bounty.,not-applicable
+3761647,TLS conn reuse and session cache ignore fsslctx callback and ssl_config_data flags ( incomplete fix variant of 7541ae569 ),informative
+3756699,lib/ldap.c follows attacker-controlled LDAP referrals and binds to a second server; WinLDAP builds leak current logon credentials (confirmed on Window,informative
+3751701,Use-after-free in `curl_easy_duphandle()` with HTTP/2 stream-dependency tree,informative
+3769293,Low priority HSTS bypass in curl_easy_duphandle(),informative
+3751715,Heap-OOB read in urlapi `redirect_url()` via `CURLU_GUESS_SCHEME` + `CURLU_NO_GUESS_SCHEME` flow,informative
+3752567,curl GnuTLS backend accepts a clientAuth-only certificate for HTTPS server authentication,not-applicable
+3747959,curl --skip-existing has a TOCTOU race that lets a post-check symlink redirect the later download write,not-applicable
+3733946,Credentials forwarded to HTTP after HTTPS→HTTP same-port redirect — url_set_data_creds uses scheme-blind comparator,informative
+3734947,HTTP/3 paused transfer buffers incoming data without bound up to ~1 GiB,not-applicable
+3734992,Schannel custom-CA path skips Extended Key Usage enforcement,informative
+3741135,"Connection reuse ignores haproxyprotocol and HAPROXY_CLIENT_IP settings, allowing PROXY context to persist across transfers",not-applicable
+3739561,SSL session-cache peer key omits signature_algorithms: strict-sigalg handle silently resumes a permissive sibling's session,informative
+3735179,CURLOPT_PROXY_CAINFO_BLOB silently activates native CA store on Apple builds,informative
+3735276,TLS peer-verification bypass via mid-transfer ssl_config mutation,not-applicable
+3734095,"TLS verifyhost bypass in rustls, mbedTLS, and wolfSSL when verifypeer=0",informative
+3734020,HTTP/2 proxy CONNECT tunnel unbounded 1xx chain (missing Curl_bump_headersize cap in cf-h2-proxy.c),informative
+3733934,CURLOPT_HSTS_CTRL disables shared HSTS without share guard — use-after-free and double-free,informative
+3735238,cookie: case-insensitive path comparison in replace_existing() allows cookie eviction across distinct paths,informative
+3735080,"libssh SFTP initialization ignores CURLOPT_TIMEOUT, hangs indefinitely",not-applicable
+3734935,rustls backend silently ignores CURLOPT_CRLFILE when native CA store is active,informative
+3733984,HSTS multi-trailing-dot bypass-ish: possible incomplete fix for CVE-2022-30115,informative
+3734921,"Trailing-dot IPv4 URL bypasses IP-address guard, allows wildcard DNS SAN match",informative
+3736234,NULL pointer dereference in libcurl URL API redirect_url() with CURLU_DEFAULT_SCHEME,informative
+3725659,Kerberos/SPNEGO Connection Reuse Vulnerability,duplicate
+3717365,mbedTLS private-key blob null-termination asymmetry in lib/vtls/mbedtls.c (mbed_load_privkey),informative
+3708482,wcurl treats some URL operands after -- as curl options,not-applicable
+3710209,Potential Resource Leak in tool_parsecfg.c at line 279 during fileerror,not-applicable
+3707747,libcurl 8.20.0 incomplete fix for CVE-2026-7168: changing only CURLOPT_PROXYPORT leaks stale Proxy Digest auth to a different proxy,informative
+3712343,MQTT CONNACK Packet Type Bypass leads to RCE via Malicious Broker,informative
+3702718,MQTT state machine confusion: PINGRESP/DISCONNECT with non-zero remaining_length dispatches to stale nextstate,informative
+3591956,Use-After-Free in SMB connection reuse (req->path dangling pointer after needle destruction),duplicate
+3646072,Negotiate connection reuse with wrong credentials when using CURLAUTH_ANY                                        ,duplicate
+3666576,Negotiate Authentication Premature on Connection Reuse,duplicate
+3697719,CVE-2026-7168: cross-proxy Digest auth state leak,resolved
+3694390,CVE-2026-7009: OCSP stapling bypass with Apple SecTrust,resolved
+3669637,CVE-2026-6253: proxy credentials leak over redirect-to proxy,resolved
+3642555,CVE-2026-5545: wrong reuse of HTTP Negotiate connection,resolved
+3671818,CVE-2026-6276: stale custom cookie host causes cookie leak,resolved
+3677759,CVE-2026-6429: netrc credential leak with reused proxy connection,resolved
+3621851,CVE-2026-4873: connection reuse ignores TLS requirement,resolved
+3650689,CVE-2026-5773: wrong reuse of SMB connection,resolved
+3682666,Use-after-free in `curl_easy_ssls_export()` during callback re-entrancy,not-applicable
+3684614,Heap-buffer-overflow in `Curl_ssl_push_certinfo_len()` — sole bounds check is `DEBUGASSERT`,not-applicable
+3684603,Stack exhaustion in MIME multipart reading with deeply nested subparts,not-applicable
+3680680,libcurl omits IPv6 zoneid from host identity and leaks credentials/cookies across scoped link-local realms,informative
+3680038,Digest Auth State Leak on Cross-Origin Redirect via Netrc - Username and Password Hash Sent to Wrong Host,informative
+3680234,"libcurl reuses a learned RTSP Session header across different hosts on the same easy handle, enabling cross-host session leak and replay",informative
+3673277,libcurl stale CURLOPT_AUTOREFERER leaks a previous request URL to a different origin on a reused easy handle,informative
+3674275,lib/http2.c: SSL connections accept non-HTTP push schemes (incomplete fix for 2e8c922a),informative
+3669305,Argument Injection via curl Short-Flag Grouping,not-applicable
+3665363,Integer Overflow/Signedness Mismatch in Printf Precision for HTTP/2 Trailer Headers,not-applicable
+3658049,libcurl: Integer truncation in curl_easy_ssls_import() causes TLS sessions to never expire,not-applicable
+3650443,no_proxy IDN mismatch: Unicode hostnames bypass proxy exclusion list,informative
+3650473,"FTP entrypath accepts 0xFF (Telnet IAC) through incomplete ISCNTRL filter, sent on wire via CWD on connection reuse",not-applicable
+3650435,Improper enforcement of CURLOPT_SOCKS5_AUTH due to missing reuse key validation in libcurl,informative
+3645415,# SCURLOPT_SSH_KNOWNHOSTS and host fingerprint pins are silently bypassed when an SSH connection is reused from the connection pool,not-applicable
+3651975,SMTP Command Injection via CRLF in libcurl MAIL_FROM / MAIL_RCPT (lib/smtp.c),not-applicable
+3646914,ignoring 'options' when doing connection reuse,informative
+3645361,Data race in Curl_dnscache_add_negative() corrupts shared DNS cache — heap corruption and double-free when using CURLOPT_SHARE with CURL_LOCK_DATA_DNS,informative
+3648199,Internal application wrapper or script using curl,not-applicable
+3640932,Missing server identity policy enforcement in SSH connection reuse allows host key verification bypass via pool poisoning,not-applicable
+3641893,Cookie attribute TAB injection regression in Set-Cookie parsing,informative
+3639277,Bypassing Strict SSH Server Verification via Connection Pool Reuse in libcurl,informative
+3638715,Use-After-Free race condition in url_move_hostname() via shared connection pool,not-applicable
+3636244,HackerOne Vulnerability Report: libcurl SSL/TLS Identity Leakage via Insecure Connection Reuse,informative
+3636044,HTTP/2 PUSH_PROMISE header loss on OOM bypasses scheme validation (regression of 2e8c922a89),informative
+3632427,Unbounded GZIP Decompression Leading to Event-Loop Starvation,not-applicable
+3633534,CRLF Injection in HAProxy PROXY Protocol via CURLOPT_HAPROXY_CLIENT_IP allows IP spoofing and protocol injection,not-applicable
+3630310,"HTTP/2 server push accepts a non-authoritative :scheme=https over cleartext h2c, enabling HTTPS cache-key poisoning",informative
+3611825,Bearer Token Leaked to Attacker via .netrc Despite CVE-2026-3783 Fix,not-applicable
+3627638,Security Vulnerability Report: Protocol Injection via Programmatic Options,not-applicable
+3623064,HTTP/1.1 Response Desynchronization via conflicting CL/TE headers in Proxy CONNECT,informative
+3617719,Function `do_pubkey()` can have out-of-bound read issue,not-applicable
+3612891,Exposed .git/config File Leading to Potential Sensitive Information Disclosure,not-applicable
+3609505,HSTS accepted from HTTP origin behind HTTPS proxy,informative
+3608522,Unescaped username in SASL DIGEST-MD5 response allows injection,informative
+3603300,SMB READ_ANDX DataOffset not validated,not-applicable
+3598444,Curl_compareheader() fails to match multi-value HTTP headers,informative
+3598358,urlapi: off-by-one in custom scheme validation skips last character,informative
+3597359,NULL Pointer Dereference (DoS) in libcurl SFTP QUOTE command parsing due to missing return statement,informative
+3591944,CVE-2026-3805: use after free in SMB connection reuse,resolved
+3584903,CVE-2026-3784: wrong proxy connection reuse with credentials,resolved
+3583983,CVE-2026-3783: token leak with redirect and netrc,resolved
+3595753,Connection Reuse Ignores OAuth Bearer Token Mismatch,not-applicable
+3595764,CURLOPT_UNRESTRICTED_AUTH Dangerous Default Documentation Gap,not-applicable
+3584491,LM Challenge-Response Hash Always Sent in SMB Authentication,informative
+3584865,"In curl's SASL OAUTHBEARER authentication, including the SOH character (0x01) in the username corrupts the message structure.",not-applicable
+3584149,SSTI leads to Command injection,not-applicable
+3580247,Use after free in hyperfifo example,informative
+3575245,Integer Overflow in curl_multi_get_handles() Leading to Heap Buffer Overflow,not-applicable
+3575250,RTSP RTP Interleaved Parser Assertion Failure (Zero-Length RTP Payload),informative
+3574928,Able to bypass HSTS using trailing dot,not-applicable
+3575475,Curl Telnet Handler Buffer Overflow,not-applicable
+3531216,MQTT Protocol Packet Injection via Unchecked CONNACK Remaining Length,informative
+3523953,wcurl Argument Injection via Unquoted Variable,not-applicable
+3523349,Integer Underflow in src/var.c,not-applicable
+3516878,Cross‑origin cookies leak and injection risk when using a custom Host header,not-applicable
+3516974,"SSL options ISSUERCERT, EC_CURVES and CRLFILE silently ignored by non-OpenSSL backends",not-applicable
+3516202,Cookie Replacement Use-After-Free Vulnerability,not-applicable
+3516186,Cookie Max-Age Integer Overflow Vulnerability,not-applicable
+3514263,libcurl: Improper Authentication State Management on Cross-Protocol Redirects,not-applicable
+3509396,IMAP Protocol Desynchronization and Response Smuggling via Naive Literal Parsing,informative
+3508321,Integer-underflow leads to heap over-read in TFTP implementation,informative
+3508799,Digest Authentication Header Injection,informative
+3509437,"Directory listing vulnerability is disclosing names and emails, widespread (thousands of records, publicly accessible without auth)",not-applicable
+3508785,Gopher Protocol Command Injection (SSRF Smuggling),not-applicable
+3508701,Use-After-Free in curl_easy_nextheader when reusing header handle across requests,informative
+3508854,MQTT: unsigned integer underflow bypasses MAX_MQTT_MESSAGE_SIZE check,not-applicable
+3508500,integer Overflow in MQTT Protocol Handling Allows Bypassing Message Size Limit,informative
+3506159,Heap Out-of-Bounds Read in lib/http2.c via Malformed PUSH_PROMISE Headers,not-applicable
+3505557,CRLF Injection in HTTP header values allows arbitrary header injection,not-applicable
+3487952,State Isolation Failure in Multiplexed Connections (Shared Auth Context),not-applicable
+3493602,Stack Buffer Overflow in mprintf.c formatting function (fallback path),informative
+3494098,inconsistently Rejection Logic in file:// URLs with Authority,not-applicable
+3459417,CVE-2025-14524: bearer token leak on cross-protocol redirect,resolved
+3477116,CVE-2025-15079: libssh global knownhost override ,resolved
+3480925,CVE-2025-15224: libssh key passphrase bypass without agent set,resolved
+3488278,MQTT: Missing upper bound on incoming Remaining Length allows server-controlled long wait,not-applicable
+3485930,Path Traversal in curl file:// Protocol Handler Allows Unauthorized File Access,not-applicable
+3485826,Alt-Svc bypasses credential leak protection (CVE-2018-1000007),not-applicable
+3483902,PROTOCOL-LEVEL: Persistent UDP Amplification and Cache Poisoning via Alt-Svc Logic Flaw,informative
+3484431,HTTP Request Smuggling and SSRF via CRLF Injection in Curl_add_custom_headers,not-applicable
+3484506,CRLF Injection in Gopher Protocol (`lib/gopher.c`),not-applicable
+3484319,MQTT Protocol Violation & Integer Overflow in libcurl,informative
+3483225,A quiet New Year wish for security researchers,spam
+3481849,HTTP/2 and HTTP/3 Header Injection in curl,not-applicable
+3480713,Proxy-Authorization header is leaked to origin server after redirect from proxied to direct connection,not-applicable
+3481595,SMTP CRLF Injection & Protocol Desynchronization in libcurl,not-applicable
+3480712,Telnet Suboption Buffer Pointer Underflow in lib/telnet.c leads to Out-of-Bounds Read,informative
+3480641,Cross‑Layer State Confusion in libcurl: Credential & Key‑Material Persistence Across Redirect / Connection Reuse Boundaries,not-applicable
+3480039,WebSocket Logic Error: Control Frame (PING/PONG) Starvation causes Connection Drop (DoS) during large transfers,informative
+3480078,Heap Buffer Over-read in lib/http2.c (on_header) handling PUSH_PROMISE frames,not-applicable
+3479984,CRLF Injection / Protocol Smuggling in libcurl via CURLOPT_USERNAME (IMAP),not-applicable
+3479203,HTTP/3 Protocol Smuggling and Header Injection via CRLF in QPACK value conversion,informative
+3479019,Security hardening: missing integer overflow check in curl_load_library(),not-applicable
+3477023,Protocol Smuggling / CRLF Injection via Gopher Protocol allows Arbitrary Command Injection,not-applicable
+3476928,Integer Overflow in `curl_easy_escape()` may lead to heap buffer overflow and stack memory disclosure on 32-bit platforms,not-applicable
+3475472,Public-suffix cookie injection when libpsl is disabled,not-applicable
+3470073,Heap Buffer Over-Read via Malicious SMB Server READ_ANDX Response,duplicate
+3475613,HAProxy Connection Reuse leads to IP Spoofing and mTLS Context Smuggling,not-applicable
+3474865,libcurl WebSocket handshake accepts any Sec-WebSocket-Accept,not-applicable
+3473384,Functional Regression in Digest Authentication: Failure to handle optional spaces and escaped quotes,informative
+3473182,A logic error in detect_proxy caused truncation of environment variable names for long protocol schemes.,not-applicable
+3471553,Unbounded memory consumption via compressed HTTP responses (gzip/brotli/zstd),informative
+3470095,Heap Buffer Over-Read via Malicious SMB Server READ_ANDX Response,not-applicable
+3470649,File URL UNC Path Access (Windows SSRF),not-applicable
+3468098,Certificate Pinning Bypass with wolfSSL backend over HTTP/3,not-applicable
+3468410,Heap buffer overflow in Curl_ipv4_resolve_r due to incorrect buffer alignment and size calculation on AmigaOS,not-applicable
+3466896,Heap Overflow in cURL AmigaOS Socket Implementation,spam
+3466883,Curl Alt-Svc Parser Stack Buffer Overflow,spam
+3465094,Path Traversal Bypass in file:// URLs Due to Incomplete URL-Encoded Path Normalization,not-applicable
+3463619,testing hackerone functions,spam
+3463608,Denial of Service (DoS) vulnerability in dedotdotify() URL path normalization,not-applicable
+3462525,Buffer Overflow in cURL Internal printf Function,not-applicable
+3460184,Terminal Output Not Great,not-applicable
+3455037,Certificate Hostname Validation Bypass via Leading Dot in Hostname,informative
+3459636,Stack Buffer Overflow in cURL wolfSSL Backend (lib/vtls/wolfssl.c),not-applicable
+3407352,curl built with GnuTLS backend defaults to weak crypto parameters,informative
+3452725,Title: Use-After-Free in cURL Test Suite via Improper Cleanup of Global Handle,not-applicable
+3451305,SMTP Protocol Injection via CRLF in CURLOPT_MAIL_FROM leading to Email Spoofing,not-applicable
+3445174,Path Traversal in file:// protocol allows Arbitrary File Read,not-applicable
+3444904,Heap Buffer Overflow in TFTP,not-applicable
+3442060,Infinite loop issue in the state machine of the curl project,not-applicable
+3442024,runs javascript on powershell when it shouldnt,not-applicable
+3432833,[SFTP] TOCTOU Race Condition in Upload Resume Logic Leads to Arbitrary File Append,informative
+3434543,Arbitrary free in curl's config file parsing.,informative
+3434510,"Out-of-bounds read in HTTP method handling causes undefined behavior and potential crash This is sharp, Gaurav. We’ve got a real memory-safety bug ins",not-applicable
+3431180,Double free in tool_ssls_load(),informative
+3427670,Double-free vulnerability in libcurl with rustls via NoServerCertVerifier condition leads to application crash,informative
+3427460,Incorrect sizeof() in Rustls Backend Memory Allocation,not-applicable
+3427343,Off-by-One Buffer Overflow in SMB Path Handler,not-applicable
+3427194,Malicious server forces .curlrc creation via curl -OJ leading to local file exfiltration,not-applicable
+3418861,"libcurl FTP path normalization flaw allows decoded %2e%2e → CWD .. and directory escape (Path Traversal, CWE-22)",not-applicable
+3419617,Hash exposed in public repository,not-applicable
+3418760,Command Injection - CRITICISM,not-applicable
+3418776,Silent TLS Trust Model Hijacking via `CURL_CA_BUNDLE` Environment Variable Leads to MITM,not-applicable
+3418646,Arbitrary Configuration File Inclusion: via External Control of File Name or Path,not-applicable
+3418616,SMTP CRLF Injection in curl/libcurl via MAIL FROM/RCPT TO parameters,not-applicable
+3417428,libcurl MQTT `CURLOPT_POSTFIELDSIZE_LARGE` overflow leads to immediate DoS,informative
+3418528,Unsafe use of strcpy in Curl_ldap_err2string (packages/OS400/os400sys.c) — stack-buffer-overflow (PoC + ASan),spam
+3414088,SMTP CRLF Command Injection in CURLOPT_MAIL_FROM and CURLOPT_MAIL_RCPT,duplicate
+3355218,CVE-2025-10966: missing SFTP host verification with wolfSSH,resolved
+3409193,HackerOne,not-applicable
+3409186,Hi Hacker,not-applicable
+3408126,Directory Traversal Vulnerability in cURL via Content-Disposition Header Processing,not-applicable
+3406123,"Buffer over-read,, Missing NUL termination in addvariable() causes undefined behavior",not-applicable
+3404025,SOCKS5 Heap Buffer Overflow via Malicious HTTP Redirect with Oversized Hostname,not-applicable
+3403880,Logical Flaw in curl_url_set Leads to Inconsistent Query Parameter Encoding,not-applicable
+3393539,Memory leak in Curl_auth_create_ntlm_type3_message,informative
+3400761,"curl’s persistence files inherit world-readable/writable perms from umask, leaking and tampering with cookies/HSTS/Alt-Svc caches",not-applicable
+3395666,libcurl MQTT PUBLISH length overflow (heap overflow),not-applicable
+1024749,Cookie exposure due to unexpected file permission change,not-applicable
+3400831,CURLX_SET_BINMODE(NULL) can call fileno(NULL) and cause undefined behavior / crash,not-applicable
+3399774,Integer Overflow to Heap Overflow in DoH Response Handling,not-applicable
+3395227,Use of Deprecated strcpy() with User-Controlled Environment Variable in Memory Debug Initialization,not-applicable
+3395218,Use of Deprecated strcpy() with Fixed-Size Buffers in Progress Time Formatting,not-applicable
+3392174,Buffer Overflow in WebSocket Handshake (lib/ws.c:1287),not-applicable
+3387499,SMTP Command Injection Vulnerability in libcurl 8.16.0 via RFC 3461 Suffix,not-applicable
+3379102,Missing enforcement of SFTP quote syntax can lead to operation on wrong object,not-applicable
+3374554,Apple SecTrust legacy path accepts untrusted certificates on pre-10.14 macOS/iOS when built with USE_APPLE_SECTRUST,informative
+3373640,OpenSSL backend: X509 peer certificate not freed in ossl_get_channel_binding causes per-request memory leak (DoS risk for long-lived clients),informative
+3366484,Unsanitized IPFS CID Allows SSRF Against Configured Gateway,not-applicable
+3361913,AWS SigV4 Signature Disclosure via Verbose Logging in libcurl,not-applicable
+3357960,SMTP Command Injection Vulnerabilities in curl,not-applicable
+2814750,Inconsistent URL Parsing in curl Leading to Potential SSRF and Access Control Bypass,not-applicable
+3356088,Race condition on global `gss_context` during SOCKS5 GSS-API negotiation in libcurl,informative
+3355213,Use-after-free when POST body buffer is freed before transfer,informative
+3346118,Timing Attack Vulnerability in curl Digest Authentication via Non-Constant-Time String Comparison,not-applicable
+3344663,Security Analysis Report: CURL Integer Overflow Vulnerability,not-applicable
+3341476,int overflow in krb5_read_data() leads to (possible) massive `recv()` write,informative
+3340109,Stack Buffer Overflow in cURL Cookie Parsing Leads to RCE,not-applicable
+3337561,Multiple Unsafe strcpy() Function Calls Leading to Potential Buffer Overflow Vulnerabilities in cURL 8.16.1-DEV,not-applicable
+3335085,TOCTOU Race Condition in HTTP/2 Connection Reuse Leads to Certificate Validation Bypass,not-applicable
+3294999,CVE-2025-9086: Out of bounds read for cookie path,resolved
+3330839,CVE-2025-10148: predictable WebSocket mask,resolved
+3331764,"Confirmed Security Misconfigurations on curl.se (BREACH, Missing Security Headers, ETag Info Disclosure)",not-applicable
+3324901,libcurl: Host-Only Cookies Leak to Alternate IPv4 Forms,not-applicable
+3324190,Heap-buffer-overflow (Out-of-Bounds Read) in DoH hostname encoding,informative
+3319767,Incorrect Parsing of IPv6 Zone ID in curl,not-applicable
+3310318,Missing Security Headers,not-applicable
+3306475,"curl leaks destination IP via glibc getaddrinfo() UDP connect, bypassing SOCKS5/Tor",not-applicable
+3306456,Curl parse_connect_to_string Heap-Overread Leading to Denial of Service via CURLOPT_CONNECT_TO,not-applicable
+3303765,WebSocket Fragmentation DoS on Curl Client,not-applicable
+3302518,## Title  Heap Use-After-Free Vulnerability in `curl` Leading to Potential Code Execution,not-applicable
+3295738,Account/Repository Takeover via Abandoned GitHub Username in curl's href_extractor.c,not-applicable
+3295652,Insecure WebSocket Usage in curl Documentation and Examples (CWE-319: Cleartext Transmission of Sensitive Information),not-applicable
+3295656,Unsafe Global IFS Modification in OS400 Shell Script Enables Command Injection and Parsing Flaws (CWE-78/CWE-20),not-applicable
+3295650,Exposure of Hard-coded Private Keys and Credentials in curl Source Repository (CWE-321),not-applicable
+3293801,Title: Remote Code Execution (RCE) via Arbitrary Library Loading in `--engine` option,not-applicable
+3293177,Path Traversal in SFTP QUOTE command leads to Arbitrary File Write and potential RCE,not-applicable
+3293884,Vulnerability Report: Local File Disclosure via file:// Protocol in cURL,not-applicable
+3292590,Heap Buffer Overflow in Curl_memdup0() via CURLOPT_COPYPOSTFIELDS/CURLOPT_POSTFIELDSIZE Mismatch,not-applicable
+3283232,Use After Free (that leads to arbitrary Write for some versions) ,informative
+3282709,Integer Overflow in schannel.c TLS Data Transmission,not-applicable
+3279804,Stack use-after-scope in HTTP/3 POST request processing via CURLOPT_POSTFIELDS,not-applicable
+3261310,OpenSSL HTTP/3 bogus CURLINFO_TLS_SSL_PTR,informative
+3272982,Vulnerability Report: Public Exposure of Security Audit File,not-applicable
+3269761,Security check up,not-applicable
+3264469,Use after free (or assert triggered) with failed allocations in openssl,informative
+3268294,Exposure of Private RSA Private Key in curl GitHub Repository,not-applicable
+3261248,GnuTLS CURLINFO_TLS_SESSION / CURLINFO_TLS_SSL_PTR type confusion,not-applicable
+3262848,on the implications of permitting procedural culling,not-applicable
+3258022,curl ASSERTs when accessing an LDAP URL,informative
+3250490,Disk Space Exhaustion leading to a Denial of Service (DoS),spam
+3250117,Uncontrolled File Write/Arbitrary File Creation ,not-applicable
+3249936,HTTP Request Smuggling Vulnerability Analysis - cURL Security Report,not-applicable
+3246519,Default Minimum TLS Version Set to TLS v1.0 (Cryptographic Weakness),not-applicable
+3242005,Use-After-Free in OpenSSL Keylog Callback via SSL_get_ex_data() in libcurl,not-applicable
+3242087,Arbitrary File Read via file:// Protocol in cURL,not-applicable
+3241304,access notes without permission,not-applicable
+3241308,Disclosure of email addresses,not-applicable
+2859735,curl --continue-at confusion,not-applicable
+2853023,Information Disclosure at : https://curl.se/.mailmap,not-applicable
+2841436,information disclosure ,not-applicable
+2831558,netrc crlf injection,not-applicable
+2861797,"curl mishandles `%0c%0b` sequences in HTTP responses leading to CRLF confusions, Headers and Cookies Injection",not-applicable
+2864414,Arbitrary File Deletion Vulnerability in curl Source Code via os.unlink(),not-applicable
+2864859,-H with space prefix leads to previous header injection when used with --proxy,not-applicable
+2904921,OS Command Injection  (subprocess Module Usage),not-applicable
+2915426,Git repository found,not-applicable
+3238249,Integer Overflow Risk in HTTP/2 Proxy Window Size Calculations,not-applicable
+2981303,TLS Cipher Misconfiguration in HTTP/3/QUIC Support,not-applicable
+3235428,CRLF injection in libcurl's SMTP client via --mail-from and --mail-rcpt allows SMTP command smuggling,not-applicable
+3000639,curl doesn't hide credentials in /proc/XXX/cmdline provided via CLI arguments,informative
+2941920,Elevation of Privileges (EoP) vulnerabilities related to the some easy_options on Windows,informative
+2946924,Authorization Header Leak via --location-trusted in Curl,not-applicable
+3023139,Memory leak of ftp (with proxy reuse),informative
+3231321,HTTP Proxy Bypass via `CURLOPT_CUSTOMREQUEST` Verb Tunneling,not-applicable
+3124490,Speculative Execution Side-Channel in `curl` ,not-applicable
+3226502,arbitrary file read via `file://` path traversal with `--path-as-is`,not-applicable
+3156384,Heap buffer overflow vulnerability in conncache.c: incorrect use of pointer arrays resulting in out-of-bounds memory writes.,not-applicable
+3135673,"curl -OJ allows creating custom .curlrc file which allows exfiltrating private data, among other things",not-applicable
+3133253,curl_easy_header runs at O(N) or worse and can be abused to use minute(s) of CPU time,informative
+3120969,"[High] MITM via Insecure CA Path Handling in cURL (--capath, CURLOPT_CAPATH) (CWE-494: Download of Code Without Integrity Check)",not-applicable
+3120987,"[High] Arbitrary File Write via Path Traversal in cURL CLI (`-o`, `--output`) (CWE-22: Improper Limitation of a Pathname to a Restricted Directory)",not-applicable
+3118915,Potential XSS vector in curl via unsanitized URL parameter handling,not-applicable
+3045390,Double free caused by mqtt_doing(),informative
+3037583,Buffer Overflow in curl's Rustls Backend,informative
+3230082,Stack-based Buffer Overflow in TELNET NEW_ENV Option Handling,spam
+3229490,Heap Buffer Overflow in libcurl curl_slist_append via Unterminated String,not-applicable
+3089595,Memory leak from doh_write_cb,informative
+3125820,HTTP/2 CONTINUATION Flood Vulnerability,not-applicable
+3100073,Path Traversal Vulnerability in curl via Unsanitized IPFS_PATH Environment Variable,not-applicable
+3101127,Buffer Overflow in curl MQTT Test Server (tests/server/mqttd.c) via Malicious CONNECT Packet,not-applicable
+3037326,Free of uninitialized pointer in doh_decode_rdata_name(),informative
+3030158,Improper Restriction of Authentication Attempts in cURL,not-applicable
+3153971,Stack Buffer Overflow in curl's OpenSSL Provider Handling,not-applicable
+3225565, OS Command Injection in scripts/firefox-db2pem.sh via untrusted certificate nicknames,informative
+3180396,Failure to strip Proxy-Authorization header on change in origin,not-applicable
+3183957,Arbitrary File Read via Unsanitized curl Usage Results in Sensitive File Exposure,not-applicable
+3211973,Credential leak on redirect due to improper state clearing when parsing macdef in netrc.c,informative
+3211126,Sensitive information disclosure with malicious netrc file,informative
+3168039,CVE-2025-5399: WebSocket endless loop,resolved
+3153497,CVE-2025-5025: No QUIC certificate pinning with wolfSSL,resolved
+3150884,CVE-2025-4947: QUIC certificate check skip with wolfSSL,resolved
+3158093,Memory Leak in libcurl via Location Header Handling (CWE-770),spam
+3148937,`Curl_socketpair()` fallback vulnerable to man-in-the-middle attack,informative
+3137657,Memory Leak,informative
+3133379,CRLF Injection in `--proxy-header` allows extra HTTP headers (CWE-93),not-applicable
+3125832,HTTP/3 Stream Dependency Cycle Exploit,not-applicable
+3117697,Double Free Vulnerability in `libcurl` Cookie Management (`cookie.c`),not-applicable
+3116935,Use of a Broken or Risky Cryptographic Algorithm (CWE-327) in libcurl,not-applicable
+3094406,Heap‑based buffer overflow in curl -K <config_file> allows arbitrary write .,informative
+3022041,"Use after free (read) in curl_multi_perform with DoH and Proxy options, and resolve timeouts",informative
+2990139,"Format string vulnerability, curl_msnprintf() function ",not-applicable
+2981245,"(""possible"") UAF",not-applicable
+2917232,CVE-2025-0167: netrc and default credential leak,resolved
+2954286,CVE-2025-0665: eventfd double close,resolved
+2961050,curl allows SSH connection even if host is not in known_hosts,not-applicable
+2956023,CVE-2025-0725: gzip integer overflow,resolved
+2912277,Hackers Attack Curl Vulnerability Accessing Sensitive Information,not-applicable
+2905552,bypass of this Fixed #2437131 [ Inadequate Protocol Restriction Enforcement in curl ],not-applicable
+2829063,CVE-2024-11053: netrc + redirect credential leak,resolved
+2887487,Buffer Overflow Risk in Curl_inet_ntop and inet_ntop4,not-applicable
+2871792,Buffer Overflow Vulnerability in strcpy() Leading to Remote Code Execution,not-applicable
+2823554,Buffer overflow in strcpy,not-applicable
+2764830,CVE-2024-9681: HSTS subdomain overwrites parent cache entry,resolved
+2819666,Exploitable Format String Vulnerability in curl_mfprintf Function,not-applicable
+2792484,"When curl uses Schannel as TLS backend, it fails to enforce TLS 1.3 cipher suite selections correctly",informative
+2669852,CVE-2024-8096: OCSP stapling bypass with GnuTLS,resolved
+2629968,CVE-2024-7264: ASN.1 date parser overread,resolved
+2559516,CVE-2024-6197: freeing stack buffer in utf8asn1str,resolved
+2604391,CVE-2024-6874: macidn punycode buffer overread,resolved
+2559558,NULL dereference when encoding DN of x509 certificate,informative
+2550951,Unicode-to-ASCII conversion on Windows can lead to argument injection and more,not-applicable
+2552179,Incorrect Encoding Conversion in hostname  results in indeterminate SSRF vulnerabilities,not-applicable
+2552192,Denial of Service in curl Request - HTTP headers eat all memory,not-applicable
+2493548,Incorrect Type Conversion in interpreting IPv4-mapped IPv6 addresses and below `curl` results in indeterminate SSRF vulnerabilities.,not-applicable
+2352676,cookie is sent on redirect,not-applicable
+2384833,CVE-2024-2004: Usage of disabled protocol,resolved
+2402853,HTTP/2 PUSH_PROMISE DoS,informative
+2416725,CVE-2024-2466: TLS certificate check bypass with mbedTLS,resolved
+2402845,CVE-2024-2398: HTTP/2 push headers memory-leak,resolved
+2410774,CVE-2024-2379: QUIC certificate check bypass with wolfSSL,resolved
+2298922,CVE-2024-0853: OCSP verification bypass with TLS session reuse,resolved
+2298307,Buffer Overflow Vulnerability in WebSocket Handling,not-applicable
+2236133,CVE-2023-46219: HSTS long file name clears contents,resolved
+2212193,CVE-2023-46218: cookie mixed case PSL bypass,resolved
+2252307,Buffer overflow and affected url:-https://github.com/curl/curl/blob/master/docs/examples/hsts-preload.c,not-applicable
+2199174,[Critical] Curl CVE-2023-38545 vulnerability code changes are disclosed on the internet,not-applicable
+2148242,CVE-2023-38546: cookie injection with none file,resolved
+2187833,CVE-2023-38545: socks5 heap buffer overflow,resolved
+2171309,NULL Pointer dereference in idn.c,informative
+2072338,CVE-2023-38039: HTTP header allocation DOS,resolved
+2039870,CVE-2023-32001: fopen race condition,resolved
+1913733,CVE-2023-28319: UAF in SSH sha256 fingerprint check,resolved
+1994585,Cache purge requests are not authenticated,informative
+1950627,CVE-2023-28321: IDN wildcard match,resolved
+1954658,CVE-2023-28322: more POST-after-PUT confusion,resolved
+1929597,CVE-2023-28320: siglongjmp race condition,resolved
+1898475,CVE-2023-27538: SSH connection too eager reuse still,resolved
+1895135,CVE-2023-27536: GSS delegation too eager connection re-use,resolved
+1892780,CVE-2023-27535: FTP too eager connection reuse,resolved
+1892351,CVE-2023-27534: SFTP path ~ resolving discrepancy,resolved
+1891474,CVE-2023-27533: Telnet option IAC injection,resolved
+1897203,CVE-2023-27537: HSTS double-free,resolved
+1826048,CVE-2023-23916: HTTP multi-header compression denial of service,resolved
+1813864,CVE-2023-23914: curl HSTS ignored on multiple requests,resolved
+1814333,CVE-2023-23915: HSTS amnesia with --parallel,resolved
+1814824,curl file writing susceptible to symlink attacks,informative
+1825377, libssh backend CURLOPT_SSH_HOST_PUBLIC_KEY_SHA256 validation bypass,informative
+1764858,CVE-2022-43552: HTTP Proxy deny use-after-free,resolved
+1755083,CVE-2022-43551: Another HSTS bypass via IDN,resolved
+1722065,CVE-2022-42915: HTTP proxy double-free,resolved
+1704017,CVE-2022-32221: POST following PUT confusion,resolved
+1730660,CVE-2022-42916: HSTS bypass via IDN,resolved
+1721098,CVE-2022-35260: .netrc parser out-of-bounds access,resolved
+1613943,CVE-2022-35252: control code in cookie denial of service,resolved
+1569946,CVE-2022-32205: Set-Cookie denial of service,resolved
+1570651,CVE-2022-32206: HTTP compression denial of service,resolved
+1573634,CVE-2022-32207: Unpreserved file permissions,resolved
+1590071,CVE-2022-32208: FTP-KRB bad message verification,resolved
+1569926,Credential leak when use two url,not-applicable
+1572120,"curl ""globbing"" can lead to denial of service attacks",not-applicable
+1564922,Integer overflows in unescape_word(),not-applicable
+1555440,match,not-applicable
+1589847,Heap overflow via HTTP/2 PUSH_PROMISE,not-applicable
+1590102,KRB-FTP: Security level downgrade,not-applicable
+1555441,CVE-2022-27781: CERTINFO never-ending busy-loop,resolved
+1568175,Credential leak on redirect,not-applicable
+1566462,error parse uri path in curl,not-applicable
+1567257,Memory leak in CURLOPT_XOAUTH2_BEARER,informative
+1560324,Cookie injection from non-secure context,not-applicable
+1557449,CVE-2022-30115: HSTS bypass via trailing dot,resolved
+1553841,CVE-2022-27780: percent-encoded path separator in URL host,resolved
+1555796,CVE-2022-27782: TLS and SSH connection too eager reuse,resolved
+1553301,CVE-2022-27779: cookie for trailing dot TLD,resolved
+1553598,CVE-2022-27778: curl removes wrong file on error,resolved
+1563061,Certificate authentication re-use on redirect,not-applicable
+1526328,CVE-2022-22576: OAUTH2 bearer bypass in connection re-use,resolved
+1547048,CVE-2022-27776: Auth/cookie leak on redirect ,resolved
+1546268,CVE-2022-27775: Bad local IPv6 connection reuse,resolved
+1543773,CVE-2022-27774: Credential leak on redirect,resolved
+1549435,CURLOPT_SSH_HOST_PUBLIC_KEY_SHA256 comparison disaster,not-applicable
+1549461,CURLOPT_SSH_HOST_PUBLIC_KEY_MD5 bypass if string not 32 chars,not-applicable
+1548535,--libcurl code injection via trigraphs,informative
+1542881,curl proceeds with unsafe connections when -K file can't be read,informative
+1521610,Denial of Service vulnerability in curl when parsing MQTT server response,informative
+1485379,Use of Unsafe function || Strcpy,not-applicable
+1468962,Binary output bypass,not-applicable
+1463013,Occasional use-after-free in multi_done() libcurl-7.81.0,informative
+1444539, Remote memory disclosure vulnerability in libcurl on 64 Bit Windows,informative
+1334111,CVE-2021-22946: Protocol downgrade required TLS bypassed,resolved
+1334763,CVE-2021-22947: STARTTLS protocol injection via MITM,resolved
+1269242,CVE-2021-22945: UAF and double-free in MQTT sending,resolved
+1223882,CVE-2021-22925: TELNET stack contents disclosure again,resolved
+1223565,CVE-2021-22924: Bad connection reuse due to flawed path name checks,resolved
+1234760,CVE-2021-22926: CURLOPT_SSLCERT mixup with Secure Transport,resolved
+1213181,CVE-2021-22923: Metalink download sends credentials,resolved
+1213175,CVE-2021-22922: Wrong content via metalink not discarded,resolved
+1180380,CVE-2021-22901: TLS session caching disaster,resolved
+1176461,CVE-2021-22898: TELNET stack contents disclosure,resolved
+1172857,CVE-2021-22897: schannel cipher selection surprise,resolved
+1129529,CVE-2021-22890: TLS 1.3 session ticket proxy host mixup,resolved
+1101882,CVE-2021-22876: Automatic referer leaks credentials,resolved
+1086259,Proxy-Authorization header carried to a new host on a redirect,not-applicable
+1113663,Inadequate Cryptographic Key Size and Insecure Cryptographic Mode.  File Name :- curl_ntlm_core.c,not-applicable
+1040166,CVE-2020-8284: trusting FTP PASV responses,resolved
+636013,huge COLUMNS causes progress-bar to buffer overflow,informative
+662412,Integer overflow  at line 1603 in the src/operator.c file,informative
+694449,Buffer write overflow when forming dns over http request,informative
+694988,Resource leak when using a normal site as DOH server,informative
+696822,Potential invocation of qsort on uninitialized memory during cookie save,informative
+707006,use after free in cookie.c,informative
+714215,curl on Windows can be forced to execute code via OpenSSL environment variables,informative
+770190,Unexpected access to process open files via file:///proc/self/fd/n,informative
+774883,Division by zero if terminal width is 2,informative
+627245,"Integer overlow in ""header_append"" function",informative
+600359,Integer overflow in the source code tool_cb_prg.c,informative
+637800,Libcurl ocasionally sends HTTPS traffic to port 443 rather than specified port 8080,informative
+889160,Poll loop/hang on incomplete HTTP header,informative
+726117,SMB access smuggling via FILE URL on Windows,not-applicable
+687734,Double-free of `trailers_buf' on `Curl_http_compile_trailers()` failure,informative
+688048,Incorrect IPv6 literal parsing leads to validated connection to unexpected https server.,informative
+704621,SSRF via maliciously crafted URL due to host confusion,informative
+724134,Race condition with CURL_LOCK_DATA_CONNECT can cause connections to be used at the same time,informative
+765664,Heap Buffer Overflow (READ of size 1) in ourWriteOut,informative
+518097,libcurl: SMTP end-of-response out-of-bounds read - CVE-2019-3823,informative
+812969,curl still vulnerable to SMB access smuggling via FILE URL on Windows,informative
+872089,Curl_auth_create_plain_message integer overflow leads to heap buffer overflow,informative
+715413,curl successfully matches IP address literal in URL against IP address literal in certificate Common Name,informative
+713975,Only OpenSSL handles a CRL when passed in via CApath ,informative
+1049624,Abusing URL Parsers by long schema name,informative
+1045844,CVE-2020-8285: FTP wildcard stack overflow,resolved
+661847,Integer overflows in tool_operate.c at line 1541,informative
+1048457,CVE-2020-8286: Inferior OCSP verification,resolved
+547630,CVE-2019-5435: An integer overflow found in /lib/urlapi.c,resolved
+887462,CVE-2020-8177: curl overwrite local file with -J,resolved
+874778,CVE-2020-8169: Partial password leak over DNS on HTTP redirect,resolved
+684603,CVE-2019-5482: Heap buffer overflow in TFTP when using small blksize,resolved
+686823,CVE-2019-5481: krb5: double-free in read_data() after realloc() fail,resolved
+948876,CVE-2020-8231: Connect-only connections can use the wrong connection,resolved
+1019457,Data race conditions reported by helgrind when performing parallel DNS queries in libcurl,informative
+1019372,Parallel upload hangs curl if upload file not found,informative
+926638,"curl overwrites local file with -J option if file non-readable, but file writable.",informative
+875775,Invalid write (or double free) triggers curl command line tool crash,informative
+773313,Port and service scanning on localhost due to improper URL validation.,not-applicable
+640532,Active Mixed Content over HTTPS,not-applicable
+640530,Insecure Frame (External),not-applicable
+591770,Signed integer overflow in tool_progress_cb(),informative
+608577,CVE-2019-5443: Windows Privilege Escalation: Malicious OpenSSL Engine,resolved
+550696,CVE-2019-5436: Heap Buffer Overflow at lib/tftp.c,resolved
+545052,Github wikis are editable by anyone #Githubwikistakeover,not-applicable

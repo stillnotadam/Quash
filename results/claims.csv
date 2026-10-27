@@ -1,0 +1,1692 @@
+id,label,release,family,cwe,func,file,verdict_reach,caps,sink_lines,n_prod_funcs,in_scope
+518097,invalid,7.64.1,bounds,Heap Overflow,smtp_endofresp,smtp.c,reachable,,,1,1
+545052,invalid,7.64.1,other,Improper Access Control - Generic,,,no_target,,,0,0
+547630,genuine,7.64.1,integer,Incorrect Calculation of Buffer Size,Curl_is_absolute_url,urlapi.c,reachable,,,6,1
+547630,genuine,7.64.1,integer,Incorrect Calculation of Buffer Size,curl_url,urlapi.c,reachable,,,6,1
+547630,genuine,7.64.1,integer,Incorrect Calculation of Buffer Size,curl_url_cleanup,urlapi.c,reachable,,,6,1
+547630,genuine,7.64.1,integer,Incorrect Calculation of Buffer Size,curl_url_set,urlapi.c,reachable,,,6,1
+547630,genuine,7.64.1,integer,Incorrect Calculation of Buffer Size,free_urlhandle,urlapi.c,reachable,,,6,1
+547630,genuine,7.64.1,integer,Incorrect Calculation of Buffer Size,mv_urlhandle,urlapi.c,reachable,,,6,1
+550696,genuine,7.64.1,bounds,Heap Overflow,,,reachable,,tftp.c:1114,0,0
+591770,invalid,7.64.1,bounds,Integer Overflow,tool_progress_cb,tool_cb_prg.c,reachable,,tool_cb_prg.c:129,1,1
+600359,invalid,7.65.1,bounds,Integer Overflow,,,reachable,256,tool_cb_prg.c:80|tool_cb_prg.c:80|tool_cb_prg.c:82|tool_cb_prg.c:84,0,0
+608577,genuine,7.65.1,other,Code Injection,,,no_target,,,0,0
+627245,invalid,7.65.1,bounds,Integer Overflow,,,non_product,,,0,0
+636013,invalid,7.65.1,bounds,Classic Buffer Overflow,,,reachable,20,tool_cb_prg.c:181,0,0
+637800,invalid,7.65.1,other,Information Disclosure,,,no_target,,,0,0
+640530,invalid,7.65.1,other,,,,no_target,,,0,0
+640532,invalid,7.65.1,other,,,,no_target,,,0,0
+661847,invalid,7.65.3,integer,Integer Overflow,,,reachable,,tool_operate.c:1541|tool_operate.c:1538,0,0
+662412,invalid,7.65.3,integer,Integer Overflow,,,unreachable,1000,operator.c:1603,0,0
+684603,genuine,7.65.3,bounds,Heap Overflow,,,no_target,512|8192,,0,0
+686823,genuine,7.65.3,uaf,Double Free,Curl_saferealloc,strdup.c,reachable,,,1,1
+687734,invalid,7.65.3,uaf,Double Free,Curl_http_compile_trailers,http.c,reachable,,,1,1
+688048,invalid,7.65.3,other,Improper Handling of URL Encoding (Hex Encoding),,,no_target,,,0,0
+694449,invalid,7.65.3,bounds,Classic Buffer Overflow,doh_encode,doh.c,reachable,512,doh.c:135|doh.c:195,1,1
+694988,invalid,7.65.3,logic,,,,no_target,13|45|49|144|252|544|564|588,,0,0
+696822,invalid,7.65.3,other,Memory Corruption - Generic,cookie_output,cookie.c,reachable,,cookie.c:1534|cookie.c:1550|cookie.c:1546,3,1
+696822,invalid,7.65.3,other,Memory Corruption - Generic,cookie_sort_ct,cookie.c,reachable,,cookie.c:1534|cookie.c:1550|cookie.c:1546,3,1
+696822,invalid,7.65.3,other,Memory Corruption - Generic,get_netscape_format,cookie.c,reachable,,cookie.c:1534|cookie.c:1550|cookie.c:1546,3,1
+704621,invalid,7.65.3,logic,Server-Side Request Forgery (SSRF),,,no_target,,,0,0
+707006,invalid,7.65.3,uaf,Use After Free,Curl_cookie_cleanup,cookie.c,reachable,2096,,3,1
+707006,invalid,7.65.3,uaf,Use After Free,Curl_flush_cookies,cookie.c,reachable,2096,,3,1
+707006,invalid,7.65.3,uaf,Use After Free,Curl_share_unlock,share.c,reachable,2096,,3,1
+713975,invalid,7.65.3,logic,Improper Certificate Validation,,,no_target,,,0,0
+714215,invalid,7.65.3,other,Privilege Escalation,,,no_target,,,0,0
+715413,invalid,7.65.3,logic,Improper Certificate Validation,,,no_target,,,0,0
+724134,invalid,7.65.3,uaf,Use After Free,,,reachable,,url.c:1372|url.c:1194,0,0
+726117,invalid,7.65.3,logic,Improper Input Validation,,,no_target,,,0,0
+765664,invalid,7.65.3,bounds,Heap Overflow,,,no_target,512,,0,0
+770190,invalid,7.65.3,other,Information Disclosure,file_connect,file.c,reachable,,file.c:134,1,1
+773313,invalid,7.65.3,logic,Information Disclosure,,,no_target,,,0,0
+774883,invalid,7.65.3,logic,Improper Input Validation,,,no_target,,,0,0
+812969,invalid,7.65.3,logic,Improper Input Validation,,,no_target,,,0,0
+872089,invalid,7.70.0,bounds,Incorrect Calculation of Buffer Size,Curl_auth_create_plain_message,cleartext.c,reachable,,,1,1
+874778,genuine,7.70.0,logic,Information Disclosure,,,no_target,63|136,,0,0
+875775,invalid,7.70.0,uaf,Double Free,,,no_target,,,0,0
+887462,genuine,7.70.0,logic,Improper Input Validation,warnf,tool_msgs.c,reachable,,,1,1
+889160,invalid,7.70.0,reachability,Uncontrolled Resource Consumption,,,no_target,4,,0,0
+926638,invalid,7.71.1,other,Improper Handling of Insufficient Permissions or Privileges,tool_create_output_file,tool_cb_wrt.c,reachable,,,1,1
+948876,genuine,7.71.1,other,Information Disclosure,,,no_target,,,0,0
+1019372,invalid,7.73.0,reachability,Uncontrolled Resource Consumption,,,no_target,,,0,0
+1019457,invalid,7.73.0,reachability,Information Disclosure,Curl_getaddrinfo_ex,curl_addrinfo.c,reachable,,curl_addrinfo.c:554,4,1
+1019457,invalid,7.73.0,reachability,Information Disclosure,curl_dbg_getaddrinfo,curl_addrinfo.c,reachable,,curl_addrinfo.c:554,4,1
+1019457,invalid,7.73.0,reachability,Information Disclosure,curl_thread_create_thunk,curl_threads.c,reachable,,curl_threads.c:57,4,1
+1019457,invalid,7.73.0,reachability,Information Disclosure,getaddrinfo_thread,asyn-thread.c,reachable,,asyn-thread.c:307,4,1
+1024749,invalid,7.73.0,other,File and Directory Information Exposure,,,no_target,,,0,0
+1040166,genuine,7.73.0,other,Information Disclosure,,,no_target,,,0,0
+1045844,genuine,7.73.0,other,Uncontrolled Recursion,Curl_dyn_addn,dynbuf.c,reachable,32,,9,1
+1045844,genuine,7.73.0,other,Uncontrolled Recursion,alloc_addbyter,mprintf.c,reachable,32,mprintf.c:1045,9,1
+1045844,genuine,7.73.0,other,Uncontrolled Recursion,curl_dbg_log,memdebug.c,reachable,32,memdebug.c:437,9,1
+1045844,genuine,7.73.0,other,Uncontrolled Recursion,curl_dbg_realloc,memdebug.c,reachable,32,memdebug.c:437,9,1
+1045844,genuine,7.73.0,other,Uncontrolled Recursion,curl_maprintf,mprintf.c,reachable,32,mprintf.c:1045,9,1
+1045844,genuine,7.73.0,other,Uncontrolled Recursion,curl_mvaprintf,mprintf.c,reachable,32,mprintf.c:1045,9,1
+1045844,genuine,7.73.0,other,Uncontrolled Recursion,dprintf_formatf,mprintf.c,reachable,32,mprintf.c:1045,9,1
+1045844,genuine,7.73.0,other,Uncontrolled Recursion,dyn_nappend,dynbuf.c,reachable,32,,9,1
+1045844,genuine,7.73.0,other,Uncontrolled Recursion,wc_statemach,ftp.c,reachable,32,ftp.c:3836,9,1
+1048457,genuine,7.73.0,reachability,Improper Certificate Validation,,,no_target,,,0,0
+1049624,invalid,7.73.0,other,Server-Side Request Forgery (SSRF),,,no_target,,,0,0
+1086259,invalid,7.73.0,logic,Cleartext Transmission of Sensitive Information,,,no_target,,,0,0
+1101882,genuine,7.75.0,logic,,Curl_follow,transfer.c,reachable,,,5,1
+1101882,genuine,7.75.0,logic,,curl_url,urlapi.c,reachable,,,5,1
+1101882,genuine,7.75.0,logic,,curl_url_cleanup,urlapi.c,reachable,,,5,1
+1101882,genuine,7.75.0,logic,,curl_url_get,urlapi.c,reachable,,,5,1
+1101882,genuine,7.75.0,logic,,curl_url_set,urlapi.c,reachable,,,5,1
+1113663,invalid,7.75.0,other,Use of a Broken or Risky Cryptographic Algorithm,,,no_target,,,0,0
+1129529,genuine,7.75.0,logic,Man-in-the-Middle,,,gated_backend,,,0,0
+1172857,genuine,7.76.1,other,Business Logic Errors,curl_easy_init,easy.c,reachable,,,2,1
+1172857,genuine,7.76.1,other,Business Logic Errors,curl_easy_setopt,setopt.c,reachable,,,2,1
+1176461,genuine,7.76.1,other,Information Disclosure,suboption,telnet.c,reachable,2048,,1,1
+1180380,genuine,7.76.1,uaf,Use After Free,Curl_attach_connnection,multi.c,reachable,,,2,1
+1180380,genuine,7.76.1,uaf,Use After Free,Curl_detach_connnection,multi.c,reachable,,,2,1
+1213175,genuine,7.77.0,logic,Business Logic Errors,,,no_target,,,0,0
+1213181,genuine,7.77.0,other,Cleartext Transmission of Sensitive Information,,,no_target,,,0,0
+1223565,genuine,7.77.0,logic,Improper Input Validation,Curl_ssl_config_matches,vtls.c,reachable,,,1,1
+1223882,genuine,7.77.0,other,Information Disclosure,check_telnet_options,telnet.c,reachable,,telnet.c:926|telnet.c:799,1,1
+1234760,genuine,7.77.0,logic,Business Logic Errors,,,gated_backend,,nss.c:432,0,0
+1269242,genuine,7.77.0,uaf,Double Free,Curl_failf,sendf.c,reachable,,,4,1
+1269242,genuine,7.77.0,uaf,Double Free,Curl_write,sendf.c,reachable,,,4,1
+1269242,genuine,7.77.0,uaf,Double Free,mqtt_doing,mqtt.c,reachable,,mqtt.c:559|mqtt.c:560|mqtt.c:556|mqtt.c:556|mqtt.c:560,4,1
+1269242,genuine,7.77.0,uaf,Double Free,mqtt_send,mqtt.c,reachable,,mqtt.c:559|mqtt.c:560|mqtt.c:556|mqtt.c:556|mqtt.c:560,4,1
+1334111,genuine,7.78.0,reachability,Missing Required Cryptographic Step,,,no_target,,,0,0
+1334763,genuine,7.78.0,other,Cryptographic Issues - Generic,,,no_target,,,0,0
+1444539,invalid,7.78.0,other,Information Exposure Through Sent Data,,,no_target,64,,0,0
+1463013,invalid,7.78.0,uaf,Use After Free,Curl_conncache_return_conn,conncache.c,reachable,,,2,1
+1463013,invalid,7.78.0,uaf,Use After Free,multi_done,multi.c,reachable,,multi.c:717|multi.c:719|multi.c:717|multi.c:719,2,1
+1468962,invalid,7.78.0,bounds,Classic Buffer Overflow,,,no_target,,,0,0
+1485379,invalid,7.78.0,bounds,Classic Buffer Overflow,,,no_target,32|256,stub_gssapi.c:195|stub_gssapi.c:204,0,0
+1521610,invalid,7.82.0,logic,Uncontrolled Resource Consumption,,,reachable,26,multi.c:2132|multi.c:2132,0,0
+1526328,genuine,7.82.0,logic,Improper Authentication - Generic,,,no_target,,,0,0
+1542881,invalid,7.82.0,other,Improper Check or Handling of Exceptional Conditions,,,no_target,,,0,0
+1543773,genuine,7.82.0,reachability,Insufficiently Protected Credentials,,,no_target,,,0,0
+1546268,genuine,7.82.0,logic,Business Logic Errors,,,no_target,,,0,0
+1547048,genuine,7.82.0,reachability,Insufficiently Protected Credentials,,,reachable,,http.c:1904,0,0
+1548535,invalid,7.82.0,reachability,Code Injection,,,no_target,,,0,0
+1549435,invalid,7.82.0,other,Cryptographic Issues - Generic,,,no_target,,,0,0
+1549461,invalid,7.82.0,logic,Business Logic Errors,curl_easy_setopt,setopt.c,reachable,32,,1,1
+1553301,genuine,7.83.0,reachability,Information Exposure Through Sent Data,,,no_target,,,0,0
+1553598,genuine,7.83.0,other,Business Logic Errors,,,reachable,,tool_cb_wrt.c:88|tool_operate.c:598,0,0
+1553841,genuine,7.83.0,reachability,Server-Side Request Forgery (SSRF),,,no_target,,,0,0
+1555440,invalid,7.83.0,other,External Control of Critical State Data,,,no_target,2048,,0,0
+1555441,genuine,7.83.0,logic,Uncontrolled Resource Consumption,,,gated_backend,,nss.c:1014|certinfo.c:46,0,0
+1555796,genuine,7.83.0,reachability,Business Logic Errors,,,no_target,,,0,0
+1557449,genuine,7.83.0,logic,Missing Required Cryptographic Step,,,no_target,,,0,0
+1560324,invalid,7.83.0,other,Session Fixation,,,reachable,,cookie.c:1039,0,0
+1563061,invalid,7.83.0,logic,Business Logic Errors,,,no_target,,,0,0
+1564922,invalid,7.83.0,integer,Integer Overflow,Curl_urldecode,escape.c,reachable,,,2,1
+1564922,invalid,7.83.0,integer,Integer Overflow,dict_do,dict.c,reachable,,,2,1
+1566462,invalid,7.83.1,reachability,Improper Access Control - Generic,,,no_target,,,0,0
+1567257,invalid,7.83.1,logic,Uncontrolled Resource Consumption,,,no_target,12|85|260|450|710|41878,strdup.c:42,0,0
+1568175,invalid,7.83.1,logic,Insufficiently Protected Credentials,,,no_target,,,0,0
+1569926,invalid,7.83.1,logic,Insufficiently Protected Credentials,,,no_target,,,0,0
+1569946,genuine,7.83.1,other,Allocation of Resources Without Limits or Throttling,,,no_target,,,0,0
+1570651,genuine,7.83.1,other,Allocation of Resources Without Limits or Throttling,,,no_target,,,0,0
+1572120,invalid,7.83.1,other,Uncontrolled Resource Consumption,,,no_target,,,0,0
+1573634,genuine,7.83.1,other,Business Logic Errors,,,no_target,,,0,0
+1589847,invalid,7.83.1,other,Heap Overflow,Curl_saferealloc,strdup.c,reachable,,,1,1
+1590071,genuine,7.83.1,other,Business Logic Errors,Curl_saferealloc,strdup.c,reachable,599,,2,1
+1590071,genuine,7.83.1,other,Business Logic Errors,curlx_uztosi,warnless.c,reachable,599,,2,1
+1590102,invalid,7.83.1,logic,Business Logic Errors,ftp_statemachine,ftp.c,reachable,,ftp.c:2706,1,1
+1613943,genuine,7.83.1,logic,Improper Input Validation,,,no_target,,,0,0
+1704017,genuine,7.85.0,logic,Expected Behavior Violation,,,no_target,,,0,0
+1721098,genuine,7.85.0,bounds,Out-of-bounds Read,,,no_target,4095,netrc.c:25|netrc.c:27,0,0
+1722065,genuine,7.85.0,uaf,Double Free,Curl_close,url.c,reachable,816|984|55921,url.c:2259,19,1
+1722065,genuine,7.85.0,uaf,Double Free,Curl_disconnect,url.c,reachable,816|984|55921,url.c:2259,19,1
+1722065,genuine,7.85.0,uaf,Double Free,Curl_free_request_state,url.c,reachable,816|984|55921,url.c:2259,19,1
+1722065,genuine,7.85.0,uaf,Double Free,Curl_http_connect,http.c,reachable,816|984|55921,http.c:1551,19,1
+1722065,genuine,7.85.0,uaf,Double Free,Curl_proxyCONNECT,http_proxy.c,reachable,816|984|55921,http_proxy.c:174,19,1
+1722065,genuine,7.85.0,uaf,Double Free,Curl_proxy_connect,http_proxy.c,reachable,816|984|55921,http_proxy.c:174,19,1
+1722065,genuine,7.85.0,uaf,Double Free,conn_free,url.c,reachable,816|984|55921,url.c:2259,19,1
+1722065,genuine,7.85.0,uaf,Double Free,connect_init,http_proxy.c,reachable,816|984|55921,http_proxy.c:174,19,1
+1722065,genuine,7.85.0,uaf,Double Free,curl_dbg_calloc,memdebug.c,reachable,816|984|55921,memdebug.c:297,19,1
+1722065,genuine,7.85.0,uaf,Double Free,curl_dbg_free,memdebug.c,reachable,816|984|55921,memdebug.c:297,19,1
+1722065,genuine,7.85.0,uaf,Double Free,curl_easy_cleanup,easy.c,reachable,816|984|55921,easy.c:799,19,1
+1722065,genuine,7.85.0,uaf,Double Free,curl_easy_perform,easy.c,reachable,816|984|55921,easy.c:799,19,1
+1722065,genuine,7.85.0,uaf,Double Free,curl_multi_perform,multi.c,reachable,816|984|55921,multi.c:2614,19,1
+1722065,genuine,7.85.0,uaf,Double Free,easy_perform,easy.c,reachable,816|984|55921,easy.c:799,19,1
+1722065,genuine,7.85.0,uaf,Double Free,easy_transfer,easy.c,reachable,816|984|55921,easy.c:799,19,1
+1722065,genuine,7.85.0,uaf,Double Free,multi_runsingle,multi.c,reachable,816|984|55921,multi.c:2614,19,1
+1722065,genuine,7.85.0,uaf,Double Free,post_per_transfer,tool_operate.c,reachable,816|984|55921,tool_operate.c:657,19,1
+1722065,genuine,7.85.0,uaf,Double Free,run_all_transfers,tool_operate.c,reachable,816|984|55921,tool_operate.c:657,19,1
+1722065,genuine,7.85.0,uaf,Double Free,serial_transfers,tool_operate.c,reachable,816|984|55921,tool_operate.c:657,19,1
+1730660,genuine,7.85.0,reachability,Cleartext Transmission of Sensitive Information,,,no_target,,,0,0
+1755083,genuine,7.86.0,reachability,Cleartext Transmission of Sensitive Information,,,reachable,,http.c:3727,0,0
+1764858,genuine,7.86.0,uaf,Use After Free,,,no_target,,,0,0
+1813864,genuine,7.87.0,reachability,Cleartext Transmission of Sensitive Information,,,no_target,,,0,0
+1814333,genuine,7.87.0,other,Cleartext Transmission of Sensitive Information,,,no_target,,,0,0
+1814824,invalid,7.87.0,logic,Business Logic Errors,,,no_target,,,0,0
+1825377,invalid,7.87.0,reachability,Business Logic Errors,,,gated_backend,,,0,0
+1826048,genuine,7.87.0,other,Allocation of Resources Without Limits or Throttling,,,no_target,,,0,0
+1826392,invalid,7.87.0,integer,Business Logic Errors,,,no_target,2,,0,0
+1891474,genuine,7.88.1,other,Failure to Sanitize Special Elements into a Different Plane (Special Element Injection),,,no_target,20,,0,0
+1892351,genuine,7.88.1,logic,Path Traversal,,,unreachable,,,0,0
+1892780,genuine,7.88.1,logic,Authentication Bypass by Primary Weakness,,,no_target,,,0,0
+1895135,genuine,7.88.1,logic,Authentication Bypass by Primary Weakness,,,no_target,,,0,0
+1897203,genuine,7.88.1,uaf,Double Free,Curl_llist_remove,llist.c,reachable,9|9999,,1,1
+1898475,genuine,7.88.1,logic,Authentication Bypass by Primary Weakness,get_protocol_family,url.c,reachable,,,1,1
+1913733,genuine,8.0.1,uaf,Use After Free,,,gated_backend,,,0,0
+1929597,genuine,8.0.1,logic,Improper Synchronization,Curl_failf,curl_log.c,reachable,255,,6,1
+1929597,genuine,8.0.1,logic,Improper Synchronization,Curl_hostcache_prune,hostip.c,reachable,255,,6,1
+1929597,genuine,8.0.1,logic,Improper Synchronization,Curl_resolv,hostip.c,reachable,255,,6,1
+1929597,genuine,8.0.1,logic,Improper Synchronization,Curl_resolv_timeout,hostip.c,reachable,255,,6,1
+1929597,genuine,8.0.1,logic,Improper Synchronization,Curl_share_unlock,share.c,reachable,255,,6,1
+1929597,genuine,8.0.1,logic,Improper Synchronization,curl_easy_setopt,setopt.c,reachable,255,,6,1
+1950627,genuine,8.0.1,logic,Improper Certificate Validation,,,gated_backend,,hostcheck.c:100,0,0
+1954658,genuine,8.0.1,reachability,Expected Behavior Violation,,,no_target,,,0,0
+1994585,invalid,8.0.1,other,Business Logic Errors,,,no_target,,,0,0
+2039870,resolved,8.1.2,logic,Time-of-check Time-of-use (TOCTOU) Race Condition,,,reachable,2|131,fopen.c:59,0,0
+2072338,genuine,8.1.2,other,Allocation of Resources Without Limits or Throttling,,,reachable,,transfer.c:420,0,0
+2148242,genuine,8.3.0,other,External Control of File Name or Path,Curl_cookie_init,cookie.c,reachable,,,2,1
+2148242,genuine,8.3.0,other,External Control of File Name or Path,curl_easy_duphandle,easy.c,reachable,,,2,1
+2171309,invalid,8.3.0,other,NULL Pointer Dereference,Curl_is_ASCII_name,idn.c,reachable,,,1,1
+2187833,genuine,8.3.0,bounds,Heap Overflow,Curl_is_ASCII_name,idn.c,reachable,65|255|4025|16384|65535|102400,idn.c:131|idn.c:261,4,1
+2187833,genuine,8.3.0,bounds,Heap Overflow,Curl_preconnect,multi.c,reachable,65|255|4025|16384|65535|102400,multi.c:1858,4,1
+2187833,genuine,8.3.0,bounds,Heap Overflow,Curl_resolv,hostip.c,reachable,65|255|4025|16384|65535|102400,,4,1
+2187833,genuine,8.3.0,bounds,Heap Overflow,socks_state_recv,socks.c,reachable,65|255|4025|16384|65535|102400,socks.c:573|socks.c:588|socks.c:640|socks.c:781|socks.c:904,4,1
+2199174,slop,8.3.0,other,Information Disclosure,curl_easy_setopt,setopt.c,reachable,,,1,1
+2212193,genuine,8.4.0,logic,Information Exposure Through Sent Data,,,no_target,,,0,0
+2236133,genuine,8.4.0,other,Missing Encryption of Sensitive Data,Curl_rename,rename.c,reachable,9|179|243|255,,1,1
+2252307,invalid,8.4.0,bounds,Classic Buffer Overflow,curl_easy_cleanup,easy.c,reachable,,,5,1
+2252307,invalid,8.4.0,bounds,Classic Buffer Overflow,curl_easy_init,easy.c,reachable,,,5,1
+2252307,invalid,8.4.0,bounds,Classic Buffer Overflow,curl_easy_perform,easy.c,reachable,,,5,1
+2252307,invalid,8.4.0,bounds,Classic Buffer Overflow,curl_easy_setopt,setopt.c,reachable,,,5,1
+2252307,invalid,8.4.0,bounds,Classic Buffer Overflow,curl_easy_strerror,strerror.c,reachable,,,5,1
+2298307,slop,8.5.0,bounds,Heap Overflow,,,no_target,,ws.c:581,0,0
+2298922,genuine,8.5.0,logic,Improper Check for Certificate Revocation,,,no_target,,,0,0
+2352676,invalid,8.6.0,logic,Insufficiently Protected Credentials,,,no_target,,,0,0
+2384833,genuine,8.6.0,reachability,Misinterpretation of Input,,,no_target,,,0,0
+2402845,genuine,8.6.0,logic,Uncontrolled Resource Consumption,Curl_saferealloc,strdup.c,reachable,9|18|64|82|255|256|676|872,,1,1
+2402853,invalid,8.6.0,other,Uncontrolled Resource Consumption,Curl_close,url.c,reachable,49|200|400|546|673|873|946|5247,,1,1
+2410774,genuine,8.6.0,logic,Improper Certificate Validation,,,gated_backend,615,,0,0
+2416725,genuine,8.6.0,logic,Improper Validation of Certificate with Host Mismatch,Curl_strntolower,strcase.c,reachable,,,1,1
+2493548,invalid,8.6.0,logic,Type Confusion,,,no_target,2|3|4,,0,0
+2550951,invalid,8.8.0,other,Encoding Error,,,unreachable,2,,0,0
+2552179,invalid,8.8.0,logic,Type Confusion,,,no_target,2,,0,0
+2552192,invalid,8.8.0,other,Allocation of Resources Without Limits or Throttling,,,no_target,,,0,0
+2559516,genuine,8.8.0,bounds,Free of Memory not on the Heap,,,gated_backend,4,x509asn1.c:397|x509asn1.c:397,0,0
+2559558,invalid,8.8.0,logic,NULL Pointer Dereference,Curl_dyn_init,dynbuf.c,reachable,509,,3,1
+2559558,invalid,8.8.0,logic,NULL Pointer Dereference,Curl_dyn_ptr,dynbuf.c,reachable,509,,3,1
+2559558,invalid,8.8.0,logic,NULL Pointer Dereference,Curl_dyn_reset,dynbuf.c,reachable,509,,3,1
+2604391,genuine,8.8.0,bounds,Buffer Over-read,curl_url_get,urlapi.c,reachable,256|257,,2,1
+2604391,genuine,8.8.0,bounds,Buffer Over-read,curl_url_set,urlapi.c,reachable,256|257,,2,1
+2629968,genuine,8.9.0,bounds,Buffer Over-read,Curl_dyn_addf,dynbuf.c,reachable,4471,,1,1
+2669852,genuine,8.9.1,logic,Improper Certificate Validation,,,no_target,,,0,0
+2764830,genuine,8.10.1,other,Business Logic Errors,,,no_target,,,0,0
+2792484,invalid,8.10.1,reachability,Business Logic Errors,,,no_target,,,0,0
+2814750,invalid,8.10.1,logic,Improper Input Validation,,,no_target,,,0,0
+2819666,slop,8.10.1,logic,Use of Externally-Controlled Format String,curl_mfprintf,mprintf.c,reachable,,,1,1
+2823554,slop,8.11.0,bounds,Buffer Underflow,,,no_target,16|24|128,,0,0
+2829063,genuine,8.11.0,logic,Information Disclosure,,,no_target,,,0,0
+2831558,invalid,8.11.0,other,CRLF Injection,,,no_target,,,0,0
+2841436,invalid,8.11.0,other,,,,no_target,,,0,0
+2853023,invalid,8.11.0,logic,Information Disclosure,,,no_target,,,0,0
+2859735,invalid,8.11.0,logic,Business Logic Errors,,,no_target,,,0,0
+2861797,invalid,8.11.0,logic,CRLF Injection,,,no_target,17,,0,0
+2864414,invalid,8.11.0,logic,Improper Input Validation,,,non_product,,negtelnetserver.py:366|negtelnetserver.py:183|negtelnetserver.py:96,0,0
+2864859,invalid,8.11.0,other,Improper Check or Handling of Exceptional Conditions,,,no_target,,,0,0
+2871792,slop,8.11.0,bounds,Classic Buffer Overflow,,,no_target,,,0,0
+2887487,slop,8.11.0,bounds,Classic Buffer Overflow,,,unreachable,2|3|4|10|16|46|255,,0,0
+2904921,invalid,8.11.1,other,OS Command Injection,,,no_target,,,0,0
+2905552,slop,8.11.1,logic,Cleartext Transmission of Sensitive Information,,,no_target,,,0,0
+2912277,slop,8.11.1,logic,Information Disclosure,,,no_target,,,0,0
+2915426,invalid,8.11.1,other,Information Disclosure,,,no_target,,,0,0
+2917232,genuine,8.11.1,logic,LLM06: Sensitive Information Disclosure,,,no_target,,,0,0
+2941920,invalid,8.11.1,other,Privilege Escalation,Curl_fopen,fopen.c,reachable,,,3,1
+2941920,invalid,8.11.1,other,Privilege Escalation,Curl_rename,rename.c,reachable,,,3,1
+2941920,invalid,8.11.1,other,Privilege Escalation,cookie_output,cookie.c,reachable,,cookie.c:1660,3,1
+2946924,invalid,8.11.1,logic,Information Exposure Through Sent Data,,,no_target,,,0,0
+2954286,genuine,8.11.1,logic,Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition'),,,no_target,,,0,0
+2956023,genuine,8.11.1,bounds,Integer Overflow to Buffer Overflow,Curl_saferealloc,strdup.c,reachable,32,,1,1
+2961050,invalid,8.11.1,logic,Improper Certificate Validation,,,no_target,,,0,0
+2981245,slop,8.12.0,uaf,Memory Corruption - Generic,,,gated_backend,24,,0,0
+2981303,invalid,8.12.0,other,,,,no_target,,,0,0
+2990139,invalid,8.12.0,other,Use of Externally-Controlled Format String,curl_msnprintf,mprintf.c,reachable,256,mprintf.c:1047,1,1
+3000639,invalid,8.12.0,other,Cleartext Transmission of Sensitive Information,cleanarg,tool_getparam.c,reachable,,,1,1
+3022041,invalid,8.12.0,uaf,Use After Free,curl_multi_perform,multi.c,reachable,72|5760,multi.c:2604,1,1
+3023139,invalid,8.12.0,logic,,ftp_disconnect,ftp.c,reachable,11|15|16|17|34|37|43|50,,2,1
+3023139,invalid,8.12.0,logic,,ftp_setup_connection,ftp.c,reachable,11|15|16|17|34|37|43|50,,2,1
+3030158,invalid,8.12.0,logic,Improper Restriction of Authentication Attempts,,,no_target,,,0,0
+3037326,invalid,8.12.0,uaf,Use After Free,Curl_dyn_free,dynbuf.c,reachable,1021,,2,1
+3037326,invalid,8.12.0,uaf,Use After Free,Curl_dyn_init,dynbuf.c,reachable,1021,,2,1
+3037583,invalid,8.12.0,bounds,Integer Overflow,,,gated_backend,32|64,,0,0
+3045390,invalid,8.12.0,uaf,Double Free,Curl_conn_send,cfilters.c,reachable,121|125|126,,7,1
+3045390,invalid,8.12.0,uaf,Double Free,Curl_dyn_free,dynbuf.c,reachable,121|125|126,,7,1
+3045390,invalid,8.12.0,uaf,Double Free,Curl_xfer_send,transfer.c,reachable,121|125|126,,7,1
+3045390,invalid,8.12.0,uaf,Double Free,curlx_nonblock,nonblock.c,reachable,121|125|126,,7,1
+3045390,invalid,8.12.0,uaf,Double Free,mqtt_doing,mqtt.c,reachable,121|125|126,mqtt.c:755|mqtt.c:125|mqtt.c:754|mqtt.c:735|mqtt.c:755|mqtt.c:735,7,1
+3045390,invalid,8.12.0,uaf,Double Free,mqtt_done,mqtt.c,reachable,121|125|126,mqtt.c:755|mqtt.c:125|mqtt.c:754|mqtt.c:735|mqtt.c:755|mqtt.c:735,7,1
+3045390,invalid,8.12.0,uaf,Double Free,mqtt_send,mqtt.c,reachable,121|125|126,mqtt.c:755|mqtt.c:125|mqtt.c:754|mqtt.c:735|mqtt.c:755|mqtt.c:735,7,1
+3089595,invalid,8.13.0,logic,Allocation of Resources Without Limits or Throttling,,,no_target,107,,0,0
+3094406,invalid,8.13.0,bounds,Heap Overflow,cleanarg,tool_getparam.c,reachable,132987|132996|133003,tool_getparam.c:2898|tool_getparam.c:1787,6,1
+3094406,invalid,8.13.0,bounds,Heap Overflow,getparameter,tool_getparam.c,reachable,132987|132996|133003,tool_getparam.c:2898|tool_getparam.c:1787,6,1
+3094406,invalid,8.13.0,bounds,Heap Overflow,getstr,tool_getparam.c,reachable,132987|132996|133003,tool_getparam.c:2898|tool_getparam.c:1787,6,1
+3094406,invalid,8.13.0,bounds,Heap Overflow,parse_args,tool_getparam.c,reachable,132987|132996|133003,tool_getparam.c:2898|tool_getparam.c:1787,6,1
+3094406,invalid,8.13.0,bounds,Heap Overflow,parse_upload_file,tool_getparam.c,reachable,132987|132996|133003,tool_getparam.c:2898|tool_getparam.c:1787,6,1
+3094406,invalid,8.13.0,bounds,Heap Overflow,parseconfig,tool_parsecfg.c,reachable,132987|132996|133003,,6,1
+3100073,slop,8.13.0,logic,Path Traversal,,,no_target,,,0,0
+3101127,slop,8.13.0,bounds,Memory Corruption - Generic,,,non_product,101|65535,,0,0
+3116935,slop,8.13.0,other,Use of a Broken or Risky Cryptographic Algorithm,,,gated_backend,56,,0,0
+3117697,slop,8.13.0,uaf,Double Free,Curl_cookie_add,cookie.c,reachable,,,5,1
+3117697,slop,8.13.0,uaf,Double Free,Curl_node_elem,llist.c,reachable,,,5,1
+3117697,slop,8.13.0,uaf,Double Free,Curl_node_remove,llist.c,reachable,,,5,1
+3117697,slop,8.13.0,uaf,Double Free,freecookie,cookie.c,reachable,,,5,1
+3117697,slop,8.13.0,uaf,Double Free,replace_existing,cookie.c,reachable,,,5,1
+3118915,invalid,8.13.0,logic,Code Injection,glob_url,tool_urlglob.c,reachable,,,1,1
+3120969,invalid,8.13.0,logic,Reliance on Untrusted Inputs in a Security Decision,,,no_target,,,0,0
+3120987,invalid,8.13.0,logic,Path Traversal,,,no_target,,,0,0
+3124490,invalid,8.13.0,logic,Authentication Bypass by Primary Weakness,curl_easy_perform,easy.c,reachable,256,,2,1
+3124490,invalid,8.13.0,logic,Authentication Bypass by Primary Weakness,curl_easy_setopt,setopt.c,reachable,256,,2,1
+3125820,slop,8.13.0,other,Allocation of Resources Without Limits or Throttling,,,no_target,16|64|512,,0,0
+3125832,slop,8.13.0,logic,Improper Input Validation,,,no_target,,,0,0
+3133253,invalid,8.13.0,reachability,Uncontrolled Resource Consumption,Curl_llist_head,llist.c,reachable,,,5,1
+3133253,invalid,8.13.0,reachability,Uncontrolled Resource Consumption,Curl_node_elem,llist.c,reachable,,,5,1
+3133253,invalid,8.13.0,reachability,Uncontrolled Resource Consumption,Curl_node_next,llist.c,reachable,,,5,1
+3133253,invalid,8.13.0,reachability,Uncontrolled Resource Consumption,curl_easy_header,headers.c,reachable,,,5,1
+3133253,invalid,8.13.0,reachability,Uncontrolled Resource Consumption,curl_mprintf,mprintf.c,reachable,,,5,1
+3133379,invalid,8.13.0,other,CRLF Injection,curl_slist_append,slist.c,reachable,,,3,1
+3133379,invalid,8.13.0,other,CRLF Injection,operate,tool_operate.c,reachable,,,3,1
+3133379,invalid,8.13.0,other,CRLF Injection,parse_header,tool_getparam.c,reachable,,,3,1
+3135673,invalid,8.13.0,reachability,,,,no_target,,,0,0
+3137657,slop,8.13.0,logic,Memory Corruption - Generic,parse_args,tool_getparam.c,reachable,50,tool_getparam.c:2754,1,1
+3148937,invalid,8.13.0,other,Man-in-the-Middle,Curl_poll,select.c,reachable,2|3|4|9,,5,1
+3148937,invalid,8.13.0,other,Man-in-the-Middle,Curl_socketpair,socketpair.c,reachable,2|3|4|9,,5,1
+3148937,invalid,8.13.0,other,Man-in-the-Middle,curlx_nonblock,nonblock.c,reachable,2|3|4|9,,5,1
+3148937,invalid,8.13.0,other,Man-in-the-Middle,curlx_now,timeval.c,reachable,2|3|4|9,,5,1
+3148937,invalid,8.13.0,other,Man-in-the-Middle,curlx_timediff,timeval.c,reachable,2|3|4|9,,5,1
+3150884,genuine,8.13.0,logic,Improper Validation of Certificate with Host Mismatch,,,gated_backend,,,0,0
+3153497,genuine,8.13.0,logic,Improper Certificate Validation,,,gated_backend,,,0,0
+3153971,invalid,8.13.0,bounds,Stack Overflow,,,gated_backend,128,openssl.c:2003|openssl.c:1986|openssl.c:1974|openssl.c:2003,0,0
+3156384,invalid,8.13.0,bounds,Heap Overflow,,,no_target,64,,0,0
+3158093,slop,8.13.0,logic,Allocation of Resources Without Limits or Throttling,Curl_copy_header_value,http.c,reachable,1000,,5,1
+3158093,slop,8.13.0,logic,Allocation of Resources Without Limits or Throttling,Curl_memdup0,strdup.c,reachable,1000,,5,1
+3158093,slop,8.13.0,logic,Allocation of Resources Without Limits or Throttling,Curl_req_free,request.c,reachable,1000,request.c:2342|request.c:100,5,1
+3158093,slop,8.13.0,logic,Allocation of Resources Without Limits or Throttling,Curl_req_hard_reset,request.c,reachable,1000,request.c:2342|request.c:100,5,1
+3158093,slop,8.13.0,logic,Allocation of Resources Without Limits or Throttling,http_header,http.c,reachable,1000,,5,1
+3168039,genuine,8.14.0,other,Loop with Unreachable Exit Condition ('Infinite Loop'),Curl_bufq_is_empty,bufq.c,reachable,16|53|54|70|512,,6,1
+3168039,genuine,8.14.0,other,Loop with Unreachable Exit Condition ('Infinite Loop'),Curl_is_in_callback,multi.c,reachable,16|53|54|70|512,,6,1
+3168039,genuine,8.14.0,other,Loop with Unreachable Exit Condition ('Infinite Loop'),curl_easy_setopt,setopt.c,reachable,16|53|54|70|512,,6,1
+3168039,genuine,8.14.0,other,Loop with Unreachable Exit Condition ('Infinite Loop'),curl_ws_recv,ws.c,reachable,16|53|54|70|512,ws.c:1376|ws.c:1376,6,1
+3168039,genuine,8.14.0,other,Loop with Unreachable Exit Condition ('Infinite Loop'),curl_ws_send,ws.c,reachable,16|53|54|70|512,ws.c:1376|ws.c:1376,6,1
+3168039,genuine,8.14.0,other,Loop with Unreachable Exit Condition ('Infinite Loop'),ws_flush,ws.c,reachable,16|53|54|70|512,ws.c:1376|ws.c:1376,6,1
+3180396,invalid,8.14.1,other,Information Disclosure,,,no_target,,,0,0
+3183957,invalid,8.14.1,other,External Control of File Name or Path,,,no_target,,,0,0
+3211126,invalid,8.14.1,other,LLM06: Sensitive Information Disclosure,parsenetrc,netrc.c,reachable,,,1,1
+3211973,invalid,8.14.1,logic,Information Exposure Through Sent Data,,,no_target,,,0,0
+3225565,invalid,8.14.1,logic,OS Command Injection,,,non_product,,,0,0
+3226502,invalid,8.14.1,logic,Path Traversal,,,no_target,,,0,0
+3229490,invalid,8.14.1,bounds,Heap Overflow,curl_slist_append,slist.c,reachable,256,slist.c:94,1,1
+3230082,slop,8.14.1,bounds,Stack Overflow,suboption,telnet.c,reachable,2048,,1,1
+3231321,slop,8.14.1,logic,Improper Access Control - Generic,,,no_target,,,0,0
+3235428,invalid,8.14.1,logic,CRLF Injection,smtp_parse_address,smtp.c,reachable,,smtp.c:13,2,1
+3235428,invalid,8.14.1,logic,CRLF Injection,smtp_perform_mail,smtp.c,reachable,,smtp.c:13,2,1
+3238249,invalid,8.14.1,integer,Integer Overflow,,,gated_backend,,,0,0
+3241304,invalid,8.14.1,other,Information Disclosure,,,no_target,,,0,0
+3241308,invalid,8.14.1,other,Information Disclosure,,,non_product,,,0,0
+3242005,slop,8.14.1,uaf,Use After Free,,,no_target,,,0,0
+3242087,invalid,8.14.1,logic,Path Traversal,,,no_target,,,0,0
+3246519,invalid,8.14.1,other,Use of a Broken or Risky Cryptographic Algorithm,,,no_target,,,0,0
+3249936,slop,8.14.1,logic,HTTP Request Smuggling,http_req_complete,http.c,reachable,,,2,1
+3249936,slop,8.14.1,logic,HTTP Request Smuggling,http_req_set_reader,http.c,reachable,,,2,1
+3250117,invalid,8.14.1,other,Code Injection,,,no_target,,,0,0
+3250490,slop,8.14.1,logic,LLM04: Model Denial of Service,errorf,tool_msgs.c,reachable,,,3,1
+3250490,slop,8.14.1,logic,LLM04: Model Denial of Service,log_line_start,tool_cb_dbg.c,reachable,,,3,1
+3250490,slop,8.14.1,logic,LLM04: Model Denial of Service,warnf,tool_msgs.c,reachable,,,3,1
+3258022,invalid,8.15.0,other,Business Logic Errors,,,no_target,,result.c:930,0,0
+3261248,invalid,8.15.0,logic,Type Confusion,curl_easy_getinfo,easy.c,reachable,,,1,1
+3261310,invalid,8.15.0,uaf,Use After Free,curl_easy_getinfo,easy.c,reachable,2|3|4|5|6|7|8|9,,1,1
+3262848,invalid,8.15.0,other,Use of Insufficiently Random Values,,,no_target,,,0,0
+3264469,invalid,8.15.0,uaf,Use After Free,,,no_target,24|72,,0,0
+3268294,invalid,8.15.0,reachability,Insecure Storage of Sensitive Information,,,non_product,,,0,0
+3269761,invalid,8.15.0,other,Allocation of Resources Without Limits or Throttling,,,no_target,,,0,0
+3272982,slop,8.15.0,other,Information Disclosure,,,no_target,,,0,0
+3279804,invalid,8.15.0,uaf,Use After Free,Curl_pretransfer,transfer.c,reachable,45|256|257,transfer.c:569,3,1
+3279804,invalid,8.15.0,uaf,Use After Free,curl_easy_perform,easy.c,reachable,45|256|257,easy.c:705,3,1
+3279804,invalid,8.15.0,uaf,Use After Free,curl_easy_setopt,setopt.c,reachable,45|256|257,,3,1
+3282709,invalid,8.15.0,bounds,Integer Overflow,,,no_target,2|3|281|1719|1783|1815|4096,,0,0
+3283232,invalid,8.15.0,uaf,Use After Free,Curl_expire_clear,multi.c,reachable,16,multi.c:3474,9,1
+3283232,invalid,8.15.0,uaf,Use After Free,Curl_freeset,url.c,reachable,16,,9,1
+3283232,invalid,8.15.0,uaf,Use After Free,Curl_splayremove,splay.c,reachable,16,splay.c:234,9,1
+3283232,invalid,8.15.0,uaf,Use After Free,check_finished,tool_operate.c,reachable,16,,9,1
+3283232,invalid,8.15.0,uaf,Use After Free,curl_easy_cleanup,easy.c,reachable,16,,9,1
+3283232,invalid,8.15.0,uaf,Use After Free,curl_easy_init,easy.c,reachable,16,,9,1
+3283232,invalid,8.15.0,uaf,Use After Free,curl_multi_perform,multi.c,reachable,16,multi.c:3474,9,1
+3283232,invalid,8.15.0,uaf,Use After Free,curl_multi_poll,multi.c,reachable,16,multi.c:3474,9,1
+3283232,invalid,8.15.0,uaf,Use After Free,post_per_transfer,tool_operate.c,reachable,16,,9,1
+3292590,invalid,8.15.0,bounds,Buffer Over-read,Curl_memdup0,strdup.c,reachable,105,,1,1
+3293177,invalid,8.15.0,logic,Relative Path Traversal,,,gated_backend,,,0,0
+3293801,invalid,8.15.0,other,Code Injection,,,no_target,,,0,0
+3293884,slop,8.15.0,logic,Path Traversal,file_do,file.c,reachable,,,1,1
+3294999,genuine,8.15.0,bounds,Buffer Over-read,Curl_llist_head,llist.c,reachable,17|6265,,10,1
+3294999,genuine,8.15.0,bounds,Buffer Over-read,Curl_memdup0,strdup.c,reachable,17|6265,,10,1
+3294999,genuine,8.15.0,bounds,Buffer Over-read,Curl_node_elem,llist.c,reachable,17|6265,,10,1
+3294999,genuine,8.15.0,bounds,Buffer Over-read,Curl_node_next,llist.c,reachable,17|6265,,10,1
+3294999,genuine,8.15.0,bounds,Buffer Over-read,cookiehash,cookie.c,reachable,17|6265,,10,1
+3294999,genuine,8.15.0,bounds,Buffer Over-read,curl_strequal,strequal.c,reachable,17|6265,,10,1
+3294999,genuine,8.15.0,bounds,Buffer Over-read,curl_strnequal,strequal.c,reachable,17|6265,,10,1
+3294999,genuine,8.15.0,bounds,Buffer Over-read,curlx_str_casecompare,strparse.c,reachable,17|6265,,10,1
+3294999,genuine,8.15.0,bounds,Buffer Over-read,parse_cookie_header,cookie.c,reachable,17|6265,,10,1
+3294999,genuine,8.15.0,bounds,Buffer Over-read,strstore,cookie.c,reachable,17|6265,,10,1
+3295650,slop,8.15.0,reachability,Use of Hard-coded Cryptographic Key,,,non_product,,,0,0
+3295652,invalid,8.15.0,reachability,Cleartext Transmission of Sensitive Information,,,non_product,,WEBSOCKETS.md:15|WEBSOCKETS.md:42,0,0
+3295656,invalid,8.15.0,logic,Improper Input Validation,,,non_product,,,0,0
+3295738,invalid,8.15.0,reachability,LLM05: Supply Chain Vulnerabilities,,,non_product,,,0,0
+3302518,invalid,8.15.0,uaf,Use After Free,,,reachable,,curl_trc.c:195,0,0
+3303765,invalid,8.15.0,other,Uncontrolled Resource Consumption,,,no_target,125|126|127|65536,,0,0
+3306456,invalid,8.15.0,bounds,Buffer Over-read,,,no_target,,,0,0
+3306475,invalid,8.15.0,logic,Information Disclosure,,,no_target,,,0,0
+3310318,invalid,8.15.0,other,,,,no_target,,,0,0
+3319767,invalid,8.15.0,logic,Authentication Bypass by Primary Weakness,,,no_target,,,0,0
+3324190,invalid,8.15.0,bounds,Out-of-bounds Read,doh_req_encode,doh.c,reachable,,,1,1
+3324901,invalid,8.15.0,reachability,,curl_strequal,strequal.c,reachable,2|3,,8,1
+3324901,invalid,8.15.0,reachability,,curlx_dyn_addf,dynbuf.c,reachable,2|3,,8,1
+3324901,invalid,8.15.0,reachability,,curlx_str_hex,strparse.c,reachable,2|3,,8,1
+3324901,invalid,8.15.0,reachability,,curlx_str_number,strparse.c,reachable,2|3,,8,1
+3324901,invalid,8.15.0,reachability,,curlx_str_octal,strparse.c,reachable,2|3,,8,1
+3324901,invalid,8.15.0,reachability,,ipv4_normalize,urlapi.c,reachable,2|3,,8,1
+3324901,invalid,8.15.0,reachability,,ipv6_parse,urlapi.c,reachable,2|3,,8,1
+3324901,invalid,8.15.0,reachability,,parse_authority,urlapi.c,reachable,2|3,,8,1
+3330839,genuine,8.15.0,other,"Reusing a Nonce, Key Pair in Encryption",Curl_ws_accept,ws.c,reachable,,ws.c:1340|ws.c:879|ws.c:930,3,1
+3330839,genuine,8.15.0,other,"Reusing a Nonce, Key Pair in Encryption",ws_enc_write_head,ws.c,reachable,,ws.c:1340|ws.c:879|ws.c:930,3,1
+3330839,genuine,8.15.0,other,"Reusing a Nonce, Key Pair in Encryption",ws_enc_write_payload,ws.c,reachable,,ws.c:1340|ws.c:879|ws.c:930,3,1
+3331764,invalid,8.15.0,other,Information Disclosure,,,no_target,,,0,0
+3335085,slop,8.16.0,logic,Time-of-check Time-of-use (TOCTOU) Race Condition,,,no_target,,,0,0
+3337561,invalid,8.16.0,bounds,Classic Buffer Overflow,curl_msnprintf,mprintf.c,reachable,2|25|866|109322,,1,1
+3340109,slop,8.16.0,bounds,Stack Overflow,,,no_target,192|193|198|4096|8192|8193|8198|8480,cookie_vulnerability_hunter.c:121|cookie_vulnerability_hunter.c:109|cookie_vulnerability_hunter.c:128|cookie_vulnerability_hunter.c:129|cookie_vulnerability_hunter.c:137|cookie_vulnerability_hunter.c:,0,0
+3341476,invalid,8.16.0,bounds,Integer Overflow,curlx_dyn_len,dynbuf.c,reachable,2|8|16|32|100|127|1024|1234,,1,1
+3344663,invalid,8.16.0,bounds,Integer Overflow,curlx_str_hex,strparse.c,reachable,16,,1,1
+3346118,slop,8.16.0,logic,Information Exposure Through Timing Discrepancy,Curl_timestrcmp,strcase.c,reachable,,,1,1
+3355213,invalid,8.16.0,uaf,Use After Free,cr_buf_read,sendf.c,reachable,,,3,1
+3355213,invalid,8.16.0,uaf,Use After Free,curl_easy_perform,easy.c,reachable,,easy.c:846,3,1
+3355213,invalid,8.16.0,uaf,Use After Free,curl_easy_setopt,setopt.c,reachable,,,3,1
+3355218,genuine,8.16.0,logic,Improper Certificate Validation,,,gated_backend,,,0,0
+3356088,invalid,8.16.0,logic,Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition'),,,no_target,,curl_gssapi.c:126|socks_gssapi.c:184,0,0
+3357960,invalid,8.16.0,other,Command Injection - Generic,,,no_target,58,,0,0
+3361913,invalid,8.16.0,logic,Information Disclosure,,,no_target,,,0,0
+3366484,invalid,8.16.0,reachability,Server-Side Request Forgery (SSRF),curl_url_get,urlapi.c,reachable,,,3,1
+3366484,invalid,8.16.0,reachability,Server-Side Request Forgery (SSRF),curl_url_set,urlapi.c,reachable,,,3,1
+3366484,invalid,8.16.0,reachability,Server-Side Request Forgery (SSRF),ipfs_url_rewrite,tool_ipfs.c,reachable,,tool_ipfs.c:134,3,1
+3373640,invalid,8.16.0,logic,Uncontrolled Resource Consumption,curlx_dyn_addn,dynbuf.c,reachable,,,1,1
+3374554,invalid,8.16.0,logic,Improper Certificate Validation,,,gated_backend,,apple.c:263|apple.c:270,0,0
+3379102,invalid,8.16.0,reachability,Improper Validation of Syntactic Correctness of Input,,,gated_backend,,,0,0
+3387499,invalid,8.16.0,other,CRLF Injection,Curl_pp_sendf,pingpong.c,reachable,127,,6,1
+3387499,invalid,8.16.0,other,CRLF Injection,Curl_pp_vsendf,pingpong.c,reachable,127,,6,1
+3387499,invalid,8.16.0,other,CRLF Injection,curlx_dyn_addn,dynbuf.c,reachable,127,,6,1
+3387499,invalid,8.16.0,other,CRLF Injection,curlx_dyn_vaddf,dynbuf.c,reachable,127,,6,1
+3387499,invalid,8.16.0,other,CRLF Injection,smtp_parse_address,smtp.c,reachable,127,smtp.c:1876|smtp.c:885,6,1
+3387499,invalid,8.16.0,other,CRLF Injection,smtp_perform_rcpt_to,smtp.c,reachable,127,smtp.c:1876|smtp.c:885,6,1
+3392174,slop,8.16.0,bounds,Classic Buffer Overflow,Curl_ws_request,ws.c,reachable,16|25|40,ws.c:1287|ws.c:1287,2,1
+3392174,slop,8.16.0,bounds,Classic Buffer Overflow,curlx_base64_encode,base64.c,reachable,16|25|40,,2,1
+3393539,invalid,8.16.0,logic,Uncontrolled Resource Consumption,,,gated_backend,964|1408,ntlm.c:789|ntlm.c:789,0,0
+3395218,slop,8.16.0,bounds,,,,reachable,9|10|16,tool_progress.c:94,0,0
+3395227,slop,8.16.0,bounds,,curl_dbg_memdebug,memdebug.c,reachable,511|512|599|600,,3,1
+3395227,slop,8.16.0,bounds,,curl_free,escape.c,reachable,511|512|599|600,,3,1
+3395227,slop,8.16.0,bounds,,curl_getenv,getenv.c,reachable,511|512|599|600,,3,1
+3395666,invalid,8.16.0,bounds,Heap Overflow,,,reachable,32|64,mqtt.c:629|mqtt.c:617|mqtt.c:949,0,0
+3399774,slop,8.16.0,bounds,Heap Overflow,,,no_target,,,0,0
+3400761,invalid,8.16.0,logic,Cleartext Storage of Sensitive Information,Curl_altsvc_save,altsvc.c,reachable,,,3,1
+3400761,invalid,8.16.0,logic,Cleartext Storage of Sensitive Information,Curl_fopen,fopen.c,reachable,,,3,1
+3400761,invalid,8.16.0,logic,Cleartext Storage of Sensitive Information,cookie_output,cookie.c,reachable,,,3,1
+3400831,slop,8.16.0,other,,,,no_target,,,0,0
+3403880,slop,8.16.0,logic,Improper Input Validation,,,reachable,,urlapi.c:1832,0,0
+3404025,invalid,8.16.0,bounds,Heap Overflow,,,no_target,65|255|541|32768|65001|65541,,0,0
+3406123,invalid,8.16.0,bounds,Buffer Over-read,,,no_target,,,0,0
+3407352,invalid,8.16.0,logic,Inadequate Encryption Strength,,,gated_backend,,,0,0
+3408126,invalid,8.16.0,logic,Path Traversal,curl_maprintf,mprintf.c,reachable,230,,4,1
+3408126,invalid,8.16.0,logic,Path Traversal,memdup0,tool_strdup.c,reachable,230,,4,1
+3408126,invalid,8.16.0,logic,Path Traversal,parse_filename,tool_cb_hdr.c,reachable,230,,4,1
+3408126,invalid,8.16.0,logic,Path Traversal,tool_create_output_file,tool_cb_wrt.c,reachable,230,,4,1
+3409186,invalid,8.16.0,other,Business Logic Errors,,,no_target,,,0,0
+3409193,invalid,8.16.0,other,Array Index Underflow,,,no_target,,,0,0
+3414088,invalid,8.17.0,logic,CRLF Injection,Curl_pp_sendf,pingpong.c,reachable,,,2,1
+3414088,invalid,8.17.0,logic,CRLF Injection,smtp_parse_address,smtp.c,reachable,,smtp.c:838|smtp.c:1875|smtp.c:436,2,1
+3417428,invalid,8.17.0,integer,Integer Overflow,curl_easy_perform,easy.c,reachable,27|268|616,,4,1
+3417428,invalid,8.17.0,integer,Integer Overflow,curl_easy_setopt,setopt.c,reachable,27|268|616,,4,1
+3417428,invalid,8.17.0,integer,Integer Overflow,mqtt_encode_len,mqtt.c,reachable,27|268|616,,4,1
+3417428,invalid,8.17.0,integer,Integer Overflow,mqtt_publish,mqtt.c,reachable,27|268|616,,4,1
+3418528,slop,8.17.0,bounds,Classic Buffer Overflow,,,non_product,,os400sys.c:741|os400sys.c:741,0,0
+3418616,invalid,8.17.0,other,,Curl_pp_sendf,pingpong.c,reachable,,,1,1
+3418646,slop,8.17.0,logic,External Control of File Name or Path,getparameter,tool_getparam.c,reachable,,,1,1
+3418760,invalid,8.17.0,other,Command Injection - Generic,,,no_target,,,0,0
+3418776,invalid,8.17.0,logic,Improper Certificate Validation,,,no_target,,,0,0
+3418861,invalid,8.17.0,bounds,Path Traversal,Curl_pp_sendf,pingpong.c,reachable,,,2,1
+3418861,invalid,8.17.0,bounds,Path Traversal,Curl_urldecode,escape.c,reachable,,,2,1
+3419617,invalid,8.17.0,other,Exposed Dangerous Method or Function,,,non_product,,,0,0
+3427194,invalid,8.17.0,other,,,,no_target,,,0,0
+3427343,invalid,8.17.0,bounds,Off-by-one Error,,,unreachable,1023|1024|1025,,0,0
+3427460,invalid,8.17.0,other,Incorrect Calculation of Buffer Size,,,gated_backend,64,rustls.c:530|rustls.c:589|rustls.c:530|rustls.c:589,0,0
+3427670,invalid,8.17.0,other,,,,gated_backend,,rustls.c:1046,0,0
+3431180,invalid,8.17.0,uaf,Double Free,curl_free,escape.c,reachable,,,3,1
+3431180,invalid,8.17.0,uaf,Double Free,curlx_base64_decode,base64.c,reachable,,,3,1
+3431180,invalid,8.17.0,uaf,Double Free,tool_ssls_load,tool_ssls.c,reachable,,tool_ssls.c:81|tool_ssls.c:83|tool_ssls.c:83,3,1
+3432833,invalid,8.17.0,logic,Time-of-check Time-of-use (TOCTOU) Race Condition,,,gated_backend,,,0,0
+3434510,invalid,8.17.0,bounds,Buffer Over-read,,,no_target,,,0,0
+3434543,invalid,8.17.0,uaf,,,,reachable,496,tool_urlglob.c:499|tool_operate.c:1233|tool_main.c:199,0,0
+3442024,invalid,8.17.0,other,Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS),,,no_target,,,0,0
+3442060,invalid,8.17.0,other,,Curl_cwriter_is_paused,sendf.c,reachable,2|3|4|5|6|7|8,,8,1
+3442060,invalid,8.17.0,other,,Curl_retry_request,transfer.c,reachable,2|3|4|5|6|7|8,,8,1
+3442060,invalid,8.17.0,other,,Curl_xfer_is_blocked,transfer.c,reachable,2|3|4|5|6|7|8,,8,1
+3442060,invalid,8.17.0,other,,mspeed_check,multi.c,reachable,2|3|4|5|6|7|8,,8,1
+3442060,invalid,8.17.0,other,,multi_done,multi.c,reachable,2|3|4|5|6|7|8,,8,1
+3442060,invalid,8.17.0,other,,multi_follow,multi.c,reachable,2|3|4|5|6|7|8,,8,1
+3442060,invalid,8.17.0,other,,multi_posttransfer,multi.c,reachable,2|3|4|5|6|7|8,,8,1
+3442060,invalid,8.17.0,other,,xfer_recv_resp,transfer.c,reachable,2|3|4|5|6|7|8,,8,1
+3444904,invalid,8.17.0,bounds,Heap Overflow,,,no_target,512|2048,,0,0
+3445174,invalid,8.17.0,logic,Path Traversal,,,no_target,,,0,0
+3451305,invalid,8.17.0,other,CRLF Injection,Curl_pp_sendf,pingpong.c,reachable,,,3,1
+3451305,invalid,8.17.0,other,CRLF Injection,curl_easy_setopt,setopt.c,reachable,,,3,1
+3451305,invalid,8.17.0,other,CRLF Injection,smtp_perform_mail,smtp.c,reachable,,,3,1
+3452725,slop,8.17.0,uaf,Use After Free,curl_easy_cleanup,easy.c,reachable,10|100|256,,7,1
+3452725,slop,8.17.0,uaf,Use After Free,curl_easy_perform,easy.c,reachable,10|100|256,,7,1
+3452725,slop,8.17.0,uaf,Use After Free,curl_easy_recv,easy.c,reachable,10|100|256,,7,1
+3452725,slop,8.17.0,uaf,Use After Free,curl_easy_send,easy.c,reachable,10|100|256,,7,1
+3452725,slop,8.17.0,uaf,Use After Free,curl_global_cleanup,easy.c,reachable,10|100|256,,7,1
+3452725,slop,8.17.0,uaf,Use After Free,curl_mprintf,mprintf.c,reachable,10|100|256,,7,1
+3452725,slop,8.17.0,uaf,Use After Free,global_init,easy.c,reachable,10|100|256,,7,1
+3455037,invalid,8.17.0,reachability,Improper Certificate Validation,,,gated_backend,,hostcheck.c:110,0,0
+3459417,genuine,8.17.0,logic,Insufficiently Protected Credentials,Curl_http_follow,http.c,reachable,,,1,1
+3459636,slop,8.17.0,bounds,Stack Overflow,,,gated_backend,12|13|14|40,wolfssl.c:1542|wolfssl.c:1552,0,0
+3460184,invalid,8.17.0,other,"Improper Neutralization of Escape, Meta, or Control Sequences",,,no_target,33,,0,0
+3462525,slop,8.17.0,bounds,Stack Overflow,formatf,mprintf.c,reachable,16,,1,1
+3463608,invalid,8.17.0,other,Uncontrolled Resource Consumption,curl_url_set,urlapi.c,reachable,10|690|890,urlapi.c:1230|urlapi.c:857|urlapi.c:794|urlapi.c:1230|urlapi.c:901|urlapi.c:794|urlapi.c:857|urlapi.c:794,8,1
+3463608,invalid,8.17.0,other,Uncontrolled Resource Consumption,curlx_dyn_len,dynbuf.c,reachable,10|690|890,,8,1
+3463608,invalid,8.17.0,other,Uncontrolled Resource Consumption,curlx_dyn_ptr,dynbuf.c,reachable,10|690|890,,8,1
+3463608,invalid,8.17.0,other,Uncontrolled Resource Consumption,curlx_dyn_setlen,dynbuf.c,reachable,10|690|890,,8,1
+3463608,invalid,8.17.0,other,Uncontrolled Resource Consumption,dedotdotify,urlapi.c,reachable,10|690|890,urlapi.c:1230|urlapi.c:857|urlapi.c:794|urlapi.c:1230|urlapi.c:901|urlapi.c:794|urlapi.c:857|urlapi.c:794,8,1
+3463608,invalid,8.17.0,other,Uncontrolled Resource Consumption,is_dot,urlapi.c,reachable,10|690|890,urlapi.c:1230|urlapi.c:857|urlapi.c:794|urlapi.c:1230|urlapi.c:901|urlapi.c:794|urlapi.c:857|urlapi.c:794,8,1
+3463608,invalid,8.17.0,other,Uncontrolled Resource Consumption,parseurl,urlapi.c,reachable,10|690|890,urlapi.c:1230|urlapi.c:857|urlapi.c:794|urlapi.c:1230|urlapi.c:901|urlapi.c:794|urlapi.c:857|urlapi.c:794,8,1
+3463608,invalid,8.17.0,other,Uncontrolled Resource Consumption,parseurlandfillconn,url.c,reachable,10|690|890,url.c:1771,8,1
+3463619,invalid,8.17.0,logic,Improper Restriction of Authentication Attempts,,,no_target,,,0,0
+3465094,slop,8.17.0,logic,Path Traversal,Curl_urldecode,escape.c,reachable,,,2,1
+3465094,slop,8.17.0,logic,Path Traversal,dedotdotify,urlapi.c,reachable,,urlapi.c:836|urlapi.c:1233|urlapi.c:836|urlapi.c:777|urlapi.c:836|urlapi.c:263|urlapi.c:777|urlapi.c:263|urlapi.c:44|urlapi.c:777|urlapi.c:192|urlapi.c:44|urlapi.c:777|urlapi.c:836|urlapi.c:263,2,1
+3466883,slop,8.17.0,bounds,Stack Overflow,,,no_target,101|121,,0,0
+3466896,slop,8.17.0,bounds,Heap Overflow,,,unreachable,56|500|4096|5000|5100|8192|10000,,0,0
+3468098,invalid,8.17.0,logic,Improper Certificate Validation,,,gated_backend,104,,0,0
+3468410,slop,8.17.0,bounds,,,,gated_platform,,,0,0
+3470073,invalid,8.17.0,bounds,Out-of-bounds Read,Curl_client_write,sendf.c,reachable,2|3|10|16|28|256|416|672,,2,1
+3470073,invalid,8.17.0,bounds,Out-of-bounds Read,Curl_read16_le,curl_endian.c,reachable,2|3|10|16|28|256|416|672,,2,1
+3470095,slop,8.17.0,bounds,Out-of-bounds Read,Curl_client_write,sendf.c,reachable,2|3|10|16|28|256|416|672,,2,1
+3470095,slop,8.17.0,bounds,Out-of-bounds Read,Curl_read16_le,curl_endian.c,reachable,2|3|10|16|28|256|416|672,,2,1
+3470649,invalid,8.17.0,other,,,,reachable,,urlapi.c:974|urlapi.c:974,0,0
+3471553,invalid,8.17.0,other,Uncontrolled Resource Consumption,,,no_target,,,0,0
+3473182,slop,8.17.0,integer,Business Logic Errors,curl_msnprintf,mprintf.c,reachable,19|20,,1,1
+3473384,invalid,8.17.0,reachability,Improper Input Validation,auth_digest_get_key_value,digest.c,reachable,,,5,1
+3473384,invalid,8.17.0,reachability,Improper Input Validation,curlx_str_cmp,strparse.c,reachable,,,5,1
+3473384,invalid,8.17.0,reachability,Improper Input Validation,curlx_str_quotedword,strparse.c,reachable,,,5,1
+3473384,invalid,8.17.0,reachability,Improper Input Validation,curlx_str_single,strparse.c,reachable,,,5,1
+3473384,invalid,8.17.0,reachability,Improper Input Validation,curlx_str_until,strparse.c,reachable,,,5,1
+3474865,invalid,8.17.0,other,,,,no_target,,,0,0
+3475472,invalid,8.17.0,logic,,,,no_target,,,0,0
+3475613,invalid,8.17.0,logic,Improper Access Control - Generic,ConnectionExists,url.c,reachable,2,,1,1
+3476928,invalid,8.17.0,bounds,Integer Overflow,curlx_dyn_addn,dynbuf.c,reachable,15|16|32|60|100|184|200|300,,3,1
+3476928,invalid,8.17.0,bounds,Integer Overflow,curlx_dyn_init,dynbuf.c,reachable,15|16|32|60|100|184|200|300,,3,1
+3476928,invalid,8.17.0,bounds,Integer Overflow,file2memory,tool_paramhlp.c,reachable,15|16|32|60|100|184|200|300,,3,1
+3477023,invalid,8.17.0,logic,CRLF Injection,,,no_target,,,0,0
+3477116,genuine,8.17.0,logic,Improper Validation of Certificate with Host Mismatch,,,no_target,,,0,0
+3479019,invalid,8.17.0,integer,Integer Overflow,,,gated_platform,32,,0,0
+3479203,invalid,8.17.0,logic,CRLF Injection,curl_easy_header,headers.c,reachable,10|11|16,,4,1
+3479203,invalid,8.17.0,logic,CRLF Injection,curlx_dyn_addn,dynbuf.c,reachable,10|11|16,,4,1
+3479203,invalid,8.17.0,logic,CRLF Injection,curlx_dyn_ptr,dynbuf.c,reachable,10|11|16,,4,1
+3479203,invalid,8.17.0,logic,CRLF Injection,curlx_dyn_reset,dynbuf.c,reachable,10|11|16,,4,1
+3479984,invalid,8.17.0,logic,CRLF Injection,imap_atom,imap.c,reachable,,,1,1
+3480039,invalid,8.17.0,other,Business Logic Errors,curl_easy_cleanup,easy.c,reachable,256|1024,,8,1
+3480039,invalid,8.17.0,other,Business Logic Errors,curl_easy_init,easy.c,reachable,256|1024,,8,1
+3480039,invalid,8.17.0,other,Business Logic Errors,curl_easy_perform,easy.c,reachable,256|1024,,8,1
+3480039,invalid,8.17.0,other,Business Logic Errors,curl_easy_setopt,setopt.c,reachable,256|1024,,8,1
+3480039,invalid,8.17.0,other,Business Logic Errors,curl_global_cleanup,easy.c,reachable,256|1024,,8,1
+3480039,invalid,8.17.0,other,Business Logic Errors,curl_global_init,easy.c,reachable,256|1024,,8,1
+3480039,invalid,8.17.0,other,Business Logic Errors,curl_ws_recv,ws.c,reachable,256|1024,,8,1
+3480039,invalid,8.17.0,other,Business Logic Errors,curl_ws_send,ws.c,reachable,256|1024,,8,1
+3480078,invalid,8.17.0,bounds,Buffer Over-read,curl_maprintf,mprintf.c,reachable,,,1,1
+3480641,invalid,8.17.0,logic,Violation of Secure Design Principles,,,no_target,,,0,0
+3480712,invalid,8.17.0,bounds,Buffer Under-read,printsub,telnet.c,reachable,512,telnet.c:69|telnet.c:1207|telnet.c:1207|telnet.c:1223|telnet.c:63,2,1
+3480712,invalid,8.17.0,bounds,Buffer Under-read,suboption,telnet.c,reachable,512,telnet.c:69|telnet.c:1207|telnet.c:1207|telnet.c:1223|telnet.c:63,2,1
+3480713,invalid,8.17.0,logic,Information Exposure Through Sent Data,,,no_target,,,0,0
+3480925,genuine,8.17.0,logic,,,,gated_backend,,libssh.c:980,0,0
+3481595,invalid,8.17.0,logic,CRLF Injection,smtp_parse_address,smtp.c,reachable,,smtp.c:1152|smtp.c:930,1,1
+3481849,invalid,8.17.0,other,HTTP Response Splitting,curlx_dyn_addn,dynbuf.c,reachable,,,2,1
+3481849,invalid,8.17.0,other,HTTP Response Splitting,curlx_dyn_reset,dynbuf.c,reachable,,,2,1
+3483225,invalid,8.17.0,other,,,,no_target,,,0,0
+3483902,invalid,8.17.0,logic,Business Logic Errors,,,no_target,1200,,0,0
+3484319,invalid,8.17.0,bounds,Integer Overflow,mqtt_decode_len,mqtt.c,reachable,32|127|128,,2,1
+3484319,invalid,8.17.0,bounds,Integer Overflow,mqtt_encode_len,mqtt.c,reachable,32|127|128,,2,1
+3484431,invalid,8.17.0,logic,HTTP Request Smuggling,Curl_add_custom_headers,http.c,reachable,,http.c:1761,1,1
+3484506,invalid,8.17.0,other,CRLF Injection,Curl_urldecode,escape.c,reachable,,,1,1
+3485826,invalid,8.17.0,logic,Information Exposure Through Sent Data,Curl_auth_allowed_to_host,vauth.c,reachable,,,2,1
+3485826,invalid,8.17.0,logic,Information Exposure Through Sent Data,curl_strequal,strequal.c,reachable,,,2,1
+3485930,invalid,8.17.0,logic,Path Traversal,,,reachable,,file.c:229|file.c:229|file.c:253|file.c:253|file.c:258|file.c:262,0,0
+3487952,invalid,8.17.0,other,Exposure of Data Element to Wrong Session,,,no_target,,,0,0
+3488278,invalid,8.17.0,other,Uncontrolled Resource Consumption,,,reachable,268|455,mqtt.c:737,0,0
+3493602,invalid,8.18.0,bounds,Classic Buffer Overflow,out_double,mprintf.c,reachable,326|402,mprintf.c:675,1,1
+3494098,invalid,8.18.0,logic,Path Traversal,,,no_target,,,0,0
+3505557,invalid,8.18.0,other,CRLF Injection,,,no_target,,,0,0
+3506159,slop,8.18.0,bounds,Out-of-bounds Read,curl_maprintf,mprintf.c,reachable,10|11,,1,1
+3508321,invalid,8.18.0,bounds,Buffer Over-read,curl_msnprintf,mprintf.c,reachable,,,2,1
+3508321,invalid,8.18.0,bounds,Buffer Over-read,tftp_send_first,tftp.c,reachable,,tftp.c:467|tftp.c:467|tftp.c:467,2,1
+3508500,invalid,8.18.0,bounds,Integer Overflow,curl_easy_perform,easy.c,reachable,2|26|300|1024,,1,1
+3508701,invalid,8.18.0,uaf,Use After Free,Curl_headers_cleanup,headers.c,reachable,13,,10,1
+3508701,invalid,8.18.0,uaf,Use After Free,Curl_llist_head,llist.c,reachable,13,,10,1
+3508701,invalid,8.18.0,uaf,Use After Free,Curl_node_elem,llist.c,reachable,13,,10,1
+3508701,invalid,8.18.0,uaf,Use After Free,Curl_node_next,llist.c,reachable,13,,10,1
+3508701,invalid,8.18.0,uaf,Use After Free,copy_header_external,headers.c,reachable,13,,10,1
+3508701,invalid,8.18.0,uaf,Use After Free,curl_easy_cleanup,easy.c,reachable,13,,10,1
+3508701,invalid,8.18.0,uaf,Use After Free,curl_easy_init,easy.c,reachable,13,,10,1
+3508701,invalid,8.18.0,uaf,Use After Free,curl_easy_nextheader,headers.c,reachable,13,,10,1
+3508701,invalid,8.18.0,uaf,Use After Free,curl_easy_perform,easy.c,reachable,13,,10,1
+3508701,invalid,8.18.0,uaf,Use After Free,curl_easy_setopt,setopt.c,reachable,13,,10,1
+3508785,invalid,8.18.0,logic,Server-Side Request Forgery (SSRF),Curl_urldecode,escape.c,reachable,,,3,1
+3508785,invalid,8.18.0,logic,Server-Side Request Forgery (SSRF),Curl_xfer_send,transfer.c,reachable,,,3,1
+3508785,invalid,8.18.0,logic,Server-Side Request Forgery (SSRF),gopher_do,gopher.c,reachable,,gopher.c:101|gopher.c:110|gopher.c:156|gopher.c:101,3,1
+3508799,invalid,8.18.0,logic,HTTP Response Splitting,auth_create_digest_http_message,digest.c,reachable,,digest.c:867|digest.c:835|digest.c:151,2,1
+3508799,invalid,8.18.0,logic,HTTP Response Splitting,curl_maprintf,mprintf.c,reachable,,,2,1
+3508854,invalid,8.18.0,integer,,curl_easy_perform,easy.c,reachable,,,2,1
+3508854,invalid,8.18.0,integer,,mqtt_publish,mqtt.c,reachable,,,2,1
+3509396,invalid,8.18.0,logic,Improper Input Validation,imap_state_fetch_resp,imap.c,reachable,50,,1,1
+3509437,invalid,8.18.0,other,Information Exposure Through Directory Listing,,,no_target,,,0,0
+3514263,slop,8.18.0,logic,Insufficiently Protected Credentials,Curl_setstropt,setopt.c,reachable,,,1,1
+3516186,slop,8.18.0,integer,Integer Overflow,curlx_str_number,strparse.c,reachable,4|64,,2,1
+3516186,slop,8.18.0,integer,Integer Overflow,parse_cookie_header,cookie.c,reachable,4|64,cookie.c:607|cookie.c:607|cookie.c:611,2,1
+3516202,slop,8.18.0,uaf,Use After Free,Curl_llist_head,llist.c,reachable,,,5,1
+3516202,slop,8.18.0,uaf,Use After Free,Curl_node_elem,llist.c,reachable,,,5,1
+3516202,slop,8.18.0,uaf,Use After Free,Curl_node_next,llist.c,reachable,,,5,1
+3516202,slop,8.18.0,uaf,Use After Free,Curl_node_remove,llist.c,reachable,,,5,1
+3516202,slop,8.18.0,uaf,Use After Free,freecookie,cookie.c,reachable,,cookie.c:822|cookie.c:915|cookie.c:1234,5,1
+3516878,invalid,8.18.0,logic,Insufficiently Protected Credentials,Curl_checkheaders,transfer.c,reachable,,,6,1
+3516878,invalid,8.18.0,logic,Insufficiently Protected Credentials,Curl_cookie_add,cookie.c,reachable,,,6,1
+3516878,invalid,8.18.0,logic,Insufficiently Protected Credentials,Curl_cookie_getlist,cookie.c,reachable,,,6,1
+3516878,invalid,8.18.0,logic,Insufficiently Protected Credentials,Curl_share_lock,curl_share.c,reachable,,,6,1
+3516878,invalid,8.18.0,logic,Insufficiently Protected Credentials,copy_custom_value,http.c,reachable,,,6,1
+3516878,invalid,8.18.0,logic,Insufficiently Protected Credentials,curl_strequal,strequal.c,reachable,,,6,1
+3516974,invalid,8.18.0,other,Missing Required Cryptographic Step,Curl_setstropt,setopt.c,reachable,,,2,1
+3516974,invalid,8.18.0,other,Missing Required Cryptographic Step,curl_easy_setopt,setopt.c,reachable,,,2,1
+3523349,invalid,8.18.0,integer,Integer Underflow,addvariable,var.c,reachable,,var.c:375|var.c:480,2,1
+3523349,invalid,8.18.0,integer,Integer Underflow,setvariable,var.c,reachable,,var.c:375|var.c:480,2,1
+3523953,invalid,8.18.0,reachability,Command Injection - Generic,,,no_target,,,0,0
+3531216,invalid,8.18.0,other,,mqtt_recv_atleast,mqtt.c,reachable,,mqtt.c:402|mqtt.c:901,2,1
+3531216,invalid,8.18.0,other,,mqtt_recv_consume,mqtt.c,reachable,,mqtt.c:402|mqtt.c:901,2,1
+3574928,invalid,8.18.0,logic,Missing Required Cryptographic Step,,,no_target,,,0,0
+3575245,invalid,8.18.0,bounds,Classic Buffer Overflow,Curl_uint32_tbl_count,uint-table.c,reachable,64,,3,1
+3575245,invalid,8.18.0,bounds,Classic Buffer Overflow,Curl_uint32_tbl_first,uint-table.c,reachable,64,,3,1
+3575245,invalid,8.18.0,bounds,Classic Buffer Overflow,Curl_uint32_tbl_next,uint-table.c,reachable,64,,3,1
+3575250,invalid,8.18.0,other,Improper Check or Handling of Exceptional Conditions,curlx_dyn_len,dynbuf.c,reachable,2|3,,2,1
+3575250,invalid,8.18.0,other,Improper Check or Handling of Exceptional Conditions,rtsp_filter_rtp,rtsp.c,reachable,2|3,rtsp.c:784|rtsp.c:762|rtsp.c:781,2,1
+3575475,invalid,8.18.0,bounds,Buffer Underflow,,,no_target,512,telnet.c:69,0,0
+3580247,invalid,8.18.0,uaf,Use After Free,,,non_product,,hiperfifo.c:453,0,0
+3583983,genuine,8.18.0,logic,Information Exposure Through Sent Data,Curl_auth_allowed_to_host,vauth.c,reachable,,,5,1
+3583983,genuine,8.18.0,logic,Information Exposure Through Sent Data,Curl_checkheaders,transfer.c,reachable,,,5,1
+3583983,genuine,8.18.0,logic,Information Exposure Through Sent Data,curlx_str_casecompare,strparse.c,reachable,,,5,1
+3583983,genuine,8.18.0,logic,Information Exposure Through Sent Data,http_output_bearer,http.c,reachable,,http.c:704|http.c:820|http.c:704|http.c:1828|http.c:1254,5,1
+3583983,genuine,8.18.0,logic,Information Exposure Through Sent Data,output_auth_headers,http.c,reachable,,http.c:704|http.c:820|http.c:704|http.c:1828|http.c:1254,5,1
+3584149,invalid,8.18.0,other,Command Injection - Generic,,,no_target,,,0,0
+3584491,invalid,8.18.0,logic,Reversible One-Way Hash,,,gated_backend,24,,0,0
+3584865,invalid,8.18.0,logic,Improper Neutralization of Value Delimiters,,,no_target,,,0,0
+3584903,genuine,8.18.0,logic,Incorrect Authorization,proxy_info_matches,url.c,reachable,,url.c:930|url.c:589,2,1
+3584903,genuine,8.18.0,logic,Incorrect Authorization,url_match_proxy_use,url.c,reachable,,url.c:930|url.c:589,2,1
+3591944,genuine,8.18.0,uaf,Use After Free,Curl_conn_free,url.c,reachable,13,,1,1
+3591956,invalid,8.18.0,uaf,Use After Free,Curl_conn_free,url.c,reachable,13,,1,1
+3595753,invalid,8.18.0,logic,Improper Authentication - Generic,curl_easy_reset,easy.c,reachable,,,2,1
+3595753,invalid,8.18.0,logic,Improper Authentication - Generic,url_match_conn,url.c,reachable,,,2,1
+3595764,invalid,8.18.0,logic,Information Disclosure,,,non_product,,,0,0
+3597359,invalid,8.19.0,other,NULL Pointer Dereference,,,gated_backend,,libssh2.c:840,0,0
+3598358,invalid,8.19.0,logic,Off-by-one Error,curl_url_set,urlapi.c,reachable,,urlapi.c:1648,2,1
+3598358,invalid,8.19.0,logic,Off-by-one Error,set_url_scheme,urlapi.c,reachable,,urlapi.c:1648,2,1
+3598444,invalid,8.19.0,other,Expected Behavior Violation,Curl_compareheader,http.c,reachable,,http.c:1438,1,1
+3603300,invalid,8.19.0,other,,Curl_client_write,sendf.c,reachable,2|3|4|13|16|24|28|32,,2,1
+3603300,invalid,8.19.0,other,,Curl_read16_le,curl_endian.c,reachable,2|3|4|13|16|24|28|32,,2,1
+3608522,invalid,8.19.0,other,"Improper Neutralization of Escape, Meta, or Control Sequences",auth_digest_string_quoted,digest.c,reachable,,digest.c:863|digest.c:478,1,1
+3609505,invalid,8.19.0,other,Acceptance of Extraneous Untrusted Data With Trusted Data,,,no_target,,,0,0
+3611825,invalid,8.19.0,logic,,,,reachable,,http.c:825,0,0
+3612891,invalid,8.19.0,other,,,,no_target,,,0,0
+3617719,invalid,8.19.0,bounds,Out-of-bounds Read,,,gated_backend,,x509asn1.c:1015,0,0
+3621851,genuine,8.19.0,logic,Cleartext Transmission of Sensitive Information,,,no_target,,,0,0
+3623064,invalid,8.19.0,logic,HTTP Request Smuggling,,,reachable,9112,cf-h1-proxy.c:466,0,0
+3627638,invalid,8.19.0,other,CRLF Injection,Curl_pp_sendf,pingpong.c,reachable,,,4,1
+3627638,invalid,8.19.0,other,CRLF Injection,Curl_urldecode,escape.c,reachable,,,4,1
+3627638,invalid,8.19.0,other,CRLF Injection,curl_easy_setopt,setopt.c,reachable,,,4,1
+3627638,invalid,8.19.0,other,CRLF Injection,ftp_state_user,ftp.c,reachable,,ftp.c:3547,4,1
+3630310,invalid,8.19.0,logic,Improper Input Validation,,,reachable,,http2.c:716|http2.c:728|http2.c:1424|http2.c:819|http2.c:839|multi.c:1676|multi.c:934|getinfo.c:91,0,0
+3632427,invalid,8.19.0,other,Improper Handling of Highly Compressed Data (Data Amplification),Curl_cwriter_write,sendf.c,reachable,,,2,1
+3632427,invalid,8.19.0,other,Improper Handling of Highly Compressed Data (Data Amplification),curl_multi_perform,multi.c,reachable,,,2,1
+3633534,invalid,8.19.0,logic,CRLF Injection,Curl_host_is_ipnum,hostip.c,reachable,,,3,1
+3633534,invalid,8.19.0,logic,CRLF Injection,Curl_setstropt,setopt.c,reachable,,,3,1
+3633534,invalid,8.19.0,logic,CRLF Injection,curlx_dyn_addf,dynbuf.c,reachable,,,3,1
+3636044,invalid,8.19.0,logic,Improper Handling of Insufficient Permissions or Privileges,Curl_get_scheme,url.c,reachable,,,3,1
+3636044,invalid,8.19.0,logic,Improper Handling of Insufficient Permissions or Privileges,curl_maprintf,mprintf.c,reachable,,,3,1
+3636044,invalid,8.19.0,logic,Improper Handling of Insufficient Permissions or Privileges,curl_pushheader_byname,http2.c,reachable,,http2.c:1490|http2.c:733|http2.c:1490|http2.c:733|http2.c:1484|http2.c:1490,3,1
+3636244,invalid,8.19.0,logic,Authentication Bypass by Primary Weakness,,,no_target,,,0,0
+3638715,invalid,8.19.0,uaf,Use After Free,Curl_cpool_find,conncache.c,reachable,58,,6,1
+3638715,invalid,8.19.0,uaf,Use After Free,curl_easy_perform,easy.c,reachable,58,,6,1
+3638715,invalid,8.19.0,uaf,Use After Free,curl_strequal,strequal.c,reachable,58,,6,1
+3638715,invalid,8.19.0,uaf,Use After Free,url_conn_reuse_adjust,url.c,reachable,58,,6,1
+3638715,invalid,8.19.0,uaf,Use After Free,url_match_destination,url.c,reachable,58,,6,1
+3638715,invalid,8.19.0,uaf,Use After Free,url_move_hostname,url.c,reachable,58,,6,1
+3639277,invalid,8.19.0,logic,,Curl_conn_meta_get,url.c,reachable,,,2,1
+3639277,invalid,8.19.0,logic,,Curl_safecmp,strcase.c,reachable,,,2,1
+3640932,invalid,8.19.0,logic,Authentication Bypass by Primary Weakness,Curl_conn_meta_get,url.c,reachable,,,2,1
+3640932,invalid,8.19.0,logic,Authentication Bypass by Primary Weakness,Curl_safecmp,strcase.c,reachable,,,2,1
+3641893,invalid,8.19.0,logic,Improper Input Validation,curlx_str_casecompare,strparse.c,reachable,,,8,1
+3641893,invalid,8.19.0,logic,Improper Input Validation,curlx_str_cspn,strparse.c,reachable,,,8,1
+3641893,invalid,8.19.0,logic,Improper Input Validation,curlx_str_single,strparse.c,reachable,,,8,1
+3641893,invalid,8.19.0,logic,Improper Input Validation,curlx_str_trimblanks,strparse.c,reachable,,,8,1
+3641893,invalid,8.19.0,logic,Improper Input Validation,get_netscape_format,cookie.c,reachable,,cookie.c:462,8,1
+3641893,invalid,8.19.0,logic,Improper Input Validation,parse_cookie_header,cookie.c,reachable,,cookie.c:462,8,1
+3641893,invalid,8.19.0,logic,Improper Input Validation,parse_netscape,cookie.c,reachable,,cookie.c:462,8,1
+3641893,invalid,8.19.0,logic,Improper Input Validation,sanitize_cookie_path,cookie.c,reachable,,cookie.c:462,8,1
+3642555,genuine,8.19.0,logic,Authentication Bypass by Primary Weakness,Curl_attach_connection,multi.c,reachable,401,,3,1
+3642555,genuine,8.19.0,logic,Authentication Bypass by Primary Weakness,Curl_timestrcmp,strcase.c,reachable,401,,3,1
+3642555,genuine,8.19.0,logic,Authentication Bypass by Primary Weakness,url_match_conn,url.c,reachable,401,url.c:1092|url.c:1077|url.c:1145|url.c:1201|url.c:1263|url.c:1093|url.c:1239|url.c:1244,3,1
+3645361,invalid,8.19.0,logic,Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition'),Curl_dnscache_clear,hostip.c,reachable,,hostip.c:686|hostip.c:992,9,1
+3645361,invalid,8.19.0,logic,Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition'),Curl_dnscache_get,hostip.c,reachable,,hostip.c:686|hostip.c:992,9,1
+3645361,invalid,8.19.0,logic,Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition'),Curl_dnscache_prune,hostip.c,reachable,,hostip.c:686|hostip.c:992,9,1
+3645361,invalid,8.19.0,logic,Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition'),Curl_hash_add,hash.c,reachable,,,9,1
+3645361,invalid,8.19.0,logic,Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition'),curl_multi_perform,multi.c,reachable,,,9,1
+3645361,invalid,8.19.0,logic,Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition'),dnscache_add_addr,hostip.c,reachable,,hostip.c:686|hostip.c:992,9,1
+3645361,invalid,8.19.0,logic,Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition'),dnscache_get,hostip.c,reachable,,hostip.c:686|hostip.c:992,9,1
+3645361,invalid,8.19.0,logic,Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition'),dnscache_lock,hostip.c,reachable,,hostip.c:686|hostip.c:992,9,1
+3645361,invalid,8.19.0,logic,Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition'),dnscache_unlock,hostip.c,reachable,,hostip.c:686|hostip.c:992,9,1
+3645415,invalid,8.19.0,logic,Exposed Dangerous Method or Function,Curl_conn_meta_get,url.c,reachable,,url.c:705|url.c:988|url.c:717|url.c:119|url.c:1081|url.c:303|url.c:1068|url.c:990|url.c:990,4,1
+3645415,invalid,8.19.0,logic,Exposed Dangerous Method or Function,Curl_ssl_conn_config_match,vtls.c,reachable,,,4,1
+3645415,invalid,8.19.0,logic,Exposed Dangerous Method or Function,get_protocol_family,url.c,reachable,,url.c:705|url.c:988|url.c:717|url.c:119|url.c:1081|url.c:303|url.c:1068|url.c:990|url.c:990,4,1
+3645415,invalid,8.19.0,logic,Exposed Dangerous Method or Function,url_match_proto_config,url.c,reachable,,url.c:705|url.c:988|url.c:717|url.c:119|url.c:1081|url.c:303|url.c:1068|url.c:990|url.c:990,4,1
+3646072,invalid,8.19.0,logic,Authentication Bypass by Primary Weakness,Curl_attach_connection,multi.c,reachable,,,3,1
+3646072,invalid,8.19.0,logic,Authentication Bypass by Primary Weakness,url_match_conn,url.c,reachable,,url.c:1244|url.c:1239|url.c:1244|url.c:1152|url.c:1154|url.c:1245|url.c:1086|url.c:1091|url.c:1092|url.c:1093|url.c:1240|url.c:1244|url.c:1267|url.c:1092|url.c:1270|url.c:1092,3,1
+3646072,invalid,8.19.0,logic,Authentication Bypass by Primary Weakness,url_match_result,url.c,reachable,,url.c:1244|url.c:1239|url.c:1244|url.c:1152|url.c:1154|url.c:1245|url.c:1086|url.c:1091|url.c:1092|url.c:1093|url.c:1240|url.c:1244|url.c:1267|url.c:1092|url.c:1270|url.c:1092,3,1
+3646914,invalid,8.19.0,logic,Incorrect Comparison,Curl_timestrcmp,strcase.c,reachable,,,1,1
+3648199,invalid,8.19.0,reachability,Code Injection,,,no_target,,,0,0
+3650435,invalid,8.19.0,logic,Improper Authorization,proxy_info_matches,url.c,reachable,,url.c:578|url.c:879|url.c:1207|url.c:2965,6,1
+3650435,invalid,8.19.0,logic,Improper Authorization,socks5_check_resp0,socks.c,reachable,,socks.c:597|socks.c:665,6,1
+3650435,invalid,8.19.0,logic,Improper Authorization,socks5_req0_init,socks.c,reachable,,socks.c:597|socks.c:665,6,1
+3650435,invalid,8.19.0,logic,Improper Authorization,url_conn_reuse_adjust,url.c,reachable,,url.c:578|url.c:879|url.c:1207|url.c:2965,6,1
+3650435,invalid,8.19.0,logic,Improper Authorization,url_match_conn,url.c,reachable,,url.c:578|url.c:879|url.c:1207|url.c:2965,6,1
+3650435,invalid,8.19.0,logic,Improper Authorization,url_match_proxy_use,url.c,reachable,,url.c:578|url.c:879|url.c:1207|url.c:2965,6,1
+3650443,invalid,8.19.0,logic,Improper Access Control - Generic,Curl_check_noproxy,noproxy.c,reachable,,noproxy.c:188|noproxy.c:124,2,1
+3650443,invalid,8.19.0,logic,Improper Access Control - Generic,match_host,noproxy.c,reachable,,noproxy.c:188|noproxy.c:124,2,1
+3650473,invalid,8.19.0,logic,,,,reachable,,ftp.c:3095|curl_ctype.h:30|ftp.c:3131|ftp.c:849|ftp.c:841,0,0
+3650689,genuine,8.19.0,logic,,ftp_conns_match,ftp.c,reachable,,,4,1
+3650689,genuine,8.19.0,logic,,get_protocol_family,url.c,reachable,,,4,1
+3650689,genuine,8.19.0,logic,,url_match_conn,url.c,reachable,,,4,1
+3650689,genuine,8.19.0,logic,,url_match_http_version,url.c,reachable,,,4,1
+3651975,invalid,8.19.0,other,CRLF Injection,Curl_pp_sendf,pingpong.c,reachable,,,2,1
+3651975,invalid,8.19.0,other,CRLF Injection,smtp_parse_address,smtp.c,reachable,,smtp.c:277|smtp.c:277|smtp.c:198|smtp.c:215|smtp.c:198,2,1
+3658049,invalid,8.19.0,integer,,curl_easy_ssls_export,easy.c,reachable,2|24|64,,2,1
+3658049,invalid,8.19.0,integer,,curl_easy_ssls_import,easy.c,reachable,2|24|64,,2,1
+3665363,invalid,8.19.0,integer,Integer Overflow,,,gated_backend,16|32|64|295|296|65536,,0,0
+3666576,invalid,8.19.0,logic,Improper Authentication - Generic,,,gated_backend,,sws.c:2387|sws.c:2387,0,0
+3669305,invalid,8.19.0,reachability,Command Injection - Generic,,,no_target,,,0,0
+3669637,genuine,8.19.0,logic,,,,no_target,,,0,0
+3671818,genuine,8.19.0,logic,Exposure of Data Element to Wrong Session,,,reachable,,http.c:2560|http.c:3561|http.c:2030|http.c:2075,0,0
+3673277,invalid,8.19.0,logic,Information Exposure Through Sent Data,Curl_http_follow,http.c,reachable,,http.c:1166|http.c:2954,1,1
+3674275,invalid,8.19.0,logic,Authentication Bypass by Primary Weakness,Curl_get_scheme,url.c,reachable,2|3,,11,1
+3674275,invalid,8.19.0,logic,Authentication Bypass by Primary Weakness,curl_easy_getinfo,easy.c,reachable,2|3,,11,1
+3674275,invalid,8.19.0,logic,Authentication Bypass by Primary Weakness,curl_easy_init,easy.c,reachable,2|3,,11,1
+3674275,invalid,8.19.0,logic,Authentication Bypass by Primary Weakness,curl_easy_setopt,setopt.c,reachable,2|3,,11,1
+3674275,invalid,8.19.0,logic,Authentication Bypass by Primary Weakness,curl_multi_add_handle,multi.c,reachable,2|3,,11,1
+3674275,invalid,8.19.0,logic,Authentication Bypass by Primary Weakness,curl_multi_init,multi.c,reachable,2|3,,11,1
+3674275,invalid,8.19.0,logic,Authentication Bypass by Primary Weakness,curl_multi_perform,multi.c,reachable,2|3,,11,1
+3674275,invalid,8.19.0,logic,Authentication Bypass by Primary Weakness,curl_multi_poll,multi.c,reachable,2|3,,11,1
+3674275,invalid,8.19.0,logic,Authentication Bypass by Primary Weakness,curl_multi_setopt,multi.c,reachable,2|3,,11,1
+3674275,invalid,8.19.0,logic,Authentication Bypass by Primary Weakness,curl_strequal,strequal.c,reachable,2|3,,11,1
+3674275,invalid,8.19.0,logic,Authentication Bypass by Primary Weakness,curl_url_set,urlapi.c,reachable,2|3,,11,1
+3677759,genuine,8.19.0,logic,Information Exposure Through Sent Data,,,no_target,,,0,0
+3680038,invalid,8.19.0,logic,Insufficiently Protected Credentials,Curl_auth_allowed_to_host,vauth.c,reachable,,,5,1
+3680038,invalid,8.19.0,logic,Insufficiently Protected Credentials,Curl_auth_digest_cleanup,digest.c,reachable,,,5,1
+3680038,invalid,8.19.0,logic,Insufficiently Protected Credentials,Curl_close,url.c,reachable,,url.c:3373,5,1
+3680038,invalid,8.19.0,logic,Insufficiently Protected Credentials,curl_easy_reset,easy.c,reachable,,,5,1
+3680038,invalid,8.19.0,logic,Insufficiently Protected Credentials,output_auth_headers,http.c,reachable,,http.c:842,5,1
+3680234,invalid,8.19.0,logic,Exposure of Data Element to Wrong Session,Curl_freeset,url.c,reachable,,url.c:156|url.c:156,2,1
+3680234,invalid,8.19.0,logic,Exposure of Data Element to Wrong Session,rtsp_do,rtsp.c,reachable,,rtsp.c:1015|rtsp.c:373|rtsp.c:513|rtsp.c:1015|rtsp.c:1031|rtsp.c:373|rtsp.c:513|rtsp.c:373|rtsp.c:514,2,1
+3680680,invalid,8.19.0,logic,Information Disclosure,Curl_auth_allowed_to_host,vauth.c,reachable,,,2,1
+3680680,invalid,8.19.0,logic,Information Disclosure,zonefrom_url,url.c,reachable,,,2,1
+3682666,invalid,8.19.0,uaf,Use After Free,Curl_node_next,llist.c,reachable,,,3,1
+3682666,invalid,8.19.0,uaf,Use After Free,curl_easy_ssls_export,easy.c,reachable,,,3,1
+3682666,invalid,8.19.0,uaf,Use After Free,curl_easy_ssls_import,easy.c,reachable,,,3,1
+3684603,invalid,8.19.0,bounds,Uncontrolled Recursion,curl_mime_subparts,mime.c,reachable,683,mime.c:683|mime.c:918|mime.c:716|mime.c:865|mime.c:939|mime.c:716|mime.c:865|mime.c:683,5,1
+3684603,invalid,8.19.0,bounds,Uncontrolled Recursion,mime_subparts_read,mime.c,reachable,683,mime.c:683|mime.c:918|mime.c:716|mime.c:865|mime.c:939|mime.c:716|mime.c:865|mime.c:683,5,1
+3684603,invalid,8.19.0,bounds,Uncontrolled Recursion,read_part_content,mime.c,reachable,683,mime.c:683|mime.c:918|mime.c:716|mime.c:865|mime.c:939|mime.c:716|mime.c:865|mime.c:683,5,1
+3684603,invalid,8.19.0,bounds,Uncontrolled Recursion,readback_bytes,mime.c,reachable,683,mime.c:683|mime.c:918|mime.c:716|mime.c:865|mime.c:939|mime.c:716|mime.c:865|mime.c:683,5,1
+3684603,invalid,8.19.0,bounds,Uncontrolled Recursion,readback_part,mime.c,reachable,683,mime.c:683|mime.c:918|mime.c:716|mime.c:865|mime.c:939|mime.c:716|mime.c:865|mime.c:683,5,1
+3684614,invalid,8.19.0,bounds,Out-of-bounds Read,Curl_slist_append_nodup,slist.c,reachable,173|667,,1,1
+3694390,genuine,8.19.0,logic,Improper Certificate Validation,,,gated_backend,,,0,0
+3697719,genuine,8.19.0,logic,Exposure of Data Element to Wrong Session,curl_easy_reset,easy.c,reachable,,,1,1
+3702718,invalid,8.20.0,logic,Improper Input Validation,mqtt_doing,mqtt.c,reachable,,mqtt.c:894|mqtt.c:894,1,1
+3707747,invalid,8.20.0,logic,,,,reachable,,setopt.c:1037|setopt.c:1626|url.c:2059|transfer.c:537|transfer.c:592|http_digest.c:93|http_digest.c:161,0,0
+3708482,invalid,8.20.0,reachability,Improper Neutralization of Value Delimiters,,,no_target,2,,0,0
+3710209,invalid,8.20.0,logic,Uncontrolled Resource Consumption,,,reachable,,tool_parsecfg.c:264|tool_parsecfg.c:279,0,0
+3712343,invalid,8.20.0,logic,ASI05: Unexpected Code Execution (RCE),mqtt_verify_connack,mqtt.c,reachable,,mqtt.c:404|mqtt.c:45|mqtt.c:895|mqtt.c:45,1,1
+3717365,invalid,8.20.0,other,Improper Null Termination,curlx_memdup0,strdup.c,reachable,,,1,1
+3717552,invalid,8.20.0,logic,Improper Check for Certificate Revocation,,,reachable,,setopt.c:1786|setopt.c:2837|setopt.c:1890|setopt.c:2247|wolfssl.c:2318|mbedtls.c:1597|schannel.c:2855|rustls.c:1424|openssl.c:4507,0,0
+3718195,genuine,8.20.0,logic,,url_match_ssl_config,url.c,reachable,,url.c:1024|url.c:825,2,1
+3718195,genuine,8.20.0,logic,,url_match_ssl_use,url.c,reachable,,url.c:1024|url.c:825,2,1
+3718265,invalid,8.20.0,other,,Curl_node_remove,llist.c,reachable,,,2,1
+3718265,invalid,8.20.0,other,,Curl_share_lock,curl_share.c,reachable,,curl_share.c:459,2,1
+3721183,genuine,8.20.0,logic,Authentication Bypass by Primary Weakness,,,unreachable,,,0,0
+3725659,invalid,8.20.0,logic,,,,reachable,,conncache.c:126|http_negotiate.c:140|url.c:1214,0,0
+3733905,genuine,8.20.0,other,Use of Incorrectly-Resolved Name or Reference,,,no_target,,,0,0
+3733910,genuine,8.20.0,logic,Business Logic Errors,Curl_ssl_conn_config_match,vtls.c,reachable,65536,vtls.c:194|vtls.c:227|vtls.c:194,7,1
+3733910,genuine,8.20.0,logic,Business Logic Errors,clone_ssl_primary_config,vtls.c,reachable,65536,vtls.c:194|vtls.c:227|vtls.c:194,7,1
+3733910,genuine,8.20.0,logic,Business Logic Errors,curlx_dyn_add,dynbuf.c,reachable,65536,,7,1
+3733910,genuine,8.20.0,logic,Business Logic Errors,curlx_dyn_addf,dynbuf.c,reachable,65536,,7,1
+3733910,genuine,8.20.0,logic,Business Logic Errors,free_primary_ssl_config,vtls.c,reachable,65536,vtls.c:194|vtls.c:227|vtls.c:194,7,1
+3733910,genuine,8.20.0,logic,Business Logic Errors,match_ssl_primary_config,vtls.c,reachable,65536,vtls.c:194|vtls.c:227|vtls.c:194,7,1
+3733910,genuine,8.20.0,logic,Business Logic Errors,url_match_ssl_config,url.c,reachable,65536,url.c:991,7,1
+3733934,invalid,8.20.0,uaf,Use After Free,Curl_close,url.c,reachable,40|48,url.c:266|url.c:266,6,1
+3733934,invalid,8.20.0,uaf,Use After Free,Curl_node_elem,llist.c,reachable,40|48,,6,1
+3733934,invalid,8.20.0,uaf,Use After Free,Curl_share_easy_link,curl_share.c,reachable,40|48,curl_share.c:455,6,1
+3733934,invalid,8.20.0,uaf,Use After Free,curl_easy_setopt,setopt.c,reachable,40|48,setopt.c:2508|setopt.c:1274|setopt.c:2508|setopt.c:1283|setopt.c:2508,6,1
+3733934,invalid,8.20.0,uaf,Use After Free,curl_share_cleanup,curl_share.c,reachable,40|48,curl_share.c:455,6,1
+3733934,invalid,8.20.0,uaf,Use After Free,share_destroy,curl_share.c,reachable,40|48,curl_share.c:455,6,1
+3733946,invalid,8.20.0,logic,,Curl_auth_allowed_to_host,vauth.c,reachable,65536,vauth.c:140,1,1
+3733984,invalid,8.20.0,reachability,Cleartext Transmission of Sensitive Information,altsvc_createid,altsvc.c,reachable,,,2,1
+3733984,invalid,8.20.0,reachability,Cleartext Transmission of Sensitive Information,hostcompare,altsvc.c,reachable,,,2,1
+3734020,invalid,8.20.0,other,Allocation of Resources Without Limits or Throttling,Curl_bump_headersize,http.c,reachable,,http.c:4973,2,1
+3734020,invalid,8.20.0,other,Allocation of Resources Without Limits or Throttling,Curl_http_resp_make,http.c,reachable,,http.c:4973,2,1
+3734095,invalid,8.20.0,logic,Business Logic Errors,,,reachable,,CURLOPT_SSL_VERIFYPEER.md:57|openssl.c:4776|gtls.c:1824|schannel.c:1473|wolfssl.c:1758|rustls.c:1040|rustls.c:381|schannel_verify.c:500|mbedtls.c:456|mbedtls.c:941|wolfssl.c:1402|wolfssl.c:1537|wolfss,0,0
+3734921,invalid,8.20.0,logic,Business Logic Errors,Curl_host_is_ipnum,hostip.c,reachable,11,,2,1
+3734921,invalid,8.20.0,logic,Business Logic Errors,ipv4_normalize,urlapi.c,reachable,11,,2,1
+3734935,invalid,8.20.0,logic,Business Logic Errors,curl_easy_setopt,setopt.c,reachable,,,1,1
+3734947,invalid,8.20.0,logic,Allocation of Resources Without Limits or Throttling,Curl_multi_mark_dirty,multi.c,reachable,10|16|64|100|384,,3,1
+3734947,invalid,8.20.0,logic,Allocation of Resources Without Limits or Throttling,cw_out_append,cw-out.c,reachable,10|16|64|100|384,cw-out.c:352,3,1
+3734947,invalid,8.20.0,logic,Allocation of Resources Without Limits or Throttling,cw_pause_write,cw-pause.c,reachable,10|16|64|100|384,cw-pause.c:51|cw-pause.c:177,3,1
+3734992,invalid,8.20.0,logic,Business Logic Errors,,,gated_backend,,,0,0
+3735080,invalid,8.20.0,logic,Allocation of Resources Without Limits or Throttling,Curl_pgrsCheck,progress.c,reachable,,,2,1
+3735080,invalid,8.20.0,logic,Allocation of Resources Without Limits or Throttling,Curl_timeleft_ms,connect.c,reachable,,,2,1
+3735179,invalid,8.20.0,other,Business Logic Errors,Curl_setblobopt,setopt.c,reachable,,,2,1
+3735179,invalid,8.20.0,other,Business Logic Errors,Curl_ssl_easy_config_complete,vtls.c,reachable,,vtls.c:351,2,1
+3735180,invalid,8.20.0,logic,Exposure of Data Element to Wrong Session,,,reachable,2|3|4|5|256|4096,url.c:856|vtls.c:194|vtls.c:371|vtls.c:405,0,0
+3735184,genuine,8.20.0,logic,Information Disclosure,,,no_target,,,0,0
+3735193,genuine,8.20.0,uaf,Double Free,,,reachable,,gsasl.c:47|gsasl.c:108|vauth.c:201|curl_sasl.c:354|url.c:520|multi.c:662|imap.c:713,0,0
+3735238,invalid,8.20.0,other,Business Logic Errors,curl_easy_setopt,setopt.c,reachable,,,5,1
+3735238,invalid,8.20.0,other,Business Logic Errors,curl_strequal,strequal.c,reachable,,,5,1
+3735238,invalid,8.20.0,other,Business Logic Errors,curl_strnequal,strequal.c,reachable,,,5,1
+3735238,invalid,8.20.0,other,Business Logic Errors,pathmatch,cookie.c,reachable,,cookie.c:138|cookie.c:857|cookie.c:881,5,1
+3735238,invalid,8.20.0,other,Business Logic Errors,replace_existing,cookie.c,reachable,,cookie.c:138|cookie.c:857|cookie.c:881,5,1
+3735276,invalid,8.20.0,logic,Business Logic Errors,Curl_xfer_send,transfer.c,reachable,53|65536,,3,1
+3735276,invalid,8.20.0,logic,Business Logic Errors,curl_easy_setopt,setopt.c,reachable,53|65536,,3,1
+3735276,invalid,8.20.0,logic,Business Logic Errors,match_ssl_primary_config,vtls.c,reachable,53|65536,,3,1
+3736234,invalid,8.20.0,logic,NULL Pointer Dereference,curl_url,urlapi.c,reachable,,,5,1
+3736234,invalid,8.20.0,logic,NULL Pointer Dereference,curl_url_cleanup,urlapi.c,reachable,,,5,1
+3736234,invalid,8.20.0,logic,NULL Pointer Dereference,curl_url_set,urlapi.c,reachable,,,5,1
+3736234,invalid,8.20.0,logic,NULL Pointer Dereference,redirect_url,urlapi.c,reachable,,,5,1
+3736234,invalid,8.20.0,logic,NULL Pointer Dereference,urlget_url,urlapi.c,reachable,,,5,1
+3739561,invalid,8.20.0,logic,Improper Certificate Validation,Curl_safecmp,strcase.c,reachable,,,5,1
+3739561,invalid,8.20.0,logic,Improper Certificate Validation,Curl_timestrcmp,strcase.c,reachable,,,5,1
+3739561,invalid,8.20.0,logic,Improper Certificate Validation,blobcmp,vtls.c,reachable,,vtls.c:219|vtls.c:194,5,1
+3739561,invalid,8.20.0,logic,Improper Certificate Validation,curl_strequal,strequal.c,reachable,,,5,1
+3739561,invalid,8.20.0,logic,Improper Certificate Validation,curlx_dyn_addf,dynbuf.c,reachable,,,5,1
+3741135,invalid,8.20.0,logic,Incorrect Authorization,url_match_conn,url.c,reachable,,url.c:694|url.c:1129,2,1
+3741135,invalid,8.20.0,logic,Incorrect Authorization,url_match_connect_config,url.c,reachable,,url.c:694|url.c:1129,2,1
+3741744,invalid,8.20.0,other,CRLF Injection,Curl_add_custom_headers,http.c,reachable,,,8,1
+3741744,invalid,8.20.0,other,CRLF Injection,curl_easy_cleanup,easy.c,reachable,,,8,1
+3741744,invalid,8.20.0,other,CRLF Injection,curl_easy_init,easy.c,reachable,,,8,1
+3741744,invalid,8.20.0,other,CRLF Injection,curl_easy_perform,easy.c,reachable,,,8,1
+3741744,invalid,8.20.0,other,CRLF Injection,curl_easy_setopt,setopt.c,reachable,,,8,1
+3741744,invalid,8.20.0,other,CRLF Injection,curl_slist_append,slist.c,reachable,,,8,1
+3741744,invalid,8.20.0,other,CRLF Injection,curl_slist_free_all,slist.c,reachable,,,8,1
+3741744,invalid,8.20.0,other,CRLF Injection,curlx_dyn_addf,dynbuf.c,reachable,,,8,1
+3744543,genuine,8.20.0,logic,Improper Authentication - Generic,curl_easy_reset,easy.c,reachable,2|256,,1,1
+3747959,invalid,8.20.0,logic,Time-of-check Time-of-use (TOCTOU) Race Condition,tool_create_output_file,tool_cb_wrt.c,reachable,,,1,1
+3749204,genuine,8.20.0,uaf,Use After Free,Curl_multi_ev_assess_xfer,multi_ev.c,reachable,64|92|104|127|4096,multi_ev.c:280|multi_ev.c:275|multi_ev.c:275|multi_ev.c:280|multi_ev.c:275,9,1
+3749204,genuine,8.20.0,uaf,Use After Free,curl_easy_pause,easy.c,reachable,64|92|104|127|4096,easy.c:1183,9,1
+3749204,genuine,8.20.0,uaf,Use After Free,mev_assess,multi_ev.c,reachable,64|92|104|127|4096,multi_ev.c:280|multi_ev.c:275|multi_ev.c:275|multi_ev.c:280|multi_ev.c:275,9,1
+3749204,genuine,8.20.0,uaf,Use After Free,mev_forget_socket,multi_ev.c,reachable,64|92|104|127|4096,multi_ev.c:280|multi_ev.c:275|multi_ev.c:275|multi_ev.c:280|multi_ev.c:275,9,1
+3749204,genuine,8.20.0,uaf,Use After Free,mev_in_callback,multi_ev.c,reachable,64|92|104|127|4096,multi_ev.c:280|multi_ev.c:275|multi_ev.c:275|multi_ev.c:280|multi_ev.c:275,9,1
+3749204,genuine,8.20.0,uaf,Use After Free,mev_pollset_diff,multi_ev.c,reachable,64|92|104|127|4096,multi_ev.c:280|multi_ev.c:275|multi_ev.c:275|multi_ev.c:280|multi_ev.c:275,9,1
+3749204,genuine,8.20.0,uaf,Use After Free,mev_sh_entry_get,multi_ev.c,reachable,64|92|104|127|4096,multi_ev.c:280|multi_ev.c:275|multi_ev.c:275|multi_ev.c:280|multi_ev.c:275,9,1
+3749204,genuine,8.20.0,uaf,Use After Free,mev_sh_entry_kill,multi_ev.c,reachable,64|92|104|127|4096,multi_ev.c:280|multi_ev.c:275|multi_ev.c:275|multi_ev.c:280|multi_ev.c:275,9,1
+3749204,genuine,8.20.0,uaf,Use After Free,mev_sh_entry_update,multi_ev.c,reachable,64|92|104|127|4096,multi_ev.c:280|multi_ev.c:275|multi_ev.c:275|multi_ev.c:280|multi_ev.c:275,9,1
+3749428,invalid,8.20.0,logic,Insufficiently Protected Credentials,,,gated_backend,,,0,0
+3750295,genuine,8.20.0,logic,Information Disclosure,Curl_urldecode,escape.c,reachable,,,2,1
+3750295,genuine,8.20.0,logic,Information Disclosure,setstropt_userpwd,setopt.c,reachable,,,2,1
+3751697,genuine,8.20.0,bounds,Buffer Over-read,Curl_close,url.c,reachable,2120|5096,url.c:3094|url.c:3022|url.c:3094|url.c:278|url.c:311|url.c:463|url.c:3022|url.c:3022|url.c:3034,6,1
+3751697,genuine,8.20.0,bounds,Buffer Over-read,Curl_freeset,url.c,reachable,2120|5096,url.c:3094|url.c:3022|url.c:3094|url.c:278|url.c:311|url.c:463|url.c:3022|url.c:3022|url.c:3034,6,1
+3751697,genuine,8.20.0,bounds,Buffer Over-read,Curl_init_userdefined,url.c,reachable,2120|5096,url.c:3094|url.c:3022|url.c:3094|url.c:278|url.c:311|url.c:463|url.c:3022|url.c:3022|url.c:3034,6,1
+3751697,genuine,8.20.0,bounds,Buffer Over-read,Curl_meta_reset,easy.c,reachable,2120|5096,easy.c:1090|easy.c:844|easy.c:844|easy.c:350,6,1
+3751697,genuine,8.20.0,bounds,Buffer Over-read,curl_easy_cleanup,easy.c,reachable,2120|5096,easy.c:1090|easy.c:844|easy.c:844|easy.c:350,6,1
+3751697,genuine,8.20.0,bounds,Buffer Over-read,curl_easy_reset,easy.c,reachable,2120|5096,easy.c:1090|easy.c:844|easy.c:844|easy.c:350,6,1
+3751701,invalid,8.20.0,uaf,Use After Free,curl_easy_duphandle,easy.c,reachable,16|32,easy.c:881|easy.c:844|easy.c:844,2,1
+3751701,invalid,8.20.0,uaf,Use After Free,dupset,easy.c,reachable,16|32,easy.c:881|easy.c:844|easy.c:844,2,1
+3751712,genuine,8.20.0,logic,"Reusing a Nonce, Key Pair in Encryption",,,gated_backend,,libssh.c:275,0,0
+3751715,invalid,8.20.0,bounds,Buffer Over-read,curl_msnprintf,mprintf.c,reachable,34,,6,1
+3751715,invalid,8.20.0,bounds,Buffer Over-read,curl_url_get,urlapi.c,reachable,34,urlapi.c:1241|urlapi.c:1527,6,1
+3751715,invalid,8.20.0,bounds,Buffer Over-read,curl_url_set,urlapi.c,reachable,34,urlapi.c:1241|urlapi.c:1527,6,1
+3751715,invalid,8.20.0,bounds,Buffer Over-read,redirect_url,urlapi.c,reachable,34,urlapi.c:1241|urlapi.c:1527,6,1
+3751715,invalid,8.20.0,bounds,Buffer Over-read,set_url,urlapi.c,reachable,34,urlapi.c:1241|urlapi.c:1527,6,1
+3751715,invalid,8.20.0,bounds,Buffer Over-read,urlget_url,urlapi.c,reachable,34,urlapi.c:1241|urlapi.c:1527,6,1
+3752567,invalid,8.20.0,logic,Improper Certificate Validation,,,gated_backend,2|509,,0,0
+3752888,genuine,8.20.0,logic,Improper Certificate Validation,Curl_bufq_write,bufq.c,reachable,,,1,1
+3754343,genuine,8.20.0,uaf,Use After Free,Curl_pretransfer,transfer.c,reachable,2|4096,,3,1
+3754343,genuine,8.20.0,uaf,Use After Free,curl_easy_perform,easy.c,reachable,2|4096,,3,1
+3754343,genuine,8.20.0,uaf,Use After Free,curl_easy_setopt,setopt.c,reachable,2|4096,,3,1
+3756699,invalid,8.20.0,logic,Insufficiently Protected Credentials,,,gated_backend,,openldap.c:649|ldap.c:316|ldap.c:197|MANUAL.md:819|CREDENTIALS.md:46,0,0
+3761647,invalid,8.20.0,logic,Insufficiently Protected Credentials,match_ssl_primary_config,vtls.c,reachable,,vtls.c:194,1,1
+3761789,invalid,8.20.0,other,Forced Browsing,curl_url_get,urlapi.c,reachable,,,2,1
+3761789,invalid,8.20.0,other,Forced Browsing,set_url,urlapi.c,reachable,,,2,1
+3766065,invalid,8.20.0,logic,Information Disclosure,Curl_auth_allowed_to_host,vauth.c,reachable,,,3,1
+3766065,invalid,8.20.0,logic,Information Disclosure,Curl_checkheaders,transfer.c,reachable,,,3,1
+3766065,invalid,8.20.0,logic,Information Disclosure,http_cookies,http.c,reachable,,http.c:2532|http.c:1832|http.c:1832|http.c:2532|http.c:1832,3,1
+3766392,invalid,8.20.0,other,External Control of File Name or Path,add_url,tool_getparam.c,reachable,,,5,1
+3766392,invalid,8.20.0,other,External Control of File Name or Path,curlx_dyn_ptr,dynbuf.c,reachable,,,5,1
+3766392,invalid,8.20.0,other,External Control of File Name or Path,my_get_line,tool_parsecfg.c,reachable,,,5,1
+3766392,invalid,8.20.0,other,External Control of File Name or Path,parse_url,tool_getparam.c,reachable,,,5,1
+3766392,invalid,8.20.0,other,External Control of File Name or Path,tool_create_output_file,tool_cb_wrt.c,reachable,,,5,1
+3767963,invalid,8.20.0,logic,Business Logic Errors,single_header,cf-h1-proxy.c,reachable,,,1,1
+3769293,invalid,8.20.0,logic,Information Exposure Through Sent Data,Curl_llist_head,llist.c,reachable,115,,4,1
+3769293,invalid,8.20.0,logic,Information Exposure Through Sent Data,Curl_node_elem,llist.c,reachable,115,,4,1
+3769293,invalid,8.20.0,logic,Information Exposure Through Sent Data,Curl_node_next,llist.c,reachable,115,,4,1
+3769293,invalid,8.20.0,logic,Information Exposure Through Sent Data,curl_easy_duphandle,easy.c,reachable,115,,4,1
+3770979,invalid,8.20.0,logic,Cleartext Transmission of Sensitive Information,url_match_conn,url.c,reachable,2,,3,1
+3770979,invalid,8.20.0,logic,Cleartext Transmission of Sensitive Information,url_match_destination,url.c,reachable,2,,3,1
+3770979,invalid,8.20.0,logic,Cleartext Transmission of Sensitive Information,url_match_ssl_use,url.c,reachable,2,,3,1
+3773293,invalid,8.20.0,logic,,,,no_target,,,0,0
+3774279,invalid,8.20.0,uaf,Use After Free,Curl_bufref_memdup0,bufref.c,reachable,,,9,1
+3774279,invalid,8.20.0,uaf,Use After Free,Curl_bufref_set,bufref.c,reachable,,,9,1
+3774279,invalid,8.20.0,uaf,Use After Free,Curl_pretransfer,transfer.c,reachable,,transfer.c:511|transfer.c:511|transfer.c:512,9,1
+3774279,invalid,8.20.0,uaf,Use After Free,Curl_setstropt,setopt.c,reachable,,setopt.c:87|setopt.c:2027|setopt.c:87|setopt.c:2027|setopt.c:93|setopt.c:2202|setopt.c:2027,9,1
+3774279,invalid,8.20.0,uaf,Use After Free,curl_easy_cleanup,easy.c,reachable,,easy.c:1022|easy.c:1024,9,1
+3774279,invalid,8.20.0,uaf,Use After Free,curl_easy_duphandle,easy.c,reachable,,easy.c:1022|easy.c:1024,9,1
+3774279,invalid,8.20.0,uaf,Use After Free,curl_easy_getinfo,easy.c,reachable,,easy.c:1022|easy.c:1024,9,1
+3774279,invalid,8.20.0,uaf,Use After Free,curl_easy_perform,easy.c,reachable,,easy.c:1022|easy.c:1024,9,1
+3774279,invalid,8.20.0,uaf,Use After Free,curl_easy_setopt,setopt.c,reachable,,setopt.c:87|setopt.c:2027|setopt.c:87|setopt.c:2027|setopt.c:93|setopt.c:2202|setopt.c:2027,9,1
+3774977,invalid,8.20.0,logic,,,,no_target,,,0,0
+3776433,invalid,8.20.0,logic,Information Exposure Through Sent Data,Curl_client_read,sendf.c,reachable,15|30|50|512,,7,1
+3776433,invalid,8.20.0,logic,Information Exposure Through Sent Data,Curl_creader_resume_from,sendf.c,reachable,15|30|50|512,,7,1
+3776433,invalid,8.20.0,logic,Information Exposure Through Sent Data,Curl_pgrsSetUploadSize,progress.c,reachable,15|30|50|512,,7,1
+3776433,invalid,8.20.0,logic,Information Exposure Through Sent Data,curl_msnprintf,mprintf.c,reachable,15|30|50|512,,7,1
+3776433,invalid,8.20.0,logic,Information Exposure Through Sent Data,setup_range,url.c,reachable,15|30|50|512,,7,1
+3776433,invalid,8.20.0,logic,Information Exposure Through Sent Data,tftp_send_first,tftp.c,reachable,15|30|50|512,,7,1
+3776433,invalid,8.20.0,logic,Information Exposure Through Sent Data,tftp_tx,tftp.c,reachable,15|30|50|512,,7,1
+3776535,invalid,8.20.0,logic,Information Exposure Through Sent Data,Curl_auth_digest_cleanup,digest.c,reachable,3|128|200|256|401|2048|8192,,6,1
+3776535,invalid,8.20.0,logic,Information Exposure Through Sent Data,Curl_http_output_auth,http.c,reachable,3|128|200|256|401|2048|8192,,6,1
+3776535,invalid,8.20.0,logic,Information Exposure Through Sent Data,Curl_url_same_origin,urlapi.c,reachable,3|128|200|256|401|2048|8192,,6,1
+3776535,invalid,8.20.0,logic,Information Exposure Through Sent Data,curl_easy_setopt,setopt.c,reachable,3|128|200|256|401|2048|8192,,6,1
+3776535,invalid,8.20.0,logic,Information Exposure Through Sent Data,curl_maprintf,mprintf.c,reachable,3|128|200|256|401|2048|8192,,6,1
+3776535,invalid,8.20.0,logic,Information Exposure Through Sent Data,easy_perform,easy.c,reachable,3|128|200|256|401|2048|8192,,6,1
+3777381,invalid,8.20.0,logic,Information Disclosure,Curl_setstropt,setopt.c,reachable,,setopt.c:1639|setopt.c:1646|setopt.c:1745|setopt.c:1746|setopt.c:1753,2,1
+3777381,invalid,8.20.0,logic,Information Disclosure,setproxy,setopt.c,reachable,,setopt.c:1639|setopt.c:1646|setopt.c:1745|setopt.c:1746|setopt.c:1753,2,1
+3780733,invalid,8.20.0,other,Use of Incorrectly-Resolved Name or Reference,,,no_target,,,0,0
+3781305,invalid,8.20.0,logic,Improper Validation of Certificate Expiration,,,gated_backend,15|30|2048,,0,0
+3783438,genuine,8.20.0,other,Uncontrolled Resource Consumption,,,gated_backend,2|3|1000,,0,0
+3784125,invalid,8.20.0,logic,Improper Certificate Validation,,,gated_backend,,,0,0
+3785919,invalid,8.20.0,logic,HTTP Response Splitting,,,reachable,4457,http.c:4457,0,0
+3786077,invalid,8.20.0,logic,Improper Authentication - Generic,,,no_target,,,0,0
+3788506,invalid,8.20.0,logic,Authentication Bypass by Primary Weakness,Curl_setstropt,setopt.c,reachable,,,8,1
+3788506,invalid,8.20.0,logic,Authentication Bypass by Primary Weakness,curl_easy_setopt,setopt.c,reachable,,,8,1
+3788506,invalid,8.20.0,logic,Authentication Bypass by Primary Weakness,curl_share_init,curl_share.c,reachable,,,8,1
+3788506,invalid,8.20.0,logic,Authentication Bypass by Primary Weakness,curl_share_setopt,curl_share.c,reachable,,,8,1
+3788506,invalid,8.20.0,logic,Authentication Bypass by Primary Weakness,curlx_uztoui,warnless.c,reachable,,,8,1
+3788506,invalid,8.20.0,logic,Authentication Bypass by Primary Weakness,ftp_conns_match,ftp.c,reachable,,,8,1
+3788506,invalid,8.20.0,logic,Authentication Bypass by Primary Weakness,get_protocol_family,url.c,reachable,,,8,1
+3788506,invalid,8.20.0,logic,Authentication Bypass by Primary Weakness,url_match_http_version,url.c,reachable,,,8,1
+3788931,genuine,8.20.0,other,Allocation of Resources Without Limits or Throttling,Curl_bufq_init2,bufq.c,reachable,,,5,1
+3788931,genuine,8.20.0,other,Allocation of Resources Without Limits or Throttling,Curl_is_in_callback,multi.c,reachable,,,5,1
+3788931,genuine,8.20.0,other,Allocation of Resources Without Limits or Throttling,ws_enc_add_cntrl,ws.c,reachable,,,5,1
+3788931,genuine,8.20.0,other,Allocation of Resources Without Limits or Throttling,ws_enc_add_pending,ws.c,reachable,,,5,1
+3788931,genuine,8.20.0,other,Allocation of Resources Without Limits or Throttling,ws_flush,ws.c,reachable,,,5,1
+3788984,genuine,8.20.0,other,,Curl_setblobopt,setopt.c,reachable,,,5,1
+3788984,genuine,8.20.0,other,,Curl_setstropt,setopt.c,reachable,,,5,1
+3788984,genuine,8.20.0,other,,Curl_ssl_easy_config_complete,vtls.c,reachable,,,5,1
+3788984,genuine,8.20.0,other,,curl_easy_perform,easy.c,reachable,,,5,1
+3788984,genuine,8.20.0,other,,curl_easy_setopt,setopt.c,reachable,,,5,1
+3791168,invalid,8.20.0,other,Server-Side Request Forgery (SSRF),,,no_target,,,0,0
+3791191,invalid,8.20.0,reachability,Improper Authentication - Generic,Curl_ssl_easy_config_complete,vtls.c,reachable,,,2,1
+3791191,invalid,8.20.0,reachability,Improper Authentication - Generic,curl_strequal,strequal.c,reachable,,,2,1
+3793260,genuine,8.20.0,logic,Information Exposure Through Sent Data,Curl_pretransfer,transfer.c,reachable,,,3,1
+3793260,genuine,8.20.0,logic,Information Exposure Through Sent Data,curl_easy_perform,easy.c,reachable,,,3,1
+3793260,genuine,8.20.0,logic,Information Exposure Through Sent Data,curl_easy_reset,easy.c,reachable,,,3,1
+3793495,invalid,8.20.0,logic,HTTP Request Smuggling,http_add_content_hds,http.c,reachable,,,2,1
+3793495,invalid,8.20.0,logic,HTTP Request Smuggling,http_req_set_TE,http.c,reachable,,,2,1
+3795615,invalid,8.20.0,logic,HTTP Request Smuggling,Curl_build_unencoding_stack,content_encoding.c,reachable,,,4,1
+3795615,invalid,8.20.0,logic,HTTP Request Smuggling,Curl_cwriter_get_by_name,sendf.c,reachable,,,4,1
+3795615,invalid,8.20.0,logic,HTTP Request Smuggling,Curl_cwriter_get_by_type,sendf.c,reachable,,,4,1
+3795615,invalid,8.20.0,logic,HTTP Request Smuggling,find_unencode_writer,content_encoding.c,reachable,,,4,1
+3797526,genuine,8.20.0,logic,Improper Certificate Validation,url_proto_and_rewrite,config2setopts.c,reachable,,config2setopts.c:190,1,1
+3802645,invalid,8.20.0,other,Reliance on Untrusted Inputs in a Security Decision,,,no_target,,,0,0
+3803415,invalid,8.20.0,logic,Information Disclosure,Curl_conn_is_ssl,cfilters.c,reachable,,cfilters.c:693,4,1
+3803415,invalid,8.20.0,logic,Information Disclosure,Curl_cookie_getlist,cookie.c,reachable,,cookie.c:1273|cookie.c:1300,4,1
+3803415,invalid,8.20.0,logic,Information Disclosure,Curl_secure_context,cookie.c,reachable,,cookie.c:1273|cookie.c:1300,4,1
+3803415,invalid,8.20.0,logic,Information Disclosure,Curl_xfer_is_secure,transfer.c,reachable,,,4,1
+3804525,invalid,8.20.0,bounds,,,,unreachable,96|99|100,,0,0
+3822248,genuine,8.21.0,logic,Authentication Bypass by Primary Weakness,Curl_sasl_continue,curl_sasl.c,reachable,10,curl_sasl.c:519|curl_sasl.c:773,2,1
+3822248,genuine,8.21.0,logic,Authentication Bypass by Primary Weakness,Curl_sasl_start,curl_sasl.c,reachable,10,curl_sasl.c:519|curl_sasl.c:773,2,1
+3823932,invalid,8.21.0,logic,CRLF Injection,Curl_is_ipv4addr,curl_addrinfo.c,reachable,,,7,1
+3823932,invalid,8.21.0,logic,CRLF Injection,Curl_setstropt,setopt.c,reachable,,,7,1
+3823932,invalid,8.21.0,logic,CRLF Injection,curl_easy_cleanup,easy.c,reachable,,,7,1
+3823932,invalid,8.21.0,logic,CRLF Injection,curl_easy_init,easy.c,reachable,,,7,1
+3823932,invalid,8.21.0,logic,CRLF Injection,curl_easy_perform,easy.c,reachable,,,7,1
+3823932,invalid,8.21.0,logic,CRLF Injection,curl_easy_setopt,setopt.c,reachable,,,7,1
+3823932,invalid,8.21.0,logic,CRLF Injection,curlx_dyn_addf,dynbuf.c,reachable,,,7,1
+3823985,invalid,8.21.0,uaf,Use After Free,Curl_hash_delete,hash.c,reachable,80,hash.c:225,11,1
+3823985,invalid,8.21.0,uaf,Use After Free,Curl_is_in_callback,multi.c,reachable,80,multi.c:3302,11,1
+3823985,invalid,8.21.0,uaf,Use After Free,Curl_multi_ev_socket_done,multi_ev.c,reachable,80,multi_ev.c:216|multi_ev.c:618|multi_ev.c:293|multi_ev.c:216|multi_ev.c:135|multi_ev.c:219|multi_ev.c:439|multi_ev.c:531|multi_ev.c:423|multi_ev.c:216|multi_ev.c:618|multi_ev.c:216|multi_ev.c:216|multi,11,1
+3823985,invalid,8.21.0,uaf,Use After Free,curl_easy_pause,easy.c,reachable,80,easy.c:1147,11,1
+3823985,invalid,8.21.0,uaf,Use After Free,curl_multi_socket_action,multi.c,reachable,80,multi.c:3302,11,1
+3823985,invalid,8.21.0,uaf,Use After Free,mev_assess,multi_ev.c,reachable,80,multi_ev.c:216|multi_ev.c:618|multi_ev.c:293|multi_ev.c:216|multi_ev.c:135|multi_ev.c:219|multi_ev.c:439|multi_ev.c:531|multi_ev.c:423|multi_ev.c:216|multi_ev.c:618|multi_ev.c:216|multi_ev.c:216|multi,11,1
+3823985,invalid,8.21.0,uaf,Use After Free,mev_in_callback,multi_ev.c,reachable,80,multi_ev.c:216|multi_ev.c:618|multi_ev.c:293|multi_ev.c:216|multi_ev.c:135|multi_ev.c:219|multi_ev.c:439|multi_ev.c:531|multi_ev.c:423|multi_ev.c:216|multi_ev.c:618|multi_ev.c:216|multi_ev.c:216|multi,11,1
+3823985,invalid,8.21.0,uaf,Use After Free,mev_pollset_diff,multi_ev.c,reachable,80,multi_ev.c:216|multi_ev.c:618|multi_ev.c:293|multi_ev.c:216|multi_ev.c:135|multi_ev.c:219|multi_ev.c:439|multi_ev.c:531|multi_ev.c:423|multi_ev.c:216|multi_ev.c:618|multi_ev.c:216|multi_ev.c:216|multi,11,1
+3823985,invalid,8.21.0,uaf,Use After Free,mev_sh_entry_get,multi_ev.c,reachable,80,multi_ev.c:216|multi_ev.c:618|multi_ev.c:293|multi_ev.c:216|multi_ev.c:135|multi_ev.c:219|multi_ev.c:439|multi_ev.c:531|multi_ev.c:423|multi_ev.c:216|multi_ev.c:618|multi_ev.c:216|multi_ev.c:216|multi,11,1
+3823985,invalid,8.21.0,uaf,Use After Free,mev_sh_entry_kill,multi_ev.c,reachable,80,multi_ev.c:216|multi_ev.c:618|multi_ev.c:293|multi_ev.c:216|multi_ev.c:135|multi_ev.c:219|multi_ev.c:439|multi_ev.c:531|multi_ev.c:423|multi_ev.c:216|multi_ev.c:618|multi_ev.c:216|multi_ev.c:216|multi,11,1
+3823985,invalid,8.21.0,uaf,Use After Free,mev_sh_entry_update,multi_ev.c,reachable,80,multi_ev.c:216|multi_ev.c:618|multi_ev.c:293|multi_ev.c:216|multi_ev.c:135|multi_ev.c:219|multi_ev.c:439|multi_ev.c:531|multi_ev.c:423|multi_ev.c:216|multi_ev.c:618|multi_ev.c:216|multi_ev.c:216|multi,11,1
+3824303,invalid,8.21.0,uaf,Use After Free,Curl_uint32_spbset_count,uint-spbset.c,reachable,,,7,1
+3824303,invalid,8.21.0,uaf,Use After Free,curl_easy_pause,easy.c,reachable,,,7,1
+3824303,invalid,8.21.0,uaf,Use After Free,curl_multi_socket_action,multi.c,reachable,,,7,1
+3824303,invalid,8.21.0,uaf,Use After Free,mev_assess,multi_ev.c,reachable,,multi_ev.c:435|multi_ev.c:435,7,1
+3824303,invalid,8.21.0,uaf,Use After Free,mev_pollset_diff,multi_ev.c,reachable,,multi_ev.c:435|multi_ev.c:435,7,1
+3824303,invalid,8.21.0,uaf,Use After Free,mev_sh_entry_get,multi_ev.c,reachable,,multi_ev.c:435|multi_ev.c:435,7,1
+3824303,invalid,8.21.0,uaf,Use After Free,mev_sh_entry_update,multi_ev.c,reachable,,multi_ev.c:435|multi_ev.c:435,7,1
+3826199,invalid,8.21.0,logic,Improper Validation of Certificate with Host Mismatch,,,gated_backend,,CURLOPT_SSL_VERIFYPEER.md:57|CURLOPT_SSL_VERIFYPEER.md:1048|CURLOPT_SSL_VERIFYPEER.md:389,0,0
+3826843,invalid,8.21.0,logic,Authentication Bypass by Primary Weakness,Curl_safecmp,strcase.c,reachable,,,1,1
+3831345,invalid,8.21.0,uaf,Use After Free,curl_easy_perform,easy.c,reachable,128,easy.c:820,3,1
+3831345,invalid,8.21.0,uaf,Use After Free,curl_share_setopt,curl_share.c,reachable,128,curl_share.c:312|curl_share.c:253|curl_share.c:160|curl_share.c:204|curl_share.c:312|curl_share.c:433,3,1
+3831345,invalid,8.21.0,uaf,Use After Free,share_in_use,curl_share.c,reachable,128,curl_share.c:312|curl_share.c:253|curl_share.c:160|curl_share.c:204|curl_share.c:312|curl_share.c:433,3,1
+3831432,invalid,8.21.0,logic,,Curl_ssl_conn_config_update,vtls_config.c,reachable,,vtls_config.c:406,3,1
+3831432,invalid,8.21.0,logic,,curl_easy_setopt,setopt.c,reachable,,setopt.c:2930,3,1
+3831432,invalid,8.21.0,logic,,match_ssl_primary_config,vtls_config.c,reachable,,vtls_config.c:406,3,1
+3832393,invalid,8.21.0,uaf,,curl_multi_cleanup,multi.c,reachable,,,7,1
+3832393,invalid,8.21.0,uaf,,curl_multi_perform,multi.c,reachable,,,7,1
+3832393,invalid,8.21.0,uaf,,curl_multi_remove_handle,multi.c,reachable,,,7,1
+3832393,invalid,8.21.0,uaf,,curl_multi_socket_action,multi.c,reachable,,,7,1
+3832393,invalid,8.21.0,uaf,,curlx_ptimediff_ms,timeval.c,reachable,,,7,1
+3832393,invalid,8.21.0,uaf,,ftp_statemach,ftp.c,reachable,,,7,1
+3832393,invalid,8.21.0,uaf,,telnet_do,telnet.c,reachable,,,7,1
+3833577,invalid,8.21.0,uaf,Use After Free,Curl_close,url.c,reachable,256|4096,url.c:214|url.c:309|url.c:214|url.c:214,6,1
+3833577,invalid,8.21.0,uaf,Use After Free,Curl_set_in_callback,multi.c,reachable,256|4096,multi.c:818,6,1
+3833577,invalid,8.21.0,uaf,Use After Free,curl_easy_cleanup,easy.c,reachable,256|4096,,6,1
+3833577,invalid,8.21.0,uaf,Use After Free,curl_multi_remove_handle,multi.c,reachable,256|4096,multi.c:818,6,1
+3833577,invalid,8.21.0,uaf,Use After Free,cw_out_cb_write,cw-out.c,reachable,256|4096,cw-out.c:191,6,1
+3833577,invalid,8.21.0,uaf,Use After Free,multi_runsingle,multi.c,reachable,256|4096,multi.c:818,6,1
+3911605,invalid,8.21.0,logic,CRLF Injection,,,no_target,,,0,0
+3911968,invalid,8.21.0,uaf,Use After Free,Curl_multi_ev_assess_xfer,multi_ev.c,reachable,,multi_ev.c:213,10,1
+3911968,invalid,8.21.0,uaf,Use After Free,Curl_multi_ev_socket_done,multi_ev.c,reachable,,multi_ev.c:213,10,1
+3911968,invalid,8.21.0,uaf,Use After Free,curl_easy_pause,easy.c,reachable,,,10,1
+3911968,invalid,8.21.0,uaf,Use After Free,curl_multi_socket_action,multi.c,reachable,,,10,1
+3911968,invalid,8.21.0,uaf,Use After Free,mev_forget_socket,multi_ev.c,reachable,,multi_ev.c:213,10,1
+3911968,invalid,8.21.0,uaf,Use After Free,mev_in_callback,multi_ev.c,reachable,,multi_ev.c:213,10,1
+3911968,invalid,8.21.0,uaf,Use After Free,mev_pollset_diff,multi_ev.c,reachable,,multi_ev.c:213,10,1
+3911968,invalid,8.21.0,uaf,Use After Free,mev_sh_entry_get,multi_ev.c,reachable,,multi_ev.c:213,10,1
+3911968,invalid,8.21.0,uaf,Use After Free,mev_sh_entry_kill,multi_ev.c,reachable,,multi_ev.c:213,10,1
+3911968,invalid,8.21.0,uaf,Use After Free,mev_sh_entry_update,multi_ev.c,reachable,,multi_ev.c:213,10,1
+3916059,genuine,8.21.0,uaf,Use After Free,Curl_attach_connection,multi.c,reachable,776|832,multi.c:750|multi.c:1848|multi.c:2757|multi.c:2888,23,1
+3916059,genuine,8.21.0,uaf,Use After Free,Curl_conn_terminate,conncache.c,reachable,776|832,conncache.c:256|conncache.c:179|conncache.c:142|conncache.c:242|conncache.c:226|conncache.c:692|conncache.c:833|conncache.c:256|conncache.c:169,23,1
+3916059,genuine,8.21.0,uaf,Use After Free,Curl_cpool_destroy,conncache.c,reachable,776|832,conncache.c:256|conncache.c:179|conncache.c:142|conncache.c:242|conncache.c:226|conncache.c:692|conncache.c:833|conncache.c:256|conncache.c:169,23,1
+3916059,genuine,8.21.0,uaf,Use After Free,Curl_cpool_do_locked,conncache.c,reachable,776|832,conncache.c:256|conncache.c:179|conncache.c:142|conncache.c:242|conncache.c:226|conncache.c:692|conncache.c:833|conncache.c:256|conncache.c:169,23,1
+3916059,genuine,8.21.0,uaf,Use After Free,Curl_cshutdn_terminate,cshutdn.c,reachable,776|832,cshutdn.c:159|cshutdn.c:159,23,1
+3916059,genuine,8.21.0,uaf,Use After Free,Curl_multi_add_perform,multi.c,reachable,776|832,multi.c:750|multi.c:1848|multi.c:2757|multi.c:2888,23,1
+3916059,genuine,8.21.0,uaf,Use After Free,Curl_node_elem,llist.c,reachable,776|832,llist.c:237|llist.c:36|llist.c:237|llist.c:269,23,1
+3916059,genuine,8.21.0,uaf,Use After Free,Curl_node_llist,llist.c,reachable,776|832,llist.c:237|llist.c:36|llist.c:237|llist.c:269,23,1
+3916059,genuine,8.21.0,uaf,Use After Free,allocate_conn,url.c,reachable,776|832,url.c:1182|url.c:2010|url.c:2250|url.c:2456|url.c:1182,23,1
+3916059,genuine,8.21.0,uaf,Use After Free,cpool_discard_conn,conncache.c,reachable,776|832,conncache.c:256|conncache.c:179|conncache.c:142|conncache.c:242|conncache.c:226|conncache.c:692|conncache.c:833|conncache.c:256|conncache.c:169,23,1
+3916059,genuine,8.21.0,uaf,Use After Free,cpool_get_first,conncache.c,reachable,776|832,conncache.c:256|conncache.c:179|conncache.c:142|conncache.c:242|conncache.c:226|conncache.c:692|conncache.c:833|conncache.c:256|conncache.c:169,23,1
+3916059,genuine,8.21.0,uaf,Use After Free,cpool_get_instance,conncache.c,reachable,776|832,conncache.c:256|conncache.c:179|conncache.c:142|conncache.c:242|conncache.c:226|conncache.c:692|conncache.c:833|conncache.c:256|conncache.c:169,23,1
+3916059,genuine,8.21.0,uaf,Use After Free,cpool_remove_conn,conncache.c,reachable,776|832,conncache.c:256|conncache.c:179|conncache.c:142|conncache.c:242|conncache.c:226|conncache.c:692|conncache.c:833|conncache.c:256|conncache.c:169,23,1
+3916059,genuine,8.21.0,uaf,Use After Free,curl_easy_duphandle,easy.c,reachable,776|832,easy.c:970,23,1
+3916059,genuine,8.21.0,uaf,Use After Free,curl_easy_setopt,setopt.c,reachable,776|832,,23,1
+3916059,genuine,8.21.0,uaf,Use After Free,curl_multi_remove_handle,multi.c,reachable,776|832,multi.c:750|multi.c:1848|multi.c:2757|multi.c:2888,23,1
+3916059,genuine,8.21.0,uaf,Use After Free,curl_multi_setopt,multi.c,reachable,776|832,multi.c:750|multi.c:1848|multi.c:2757|multi.c:2888,23,1
+3916059,genuine,8.21.0,uaf,Use After Free,curl_share_cleanup,curl_share.c,reachable,776|832,curl_share.c:41|curl_share.c:370,23,1
+3916059,genuine,8.21.0,uaf,Use After Free,curl_share_init,curl_share.c,reachable,776|832,curl_share.c:41|curl_share.c:370,23,1
+3916059,genuine,8.21.0,uaf,Use After Free,curl_share_setopt,curl_share.c,reachable,776|832,curl_share.c:41|curl_share.c:370,23,1
+3916059,genuine,8.21.0,uaf,Use After Free,multi_done,multi.c,reachable,776|832,multi.c:750|multi.c:1848|multi.c:2757|multi.c:2888,23,1
+3916059,genuine,8.21.0,uaf,Use After Free,share_destroy,curl_share.c,reachable,776|832,curl_share.c:41|curl_share.c:370,23,1
+3916059,genuine,8.21.0,uaf,Use After Free,verifynode,llist.c,reachable,776|832,llist.c:237|llist.c:36|llist.c:237|llist.c:269,23,1
+3917775,invalid,8.21.0,other,Man-in-the-Middle,Curl_ws_accept,ws.c,reachable,,ws.c:1418|ws.c:1375,1,1
+3920276,invalid,8.21.0,other,Information Exposure Through Sent Data,cookie_load,cookie.c,reachable,,cookie.c:815|cookie.c:1179,2,1
+3920276,invalid,8.21.0,other,Information Exposure Through Sent Data,is_public_suffix,cookie.c,reachable,,cookie.c:815|cookie.c:1179,2,1
+3923212,invalid,8.21.0,other,Use of Incorrectly-Resolved Name or Reference,curl_url_get,urlapi.c,reachable,,,1,1
+3923520,genuine,8.21.0,logic,Authentication Bypass by Primary Weakness,Curl_creds_same,creds.c,reachable,,,2,1
+3923520,genuine,8.21.0,logic,Authentication Bypass by Primary Weakness,Curl_peer_equal,peer.c,reachable,,,2,1
+3938185,invalid,8.21.0,logic,Authentication Bypass by Spoofing,Curl_attach_connection,multi.c,reachable,,,3,1
+3938185,invalid,8.21.0,logic,Authentication Bypass by Spoofing,Curl_cpool_prune_dead,conncache.c,reachable,,,3,1
+3938185,invalid,8.21.0,logic,Authentication Bypass by Spoofing,Curl_detach_connection,multi.c,reachable,,,3,1
+3938190,invalid,8.21.0,logic,Authentication Bypass by Spoofing,Curl_attach_connection,multi.c,reachable,,,3,1
+3938190,invalid,8.21.0,logic,Authentication Bypass by Spoofing,Curl_cpool_prune_dead,conncache.c,reachable,,,3,1
+3938190,invalid,8.21.0,logic,Authentication Bypass by Spoofing,Curl_detach_connection,multi.c,reachable,,,3,1
+3938220,invalid,8.21.0,integer,Time-of-check Time-of-use (TOCTOU) Race Condition,Curl_fopen,curl_fopen.c,reachable,,,1,1
+3952619,invalid,8.21.0,logic,Information Exposure Through Sent Data,Curl_cookie_getlist,cookie.c,reachable,,cookie.c:1340|cookie.c:216,2,1
+3952619,invalid,8.21.0,logic,Information Exposure Through Sent Data,cookiehash,cookie.c,reachable,,cookie.c:1340|cookie.c:216,2,1
+3955945,invalid,8.21.0,logic,Time-of-check Time-of-use (TOCTOU) Race Condition,Curl_cookie_cleanup,cookie.c,reachable,32|63|64|512|2016|2040,,6,1
+3955945,invalid,8.21.0,logic,Time-of-check Time-of-use (TOCTOU) Race Condition,Curl_share_easy_link,curl_share.c,reachable,32|63|64|512|2016|2040,curl_share.c:163,6,1
+3955945,invalid,8.21.0,logic,Time-of-check Time-of-use (TOCTOU) Race Condition,Curl_share_lock,curl_share.c,reachable,32|63|64|512|2016|2040,curl_share.c:163,6,1
+3955945,invalid,8.21.0,logic,Time-of-check Time-of-use (TOCTOU) Race Condition,Curl_share_unlock,curl_share.c,reachable,32|63|64|512|2016|2040,curl_share.c:163,6,1
+3955945,invalid,8.21.0,logic,Time-of-check Time-of-use (TOCTOU) Race Condition,curl_easy_perform,easy.c,reachable,32|63|64|512|2016|2040,,6,1
+3955945,invalid,8.21.0,logic,Time-of-check Time-of-use (TOCTOU) Race Condition,curl_easy_setopt,setopt.c,reachable,32|63|64|512|2016|2040,,6,1
+3963330,invalid,8.21.0,logic,Incorrect Authorization,Curl_checkProxyheaders,http.c,reachable,,http.c:707|http.c:716|http.c:116|http.c:84|http.c:727|http.c:751|http.c:688,4,1
+3963330,invalid,8.21.0,logic,Incorrect Authorization,Curl_checkheaders,transfer.c,reachable,,,4,1
+3963330,invalid,8.21.0,logic,Incorrect Authorization,Curl_output_digest,http_digest.c,reachable,,,4,1
+3963330,invalid,8.21.0,logic,Incorrect Authorization,output_auth_headers,http.c,reachable,,http.c:707|http.c:716|http.c:116|http.c:84|http.c:727|http.c:751|http.c:688,4,1
+3963494,invalid,8.21.0,other,CRLF Injection,curl_easy_perform,easy.c,reachable,,,5,1
+3963494,invalid,8.21.0,other,CRLF Injection,curl_easy_setopt,setopt.c,reachable,,,5,1
+3963494,invalid,8.21.0,other,CRLF Injection,curl_maprintf,mprintf.c,reachable,,,5,1
+3963494,invalid,8.21.0,other,CRLF Injection,curlx_dyn_addf,dynbuf.c,reachable,,,5,1
+3963494,invalid,8.21.0,other,CRLF Injection,rtsp_do,rtsp.c,reachable,,,5,1
+3963725,invalid,8.21.0,logic,Improper Validation of Certificate with Host Mismatch,curl_easy_perform,easy.c,reachable,,,1,1
+3966955,invalid,8.21.0,logic,Improper Certificate Validation,curl_strequal,strequal.c,reachable,,,1,1
+3968431,invalid,8.21.0,other,Information Disclosure,getparameter,tool_getparam.c,reachable,,tool_getparam.c:632|tool_getparam.c:3115|tool_getparam.c:3090,2,1
+3968431,invalid,8.21.0,other,Information Disclosure,parse_args,tool_getparam.c,reachable,,tool_getparam.c:632|tool_getparam.c:3115|tool_getparam.c:3090,2,1
+3968729,invalid,8.21.0,logic,,Curl_auth_digest_cleanup,digest.c,reachable,,,7,1
+3968729,invalid,8.21.0,logic,,Curl_input_digest,http_digest.c,reachable,,,7,1
+3968729,invalid,8.21.0,logic,,Curl_output_digest,http_digest.c,reachable,,,7,1
+3968729,invalid,8.21.0,logic,,Curl_pretransfer,transfer.c,reachable,,,7,1
+3968729,invalid,8.21.0,logic,,auth_digest,http.c,reachable,,,7,1
+3968729,invalid,8.21.0,logic,,curl_easy_reset,easy.c,reachable,,,7,1
+3968729,invalid,8.21.0,logic,,digest_flush_stale,http_digest.c,reachable,,,7,1
+3968853,invalid,8.21.0,logic,,Curl_setstropt,setopt.c,reachable,,setopt.c:1962,7,1
+3968853,invalid,8.21.0,logic,,Curl_ssl_conn_config_match,vtls_config.c,reachable,,vtls_config.c:170|vtls_config.c:136|vtls_config.c:185,7,1
+3968853,invalid,8.21.0,logic,,clone_ssl_primary_config,vtls_config.c,reachable,,vtls_config.c:170|vtls_config.c:136|vtls_config.c:185,7,1
+3968853,invalid,8.21.0,logic,,curl_easy_setopt,setopt.c,reachable,,setopt.c:1962,7,1
+3968853,invalid,8.21.0,logic,,match_ssl_primary_config,vtls_config.c,reachable,,vtls_config.c:170|vtls_config.c:136|vtls_config.c:185,7,1
+3968853,invalid,8.21.0,logic,,url_match_conn,url.c,reachable,,url.c:1047|url.c:883,7,1
+3968853,invalid,8.21.0,logic,,url_match_ssl_config,url.c,reachable,,url.c:1047|url.c:883,7,1
+3969255,genuine,8.21.0,uaf,,Curl_ssl_conn_config_match,vtls_config.c,reachable,,,5,1
+3969255,genuine,8.21.0,uaf,,curl_easy_cleanup,easy.c,reachable,,,5,1
+3969255,genuine,8.21.0,uaf,,curl_easy_setopt,setopt.c,reachable,,,5,1
+3969255,genuine,8.21.0,uaf,,curl_multi_remove_handle,multi.c,reachable,,,5,1
+3969255,genuine,8.21.0,uaf,,match_ssl_primary_config,vtls_config.c,reachable,,,5,1
+3969300,genuine,8.21.0,logic,,,,gated_backend,,,0,0
+3969368,genuine,8.21.0,logic,,Curl_ssl_conn_config_match,vtls_config.c,reachable,,,3,1
+3969368,genuine,8.21.0,logic,,Curl_ssl_easy_config_complete,vtls_config.c,reachable,,,3,1
+3969368,genuine,8.21.0,logic,,match_ssl_primary_config,vtls_config.c,reachable,,,3,1
+3969820,resolved,8.21.0,logic,Path Traversal: '.../...//',,,non_product,,wcurl:198,0,0
+3970639,invalid,8.21.0,integer,,save_etag,tool_cb_hdr.c,reachable,,tool_cb_hdr.c:267|tool_cb_hdr.c:267,1,1
+3970650,invalid,8.21.0,other,,proto2num,tool_paramhlp.c,reachable,,tool_paramhlp.c:431|tool_paramhlp.c:431|tool_paramhlp.c:466,2,1
+3970650,invalid,8.21.0,other,,proto_token,tool_libinfo.c,reachable,,,2,1
+3971462,invalid,8.21.0,uaf,,Curl_bufref_free,bufref.c,reachable,85,bufref.c:61,5,1
+3971462,invalid,8.21.0,uaf,,Curl_bufref_ptr,bufref.c,reachable,85,bufref.c:61,5,1
+3971462,invalid,8.21.0,uaf,,Curl_http_follow,http.c,reachable,85,http.c:1224,5,1
+3971462,invalid,8.21.0,uaf,,Curl_setstropt,setopt.c,reachable,85,setopt.c:2089|setopt.c:2090|setopt.c:2085|setopt.c:85|setopt.c:2089|setopt.c:85|setopt.c:2090|setopt.c:2089|setopt.c:2089|setopt.c:85,5,1
+3971462,invalid,8.21.0,uaf,,curl_easy_setopt,setopt.c,reachable,85,setopt.c:2089|setopt.c:2090|setopt.c:2085|setopt.c:85|setopt.c:2089|setopt.c:85|setopt.c:2090|setopt.c:2089|setopt.c:2089|setopt.c:85,5,1
+3971496,invalid,8.21.0,logic,,cf_socket_open,cf-socket.c,reachable,2400,,4,1
+3971496,invalid,8.21.0,logic,,cf_tcp_connect,cf-socket.c,reachable,2400,,4,1
+3971496,invalid,8.21.0,logic,,cf_udp_connect,cf-socket.c,reachable,2400,,4,1
+3971496,invalid,8.21.0,logic,,cf_udp_setup_quic,cf-socket.c,reachable,2400,,4,1
+3971518,invalid,8.21.0,logic,,,,gated_backend,,gtls.c:1815|openssl.c:4828,0,0
+3971538,invalid,8.21.0,other,,Curl_pp_readresp,pingpong.c,reachable,,,4,1
+3971538,invalid,8.21.0,other,,imap_find_literal,imap.c,reachable,,imap.c:1181|imap.c:1233,4,1
+3971538,invalid,8.21.0,other,,imap_state_listsearch_resp,imap.c,reachable,,imap.c:1181|imap.c:1233,4,1
+3971538,invalid,8.21.0,other,,is_custom_fetch_listing,imap.c,reachable,,imap.c:1181|imap.c:1233,4,1
+3971551,invalid,8.21.0,other,,curlx_str_cspn,strparse.c,reachable,,,4,1
+3971551,invalid,8.21.0,other,,curlx_str_passblanks,strparse.c,reachable,,,4,1
+3971551,invalid,8.21.0,other,,curlx_str_single,strparse.c,reachable,,,4,1
+3971551,invalid,8.21.0,other,,parse_cookie_header,cookie.c,reachable,,,4,1
+3971585,invalid,8.21.0,other,,Curl_cpool_get_conn,conncache.c,reachable,,conncache.c:576|conncache.c:256|conncache.c:835,7,1
+3971585,invalid,8.21.0,other,,Curl_getconnectinfo,connect.c,reachable,,,7,1
+3971585,invalid,8.21.0,other,,Curl_share_easy_unlink,curl_share.c,reachable,,,7,1
+3971585,invalid,8.21.0,other,,curl_easy_recv,easy.c,reachable,,easy.c:1219,7,1
+3971585,invalid,8.21.0,other,,curl_easy_send,easy.c,reachable,,easy.c:1219,7,1
+3971585,invalid,8.21.0,other,,curl_easy_setopt,setopt.c,reachable,,setopt.c:1423,7,1
+3971585,invalid,8.21.0,other,,easy_connection,easy.c,reachable,,easy.c:1219,7,1
+3971706,invalid,8.21.0,logic,,cr_in_needs_rewind,sendf.c,reachable,66|67|4096|8192|12288,sendf.c:798|sendf.c:755|sendf.c:687|sendf.c:3112,6,1
+3971706,invalid,8.21.0,logic,,cr_in_resume_from,sendf.c,reachable,66|67|4096|8192|12288,sendf.c:798|sendf.c:755|sendf.c:687|sendf.c:3112,6,1
+3971706,invalid,8.21.0,logic,,curl_easy_perform,easy.c,reachable,66|67|4096|8192|12288,,6,1
+3971706,invalid,8.21.0,logic,,http_perhapsrewind,http.c,reachable,66|67|4096|8192|12288,http.c:2400,6,1
+3971706,invalid,8.21.0,logic,,http_resume,http.c,reachable,66|67|4096|8192|12288,http.c:2400,6,1
+3971706,invalid,8.21.0,logic,,set_reader,http.c,reachable,66|67|4096|8192|12288,http.c:2400,6,1
+3972094,genuine,8.21.0,logic,Improper Authentication - Generic,Curl_creds_link,creds.c,reachable,,,6,1
+3972094,genuine,8.21.0,logic,Improper Authentication - Generic,Curl_creds_same,creds.c,reachable,,,6,1
+3972094,genuine,8.21.0,logic,Improper Authentication - Generic,Curl_http_output_auth,http.c,reachable,,,6,1
+3972094,genuine,8.21.0,logic,Improper Authentication - Generic,url_match_auth,url.c,reachable,,,6,1
+3972094,genuine,8.21.0,logic,Improper Authentication - Generic,url_match_conn,url.c,reachable,,,6,1
+3972094,genuine,8.21.0,logic,Improper Authentication - Generic,url_match_result,url.c,reachable,,,6,1
+3972196,invalid,8.21.0,other,,curl_maprintf,mprintf.c,reachable,16,mprintf.c:261|mprintf.c:397|mprintf.c:617|mprintf.c:100,9,1
+3972196,invalid,8.21.0,other,,curl_mfprintf,mprintf.c,reachable,16,mprintf.c:261|mprintf.c:397|mprintf.c:617|mprintf.c:100,9,1
+3972196,invalid,8.21.0,other,,curl_mprintf,mprintf.c,reachable,16,mprintf.c:261|mprintf.c:397|mprintf.c:617|mprintf.c:100,9,1
+3972196,invalid,8.21.0,other,,curl_msnprintf,mprintf.c,reachable,16,mprintf.c:261|mprintf.c:397|mprintf.c:617|mprintf.c:100,9,1
+3972196,invalid,8.21.0,other,,curl_msprintf,mprintf.c,reachable,16,mprintf.c:261|mprintf.c:397|mprintf.c:617|mprintf.c:100,9,1
+3972196,invalid,8.21.0,other,,out_double,mprintf.c,reachable,16,mprintf.c:261|mprintf.c:397|mprintf.c:617|mprintf.c:100,9,1
+3972196,invalid,8.21.0,other,,parse_conversion,mprintf.c,reachable,16,mprintf.c:261|mprintf.c:397|mprintf.c:617|mprintf.c:100,9,1
+3972196,invalid,8.21.0,other,,parse_flags,mprintf.c,reachable,16,mprintf.c:261|mprintf.c:397|mprintf.c:617|mprintf.c:100,9,1
+3972196,invalid,8.21.0,other,,parsefmt,mprintf.c,reachable,16,mprintf.c:261|mprintf.c:397|mprintf.c:617|mprintf.c:100,9,1
+3972293,invalid,8.21.0,logic,,Curl_req_soft_reset,request.c,reachable,,,4,1
+3972293,invalid,8.21.0,logic,,content_disposition,tool_cb_hdr.c,reachable,,,4,1
+3972293,invalid,8.21.0,logic,,single_header,cf-h1-proxy.c,reachable,,,4,1
+3972293,invalid,8.21.0,logic,,tool_header_cb,tool_cb_hdr.c,reachable,,,4,1
+3972316,invalid,8.21.0,logic,,curl_easy_cleanup,easy.c,reachable,,,8,1
+3972316,invalid,8.21.0,logic,,curl_easy_init,easy.c,reachable,,,8,1
+3972316,invalid,8.21.0,logic,,curl_easy_perform,easy.c,reachable,,,8,1
+3972316,invalid,8.21.0,logic,,curl_easy_reset,easy.c,reachable,,,8,1
+3972316,invalid,8.21.0,logic,,curl_easy_setopt,setopt.c,reachable,,,8,1
+3972316,invalid,8.21.0,logic,,easysrc_init,tool_easysrc.c,reachable,,,8,1
+3972316,invalid,8.21.0,logic,,easysrc_perform,tool_easysrc.c,reachable,,,8,1
+3972316,invalid,8.21.0,logic,,tool_setopt_long,tool_setopt.c,reachable,,,8,1
+3972323,invalid,8.21.0,logic,Improper Certificate Validation,url_match_conn,url.c,reachable,,,2,1
+3972323,invalid,8.21.0,logic,Improper Certificate Validation,url_match_multiplex_limits,url.c,reachable,,,2,1
+3972338,invalid,8.21.0,logic,Missing Critical Step in Authentication,Curl_sasl_continue,curl_sasl.c,reachable,,,2,1
+3972338,invalid,8.21.0,logic,Missing Critical Step in Authentication,get_server_message,curl_sasl.c,reachable,,,2,1
+3972357,genuine,8.21.0,other,Cleartext Transmission of Sensitive Information,,,gated_backend,,hsts.c:464|hsts.c:296|hsts.c:464,0,0
+3972373,genuine,8.21.0,integer,Time-of-check Time-of-use (TOCTOU) Race Condition,Curl_close,url.c,reachable,3600,url.c:260,4,1
+3972373,genuine,8.21.0,integer,Time-of-check Time-of-use (TOCTOU) Race Condition,Curl_fopen,curl_fopen.c,reachable,3600,curl_fopen.c:98,4,1
+3972373,genuine,8.21.0,integer,Time-of-check Time-of-use (TOCTOU) Race Condition,curlx_gmtime,timeval.c,reachable,3600,,4,1
+3972373,genuine,8.21.0,integer,Time-of-check Time-of-use (TOCTOU) Race Condition,curlx_str_number,strparse.c,reachable,3600,,4,1
+3972385,genuine,8.21.0,other,Information Disclosure,Curl_cookie_add,cookie.c,reachable,,,7,1
+3972385,genuine,8.21.0,other,Information Disclosure,Curl_cookie_getlist,cookie.c,reachable,,,7,1
+3972385,genuine,8.21.0,other,Information Disclosure,cookie_tailmatch,cookie.c,reachable,,,7,1
+3972385,genuine,8.21.0,other,Information Disclosure,curl_strequal,strequal.c,reachable,,,7,1
+3972385,genuine,8.21.0,other,Information Disclosure,is_public_suffix,cookie.c,reachable,,,7,1
+3972385,genuine,8.21.0,other,Information Disclosure,parse_domain,cookie.c,reachable,,,7,1
+3972385,genuine,8.21.0,other,Information Disclosure,tailmatch,hostip.c,reachable,,,7,1
+3972395,genuine,8.21.0,logic,Improper Input Validation,curlx_str_cspn,strparse.c,reachable,,,4,1
+3972395,genuine,8.21.0,logic,Improper Input Validation,curlx_str_passblanks,strparse.c,reachable,,,4,1
+3972395,genuine,8.21.0,logic,Improper Input Validation,curlx_str_single,strparse.c,reachable,,,4,1
+3972395,genuine,8.21.0,logic,Improper Input Validation,parse_cookie_header,cookie.c,reachable,,,4,1
+3972403,genuine,8.21.0,other,CRLF Injection,Curl_creader_set_fread,sendf.c,reachable,22|44|66,,5,1
+3972403,genuine,8.21.0,other,CRLF Injection,Curl_req_send_more,request.c,reachable,22|44|66,,5,1
+3972403,genuine,8.21.0,other,CRLF Injection,curlx_dyn_ptr,dynbuf.c,reachable,22|44|66,,5,1
+3972403,genuine,8.21.0,other,CRLF Injection,imap_perform_append,imap.c,reachable,22|44|66,,5,1
+3972403,genuine,8.21.0,other,CRLF Injection,imap_sendf,imap.c,reachable,22|44|66,,5,1
+3973090,genuine,8.21.0,logic,Improper Certificate Validation,,,gated_backend,,,0,0
+3973093,invalid,8.21.0,logic,Improper Certificate Validation,,,gated_backend,4759,apple.c:128|apple.c:74|apple.c:4759|apple.c:4776|apple.c:4866,0,0
+3973098,invalid,8.21.0,logic,Information Disclosure,curlx_dyn_addf,dynbuf.c,reachable,,,1,1
+3973111,invalid,8.21.0,logic,Improper Certificate Validation,,,gated_backend,,openssl.c:4752|openssl.c:4864,0,0
+3973121,invalid,8.21.0,logic,Authentication Bypass by Primary Weakness,Curl_cpool_conn_now_idle,conncache.c,reachable,,,4,1
+3973121,invalid,8.21.0,logic,Authentication Bypass by Primary Weakness,Curl_detach_connection,multi.c,reachable,,,4,1
+3973121,invalid,8.21.0,logic,Authentication Bypass by Primary Weakness,multi_conn_should_close,multi.c,reachable,,,4,1
+3973121,invalid,8.21.0,logic,Authentication Bypass by Primary Weakness,multi_done_locked,multi.c,reachable,,,4,1
+3973124,invalid,8.21.0,other,Cleartext Transmission of Sensitive Information,,,gated_backend,,hsts.c:464|hsts.c:296|hsts.c:464,0,0
+3973127,invalid,8.21.0,other,Information Disclosure,Curl_conn_get_first_peer,connect.c,reachable,,,6,1
+3973127,invalid,8.21.0,other,Information Disclosure,Curl_str2addr,curl_addrinfo.c,reachable,,curl_addrinfo.c:406,6,1
+3973127,invalid,8.21.0,other,Information Disclosure,get_scope_id,cf-socket.c,reachable,,cf-socket.c:379,6,1
+3973127,invalid,8.21.0,other,Information Disclosure,ip2addr,curl_addrinfo.c,reachable,,curl_addrinfo.c:406,6,1
+3973127,invalid,8.21.0,other,Information Disclosure,parse_proxy,proxy.c,reachable,,,6,1
+3973127,invalid,8.21.0,other,Information Disclosure,peer_create,peer.c,reachable,,peer.c:146,6,1
+3973135,genuine,8.21.0,logic,Information Disclosure,Curl_output_aws_sigv4,http_aws_sigv4.c,reachable,,http_aws_sigv4.c:820,5,1
+3973135,genuine,8.21.0,logic,Information Disclosure,Curl_setstropt,setopt.c,reachable,,setopt.c:2061,5,1
+3973135,genuine,8.21.0,logic,Information Disclosure,curl_easy_perform,easy.c,reachable,,,5,1
+3973135,genuine,8.21.0,logic,Information Disclosure,curl_easy_setopt,setopt.c,reachable,,setopt.c:2061,5,1
+3973135,genuine,8.21.0,logic,Information Disclosure,parse_sigv4_params,http_aws_sigv4.c,reachable,,http_aws_sigv4.c:820,5,1
+3973143,invalid,8.21.0,logic,Path Traversal,Curl_urldecode,escape.c,reachable,10,,5,1
+3973143,invalid,8.21.0,logic,Path Traversal,curl_easy_perform,easy.c,reachable,10,,5,1
+3973143,invalid,8.21.0,logic,Path Traversal,curl_maprintf,mprintf.c,reachable,10,,5,1
+3973143,invalid,8.21.0,logic,Path Traversal,ftp_parse_url_path,ftp.c,reachable,10,,5,1
+3973143,invalid,8.21.0,logic,Path Traversal,wc_statemach,ftp.c,reachable,10,,5,1
+3973152,invalid,8.21.0,logic,Type Confusion,curl_mprintf,mprintf.c,reachable,14,mprintf.c:329|mprintf.c:493|mprintf.c:533,5,1
+3973152,invalid,8.21.0,logic,Type Confusion,curl_msnprintf,mprintf.c,reachable,14,mprintf.c:329|mprintf.c:493|mprintf.c:533,5,1
+3973152,invalid,8.21.0,logic,Type Confusion,out_double,mprintf.c,reachable,14,mprintf.c:329|mprintf.c:493|mprintf.c:533,5,1
+3973152,invalid,8.21.0,logic,Type Confusion,parse_conversion,mprintf.c,reachable,14,mprintf.c:329|mprintf.c:493|mprintf.c:533,5,1
+3973152,invalid,8.21.0,logic,Type Confusion,parsefmt,mprintf.c,reachable,14,mprintf.c:329|mprintf.c:493|mprintf.c:533,5,1
+3973158,invalid,8.21.0,logic,Information Exposure Through Sent Data,main_checkfds,tool_main.c,reachable,,tool_main.c:87|tool_main.c:148,2,1
+3973158,invalid,8.21.0,logic,Information Exposure Through Sent Data,tool_init_stderr,tool_stderr.c,reachable,,,2,1
+3973169,invalid,8.21.0,other,Improper Check or Handling of Exceptional Conditions,post_check_result,tool_operate.c,reachable,18,tool_operate.c:608,1,1
+3973176,genuine,8.21.0,logic,Improper Validation of Certificate with Host Mismatch,config2setopts,config2setopts.c,reachable,,config2setopts.c:205,2,1
+3973176,genuine,8.21.0,logic,Improper Validation of Certificate with Host Mismatch,ssh_setopts,config2setopts.c,reachable,,config2setopts.c:205,2,1
+3973190,genuine,8.21.0,logic,Authentication Bypass by Primary Weakness,Curl_ssl_conn_config_match,vtls_config.c,reachable,,,3,1
+3973190,genuine,8.21.0,logic,Authentication Bypass by Primary Weakness,url_match_ssl_config,url.c,reachable,,url.c:712|url.c:1187|url.c:883,3,1
+3973190,genuine,8.21.0,logic,Authentication Bypass by Primary Weakness,url_match_ssl_use,url.c,reachable,,url.c:712|url.c:1187|url.c:883,3,1
+3973194,invalid,8.21.0,other,Improper Preservation of Permissions,Curl_fopen,curl_fopen.c,reachable,,,2,1
+3973194,invalid,8.21.0,other,Improper Preservation of Permissions,cookie_output,cookie.c,reachable,,,2,1
+3973201,genuine,8.21.0,other,Improper Check or Handling of Exceptional Conditions,Curl_get_line,curl_get_line.c,reachable,11|16|17|19|131|4094|4998|4999,,7,1
+3973201,genuine,8.21.0,other,Improper Check or Handling of Exceptional Conditions,Curl_pretransfer,transfer.c,reachable,11|16|17|19|131|4094|4998|4999,,7,1
+3973201,genuine,8.21.0,other,Improper Check or Handling of Exceptional Conditions,cookie_load,cookie.c,reachable,11|16|17|19|131|4094|4998|4999,cookie.c:1211,7,1
+3973201,genuine,8.21.0,other,Improper Check or Handling of Exceptional Conditions,cookie_output,cookie.c,reachable,11|16|17|19|131|4094|4998|4999,cookie.c:1211,7,1
+3973201,genuine,8.21.0,other,Improper Check or Handling of Exceptional Conditions,curl_maprintf,mprintf.c,reachable,11|16|17|19|131|4094|4998|4999,,7,1
+3973201,genuine,8.21.0,other,Improper Check or Handling of Exceptional Conditions,get_netscape_format,cookie.c,reachable,11|16|17|19|131|4094|4998|4999,cookie.c:1211,7,1
+3973201,genuine,8.21.0,other,Improper Check or Handling of Exceptional Conditions,parse_cookie_header,cookie.c,reachable,11|16|17|19|131|4094|4998|4999,cookie.c:1211,7,1
+3973213,invalid,8.21.0,uaf,Use After Free,Curl_close,url.c,reachable,,,7,1
+3973213,invalid,8.21.0,uaf,Use After Free,Curl_mime_cleanpart,mime.c,reachable,,,7,1
+3973213,invalid,8.21.0,uaf,Use After Free,Curl_mime_duppart,mime.c,reachable,,,7,1
+3973213,invalid,8.21.0,uaf,Use After Free,cleanup_part_content,mime.c,reachable,,,7,1
+3973213,invalid,8.21.0,uaf,Use After Free,curl_easy_duphandle,easy.c,reachable,,,7,1
+3973213,invalid,8.21.0,uaf,Use After Free,curl_mime_data_cb,mime.c,reachable,,,7,1
+3973213,invalid,8.21.0,uaf,Use After Free,dupset,easy.c,reachable,,,7,1
+3973219,invalid,8.21.0,bounds,Out-of-bounds Read,Curl_urldecode,escape.c,reachable,11|317,escape.c:59|escape.c:115,3,1
+3973219,invalid,8.21.0,bounds,Out-of-bounds Read,curl_easy_escape,escape.c,reachable,11|317,escape.c:59|escape.c:115,3,1
+3973219,invalid,8.21.0,bounds,Out-of-bounds Read,curl_easy_unescape,escape.c,reachable,11|317,escape.c:59|escape.c:115,3,1
+3973228,invalid,8.21.0,other,Server-Side Request Forgery (SSRF),curl_version_info,version.c,reachable,,,1,1
+3973234,invalid,8.21.0,logic,,Curl_httpchunk_read,http_chunks.c,reachable,,http_chunks.c:273,3,1
+3973234,invalid,8.21.0,logic,,curl_easy_header,headers.c,reachable,,headers.c:331,3,1
+3973234,invalid,8.21.0,logic,,single_header,cf-h1-proxy.c,reachable,,cf-h1-proxy.c:486|cf-h1-proxy.c:611,3,1
+3973245,invalid,8.21.0,bounds,Out-of-bounds Read,curl_formadd,formdata.c,reachable,14|675|902,,1,1
+3973249,invalid,8.21.0,other,Command Injection - Generic,,,non_product,16,curlcl.c:82|curlcl.c:88|curlcl.c:106|curlcl.c:60|curlcl.c:82,0,0
+3975408,genuine,8.21.0,logic,Improper Validation of Certificate with Host Mismatch,,,gated_backend,,libssh2.c:653,0,0
+3976342,invalid,8.21.0,logic,Improper Handling of Case Sensitivity,curl_strequal,strequal.c,reachable,,,1,1
+3981716,invalid,8.21.0,logic,,Curl_peer_equal,peer.c,reachable,,,3,1
+3981716,invalid,8.21.0,logic,,curl_easy_perform,easy.c,reachable,,,3,1
+3981716,invalid,8.21.0,logic,,curl_easy_setopt,setopt.c,reachable,,,3,1
+3989514,genuine,8.22.0,logic,Improper Certificate Validation,,,gated_backend,44,,0,0
+3993549,genuine,8.22.0,logic,,Curl_creds_create,creds.c,reachable,,,5,1
+3993549,genuine,8.22.0,logic,,Curl_creds_merge,creds.c,reachable,,,5,1
+3993549,genuine,8.22.0,logic,,Curl_http_output_auth,http.c,reachable,,http.c:874,5,1
+3993549,genuine,8.22.0,logic,,Curl_peer_equal,peer.c,reachable,,,5,1
+3993549,genuine,8.22.0,logic,,output_auth_headers,http.c,reachable,,http.c:874,5,1
+3993566,genuine,8.22.0,logic,,Curl_checkheaders,transfer.c,reachable,2|3,,5,1
+3993566,genuine,8.22.0,logic,,Curl_copy_header_value,http.c,reachable,2|3,http.c:1067,5,1
+3993566,genuine,8.22.0,logic,,Curl_dynhds_cget,dynhds.c,reachable,2|3,,5,1
+3993566,genuine,8.22.0,logic,,http_output_basic,http.c,reachable,2|3,http.c:1067,5,1
+3993566,genuine,8.22.0,logic,,output_auth_headers,http.c,reachable,2|3,http.c:1067,5,1
+3993850,invalid,8.22.0,logic,,,,reachable,,openssl.c:3108|vtls_config.c:258|openssl.c:4813|apple.c:131|apple.c:234|gtls.c:1607,0,0
+3993870,genuine,8.22.0,logic,,Curl_peer_equal,peer.c,reachable,,,5,1
+3993870,genuine,8.22.0,logic,,Curl_ssl_conn_config_match,vtls_config.c,reachable,,vtls_config.c:236|vtls_config.c:136,5,1
+3993870,genuine,8.22.0,logic,,Curl_ssl_easy_config_complete,vtls_config.c,reachable,,vtls_config.c:236|vtls_config.c:136,5,1
+3993870,genuine,8.22.0,logic,,curl_easy_perform,easy.c,reachable,,,5,1
+3993870,genuine,8.22.0,logic,,ssl_easy_config_compl_options,vtls_config.c,reachable,,vtls_config.c:236|vtls_config.c:136,5,1
+3993973,invalid,8.22.0,logic,,Curl_auth_allowed_to_origin,vauth.c,reachable,127|256,,9,1
+3993973,invalid,8.22.0,logic,,Curl_auth_digest_cleanup,digest.c,reachable,127|256,,9,1
+3993973,invalid,8.22.0,logic,,Curl_creds_link,creds.c,reachable,127|256,,9,1
+3993973,invalid,8.22.0,logic,,Curl_creds_same,creds.c,reachable,127|256,,9,1
+3993973,invalid,8.22.0,logic,,Curl_http_output_auth,http.c,reachable,127|256,http.c:844,9,1
+3993973,invalid,8.22.0,logic,,Curl_output_digest,http_digest.c,reachable,127|256,http_digest.c:38|http_digest.c:157|http_digest.c:44,9,1
+3993973,invalid,8.22.0,logic,,Curl_peer_equal,peer.c,reachable,127|256,peer.c:340|peer.c:324|peer.c:324,9,1
+3993973,invalid,8.22.0,logic,,Curl_peer_link,peer.c,reachable,127|256,peer.c:340|peer.c:324|peer.c:324,9,1
+3993973,invalid,8.22.0,logic,,Curl_peer_same_destination,peer.c,reachable,127|256,peer.c:340|peer.c:324|peer.c:324,9,1
+4007917,invalid,8.22.0,integer,Cleartext Transmission of Sensitive Information,Curl_fopen,curl_fopen.c,reachable,256|337,curl_fopen.c:98|curl_fopen.c:98,3,1
+4007917,invalid,8.22.0,integer,Cleartext Transmission of Sensitive Information,curlx_gmtime,timeval.c,reachable,256|337,,3,1
+4007917,invalid,8.22.0,integer,Cleartext Transmission of Sensitive Information,curlx_str_number,strparse.c,reachable,256|337,,3,1
+4016541,invalid,8.22.0,logic,Authentication Bypass by Primary Weakness,,,gated_backend,,vtls_scache.c:228|vtls_scache.c:32|vtls_scache.c:57|vtls_scache.c:62|vtls_scache.c:65|vtls_scache.c:66|vtls_scache.c:57|vtls_scache.c:65,0,0
+4021854,invalid,8.22.0,logic,,Curl_pp_readresp,pingpong.c,reachable,2,,5,1
+4021854,invalid,8.22.0,logic,,imap_done,imap.c,reachable,2,imap.c:1233|imap.c:1233,5,1
+4021854,invalid,8.22.0,logic,,imap_endofresp,imap.c,reachable,2,imap.c:1233|imap.c:1233,5,1
+4021854,invalid,8.22.0,logic,,imap_state_listsearch_resp,imap.c,reachable,2,imap.c:1233|imap.c:1233,5,1
+4021854,invalid,8.22.0,logic,,is_custom_fetch_listing,imap.c,reachable,2,imap.c:1233|imap.c:1233,5,1
+4021952,invalid,8.22.0,other,,Curl_expire_set,multi.c,reachable,2|3|16|90|127|128|3205|4096,multi.c:2316|multi.c:2488|multi.c:3171|multi.c:3204|multi.c:2942|multi.c:3205|multi.c:2942,18,1
+4021952,invalid,8.22.0,other,,Curl_multi_get_easy,multi.c,reachable,2|3|16|90|127|128|3205|4096,multi.c:2316|multi.c:2488|multi.c:3171|multi.c:3204|multi.c:2942|multi.c:3205|multi.c:2942,18,1
+4021952,invalid,8.22.0,other,,Curl_multi_mark_dirty,multi.c,reachable,2|3|16|90|127|128|3205|4096,multi.c:2316|multi.c:2488|multi.c:3171|multi.c:3204|multi.c:2942|multi.c:3205|multi.c:2942,18,1
+4021952,invalid,8.22.0,other,,Curl_timeouts_remove_expired,splay.c,reachable,2|3|16|90|127|128|3205|4096,,18,1
+4021952,invalid,8.22.0,other,,Curl_uint32_bset_add,uint-bset.c,reachable,2|3|16|90|127|128|3205|4096,,18,1
+4021952,invalid,8.22.0,other,,Curl_uint32_bset_contains,uint-bset.c,reachable,2|3|16|90|127|128|3205|4096,,18,1
+4021952,invalid,8.22.0,other,,Curl_uint32_bset_remove,uint-bset.c,reachable,2|3|16|90|127|128|3205|4096,,18,1
+4021952,invalid,8.22.0,other,,add_next_timeout,multi.c,reachable,2|3|16|90|127|128|3205|4096,multi.c:2316|multi.c:2488|multi.c:3171|multi.c:3204|multi.c:2942|multi.c:3205|multi.c:2942,18,1
+4021952,invalid,8.22.0,other,,curl_multi_perform,multi.c,reachable,2|3|16|90|127|128|3205|4096,multi.c:2316|multi.c:2488|multi.c:3171|multi.c:3204|multi.c:2942|multi.c:3205|multi.c:2942,18,1
+4021952,invalid,8.22.0,other,,curl_multi_socket_action,multi.c,reachable,2|3|16|90|127|128|3205|4096,multi.c:2316|multi.c:2488|multi.c:3171|multi.c:3204|multi.c:2942|multi.c:3205|multi.c:2942,18,1
+4021952,invalid,8.22.0,other,,move_pending_to_connect,multi.c,reachable,2|3|16|90|127|128|3205|4096,multi.c:2316|multi.c:2488|multi.c:3171|multi.c:3204|multi.c:2942|multi.c:3205|multi.c:2942,18,1
+4021952,invalid,8.22.0,other,,multi_handle_timeout,multi.c,reachable,2|3|16|90|127|128|3205|4096,multi.c:2316|multi.c:2488|multi.c:3171|multi.c:3204|multi.c:2942|multi.c:3205|multi.c:2942,18,1
+4021952,invalid,8.22.0,other,,multi_mark_expired_as_dirty,multi.c,reachable,2|3|16|90|127|128|3205|4096,multi.c:2316|multi.c:2488|multi.c:3171|multi.c:3204|multi.c:2942|multi.c:3205|multi.c:2942,18,1
+4021952,invalid,8.22.0,other,,multi_now,multi.c,reachable,2|3|16|90|127|128|3205|4096,multi.c:2316|multi.c:2488|multi.c:3171|multi.c:3204|multi.c:2942|multi.c:3205|multi.c:2942,18,1
+4021952,invalid,8.22.0,other,,multi_run_dirty,multi.c,reachable,2|3|16|90|127|128|3205|4096,multi.c:2316|multi.c:2488|multi.c:3171|multi.c:3204|multi.c:2942|multi.c:3205|multi.c:2942,18,1
+4021952,invalid,8.22.0,other,,multi_runsingle,multi.c,reachable,2|3|16|90|127|128|3205|4096,multi.c:2316|multi.c:2488|multi.c:3171|multi.c:3204|multi.c:2942|multi.c:3205|multi.c:2942,18,1
+4021952,invalid,8.22.0,other,,multistate_connect,multi.c,reachable,2|3|16|90|127|128|3205|4096,multi.c:2316|multi.c:2488|multi.c:3171|multi.c:3204|multi.c:2942|multi.c:3205|multi.c:2942,18,1
+4021952,invalid,8.22.0,other,,multistate_setup,multi.c,reachable,2|3|16|90|127|128|3205|4096,multi.c:2316|multi.c:2488|multi.c:3171|multi.c:3204|multi.c:2942|multi.c:3205|multi.c:2942,18,1
+4021960,invalid,8.22.0,logic,,Curl_conn_send,cfilters.c,reachable,2|3|4|5|6|1047|4096|8192,,5,1
+4021960,invalid,8.22.0,logic,,Curl_xfer_send,transfer.c,reachable,2|3|4|5|6|1047|4096|8192,,5,1
+4021960,invalid,8.22.0,logic,,suboption,telnet.c,reachable,2|3|4|5|6|1047|4096|8192,telnet.c:1047|telnet.c:1044|telnet.c:235|telnet.c:1047,5,1
+4021960,invalid,8.22.0,logic,,telnet_do,telnet.c,reachable,2|3|4|5|6|1047|4096|8192,telnet.c:1047|telnet.c:1044|telnet.c:235|telnet.c:1047,5,1
+4021960,invalid,8.22.0,logic,,telrcv,telnet.c,reachable,2|3|4|5|6|1047|4096|8192,telnet.c:1047|telnet.c:1044|telnet.c:235|telnet.c:1047,5,1
+4021979,genuine,8.22.0,other,,Curl_get_line,curl_get_line.c,reachable,896|4095|4096|4997|5000,,7,1
+4021979,genuine,8.22.0,other,,Curl_pretransfer,transfer.c,reachable,896|4095|4096|4997|5000,,7,1
+4021979,genuine,8.22.0,other,,cookie_output,cookie.c,reachable,896|4095|4096|4997|5000,cookie.c:1184,7,1
+4021979,genuine,8.22.0,other,,dyn_nappend,dynbuf.c,reachable,896|4095|4096|4997|5000,,7,1
+4021979,genuine,8.22.0,other,,get_netscape_format,cookie.c,reachable,896|4095|4096|4997|5000,cookie.c:1184,7,1
+4021979,genuine,8.22.0,other,,parse_cookie_header,cookie.c,reachable,896|4095|4096|4997|5000,cookie.c:1184,7,1
+4021979,genuine,8.22.0,other,,parse_first_pair,cookie.c,reachable,896|4095|4096|4997|5000,cookie.c:1184,7,1
+4022003,genuine,8.22.0,other,,Curl_pgrsCheck,progress.c,reachable,2|3|127|128|900|65536,,7,1
+4022003,genuine,8.22.0,other,,Curl_pp_readresp,pingpong.c,reachable,2|3|127|128|900|65536,pingpong.c:70|pingpong.c:252,7,1
+4022003,genuine,8.22.0,other,,Curl_pp_state_timeleft_ms,pingpong.c,reachable,2|3|127|128|900|65536,pingpong.c:70|pingpong.c:252,7,1
+4022003,genuine,8.22.0,other,,Curl_pp_statemach,pingpong.c,reachable,2|3|127|128|900|65536,pingpong.c:70|pingpong.c:252,7,1
+4022003,genuine,8.22.0,other,,Curl_timeleft_ms,connect.c,reachable,2|3|127|128|900|65536,,7,1
+4022003,genuine,8.22.0,other,,ftp_endofresp,ftp.c,reachable,2|3|127|128|900|65536,,7,1
+4022003,genuine,8.22.0,other,,pingpong_read,pingpong.c,reachable,2|3|127|128|900|65536,pingpong.c:70|pingpong.c:252,7,1
+4022070,genuine,8.22.0,logic,,Curl_ftp_parselist,ftplistparser.c,reachable,,ftplistparser.c:188|ftplistparser.c:1015|ftplistparser.c:188|ftplistparser.c:1015,6,1
+4022070,genuine,8.22.0,logic,,curl_easy_duphandle,easy.c,reachable,,easy.c:932|easy.c:932,6,1
+4022070,genuine,8.22.0,logic,,curl_easy_reset,easy.c,reachable,,easy.c:932|easy.c:932,6,1
+4022070,genuine,8.22.0,logic,,dupset,easy.c,reachable,,easy.c:932|easy.c:932,6,1
+4022070,genuine,8.22.0,logic,,init_wc_data,ftp.c,reachable,,ftp.c:4019|ftp.c:4059|ftp.c:4019|ftp.c:4059,6,1
+4022070,genuine,8.22.0,logic,,wc_data_dtor,ftp.c,reachable,,ftp.c:4019|ftp.c:4059|ftp.c:4019|ftp.c:4059,6,1
+4022568,genuine,8.22.0,logic,,Curl_client_read,sendf.c,reachable,2|3|4|16|27|512,sendf.c:1152,8,1
+4022568,genuine,8.22.0,logic,,Curl_client_write,sendf.c,reachable,2|3|4|16|27|512,sendf.c:1152,8,1
+4022568,genuine,8.22.0,logic,,curl_easy_setopt,setopt.c,reachable,2|3|4|16|27|512,,8,1
+4022568,genuine,8.22.0,logic,,tftp_connect_for_rx,tftp.c,reachable,2|3|4|16|27|512,tftp.c:766|tftp.c:1079|tftp.c:1203,8,1
+4022568,genuine,8.22.0,logic,,tftp_connect_for_tx,tftp.c,reachable,2|3|4|16|27|512,tftp.c:766|tftp.c:1079|tftp.c:1203,8,1
+4022568,genuine,8.22.0,logic,,tftp_receive_packet,tftp.c,reachable,2|3|4|16|27|512,tftp.c:766|tftp.c:1079|tftp.c:1203,8,1
+4022568,genuine,8.22.0,logic,,tftp_send_first,tftp.c,reachable,2|3|4|16|27|512,tftp.c:766|tftp.c:1079|tftp.c:1203,8,1
+4022568,genuine,8.22.0,logic,,tftp_tx,tftp.c,reachable,2|3|4|16|27|512,tftp.c:766|tftp.c:1079|tftp.c:1203,8,1
+4023192,genuine,8.22.0,logic,,,,no_target,,,0,0
+4023506,invalid,8.22.0,other,CRLF Injection,,,gated_backend,,,0,0
+4024222,genuine,8.22.0,bounds,,Curl_mime_cleanpart,mime.c,reachable,40|1570,mime.c:47|mime.c:1056|mime.c:1075|mime.c:1113|mime.c:1570|mime.c:1761|mime.c:1860|mime.c:703,6,1
+4024222,genuine,8.22.0,bounds,,Curl_mime_prepare_headers,mime.c,reachable,40|1570,mime.c:47|mime.c:1056|mime.c:1075|mime.c:1113|mime.c:1570|mime.c:1761|mime.c:1860|mime.c:703,6,1
+4024222,genuine,8.22.0,bounds,,curl_mime_addpart,mime.c,reachable,40|1570,mime.c:47|mime.c:1056|mime.c:1075|mime.c:1113|mime.c:1570|mime.c:1761|mime.c:1860|mime.c:703,6,1
+4024222,genuine,8.22.0,bounds,,curl_mime_subparts,mime.c,reachable,40|1570,mime.c:47|mime.c:1056|mime.c:1075|mime.c:1113|mime.c:1570|mime.c:1761|mime.c:1860|mime.c:703,6,1
+4024222,genuine,8.22.0,bounds,,mime_subparts_unbind,mime.c,reachable,40|1570,mime.c:47|mime.c:1056|mime.c:1075|mime.c:1113|mime.c:1570|mime.c:1761|mime.c:1860|mime.c:703,6,1
+4024222,genuine,8.22.0,bounds,,multipart_size,mime.c,reachable,40|1570,mime.c:47|mime.c:1056|mime.c:1075|mime.c:1113|mime.c:1570|mime.c:1761|mime.c:1860|mime.c:703,6,1
+4024268,invalid,8.22.0,bounds,,Curl_bufref_memdup0,bufref.c,reachable,10|18,,5,1
+4024268,invalid,8.22.0,bounds,,Curl_bufref_ptr,bufref.c,reachable,10|18,,5,1
+4024268,invalid,8.22.0,bounds,,curl_formadd,formdata.c,reachable,10|18,formdata.c:121|formdata.c:264|formdata.c:380|formdata.c:128,5,1
+4024268,invalid,8.22.0,bounds,,formadd,formdata.c,reachable,10|18,formdata.c:121|formdata.c:264|formdata.c:380|formdata.c:128,5,1
+4024268,invalid,8.22.0,bounds,,formadd_check,formdata.c,reachable,10|18,formdata.c:121|formdata.c:264|formdata.c:380|formdata.c:128,5,1
+4025056,invalid,8.22.0,logic,HTTP Request Smuggling,,,no_target,,,0,0
+4027511,invalid,8.22.0,logic,Improper Handling of URL Encoding (Hex Encoding),,,reachable,,tool_ipfs.c:125,0,0
+4030333,genuine,8.22.0,uaf,Use After Free,Curl_close,url.c,reachable,,url.c:197,30,1
+4030333,genuine,8.22.0,uaf,Use After Free,Curl_conn_ev_data_done,cfilters.c,reachable,,cfilters.c:982,30,1
+4030333,genuine,8.22.0,uaf,Use After Free,Curl_conn_send,cfilters.c,reachable,,cfilters.c:982,30,1
+4030333,genuine,8.22.0,uaf,Use After Free,Curl_conn_shutdown,cfilters.c,reachable,,cfilters.c:982,30,1
+4030333,genuine,8.22.0,uaf,Use After Free,Curl_cpool_conn_now_idle,conncache.c,reachable,,conncache.c:247,30,1
+4030333,genuine,8.22.0,uaf,Use After Free,Curl_cpool_destroy,conncache.c,reachable,,conncache.c:247,30,1
+4030333,genuine,8.22.0,uaf,Use After Free,Curl_detach_connection,multi.c,reachable,,,30,1
+4030333,genuine,8.22.0,uaf,Use After Free,Curl_h1_req_parse_read,http1.c,reachable,,http1.c:262,30,1
+4030333,genuine,8.22.0,uaf,Use After Free,Curl_http_done,http.c,reachable,,,30,1
+4030333,genuine,8.22.0,uaf,Use After Free,Curl_req_abort_sending,request.c,reachable,,request.c:380,30,1
+4030333,genuine,8.22.0,uaf,Use After Free,Curl_req_done,request.c,reachable,,request.c:380,30,1
+4030333,genuine,8.22.0,uaf,Use After Free,Curl_req_send,request.c,reachable,,request.c:380,30,1
+4030333,genuine,8.22.0,uaf,Use After Free,Curl_req_send_more,request.c,reachable,,request.c:380,30,1
+4030333,genuine,8.22.0,uaf,Use After Free,Curl_sendrecv,transfer.c,reachable,,transfer.c:354,30,1
+4030333,genuine,8.22.0,uaf,Use After Free,Curl_xfer_send,transfer.c,reachable,,transfer.c:354,30,1
+4030333,genuine,8.22.0,uaf,Use After Free,add_from_client,request.c,reachable,,request.c:380,30,1
+4030333,genuine,8.22.0,uaf,Use After Free,cf_cntrl_all,cfilters.c,reachable,,cfilters.c:982,30,1
+4030333,genuine,8.22.0,uaf,Use After Free,curl_easy_cleanup,easy.c,reachable,,,30,1
+4030333,genuine,8.22.0,uaf,Use After Free,curl_share_cleanup,curl_share.c,reachable,,curl_share.c:370,30,1
+4030333,genuine,8.22.0,uaf,Use After Free,del_per_transfer,tool_operate.c,reachable,,tool_operate.c:240,30,1
+4030333,genuine,8.22.0,uaf,Use After Free,multi_done,multi.c,reachable,,,30,1
+4030333,genuine,8.22.0,uaf,Use After Free,multi_done_locked,multi.c,reachable,,,30,1
+4030333,genuine,8.22.0,uaf,Use After Free,multi_follow,multi.c,reachable,,,30,1
+4030333,genuine,8.22.0,uaf,Use After Free,multistate_performing,multi.c,reachable,,,30,1
+4030333,genuine,8.22.0,uaf,Use After Free,req_flush,request.c,reachable,,request.c:380,30,1
+4030333,genuine,8.22.0,uaf,Use After Free,req_send_buffer_flush,request.c,reachable,,request.c:380,30,1
+4030333,genuine,8.22.0,uaf,Use After Free,sendrecv_dl,transfer.c,reachable,,transfer.c:354,30,1
+4030333,genuine,8.22.0,uaf,Use After Free,sendrecv_ul,transfer.c,reachable,,transfer.c:354,30,1
+4030333,genuine,8.22.0,uaf,Use After Free,xfer_recv_resp,transfer.c,reachable,,transfer.c:354,30,1
+4030333,genuine,8.22.0,uaf,Use After Free,xfer_send,request.c,reachable,,request.c:380,30,1
+4033108,invalid,8.22.0,uaf,Use After Free,Curl_close,url.c,reachable,3,url.c:303,12,1
+4033108,invalid,8.22.0,uaf,Use After Free,Curl_conn_ev_data_done,cfilters.c,reachable,3,,12,1
+4033108,invalid,8.22.0,uaf,Use After Free,Curl_h1_req_parse_read,http1.c,reachable,3,,12,1
+4033108,invalid,8.22.0,uaf,Use After Free,Curl_meets_timecondition,transfer.c,reachable,3,,12,1
+4033108,invalid,8.22.0,uaf,Use After Free,Curl_req_abort_sending,request.c,reachable,3,,12,1
+4033108,invalid,8.22.0,uaf,Use After Free,Curl_req_done,request.c,reachable,3,,12,1
+4033108,invalid,8.22.0,uaf,Use After Free,Curl_xfer_write_resp,transfer.c,reachable,3,,12,1
+4033108,invalid,8.22.0,uaf,Use After Free,http_firstwrite,http.c,reachable,3,,12,1
+4033108,invalid,8.22.0,uaf,Use After Free,http_header_l,http.c,reachable,3,,12,1
+4033108,invalid,8.22.0,uaf,Use After Free,multi_done,multi.c,reachable,3,,12,1
+4033108,invalid,8.22.0,uaf,Use After Free,req_flush,request.c,reachable,3,,12,1
+4033108,invalid,8.22.0,uaf,Use After Free,sendrecv_dl,transfer.c,reachable,3,,12,1
+4033971,invalid,8.22.0,uaf,Use After Free,Curl_async_thrdd_multi_destroy,asyn-thrdd.c,reachable,,asyn-thrdd.c:506,5,1
+4033971,invalid,8.22.0,uaf,Use After Free,curl_easy_cleanup,easy.c,reachable,,easy.c:855,5,1
+4033971,invalid,8.22.0,uaf,Use After Free,curl_multi_cleanup,multi.c,reachable,,multi.c:248|multi.c:903,5,1
+4033971,invalid,8.22.0,uaf,Use After Free,curl_multi_init,multi.c,reachable,,multi.c:248|multi.c:903,5,1
+4033971,invalid,8.22.0,uaf,Use After Free,curl_multi_remove_handle,multi.c,reachable,,multi.c:248|multi.c:903,5,1
+4040551,genuine,8.22.0,logic,,Curl_checkProxyheaders,http.c,reachable,,http.c:872|http.c:874|http.c:671|http.c:1878|http.c:874,5,1
+4040551,genuine,8.22.0,logic,,Curl_checkheaders,transfer.c,reachable,,,5,1
+4040551,genuine,8.22.0,logic,,Curl_peer_equal,peer.c,reachable,,,5,1
+4040551,genuine,8.22.0,logic,,curl_url_get,urlapi.c,reachable,,,5,1
+4040551,genuine,8.22.0,logic,,output_auth_headers,http.c,reachable,,http.c:872|http.c:874|http.c:671|http.c:1878|http.c:874,5,1
+4040799,invalid,8.22.0,logic,,curl_strnequal,strequal.c,reachable,2|3,,1,1
+4041053,genuine,8.22.0,logic,,Curl_bufref_ptr,bufref.c,reachable,,,9,1
+4041053,genuine,8.22.0,logic,,Curl_bufref_set,bufref.c,reachable,,,9,1
+4041053,genuine,8.22.0,logic,,Curl_creds_merge,creds.c,reachable,,,9,1
+4041053,genuine,8.22.0,logic,,Curl_http_follow,http.c,reachable,,http.c:1244|http.c:1298,9,1
+4041053,genuine,8.22.0,logic,,curl_easy_getinfo,easy.c,reachable,,,9,1
+4041053,genuine,8.22.0,logic,,curl_url_set,urlapi.c,reachable,,urlapi.c:1334,9,1
+4041053,genuine,8.22.0,logic,,redirect_url,urlapi.c,reachable,,urlapi.c:1334,9,1
+4041053,genuine,8.22.0,logic,,set_url,urlapi.c,reachable,,urlapi.c:1334,9,1
+4041053,genuine,8.22.0,logic,,url_set_data_creds_netrc,url.c,reachable,,url.c:1325|url.c:1325,9,1
+4053066,invalid,8.22.0,logic,Business Logic Errors,,,gated_backend,,,0,0
+4053116,invalid,8.23.0,logic,Improper Authentication - Generic,Curl_headers_push,headers.c,reachable,,,10,1
+4053116,invalid,8.23.0,logic,Improper Authentication - Generic,Curl_http_auth_act,http.c,reachable,,,10,1
+4053116,invalid,8.23.0,logic,Improper Authentication - Generic,Curl_req_soft_reset,request.c,reachable,,,10,1
+4053116,invalid,8.23.0,logic,Improper Authentication - Generic,Curl_verify_header,http.c,reachable,,,10,1
+4053116,invalid,8.23.0,logic,Improper Authentication - Generic,cf_h1_proxy_connect,cf-h1-proxy.c,reachable,,cf-h1-proxy.c:474|cf-h1-proxy.c:470,10,1
+4053116,invalid,8.23.0,logic,Improper Authentication - Generic,http_rw_hd,http.c,reachable,,,10,1
+4053116,invalid,8.23.0,logic,Improper Authentication - Generic,namevalue,headers.c,reachable,,,10,1
+4053116,invalid,8.23.0,logic,Improper Authentication - Generic,on_resp_header,cf-h1-proxy.c,reachable,,cf-h1-proxy.c:474|cf-h1-proxy.c:470,10,1
+4053116,invalid,8.23.0,logic,Improper Authentication - Generic,recv_CONNECT_resp,cf-h1-proxy.c,reachable,,cf-h1-proxy.c:474|cf-h1-proxy.c:470,10,1
+4053116,invalid,8.23.0,logic,Improper Authentication - Generic,single_header,cf-h1-proxy.c,reachable,,cf-h1-proxy.c:474|cf-h1-proxy.c:470,10,1
+4057637,invalid,8.22.0,logic,Path Traversal,Curl_urldecode,escape.c,reachable,,,5,1
+4057637,invalid,8.22.0,logic,Path Traversal,curl_easy_escape,escape.c,reachable,,,5,1
+4057637,invalid,8.22.0,logic,Path Traversal,curl_easy_setopt,setopt.c,reachable,,,5,1
+4057637,invalid,8.22.0,logic,Path Traversal,curl_maprintf,mprintf.c,reachable,,,5,1
+4057637,invalid,8.22.0,logic,Path Traversal,ftp_parse_url_path,ftp.c,reachable,,ftp.c:4079|ftp.c:207,5,1
+4059104,invalid,8.22.0,integer,,imap_state_fetch_resp,imap.c,reachable,10|24|32|34|48|82,,1,1
+4063328,invalid,8.22.0,reachability,Cleartext Transmission of Sensitive Information,curl_url_set,urlapi.c,reachable,,,3,1
+4063328,invalid,8.22.0,reachability,Cleartext Transmission of Sensitive Information,http_setopts,config2setopts.c,reachable,,config2setopts.c:201|config2setopts.c:671|config2setopts.c:713|config2setopts.c:2091,3,1
+4063328,invalid,8.22.0,reachability,Cleartext Transmission of Sensitive Information,url_proto_and_rewrite,config2setopts.c,reachable,,config2setopts.c:201|config2setopts.c:671|config2setopts.c:713|config2setopts.c:2091,3,1
+4064040,invalid,8.22.0,uaf,Information Disclosure,Curl_bufref_free,bufref.c,reachable,2|3|4|5|6|10|24|28,,11,1
+4064040,invalid,8.22.0,uaf,Information Disclosure,Curl_bufref_ptr,bufref.c,reachable,2|3|4|5|6|10|24|28,,11,1
+4064040,invalid,8.22.0,uaf,Information Disclosure,Curl_setstropt,setopt.c,reachable,2|3|4|5|6|10|24|28,,11,1
+4064040,invalid,8.22.0,uaf,Information Disclosure,curl_easy_cleanup,easy.c,reachable,2|3|4|5|6|10|24|28,,11,1
+4064040,invalid,8.22.0,uaf,Information Disclosure,curl_easy_getinfo,easy.c,reachable,2|3|4|5|6|10|24|28,,11,1
+4064040,invalid,8.22.0,uaf,Information Disclosure,curl_easy_init,easy.c,reachable,2|3|4|5|6|10|24|28,,11,1
+4064040,invalid,8.22.0,uaf,Information Disclosure,curl_easy_perform,easy.c,reachable,2|3|4|5|6|10|24|28,,11,1
+4064040,invalid,8.22.0,uaf,Information Disclosure,curl_easy_setopt,setopt.c,reachable,2|3|4|5|6|10|24|28,,11,1
+4064040,invalid,8.22.0,uaf,Information Disclosure,curl_global_cleanup,easy.c,reachable,2|3|4|5|6|10|24|28,,11,1
+4064040,invalid,8.22.0,uaf,Information Disclosure,curl_global_init,easy.c,reachable,2|3|4|5|6|10|24|28,,11,1
+4064040,invalid,8.22.0,uaf,Information Disclosure,setopt_cptr,setopt.c,reachable,2|3|4|5|6|10|24|28,,11,1
+4071872,invalid,8.22.0,logic,Information Exposure Through Sent Data,parse_flag,cookie.c,reachable,,cookie.c:624|cookie.c:642|cookie.c:451,1,1
+4085412,invalid,8.22.0,bounds,Out-of-bounds Read,Curl_pp_flushsend,pingpong.c,reachable,24|72|131|384|536|1024|16384,,6,1
+4085412,invalid,8.22.0,bounds,Out-of-bounds Read,Curl_pp_sendf,pingpong.c,reachable,24|72|131|384|536|1024|16384,,6,1
+4085412,invalid,8.22.0,bounds,Out-of-bounds Read,curl_easy_send,easy.c,reachable,24|72|131|384|536|1024|16384,,6,1
+4085412,invalid,8.22.0,bounds,Out-of-bounds Read,curl_multi_remove_handle,multi.c,reachable,24|72|131|384|536|1024|16384,,6,1
+4085412,invalid,8.22.0,bounds,Out-of-bounds Read,curl_ws_send,ws.c,reachable,24|72|131|384|536|1024|16384,,6,1
+4085412,invalid,8.22.0,bounds,Out-of-bounds Read,imap_done,imap.c,reachable,24|72|131|384|536|1024|16384,,6,1
+4093443,invalid,8.22.0,integer,Information Exposure Through Sent Data,curlx_str_cspn,strparse.c,reachable,,,2,1
+4093443,invalid,8.22.0,integer,Information Exposure Through Sent Data,parse_cookie_header,cookie.c,reachable,,cookie.c:614,2,1
+4098761,invalid,8.22.0,logic,HTTP Request Smuggling,Curl_cpool_conn_seems_healthy,conncache.c,reachable,,conncache.c:954|conncache.c:634,2,1
+4098761,invalid,8.22.0,logic,HTTP Request Smuggling,curlx_ptimediff_ms,timeval.c,reachable,,,2,1
+4099194,genuine,8.22.0,bounds,Buffer Over-read,Curl_bufq_cread,bufq.c,reachable,10|64|1274|1304|1728|1744|16384|49152,,23,1
+4099194,genuine,8.22.0,bounds,Buffer Over-read,Curl_bufq_peek,bufq.c,reachable,10|64|1274|1304|1728|1744|16384|49152,,23,1
+4099194,genuine,8.22.0,bounds,Buffer Over-read,Curl_bufq_skip,bufq.c,reachable,10|64|1274|1304|1728|1744|16384|49152,,23,1
+4099194,genuine,8.22.0,bounds,Buffer Over-read,Curl_req_send_more,request.c,reachable,10|64|1274|1304|1728|1744|16384|49152,request.c:458,23,1
+4099194,genuine,8.22.0,bounds,Buffer Over-read,Curl_sendrecv,transfer.c,reachable,10|64|1274|1304|1728|1744|16384|49152,transfer.c:354,23,1
+4099194,genuine,8.22.0,bounds,Buffer Over-read,Curl_xfer_send,transfer.c,reachable,10|64|1274|1304|1728|1744|16384|49152,transfer.c:354,23,1
+4099194,genuine,8.22.0,bounds,Buffer Over-read,Curl_xfer_write_resp,transfer.c,reachable,10|64|1274|1304|1728|1744|16384|49152,transfer.c:354,23,1
+4099194,genuine,8.22.0,bounds,Buffer Over-read,add_from_client,request.c,reachable,10|64|1274|1304|1728|1744|16384|49152,request.c:458,23,1
+4099194,genuine,8.22.0,bounds,Buffer Over-read,cr_ws_read,ws.c,reachable,10|64|1274|1304|1728|1744|16384|49152,ws.c:1202,23,1
+4099194,genuine,8.22.0,bounds,Buffer Over-read,curl_easy_send,easy.c,reachable,10|64|1274|1304|1728|1744|16384|49152,,23,1
+4099194,genuine,8.22.0,bounds,Buffer Over-read,req_flush,request.c,reachable,10|64|1274|1304|1728|1744|16384|49152,request.c:458,23,1
+4099194,genuine,8.22.0,bounds,Buffer Over-read,req_send_buffer_flush,request.c,reachable,10|64|1274|1304|1728|1744|16384|49152,request.c:458,23,1
+4099194,genuine,8.22.0,bounds,Buffer Over-read,sendrecv_dl,transfer.c,reachable,10|64|1274|1304|1728|1744|16384|49152,transfer.c:354,23,1
+4099194,genuine,8.22.0,bounds,Buffer Over-read,sendrecv_ul,transfer.c,reachable,10|64|1274|1304|1728|1744|16384|49152,transfer.c:354,23,1
+4099194,genuine,8.22.0,bounds,Buffer Over-read,ws_cw_dec_next,ws.c,reachable,10|64|1274|1304|1728|1744|16384|49152,ws.c:1202,23,1
+4099194,genuine,8.22.0,bounds,Buffer Over-read,ws_cw_write,ws.c,reachable,10|64|1274|1304|1728|1744|16384|49152,ws.c:1202,23,1
+4099194,genuine,8.22.0,bounds,Buffer Over-read,ws_dec_pass,ws.c,reachable,10|64|1274|1304|1728|1744|16384|49152,ws.c:1202,23,1
+4099194,genuine,8.22.0,bounds,Buffer Over-read,ws_enc_add_cntrl,ws.c,reachable,10|64|1274|1304|1728|1744|16384|49152,ws.c:1202,23,1
+4099194,genuine,8.22.0,bounds,Buffer Over-read,ws_enc_add_pending,ws.c,reachable,10|64|1274|1304|1728|1744|16384|49152,ws.c:1202,23,1
+4099194,genuine,8.22.0,bounds,Buffer Over-read,ws_enc_write_head,ws.c,reachable,10|64|1274|1304|1728|1744|16384|49152,ws.c:1202,23,1
+4099194,genuine,8.22.0,bounds,Buffer Over-read,ws_enc_write_payload,ws.c,reachable,10|64|1274|1304|1728|1744|16384|49152,ws.c:1202,23,1
+4099194,genuine,8.22.0,bounds,Buffer Over-read,ws_flush,ws.c,reachable,10|64|1274|1304|1728|1744|16384|49152,ws.c:1202,23,1
+4099194,genuine,8.22.0,bounds,Buffer Over-read,xfer_send,request.c,reachable,10|64|1274|1304|1728|1744|16384|49152,request.c:458,23,1
+4099618,genuine,8.22.0,logic,Exposure of Data Element to Wrong Session,Curl_parse_interface,cf-socket.c,reachable,,cf-socket.c:588|cf-socket.c:661,5,1
+4099618,genuine,8.22.0,logic,Exposure of Data Element to Wrong Session,allocate_conn,url.c,reachable,,url.c:1208|url.c:625|url.c:619,5,1
+4099618,genuine,8.22.0,logic,Exposure of Data Element to Wrong Session,bindlocal,cf-socket.c,reachable,,cf-socket.c:588|cf-socket.c:661,5,1
+4099618,genuine,8.22.0,logic,Exposure of Data Element to Wrong Session,setstropt_interface,setopt.c,reachable,,setopt.c:155,5,1
+4099618,genuine,8.22.0,logic,Exposure of Data Element to Wrong Session,url_match_connect_config,url.c,reachable,,url.c:1208|url.c:625|url.c:619,5,1
+4102061,resolved,8.22.0,uaf,Use After Free,Curl_cwriter_unpause,sendf.c,reachable,333,,7,1
+4102061,resolved,8.22.0,uaf,Use After Free,Curl_xfer_pause_recv,transfer.c,reachable,333,,7,1
+4102061,resolved,8.22.0,uaf,Use After Free,curl_easy_pause,easy.c,reachable,333,,7,1
+4102061,resolved,8.22.0,uaf,Use After Free,curl_global_trace,easy.c,reachable,333,,7,1
+4102061,resolved,8.22.0,uaf,Use After Free,cw_out_cb_write,cw-out.c,reachable,333,cw-out.c:321|cw-out.c:333|cw-out.c:206|cw-out.c:333|cw-out.c:93,7,1
+4102061,resolved,8.22.0,uaf,Use After Free,cw_out_flush_chain,cw-out.c,reachable,333,cw-out.c:321|cw-out.c:333|cw-out.c:206|cw-out.c:333|cw-out.c:93,7,1
+4102061,resolved,8.22.0,uaf,Use After Free,cw_pause_flush,cw-pause.c,reachable,333,cw-pause.c:145,7,1
+4103651,invalid,8.22.0,logic,Man-in-the-Middle,Curl_conn_get_remote_addr,cfilters.c,reachable,,,2,1
+4103651,invalid,8.22.0,logic,Man-in-the-Middle,tftp_receive_packet,tftp.c,reachable,,tftp.c:754|tftp.c:1057,2,1
+4105790,invalid,8.22.0,logic,Insufficiently Protected Credentials,,,reachable,,ftp.c:2957|ftp.c:2975|vauth.c:137|protocol.h:70,0,0
+4105853,invalid,8.22.0,bounds,Out-of-bounds Read,Curl_pp_flushsend,pingpong.c,reachable,32|384,,2,1
+4105853,invalid,8.22.0,bounds,Out-of-bounds Read,curl_multi_remove_handle,multi.c,reachable,32|384,,2,1
+4112709,resolved,8.23.0,other,Partial String Comparison,,,gated_backend,,,0,0
+4112912,resolved,8.23.0,logic,Improper Input Validation,cookie_output,cookie.c,reachable,48|1500|4000|5047,,1,1
+4113412,invalid,8.23.0,logic,Improper Input Validation,Curl_creader_set_fread,sendf.c,reachable,127,,5,1
+4113412,invalid,8.23.0,logic,Improper Input Validation,Curl_creader_total_length,sendf.c,reachable,127,,5,1
+4113412,invalid,8.23.0,logic,Improper Input Validation,cr_lc_total_length,sendf.c,reachable,127,,5,1
+4113412,invalid,8.23.0,logic,Improper Input Validation,curlx_dyn_addf,dynbuf.c,reachable,127,,5,1
+4113412,invalid,8.23.0,logic,Improper Input Validation,rtsp_setup_body,rtsp.c,reachable,127,,5,1
+4114965,invalid,8.23.0,logic,Information Exposure Through Sent Data,cidr4_match,proxy.c,reachable,,proxy.c:166|proxy.c:72|proxy.c:101,2,1
+4114965,invalid,8.23.0,logic,Information Exposure Through Sent Data,cidr6_match,proxy.c,reachable,,proxy.c:166|proxy.c:72|proxy.c:101,2,1
+4116076,resolved,8.23.0,logic,Improper Check for Certificate Revocation,,,gated_backend,,cert-status.md:1430,0,0
+4116527,resolved,8.23.0,uaf,Use After Free,Curl_close,url.c,reachable,,url.c:207,13,1
+4116527,resolved,8.23.0,uaf,Use After Free,Curl_cshutdn_add,cshutdn.c,reachable,,cshutdn.c:41|cshutdn.c:349,13,1
+4116527,resolved,8.23.0,uaf,Use After Free,Curl_cshutdn_terminate,cshutdn.c,reachable,,cshutdn.c:41|cshutdn.c:349,13,1
+4116527,resolved,8.23.0,uaf,Use After Free,Curl_cshutdn_try_once,cshutdn.c,reachable,,cshutdn.c:41|cshutdn.c:349,13,1
+4116527,resolved,8.23.0,uaf,Use After Free,Curl_multi_remove_handle,multi.c,reachable,,multi.c:651,13,1
+4116527,resolved,8.23.0,uaf,Use After Free,cpool_discard_conn,conncache.c,reachable,,conncache.c:221,13,1
+4116527,resolved,8.23.0,uaf,Use After Free,cshutdn_perform,cshutdn.c,reachable,,cshutdn.c:41|cshutdn.c:349,13,1
+4116527,resolved,8.23.0,uaf,Use After Free,curl_easy_cleanup,easy.c,reachable,,,13,1
+4116527,resolved,8.23.0,uaf,Use After Free,curl_easy_perform,easy.c,reachable,,,13,1
+4116527,resolved,8.23.0,uaf,Use After Free,curl_multi_cleanup,multi.c,reachable,,multi.c:651,13,1
+4116527,resolved,8.23.0,uaf,Use After Free,curl_multi_perform,multi.c,reachable,,multi.c:651,13,1
+4116527,resolved,8.23.0,uaf,Use After Free,curl_multi_remove_handle,multi.c,reachable,,multi.c:651,13,1
+4116527,resolved,8.23.0,uaf,Use After Free,multi_done_locked,multi.c,reachable,,multi.c:651,13,1
+4118610,resolved,8.23.0,logic,Improper Certificate Validation,,,gated_backend,,openssl.c:4864|apple.c:229,0,0
+4118643,invalid,8.23.0,uaf,Use After Free,Curl_close,url.c,reachable,,url.c:244,5,1
+4118643,invalid,8.23.0,uaf,Use After Free,Curl_cshutdn_terminate,cshutdn.c,reachable,,,5,1
+4118643,invalid,8.23.0,uaf,Use After Free,curl_easy_cleanup,easy.c,reachable,,,5,1
+4118643,invalid,8.23.0,uaf,Use After Free,curl_easy_perform,easy.c,reachable,,,5,1
+4118643,invalid,8.23.0,uaf,Use After Free,curl_multi_cleanup,multi.c,reachable,,,5,1
+4121675,invalid,8.23.0,other,CRLF Injection,Curl_checkheaders,transfer.c,reachable,554,,8,1
+4121675,invalid,8.23.0,other,CRLF Injection,Curl_req_send,request.c,reachable,554,,8,1
+4121675,invalid,8.23.0,other,CRLF Injection,Curl_setstropt,setopt.c,reachable,554,setopt.c:88,8,1
+4121675,invalid,8.23.0,other,CRLF Injection,curl_easy_perform,easy.c,reachable,554,,8,1
+4121675,invalid,8.23.0,other,CRLF Injection,curl_easy_setopt,setopt.c,reachable,554,setopt.c:88,8,1
+4121675,invalid,8.23.0,other,CRLF Injection,curl_maprintf,mprintf.c,reachable,554,,8,1
+4121675,invalid,8.23.0,other,CRLF Injection,curlx_dyn_addf,dynbuf.c,reachable,554,,8,1
+4121675,invalid,8.23.0,other,CRLF Injection,rtsp_do,rtsp.c,reachable,554,rtsp.c:373|rtsp.c:490|rtsp.c:381|rtsp.c:510|rtsp.c:554,8,1
+4121685,invalid,8.23.0,logic,,Curl_conn_meta_get,url.c,reachable,16|20|96|889,,14,1
+4121685,invalid,8.23.0,logic,,Curl_req_soft_reset,request.c,reachable,16|20|96|889,,14,1
+4121685,invalid,8.23.0,logic,,Curl_sendrecv,transfer.c,reachable,16|20|96|889,transfer.c:425,14,1
+4121685,invalid,8.23.0,logic,,curl_easy_perform,easy.c,reachable,16|20|96|889,,14,1
+4121685,invalid,8.23.0,logic,,multi_done,multi.c,reachable,16|20|96|889,multi.c:2553,14,1
+4121685,invalid,8.23.0,logic,,multistate_protoconnect,multi.c,reachable,16|20|96|889,multi.c:2553,14,1
+4121685,invalid,8.23.0,logic,,protocol_connect,multi.c,reachable,16|20|96|889,multi.c:2553,14,1
+4121685,invalid,8.23.0,logic,,rtp_client_write,rtsp.c,reachable,16|20|96|889,rtsp.c:105|rtsp.c:138|rtsp.c:157|rtsp.c:875|rtsp.c:754|rtsp.c:889|rtsp.c:131|rtsp.c:837|rtsp.c:760|rtsp.c:615,14,1
+4121685,invalid,8.23.0,logic,,rtsp_conn_is_dead,rtsp.c,reachable,16|20|96|889,rtsp.c:105|rtsp.c:138|rtsp.c:157|rtsp.c:875|rtsp.c:754|rtsp.c:889|rtsp.c:131|rtsp.c:837|rtsp.c:760|rtsp.c:615,14,1
+4121685,invalid,8.23.0,logic,,rtsp_connect,rtsp.c,reachable,16|20|96|889,rtsp.c:105|rtsp.c:138|rtsp.c:157|rtsp.c:875|rtsp.c:754|rtsp.c:889|rtsp.c:131|rtsp.c:837|rtsp.c:760|rtsp.c:615,14,1
+4121685,invalid,8.23.0,logic,,rtsp_done,rtsp.c,reachable,16|20|96|889,rtsp.c:105|rtsp.c:138|rtsp.c:157|rtsp.c:875|rtsp.c:754|rtsp.c:889|rtsp.c:131|rtsp.c:837|rtsp.c:760|rtsp.c:615,14,1
+4121685,invalid,8.23.0,logic,,rtsp_filter_rtp,rtsp.c,reachable,16|20|96|889,rtsp.c:105|rtsp.c:138|rtsp.c:157|rtsp.c:875|rtsp.c:754|rtsp.c:889|rtsp.c:131|rtsp.c:837|rtsp.c:760|rtsp.c:615,14,1
+4121685,invalid,8.23.0,logic,,rtsp_rtp_write_resp,rtsp.c,reachable,16|20|96|889,rtsp.c:105|rtsp.c:138|rtsp.c:157|rtsp.c:875|rtsp.c:754|rtsp.c:889|rtsp.c:131|rtsp.c:837|rtsp.c:760|rtsp.c:615,14,1
+4121685,invalid,8.23.0,logic,,rtsp_setup_connection,rtsp.c,reachable,16|20|96|889,rtsp.c:105|rtsp.c:138|rtsp.c:157|rtsp.c:875|rtsp.c:754|rtsp.c:889|rtsp.c:131|rtsp.c:837|rtsp.c:760|rtsp.c:615,14,1
+4121689,invalid,8.23.0,other,CRLF Injection,Curl_setstropt,setopt.c,reachable,2881,setopt.c:88,4,1
+4121689,invalid,8.23.0,other,CRLF Injection,curlx_dyn_add,dynbuf.c,reachable,2881,,4,1
+4121689,invalid,8.23.0,other,CRLF Injection,curlx_dyn_addf,dynbuf.c,reachable,2881,,4,1
+4121689,invalid,8.23.0,other,CRLF Injection,http_target,http.c,reachable,2881,http.c:2086|http.c:2173|http.c:2881,4,1
+4122039,invalid,8.23.0,uaf,Use After Free,Curl_node_remove,llist.c,reachable,32|56|64,,4,1
+4122039,invalid,8.23.0,uaf,Use After Free,Curl_share_lock,curl_share.c,reachable,32|56|64,,4,1
+4122039,invalid,8.23.0,uaf,Use After Free,Curl_share_unlock,curl_share.c,reachable,32|56|64,,4,1
+4122039,invalid,8.23.0,uaf,Use After Free,curl_share_setopt,curl_share.c,reachable,32|56|64,,4,1
+4122175,resolved,8.23.0,logic,Incorrect Comparison,curlx_dyn_addf,dynbuf.c,reachable,,,1,1
+4122227,invalid,8.23.0,logic,Improper Certificate Validation,curlx_dyn_add,dynbuf.c,reachable,,,3,1
+4122227,invalid,8.23.0,logic,Improper Certificate Validation,match_ssl_primary_config,vtls_config.c,reachable,,,3,1
+4122227,invalid,8.23.0,logic,Improper Certificate Validation,ssl_easy_config_compl_options,vtls_config.c,reachable,,,3,1
+4122239,resolved,8.23.0,uaf,Use After Free,curl_easy_cleanup,easy.c,reachable,2|3|4|5|184|327|328,easy.c:891,1,1
+4122300,resolved,8.23.0,logic,Improper Certificate Validation,,,reachable,,gtls.c:1511|vtls_config.c:287,0,0
+4122567,invalid,8.23.0,other,Uncontrolled Resource Consumption,Curl_conn_connect,connect.c,reachable,,,4,1
+4122567,invalid,8.23.0,other,Uncontrolled Resource Consumption,Curl_timeleft_ms,connect.c,reachable,,,4,1
+4122567,invalid,8.23.0,other,Uncontrolled Resource Consumption,curl_multi_perform,multi.c,reachable,,,4,1
+4122567,invalid,8.23.0,other,Uncontrolled Resource Consumption,ftp_initiate_transfer,ftp.c,reachable,,ftp.c:550|ftp.c:334,4,1
+4123050,invalid,8.23.0,other,Allocation of Resources Without Limits or Throttling,curl_ws_recv,ws.c,reachable,80|575|1010,ws.c:1712|ws.c:1694,5,1
+4123050,invalid,8.23.0,other,Allocation of Resources Without Limits or Throttling,ws_enc_add_frame,ws.c,reachable,80|575|1010,ws.c:1712|ws.c:1694,5,1
+4123050,invalid,8.23.0,other,Allocation of Resources Without Limits or Throttling,ws_enc_add_pending,ws.c,reachable,80|575|1010,ws.c:1712|ws.c:1694,5,1
+4123050,invalid,8.23.0,other,Allocation of Resources Without Limits or Throttling,ws_enc_write_payload,ws.c,reachable,80|575|1010,ws.c:1712|ws.c:1694,5,1
+4123050,invalid,8.23.0,other,Allocation of Resources Without Limits or Throttling,ws_flush,ws.c,reachable,80|575|1010,ws.c:1712|ws.c:1694,5,1
+4123190,resolved,8.23.0,uaf,Use After Free,Curl_client_read,sendf.c,reachable,65536,,12,1
+4123190,resolved,8.23.0,uaf,Use After Free,Curl_client_reset,sendf.c,reachable,65536,,12,1
+4123190,resolved,8.23.0,uaf,Use After Free,Curl_connect,url.c,reachable,65536,,12,1
+4123190,resolved,8.23.0,uaf,Use After Free,Curl_http_follow,http.c,reachable,65536,,12,1
+4123190,resolved,8.23.0,uaf,Use After Free,Curl_pretransfer,transfer.c,reachable,65536,,12,1
+4123190,resolved,8.23.0,uaf,Use After Free,Curl_req_hard_reset,request.c,reachable,65536,request.c:124|request.c:82|request.c:157|request.c:369|request.c:561|request.c:2026|request.c:1334,12,1
+4123190,resolved,8.23.0,uaf,Use After Free,Curl_req_send_more,request.c,reachable,65536,request.c:124|request.c:82|request.c:157|request.c:369|request.c:561|request.c:2026|request.c:1334,12,1
+4123190,resolved,8.23.0,uaf,Use After Free,cr_buf_read,sendf.c,reachable,65536,,12,1
+4123190,resolved,8.23.0,uaf,Use After Free,curl_easy_reset,easy.c,reachable,65536,,12,1
+4123190,resolved,8.23.0,uaf,Use After Free,curl_easy_setopt,setopt.c,reachable,65536,,12,1
+4123190,resolved,8.23.0,uaf,Use After Free,file_do,file.c,reachable,65536,,12,1
+4123190,resolved,8.23.0,uaf,Use After Free,http_perhapsrewind,http.c,reachable,65536,,12,1
+4123304,invalid,8.23.0,reachability,Improper Certificate Validation,,,reachable,,openssl.c:3946|vtls_config.c:287,0,0
+4123474,invalid,8.23.0,logic,Information Exposure Through Sent Data,Curl_auth_allowed_to_host,vauth.c,reachable,,vauth.c:137,5,1
+4123474,invalid,8.23.0,logic,Information Exposure Through Sent Data,curl_mime_headers,mime.c,reachable,,,5,1
+4123474,invalid,8.23.0,logic,Information Exposure Through Sent Data,follow_switch_get,http.c,reachable,,http.c:1922,5,1
+4123474,invalid,8.23.0,logic,Information Exposure Through Sent Data,http_switch_to_get,http.c,reachable,,http.c:1922,5,1
+4123474,invalid,8.23.0,logic,Information Exposure Through Sent Data,imap_perform_append,imap.c,reachable,,imap.c:876,5,1
+4123571,invalid,8.23.0,reachability,Information Exposure Through Sent Data,Curl_auth_allowed_to_host,vauth.c,reachable,,vauth.c:126,5,1
+4123571,invalid,8.23.0,reachability,Information Exposure Through Sent Data,Curl_auth_allowed_to_origin,vauth.c,reachable,,vauth.c:126,5,1
+4123571,invalid,8.23.0,reachability,Information Exposure Through Sent Data,Curl_auth_user_contains_domain,vauth.c,reachable,,vauth.c:126,5,1
+4123571,invalid,8.23.0,reachability,Information Exposure Through Sent Data,Curl_sasl_can_authenticate,curl_sasl.c,reachable,,curl_sasl.c:277,5,1
+4123571,invalid,8.23.0,reachability,Information Exposure Through Sent Data,url_set_data_creds,url.c,reachable,,url.c:1376,5,1
+4123646,invalid,8.23.0,logic,Improper Certificate Validation,match_ssl_primary_config,vtls_config.c,reachable,,vtls_config.c:148|vtls_config.c:254|vtls_config.c:148,1,1
+4123654,invalid,8.23.0,other,CRLF Injection,Curl_client_read,sendf.c,reachable,,sendf.c:1131,3,1
+4123654,invalid,8.23.0,other,CRLF Injection,Curl_creader_total_length,sendf.c,reachable,,sendf.c:1131,3,1
+4123654,invalid,8.23.0,other,CRLF Injection,do_init_reader_stack,sendf.c,reachable,,sendf.c:1131,3,1
+4123749,invalid,8.23.0,uaf,Use After Free,curl_easy_pause,easy.c,reachable,5|32|518,,4,1
+4123749,invalid,8.23.0,uaf,Use After Free,curl_global_trace,easy.c,reachable,5|32|518,,4,1
+4123749,invalid,8.23.0,uaf,Use After Free,ws_cw_flush,ws.c,reachable,5|32|518,ws.c:503,4,1
+4123749,invalid,8.23.0,uaf,Use After Free,ws_dec_pass_payload,ws.c,reachable,5|32|518,ws.c:503,4,1
+4124276,invalid,8.23.0,logic,Improper Certificate Validation,,,gated_backend,,,0,0
+4124486,invalid,8.23.0,other,CRLF Injection,Curl_creader_total_length,sendf.c,reachable,58|62|94|223,sendf.c:1137,3,1
+4124486,invalid,8.23.0,other,CRLF Injection,cr_lc_add,sendf.c,reachable,58|62|94|223,sendf.c:1137,3,1
+4124486,invalid,8.23.0,other,CRLF Injection,do_init_reader_stack,sendf.c,reachable,58|62|94|223,sendf.c:1137,3,1
+4124549,invalid,8.23.0,logic,Improper Authentication - Generic,Curl_creds_same,creds.c,reachable,,,3,1
+4124549,invalid,8.23.0,logic,Improper Authentication - Generic,Curl_peer_same_destination,peer.c,reachable,,,3,1
+4124549,invalid,8.23.0,logic,Improper Authentication - Generic,url_match_proxy_use,url.c,reachable,,url.c:540,3,1
+4124583,invalid,8.23.0,logic,Improper Validation of Certificate with Host Mismatch,Curl_conn_meta_get,url.c,reachable,,url.c:569,2,1
+4124583,invalid,8.23.0,logic,Improper Validation of Certificate with Host Mismatch,Curl_safecmp,strcase.c,reachable,,,2,1
+4124722,invalid,8.23.0,uaf,Use After Free,curl_easy_pause,easy.c,reachable,767|32767,,4,1
+4124722,invalid,8.23.0,uaf,Use After Free,curl_ws_send,ws.c,reachable,767|32767,ws.c:1734,4,1
+4124722,invalid,8.23.0,uaf,Use After Free,ws_flush,ws.c,reachable,767|32767,ws.c:1734,4,1
+4124722,invalid,8.23.0,uaf,Use After Free,ws_send_raw_blocking,ws.c,reachable,767|32767,ws.c:1734,4,1
+4124849,resolved,8.23.0,integer,External Control of File Name or Path,buffer_header,tool_cb_hdr.c,reachable,17|23|52,,5,1
+4124849,resolved,8.23.0,integer,External Control of File Name or Path,content_disposition,tool_cb_hdr.c,reachable,17|23|52,,5,1
+4124849,resolved,8.23.0,integer,External Control of File Name or Path,set_filename,tool_cb_hdr.c,reachable,17|23|52,,5,1
+4124849,resolved,8.23.0,integer,External Control of File Name or Path,tool_create_output_file,tool_cb_wrt.c,reachable,17|23|52,,5,1
+4124849,resolved,8.23.0,integer,External Control of File Name or Path,tool_write_headers,tool_cb_hdr.c,reachable,17|23|52,,5,1
+4125043,invalid,8.23.0,logic,Insufficiently Protected Credentials,Curl_add_custom_headers,http.c,reachable,,http.c:879|http.c:646,17,1
+4125043,invalid,8.23.0,logic,Insufficiently Protected Credentials,Curl_auth_allowed_to_host,vauth.c,reachable,,,17,1
+4125043,invalid,8.23.0,logic,Insufficiently Protected Credentials,Curl_auth_allowed_to_origin,vauth.c,reachable,,,17,1
+4125043,invalid,8.23.0,logic,Insufficiently Protected Credentials,Curl_connect,url.c,reachable,,url.c:2068|url.c:1371|url.c:1376|url.c:1447|url.c:1275|url.c:1308|url.c:1343|url.c:1454,17,1
+4125043,invalid,8.23.0,logic,Insufficiently Protected Credentials,Curl_creds_link,creds.c,reachable,,,17,1
+4125043,invalid,8.23.0,logic,Insufficiently Protected Credentials,Curl_creds_merge,creds.c,reachable,,,17,1
+4125043,invalid,8.23.0,logic,Insufficiently Protected Credentials,Curl_http_output_auth,http.c,reachable,,http.c:879|http.c:646,17,1
+4125043,invalid,8.23.0,logic,Insufficiently Protected Credentials,Curl_netrc_scan,netrc.c,reachable,,netrc.c:389,17,1
+4125043,invalid,8.23.0,logic,Insufficiently Protected Credentials,Curl_pretransfer,transfer.c,reachable,,,17,1
+4125043,invalid,8.23.0,logic,Insufficiently Protected Credentials,http_cookies,http.c,reachable,,http.c:879|http.c:646,17,1
+4125043,invalid,8.23.0,logic,Insufficiently Protected Credentials,http_output_basic,http.c,reachable,,http.c:879|http.c:646,17,1
+4125043,invalid,8.23.0,logic,Insufficiently Protected Credentials,netrc_scan,netrc.c,reachable,,netrc.c:389,17,1
+4125043,invalid,8.23.0,logic,Insufficiently Protected Credentials,netrc_scan_end_entry,netrc.c,reachable,,netrc.c:389,17,1
+4125043,invalid,8.23.0,logic,Insufficiently Protected Credentials,output_auth_headers,http.c,reachable,,http.c:879|http.c:646,17,1
+4125043,invalid,8.23.0,logic,Insufficiently Protected Credentials,url_set_data_creds,url.c,reachable,,url.c:2068|url.c:1371|url.c:1376|url.c:1447|url.c:1275|url.c:1308|url.c:1343|url.c:1454,17,1
+4125043,invalid,8.23.0,logic,Insufficiently Protected Credentials,url_set_data_creds_netrc,url.c,reachable,,url.c:2068|url.c:1371|url.c:1376|url.c:1447|url.c:1275|url.c:1308|url.c:1343|url.c:1454,17,1
+4125043,invalid,8.23.0,logic,Insufficiently Protected Credentials,url_set_data_origin_and_creds,url.c,reachable,,url.c:2068|url.c:1371|url.c:1376|url.c:1447|url.c:1275|url.c:1308|url.c:1343|url.c:1454,17,1
+4125065,invalid,8.23.0,logic,Uncontrolled Resource Consumption,Curl_cshutdn_add,cshutdn.c,reachable,,,12,1
+4125065,invalid,8.23.0,logic,Uncontrolled Resource Consumption,Curl_cshutdn_perform,cshutdn.c,reachable,,,12,1
+4125065,invalid,8.23.0,logic,Uncontrolled Resource Consumption,Curl_cshutdn_start_timer,cshutdn.c,reachable,,,12,1
+4125065,invalid,8.23.0,logic,Uncontrolled Resource Consumption,Curl_cshutdn_try_once,cshutdn.c,reachable,,,12,1
+4125065,invalid,8.23.0,logic,Uncontrolled Resource Consumption,Curl_expire,multi.c,reachable,,,12,1
+4125065,invalid,8.23.0,logic,Uncontrolled Resource Consumption,Curl_expire_set,multi.c,reachable,,,12,1
+4125065,invalid,8.23.0,logic,Uncontrolled Resource Consumption,cshutdn_conn_timeleft,cshutdn.c,reachable,,,12,1
+4125065,invalid,8.23.0,logic,Uncontrolled Resource Consumption,cshutdn_perform,cshutdn.c,reachable,,,12,1
+4125065,invalid,8.23.0,logic,Uncontrolled Resource Consumption,curl_multi_cleanup,multi.c,reachable,,,12,1
+4125065,invalid,8.23.0,logic,Uncontrolled Resource Consumption,curl_multi_perform,multi.c,reachable,,,12,1
+4125065,invalid,8.23.0,logic,Uncontrolled Resource Consumption,curl_multi_socket_action,multi.c,reachable,,,12,1
+4125065,invalid,8.23.0,logic,Uncontrolled Resource Consumption,curlx_ptimediff_ms,timeval.c,reachable,,,12,1
+4125257,invalid,8.23.0,integer,Insecure Temporary File,Curl_fopen,curl_fopen.c,reachable,58,curl_fopen.c:98|curl_fopen.c:97|curl_fopen.c:98,1,1
+4125601,invalid,8.23.0,logic,Improper Check for Certificate Revocation,,,gated_backend,,,0,0
+4126768,invalid,8.23.0,logic,Authentication Bypass by Primary Weakness,Curl_conn_meta_get,url.c,reachable,,url.c:569|url.c:853|url.c:2358|url.c:2508,7,1
+4126768,invalid,8.23.0,logic,Authentication Bypass by Primary Weakness,Curl_conn_setup,connect.c,reachable,,,7,1
+4126768,invalid,8.23.0,logic,Authentication Bypass by Primary Weakness,Curl_connect,url.c,reachable,,url.c:569|url.c:853|url.c:2358|url.c:2508,7,1
+4126768,invalid,8.23.0,logic,Authentication Bypass by Primary Weakness,Curl_safecmp,strcase.c,reachable,,,7,1
+4126768,invalid,8.23.0,logic,Authentication Bypass by Primary Weakness,curl_easy_perform,easy.c,reachable,,,7,1
+4126768,invalid,8.23.0,logic,Authentication Bypass by Primary Weakness,match_ssl_primary_config,vtls_config.c,reachable,,,7,1
+4126768,invalid,8.23.0,logic,Authentication Bypass by Primary Weakness,url_match_proto_config,url.c,reachable,,url.c:569|url.c:853|url.c:2358|url.c:2508,7,1
+4127231,invalid,8.23.0,logic,Improper Input Validation,Curl_get_line,curl_get_line.c,reachable,40|47|48,,8,1
+4127231,invalid,8.23.0,logic,Improper Input Validation,cookie_load,cookie.c,reachable,40|47|48,,8,1
+4127231,invalid,8.23.0,logic,Improper Input Validation,curl_maprintf,mprintf.c,reachable,40|47|48,,8,1
+4127231,invalid,8.23.0,logic,Improper Input Validation,curlx_dyn_free,dynbuf.c,reachable,40|47|48,,8,1
+4127231,invalid,8.23.0,logic,Improper Input Validation,curlx_dyn_init,dynbuf.c,reachable,40|47|48,,8,1
+4127231,invalid,8.23.0,logic,Improper Input Validation,get_netscape_format,cookie.c,reachable,40|47|48,,8,1
+4127231,invalid,8.23.0,logic,Improper Input Validation,sanitize_cookie_path,cookie.c,reachable,40|47|48,,8,1
+4127231,invalid,8.23.0,logic,Improper Input Validation,storecookie,cookie.c,reachable,40|47|48,,8,1
+4127399,invalid,8.23.0,logic,Improper Certificate Validation,curl_easy_setopt,setopt.c,reachable,,,2,1
+4127399,invalid,8.23.0,logic,Improper Certificate Validation,warnf,tool_msgs.c,reachable,,,2,1
+4127756,invalid,8.23.0,reachability,Improper Input Validation,curl_url_get,urlapi.c,reachable,,,2,1
+4127756,invalid,8.23.0,reachability,Improper Input Validation,curl_url_set,urlapi.c,reachable,,,2,1
+4128428,resolved,8.23.0,logic,Improper Certificate Validation,,,gated_backend,,CURLOPT_SSL_VERIFYPEER.md:1717,0,0
+4128701,invalid,8.23.0,logic,Improper Certificate Validation,,,gated_backend,,x509asn1.c:1140,0,0
+4128703,invalid,8.23.0,logic,Acceptance of Extraneous Untrusted Data With Trusted Data,Curl_conn_is_alive,cfilters.c,reachable,,,3,1
+4128703,invalid,8.23.0,logic,Acceptance of Extraneous Untrusted Data With Trusted Data,Curl_cpool_conn_seems_healthy,conncache.c,reachable,,conncache.c:1073,3,1
+4128703,invalid,8.23.0,logic,Acceptance of Extraneous Untrusted Data With Trusted Data,cf_socket_conn_is_alive,cf-socket.c,reachable,,cf-socket.c:1811,3,1
+4129638,invalid,8.23.0,logic,Improper Certificate Validation,match_ssl_primary_config,vtls_config.c,reachable,,,1,1
+4129642,invalid,8.23.0,logic,Improper Certificate Validation,curl_strnequal,strequal.c,reachable,,,2,1
+4129642,invalid,8.23.0,logic,Improper Certificate Validation,hostname_check,urlapi.c,reachable,,,2,1
+4129950,invalid,8.23.0,logic,Server-Side Request Forgery (SSRF),curl_url_get,urlapi.c,reachable,,urlapi.c:1638|urlapi.c:446,2,1
+4129950,invalid,8.23.0,logic,Server-Side Request Forgery (SSRF),curl_url_set,urlapi.c,reachable,,urlapi.c:1638|urlapi.c:446,2,1
+4130124,invalid,8.23.0,other,"Improper Neutralization of Escape, Meta, or Control Sequences",parse_filename,tool_cb_hdr.c,reachable,,tool_cb_hdr.c:150,3,1
+4130124,invalid,8.23.0,other,"Improper Neutralization of Escape, Meta, or Control Sequences",tool_create_output_file,tool_cb_wrt.c,reachable,,,3,1
+4130124,invalid,8.23.0,other,"Improper Neutralization of Escape, Meta, or Control Sequences",voutf,tool_msgs.c,reachable,,,3,1
+4131903,invalid,8.23.0,other,,Curl_conn_data_pending,cfilters.c,reachable,,,12,1
+4131903,invalid,8.23.0,other,,Curl_conn_is_alive,cfilters.c,reachable,,,12,1
+4131903,invalid,8.23.0,other,,Curl_conn_meta_set,url.c,reachable,,,12,1
+4131903,invalid,8.23.0,other,,Curl_cpool_conn_seems_healthy,conncache.c,reachable,,conncache.c:1056,12,1
+4131903,invalid,8.23.0,other,,Curl_poll,select.c,reachable,,,12,1
+4131903,invalid,8.23.0,other,,Curl_pp_moredata,pingpong.c,reachable,,pingpong.c:308|pingpong.c:246,12,1
+4131903,invalid,8.23.0,other,,ftp_done,ftp.c,reachable,,ftp.c:480,12,1
+4131903,invalid,8.23.0,other,,imap_done,imap.c,reachable,,,12,1
+4131903,invalid,8.23.0,other,,imap_endofresp,imap.c,reachable,,,12,1
+4131903,invalid,8.23.0,other,,pop3_done,pop3.c,reachable,,pop3.c:1242|pop3.c:1687,12,1
+4131903,invalid,8.23.0,other,,pop3_setup_connection,pop3.c,reachable,,pop3.c:1242|pop3.c:1687,12,1
+4131903,invalid,8.23.0,other,,smtp_done,smtp.c,reachable,,,12,1
+4132132,invalid,8.23.0,other,Acceptance of Extraneous Untrusted Data With Trusted Data,curlx_dyn_len,dynbuf.c,reachable,,,2,1
+4132132,invalid,8.23.0,other,Acceptance of Extraneous Untrusted Data With Trusted Data,pop3_write,pop3.c,reachable,,pop3.c:1241|pop3.c:1252,2,1
+4135291,invalid,8.23.0,uaf,Use After Free,curl_easy_pause,easy.c,reachable,8|64|127,easy.c:1243,3,1
+4135291,invalid,8.23.0,uaf,Use After Free,curl_multi_remove_handle,multi.c,reachable,8|64|127,multi.c:821,3,1
+4135291,invalid,8.23.0,uaf,Use After Free,mev_pollset_diff,multi_ev.c,reachable,8|64|127,multi_ev.c:437|multi_ev.c:437,3,1
+4135826,invalid,8.23.0,logic,Improper Check for Certificate Revocation,,,no_target,,,0,0
+4136767,resolved,8.23.0,logic,Improper Authentication - Generic,,,no_target,,,0,0
+4137523,invalid,8.23.0,other,Expected Behavior Violation,,,no_target,,,0,0
