@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this artifact, please cite the paper below."
+title: "Proof-Carrying Triage: Refuting AI-Generated Vulnerability Reports with Certificates a Maintainer Can Check"
+authors:
+  - family-names: Melhem
+    given-names: Adam
+    affiliation: "Independent Researcher"
+date-released: 2026-10-27
+version: "1.0"
+license: MIT
+url: "https://github.com/stillnotadam/quash"
+keywords:
+  - software security
+  - program analysis
+  - SMT
+  - vulnerability triage
+  - large language models
+  - proof-carrying code

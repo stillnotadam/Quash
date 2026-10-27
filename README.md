@@ -10,8 +10,8 @@ The paper is in `paper/paper.pdf` (compile `paper/paper.tex`, or read `paper/pap
 ## Try it in 60 seconds
 No curl build needed; the reference checker runs on committed GIMPLE for the example claims.
 ```
-git clone https://github.com/stillnotadam/proof-carrying-triage
-cd proof-carrying-triage
+git clone https://github.com/stillnotadam/quash
+cd quash
 pip install -r requirements.txt
 python code/ccvr_check.py paper/examples/slop_bounds_telnet.json       # REFUTED + "verified-unsat"
 python code/ccvr_check.py paper/examples/slop_bounds_ws.json           # REFUTED + "verified-unsat"
