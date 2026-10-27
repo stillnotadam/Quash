@@ -1,0 +1,4419 @@
+
+;; Function read (read, funcdef_no=40, decl_uid=4341, cgraph_uid=41, symbol_order=40)
+
+__attribute__((artificial, gnu_inline, always_inline))
+__attribute__((access ("w1,2"), warn_unused_result))
+ssize_t read (int __fd, void * __buf, size_t __nbytes)
+{
+  long unsigned int _1;
+  _Bool _2;
+  int _3;
+  int _4;
+  long unsigned int _5;
+  long unsigned int _6;
+  _Bool _7;
+  int _8;
+  int _9;
+  long unsigned int _10;
+  long unsigned int _11;
+  long unsigned int _12;
+  ssize_t iftmp.24_13;
+  ssize_t iftmp.25_14;
+  ssize_t iftmp.24_22;
+  ssize_t iftmp.25_24;
+  ssize_t iftmp.25_26;
+  ssize_t iftmp.24_27;
+  ssize_t _28;
+
+  <bb 2> :
+  [/usr/include/x86_64-linux-gnu/bits/unistd.h:38:10] _1 = __builtin_object_size (__buf_17(D), 0);
+  [/usr/include/x86_64-linux-gnu/bits/unistd.h:38:10] _2 = __nbytes_18(D) <= _1;
+  [/usr/include/x86_64-linux-gnu/bits/unistd.h:38:10] _3 = (int) _2;
+  [/usr/include/x86_64-linux-gnu/bits/unistd.h:38:10] _4 = __builtin_constant_p (_3);
+  [/usr/include/x86_64-linux-gnu/bits/unistd.h:38:10] if (_4 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 3> :
+  [/usr/include/x86_64-linux-gnu/bits/unistd.h:38:10] _5 = __builtin_object_size (__buf_17(D), 0);
+  [/usr/include/x86_64-linux-gnu/bits/unistd.h:38:10] if (__nbytes_18(D) <= _5)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  [/usr/include/x86_64-linux-gnu/bits/unistd.h:38:10] iftmp.24_22 = __read_alias (__fd_20(D), __buf_17(D), __nbytes_18(D));
+  [/usr/include/x86_64-linux-gnu/bits/unistd.h:38:10] goto <bb 10>; [INV]
+
+  <bb 5> :
+  [/usr/include/x86_64-linux-gnu/bits/unistd.h:38:10] _6 = __builtin_object_size (__buf_17(D), 0);
+  [/usr/include/x86_64-linux-gnu/bits/unistd.h:38:10] _7 = __nbytes_18(D) <= _6;
+  [/usr/include/x86_64-linux-gnu/bits/unistd.h:38:10] _8 = (int) _7;
+  [/usr/include/x86_64-linux-gnu/bits/unistd.h:38:10] _9 = __builtin_constant_p (_8);
+  [/usr/include/x86_64-linux-gnu/bits/unistd.h:38:10] if (_9 != 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 6> :
+  [/usr/include/x86_64-linux-gnu/bits/unistd.h:38:10] _10 = __builtin_object_size (__buf_17(D), 0);
+  [/usr/include/x86_64-linux-gnu/bits/unistd.h:38:10] if (__nbytes_18(D) > _10)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  [/usr/include/x86_64-linux-gnu/bits/unistd.h:38:10] _11 = __builtin_object_size (__buf_17(D), 0);
+  [/usr/include/x86_64-linux-gnu/bits/unistd.h:38:10] iftmp.25_24 = __read_chk_warn (__fd_20(D), __buf_17(D), __nbytes_18(D), _11);
+  [/usr/include/x86_64-linux-gnu/bits/unistd.h:38:10] goto <bb 9>; [INV]
+
+  <bb 8> :
+  [/usr/include/x86_64-linux-gnu/bits/unistd.h:38:10] _12 = __builtin_object_size (__buf_17(D), 0);
+  [/usr/include/x86_64-linux-gnu/bits/unistd.h:38:10] iftmp.25_26 = __read_chk (__fd_20(D), __buf_17(D), __nbytes_18(D), _12);
+
+  <bb 9> :
+  # iftmp.25_14 = PHI <[/usr/include/x86_64-linux-gnu/bits/unistd.h:38:10] iftmp.25_24(7), [/usr/include/x86_64-linux-gnu/bits/unistd.h:38:10] iftmp.25_26(8)>
+  [/usr/include/x86_64-linux-gnu/bits/unistd.h:38:10] iftmp.24_27 = iftmp.25_14;
+
+  <bb 10> :
+  # iftmp.24_13 = PHI <[/usr/include/x86_64-linux-gnu/bits/unistd.h:38:10] iftmp.24_22(4), [/usr/include/x86_64-linux-gnu/bits/unistd.h:38:10] iftmp.24_27(9)>
+  [/usr/include/x86_64-linux-gnu/bits/unistd.h:38:10] _28 = iftmp.24_13;
+  [/usr/include/x86_64-linux-gnu/bits/unistd.h:38:10] return _28;
+
+}
+
+
+
+;; Function str_is_nonascii (str_is_nonascii, funcdef_no=119, decl_uid=11863, cgraph_uid=120, symbol_order=121)
+
+_Bool str_is_nonascii (const char * str)
+{
+  char c;
+  const char * str.13_1;
+  _Bool _3;
+  _Bool _8;
+  _Bool _9;
+
+  <bb 2> :
+  [telnet.c:821:8] goto <bb 5>; [INV]
+
+  <bb 3> :
+  [telnet.c:822:7] if (c_7 < 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  [telnet.c:823:14] _9 = 1;
+  [telnet.c:823:14] // predicted unlikely by early return (on trees) predictor.
+  [telnet.c:823:14] goto <bb 7>; [INV]
+
+  <bb 5> :
+  # str_2 = PHI <str_4(D)(2), [telnet.c:821:18] str_5(3)>
+  [telnet.c:821:18] str.13_1 = str_2;
+  [telnet.c:821:18] str_5 = str.13_1 + 1;
+  [telnet.c:821:12] c_7 = [telnet.c:821:14] *str.13_1;
+  [telnet.c:821:22] if (c_7 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 6> :
+  [telnet.c:825:10] _8 = 0;
+
+  <bb 7> :
+  # _3 = PHI <[telnet.c:823:14] _9(4), [telnet.c:825:10] _8(6)>
+  return _3;
+
+}
+
+
+
+;; Function telnet_done (telnet_done, funcdef_no=124, decl_uid=11971, cgraph_uid=125, symbol_order=126)
+
+CURLcode telnet_done (struct Curl_easy * data, CURLcode status, _Bool premature)
+{
+  CURLcode _4;
+
+  <bb 2> :
+  [telnet.c:1216:3] Curl_meta_remove (data_2(D), [telnet.c:1216:26] "meta:proto:telnet:easy");
+  [telnet.c:1217:10] _4 = 0;
+  [telnet.c:1217:10] return _4;
+
+}
+
+
+
+;; Function init_telnet (init_telnet, funcdef_no=107, decl_uid=11572, cgraph_uid=108, symbol_order=109)
+
+CURLcode init_telnet (struct Curl_easy * data)
+{
+  struct TELNET * tn;
+  void * (*<Ta09>) (size_t, size_t) Curl_ccalloc.6_1;
+  struct dynbuf * _2;
+  unsigned char[512] * _3;
+  CURLcode _4;
+  CURLcode _20;
+  CURLcode _21;
+
+  <bb 2> :
+  [telnet.c:184:8] Curl_ccalloc.6_1 = Curl_ccalloc;
+  [telnet.c:184:8] tn_8 = Curl_ccalloc.6_1 (1, 7768);
+  [telnet.c:185:5] if (tn_8 == 0B)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  [telnet.c:186:12] _21 = 27;
+  [telnet.c:186:12] // predicted unlikely by early return (on trees) predictor.
+  [telnet.c:186:12] goto <bb 5>; [INV]
+
+  <bb 4> :
+  [telnet.c:188:3] _2 = [telnet.c:188:3] &[telnet.c:188:21] tn_8->out;
+  [telnet.c:188:3] curlx_dyn_init (_2, 65535);
+  [telnet.c:190:20] [telnet.c:190:5] tn_8->telrcv_state = 0;
+  [telnet.c:193:3] _3 = [telnet.c:193:3] &[telnet.c:193:3] tn_8->subbuffer;
+  [telnet.c:193:3] [telnet.c:193:3] tn_8->subpointer = _3;
+  [telnet.c:196:37] [telnet.c:196:19] [telnet.c:196:5] tn_8->us_preferred[3] = 1;
+  [telnet.c:197:38] [telnet.c:197:20] [telnet.c:197:5] tn_8->him_preferred[3] = 1;
+  [telnet.c:202:40] [telnet.c:202:19] [telnet.c:202:5] tn_8->us_preferred[0] = 1;
+  [telnet.c:203:41] [telnet.c:203:20] [telnet.c:203:5] tn_8->him_preferred[0] = 1;
+  [telnet.c:208:39] [telnet.c:208:20] [telnet.c:208:5] tn_8->him_preferred[1] = 1;
+  [telnet.c:220:40] [telnet.c:220:21] [telnet.c:220:5] tn_8->subnegotiation[31] = 1;
+  [telnet.c:222:10] _20 = Curl_meta_set (data_18(D), [telnet.c:222:30] "meta:proto:telnet:easy", tn_8, [telnet.c:222:57] telnet_easy_dtor);
+
+  <bb 5> :
+  # _4 = PHI <[telnet.c:186:12] _21(3), [telnet.c:222:10] _20(4)>
+  return _4;
+
+}
+
+
+
+;; Function telnet_easy_dtor (telnet_easy_dtor, funcdef_no=106, decl_uid=11568, cgraph_uid=107, symbol_order=108)
+
+void telnet_easy_dtor (const void * key, size_t klen, void * entry)
+{
+  struct TELNET * tn;
+  struct curl_slist * _1;
+  struct dynbuf * _2;
+  void (*<Tee>) (void *) Curl_cfree.7_3;
+
+  <bb 2> :
+  [telnet.c:172:18] tn_5 = entry_4(D);
+  [telnet.c:175:3] _1 = [telnet.c:175:3] tn_5->telnet_vars;
+  [telnet.c:175:3] curl_slist_free_all (_1);
+  [telnet.c:176:3] _2 = [telnet.c:176:3] &[telnet.c:176:21] tn_5->out;
+  [telnet.c:176:3] curlx_dyn_free (_2);
+  [telnet.c:177:3] Curl_cfree.7_3 = Curl_cfree;
+  [telnet.c:177:3] Curl_cfree.7_3 (tn_5);
+  [telnet.c:178:1] return;
+
+}
+
+
+
+;; Function bad_option (bad_option, funcdef_no=121, decl_uid=11900, cgraph_uid=122, symbol_order=123)
+
+_Bool bad_option (const char * data)
+{
+  char * _1;
+  int iftmp.23_2;
+  int iftmp.23_5;
+  int iftmp.23_6;
+  _Bool _7;
+
+  <bb 2> :
+  [telnet.c:962:16] if (data_3(D) == 0B)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 3>; [INV]
+
+  <bb 3> :
+  [telnet.c:962:21] _1 = strchr (data_3(D), 255);
+  [telnet.c:962:16] if (_1 != 0B)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  [telnet.c:962:16] iftmp.23_6 = 1;
+  [telnet.c:962:16] goto <bb 6>; [INV]
+
+  <bb 5> :
+  [telnet.c:962:16] iftmp.23_5 = 0;
+
+  <bb 6> :
+  # iftmp.23_2 = PHI <[telnet.c:962:16] iftmp.23_6(4), [telnet.c:962:16] iftmp.23_5(5)>
+  [telnet.c:962:16] _7 = (_Bool) iftmp.23_2;
+  [telnet.c:962:16] return _7;
+
+}
+
+
+
+;; Function check_telnet_options (check_telnet_options, funcdef_no=120, decl_uid=11871, cgraph_uid=121, symbol_order=122)
+
+CURLcode check_telnet_options (struct Curl_easy * data, struct TELNET * tn)
+{
+  curl_off_t binary_option;
+  const char * p;
+  curl_off_t y;
+  curl_off_t x;
+  const char * p;
+  const char * sep;
+  const char * arg;
+  const char * option;
+  size_t olen;
+  char buffer[256];
+  CURLcode result;
+  struct curl_slist * beg;
+  struct curl_slist * head;
+  struct Curl_creds * _1;
+  struct connectdata * _2;
+  struct Curl_creds * _3;
+  struct connectdata * _4;
+  struct Curl_creds * _5;
+  _Bool _6;
+  struct connectdata * _7;
+  struct Curl_creds * _8;
+  struct connectdata * _9;
+  struct Curl_creds * _10;
+  struct curl_slist * _11;
+  struct curl_slist * _12;
+  long int _13;
+  _Bool _14;
+  int _15;
+  int _16;
+  int _17;
+  struct curl_slist * _18;
+  int _19;
+  int _20;
+  int _21;
+  int _22;
+  char * _23;
+  long int x.10_24;
+  short unsigned int _25;
+  long int y.11_26;
+  short unsigned int _27;
+  int _28;
+  int _29;
+  long int binary_option.12_30;
+  char * _31;
+  char * _32;
+  _Bool _33;
+  _Bool _34;
+  _Bool _35;
+  struct curl_slist * _36;
+  const char * iftmp.8_41;
+  CURLcode _42;
+  CURLcode _43;
+  const char * iftmp.9_44;
+  const char * iftmp.8_57;
+  const char * iftmp.8_58;
+  const char * iftmp.9_60;
+  const char * iftmp.9_61;
+  CURLcode _71;
+  CURLcode _72;
+  CURLcode _77;
+
+  <bb 2> :
+  [telnet.c:833:12] result_54 = 0;
+  [telnet.c:837:17] _1 = [telnet.c:837:17] [telnet.c:837:10] data_56(D)->state.creds;
+  [telnet.c:837:5] if (_1 != 0B)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 3> :
+  [telnet.c:839:24] _2 = [telnet.c:839:24] data_56(D)->conn;
+  [telnet.c:839:24] _3 = [telnet.c:839:24] _2->creds;
+  [telnet.c:839:8] if (_3 != 0B)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  [telnet.c:839:24] _4 = [telnet.c:839:24] data_56(D)->conn;
+  [telnet.c:839:24] _5 = [telnet.c:839:24] _4->creds;
+  [telnet.c:839:8] iftmp.8_58 = [telnet.c:839:24] _5->user;
+  [0:0] goto <bb 6>; [INV]
+
+  <bb 5> :
+  [telnet.c:839:8] iftmp.8_57 = [telnet.c:839:24] "";
+
+  <bb 6> :
+  # iftmp.8_41 = PHI <[telnet.c:839:8] iftmp.8_58(4), [telnet.c:839:8] iftmp.8_57(5)>
+  [telnet.c:839:8] _6 = str_is_nonascii (iftmp.8_41);
+  [telnet.c:839:7] if (_6 != 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  [telnet.c:841:14] _72 = 43;
+  [telnet.c:841:14] // predicted unlikely by early return (on trees) predictor.
+  [telnet.c:841:14] goto <bb 14>; [INV]
+
+  <bb 8> :
+  [telnet.c:844:20] _7 = [telnet.c:844:20] data_56(D)->conn;
+  [telnet.c:844:20] _8 = [telnet.c:844:20] _7->creds;
+  [telnet.c:843:5] if (_8 != 0B)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 9> :
+  [telnet.c:844:20] _9 = [telnet.c:844:20] data_56(D)->conn;
+  [telnet.c:844:20] _10 = [telnet.c:844:20] _9->creds;
+  [telnet.c:843:5] iftmp.9_61 = [telnet.c:844:20] _10->user;
+  [0:0] goto <bb 11>; [INV]
+
+  <bb 10> :
+  [telnet.c:843:5] iftmp.9_60 = [telnet.c:844:20] "";
+
+  <bb 11> :
+  # iftmp.9_44 = PHI <[telnet.c:843:5] iftmp.9_61(9), [telnet.c:843:5] iftmp.9_60(10)>
+  [telnet.c:843:5] curl_msnprintf ([telnet.c:843:20] &buffer, 256, [telnet.c:843:44] "USER,%s", iftmp.9_44);
+  [telnet.c:845:11] _11 = [telnet.c:845:11] tn_63(D)->telnet_vars;
+  [telnet.c:845:11] beg_65 = curl_slist_append (_11, [telnet.c:845:46] &buffer);
+  [telnet.c:846:7] if (beg_65 == 0B)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 12> :
+  [telnet.c:847:7] _12 = [telnet.c:847:7] tn_63(D)->telnet_vars;
+  [telnet.c:847:7] curl_slist_free_all (_12);
+  [telnet.c:848:23] [telnet.c:848:9] tn_63(D)->telnet_vars = 0B;
+  [telnet.c:849:14] _71 = 27;
+  [telnet.c:849:14] // predicted unlikely by early return (on trees) predictor.
+  [telnet.c:849:14] goto <bb 14>; [INV]
+
+  <bb 13> :
+  [telnet.c:851:21] [telnet.c:851:7] tn_63(D)->telnet_vars = beg_65;
+  [telnet.c:852:47] [telnet.c:852:21] [telnet.c:852:7] tn_63(D)->us_preferred[39] = 1;
+  buffer ={v} {CLOBBER};
+  [0:0] goto <bb 15>; [INV]
+
+  <bb 14> :
+  # _42 = PHI <[telnet.c:841:14] _72(7), [telnet.c:849:14] _71(12)>
+  [telnet.c:841:14] buffer ={v} {CLOBBER};
+  goto <bb 52>; [INV]
+
+  <bb 15> :
+  [telnet.c:855:12] head_74 = [telnet.c:855:23] [telnet.c:855:18] data_56(D)->set.telnet_options;
+  [telnet.c:855:3] goto <bb 48>; [INV]
+
+  <bb 16> :
+  [telnet.c:857:17] option_78 = [telnet.c:857:30] head_37->data;
+  [telnet.c:859:23] sep_79 = strchr (option_78, 61);
+  [telnet.c:860:7] if (sep_79 != 0B)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 46>; [INV]
+
+  <bb 17> :
+  [telnet.c:861:18] _13 = sep_79 - option_78;
+  [telnet.c:861:12] olen_82 = (size_t) _13;
+  [telnet.c:862:11] sep_83 = sep_79 + 1;
+  [telnet.c:862:11] arg_84 = sep_83;
+  [telnet.c:863:10] _14 = str_is_nonascii (arg_84);
+  [telnet.c:863:9] if (_14 != 0)
+    goto <bb 18>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 18> :
+  [telnet.c:863:9] // predicted unlikely by continue predictor.
+  [telnet.c:864:9] goto <bb 47>; [INV]
+
+  <bb 19> :
+  [telnet.c:865:7] switch (olen_82) <[telnet.c:937:7] default: <L47> [INV], [telnet.c:901:7] case 2: <L30> [INV], [telnet.c:866:7] case 5: <L18> [INV], [telnet.c:923:7] case 6: <L39> [INV], [telnet.c:886:7] case 7: <L24> [INV], [telnet.c:876:7] case 8: <L21> [INV]>
+
+  <bb 20> :
+[telnet.c:866:7] <L18>:
+  [telnet.c:868:12] _15 = curl_strnequal (option_78, [telnet.c:868:12] "TTYPE", 5);
+  [telnet.c:868:11] if (_15 != 0)
+    goto <bb 21>; [INV]
+  else
+    goto <bb 22>; [INV]
+
+  <bb 21> :
+  [telnet.c:869:28] [telnet.c:869:13] tn_63(D)->subopt_ttype = arg_84;
+  [telnet.c:870:47] [telnet.c:870:27] [telnet.c:870:13] tn_63(D)->us_preferred[24] = 1;
+  [telnet.c:871:11] goto <bb 47>; [INV]
+
+  <bb 22> :
+  [telnet.c:873:16] result_106 = 48;
+  [telnet.c:874:9] goto <bb 47>; [INV]
+
+  <bb 23> :
+[telnet.c:876:7] <L21>:
+  [telnet.c:878:12] _16 = curl_strnequal (option_78, [telnet.c:878:12] "XDISPLOC", 8);
+  [telnet.c:878:11] if (_16 != 0)
+    goto <bb 24>; [INV]
+  else
+    goto <bb 25>; [INV]
+
+  <bb 24> :
+  [telnet.c:879:31] [telnet.c:879:13] tn_63(D)->subopt_xdisploc = arg_84;
+  [telnet.c:880:50] [telnet.c:880:27] [telnet.c:880:13] tn_63(D)->us_preferred[35] = 1;
+  [telnet.c:881:11] goto <bb 47>; [INV]
+
+  <bb 25> :
+  [telnet.c:883:16] result_87 = 48;
+  [telnet.c:884:9] goto <bb 47>; [INV]
+
+  <bb 26> :
+[telnet.c:886:7] <L24>:
+  [telnet.c:888:12] _17 = curl_strnequal (option_78, [telnet.c:888:12] "NEW_ENV", 7);
+  [telnet.c:888:11] if (_17 != 0)
+    goto <bb 27>; [INV]
+  else
+    goto <bb 30>; [INV]
+
+  <bb 27> :
+  [telnet.c:889:17] _18 = [telnet.c:889:17] tn_63(D)->telnet_vars;
+  [telnet.c:889:17] beg_93 = curl_slist_append (_18, arg_84);
+  [telnet.c:890:13] if (beg_93 == 0B)
+    goto <bb 28>; [INV]
+  else
+    goto <bb 29>; [INV]
+
+  <bb 28> :
+  [telnet.c:891:20] result_96 = 27;
+  [telnet.c:892:13] goto <bb 47>; [INV]
+
+  <bb 29> :
+  [telnet.c:894:27] [telnet.c:894:13] tn_63(D)->telnet_vars = beg_93;
+  [telnet.c:895:53] [telnet.c:895:27] [telnet.c:895:13] tn_63(D)->us_preferred[39] = 1;
+  [0:0] goto <bb 47>; [INV]
+
+  <bb 30> :
+  [telnet.c:898:18] result_91 = 48;
+  goto <bb 47>; [INV]
+
+  <bb 31> :
+[telnet.c:901:7] <L30>:
+  [telnet.c:903:12] _19 = curl_strnequal (option_78, [telnet.c:903:12] "WS", 2);
+  [telnet.c:903:11] if (_19 != 0)
+    goto <bb 32>; [INV]
+  else
+    goto <bb 38>; [INV]
+
+  <bb 32> :
+  [telnet.c:904:23] p = arg_84;
+  [telnet.c:905:22] x = 0;
+  [telnet.c:906:22] y = 0;
+  [telnet.c:907:14] _20 = curlx_str_number ([telnet.c:907:14] &p, [telnet.c:907:14] &x, 65535);
+  [telnet.c:907:13] if (_20 != 0)
+    goto <bb 35>; [INV]
+  else
+    goto <bb 33>; [INV]
+
+  <bb 33> :
+  [telnet.c:908:14] _21 = curlx_str_single ([telnet.c:908:14] &p, 120);
+  [telnet.c:907:47] if (_21 != 0)
+    goto <bb 35>; [INV]
+  else
+    goto <bb 34>; [INV]
+
+  <bb 34> :
+  [telnet.c:909:14] _22 = curlx_str_number ([telnet.c:909:14] &p, [telnet.c:909:14] &y, 65535);
+  [telnet.c:908:40] if (_22 != 0)
+    goto <bb 35>; [INV]
+  else
+    goto <bb 36>; [INV]
+
+  <bb 35> :
+  [telnet.c:910:13] _23 = [telnet.c:910:13] head_37->data;
+  [telnet.c:910:13] Curl_failf (data_56(D), [telnet.c:910:25] "Syntax error in telnet option: %s", _23);
+  [telnet.c:911:20] result_121 = 49;
+  [telnet.c:911:20] goto <bb 37>; [INV]
+
+  <bb 36> :
+  [telnet.c:914:30] x.10_24 = x;
+  [telnet.c:914:30] _25 = (short unsigned int) x.10_24;
+  [telnet.c:914:28] [telnet.c:914:15] tn_63(D)->subopt_wsx = _25;
+  [telnet.c:915:30] y.11_26 = y;
+  [telnet.c:915:30] _27 = (short unsigned int) y.11_26;
+  [telnet.c:915:28] [telnet.c:915:15] tn_63(D)->subopt_wsy = _27;
+  [telnet.c:916:48] [telnet.c:916:29] [telnet.c:916:15] tn_63(D)->us_preferred[31] = 1;
+
+  <bb 37> :
+  # result_38 = PHI <[telnet.c:911:20] result_121(35), result_40(36)>
+  p ={v} {CLOBBER};
+  x ={v} {CLOBBER};
+  y ={v} {CLOBBER};
+  [0:0] goto <bb 47>; [INV]
+
+  <bb 38> :
+  [telnet.c:920:18] result_110 = 48;
+  goto <bb 47>; [INV]
+
+  <bb 39> :
+[telnet.c:923:7] <L39>:
+  [telnet.c:925:12] _28 = curl_strnequal (option_78, [telnet.c:925:12] "BINARY", 6);
+  [telnet.c:925:11] if (_28 != 0)
+    goto <bb 40>; [INV]
+  else
+    goto <bb 44>; [INV]
+
+  <bb 40> :
+  [telnet.c:926:23] p = arg_84;
+  [telnet.c:928:15] _29 = curlx_str_number ([telnet.c:928:15] &p, [telnet.c:928:15] &binary_option, 1);
+  [telnet.c:928:13] if (_29 == 0)
+    goto <bb 41>; [INV]
+  else
+    goto <bb 43>; [INV]
+
+  <bb 41> :
+  [telnet.c:929:29] binary_option.12_30 = binary_option;
+  [telnet.c:928:55] if (binary_option.12_30 != 1)
+    goto <bb 42>; [INV]
+  else
+    goto <bb 43>; [INV]
+
+  <bb 42> :
+  [telnet.c:930:50] [telnet.c:930:29] [telnet.c:930:15] tn_63(D)->us_preferred[0] = 0;
+  [telnet.c:931:51] [telnet.c:931:30] [telnet.c:931:15] tn_63(D)->him_preferred[0] = 0;
+
+  <bb 43> :
+  p ={v} {CLOBBER};
+  binary_option ={v} {CLOBBER};
+  [0:0] goto <bb 47>; [INV]
+
+  <bb 44> :
+  [telnet.c:935:18] result_98 = 48;
+  goto <bb 47>; [INV]
+
+  <bb 45> :
+[telnet.c:937:7] <L47>:
+  [telnet.c:938:9] _31 = [telnet.c:938:9] head_37->data;
+  [telnet.c:938:9] Curl_failf (data_56(D), [telnet.c:938:21] "Unknown telnet option %s", _31);
+  [telnet.c:939:16] result_126 = 48;
+  [telnet.c:940:9] goto <bb 47>; [INV]
+
+  <bb 46> :
+  [telnet.c:944:7] _32 = [telnet.c:944:7] head_37->data;
+  [telnet.c:944:7] Curl_failf (data_56(D), [telnet.c:944:19] "Syntax error in telnet option: %s", _32);
+  [telnet.c:945:14] result_81 = 49;
+
+  <bb 47> :
+  # result_39 = PHI <result_40(18), [telnet.c:873:16] result_106(22), [telnet.c:945:14] result_81(46), result_40(21), result_40(43), result_38(37), result_40(29), [telnet.c:939:16] result_126(45), [telnet.c:935:18] result_98(44), [telnet.c:920:18] result_110(38), [telnet.c:898:18] result_91(30), [telnet.c:891:20] result_96(28), [telnet.c:883:16] result_87(25), result_40(24)>
+  [telnet.c:855:62] head_127 = [telnet.c:855:68] head_37->next;
+
+  <bb 48> :
+  # head_37 = PHI <[telnet.c:855:12] head_74(15), [telnet.c:855:62] head_127(47)>
+  # result_40 = PHI <[telnet.c:833:12] result_54(15), result_39(47)>
+  [telnet.c:855:40] _33 = head_37 != 0B;
+  [telnet.c:855:48] _34 = result_40 == 0;
+  [telnet.c:855:45] _35 = _33 & _34;
+  [telnet.c:855:45] if (_35 != 0)
+    goto <bb 16>; [INV]
+  else
+    goto <bb 49>; [INV]
+
+  <bb 49> :
+  [telnet.c:949:5] if (result_40 != 0)
+    goto <bb 50>; [INV]
+  else
+    goto <bb 51>; [INV]
+
+  <bb 50> :
+  [telnet.c:950:5] _36 = [telnet.c:950:5] tn_63(D)->telnet_vars;
+  [telnet.c:950:5] curl_slist_free_all (_36);
+  [telnet.c:951:21] [telnet.c:951:7] tn_63(D)->telnet_vars = 0B;
+
+  <bb 51> :
+  [telnet.c:954:10] _77 = result_40;
+
+  <bb 52> :
+  # _43 = PHI <_42(14), [telnet.c:954:10] _77(51)>
+  return _43;
+
+}
+
+
+
+;; Function __bswap_16 (__bswap_16, funcdef_no=0, decl_uid=2649, cgraph_uid=1, symbol_order=0)
+
+__uint16_t __bswap_16 (__uint16_t __bsx)
+{
+  int _1;
+  __uint16_t _3;
+
+  <bb 2> :
+  [/usr/include/x86_64-linux-gnu/bits/byteswap.h:37:10] _1 = (int) __bsx_2(D);
+  [/usr/include/x86_64-linux-gnu/bits/byteswap.h:37:10] _3 = __builtin_bswap16 (_1);
+  [/usr/include/x86_64-linux-gnu/bits/byteswap.h:37:10] return _3;
+
+}
+
+
+
+;; Function printsub (printsub, funcdef_no=114, decl_uid=11684, cgraph_uid=115, symbol_order=116)
+
+void printsub (struct Curl_easy * data, int direction, const unsigned char * pointer, size_t length)
+{
+  int j;
+  unsigned int i;
+  unsigned char _1;
+  unsigned char _2;
+  unsigned char _3;
+  unsigned char _4;
+  struct curl_trc_feat * _5;
+  struct curl_trc_feat * _6;
+  int _7;
+  sizetype _8;
+  const unsigned char * _9;
+  unsigned char _10;
+  sizetype _11;
+  const unsigned char * _12;
+  unsigned char _13;
+  _Bool _14;
+  _Bool _15;
+  _Bool _16;
+  unsigned char _17;
+  unsigned char _18;
+  struct curl_trc_feat * _19;
+  struct curl_trc_feat * _20;
+  int _21;
+  unsigned char _22;
+  unsigned char _23;
+  struct curl_trc_feat * _24;
+  struct curl_trc_feat * _25;
+  int _26;
+  const char * _27;
+  unsigned int _28;
+  unsigned char _29;
+  unsigned char _30;
+  struct curl_trc_feat * _31;
+  struct curl_trc_feat * _32;
+  int _33;
+  unsigned int _34;
+  const char * _35;
+  unsigned char _36;
+  unsigned char _37;
+  struct curl_trc_feat * _38;
+  struct curl_trc_feat * _39;
+  int _40;
+  unsigned char _41;
+  unsigned char _42;
+  struct curl_trc_feat * _43;
+  struct curl_trc_feat * _44;
+  int _45;
+  const char * _46;
+  unsigned int j.16_47;
+  unsigned int _48;
+  unsigned char _49;
+  unsigned char _50;
+  struct curl_trc_feat * _51;
+  struct curl_trc_feat * _52;
+  int _53;
+  int _54;
+  const char * _55;
+  unsigned char _56;
+  unsigned char _57;
+  struct curl_trc_feat * _58;
+  struct curl_trc_feat * _59;
+  int _60;
+  unsigned char _61;
+  unsigned char _62;
+  struct curl_trc_feat * _63;
+  struct curl_trc_feat * _64;
+  int _65;
+  unsigned char _66;
+  unsigned char _67;
+  struct curl_trc_feat * _68;
+  struct curl_trc_feat * _69;
+  int _70;
+  unsigned char _71;
+  unsigned char _72;
+  int _73;
+  unsigned char _74;
+  unsigned char _75;
+  struct curl_trc_feat * _76;
+  struct curl_trc_feat * _77;
+  int _78;
+  unsigned char _79;
+  int _80;
+  const char * _81;
+  unsigned char _82;
+  unsigned char _83;
+  struct curl_trc_feat * _84;
+  struct curl_trc_feat * _85;
+  int _86;
+  unsigned char _87;
+  int _88;
+  const char * _89;
+  unsigned char _90;
+  unsigned char _91;
+  struct curl_trc_feat * _92;
+  struct curl_trc_feat * _93;
+  int _94;
+  unsigned char _95;
+  int _96;
+  unsigned char _97;
+  int _98;
+  unsigned char _99;
+  unsigned char _100;
+  struct curl_trc_feat * _101;
+  struct curl_trc_feat * _102;
+  int _103;
+  const unsigned char * _104;
+  unsigned char _105;
+  int _106;
+  int _107;
+  const unsigned char * _108;
+  unsigned char _109;
+  int _110;
+  int _111;
+  const unsigned char * _112;
+  unsigned char _113;
+  int _114;
+  int _115;
+  const unsigned char * _116;
+  unsigned char _117;
+  int _118;
+  int _119;
+  const unsigned char * _120;
+  unsigned char _121;
+  int _122;
+  unsigned char _123;
+  unsigned char _124;
+  struct curl_trc_feat * _125;
+  struct curl_trc_feat * _126;
+  int _127;
+  unsigned char _128;
+  unsigned char _129;
+  struct curl_trc_feat * _130;
+  struct curl_trc_feat * _131;
+  int _132;
+  unsigned char _133;
+  unsigned char _134;
+  struct curl_trc_feat * _135;
+  struct curl_trc_feat * _136;
+  int _137;
+  unsigned char _138;
+  unsigned char _139;
+  struct curl_trc_feat * _140;
+  struct curl_trc_feat * _141;
+  int _142;
+  unsigned char _143;
+  int _144;
+  unsigned char _145;
+  unsigned char _146;
+  struct curl_trc_feat * _147;
+  struct curl_trc_feat * _148;
+  int _149;
+  const unsigned char * _150;
+  long unsigned int _151;
+  const unsigned char * _152;
+  unsigned char _153;
+  unsigned char _154;
+  unsigned char _155;
+  struct curl_trc_feat * _156;
+  struct curl_trc_feat * _157;
+  int _158;
+  sizetype _159;
+  const unsigned char * _160;
+  unsigned char _161;
+  int _162;
+  unsigned char _163;
+  unsigned char _164;
+  struct curl_trc_feat * _165;
+  struct curl_trc_feat * _166;
+  int _167;
+  unsigned char _168;
+  unsigned char _169;
+  struct curl_trc_feat * _170;
+  struct curl_trc_feat * _171;
+  int _172;
+  unsigned char _173;
+  unsigned char _174;
+  struct curl_trc_feat * _175;
+  struct curl_trc_feat * _176;
+  int _177;
+  sizetype _178;
+  const unsigned char * _179;
+  unsigned char _180;
+  int _181;
+  long unsigned int _182;
+  unsigned char _183;
+  unsigned char _184;
+  struct curl_trc_feat * _185;
+  struct curl_trc_feat * _186;
+  int _187;
+  sizetype _188;
+  const unsigned char * _189;
+  unsigned char _190;
+  int _191;
+  long unsigned int _192;
+  char * iftmp.15_196;
+  int iftmp.17_197;
+  char * iftmp.15_218;
+  char * iftmp.15_219;
+  int iftmp.17_247;
+  int iftmp.17_248;
+
+  <bb 2> :
+  [telnet.c:495:6] _1 = [telnet.c:495:6] BIT_FIELD_REF <[telnet.c:495:10] data_214(D)->set, 8, 7064>;
+  [telnet.c:495:6] _2 = _1 & 32;
+  [telnet.c:495:5] if (_2 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 155>; [INV]
+
+  <bb 3> :
+  [telnet.c:496:18] i_215 = 0;
+  [telnet.c:497:7] if (direction_216(D) != 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 61>; [INV]
+
+  <bb 4> :
+  [telnet.c:498:7] if (data_214(D) != 0B)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 5> :
+  [telnet.c:498:7] _3 = [telnet.c:498:7] BIT_FIELD_REF <[telnet.c:498:7] data_214(D)->set, 8, 7064>;
+  [telnet.c:498:7] _4 = _3 & 32;
+  [telnet.c:498:7] if (_4 != 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 6> :
+  [telnet.c:498:7] _5 = [telnet.c:498:7] [telnet.c:498:7] data_214(D)->state.feat;
+  [telnet.c:498:7] if (_5 == 0B)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 7> :
+  [telnet.c:498:7] _6 = [telnet.c:498:7] [telnet.c:498:7] data_214(D)->state.feat;
+  [telnet.c:498:7] _7 = [telnet.c:498:7] _6->log_level;
+  [telnet.c:498:7] if (_7 > 0)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 8> :
+  [telnet.c:498:7] if (direction_216(D) == 60)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 9> :
+  [telnet.c:498:7] iftmp.15_219 = [telnet.c:498:7] "RCVD";
+  [0:0] goto <bb 11>; [INV]
+
+  <bb 10> :
+  [telnet.c:498:7] iftmp.15_218 = [telnet.c:498:7] "SENT";
+
+  <bb 11> :
+  # iftmp.15_196 = PHI <[telnet.c:498:7] iftmp.15_219(9), [telnet.c:498:7] iftmp.15_218(10)>
+  [telnet.c:498:7] Curl_infof (data_214(D), [telnet.c:498:7] "%s IAC SB ", iftmp.15_196);
+
+  <bb 12> :
+  [telnet.c:499:9] if (length_217(D) > 2)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 58>; [INV]
+
+  <bb 13> :
+  [telnet.c:502:20] _8 = length_217(D) + 18446744073709551614;
+  [telnet.c:502:20] _9 = pointer_221(D) + _8;
+  [telnet.c:502:20] _10 = [telnet.c:502:20] *_9;
+  [telnet.c:502:11] i_222 = (unsigned int) _10;
+  [telnet.c:503:20] _11 = length_217(D) + 18446744073709551615;
+  [telnet.c:503:20] _12 = pointer_221(D) + _11;
+  [telnet.c:503:20] _13 = [telnet.c:503:20] *_12;
+  [telnet.c:503:11] j_223 = (int) _13;
+  [telnet.c:505:14] _14 = i_222 != 255;
+  [telnet.c:505:31] _15 = j_223 != 240;
+  [telnet.c:505:26] _16 = _14 | _15;
+  [telnet.c:505:11] if (_16 != 0)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 58>; [INV]
+
+  <bb 14> :
+  [telnet.c:506:11] if (data_214(D) != 0B)
+    goto <bb 15>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 15> :
+  [telnet.c:506:11] _17 = [telnet.c:506:11] BIT_FIELD_REF <[telnet.c:506:11] data_214(D)->set, 8, 7064>;
+  [telnet.c:506:11] _18 = _17 & 32;
+  [telnet.c:506:11] if (_18 != 0)
+    goto <bb 16>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 16> :
+  [telnet.c:506:11] _19 = [telnet.c:506:11] [telnet.c:506:11] data_214(D)->state.feat;
+  [telnet.c:506:11] if (_19 == 0B)
+    goto <bb 18>; [INV]
+  else
+    goto <bb 17>; [INV]
+
+  <bb 17> :
+  [telnet.c:506:11] _20 = [telnet.c:506:11] [telnet.c:506:11] data_214(D)->state.feat;
+  [telnet.c:506:11] _21 = [telnet.c:506:11] _20->log_level;
+  [telnet.c:506:11] if (_21 > 0)
+    goto <bb 18>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 18> :
+  [telnet.c:506:11] Curl_infof (data_214(D), [telnet.c:506:11] "(terminated by ");
+
+  <bb 19> :
+  [telnet.c:507:13] if (i_222 <= 39)
+    goto <bb 20>; [INV]
+  else
+    goto <bb 25>; [INV]
+
+  <bb 20> :
+  [telnet.c:508:13] if (data_214(D) != 0B)
+    goto <bb 21>; [INV]
+  else
+    goto <bb 36>; [INV]
+
+  <bb 21> :
+  [telnet.c:508:13] _22 = [telnet.c:508:13] BIT_FIELD_REF <[telnet.c:508:13] data_214(D)->set, 8, 7064>;
+  [telnet.c:508:13] _23 = _22 & 32;
+  [telnet.c:508:13] if (_23 != 0)
+    goto <bb 22>; [INV]
+  else
+    goto <bb 36>; [INV]
+
+  <bb 22> :
+  [telnet.c:508:13] _24 = [telnet.c:508:13] [telnet.c:508:13] data_214(D)->state.feat;
+  [telnet.c:508:13] if (_24 == 0B)
+    goto <bb 24>; [INV]
+  else
+    goto <bb 23>; [INV]
+
+  <bb 23> :
+  [telnet.c:508:13] _25 = [telnet.c:508:13] [telnet.c:508:13] data_214(D)->state.feat;
+  [telnet.c:508:13] _26 = [telnet.c:508:13] _25->log_level;
+  [telnet.c:508:13] if (_26 > 0)
+    goto <bb 24>; [INV]
+  else
+    goto <bb 36>; [INV]
+
+  <bb 24> :
+  [telnet.c:508:13] _27 = [telnet.c:508:13] telnetoptions[i_222];
+  [telnet.c:508:13] Curl_infof (data_214(D), [telnet.c:508:13] "%s ", _27);
+  goto <bb 36>; [INV]
+
+  <bb 25> :
+  [telnet.c:509:19] _28 = i_222 + 4294967060;
+  [telnet.c:509:18] if (_28 <= 19)
+    goto <bb 26>; [INV]
+  else
+    goto <bb 31>; [INV]
+
+  <bb 26> :
+  [telnet.c:510:13] if (data_214(D) != 0B)
+    goto <bb 27>; [INV]
+  else
+    goto <bb 36>; [INV]
+
+  <bb 27> :
+  [telnet.c:510:13] _29 = [telnet.c:510:13] BIT_FIELD_REF <[telnet.c:510:13] data_214(D)->set, 8, 7064>;
+  [telnet.c:510:13] _30 = _29 & 32;
+  [telnet.c:510:13] if (_30 != 0)
+    goto <bb 28>; [INV]
+  else
+    goto <bb 36>; [INV]
+
+  <bb 28> :
+  [telnet.c:510:13] _31 = [telnet.c:510:13] [telnet.c:510:13] data_214(D)->state.feat;
+  [telnet.c:510:13] if (_31 == 0B)
+    goto <bb 30>; [INV]
+  else
+    goto <bb 29>; [INV]
+
+  <bb 29> :
+  [telnet.c:510:13] _32 = [telnet.c:510:13] [telnet.c:510:13] data_214(D)->state.feat;
+  [telnet.c:510:13] _33 = [telnet.c:510:13] _32->log_level;
+  [telnet.c:510:13] if (_33 > 0)
+    goto <bb 30>; [INV]
+  else
+    goto <bb 36>; [INV]
+
+  <bb 30> :
+  [telnet.c:510:13] _34 = i_222 + 4294967060;
+  [telnet.c:510:13] _35 = [telnet.c:510:13] telnetcmds[_34];
+  [telnet.c:510:13] Curl_infof (data_214(D), [telnet.c:510:13] "%s ", _35);
+  goto <bb 36>; [INV]
+
+  <bb 31> :
+  [telnet.c:512:13] if (data_214(D) != 0B)
+    goto <bb 32>; [INV]
+  else
+    goto <bb 36>; [INV]
+
+  <bb 32> :
+  [telnet.c:512:13] _36 = [telnet.c:512:13] BIT_FIELD_REF <[telnet.c:512:13] data_214(D)->set, 8, 7064>;
+  [telnet.c:512:13] _37 = _36 & 32;
+  [telnet.c:512:13] if (_37 != 0)
+    goto <bb 33>; [INV]
+  else
+    goto <bb 36>; [INV]
+
+  <bb 33> :
+  [telnet.c:512:13] _38 = [telnet.c:512:13] [telnet.c:512:13] data_214(D)->state.feat;
+  [telnet.c:512:13] if (_38 == 0B)
+    goto <bb 35>; [INV]
+  else
+    goto <bb 34>; [INV]
+
+  <bb 34> :
+  [telnet.c:512:13] _39 = [telnet.c:512:13] [telnet.c:512:13] data_214(D)->state.feat;
+  [telnet.c:512:13] _40 = [telnet.c:512:13] _39->log_level;
+  [telnet.c:512:13] if (_40 > 0)
+    goto <bb 35>; [INV]
+  else
+    goto <bb 36>; [INV]
+
+  <bb 35> :
+  [telnet.c:512:13] Curl_infof (data_214(D), [telnet.c:512:13] "%u ", i_222);
+
+  <bb 36> :
+  [telnet.c:513:13] if (j_223 <= 39)
+    goto <bb 37>; [INV]
+  else
+    goto <bb 42>; [INV]
+
+  <bb 37> :
+  [telnet.c:514:13] if (data_214(D) != 0B)
+    goto <bb 38>; [INV]
+  else
+    goto <bb 53>; [INV]
+
+  <bb 38> :
+  [telnet.c:514:13] _41 = [telnet.c:514:13] BIT_FIELD_REF <[telnet.c:514:13] data_214(D)->set, 8, 7064>;
+  [telnet.c:514:13] _42 = _41 & 32;
+  [telnet.c:514:13] if (_42 != 0)
+    goto <bb 39>; [INV]
+  else
+    goto <bb 53>; [INV]
+
+  <bb 39> :
+  [telnet.c:514:13] _43 = [telnet.c:514:13] [telnet.c:514:13] data_214(D)->state.feat;
+  [telnet.c:514:13] if (_43 == 0B)
+    goto <bb 41>; [INV]
+  else
+    goto <bb 40>; [INV]
+
+  <bb 40> :
+  [telnet.c:514:13] _44 = [telnet.c:514:13] [telnet.c:514:13] data_214(D)->state.feat;
+  [telnet.c:514:13] _45 = [telnet.c:514:13] _44->log_level;
+  [telnet.c:514:13] if (_45 > 0)
+    goto <bb 41>; [INV]
+  else
+    goto <bb 53>; [INV]
+
+  <bb 41> :
+  [telnet.c:514:13] _46 = [telnet.c:514:13] telnetoptions[j_223];
+  [telnet.c:514:13] Curl_infof (data_214(D), [telnet.c:514:13] "%s", _46);
+  goto <bb 53>; [INV]
+
+  <bb 42> :
+  [telnet.c:515:19] j.16_47 = (unsigned int) j_223;
+  [telnet.c:515:19] _48 = j.16_47 + 4294967060;
+  [telnet.c:515:18] if (_48 <= 19)
+    goto <bb 43>; [INV]
+  else
+    goto <bb 48>; [INV]
+
+  <bb 43> :
+  [telnet.c:516:13] if (data_214(D) != 0B)
+    goto <bb 44>; [INV]
+  else
+    goto <bb 53>; [INV]
+
+  <bb 44> :
+  [telnet.c:516:13] _49 = [telnet.c:516:13] BIT_FIELD_REF <[telnet.c:516:13] data_214(D)->set, 8, 7064>;
+  [telnet.c:516:13] _50 = _49 & 32;
+  [telnet.c:516:13] if (_50 != 0)
+    goto <bb 45>; [INV]
+  else
+    goto <bb 53>; [INV]
+
+  <bb 45> :
+  [telnet.c:516:13] _51 = [telnet.c:516:13] [telnet.c:516:13] data_214(D)->state.feat;
+  [telnet.c:516:13] if (_51 == 0B)
+    goto <bb 47>; [INV]
+  else
+    goto <bb 46>; [INV]
+
+  <bb 46> :
+  [telnet.c:516:13] _52 = [telnet.c:516:13] [telnet.c:516:13] data_214(D)->state.feat;
+  [telnet.c:516:13] _53 = [telnet.c:516:13] _52->log_level;
+  [telnet.c:516:13] if (_53 > 0)
+    goto <bb 47>; [INV]
+  else
+    goto <bb 53>; [INV]
+
+  <bb 47> :
+  [telnet.c:516:13] _54 = j_223 + -236;
+  [telnet.c:516:13] _55 = [telnet.c:516:13] telnetcmds[_54];
+  [telnet.c:516:13] Curl_infof (data_214(D), [telnet.c:516:13] "%s", _55);
+  goto <bb 53>; [INV]
+
+  <bb 48> :
+  [telnet.c:518:13] if (data_214(D) != 0B)
+    goto <bb 49>; [INV]
+  else
+    goto <bb 53>; [INV]
+
+  <bb 49> :
+  [telnet.c:518:13] _56 = [telnet.c:518:13] BIT_FIELD_REF <[telnet.c:518:13] data_214(D)->set, 8, 7064>;
+  [telnet.c:518:13] _57 = _56 & 32;
+  [telnet.c:518:13] if (_57 != 0)
+    goto <bb 50>; [INV]
+  else
+    goto <bb 53>; [INV]
+
+  <bb 50> :
+  [telnet.c:518:13] _58 = [telnet.c:518:13] [telnet.c:518:13] data_214(D)->state.feat;
+  [telnet.c:518:13] if (_58 == 0B)
+    goto <bb 52>; [INV]
+  else
+    goto <bb 51>; [INV]
+
+  <bb 51> :
+  [telnet.c:518:13] _59 = [telnet.c:518:13] [telnet.c:518:13] data_214(D)->state.feat;
+  [telnet.c:518:13] _60 = [telnet.c:518:13] _59->log_level;
+  [telnet.c:518:13] if (_60 > 0)
+    goto <bb 52>; [INV]
+  else
+    goto <bb 53>; [INV]
+
+  <bb 52> :
+  [telnet.c:518:13] Curl_infof (data_214(D), [telnet.c:518:13] "%d", j_223);
+
+  <bb 53> :
+  [telnet.c:519:11] if (data_214(D) != 0B)
+    goto <bb 54>; [INV]
+  else
+    goto <bb 58>; [INV]
+
+  <bb 54> :
+  [telnet.c:519:11] _61 = [telnet.c:519:11] BIT_FIELD_REF <[telnet.c:519:11] data_214(D)->set, 8, 7064>;
+  [telnet.c:519:11] _62 = _61 & 32;
+  [telnet.c:519:11] if (_62 != 0)
+    goto <bb 55>; [INV]
+  else
+    goto <bb 58>; [INV]
+
+  <bb 55> :
+  [telnet.c:519:11] _63 = [telnet.c:519:11] [telnet.c:519:11] data_214(D)->state.feat;
+  [telnet.c:519:11] if (_63 == 0B)
+    goto <bb 57>; [INV]
+  else
+    goto <bb 56>; [INV]
+
+  <bb 56> :
+  [telnet.c:519:11] _64 = [telnet.c:519:11] [telnet.c:519:11] data_214(D)->state.feat;
+  [telnet.c:519:11] _65 = [telnet.c:519:11] _64->log_level;
+  [telnet.c:519:11] if (_65 > 0)
+    goto <bb 57>; [INV]
+  else
+    goto <bb 58>; [INV]
+
+  <bb 57> :
+  [telnet.c:519:11] Curl_infof (data_214(D), [telnet.c:519:11] ", not IAC SE) ");
+
+  <bb 58> :
+  [telnet.c:522:9] if (length_217(D) > 1)
+    goto <bb 59>; [INV]
+  else
+    goto <bb 60>; [INV]
+
+  <bb 59> :
+  [telnet.c:523:16] length_232 = length_217(D) + 18446744073709551614;
+  [0:0] goto <bb 61>; [INV]
+
+  <bb 60> :
+  [telnet.c:525:9] // predicted unlikely by early return (on trees) predictor.
+  [telnet.c:525:9] goto <bb 155>; [INV]
+
+  <bb 61> :
+  # length_193 = PHI <length_217(D)(3), [telnet.c:523:16] length_232(59)>
+  [telnet.c:527:7] if (length_193 <= 1)
+    goto <bb 62>; [INV]
+  else
+    goto <bb 68>; [INV]
+
+  <bb 62> :
+  [telnet.c:528:7] if (data_214(D) != 0B)
+    goto <bb 63>; [INV]
+  else
+    goto <bb 67>; [INV]
+
+  <bb 63> :
+  [telnet.c:528:7] _66 = [telnet.c:528:7] BIT_FIELD_REF <[telnet.c:528:7] data_214(D)->set, 8, 7064>;
+  [telnet.c:528:7] _67 = _66 & 32;
+  [telnet.c:528:7] if (_67 != 0)
+    goto <bb 64>; [INV]
+  else
+    goto <bb 67>; [INV]
+
+  <bb 64> :
+  [telnet.c:528:7] _68 = [telnet.c:528:7] [telnet.c:528:7] data_214(D)->state.feat;
+  [telnet.c:528:7] if (_68 == 0B)
+    goto <bb 66>; [INV]
+  else
+    goto <bb 65>; [INV]
+
+  <bb 65> :
+  [telnet.c:528:7] _69 = [telnet.c:528:7] [telnet.c:528:7] data_214(D)->state.feat;
+  [telnet.c:528:7] _70 = [telnet.c:528:7] _69->log_level;
+  [telnet.c:528:7] if (_70 > 0)
+    goto <bb 66>; [INV]
+  else
+    goto <bb 67>; [INV]
+
+  <bb 66> :
+  [telnet.c:528:7] Curl_infof (data_214(D), [telnet.c:528:7] "(Empty suboption?)");
+
+  <bb 67> :
+  [telnet.c:529:7] // predicted unlikely by early return (on trees) predictor.
+  [telnet.c:529:7] goto <bb 155>; [INV]
+
+  <bb 68> :
+  [telnet.c:532:8] _71 = [telnet.c:532:8] *pointer_221(D);
+  [telnet.c:532:7] if (_71 <= 39)
+    goto <bb 69>; [INV]
+  else
+    goto <bb 80>; [INV]
+
+  <bb 69> :
+  [telnet.c:533:21] _72 = [telnet.c:533:21] *pointer_221(D);
+  [telnet.c:533:21] _73 = (int) _72;
+  [telnet.c:533:7] switch (_73) <[telnet.c:540:7] default: <L109> [INV], [telnet.c:534:7] case 24: <L98> [INV], [telnet.c:537:7] case 31: <L98> [INV], [telnet.c:535:7] case 35: <L98> [INV], [telnet.c:536:7] case 39: <L98> [INV]>
+
+  <bb 70> :
+[telnet.c:534:7] <L98>:
+  [telnet.c:538:9] if (data_214(D) != 0B)
+    goto <bb 71>; [INV]
+  else
+    goto <bb 85>; [INV]
+
+  <bb 71> :
+  [telnet.c:538:9] _74 = [telnet.c:538:9] BIT_FIELD_REF <[telnet.c:538:9] data_214(D)->set, 8, 7064>;
+  [telnet.c:538:9] _75 = _74 & 32;
+  [telnet.c:538:9] if (_75 != 0)
+    goto <bb 72>; [INV]
+  else
+    goto <bb 85>; [INV]
+
+  <bb 72> :
+  [telnet.c:538:9] _76 = [telnet.c:538:9] [telnet.c:538:9] data_214(D)->state.feat;
+  [telnet.c:538:9] if (_76 == 0B)
+    goto <bb 74>; [INV]
+  else
+    goto <bb 73>; [INV]
+
+  <bb 73> :
+  [telnet.c:538:9] _77 = [telnet.c:538:9] [telnet.c:538:9] data_214(D)->state.feat;
+  [telnet.c:538:9] _78 = [telnet.c:538:9] _77->log_level;
+  [telnet.c:538:9] if (_78 > 0)
+    goto <bb 74>; [INV]
+  else
+    goto <bb 85>; [INV]
+
+  <bb 74> :
+  [telnet.c:538:9] _79 = [telnet.c:538:9] *pointer_221(D);
+  [telnet.c:538:9] _80 = (int) _79;
+  [telnet.c:538:9] _81 = [telnet.c:538:9] telnetoptions[_80];
+  [telnet.c:538:9] Curl_infof (data_214(D), [telnet.c:538:9] "%s", _81);
+  goto <bb 85>; [INV]
+
+  <bb 75> :
+[telnet.c:540:7] <L109>:
+  [telnet.c:541:9] if (data_214(D) != 0B)
+    goto <bb 76>; [INV]
+  else
+    goto <bb 85>; [INV]
+
+  <bb 76> :
+  [telnet.c:541:9] _82 = [telnet.c:541:9] BIT_FIELD_REF <[telnet.c:541:9] data_214(D)->set, 8, 7064>;
+  [telnet.c:541:9] _83 = _82 & 32;
+  [telnet.c:541:9] if (_83 != 0)
+    goto <bb 77>; [INV]
+  else
+    goto <bb 85>; [INV]
+
+  <bb 77> :
+  [telnet.c:541:9] _84 = [telnet.c:541:9] [telnet.c:541:9] data_214(D)->state.feat;
+  [telnet.c:541:9] if (_84 == 0B)
+    goto <bb 79>; [INV]
+  else
+    goto <bb 78>; [INV]
+
+  <bb 78> :
+  [telnet.c:541:9] _85 = [telnet.c:541:9] [telnet.c:541:9] data_214(D)->state.feat;
+  [telnet.c:541:9] _86 = [telnet.c:541:9] _85->log_level;
+  [telnet.c:541:9] if (_86 > 0)
+    goto <bb 79>; [INV]
+  else
+    goto <bb 85>; [INV]
+
+  <bb 79> :
+  [telnet.c:541:9] _87 = [telnet.c:541:9] *pointer_221(D);
+  [telnet.c:541:9] _88 = (int) _87;
+  [telnet.c:541:9] _89 = [telnet.c:541:9] telnetoptions[_88];
+  [telnet.c:541:9] Curl_infof (data_214(D), [telnet.c:541:9] "%s (unsupported)", _89);
+  goto <bb 85>; [INV]
+
+  <bb 80> :
+  [telnet.c:546:7] if (data_214(D) != 0B)
+    goto <bb 81>; [INV]
+  else
+    goto <bb 85>; [INV]
+
+  <bb 81> :
+  [telnet.c:546:7] _90 = [telnet.c:546:7] BIT_FIELD_REF <[telnet.c:546:7] data_214(D)->set, 8, 7064>;
+  [telnet.c:546:7] _91 = _90 & 32;
+  [telnet.c:546:7] if (_91 != 0)
+    goto <bb 82>; [INV]
+  else
+    goto <bb 85>; [INV]
+
+  <bb 82> :
+  [telnet.c:546:7] _92 = [telnet.c:546:7] [telnet.c:546:7] data_214(D)->state.feat;
+  [telnet.c:546:7] if (_92 == 0B)
+    goto <bb 84>; [INV]
+  else
+    goto <bb 83>; [INV]
+
+  <bb 83> :
+  [telnet.c:546:7] _93 = [telnet.c:546:7] [telnet.c:546:7] data_214(D)->state.feat;
+  [telnet.c:546:7] _94 = [telnet.c:546:7] _93->log_level;
+  [telnet.c:546:7] if (_94 > 0)
+    goto <bb 84>; [INV]
+  else
+    goto <bb 85>; [INV]
+
+  <bb 84> :
+  [telnet.c:546:7] _95 = [telnet.c:546:7] *pointer_221(D);
+  [telnet.c:546:7] _96 = (int) _95;
+  [telnet.c:546:7] Curl_infof (data_214(D), [telnet.c:546:7] "%d (unknown)", _96);
+
+  <bb 85> :
+  [telnet.c:548:19] _97 = [telnet.c:548:19] *pointer_221(D);
+  [telnet.c:548:19] _98 = (int) _97;
+  [telnet.c:548:5] if (_98 == 31)
+    goto <bb 86>; [INV]
+  else
+    goto <bb 92>; [INV]
+
+  <bb 86> :
+[telnet.c:549:5] <L127>:
+  [telnet.c:550:9] if (length_193 > 4)
+    goto <bb 87>; [INV]
+  else
+    goto <bb 155>; [INV]
+
+  <bb 87> :
+  [telnet.c:551:9] if (data_214(D) != 0B)
+    goto <bb 88>; [INV]
+  else
+    goto <bb 155>; [INV]
+
+  <bb 88> :
+  [telnet.c:551:9] _99 = [telnet.c:551:9] BIT_FIELD_REF <[telnet.c:551:9] data_214(D)->set, 8, 7064>;
+  [telnet.c:551:9] _100 = _99 & 32;
+  [telnet.c:551:9] if (_100 != 0)
+    goto <bb 89>; [INV]
+  else
+    goto <bb 155>; [INV]
+
+  <bb 89> :
+  [telnet.c:551:9] _101 = [telnet.c:551:9] [telnet.c:551:9] data_214(D)->state.feat;
+  [telnet.c:551:9] if (_101 == 0B)
+    goto <bb 91>; [INV]
+  else
+    goto <bb 90>; [INV]
+
+  <bb 90> :
+  [telnet.c:551:9] _102 = [telnet.c:551:9] [telnet.c:551:9] data_214(D)->state.feat;
+  [telnet.c:551:9] _103 = [telnet.c:551:9] _102->log_level;
+  [telnet.c:551:9] if (_103 > 0)
+    goto <bb 91>; [INV]
+  else
+    goto <bb 155>; [INV]
+
+  <bb 91> :
+  [telnet.c:551:9] _104 = pointer_221(D) + 3;
+  [telnet.c:551:9] _105 = [telnet.c:551:9] *_104;
+  [telnet.c:551:9] _106 = (int) _105;
+  [telnet.c:551:9] _107 = _106 << 8;
+  [telnet.c:551:9] _108 = pointer_221(D) + 4;
+  [telnet.c:551:9] _109 = [telnet.c:551:9] *_108;
+  [telnet.c:551:9] _110 = (int) _109;
+  [telnet.c:551:9] _111 = _107 | _110;
+  [telnet.c:551:9] _112 = pointer_221(D) + 1;
+  [telnet.c:551:9] _113 = [telnet.c:551:9] *_112;
+  [telnet.c:551:9] _114 = (int) _113;
+  [telnet.c:551:9] _115 = _114 << 8;
+  [telnet.c:551:9] _116 = pointer_221(D) + 2;
+  [telnet.c:551:9] _117 = [telnet.c:551:9] *_116;
+  [telnet.c:551:9] _118 = (int) _117;
+  [telnet.c:551:9] _119 = _115 | _118;
+  [telnet.c:551:9] Curl_infof (data_214(D), [telnet.c:551:9] "Width: %d ; Height: %d", _119, _111);
+  goto <bb 155>; [INV]
+
+  <bb 92> :
+[telnet.c:554:5] <L137>:
+  [telnet.c:555:21] _120 = pointer_221(D) + 1;
+  [telnet.c:555:21] _121 = [telnet.c:555:21] *_120;
+  [telnet.c:555:21] _122 = (int) _121;
+  switch (_122) <default: <L170> [INV], [telnet.c:556:7] case 0: <L138> [INV], [telnet.c:559:7] case 1: <L146> [INV], [telnet.c:562:7] case 2: <L154> [INV], [telnet.c:565:7] case 3: <L162> [INV]>
+
+  <bb 93> :
+[telnet.c:556:7] <L138>:
+  [telnet.c:557:9] if (data_214(D) != 0B)
+    goto <bb 94>; [INV]
+  else
+    goto <bb 113>; [INV]
+
+  <bb 94> :
+  [telnet.c:557:9] _123 = [telnet.c:557:9] BIT_FIELD_REF <[telnet.c:557:9] data_214(D)->set, 8, 7064>;
+  [telnet.c:557:9] _124 = _123 & 32;
+  [telnet.c:557:9] if (_124 != 0)
+    goto <bb 95>; [INV]
+  else
+    goto <bb 113>; [INV]
+
+  <bb 95> :
+  [telnet.c:557:9] _125 = [telnet.c:557:9] [telnet.c:557:9] data_214(D)->state.feat;
+  [telnet.c:557:9] if (_125 == 0B)
+    goto <bb 97>; [INV]
+  else
+    goto <bb 96>; [INV]
+
+  <bb 96> :
+  [telnet.c:557:9] _126 = [telnet.c:557:9] [telnet.c:557:9] data_214(D)->state.feat;
+  [telnet.c:557:9] _127 = [telnet.c:557:9] _126->log_level;
+  [telnet.c:557:9] if (_127 > 0)
+    goto <bb 97>; [INV]
+  else
+    goto <bb 113>; [INV]
+
+  <bb 97> :
+  [telnet.c:557:9] Curl_infof (data_214(D), [telnet.c:557:9] " IS");
+  goto <bb 113>; [INV]
+
+  <bb 98> :
+[telnet.c:559:7] <L146>:
+  [telnet.c:560:9] if (data_214(D) != 0B)
+    goto <bb 99>; [INV]
+  else
+    goto <bb 113>; [INV]
+
+  <bb 99> :
+  [telnet.c:560:9] _128 = [telnet.c:560:9] BIT_FIELD_REF <[telnet.c:560:9] data_214(D)->set, 8, 7064>;
+  [telnet.c:560:9] _129 = _128 & 32;
+  [telnet.c:560:9] if (_129 != 0)
+    goto <bb 100>; [INV]
+  else
+    goto <bb 113>; [INV]
+
+  <bb 100> :
+  [telnet.c:560:9] _130 = [telnet.c:560:9] [telnet.c:560:9] data_214(D)->state.feat;
+  [telnet.c:560:9] if (_130 == 0B)
+    goto <bb 102>; [INV]
+  else
+    goto <bb 101>; [INV]
+
+  <bb 101> :
+  [telnet.c:560:9] _131 = [telnet.c:560:9] [telnet.c:560:9] data_214(D)->state.feat;
+  [telnet.c:560:9] _132 = [telnet.c:560:9] _131->log_level;
+  [telnet.c:560:9] if (_132 > 0)
+    goto <bb 102>; [INV]
+  else
+    goto <bb 113>; [INV]
+
+  <bb 102> :
+  [telnet.c:560:9] Curl_infof (data_214(D), [telnet.c:560:9] " SEND");
+  goto <bb 113>; [INV]
+
+  <bb 103> :
+[telnet.c:562:7] <L154>:
+  [telnet.c:563:9] if (data_214(D) != 0B)
+    goto <bb 104>; [INV]
+  else
+    goto <bb 113>; [INV]
+
+  <bb 104> :
+  [telnet.c:563:9] _133 = [telnet.c:563:9] BIT_FIELD_REF <[telnet.c:563:9] data_214(D)->set, 8, 7064>;
+  [telnet.c:563:9] _134 = _133 & 32;
+  [telnet.c:563:9] if (_134 != 0)
+    goto <bb 105>; [INV]
+  else
+    goto <bb 113>; [INV]
+
+  <bb 105> :
+  [telnet.c:563:9] _135 = [telnet.c:563:9] [telnet.c:563:9] data_214(D)->state.feat;
+  [telnet.c:563:9] if (_135 == 0B)
+    goto <bb 107>; [INV]
+  else
+    goto <bb 106>; [INV]
+
+  <bb 106> :
+  [telnet.c:563:9] _136 = [telnet.c:563:9] [telnet.c:563:9] data_214(D)->state.feat;
+  [telnet.c:563:9] _137 = [telnet.c:563:9] _136->log_level;
+  [telnet.c:563:9] if (_137 > 0)
+    goto <bb 107>; [INV]
+  else
+    goto <bb 113>; [INV]
+
+  <bb 107> :
+  [telnet.c:563:9] Curl_infof (data_214(D), [telnet.c:563:9] " INFO/REPLY");
+  goto <bb 113>; [INV]
+
+  <bb 108> :
+[telnet.c:565:7] <L162>:
+  [telnet.c:566:9] if (data_214(D) != 0B)
+    goto <bb 109>; [INV]
+  else
+    goto <bb 113>; [INV]
+
+  <bb 109> :
+  [telnet.c:566:9] _138 = [telnet.c:566:9] BIT_FIELD_REF <[telnet.c:566:9] data_214(D)->set, 8, 7064>;
+  [telnet.c:566:9] _139 = _138 & 32;
+  [telnet.c:566:9] if (_139 != 0)
+    goto <bb 110>; [INV]
+  else
+    goto <bb 113>; [INV]
+
+  <bb 110> :
+  [telnet.c:566:9] _140 = [telnet.c:566:9] [telnet.c:566:9] data_214(D)->state.feat;
+  [telnet.c:566:9] if (_140 == 0B)
+    goto <bb 112>; [INV]
+  else
+    goto <bb 111>; [INV]
+
+  <bb 111> :
+  [telnet.c:566:9] _141 = [telnet.c:566:9] [telnet.c:566:9] data_214(D)->state.feat;
+  [telnet.c:566:9] _142 = [telnet.c:566:9] _141->log_level;
+  [telnet.c:566:9] if (_142 > 0)
+    goto <bb 112>; [INV]
+  else
+    goto <bb 113>; [INV]
+
+  <bb 112> :
+  [telnet.c:566:9] Curl_infof (data_214(D), [telnet.c:566:9] " NAME");
+
+  <bb 113> :
+<L170>:
+  [telnet.c:570:21] _143 = [telnet.c:570:21] *pointer_221(D);
+  [telnet.c:570:21] _144 = (int) _143;
+  switch (_144) <[telnet.c:594:7] default: <L222> [INV], [telnet.c:571:7] case 24: <L172> [INV], [telnet.c:572:7] case 35: <L172> [INV], [telnet.c:576:7] case 39: <L184> [INV]>
+
+  <bb 114> :
+[telnet.c:571:7] <L172>:
+  [telnet.c:573:9] if (data_214(D) != 0B)
+    goto <bb 115>; [INV]
+  else
+    goto <bb 155>; [INV]
+
+  <bb 115> :
+  [telnet.c:573:9] _145 = [telnet.c:573:9] BIT_FIELD_REF <[telnet.c:573:9] data_214(D)->set, 8, 7064>;
+  [telnet.c:573:9] _146 = _145 & 32;
+  [telnet.c:573:9] if (_146 != 0)
+    goto <bb 116>; [INV]
+  else
+    goto <bb 155>; [INV]
+
+  <bb 116> :
+  [telnet.c:573:9] _147 = [telnet.c:573:9] [telnet.c:573:9] data_214(D)->state.feat;
+  [telnet.c:573:9] if (_147 == 0B)
+    goto <bb 118>; [INV]
+  else
+    goto <bb 117>; [INV]
+
+  <bb 117> :
+  [telnet.c:573:9] _148 = [telnet.c:573:9] [telnet.c:573:9] data_214(D)->state.feat;
+  [telnet.c:573:9] _149 = [telnet.c:573:9] _148->log_level;
+  [telnet.c:573:9] if (_149 > 0)
+    goto <bb 118>; [INV]
+  else
+    goto <bb 155>; [INV]
+
+  <bb 118> :
+  [telnet.c:573:9] _150 = pointer_221(D) + 2;
+  [telnet.c:573:9] if (length_193 > 2)
+    goto <bb 119>; [INV]
+  else
+    goto <bb 120>; [INV]
+
+  <bb 119> :
+  [telnet.c:573:9] _151 = length_193 + 18446744073709551614;
+  [telnet.c:573:9] iftmp.17_248 = (int) _151;
+  [0:0] goto <bb 121>; [INV]
+
+  <bb 120> :
+  [telnet.c:573:9] iftmp.17_247 = 0;
+
+  <bb 121> :
+  # iftmp.17_197 = PHI <[telnet.c:573:9] iftmp.17_248(119), [telnet.c:573:9] iftmp.17_247(120)>
+  [telnet.c:573:9] Curl_infof (data_214(D), [telnet.c:573:9] " \"%.*s\"", iftmp.17_197, _150);
+  goto <bb 155>; [INV]
+
+  <bb 122> :
+[telnet.c:576:7] <L184>:
+  [telnet.c:577:19] _152 = pointer_221(D) + 1;
+  [telnet.c:577:19] _153 = [telnet.c:577:19] *_152;
+  [telnet.c:577:11] if (_153 == 0)
+    goto <bb 123>; [INV]
+  else
+    goto <bb 155>; [INV]
+
+  <bb 123> :
+  [telnet.c:578:11] if (data_214(D) != 0B)
+    goto <bb 124>; [INV]
+  else
+    goto <bb 128>; [INV]
+
+  <bb 124> :
+  [telnet.c:578:11] _154 = [telnet.c:578:11] BIT_FIELD_REF <[telnet.c:578:11] data_214(D)->set, 8, 7064>;
+  [telnet.c:578:11] _155 = _154 & 32;
+  [telnet.c:578:11] if (_155 != 0)
+    goto <bb 125>; [INV]
+  else
+    goto <bb 128>; [INV]
+
+  <bb 125> :
+  [telnet.c:578:11] _156 = [telnet.c:578:11] [telnet.c:578:11] data_214(D)->state.feat;
+  [telnet.c:578:11] if (_156 == 0B)
+    goto <bb 127>; [INV]
+  else
+    goto <bb 126>; [INV]
+
+  <bb 126> :
+  [telnet.c:578:11] _157 = [telnet.c:578:11] [telnet.c:578:11] data_214(D)->state.feat;
+  [telnet.c:578:11] _158 = [telnet.c:578:11] _157->log_level;
+  [telnet.c:578:11] if (_158 > 0)
+    goto <bb 127>; [INV]
+  else
+    goto <bb 128>; [INV]
+
+  <bb 127> :
+  [telnet.c:578:11] Curl_infof (data_214(D), [telnet.c:578:11] " ");
+
+  <bb 128> :
+  [telnet.c:579:17] i_242 = 3;
+  [telnet.c:579:11] goto <bb 146>; [INV]
+
+  <bb 129> :
+  [telnet.c:580:27] _159 = (sizetype) i_194;
+  [telnet.c:580:27] _160 = pointer_221(D) + _159;
+  [telnet.c:580:27] _161 = [telnet.c:580:27] *_160;
+  [telnet.c:580:27] _162 = (int) _161;
+  switch (_162) <[telnet.c:587:13] default: <L210> [INV], [telnet.c:581:13] case 0: <L194> [INV], [telnet.c:584:13] case 1: <L202> [INV]>
+
+  <bb 130> :
+[telnet.c:581:13] <L194>:
+  [telnet.c:582:15] if (data_214(D) != 0B)
+    goto <bb 131>; [INV]
+  else
+    goto <bb 145>; [INV]
+
+  <bb 131> :
+  [telnet.c:582:15] _163 = [telnet.c:582:15] BIT_FIELD_REF <[telnet.c:582:15] data_214(D)->set, 8, 7064>;
+  [telnet.c:582:15] _164 = _163 & 32;
+  [telnet.c:582:15] if (_164 != 0)
+    goto <bb 132>; [INV]
+  else
+    goto <bb 145>; [INV]
+
+  <bb 132> :
+  [telnet.c:582:15] _165 = [telnet.c:582:15] [telnet.c:582:15] data_214(D)->state.feat;
+  [telnet.c:582:15] if (_165 == 0B)
+    goto <bb 134>; [INV]
+  else
+    goto <bb 133>; [INV]
+
+  <bb 133> :
+  [telnet.c:582:15] _166 = [telnet.c:582:15] [telnet.c:582:15] data_214(D)->state.feat;
+  [telnet.c:582:15] _167 = [telnet.c:582:15] _166->log_level;
+  [telnet.c:582:15] if (_167 > 0)
+    goto <bb 134>; [INV]
+  else
+    goto <bb 145>; [INV]
+
+  <bb 134> :
+  [telnet.c:582:15] Curl_infof (data_214(D), [telnet.c:582:15] ", ");
+  goto <bb 145>; [INV]
+
+  <bb 135> :
+[telnet.c:584:13] <L202>:
+  [telnet.c:585:15] if (data_214(D) != 0B)
+    goto <bb 136>; [INV]
+  else
+    goto <bb 145>; [INV]
+
+  <bb 136> :
+  [telnet.c:585:15] _168 = [telnet.c:585:15] BIT_FIELD_REF <[telnet.c:585:15] data_214(D)->set, 8, 7064>;
+  [telnet.c:585:15] _169 = _168 & 32;
+  [telnet.c:585:15] if (_169 != 0)
+    goto <bb 137>; [INV]
+  else
+    goto <bb 145>; [INV]
+
+  <bb 137> :
+  [telnet.c:585:15] _170 = [telnet.c:585:15] [telnet.c:585:15] data_214(D)->state.feat;
+  [telnet.c:585:15] if (_170 == 0B)
+    goto <bb 139>; [INV]
+  else
+    goto <bb 138>; [INV]
+
+  <bb 138> :
+  [telnet.c:585:15] _171 = [telnet.c:585:15] [telnet.c:585:15] data_214(D)->state.feat;
+  [telnet.c:585:15] _172 = [telnet.c:585:15] _171->log_level;
+  [telnet.c:585:15] if (_172 > 0)
+    goto <bb 139>; [INV]
+  else
+    goto <bb 145>; [INV]
+
+  <bb 139> :
+  [telnet.c:585:15] Curl_infof (data_214(D), [telnet.c:585:15] " = ");
+  goto <bb 145>; [INV]
+
+  <bb 140> :
+[telnet.c:587:13] <L210>:
+  [telnet.c:588:15] if (data_214(D) != 0B)
+    goto <bb 141>; [INV]
+  else
+    goto <bb 145>; [INV]
+
+  <bb 141> :
+  [telnet.c:588:15] _173 = [telnet.c:588:15] BIT_FIELD_REF <[telnet.c:588:15] data_214(D)->set, 8, 7064>;
+  [telnet.c:588:15] _174 = _173 & 32;
+  [telnet.c:588:15] if (_174 != 0)
+    goto <bb 142>; [INV]
+  else
+    goto <bb 145>; [INV]
+
+  <bb 142> :
+  [telnet.c:588:15] _175 = [telnet.c:588:15] [telnet.c:588:15] data_214(D)->state.feat;
+  [telnet.c:588:15] if (_175 == 0B)
+    goto <bb 144>; [INV]
+  else
+    goto <bb 143>; [INV]
+
+  <bb 143> :
+  [telnet.c:588:15] _176 = [telnet.c:588:15] [telnet.c:588:15] data_214(D)->state.feat;
+  [telnet.c:588:15] _177 = [telnet.c:588:15] _176->log_level;
+  [telnet.c:588:15] if (_177 > 0)
+    goto <bb 144>; [INV]
+  else
+    goto <bb 145>; [INV]
+
+  <bb 144> :
+  [telnet.c:588:15] _178 = (sizetype) i_194;
+  [telnet.c:588:15] _179 = pointer_221(D) + _178;
+  [telnet.c:588:15] _180 = [telnet.c:588:15] *_179;
+  [telnet.c:588:15] _181 = (int) _180;
+  [telnet.c:588:15] Curl_infof (data_214(D), [telnet.c:588:15] "%c", _181);
+
+  <bb 145> :
+  [telnet.c:579:35] i_246 = i_194 + 1;
+
+  <bb 146> :
+  # i_194 = PHI <[telnet.c:579:17] i_242(128), [telnet.c:579:35] i_246(145)>
+  [telnet.c:579:24] _182 = (long unsigned int) i_194;
+  [telnet.c:579:24] if (length_193 > _182)
+    goto <bb 129>; [INV]
+  else
+    goto <bb 155>; [INV]
+
+  <bb 147> :
+[telnet.c:594:7] <L222>:
+  [telnet.c:595:15] i_250 = 2;
+  [telnet.c:595:9] goto <bb 154>; [INV]
+
+  <bb 148> :
+  [telnet.c:596:11] if (data_214(D) != 0B)
+    goto <bb 149>; [INV]
+  else
+    goto <bb 153>; [INV]
+
+  <bb 149> :
+  [telnet.c:596:11] _183 = [telnet.c:596:11] BIT_FIELD_REF <[telnet.c:596:11] data_214(D)->set, 8, 7064>;
+  [telnet.c:596:11] _184 = _183 & 32;
+  [telnet.c:596:11] if (_184 != 0)
+    goto <bb 150>; [INV]
+  else
+    goto <bb 153>; [INV]
+
+  <bb 150> :
+  [telnet.c:596:11] _185 = [telnet.c:596:11] [telnet.c:596:11] data_214(D)->state.feat;
+  [telnet.c:596:11] if (_185 == 0B)
+    goto <bb 152>; [INV]
+  else
+    goto <bb 151>; [INV]
+
+  <bb 151> :
+  [telnet.c:596:11] _186 = [telnet.c:596:11] [telnet.c:596:11] data_214(D)->state.feat;
+  [telnet.c:596:11] _187 = [telnet.c:596:11] _186->log_level;
+  [telnet.c:596:11] if (_187 > 0)
+    goto <bb 152>; [INV]
+  else
+    goto <bb 153>; [INV]
+
+  <bb 152> :
+  [telnet.c:596:11] _188 = (sizetype) i_195;
+  [telnet.c:596:11] _189 = pointer_221(D) + _188;
+  [telnet.c:596:11] _190 = [telnet.c:596:11] *_189;
+  [telnet.c:596:11] _191 = (int) _190;
+  [telnet.c:596:11] Curl_infof (data_214(D), [telnet.c:596:11] " %.2x", _191);
+
+  <bb 153> :
+  [telnet.c:595:33] i_252 = i_195 + 1;
+
+  <bb 154> :
+  # i_195 = PHI <[telnet.c:595:15] i_250(147), [telnet.c:595:33] i_252(153)>
+  [telnet.c:595:22] _192 = (long unsigned int) i_195;
+  [telnet.c:595:22] if (length_193 > _192)
+    goto <bb 148>; [INV]
+  else
+    goto <bb 155>; [INV]
+
+  <bb 155> :
+  return;
+
+}
+
+
+
+;; Function printoption (printoption, funcdef_no=105, decl_uid=11551, cgraph_uid=106, symbol_order=107)
+
+void printoption (struct Curl_easy * data, const char * direction, int cmd, int option)
+{
+  const char * opt;
+  const char * fmt;
+  unsigned char _1;
+  unsigned char _2;
+  unsigned int option.18_3;
+  unsigned int _4;
+  unsigned char _5;
+  unsigned char _6;
+  struct curl_trc_feat * _7;
+  struct curl_trc_feat * _8;
+  int _9;
+  int _10;
+  const char * _11;
+  unsigned char _12;
+  unsigned char _13;
+  struct curl_trc_feat * _14;
+  struct curl_trc_feat * _15;
+  int _16;
+  unsigned char _17;
+  unsigned char _18;
+  struct curl_trc_feat * _19;
+  struct curl_trc_feat * _20;
+  int _21;
+  unsigned char _22;
+  unsigned char _23;
+  struct curl_trc_feat * _24;
+  struct curl_trc_feat * _25;
+  int _26;
+  unsigned char _27;
+  unsigned char _28;
+  struct curl_trc_feat * _29;
+  struct curl_trc_feat * _30;
+  int _31;
+  const char * iftmp.19_33;
+  const char * iftmp.20_34;
+  const char * iftmp.21_35;
+  const char * iftmp.22_36;
+  const char * iftmp.19_41;
+  const char * iftmp.20_42;
+  const char * iftmp.21_43;
+  const char * iftmp.22_44;
+  const char * iftmp.22_45;
+  const char * iftmp.21_46;
+  const char * iftmp.20_47;
+  const char * iftmp.19_48;
+
+  <bb 2> :
+  [telnet.c:137:6] _1 = [telnet.c:137:6] BIT_FIELD_REF <[telnet.c:137:10] data_39(D)->set, 8, 7064>;
+  [telnet.c:137:6] _2 = _1 & 32;
+  [telnet.c:137:5] if (_2 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 49>; [INV]
+
+  <bb 3> :
+  [telnet.c:138:7] if (cmd_40(D) == 255)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 4> :
+  [telnet.c:139:10] option.18_3 = (unsigned int) option_51(D);
+  [telnet.c:139:10] _4 = option.18_3 + 4294967060;
+  [telnet.c:139:9] if (_4 <= 19)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 5> :
+  [telnet.c:140:9] if (data_39(D) != 0B)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 49>; [INV]
+
+  <bb 6> :
+  [telnet.c:140:9] _5 = [telnet.c:140:9] BIT_FIELD_REF <[telnet.c:140:9] data_39(D)->set, 8, 7064>;
+  [telnet.c:140:9] _6 = _5 & 32;
+  [telnet.c:140:9] if (_6 != 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 49>; [INV]
+
+  <bb 7> :
+  [telnet.c:140:9] _7 = [telnet.c:140:9] [telnet.c:140:9] data_39(D)->state.feat;
+  [telnet.c:140:9] if (_7 == 0B)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 8> :
+  [telnet.c:140:9] _8 = [telnet.c:140:9] [telnet.c:140:9] data_39(D)->state.feat;
+  [telnet.c:140:9] _9 = [telnet.c:140:9] _8->log_level;
+  [telnet.c:140:9] if (_9 > 0)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 49>; [INV]
+
+  <bb 9> :
+  [telnet.c:140:9] _10 = option_51(D) + -236;
+  [telnet.c:140:9] _11 = [telnet.c:140:9] telnetcmds[_10];
+  [telnet.c:140:9] Curl_infof (data_39(D), [telnet.c:140:9] "%s IAC %s", direction_50(D), _11);
+  goto <bb 49>; [INV]
+
+  <bb 10> :
+  [telnet.c:142:9] if (data_39(D) != 0B)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 49>; [INV]
+
+  <bb 11> :
+  [telnet.c:142:9] _12 = [telnet.c:142:9] BIT_FIELD_REF <[telnet.c:142:9] data_39(D)->set, 8, 7064>;
+  [telnet.c:142:9] _13 = _12 & 32;
+  [telnet.c:142:9] if (_13 != 0)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 49>; [INV]
+
+  <bb 12> :
+  [telnet.c:142:9] _14 = [telnet.c:142:9] [telnet.c:142:9] data_39(D)->state.feat;
+  [telnet.c:142:9] if (_14 == 0B)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 13> :
+  [telnet.c:142:9] _15 = [telnet.c:142:9] [telnet.c:142:9] data_39(D)->state.feat;
+  [telnet.c:142:9] _16 = [telnet.c:142:9] _15->log_level;
+  [telnet.c:142:9] if (_16 > 0)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 49>; [INV]
+
+  <bb 14> :
+  [telnet.c:142:9] Curl_infof (data_39(D), [telnet.c:142:9] "%s IAC %d", direction_50(D), option_51(D));
+  goto <bb 49>; [INV]
+
+  <bb 15> :
+  [telnet.c:145:53] if (cmd_40(D) != 251)
+    goto <bb 16>; [INV]
+  else
+    goto <bb 26>; [INV]
+
+  <bb 16> :
+  [telnet.c:145:53] if (cmd_40(D) != 252)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 24>; [INV]
+
+  <bb 17> :
+  [telnet.c:145:53] if (cmd_40(D) != 253)
+    goto <bb 18>; [INV]
+  else
+    goto <bb 22>; [INV]
+
+  <bb 18> :
+  [telnet.c:145:53] if (cmd_40(D) == 254)
+    goto <bb 19>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 19> :
+  [telnet.c:145:53] iftmp.22_45 = [telnet.c:148:46] "DONT";
+  [0:0] goto <bb 21>; [INV]
+
+  <bb 20> :
+  [telnet.c:145:53] iftmp.22_44 = 0B;
+
+  <bb 21> :
+  # iftmp.22_36 = PHI <[telnet.c:145:53] iftmp.22_45(19), [telnet.c:145:53] iftmp.22_44(20)>
+  [telnet.c:145:53] iftmp.21_46 = iftmp.22_36;
+  [0:0] goto <bb 23>; [INV]
+
+  <bb 22> :
+  [telnet.c:145:53] iftmp.21_43 = [telnet.c:147:44] "DO";
+
+  <bb 23> :
+  # iftmp.21_35 = PHI <[telnet.c:145:53] iftmp.21_46(21), [telnet.c:145:53] iftmp.21_43(22)>
+  [telnet.c:145:53] iftmp.20_47 = iftmp.21_35;
+  [0:0] goto <bb 25>; [INV]
+
+  <bb 24> :
+  [telnet.c:145:53] iftmp.20_42 = [telnet.c:146:46] "WONT";
+
+  <bb 25> :
+  # iftmp.20_34 = PHI <[telnet.c:145:53] iftmp.20_47(23), [telnet.c:145:53] iftmp.20_42(24)>
+  [telnet.c:145:53] iftmp.19_48 = iftmp.20_34;
+  [0:0] goto <bb 27>; [INV]
+
+  <bb 26> :
+  [telnet.c:145:53] iftmp.19_41 = [telnet.c:145:46] "WILL";
+
+  <bb 27> :
+  # iftmp.19_33 = PHI <[telnet.c:145:53] iftmp.19_48(25), [telnet.c:145:53] iftmp.19_41(26)>
+  [telnet.c:145:19] fmt_49 = iftmp.19_33;
+  [telnet.c:149:9] if (fmt_49 != 0B)
+    goto <bb 28>; [INV]
+  else
+    goto <bb 44>; [INV]
+
+  <bb 28> :
+  [telnet.c:151:11] if (option_51(D) <= 39)
+    goto <bb 29>; [INV]
+  else
+    goto <bb 30>; [INV]
+
+  <bb 29> :
+  [telnet.c:152:15] opt_55 = [telnet.c:152:17] telnetoptions[option_51(D)];
+  [0:0] goto <bb 33>; [INV]
+
+  <bb 30> :
+  [telnet.c:153:16] if (option_51(D) == 255)
+    goto <bb 31>; [INV]
+  else
+    goto <bb 32>; [INV]
+
+  <bb 31> :
+  [telnet.c:154:15] opt_54 = [telnet.c:154:17] "EXOPL";
+  [0:0] goto <bb 33>; [INV]
+
+  <bb 32> :
+  [telnet.c:156:15] opt_53 = 0B;
+
+  <bb 33> :
+  # opt_32 = PHI <[telnet.c:152:15] opt_55(29), [telnet.c:154:15] opt_54(31), [telnet.c:156:15] opt_53(32)>
+  [telnet.c:158:11] if (opt_32 != 0B)
+    goto <bb 34>; [INV]
+  else
+    goto <bb 39>; [INV]
+
+  <bb 34> :
+  [telnet.c:159:11] if (data_39(D) != 0B)
+    goto <bb 35>; [INV]
+  else
+    goto <bb 49>; [INV]
+
+  <bb 35> :
+  [telnet.c:159:11] _17 = [telnet.c:159:11] BIT_FIELD_REF <[telnet.c:159:11] data_39(D)->set, 8, 7064>;
+  [telnet.c:159:11] _18 = _17 & 32;
+  [telnet.c:159:11] if (_18 != 0)
+    goto <bb 36>; [INV]
+  else
+    goto <bb 49>; [INV]
+
+  <bb 36> :
+  [telnet.c:159:11] _19 = [telnet.c:159:11] [telnet.c:159:11] data_39(D)->state.feat;
+  [telnet.c:159:11] if (_19 == 0B)
+    goto <bb 38>; [INV]
+  else
+    goto <bb 37>; [INV]
+
+  <bb 37> :
+  [telnet.c:159:11] _20 = [telnet.c:159:11] [telnet.c:159:11] data_39(D)->state.feat;
+  [telnet.c:159:11] _21 = [telnet.c:159:11] _20->log_level;
+  [telnet.c:159:11] if (_21 > 0)
+    goto <bb 38>; [INV]
+  else
+    goto <bb 49>; [INV]
+
+  <bb 38> :
+  [telnet.c:159:11] Curl_infof (data_39(D), [telnet.c:159:11] "%s %s %s", direction_50(D), fmt_49, opt_32);
+  goto <bb 49>; [INV]
+
+  <bb 39> :
+  [telnet.c:161:11] if (data_39(D) != 0B)
+    goto <bb 40>; [INV]
+  else
+    goto <bb 49>; [INV]
+
+  <bb 40> :
+  [telnet.c:161:11] _22 = [telnet.c:161:11] BIT_FIELD_REF <[telnet.c:161:11] data_39(D)->set, 8, 7064>;
+  [telnet.c:161:11] _23 = _22 & 32;
+  [telnet.c:161:11] if (_23 != 0)
+    goto <bb 41>; [INV]
+  else
+    goto <bb 49>; [INV]
+
+  <bb 41> :
+  [telnet.c:161:11] _24 = [telnet.c:161:11] [telnet.c:161:11] data_39(D)->state.feat;
+  [telnet.c:161:11] if (_24 == 0B)
+    goto <bb 43>; [INV]
+  else
+    goto <bb 42>; [INV]
+
+  <bb 42> :
+  [telnet.c:161:11] _25 = [telnet.c:161:11] [telnet.c:161:11] data_39(D)->state.feat;
+  [telnet.c:161:11] _26 = [telnet.c:161:11] _25->log_level;
+  [telnet.c:161:11] if (_26 > 0)
+    goto <bb 43>; [INV]
+  else
+    goto <bb 49>; [INV]
+
+  <bb 43> :
+  [telnet.c:161:11] Curl_infof (data_39(D), [telnet.c:161:11] "%s %s %d", direction_50(D), fmt_49, option_51(D));
+  goto <bb 49>; [INV]
+
+  <bb 44> :
+  [telnet.c:164:9] if (data_39(D) != 0B)
+    goto <bb 45>; [INV]
+  else
+    goto <bb 49>; [INV]
+
+  <bb 45> :
+  [telnet.c:164:9] _27 = [telnet.c:164:9] BIT_FIELD_REF <[telnet.c:164:9] data_39(D)->set, 8, 7064>;
+  [telnet.c:164:9] _28 = _27 & 32;
+  [telnet.c:164:9] if (_28 != 0)
+    goto <bb 46>; [INV]
+  else
+    goto <bb 49>; [INV]
+
+  <bb 46> :
+  [telnet.c:164:9] _29 = [telnet.c:164:9] [telnet.c:164:9] data_39(D)->state.feat;
+  [telnet.c:164:9] if (_29 == 0B)
+    goto <bb 48>; [INV]
+  else
+    goto <bb 47>; [INV]
+
+  <bb 47> :
+  [telnet.c:164:9] _30 = [telnet.c:164:9] [telnet.c:164:9] data_39(D)->state.feat;
+  [telnet.c:164:9] _31 = [telnet.c:164:9] _30->log_level;
+  [telnet.c:164:9] if (_31 > 0)
+    goto <bb 48>; [INV]
+  else
+    goto <bb 49>; [INV]
+
+  <bb 48> :
+  [telnet.c:164:9] Curl_infof (data_39(D), [telnet.c:164:9] "%s %d %d", direction_50(D), cmd_40(D), option_51(D));
+
+  <bb 49> :
+  [telnet.c:167:1] return;
+
+}
+
+
+
+;; Function send_negotiation (send_negotiation, funcdef_no=108, decl_uid=11578, cgraph_uid=109, symbol_order=110)
+
+void send_negotiation (struct Curl_easy * data, int cmd, int option)
+{
+  CURLcode result;
+  size_t nwritten;
+  unsigned char buf[3];
+  unsigned char _1;
+  unsigned char _2;
+  const char * _3;
+
+  <bb 2> :
+  [telnet.c:231:10] [telnet.c:231:6] buf[0] = 255;
+  [telnet.c:232:12] _1 = (unsigned char) cmd_7(D);
+  [telnet.c:232:10] [telnet.c:232:6] buf[1] = _1;
+  [telnet.c:233:12] _2 = (unsigned char) option_9(D);
+  [telnet.c:233:10] [telnet.c:233:6] buf[2] = _2;
+  [telnet.c:235:12] result_13 = Curl_xfer_send (data_11(D), [telnet.c:235:33] &buf, 3, 0, [telnet.c:235:12] &nwritten);
+  [telnet.c:236:5] if (result_13 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  [telnet.c:237:5] _3 = curl_easy_strerror (result_13);
+  [telnet.c:237:5] Curl_failf (data_11(D), [telnet.c:237:17] "Sending data failed: %s", _3);
+
+  <bb 4> :
+  [telnet.c:239:3] printoption (data_11(D), [telnet.c:239:21] "SENT", cmd_7(D), option_9(D));
+  buf ={v} {CLOBBER};
+  nwritten ={v} {CLOBBER};
+  [telnet.c:240:1] return;
+
+}
+
+
+
+;; Function rec_will (rec_will, funcdef_no=112, decl_uid=11651, cgraph_uid=113, symbol_order=114)
+
+void rec_will (struct Curl_easy * data, struct TELNET * tn, int option)
+{
+  int _1;
+  int _2;
+  int _3;
+  int _4;
+
+  <bb 2> :
+  [telnet.c:406:17] _1 = [telnet.c:406:17] [telnet.c:406:12] tn_7(D)->him[option_8(D)];
+  [telnet.c:406:3] switch (_1) <default: <L15> [INV], [telnet.c:407:3] case 0: <L0> [INV], [telnet.c:435:3] case 2: <L10> [INV], [telnet.c:421:3] case 3: <L5> [INV]>
+
+  <bb 3> :
+[telnet.c:407:3] <L0>:
+  [telnet.c:408:25] _2 = [telnet.c:408:25] [telnet.c:408:10] tn_7(D)->him_preferred[option_8(D)];
+  [telnet.c:408:7] if (_2 == 1)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  [telnet.c:409:23] [telnet.c:409:14] [telnet.c:409:9] tn_7(D)->him[option_8(D)] = 1;
+  [telnet.c:410:7] send_negotiation (data_11(D), 253, option_8(D));
+  [0:0] goto <bb 12>; [INV]
+
+  <bb 5> :
+  [telnet.c:413:7] send_negotiation (data_11(D), 254, option_8(D));
+  goto <bb 12>; [INV]
+
+  <bb 6> :
+[telnet.c:421:3] <L5>:
+  [telnet.c:422:20] _3 = [telnet.c:422:20] [telnet.c:422:14] tn_7(D)->himq[option_8(D)];
+  switch (_3) <default: <L15> [INV], [telnet.c:423:5] case 0: <L6> [INV], [telnet.c:427:5] case 1: <L7> [INV]>
+
+  <bb 7> :
+[telnet.c:423:5] <L6>:
+  [telnet.c:425:23] [telnet.c:425:14] [telnet.c:425:9] tn_7(D)->him[option_8(D)] = 0;
+  [telnet.c:426:7] goto <bb 12>; [INV]
+
+  <bb 8> :
+[telnet.c:427:5] <L7>:
+  [telnet.c:429:23] [telnet.c:429:14] [telnet.c:429:9] tn_7(D)->him[option_8(D)] = 1;
+  [telnet.c:430:24] [telnet.c:430:15] [telnet.c:430:9] tn_7(D)->himq[option_8(D)] = 0;
+  [telnet.c:431:7] goto <bb 12>; [INV]
+
+  <bb 9> :
+[telnet.c:435:3] <L10>:
+  [telnet.c:436:20] _4 = [telnet.c:436:20] [telnet.c:436:14] tn_7(D)->himq[option_8(D)];
+  switch (_4) <default: <L15> [INV], [telnet.c:437:5] case 0: <L11> [INV], [telnet.c:440:5] case 1: <L12> [INV]>
+
+  <bb 10> :
+[telnet.c:437:5] <L11>:
+  [telnet.c:438:23] [telnet.c:438:14] [telnet.c:438:9] tn_7(D)->him[option_8(D)] = 1;
+  [telnet.c:439:7] goto <bb 12>; [INV]
+
+  <bb 11> :
+[telnet.c:440:5] <L12>:
+  [telnet.c:441:23] [telnet.c:441:14] [telnet.c:441:9] tn_7(D)->him[option_8(D)] = 3;
+  [telnet.c:442:24] [telnet.c:442:15] [telnet.c:442:9] tn_7(D)->himq[option_8(D)] = 0;
+  [telnet.c:443:7] send_negotiation (data_11(D), 254, option_8(D));
+
+  <bb 12> :
+<L15>:
+  [telnet.c:448:1] return;
+
+}
+
+
+
+;; Function rec_wont (rec_wont, funcdef_no=113, decl_uid=11667, cgraph_uid=114, symbol_order=115)
+
+void rec_wont (struct Curl_easy * data, struct TELNET * tn, int option)
+{
+  int _1;
+  int _2;
+  int _3;
+
+  <bb 2> :
+  [telnet.c:452:17] _1 = [telnet.c:452:17] [telnet.c:452:12] tn_6(D)->him[option_7(D)];
+  [telnet.c:452:3] switch (_1) <default: <L12> [INV], [telnet.c:457:3] case 1: <L1> [INV], [telnet.c:476:3] case 2: <L7> [INV], [telnet.c:462:3] case 3: <L2> [INV]>
+
+  <bb 3> :
+[telnet.c:457:3] <L1>:
+  [telnet.c:458:21] [telnet.c:458:12] [telnet.c:458:7] tn_6(D)->him[option_7(D)] = 0;
+  [telnet.c:459:5] send_negotiation (data_12(D), 254, option_7(D));
+  [telnet.c:460:5] goto <bb 10>; [INV]
+
+  <bb 4> :
+[telnet.c:462:3] <L2>:
+  [telnet.c:463:20] _2 = [telnet.c:463:20] [telnet.c:463:14] tn_6(D)->himq[option_7(D)];
+  switch (_2) <default: <L12> [INV], [telnet.c:464:5] case 0: <L3> [INV], [telnet.c:468:5] case 1: <L4> [INV]>
+
+  <bb 5> :
+[telnet.c:464:5] <L3>:
+  [telnet.c:465:23] [telnet.c:465:14] [telnet.c:465:9] tn_6(D)->him[option_7(D)] = 0;
+  [telnet.c:466:7] goto <bb 10>; [INV]
+
+  <bb 6> :
+[telnet.c:468:5] <L4>:
+  [telnet.c:469:23] [telnet.c:469:14] [telnet.c:469:9] tn_6(D)->him[option_7(D)] = 2;
+  [telnet.c:470:24] [telnet.c:470:15] [telnet.c:470:9] tn_6(D)->himq[option_7(D)] = 0;
+  [telnet.c:471:7] send_negotiation (data_12(D), 253, option_7(D));
+  [telnet.c:472:7] goto <bb 10>; [INV]
+
+  <bb 7> :
+[telnet.c:476:3] <L7>:
+  [telnet.c:477:20] _3 = [telnet.c:477:20] [telnet.c:477:14] tn_6(D)->himq[option_7(D)];
+  switch (_3) <default: <L12> [INV], [telnet.c:478:5] case 0: <L8> [INV], [telnet.c:481:5] case 1: <L9> [INV]>
+
+  <bb 8> :
+[telnet.c:478:5] <L8>:
+  [telnet.c:479:23] [telnet.c:479:14] [telnet.c:479:9] tn_6(D)->him[option_7(D)] = 0;
+  [telnet.c:480:7] goto <bb 10>; [INV]
+
+  <bb 9> :
+[telnet.c:481:5] <L9>:
+  [telnet.c:482:23] [telnet.c:482:14] [telnet.c:482:9] tn_6(D)->him[option_7(D)] = 0;
+  [telnet.c:483:24] [telnet.c:483:15] [telnet.c:483:9] tn_6(D)->himq[option_7(D)] = 0;
+
+  <bb 10> :
+<L12>:
+  [telnet.c:488:1] return;
+
+}
+
+
+
+;; Function rec_dont (rec_dont, funcdef_no=118, decl_uid=11849, cgraph_uid=119, symbol_order=120)
+
+void rec_dont (struct Curl_easy * data, struct TELNET * tn, int option)
+{
+  int _1;
+  int _2;
+  int _3;
+
+  <bb 2> :
+  [telnet.c:780:16] _1 = [telnet.c:780:16] [telnet.c:780:12] tn_6(D)->us[option_7(D)];
+  [telnet.c:780:3] switch (_1) <default: <L12> [INV], [telnet.c:785:3] case 1: <L1> [INV], [telnet.c:804:3] case 2: <L7> [INV], [telnet.c:790:3] case 3: <L2> [INV]>
+
+  <bb 3> :
+[telnet.c:785:3] <L1>:
+  [telnet.c:786:20] [telnet.c:786:11] [telnet.c:786:7] tn_6(D)->us[option_7(D)] = 0;
+  [telnet.c:787:5] send_negotiation (data_12(D), 252, option_7(D));
+  [telnet.c:788:5] goto <bb 10>; [INV]
+
+  <bb 4> :
+[telnet.c:790:3] <L2>:
+  [telnet.c:791:19] _2 = [telnet.c:791:19] [telnet.c:791:14] tn_6(D)->usq[option_7(D)];
+  switch (_2) <default: <L12> [INV], [telnet.c:792:5] case 0: <L3> [INV], [telnet.c:796:5] case 1: <L4> [INV]>
+
+  <bb 5> :
+[telnet.c:792:5] <L3>:
+  [telnet.c:793:22] [telnet.c:793:13] [telnet.c:793:9] tn_6(D)->us[option_7(D)] = 0;
+  [telnet.c:794:7] goto <bb 10>; [INV]
+
+  <bb 6> :
+[telnet.c:796:5] <L4>:
+  [telnet.c:797:22] [telnet.c:797:13] [telnet.c:797:9] tn_6(D)->us[option_7(D)] = 2;
+  [telnet.c:798:23] [telnet.c:798:14] [telnet.c:798:9] tn_6(D)->usq[option_7(D)] = 0;
+  [telnet.c:799:7] send_negotiation (data_12(D), 251, option_7(D));
+  [telnet.c:800:7] goto <bb 10>; [INV]
+
+  <bb 7> :
+[telnet.c:804:3] <L7>:
+  [telnet.c:805:19] _3 = [telnet.c:805:19] [telnet.c:805:14] tn_6(D)->usq[option_7(D)];
+  switch (_3) <default: <L12> [INV], [telnet.c:806:5] case 0: <L8> [INV], [telnet.c:809:5] case 1: <L9> [INV]>
+
+  <bb 8> :
+[telnet.c:806:5] <L8>:
+  [telnet.c:807:22] [telnet.c:807:13] [telnet.c:807:9] tn_6(D)->us[option_7(D)] = 0;
+  [telnet.c:808:7] goto <bb 10>; [INV]
+
+  <bb 9> :
+[telnet.c:809:5] <L9>:
+  [telnet.c:810:22] [telnet.c:810:13] [telnet.c:810:9] tn_6(D)->us[option_7(D)] = 0;
+  [telnet.c:811:23] [telnet.c:811:14] [telnet.c:811:9] tn_6(D)->usq[option_7(D)] = 0;
+
+  <bb 10> :
+<L12>:
+  [telnet.c:816:1] return;
+
+}
+
+
+
+;; Function set_local_option (set_local_option, funcdef_no=110, decl_uid=11615, cgraph_uid=111, symbol_order=112)
+
+void set_local_option (struct Curl_easy * data, struct TELNET * tn, int option, int newstate)
+{
+  int _1;
+  int _2;
+  int _3;
+  int _4;
+  int _5;
+  int _6;
+
+  <bb 2> :
+  [telnet.c:318:5] if (newstate_8(D) == 1)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 3> :
+  [telnet.c:319:18] _1 = [telnet.c:319:18] [telnet.c:319:14] tn_10(D)->us[option_11(D)];
+  [telnet.c:319:5] switch (_1) <default: <L28> [INV], [telnet.c:320:5] case 0: <L1> [INV], [telnet.c:341:5] case 2: <L8> [INV], [telnet.c:329:5] case 3: <L3> [INV]>
+
+  <bb 4> :
+[telnet.c:320:5] <L1>:
+  [telnet.c:321:22] [telnet.c:321:13] [telnet.c:321:9] tn_10(D)->us[option_11(D)] = 2;
+  [telnet.c:322:7] send_negotiation (data_14(D), 251, option_11(D));
+  [telnet.c:323:7] goto <bb 15>; [INV]
+
+  <bb 5> :
+[telnet.c:329:5] <L3>:
+  [telnet.c:330:21] _2 = [telnet.c:330:21] [telnet.c:330:16] tn_10(D)->usq[option_11(D)];
+  switch (_2) <default: <L28> [INV], [telnet.c:331:7] case 0: <L4> [INV]>
+
+  <bb 6> :
+[telnet.c:331:7] <L4>:
+  [telnet.c:333:25] [telnet.c:333:16] [telnet.c:333:11] tn_10(D)->usq[option_11(D)] = 1;
+  [telnet.c:334:9] goto <bb 15>; [INV]
+
+  <bb 7> :
+[telnet.c:341:5] <L8>:
+  [telnet.c:342:21] _3 = [telnet.c:342:21] [telnet.c:342:16] tn_10(D)->usq[option_11(D)];
+  switch (_3) <default: <L28> [INV], [telnet.c:346:7] case 1: <L10> [INV]>
+
+  <bb 8> :
+[telnet.c:346:7] <L10>:
+  [telnet.c:347:25] [telnet.c:347:16] [telnet.c:347:11] tn_10(D)->usq[option_11(D)] = 0;
+  [telnet.c:348:9] goto <bb 15>; [INV]
+
+  <bb 9> :
+  [telnet.c:354:18] _4 = [telnet.c:354:18] [telnet.c:354:14] tn_10(D)->us[option_11(D)];
+  [telnet.c:354:5] switch (_4) <default: <L28> [INV], [telnet.c:359:5] case 1: <L17> [INV], [telnet.c:375:5] case 2: <L23> [INV], [telnet.c:364:5] case 3: <L18> [INV]>
+
+  <bb 10> :
+[telnet.c:359:5] <L17>:
+  [telnet.c:360:22] [telnet.c:360:13] [telnet.c:360:9] tn_10(D)->us[option_11(D)] = 3;
+  [telnet.c:361:7] send_negotiation (data_14(D), 252, option_11(D));
+  [telnet.c:362:7] goto <bb 15>; [INV]
+
+  <bb 11> :
+[telnet.c:364:5] <L18>:
+  [telnet.c:365:21] _5 = [telnet.c:365:21] [telnet.c:365:16] tn_10(D)->usq[option_11(D)];
+  switch (_5) <default: <L28> [INV], [telnet.c:369:7] case 1: <L20> [INV]>
+
+  <bb 12> :
+[telnet.c:369:7] <L20>:
+  [telnet.c:370:25] [telnet.c:370:16] [telnet.c:370:11] tn_10(D)->usq[option_11(D)] = 0;
+  [telnet.c:371:9] goto <bb 15>; [INV]
+
+  <bb 13> :
+[telnet.c:375:5] <L23>:
+  [telnet.c:376:21] _6 = [telnet.c:376:21] [telnet.c:376:16] tn_10(D)->usq[option_11(D)];
+  switch (_6) <default: <L28> [INV], [telnet.c:377:7] case 0: <L24> [INV]>
+
+  <bb 14> :
+[telnet.c:377:7] <L24>:
+  [telnet.c:378:25] [telnet.c:378:16] [telnet.c:378:11] tn_10(D)->usq[option_11(D)] = 1;
+
+  <bb 15> :
+<L28>:
+  [telnet.c:386:1] return;
+
+}
+
+
+
+;; Function set_remote_option (set_remote_option, funcdef_no=109, decl_uid=11587, cgraph_uid=110, symbol_order=111)
+
+void set_remote_option (struct Curl_easy * data, struct TELNET * tn, int option, int newstate)
+{
+  int _1;
+  int _2;
+  int _3;
+  int _4;
+  int _5;
+  int _6;
+
+  <bb 2> :
+  [telnet.c:245:5] if (newstate_8(D) == 1)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 3> :
+  [telnet.c:246:19] _1 = [telnet.c:246:19] [telnet.c:246:14] tn_10(D)->him[option_11(D)];
+  [telnet.c:246:5] switch (_1) <default: <L28> [INV], [telnet.c:247:5] case 0: <L1> [INV], [telnet.c:268:5] case 2: <L8> [INV], [telnet.c:256:5] case 3: <L3> [INV]>
+
+  <bb 4> :
+[telnet.c:247:5] <L1>:
+  [telnet.c:248:23] [telnet.c:248:14] [telnet.c:248:9] tn_10(D)->him[option_11(D)] = 2;
+  [telnet.c:249:7] send_negotiation (data_14(D), 253, option_11(D));
+  [telnet.c:250:7] goto <bb 15>; [INV]
+
+  <bb 5> :
+[telnet.c:256:5] <L3>:
+  [telnet.c:257:22] _2 = [telnet.c:257:22] [telnet.c:257:16] tn_10(D)->himq[option_11(D)];
+  switch (_2) <default: <L28> [INV], [telnet.c:258:7] case 0: <L4> [INV]>
+
+  <bb 6> :
+[telnet.c:258:7] <L4>:
+  [telnet.c:260:26] [telnet.c:260:17] [telnet.c:260:11] tn_10(D)->himq[option_11(D)] = 1;
+  [telnet.c:261:9] goto <bb 15>; [INV]
+
+  <bb 7> :
+[telnet.c:268:5] <L8>:
+  [telnet.c:269:22] _3 = [telnet.c:269:22] [telnet.c:269:16] tn_10(D)->himq[option_11(D)];
+  switch (_3) <default: <L28> [INV], [telnet.c:273:7] case 1: <L10> [INV]>
+
+  <bb 8> :
+[telnet.c:273:7] <L10>:
+  [telnet.c:274:26] [telnet.c:274:17] [telnet.c:274:11] tn_10(D)->himq[option_11(D)] = 0;
+  [telnet.c:275:9] goto <bb 15>; [INV]
+
+  <bb 9> :
+  [telnet.c:281:19] _4 = [telnet.c:281:19] [telnet.c:281:14] tn_10(D)->him[option_11(D)];
+  [telnet.c:281:5] switch (_4) <default: <L28> [INV], [telnet.c:286:5] case 1: <L17> [INV], [telnet.c:302:5] case 2: <L23> [INV], [telnet.c:291:5] case 3: <L18> [INV]>
+
+  <bb 10> :
+[telnet.c:286:5] <L17>:
+  [telnet.c:287:23] [telnet.c:287:14] [telnet.c:287:9] tn_10(D)->him[option_11(D)] = 3;
+  [telnet.c:288:7] send_negotiation (data_14(D), 254, option_11(D));
+  [telnet.c:289:7] goto <bb 15>; [INV]
+
+  <bb 11> :
+[telnet.c:291:5] <L18>:
+  [telnet.c:292:22] _5 = [telnet.c:292:22] [telnet.c:292:16] tn_10(D)->himq[option_11(D)];
+  switch (_5) <default: <L28> [INV], [telnet.c:296:7] case 1: <L20> [INV]>
+
+  <bb 12> :
+[telnet.c:296:7] <L20>:
+  [telnet.c:297:26] [telnet.c:297:17] [telnet.c:297:11] tn_10(D)->himq[option_11(D)] = 0;
+  [telnet.c:298:9] goto <bb 15>; [INV]
+
+  <bb 13> :
+[telnet.c:302:5] <L23>:
+  [telnet.c:303:22] _6 = [telnet.c:303:22] [telnet.c:303:16] tn_10(D)->himq[option_11(D)];
+  switch (_6) <default: <L28> [INV], [telnet.c:304:7] case 0: <L24> [INV]>
+
+  <bb 14> :
+[telnet.c:304:7] <L24>:
+  [telnet.c:305:26] [telnet.c:305:17] [telnet.c:305:11] tn_10(D)->himq[option_11(D)] = 1;
+
+  <bb 15> :
+<L28>:
+  [telnet.c:313:1] return;
+
+}
+
+
+
+;; Function telnet_negotiate (telnet_negotiate, funcdef_no=111, decl_uid=11641, cgraph_uid=112, symbol_order=113)
+
+void telnet_negotiate (struct Curl_easy * data, struct TELNET * tn)
+{
+  int i;
+  int _1;
+  int _2;
+
+  <bb 2> :
+  [telnet.c:392:9] i_7 = 0;
+  [telnet.c:392:3] goto <bb 10>; [INV]
+
+  <bb 3> :
+  [telnet.c:393:7] if (i_3 == 1)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  [telnet.c:393:7] // predicted unlikely by continue predictor.
+  [telnet.c:394:7] goto <bb 9>; [INV]
+
+  <bb 5> :
+  [telnet.c:396:24] _1 = [telnet.c:396:24] [telnet.c:396:10] tn_9(D)->us_preferred[i_3];
+  [telnet.c:396:7] if (_1 == 1)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 6> :
+  [telnet.c:397:7] set_local_option (data_10(D), tn_9(D), i_3, 1);
+
+  <bb 7> :
+  [telnet.c:399:25] _2 = [telnet.c:399:25] [telnet.c:399:10] tn_9(D)->him_preferred[i_3];
+  [telnet.c:399:7] if (_2 == 1)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 8> :
+  [telnet.c:400:7] set_remote_option (data_10(D), tn_9(D), i_3, 1);
+
+  <bb 9> :
+  [telnet.c:392:34] i_13 = i_3 + 1;
+
+  <bb 10> :
+  # i_3 = PHI <[telnet.c:392:9] i_7(2), [telnet.c:392:34] i_13(9)>
+  [telnet.c:392:16] if (i_3 <= 39)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 11> :
+  [telnet.c:402:1] return;
+
+}
+
+
+
+;; Function suboption (suboption, funcdef_no=122, decl_uid=11904, cgraph_uid=123, symbol_order=124)
+
+CURLcode suboption (struct Curl_easy * data, struct TELNET * tn)
+{
+  size_t vlen;
+  const char * s;
+  size_t tmplen;
+  CURLcode result;
+  size_t len;
+  size_t nwritten;
+  unsigned char temp[2048];
+  struct curl_slist * v;
+  unsigned char * _1;
+  unsigned char * _2;
+  unsigned char * _3;
+  unsigned char * _4;
+  long int _5;
+  long int _6;
+  long unsigned int _7;
+  unsigned char[512] * _8;
+  unsigned char * _9;
+  unsigned char * _10;
+  unsigned char * _11;
+  unsigned char _12;
+  int _13;
+  const char * _14;
+  _Bool _15;
+  const char * _16;
+  long unsigned int _17;
+  const char * _18;
+  int _19;
+  const char * _20;
+  long unsigned int _21;
+  const char * _22;
+  _Bool _23;
+  const char * _24;
+  long unsigned int _25;
+  const char * _26;
+  int _27;
+  const char * _28;
+  long unsigned int _29;
+  int _30;
+  char * _31;
+  long unsigned int _32;
+  char * _33;
+  _Bool _34;
+  long unsigned int _35;
+  char * _36;
+  char * _37;
+  long unsigned int _38;
+  unsigned char * _39;
+  long unsigned int _40;
+  char * _41;
+  long int _42;
+  char * _43;
+  int _44;
+  long unsigned int _45;
+  unsigned char * _46;
+  long unsigned int _47;
+  long unsigned int _48;
+  unsigned char * _49;
+  const char * _50;
+  long unsigned int _51;
+  CURLcode _55;
+  CURLcode _76;
+  int _83;
+  int _86;
+  CURLcode _89;
+  CURLcode _98;
+  CURLcode _100;
+  CURLcode _101;
+  CURLcode _110;
+  CURLcode _112;
+  CURLcode _113;
+  CURLcode _114;
+  CURLcode _115;
+
+  <bb 2> :
+  [telnet.c:977:12] result_60 = 0;
+  [telnet.c:979:7] _1 = [telnet.c:979:7] tn_62(D)->subend;
+  [telnet.c:979:7] _2 = [telnet.c:979:7] tn_62(D)->subpointer;
+  [telnet.c:979:5] if (_1 == _2)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  [telnet.c:980:12] _115 = 0;
+  [telnet.c:980:12] // predicted unlikely by early return (on trees) predictor.
+  [telnet.c:980:12] goto <bb 32>; [INV]
+
+  <bb 4> :
+  [telnet.c:983:12] _3 = [telnet.c:983:12] tn_62(D)->subend;
+  [telnet.c:983:12] _4 = [telnet.c:983:12] tn_62(D)->subpointer;
+  [telnet.c:983:12] _5 = _3 - _4;
+  [telnet.c:983:28] _6 = _5 + 2;
+  [telnet.c:982:3] _7 = (long unsigned int) _6;
+  [telnet.c:982:46] _8 = [telnet.c:982:46] &[telnet.c:982:48] tn_62(D)->subbuffer;
+  [telnet.c:982:3] printsub (data_63(D), 60, _8, _7);
+  [telnet.c:984:10] _9 = [telnet.c:984:10] tn_62(D)->subpointer;
+  [telnet.c:984:10] _10 = _9;
+  [telnet.c:984:10] _11 = _10 + 1;
+  [telnet.c:984:10] [telnet.c:984:10] tn_62(D)->subpointer = _11;
+  [telnet.c:984:10] _12 = [telnet.c:984:10] *_10;
+  [telnet.c:984:10] _13 = (int) _12;
+  [telnet.c:984:3] switch (_13) <default: <L29> [INV], [telnet.c:985:3] case 24: <L2> [INV], [telnet.c:1003:3] case 35: <L9> [INV], [telnet.c:1021:3] case 39: <L16> [INV]>
+
+  <bb 5> :
+[telnet.c:985:3] <L2>:
+  [telnet.c:986:8] _14 = [telnet.c:986:8] tn_62(D)->subopt_ttype;
+  [telnet.c:986:8] _15 = bad_option (_14);
+  [telnet.c:986:7] if (_15 != 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 6> :
+  [telnet.c:987:14] _113 = 43;
+  [telnet.c:987:14] // predicted unlikely by early return (on trees) predictor.
+  [telnet.c:987:14] goto <bb 32>; [INV]
+
+  <bb 7> :
+  [telnet.c:988:8] _16 = [telnet.c:988:8] tn_62(D)->subopt_ttype;
+  [telnet.c:988:8] _17 = strlen (_16);
+  [telnet.c:988:7] if (_17 > 1000)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 8> :
+  [telnet.c:989:7] Curl_failf (data_63(D), [telnet.c:989:19] "Too long telnet TTYPE");
+  [telnet.c:990:14] _112 = 55;
+  [telnet.c:990:14] // predicted unlikely by early return (on trees) predictor.
+  [telnet.c:990:14] goto <bb 32>; [INV]
+
+  <bb 9> :
+  [telnet.c:992:11] _18 = [telnet.c:992:11] tn_62(D)->subopt_ttype;
+  [telnet.c:992:11] _19 = curl_msnprintf ([telnet.c:992:11] &temp, 2048, [telnet.c:992:11] "%c%c%c%c%s%c%c", 255, 250, 24, 0, _18, 255, 240);
+  [telnet.c:992:9] len_104 = (size_t) _19;
+  [telnet.c:996:14] result_106 = Curl_xfer_send (data_63(D), [telnet.c:996:35] &temp, len_104, 0, [telnet.c:996:14] &nwritten);
+  [telnet.c:997:7] if (result_106 != 0)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 10> :
+  [telnet.c:998:7] _20 = curl_easy_strerror (result_106);
+  [telnet.c:998:7] Curl_failf (data_63(D), [telnet.c:998:19] "Sending data failed: %s", _20);
+  [telnet.c:999:14] _110 = result_106;
+  [telnet.c:999:14] // predicted unlikely by early return (on trees) predictor.
+  [telnet.c:999:14] goto <bb 32>; [INV]
+
+  <bb 11> :
+  [telnet.c:1001:5] _21 = len_104 + 18446744073709551614;
+  [telnet.c:1001:5] printsub (data_63(D), 62, [telnet.c:1001:25] &[telnet.c:1001:30] temp[2], _21);
+  [telnet.c:1002:5] goto <bb 31>; [INV]
+
+  <bb 12> :
+[telnet.c:1003:3] <L9>:
+  [telnet.c:1004:8] _22 = [telnet.c:1004:8] tn_62(D)->subopt_xdisploc;
+  [telnet.c:1004:8] _23 = bad_option (_22);
+  [telnet.c:1004:7] if (_23 != 0)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 13> :
+  [telnet.c:1005:14] _101 = 43;
+  [telnet.c:1005:14] // predicted unlikely by early return (on trees) predictor.
+  [telnet.c:1005:14] goto <bb 32>; [INV]
+
+  <bb 14> :
+  [telnet.c:1006:8] _24 = [telnet.c:1006:8] tn_62(D)->subopt_xdisploc;
+  [telnet.c:1006:8] _25 = strlen (_24);
+  [telnet.c:1006:7] if (_25 > 1000)
+    goto <bb 15>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 15> :
+  [telnet.c:1007:7] Curl_failf (data_63(D), [telnet.c:1007:19] "Too long telnet XDISPLOC");
+  [telnet.c:1008:14] _100 = 55;
+  [telnet.c:1008:14] // predicted unlikely by early return (on trees) predictor.
+  [telnet.c:1008:14] goto <bb 32>; [INV]
+
+  <bb 16> :
+  [telnet.c:1010:11] _26 = [telnet.c:1010:11] tn_62(D)->subopt_xdisploc;
+  [telnet.c:1010:11] _27 = curl_msnprintf ([telnet.c:1010:11] &temp, 2048, [telnet.c:1010:11] "%c%c%c%c%s%c%c", 255, 250, 35, 0, _26, 255, 240);
+  [telnet.c:1010:9] len_92 = (size_t) _27;
+  [telnet.c:1014:14] result_94 = Curl_xfer_send (data_63(D), [telnet.c:1014:35] &temp, len_92, 0, [telnet.c:1014:14] &nwritten);
+  [telnet.c:1015:7] if (result_94 != 0)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 18>; [INV]
+
+  <bb 17> :
+  [telnet.c:1016:7] _28 = curl_easy_strerror (result_94);
+  [telnet.c:1016:7] Curl_failf (data_63(D), [telnet.c:1016:19] "Sending data failed: %s", _28);
+  [telnet.c:1017:14] _98 = result_94;
+  [telnet.c:1017:14] // predicted unlikely by early return (on trees) predictor.
+  [telnet.c:1017:14] goto <bb 32>; [INV]
+
+  <bb 18> :
+  [telnet.c:1019:5] _29 = len_92 + 18446744073709551614;
+  [telnet.c:1019:5] printsub (data_63(D), 62, [telnet.c:1019:25] &[telnet.c:1019:30] temp[2], _29);
+  [telnet.c:1020:5] goto <bb 31>; [INV]
+
+  <bb 19> :
+[telnet.c:1021:3] <L16>:
+  [telnet.c:1022:11] _30 = curl_msnprintf ([telnet.c:1022:11] &temp, 2048, [telnet.c:1022:11] "%c%c%c%c", 255, 250, 39, 0);
+  [telnet.c:1022:9] len_67 = (size_t) _30;
+  [telnet.c:1025:11] v_68 = [telnet.c:1025:15] tn_62(D)->telnet_vars;
+  [telnet.c:1025:5] goto <bb 27>; [INV]
+
+  <bb 20> :
+  [telnet.c:1026:32] _31 = [telnet.c:1026:32] v_52->data;
+  [telnet.c:1026:24] _32 = strlen (_31);
+  [telnet.c:1026:14] tmplen_77 = _32 + 1;
+  [telnet.c:1027:22] _33 = [telnet.c:1027:22] v_52->data;
+  [telnet.c:1027:10] _34 = bad_option (_33);
+  [telnet.c:1027:9] if (_34 != 0)
+    goto <bb 21>; [INV]
+  else
+    goto <bb 22>; [INV]
+
+  <bb 21> :
+  [telnet.c:1028:16] _89 = 43;
+  [telnet.c:1028:16] // predicted unlikely by early return (on trees) predictor.
+  [telnet.c:1028:16] goto <bb 32>; [INV]
+
+  <bb 22> :
+  [telnet.c:1030:14] _35 = len_54 + tmplen_77;
+  [telnet.c:1030:9] if (_35 <= 2041)
+    goto <bb 23>; [INV]
+  else
+    goto <bb 26>; [INV]
+
+  <bb 23> :
+  [telnet.c:1031:33] _36 = [telnet.c:1031:33] v_52->data;
+  [telnet.c:1031:25] s_79 = strchr (_36, 44);
+  [telnet.c:1032:11] if (s_79 == 0B)
+    goto <bb 24>; [INV]
+  else
+    goto <bb 25>; [INV]
+
+  <bb 24> :
+  [telnet.c:1033:18] _37 = [telnet.c:1033:18] v_52->data;
+  [telnet.c:1033:18] _38 = 2048 - len_54;
+  [telnet.c:1033:41] _39 = [telnet.c:1033:41] &[telnet.c:1033:46] temp[len_54];
+  [telnet.c:1033:18] _86 = curl_msnprintf (_39, _38, [telnet.c:1033:18] "%c%s", 0, _37);
+  [telnet.c:1033:18] _40 = (long unsigned int) _86;
+  [telnet.c:1033:15] len_87 = len_54 + _40;
+  [0:0] goto <bb 26>; [INV]
+
+  <bb 25> :
+  [telnet.c:1036:30] _41 = [telnet.c:1036:30] v_52->data;
+  [telnet.c:1036:27] _42 = s_79 - _41;
+  [telnet.c:1036:18] vlen_80 = (size_t) _42;
+  [telnet.c:1037:18] s_81 = s_79 + 1;
+  [telnet.c:1037:18] _43 = [telnet.c:1037:18] v_52->data;
+  [telnet.c:1037:18] _44 = (int) vlen_80;
+  [telnet.c:1037:18] _45 = 2048 - len_54;
+  [telnet.c:1037:41] _46 = [telnet.c:1037:41] &[telnet.c:1037:46] temp[len_54];
+  [telnet.c:1037:18] _83 = curl_msnprintf (_46, _45, [telnet.c:1037:18] "%c%.*s%c%s", 0, _44, _43, 1, s_81);
+  [telnet.c:1037:18] _47 = (long unsigned int) _83;
+  [telnet.c:1037:15] len_84 = len_54 + _47;
+
+  <bb 26> :
+  # len_53 = PHI <len_54(22), [telnet.c:1033:15] len_87(24), [telnet.c:1037:15] len_84(25)>
+  [telnet.c:1025:35] v_88 = [telnet.c:1025:38] v_52->next;
+
+  <bb 27> :
+  # v_52 = PHI <[telnet.c:1025:11] v_68(19), [telnet.c:1025:35] v_88(26)>
+  # len_54 = PHI <[telnet.c:1022:9] len_67(19), len_53(26)>
+  [telnet.c:1025:30] if (v_52 != 0B)
+    goto <bb 20>; [INV]
+  else
+    goto <bb 28>; [INV]
+
+  <bb 28> :
+  [telnet.c:1043:5] _48 = 2048 - len_54;
+  [telnet.c:1043:28] _49 = [telnet.c:1043:28] &[telnet.c:1043:33] temp[len_54];
+  [telnet.c:1043:5] curl_msnprintf (_49, _48, [telnet.c:1044:20] "%c%c", 255, 240);
+  [telnet.c:1045:9] len_70 = len_54 + 2;
+  [telnet.c:1046:14] result_72 = Curl_xfer_send (data_63(D), [telnet.c:1046:35] &temp, len_70, 0, [telnet.c:1046:14] &nwritten);
+  [telnet.c:1047:7] if (result_72 != 0)
+    goto <bb 29>; [INV]
+  else
+    goto <bb 30>; [INV]
+
+  <bb 29> :
+  [telnet.c:1048:7] _50 = curl_easy_strerror (result_72);
+  [telnet.c:1048:7] Curl_failf (data_63(D), [telnet.c:1048:19] "Sending data failed: %s", _50);
+  [telnet.c:1049:14] _76 = result_72;
+  [telnet.c:1049:14] // predicted unlikely by early return (on trees) predictor.
+  [telnet.c:1049:14] goto <bb 32>; [INV]
+
+  <bb 30> :
+  [telnet.c:1051:5] _51 = len_70 + 18446744073709551614;
+  [telnet.c:1051:5] printsub (data_63(D), 62, [telnet.c:1051:25] &[telnet.c:1051:30] temp[2], _51);
+
+  <bb 31> :
+<L29>:
+  [telnet.c:1054:10] _114 = 0;
+
+  <bb 32> :
+  # _55 = PHI <[telnet.c:980:12] _115(3), [telnet.c:987:14] _113(6), [telnet.c:990:14] _112(8), [telnet.c:999:14] _110(10), [telnet.c:1005:14] _101(13), [telnet.c:1008:14] _100(15), [telnet.c:1017:14] _98(17), [telnet.c:1028:16] _89(21), [telnet.c:1049:14] _76(29), [telnet.c:1054:10] _114(31)>
+  temp ={v} {CLOBBER};
+  nwritten ={v} {CLOBBER};
+  return _55;
+
+}
+
+
+
+;; Function send_telnet_data (send_telnet_data, funcdef_no=115, decl_uid=11771, cgraph_uid=116, symbol_order=117)
+
+CURLcode send_telnet_data (struct Curl_easy * data, struct TELNET * tn, const char * buffer, ssize_t nread)
+{
+  timediff_t timeout_ms;
+  struct pollfd pfd[1];
+  struct connectdata * conn;
+  size_t total_written;
+  size_t bytes_written;
+  CURLcode result;
+  const unsigned char * outbuf;
+  size_t outlen;
+  size_t i;
+  long unsigned int nread.26_1;
+  void * _2;
+  struct dynbuf * _3;
+  const char * _4;
+  struct dynbuf * _5;
+  const char * _6;
+  char _7;
+  struct dynbuf * _8;
+  long unsigned int nread.27_9;
+  _Bool _10;
+  _Bool _11;
+  _Bool _12;
+  struct dynbuf * _13;
+  struct dynbuf * _14;
+  int _15;
+  int _16;
+  long unsigned int _17;
+  const unsigned char * _18;
+  long unsigned int bytes_written.29_19;
+  _Bool _20;
+  _Bool _21;
+  _Bool _22;
+  CURLcode _32;
+  timediff_t iftmp.28_33;
+  CURLcode _60;
+  timediff_t iftmp.28_65;
+  timediff_t iftmp.28_66;
+  CURLcode _75;
+  CURLcode _77;
+
+  <bb 2> :
+  [telnet.c:610:12] result_39 = 0;
+  [telnet.c:612:10] total_written_40 = 0;
+  [telnet.c:613:23] conn_43 = [telnet.c:613:34] data_42(D)->conn;
+  [telnet.c:617:5] if (nread_44(D) < 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  [telnet.c:618:12] _77 = 100;
+  [telnet.c:618:12] // predicted unlikely by early return (on trees) predictor.
+  [telnet.c:618:12] goto <bb 25>; [INV]
+
+  <bb 4> :
+  [telnet.c:620:6] nread.26_1 = (long unsigned int) nread_44(D);
+  [telnet.c:620:6] _2 = memchr (buffer_45(D), 255, nread.26_1);
+  [telnet.c:620:5] if (_2 != 0B)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 5> :
+  [telnet.c:622:5] _3 = [telnet.c:622:5] &[telnet.c:622:24] tn_48(D)->out;
+  [telnet.c:622:5] curlx_dyn_reset (_3);
+  [telnet.c:624:11] i_50 = 0;
+  [telnet.c:624:5] goto <bb 10>; [INV]
+
+  <bb 6> :
+  [telnet.c:625:41] _4 = buffer_45(D) + i_23;
+  [telnet.c:625:16] _5 = [telnet.c:625:16] &[telnet.c:625:34] tn_48(D)->out;
+  [telnet.c:625:16] result_56 = curlx_dyn_addn (_5, _4, 1);
+  [telnet.c:626:9] if (result_56 == 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 7> :
+  [telnet.c:626:43] _6 = buffer_45(D) + i_23;
+  [telnet.c:626:43] _7 = [telnet.c:626:43] *_6;
+  [telnet.c:626:18] if (_7 == -1)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 8> :
+  [telnet.c:628:18] _8 = [telnet.c:628:18] &[telnet.c:628:36] tn_48(D)->out;
+  [telnet.c:628:18] result_58 = curlx_dyn_addn (_8, [telnet.c:628:43] "\xff", 1);
+
+  <bb 9> :
+  # result_26 = PHI <[telnet.c:625:16] result_56(6), [telnet.c:625:16] result_56(7), [telnet.c:628:18] result_58(8)>
+  [telnet.c:624:47] i_59 = i_23 + 1;
+
+  <bb 10> :
+  # i_23 = PHI <[telnet.c:624:11] i_50(5), [telnet.c:624:47] i_59(9)>
+  # result_27 = PHI <[telnet.c:610:12] result_39(5), result_26(9)>
+  [telnet.c:624:18] nread.27_9 = (long unsigned int) nread_44(D);
+  [telnet.c:624:18] _10 = i_23 < nread.27_9;
+  [telnet.c:624:37] _11 = result_27 == 0;
+  [telnet.c:624:34] _12 = _10 & _11;
+  [telnet.c:624:34] if (_12 != 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 11> :
+  [telnet.c:631:28] _13 = [telnet.c:631:28] &[telnet.c:631:31] tn_48(D)->out;
+  [telnet.c:631:14] outlen_52 = curlx_dyn_len (_13);
+  [telnet.c:632:29] _14 = [telnet.c:632:29] &[telnet.c:632:32] tn_48(D)->out;
+  [telnet.c:632:14] outbuf_54 = curlx_dyn_uptr (_14);
+  [0:0] goto <bb 23>; [INV]
+
+  <bb 12> :
+  [telnet.c:635:12] outlen_46 = (size_t) nread_44(D);
+  [telnet.c:636:12] outbuf_47 = buffer_45(D);
+  goto <bb 23>; [INV]
+
+  <bb 13> :
+  [telnet.c:641:29] timeout_ms_62 = Curl_timeleft_ms (data_42(D));
+  [telnet.c:642:27] _15 = [telnet.c:642:27] [telnet.c:642:21] conn_43->sock[0];
+  [telnet.c:642:15] [telnet.c:642:11] [telnet.c:642:8] pfd[0].fd = _15;
+  [telnet.c:643:19] [telnet.c:643:11] [telnet.c:643:8] pfd[0].events = 4;
+  [telnet.c:644:7] if (timeout_ms_62 < 0)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 14> :
+  [telnet.c:645:14] _75 = 28;
+  [telnet.c:645:14] // predicted unlikely by early return (on trees) predictor.
+  [telnet.c:645:14] pfd ={v} {CLOBBER};
+  goto <bb 25>; [INV]
+
+  <bb 15> :
+  [telnet.c:647:12] if (timeout_ms_62 != 0)
+    goto <bb 16>; [INV]
+  else
+    goto <bb 17>; [INV]
+
+  <bb 16> :
+  [telnet.c:647:12] iftmp.28_66 = timeout_ms_62;
+  [0:0] goto <bb 18>; [INV]
+
+  <bb 17> :
+  [telnet.c:647:12] iftmp.28_65 = -1;
+
+  <bb 18> :
+  # iftmp.28_33 = PHI <[telnet.c:647:12] iftmp.28_66(16), [telnet.c:647:12] iftmp.28_65(17)>
+  [telnet.c:647:12] _16 = Curl_poll ([telnet.c:647:12] &pfd, 1, iftmp.28_33);
+  [telnet.c:647:5] switch (_16) <[telnet.c:654:5] default: <L20> [INV], [telnet.c:648:5] case -1: <L18> [INV], [telnet.c:651:5] case 0: <L19> [INV]>
+
+  <bb 19> :
+[telnet.c:648:5] <L18>:
+  [telnet.c:649:14] result_69 = 55;
+  [telnet.c:650:7] goto <bb 22>; [INV]
+
+  <bb 20> :
+[telnet.c:651:5] <L19>:
+  [telnet.c:652:14] result_68 = 28;
+  [telnet.c:653:7] goto <bb 22>; [INV]
+
+  <bb 21> :
+[telnet.c:654:5] <L20>:
+  [telnet.c:655:21] bytes_written = 0;
+  [telnet.c:656:16] _17 = outlen_24 - total_written_31;
+  [telnet.c:656:44] _18 = outbuf_25 + total_written_31;
+  [telnet.c:656:16] result_72 = Curl_xfer_send (data_42(D), _18, _17, 0, [telnet.c:656:16] &bytes_written);
+  [telnet.c:658:21] bytes_written.29_19 = bytes_written;
+  [telnet.c:658:21] total_written_73 = total_written_31 + bytes_written.29_19;
+
+  <bb 22> :
+  # result_28 = PHI <[telnet.c:649:14] result_69(19), [telnet.c:652:14] result_68(20), [telnet.c:656:16] result_72(21)>
+  # total_written_30 = PHI <total_written_31(19), total_written_31(20), [telnet.c:658:21] total_written_73(21)>
+  pfd ={v} {CLOBBER};
+
+  <bb 23> :
+  # outlen_24 = PHI <[telnet.c:635:12] outlen_46(12), outlen_24(22), [telnet.c:631:14] outlen_52(11)>
+  # outbuf_25 = PHI <[telnet.c:636:12] outbuf_47(12), outbuf_25(22), [telnet.c:632:14] outbuf_54(11)>
+  # result_29 = PHI <[telnet.c:610:12] result_39(12), result_28(22), result_27(11)>
+  # total_written_31 = PHI <[telnet.c:612:10] total_written_40(12), total_written_30(22), [telnet.c:612:10] total_written_40(11)>
+  [telnet.c:638:9] _20 = result_29 == 0;
+  [telnet.c:638:34] _21 = total_written_31 < outlen_24;
+  [telnet.c:638:17] _22 = _20 & _21;
+  [telnet.c:638:17] if (_22 != 0)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 24>; [INV]
+
+  <bb 24> :
+  [telnet.c:663:10] _60 = result_29;
+
+  <bb 25> :
+  # _32 = PHI <[telnet.c:618:12] _77(3), [telnet.c:645:14] _75(14), [telnet.c:663:10] _60(24)>
+  bytes_written ={v} {CLOBBER};
+  return _32;
+
+}
+
+
+
+;; Function sendsuboption (sendsuboption, funcdef_no=116, decl_uid=11800, cgraph_uid=117, symbol_order=118)
+
+void sendsuboption (struct Curl_easy * data, struct TELNET * tn, int option)
+{
+  CURLcode result;
+  const unsigned char * uc2;
+  const unsigned char * uc1;
+  short unsigned int y;
+  short unsigned int x;
+  size_t nwritten;
+  unsigned char[512] * _1;
+  unsigned char * _2;
+  unsigned char[512] * _3;
+  unsigned char * _4;
+  unsigned char * _5;
+  unsigned char * _6;
+  unsigned char * _7;
+  unsigned char * _8;
+  unsigned char[512] * _9;
+  unsigned char * _10;
+  unsigned char * _11;
+  unsigned char * _12;
+  unsigned char * _13;
+  unsigned char * _14;
+  unsigned char[512] * _15;
+  unsigned char * _16;
+  unsigned char * _17;
+  unsigned char * _18;
+  unsigned char * _19;
+  short unsigned int _20;
+  int _21;
+  short unsigned int _22;
+  short unsigned int _23;
+  int _24;
+  short unsigned int _25;
+  unsigned char * _26;
+  unsigned char[512] * _27;
+  unsigned char * _28;
+  unsigned char * _29;
+  unsigned char * _30;
+  unsigned char * _31;
+  unsigned char _32;
+  unsigned char * _33;
+  unsigned char[512] * _34;
+  unsigned char * _35;
+  const unsigned char * _36;
+  unsigned char * _37;
+  unsigned char * _38;
+  unsigned char * _39;
+  unsigned char _40;
+  unsigned char * _41;
+  unsigned char[512] * _42;
+  unsigned char * _43;
+  unsigned char * _44;
+  unsigned char * _45;
+  unsigned char * _46;
+  unsigned char _47;
+  unsigned char * _48;
+  unsigned char[512] * _49;
+  unsigned char * _50;
+  const unsigned char * _51;
+  unsigned char * _52;
+  unsigned char * _53;
+  unsigned char * _54;
+  unsigned char _55;
+  unsigned char * _56;
+  unsigned char[512] * _57;
+  unsigned char * _58;
+  unsigned char * _59;
+  unsigned char * _60;
+  unsigned char * _61;
+  unsigned char * _62;
+  unsigned char[512] * _63;
+  unsigned char * _64;
+  unsigned char * _65;
+  unsigned char * _66;
+  unsigned char * _67;
+  unsigned char * _68;
+  unsigned char[512] * _69;
+  unsigned char * _70;
+  unsigned char * _71;
+  long int _72;
+  long int _73;
+  long unsigned int _74;
+  unsigned char[512] * _75;
+  const unsigned char * _76;
+  unsigned char[512] * _77;
+  const char * _78;
+  unsigned char[512] * _79;
+  const char * _80;
+  unsigned char[512] * _81;
+  const void * _82;
+  const char * _83;
+
+  <bb 2> :
+  [telnet.c:679:3] if (option_95(D) == 31)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 25>; [INV]
+
+  <bb 3> :
+[telnet.c:680:3] <L0>:
+  [telnet.c:682:5] _1 = [telnet.c:682:5] &[telnet.c:682:5] tn_97(D)->subbuffer;
+  [telnet.c:682:5] [telnet.c:682:5] tn_97(D)->subpointer = _1;
+  [telnet.c:683:5] _2 = [telnet.c:683:5] tn_97(D)->subpointer;
+  [telnet.c:683:5] _3 = [telnet.c:683:5] &[telnet.c:683:5] tn_97(D)->subbuffer;
+  [telnet.c:683:5] _4 = _3 + 512;
+  [telnet.c:683:5] if (_2 < _4)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  [telnet.c:683:5] _5 = [telnet.c:683:5] tn_97(D)->subpointer;
+  [telnet.c:683:5] _6 = _5;
+  [telnet.c:683:5] _7 = _6 + 1;
+  [telnet.c:683:5] [telnet.c:683:5] tn_97(D)->subpointer = _7;
+  [telnet.c:683:5] [telnet.c:683:5] *_6 = 255;
+
+  <bb 5> :
+  [telnet.c:684:5] _8 = [telnet.c:684:5] tn_97(D)->subpointer;
+  [telnet.c:684:5] _9 = [telnet.c:684:5] &[telnet.c:684:5] tn_97(D)->subbuffer;
+  [telnet.c:684:5] _10 = _9 + 512;
+  [telnet.c:684:5] if (_8 < _10)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 6> :
+  [telnet.c:684:5] _11 = [telnet.c:684:5] tn_97(D)->subpointer;
+  [telnet.c:684:5] _12 = _11;
+  [telnet.c:684:5] _13 = _12 + 1;
+  [telnet.c:684:5] [telnet.c:684:5] tn_97(D)->subpointer = _13;
+  [telnet.c:684:5] [telnet.c:684:5] *_12 = 250;
+
+  <bb 7> :
+  [telnet.c:685:5] _14 = [telnet.c:685:5] tn_97(D)->subpointer;
+  [telnet.c:685:5] _15 = [telnet.c:685:5] &[telnet.c:685:5] tn_97(D)->subbuffer;
+  [telnet.c:685:5] _16 = _15 + 512;
+  [telnet.c:685:5] if (_14 < _16)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 8> :
+  [telnet.c:685:5] _17 = [telnet.c:685:5] tn_97(D)->subpointer;
+  [telnet.c:685:5] _18 = _17;
+  [telnet.c:685:5] _19 = _18 + 1;
+  [telnet.c:685:5] [telnet.c:685:5] tn_97(D)->subpointer = _19;
+  [telnet.c:685:5] [telnet.c:685:5] *_18 = 31;
+
+  <bb 9> :
+  [telnet.c:688:9] _20 = [telnet.c:688:9] tn_97(D)->subopt_wsx;
+  [telnet.c:688:9] _21 = (int) _20;
+  [telnet.c:688:9] _22 = __bswap_16 (_21);
+  [telnet.c:688:7] x = _22;
+  [telnet.c:689:9] _23 = [telnet.c:689:9] tn_97(D)->subopt_wsy;
+  [telnet.c:689:9] _24 = (int) _23;
+  [telnet.c:689:9] _25 = __bswap_16 (_24);
+  [telnet.c:689:7] y = _25;
+  [telnet.c:690:9] uc1_109 = [telnet.c:690:34] &x;
+  [telnet.c:691:9] uc2_110 = [telnet.c:691:34] &y;
+  [telnet.c:692:5] _26 = [telnet.c:692:5] tn_97(D)->subpointer;
+  [telnet.c:692:5] _27 = [telnet.c:692:5] &[telnet.c:692:5] tn_97(D)->subbuffer;
+  [telnet.c:692:5] _28 = _27 + 512;
+  [telnet.c:692:5] if (_26 < _28)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 10> :
+  [telnet.c:692:5] _29 = [telnet.c:692:5] tn_97(D)->subpointer;
+  [telnet.c:692:5] _30 = _29;
+  [telnet.c:692:5] _31 = _30 + 1;
+  [telnet.c:692:5] [telnet.c:692:5] tn_97(D)->subpointer = _31;
+  [telnet.c:692:5] _32 = [telnet.c:692:5] *uc1_109;
+  [telnet.c:692:5] [telnet.c:692:5] *_30 = _32;
+
+  <bb 11> :
+  [telnet.c:693:5] _33 = [telnet.c:693:5] tn_97(D)->subpointer;
+  [telnet.c:693:5] _34 = [telnet.c:693:5] &[telnet.c:693:5] tn_97(D)->subbuffer;
+  [telnet.c:693:5] _35 = _34 + 512;
+  [telnet.c:693:5] if (_33 < _35)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 12> :
+  [telnet.c:693:5] _36 = uc1_109 + 1;
+  [telnet.c:693:5] _37 = [telnet.c:693:5] tn_97(D)->subpointer;
+  [telnet.c:693:5] _38 = _37;
+  [telnet.c:693:5] _39 = _38 + 1;
+  [telnet.c:693:5] [telnet.c:693:5] tn_97(D)->subpointer = _39;
+  [telnet.c:693:5] _40 = [telnet.c:693:5] *_36;
+  [telnet.c:693:5] [telnet.c:693:5] *_38 = _40;
+
+  <bb 13> :
+  [telnet.c:694:5] _41 = [telnet.c:694:5] tn_97(D)->subpointer;
+  [telnet.c:694:5] _42 = [telnet.c:694:5] &[telnet.c:694:5] tn_97(D)->subbuffer;
+  [telnet.c:694:5] _43 = _42 + 512;
+  [telnet.c:694:5] if (_41 < _43)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 14> :
+  [telnet.c:694:5] _44 = [telnet.c:694:5] tn_97(D)->subpointer;
+  [telnet.c:694:5] _45 = _44;
+  [telnet.c:694:5] _46 = _45 + 1;
+  [telnet.c:694:5] [telnet.c:694:5] tn_97(D)->subpointer = _46;
+  [telnet.c:694:5] _47 = [telnet.c:694:5] *uc2_110;
+  [telnet.c:694:5] [telnet.c:694:5] *_45 = _47;
+
+  <bb 15> :
+  [telnet.c:695:5] _48 = [telnet.c:695:5] tn_97(D)->subpointer;
+  [telnet.c:695:5] _49 = [telnet.c:695:5] &[telnet.c:695:5] tn_97(D)->subbuffer;
+  [telnet.c:695:5] _50 = _49 + 512;
+  [telnet.c:695:5] if (_48 < _50)
+    goto <bb 16>; [INV]
+  else
+    goto <bb 17>; [INV]
+
+  <bb 16> :
+  [telnet.c:695:5] _51 = uc2_110 + 1;
+  [telnet.c:695:5] _52 = [telnet.c:695:5] tn_97(D)->subpointer;
+  [telnet.c:695:5] _53 = _52;
+  [telnet.c:695:5] _54 = _53 + 1;
+  [telnet.c:695:5] [telnet.c:695:5] tn_97(D)->subpointer = _54;
+  [telnet.c:695:5] _55 = [telnet.c:695:5] *_51;
+  [telnet.c:695:5] [telnet.c:695:5] *_53 = _55;
+
+  <bb 17> :
+  [telnet.c:697:5] _56 = [telnet.c:697:5] tn_97(D)->subpointer;
+  [telnet.c:697:5] _57 = [telnet.c:697:5] &[telnet.c:697:5] tn_97(D)->subbuffer;
+  [telnet.c:697:5] _58 = _57 + 512;
+  [telnet.c:697:5] if (_56 < _58)
+    goto <bb 18>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 18> :
+  [telnet.c:697:5] _59 = [telnet.c:697:5] tn_97(D)->subpointer;
+  [telnet.c:697:5] _60 = _59;
+  [telnet.c:697:5] _61 = _60 + 1;
+  [telnet.c:697:5] [telnet.c:697:5] tn_97(D)->subpointer = _61;
+  [telnet.c:697:5] [telnet.c:697:5] *_60 = 255;
+
+  <bb 19> :
+  [telnet.c:698:5] _62 = [telnet.c:698:5] tn_97(D)->subpointer;
+  [telnet.c:698:5] _63 = [telnet.c:698:5] &[telnet.c:698:5] tn_97(D)->subbuffer;
+  [telnet.c:698:5] _64 = _63 + 512;
+  [telnet.c:698:5] if (_62 < _64)
+    goto <bb 20>; [INV]
+  else
+    goto <bb 21>; [INV]
+
+  <bb 20> :
+  [telnet.c:698:5] _65 = [telnet.c:698:5] tn_97(D)->subpointer;
+  [telnet.c:698:5] _66 = _65;
+  [telnet.c:698:5] _67 = _66 + 1;
+  [telnet.c:698:5] [telnet.c:698:5] tn_97(D)->subpointer = _67;
+  [telnet.c:698:5] [telnet.c:698:5] *_66 = 240;
+
+  <bb 21> :
+  [telnet.c:699:5] _68 = [telnet.c:699:5] tn_97(D)->subpointer;
+  [telnet.c:699:5] [telnet.c:699:5] tn_97(D)->subend = _68;
+  [telnet.c:699:5] _69 = [telnet.c:699:5] &[telnet.c:699:5] tn_97(D)->subbuffer;
+  [telnet.c:699:5] [telnet.c:699:5] tn_97(D)->subpointer = _69;
+  [telnet.c:703:14] _70 = [telnet.c:703:14] tn_97(D)->subend;
+  [telnet.c:703:14] _71 = [telnet.c:703:14] tn_97(D)->subpointer;
+  [telnet.c:703:14] _72 = _70 - _71;
+  [telnet.c:703:30] _73 = _72 + -2;
+  [telnet.c:702:5] _74 = (long unsigned int) _73;
+  [telnet.c:702:48] _75 = [telnet.c:702:48] &[telnet.c:702:50] tn_97(D)->subbuffer;
+  [telnet.c:702:5] _76 = _75 + 2;
+  [telnet.c:702:5] printsub (data_125(D), 62, _76, _74);
+  [telnet.c:706:37] _77 = [telnet.c:706:37] &[telnet.c:706:37] tn_97(D)->subbuffer;
+  [telnet.c:706:14] result_128 = Curl_xfer_send (data_125(D), _77, 3, 0, [telnet.c:706:14] &nwritten);
+  [telnet.c:707:7] if (result_128 != 0)
+    goto <bb 22>; [INV]
+  else
+    goto <bb 23>; [INV]
+
+  <bb 22> :
+  [telnet.c:708:7] _78 = curl_easy_strerror (result_128);
+  [telnet.c:708:7] Curl_failf (data_125(D), [telnet.c:708:19] "Sending data failed: %s", _78);
+
+  <bb 23> :
+  [telnet.c:711:46] _79 = [telnet.c:711:46] &[telnet.c:711:48] tn_97(D)->subbuffer;
+  [telnet.c:711:5] _80 = _79 + 3;
+  [telnet.c:711:5] send_telnet_data (data_125(D), tn_97(D), _80, 4);
+  [telnet.c:713:35] _81 = [telnet.c:713:35] &[telnet.c:713:37] tn_97(D)->subbuffer;
+  [telnet.c:713:14] _82 = _81 + 7;
+  [telnet.c:713:14] result_133 = Curl_xfer_send (data_125(D), _82, 2, 0, [telnet.c:713:14] &nwritten);
+  [telnet.c:714:7] if (result_133 != 0)
+    goto <bb 24>; [INV]
+  else
+    goto <bb 25>; [INV]
+
+  <bb 24> :
+  [telnet.c:715:7] _83 = curl_easy_strerror (result_133);
+  [telnet.c:715:7] Curl_failf (data_125(D), [telnet.c:715:19] "Sending data failed: %s", _83);
+
+  <bb 25> :
+<L23>:
+  nwritten ={v} {CLOBBER};
+  x ={v} {CLOBBER};
+  y ={v} {CLOBBER};
+  [telnet.c:718:1] return;
+
+}
+
+
+
+;; Function rec_do (rec_do, funcdef_no=117, decl_uid=11833, cgraph_uid=118, symbol_order=119)
+
+void rec_do (struct Curl_easy * data, struct TELNET * tn, int option)
+{
+  int _1;
+  int _2;
+  int _3;
+  int _4;
+  int _5;
+  int _6;
+  int _7;
+
+  <bb 2> :
+  [telnet.c:722:16] _1 = [telnet.c:722:16] [telnet.c:722:12] tn_10(D)->us[option_11(D)];
+  [telnet.c:722:3] switch (_1) <default: <L22> [INV], [telnet.c:723:3] case 0: <L0> [INV], [telnet.c:759:3] case 2: <L15> [INV], [telnet.c:745:3] case 3: <L10> [INV]>
+
+  <bb 3> :
+[telnet.c:723:3] <L0>:
+  [telnet.c:724:24] _2 = [telnet.c:724:24] [telnet.c:724:10] tn_10(D)->us_preferred[option_11(D)];
+  [telnet.c:724:7] if (_2 == 1)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 4> :
+  [telnet.c:725:22] [telnet.c:725:13] [telnet.c:725:9] tn_10(D)->us[option_11(D)] = 1;
+  [telnet.c:726:7] send_negotiation (data_14(D), 251, option_11(D));
+  [telnet.c:727:28] _3 = [telnet.c:727:28] [telnet.c:727:12] tn_10(D)->subnegotiation[option_11(D)];
+  [telnet.c:727:9] if (_3 == 1)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 5> :
+  [telnet.c:729:9] sendsuboption (data_14(D), tn_10(D), option_11(D));
+  goto <bb 16>; [INV]
+
+  <bb 6> :
+  [telnet.c:731:31] _4 = [telnet.c:731:31] [telnet.c:731:15] tn_10(D)->subnegotiation[option_11(D)];
+  [telnet.c:731:12] if (_4 == 1)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  [telnet.c:733:22] [telnet.c:733:13] [telnet.c:733:9] tn_10(D)->us[option_11(D)] = 1;
+  [telnet.c:734:7] send_negotiation (data_14(D), 251, option_11(D));
+  [telnet.c:735:7] sendsuboption (data_14(D), tn_10(D), option_11(D));
+  [0:0] goto <bb 16>; [INV]
+
+  <bb 8> :
+  [telnet.c:738:7] send_negotiation (data_14(D), 252, option_11(D));
+  goto <bb 16>; [INV]
+
+  <bb 9> :
+[telnet.c:745:3] <L10>:
+  [telnet.c:746:19] _5 = [telnet.c:746:19] [telnet.c:746:14] tn_10(D)->usq[option_11(D)];
+  switch (_5) <default: <L22> [INV], [telnet.c:747:5] case 0: <L11> [INV], [telnet.c:751:5] case 1: <L12> [INV]>
+
+  <bb 10> :
+[telnet.c:747:5] <L11>:
+  [telnet.c:749:22] [telnet.c:749:13] [telnet.c:749:9] tn_10(D)->us[option_11(D)] = 0;
+  [telnet.c:750:7] goto <bb 16>; [INV]
+
+  <bb 11> :
+[telnet.c:751:5] <L12>:
+  [telnet.c:753:22] [telnet.c:753:13] [telnet.c:753:9] tn_10(D)->us[option_11(D)] = 1;
+  [telnet.c:754:23] [telnet.c:754:14] [telnet.c:754:9] tn_10(D)->usq[option_11(D)] = 0;
+  [telnet.c:755:7] goto <bb 16>; [INV]
+
+  <bb 12> :
+[telnet.c:759:3] <L15>:
+  [telnet.c:760:19] _6 = [telnet.c:760:19] [telnet.c:760:14] tn_10(D)->usq[option_11(D)];
+  switch (_6) <default: <L22> [INV], [telnet.c:761:5] case 0: <L16> [INV], [telnet.c:768:5] case 1: <L19> [INV]>
+
+  <bb 13> :
+[telnet.c:761:5] <L16>:
+  [telnet.c:762:22] [telnet.c:762:13] [telnet.c:762:9] tn_10(D)->us[option_11(D)] = 1;
+  [telnet.c:763:28] _7 = [telnet.c:763:28] [telnet.c:763:12] tn_10(D)->subnegotiation[option_11(D)];
+  [telnet.c:763:9] if (_7 == 1)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 14> :
+  [telnet.c:765:9] sendsuboption (data_14(D), tn_10(D), option_11(D));
+  goto <bb 16>; [INV]
+
+  <bb 15> :
+[telnet.c:768:5] <L19>:
+  [telnet.c:769:22] [telnet.c:769:13] [telnet.c:769:9] tn_10(D)->us[option_11(D)] = 3;
+  [telnet.c:770:23] [telnet.c:770:14] [telnet.c:770:9] tn_10(D)->usq[option_11(D)] = 0;
+  [telnet.c:771:7] send_negotiation (data_14(D), 252, option_11(D));
+
+  <bb 16> :
+<L22>:
+  [telnet.c:776:1] return;
+
+}
+
+
+
+;; Function telrcv (telrcv, funcdef_no=123, decl_uid=11926, cgraph_uid=124, symbol_order=125)
+
+CURLcode telrcv (struct Curl_easy * data, struct TELNET * tn, const unsigned char * inbuf, ssize_t count)
+{
+  int startwrite;
+  int in;
+  CURLcode result;
+  unsigned char c;
+  sizetype _1;
+  const unsigned char * _2;
+  <unnamed type> _3;
+  int _4;
+  long unsigned int _5;
+  sizetype _6;
+  const unsigned char * _7;
+  int _8;
+  long unsigned int _9;
+  sizetype _10;
+  const unsigned char * _11;
+  int _12;
+  unsigned char[512] * _13;
+  int _14;
+  int _15;
+  int _16;
+  int _17;
+  int _18;
+  int _19;
+  int _20;
+  int _21;
+  int _22;
+  unsigned char * _23;
+  unsigned char[512] * _24;
+  unsigned char * _25;
+  unsigned char * _26;
+  unsigned char * _27;
+  unsigned char * _28;
+  unsigned char * _29;
+  unsigned char[512] * _30;
+  unsigned char * _31;
+  unsigned char * _32;
+  unsigned char * _33;
+  unsigned char * _34;
+  unsigned char * _35;
+  unsigned char[512] * _36;
+  unsigned char * _37;
+  unsigned char * _38;
+  unsigned char * _39;
+  unsigned char * _40;
+  unsigned char * _41;
+  unsigned char[512] * _42;
+  unsigned char * _43;
+  unsigned char * _44;
+  unsigned char * _45;
+  unsigned char * _46;
+  unsigned char * _47;
+  unsigned char * _48;
+  unsigned char * _49;
+  unsigned char[512] * _50;
+  long int count.14_51;
+  int _52;
+  long unsigned int _53;
+  sizetype _54;
+  const unsigned char * _55;
+  CURLcode _60;
+  CURLcode _80;
+  CURLcode _82;
+  CURLcode _95;
+  CURLcode _100;
+  CURLcode _108;
+  CURLcode _141;
+
+  <bb 2> :
+  [telnet.c:1066:7] in_71 = 0;
+  [telnet.c:1067:7] startwrite_72 = -1;
+  [telnet.c:1086:8] goto <bb 51>; [INV]
+
+  <bb 3> :
+  [telnet.c:1087:14] _1 = (sizetype) in_57;
+  [telnet.c:1087:14] _2 = inbuf_76(D) + _1;
+  [telnet.c:1087:7] c_83 = [telnet.c:1087:14] *_2;
+  [telnet.c:1089:14] _3 = [telnet.c:1089:14] tn_84(D)->telrcv_state;
+  [telnet.c:1089:5] switch (_3) <default: <L59> [INV], [telnet.c:1099:5] case 0: <L10> [INV], [telnet.c:1110:5] case 1: <L21> [INV], [telnet.c:1143:5] case 2: <L35> [INV], [telnet.c:1150:5] case 3: <L36> [INV], [telnet.c:1157:5] case 4: <L37> [INV], [telnet.c:1164:5] case 5: <L38> [INV], [telnet.c:1090:5] case 6: <L1> [INV], [telnet.c:1171:5] case 7: <L39> [INV], [telnet.c:1178:5] case 8: <L45> [INV]>
+
+  <bb 4> :
+[telnet.c:1090:5] <L1>:
+  [telnet.c:1091:24] [telnet.c:1091:9] tn_84(D)->telrcv_state = 0;
+  [telnet.c:1092:9] if (c_83 == 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 5> :
+  [telnet.c:1093:9] if (startwrite_59 >= 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 6> :
+  [telnet.c:1093:9] _4 = in_57 - startwrite_59;
+  [telnet.c:1093:9] _5 = (long unsigned int) _4;
+  [telnet.c:1093:9] _6 = (sizetype) startwrite_59;
+  [telnet.c:1093:9] _7 = inbuf_76(D) + _6;
+  [telnet.c:1093:9] result_107 = Curl_client_write (data_77(D), 1, _7, _5);
+  [telnet.c:1093:9] if (result_107 != 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  [telnet.c:1093:9] _108 = result_107;
+  [telnet.c:1093:9] // predicted unlikely by early return (on trees) predictor.
+  [telnet.c:1093:9] goto <bb 56>; [INV]
+
+  <bb 8> :
+  [telnet.c:1093:9] startwrite_109 = -1;
+  [telnet.c:1094:9] goto <bb 50>; [INV]
+
+  <bb 9> :
+  [telnet.c:1096:7] if (startwrite_59 < 0)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 50>; [INV]
+
+  <bb 10> :
+  [telnet.c:1096:7] startwrite_105 = in_57;
+  goto <bb 50>; [INV]
+
+  <bb 11> :
+[telnet.c:1099:5] <L10>:
+  [telnet.c:1100:9] if (c_83 == 255)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 12> :
+  [telnet.c:1101:26] [telnet.c:1101:11] tn_84(D)->telrcv_state = 1;
+  [telnet.c:1102:9] if (startwrite_59 >= 0)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 13> :
+  [telnet.c:1102:9] _8 = in_57 - startwrite_59;
+  [telnet.c:1102:9] _9 = (long unsigned int) _8;
+  [telnet.c:1102:9] _10 = (sizetype) startwrite_59;
+  [telnet.c:1102:9] _11 = inbuf_76(D) + _10;
+  [telnet.c:1102:9] result_140 = Curl_client_write (data_77(D), 1, _11, _9);
+  [telnet.c:1102:9] if (result_140 != 0)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 14> :
+  [telnet.c:1102:9] _141 = result_140;
+  [telnet.c:1102:9] // predicted unlikely by early return (on trees) predictor.
+  [telnet.c:1102:9] goto <bb 56>; [INV]
+
+  <bb 15> :
+  [telnet.c:1102:9] startwrite_142 = -1;
+  [telnet.c:1103:9] goto <bb 50>; [INV]
+
+  <bb 16> :
+  [telnet.c:1105:14] if (c_83 == 13)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 18>; [INV]
+
+  <bb 17> :
+  [telnet.c:1106:26] [telnet.c:1106:11] tn_84(D)->telrcv_state = 6;
+
+  <bb 18> :
+  [telnet.c:1107:7] if (startwrite_59 < 0)
+    goto <bb 19>; [INV]
+  else
+    goto <bb 50>; [INV]
+
+  <bb 19> :
+  [telnet.c:1107:7] startwrite_137 = in_57;
+  goto <bb 50>; [INV]
+
+  <bb 20> :
+[telnet.c:1110:5] <L21>:
+  [telnet.c:1112:7] _12 = (int) c_83;
+  switch (_12) <[telnet.c:1136:7] default: <L30> [INV], [telnet.c:1125:7] case 250: <L26> [INV], [telnet.c:1113:7] case 251: <L22> [INV], [telnet.c:1116:7] case 252: <L23> [INV], [telnet.c:1119:7] case 253: <L24> [INV], [telnet.c:1122:7] case 254: <L25> [INV], [telnet.c:1129:7] case 255: <L27> [INV]>
+
+  <bb 21> :
+[telnet.c:1113:7] <L22>:
+  [telnet.c:1114:26] [telnet.c:1114:11] tn_84(D)->telrcv_state = 2;
+  [telnet.c:1115:9] goto <bb 50>; [INV]
+
+  <bb 22> :
+[telnet.c:1116:7] <L23>:
+  [telnet.c:1117:26] [telnet.c:1117:11] tn_84(D)->telrcv_state = 3;
+  [telnet.c:1118:9] goto <bb 50>; [INV]
+
+  <bb 23> :
+[telnet.c:1119:7] <L24>:
+  [telnet.c:1120:26] [telnet.c:1120:11] tn_84(D)->telrcv_state = 4;
+  [telnet.c:1121:9] goto <bb 50>; [INV]
+
+  <bb 24> :
+[telnet.c:1122:7] <L25>:
+  [telnet.c:1123:26] [telnet.c:1123:11] tn_84(D)->telrcv_state = 5;
+  [telnet.c:1124:9] goto <bb 50>; [INV]
+
+  <bb 25> :
+[telnet.c:1125:7] <L26>:
+  [telnet.c:1126:9] _13 = [telnet.c:1126:9] &[telnet.c:1126:9] tn_84(D)->subbuffer;
+  [telnet.c:1126:9] [telnet.c:1126:9] tn_84(D)->subpointer = _13;
+  [telnet.c:1127:26] [telnet.c:1127:11] tn_84(D)->telrcv_state = 7;
+  [telnet.c:1128:9] goto <bb 50>; [INV]
+
+  <bb 26> :
+[telnet.c:1129:7] <L27>:
+  [telnet.c:1130:26] [telnet.c:1130:11] tn_84(D)->telrcv_state = 0;
+  [telnet.c:1131:9] if (startwrite_59 < 0)
+    goto <bb 27>; [INV]
+  else
+    goto <bb 50>; [INV]
+
+  <bb 27> :
+  [telnet.c:1131:9] startwrite_127 = in_57;
+  goto <bb 50>; [INV]
+
+  <bb 28> :
+[telnet.c:1133:7] <L30>:
+  [telnet.c:1137:26] [telnet.c:1137:11] tn_84(D)->telrcv_state = 0;
+  [telnet.c:1138:9] _14 = (int) c_83;
+  [telnet.c:1138:9] printoption (data_77(D), [telnet.c:1138:27] "RCVD", 255, _14);
+  [telnet.c:1139:9] goto <bb 50>; [INV]
+
+  <bb 29> :
+[telnet.c:1143:5] <L35>:
+  [telnet.c:1144:7] _15 = (int) c_83;
+  [telnet.c:1144:7] printoption (data_77(D), [telnet.c:1144:25] "RCVD", 251, _15);
+  [telnet.c:1145:28] [telnet.c:1145:9] tn_84(D)->please_negotiate = 1;
+  [telnet.c:1146:7] _16 = (int) c_83;
+  [telnet.c:1146:7] rec_will (data_77(D), tn_84(D), _16);
+  [telnet.c:1147:24] [telnet.c:1147:9] tn_84(D)->telrcv_state = 0;
+  [telnet.c:1148:7] goto <bb 50>; [INV]
+
+  <bb 30> :
+[telnet.c:1150:5] <L36>:
+  [telnet.c:1151:7] _17 = (int) c_83;
+  [telnet.c:1151:7] printoption (data_77(D), [telnet.c:1151:25] "RCVD", 252, _17);
+  [telnet.c:1152:28] [telnet.c:1152:9] tn_84(D)->please_negotiate = 1;
+  [telnet.c:1153:7] _18 = (int) c_83;
+  [telnet.c:1153:7] rec_wont (data_77(D), tn_84(D), _18);
+  [telnet.c:1154:24] [telnet.c:1154:9] tn_84(D)->telrcv_state = 0;
+  [telnet.c:1155:7] goto <bb 50>; [INV]
+
+  <bb 31> :
+[telnet.c:1157:5] <L37>:
+  [telnet.c:1158:7] _19 = (int) c_83;
+  [telnet.c:1158:7] printoption (data_77(D), [telnet.c:1158:25] "RCVD", 253, _19);
+  [telnet.c:1159:28] [telnet.c:1159:9] tn_84(D)->please_negotiate = 1;
+  [telnet.c:1160:7] _20 = (int) c_83;
+  [telnet.c:1160:7] rec_do (data_77(D), tn_84(D), _20);
+  [telnet.c:1161:24] [telnet.c:1161:9] tn_84(D)->telrcv_state = 0;
+  [telnet.c:1162:7] goto <bb 50>; [INV]
+
+  <bb 32> :
+[telnet.c:1164:5] <L38>:
+  [telnet.c:1165:7] _21 = (int) c_83;
+  [telnet.c:1165:7] printoption (data_77(D), [telnet.c:1165:25] "RCVD", 254, _21);
+  [telnet.c:1166:28] [telnet.c:1166:9] tn_84(D)->please_negotiate = 1;
+  [telnet.c:1167:7] _22 = (int) c_83;
+  [telnet.c:1167:7] rec_dont (data_77(D), tn_84(D), _22);
+  [telnet.c:1168:24] [telnet.c:1168:9] tn_84(D)->telrcv_state = 0;
+  [telnet.c:1169:7] goto <bb 50>; [INV]
+
+  <bb 33> :
+[telnet.c:1171:5] <L39>:
+  [telnet.c:1172:9] if (c_83 == 255)
+    goto <bb 34>; [INV]
+  else
+    goto <bb 35>; [INV]
+
+  <bb 34> :
+  [telnet.c:1173:26] [telnet.c:1173:11] tn_84(D)->telrcv_state = 8;
+  [0:0] goto <bb 50>; [INV]
+
+  <bb 35> :
+  [telnet.c:1175:9] _23 = [telnet.c:1175:9] tn_84(D)->subpointer;
+  [telnet.c:1175:9] _24 = [telnet.c:1175:9] &[telnet.c:1175:9] tn_84(D)->subbuffer;
+  [telnet.c:1175:9] _25 = _24 + 512;
+  [telnet.c:1175:9] if (_23 < _25)
+    goto <bb 36>; [INV]
+  else
+    goto <bb 50>; [INV]
+
+  <bb 36> :
+  [telnet.c:1175:9] _26 = [telnet.c:1175:9] tn_84(D)->subpointer;
+  [telnet.c:1175:9] _27 = _26;
+  [telnet.c:1175:9] _28 = _27 + 1;
+  [telnet.c:1175:9] [telnet.c:1175:9] tn_84(D)->subpointer = _28;
+  [telnet.c:1175:9] [telnet.c:1175:9] *_27 = c_83;
+  goto <bb 50>; [INV]
+
+  <bb 37> :
+[telnet.c:1178:5] <L45>:
+  [telnet.c:1179:9] if (c_83 != 240)
+    goto <bb 38>; [INV]
+  else
+    goto <bb 43>; [INV]
+
+  <bb 38> :
+  [telnet.c:1180:11] if (c_83 != 255)
+    goto <bb 39>; [INV]
+  else
+    goto <bb 40>; [INV]
+
+  <bb 39> :
+  [telnet.c:1187:11] Curl_failf (data_77(D), [telnet.c:1187:23] "telnet: suboption error");
+  [telnet.c:1188:18] _100 = 56;
+  [telnet.c:1188:18] // predicted unlikely by early return (on trees) predictor.
+  [telnet.c:1188:18] goto <bb 56>; [INV]
+
+  <bb 40> :
+  [telnet.c:1190:9] _29 = [telnet.c:1190:9] tn_84(D)->subpointer;
+  [telnet.c:1190:9] _30 = [telnet.c:1190:9] &[telnet.c:1190:9] tn_84(D)->subbuffer;
+  [telnet.c:1190:9] _31 = _30 + 512;
+  [telnet.c:1190:9] if (_29 < _31)
+    goto <bb 41>; [INV]
+  else
+    goto <bb 42>; [INV]
+
+  <bb 41> :
+  [telnet.c:1190:9] _32 = [telnet.c:1190:9] tn_84(D)->subpointer;
+  [telnet.c:1190:9] _33 = _32;
+  [telnet.c:1190:9] _34 = _33 + 1;
+  [telnet.c:1190:9] [telnet.c:1190:9] tn_84(D)->subpointer = _34;
+  [telnet.c:1190:9] [telnet.c:1190:9] *_33 = c_83;
+
+  <bb 42> :
+  [telnet.c:1191:26] [telnet.c:1191:11] tn_84(D)->telrcv_state = 7;
+  [0:0] goto <bb 50>; [INV]
+
+  <bb 43> :
+  [telnet.c:1194:9] _35 = [telnet.c:1194:9] tn_84(D)->subpointer;
+  [telnet.c:1194:9] _36 = [telnet.c:1194:9] &[telnet.c:1194:9] tn_84(D)->subbuffer;
+  [telnet.c:1194:9] _37 = _36 + 512;
+  [telnet.c:1194:9] if (_35 < _37)
+    goto <bb 44>; [INV]
+  else
+    goto <bb 45>; [INV]
+
+  <bb 44> :
+  [telnet.c:1194:9] _38 = [telnet.c:1194:9] tn_84(D)->subpointer;
+  [telnet.c:1194:9] _39 = _38;
+  [telnet.c:1194:9] _40 = _39 + 1;
+  [telnet.c:1194:9] [telnet.c:1194:9] tn_84(D)->subpointer = _40;
+  [telnet.c:1194:9] [telnet.c:1194:9] *_39 = 255;
+
+  <bb 45> :
+  [telnet.c:1195:9] _41 = [telnet.c:1195:9] tn_84(D)->subpointer;
+  [telnet.c:1195:9] _42 = [telnet.c:1195:9] &[telnet.c:1195:9] tn_84(D)->subbuffer;
+  [telnet.c:1195:9] _43 = _42 + 512;
+  [telnet.c:1195:9] if (_41 < _43)
+    goto <bb 46>; [INV]
+  else
+    goto <bb 47>; [INV]
+
+  <bb 46> :
+  [telnet.c:1195:9] _44 = [telnet.c:1195:9] tn_84(D)->subpointer;
+  [telnet.c:1195:9] _45 = _44;
+  [telnet.c:1195:9] _46 = _45 + 1;
+  [telnet.c:1195:9] [telnet.c:1195:9] tn_84(D)->subpointer = _46;
+  [telnet.c:1195:9] [telnet.c:1195:9] *_45 = 240;
+
+  <bb 47> :
+  [telnet.c:1196:24] _47 = tn_84(D)->subpointer;
+  [telnet.c:1196:24] _48 = _47 + 18446744073709551614;
+  [telnet.c:1196:24] tn_84(D)->subpointer = _48;
+  [telnet.c:1197:9] _49 = [telnet.c:1197:9] tn_84(D)->subpointer;
+  [telnet.c:1197:9] [telnet.c:1197:9] tn_84(D)->subend = _49;
+  [telnet.c:1197:9] _50 = [telnet.c:1197:9] &[telnet.c:1197:9] tn_84(D)->subbuffer;
+  [telnet.c:1197:9] [telnet.c:1197:9] tn_84(D)->subpointer = _50;
+  [telnet.c:1198:18] result_93 = suboption (data_77(D), tn_84(D));
+  [telnet.c:1199:11] if (result_93 != 0)
+    goto <bb 48>; [INV]
+  else
+    goto <bb 49>; [INV]
+
+  <bb 48> :
+  [telnet.c:1200:18] _95 = result_93;
+  [telnet.c:1200:18] // predicted unlikely by early return (on trees) predictor.
+  [telnet.c:1200:18] goto <bb 56>; [INV]
+
+  <bb 49> :
+  [telnet.c:1201:26] [telnet.c:1201:11] tn_84(D)->telrcv_state = 0;
+
+  <bb 50> :
+  # startwrite_58 = PHI <startwrite_59(3), [telnet.c:1093:9] startwrite_109(8), [telnet.c:1096:7] startwrite_105(10), [telnet.c:1102:9] startwrite_142(15), [telnet.c:1107:7] startwrite_137(19), startwrite_59(22), startwrite_59(29), startwrite_59(30), startwrite_59(31), startwrite_59(32), startwrite_59(35), startwrite_59(49), startwrite_59(9), startwrite_59(18), startwrite_59(21), startwrite_59(26), startwrite_59(28), [telnet.c:1131:9] startwrite_127(27), startwrite_59(25), startwrite_59(24), startwrite_59(23), startwrite_59(34), startwrite_59(36), startwrite_59(42)>
+<L59>:
+  [telnet.c:1205:5] in_143 = in_57 + 1;
+
+  <bb 51> :
+  # count_56 = PHI <count_73(D)(2), [telnet.c:1086:14] count_75(50)>
+  # in_57 = PHI <[telnet.c:1066:7] in_71(2), [telnet.c:1205:5] in_143(50)>
+  # startwrite_59 = PHI <[telnet.c:1067:7] startwrite_72(2), startwrite_58(50)>
+  [telnet.c:1086:14] count.14_51 = count_56;
+  [telnet.c:1086:14] count_75 = count.14_51 + -1;
+  [telnet.c:1086:9] if (count.14_51 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 52>; [INV]
+
+  <bb 52> :
+  [telnet.c:1207:3] if (startwrite_59 >= 0)
+    goto <bb 53>; [INV]
+  else
+    goto <bb 55>; [INV]
+
+  <bb 53> :
+  [telnet.c:1207:3] _52 = in_57 - startwrite_59;
+  [telnet.c:1207:3] _53 = (long unsigned int) _52;
+  [telnet.c:1207:3] _54 = (sizetype) startwrite_59;
+  [telnet.c:1207:3] _55 = inbuf_76(D) + _54;
+  [telnet.c:1207:3] result_79 = Curl_client_write (data_77(D), 1, _55, _53);
+  [telnet.c:1207:3] if (result_79 != 0)
+    goto <bb 54>; [INV]
+  else
+    goto <bb 55>; [INV]
+
+  <bb 54> :
+  [telnet.c:1207:3] _80 = result_79;
+  [telnet.c:1207:3] // predicted unlikely by early return (on trees) predictor.
+  [telnet.c:1207:3] goto <bb 56>; [INV]
+
+  <bb 55> :
+  [telnet.c:1207:3] startwrite_81 = -1;
+  [telnet.c:1208:10] _82 = 0;
+
+  <bb 56> :
+  # _60 = PHI <[telnet.c:1093:9] _108(7), [telnet.c:1102:9] _141(14), [telnet.c:1188:18] _100(39), [telnet.c:1200:18] _95(48), [telnet.c:1207:3] _80(54), [telnet.c:1208:10] _82(55)>
+  return _60;
+
+}
+
+
+
+;; Function telnet_do (telnet_do, funcdef_no=125, decl_uid=11975, cgraph_uid=126, symbol_order=127)
+
+CURLcode telnet_do (struct Curl_easy * data, _Bool * done)
+{
+  size_t nread;
+  struct TELNET * tn;
+  char buffer[4096];
+  _Bool keepon;
+  ssize_t snread;
+  int poll_cnt;
+  struct pollfd pfd[2];
+  timediff_t interval_ms;
+  curl_socket_t sockfd;
+  struct connectdata * conn;
+  CURLcode result;
+  unsigned char _1;
+  unsigned char _2;
+  void * _3;
+  int _4;
+  int _5;
+  unsigned int poll_cnt.0_6;
+  int _7;
+  short int _8;
+  int _9;
+  int _10;
+  int _11;
+  long unsigned int nread.1_12;
+  long unsigned int nread.2_13;
+  long unsigned int nread.3_14;
+  long int nread.4_15;
+  int _16;
+  int _17;
+  short int _18;
+  int _19;
+  int _20;
+  int _21;
+  size_t (*<Ta1f>) (char *, size_t, size_t, void *) _22;
+  void * _23;
+  long unsigned int _24;
+  int _25;
+  long unsigned int snread.5_26;
+  long int _27;
+  CURLcode _40;
+  CURLcode _76;
+  CURLcode _111;
+  CURLcode _112;
+  CURLcode _113;
+
+  <bb 2> :
+  [telnet.c:1223:23] conn_52 = [telnet.c:1223:34] data_51(D)->conn;
+  [telnet.c:1224:17] sockfd_53 = [telnet.c:1224:36] [telnet.c:1224:30] conn_52->sock[0];
+  [telnet.c:1239:8] keepon_54 = 1;
+  [telnet.c:1243:9] [telnet.c:1243:3] *done_55(D) = 1;
+  [telnet.c:1245:12] result_58 = init_telnet (data_51(D));
+  [telnet.c:1246:5] if (result_58 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  [telnet.c:1247:12] _113 = result_58;
+  [telnet.c:1247:12] // predicted unlikely by early return (on trees) predictor.
+  [telnet.c:1247:12] goto <bb 47>; [INV]
+
+  <bb 4> :
+  [telnet.c:1249:8] tn_60 = Curl_meta_get (data_51(D), [telnet.c:1249:28] "meta:proto:telnet:easy");
+  [telnet.c:1250:5] if (tn_60 == 0B)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  [telnet.c:1251:12] _112 = 2;
+  [telnet.c:1251:12] // predicted unlikely by early return (on trees) predictor.
+  [telnet.c:1251:12] goto <bb 47>; [INV]
+
+  <bb 6> :
+  [telnet.c:1253:12] result_62 = check_telnet_options (data_51(D), tn_60);
+  [telnet.c:1254:5] if (result_62 != 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  [telnet.c:1255:12] _111 = result_62;
+  [telnet.c:1255:12] // predicted unlikely by early return (on trees) predictor.
+  [telnet.c:1255:12] goto <bb 47>; [INV]
+
+  <bb 8> :
+  [telnet.c:1430:13] [telnet.c:1430:9] [telnet.c:1430:6] pfd[0].fd = sockfd_53;
+  [telnet.c:1431:17] [telnet.c:1431:9] [telnet.c:1431:6] pfd[0].events = 1;
+  [telnet.c:1433:6] _1 = [telnet.c:1433:6] BIT_FIELD_REF <[telnet.c:1433:10] data_51(D)->set, 8, 7040>;
+  [telnet.c:1433:6] _2 = _1 & 16;
+  [telnet.c:1433:5] if (_2 != 0)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 9> :
+  [telnet.c:1434:14] poll_cnt_73 = 1;
+  [telnet.c:1435:17] interval_ms_74 = 100;
+  [0:0] goto <bb 45>; [INV]
+
+  <bb 10> :
+  [telnet.c:1439:43] _3 = [telnet.c:1439:43] [telnet.c:1439:36] data_51(D)->state.in;
+  [telnet.c:1439:17] _4 = fileno (_3);
+  [telnet.c:1439:15] [telnet.c:1439:11] [telnet.c:1439:8] pfd[1].fd = _4;
+  [telnet.c:1440:19] [telnet.c:1440:11] [telnet.c:1440:8] pfd[1].events = 1;
+  [telnet.c:1441:14] poll_cnt_68 = 2;
+  [telnet.c:1442:17] interval_ms_69 = 1000;
+  [telnet.c:1443:14] _5 = [telnet.c:1443:14] [telnet.c:1443:11] pfd[1].fd;
+  [telnet.c:1443:7] if (_5 < 0)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 45>; [INV]
+
+  <bb 11> :
+  [telnet.c:1444:7] Curl_failf (data_51(D), [telnet.c:1444:19] "cannot read input");
+  [telnet.c:1445:14] result_71 = 56;
+  [telnet.c:1446:14] keepon_72 = 0;
+  goto <bb 45>; [INV]
+
+  <bb 12> :
+  [telnet.c:1452:12] poll_cnt.0_6 = (unsigned int) poll_cnt_34;
+  [telnet.c:1452:12] _7 = Curl_poll ([telnet.c:1452:12] &pfd, poll_cnt.0_6, interval_ms_33);
+  [telnet.c:1452:5] switch (_7) <[telnet.c:1460:5] default: <L14> [INV], [telnet.c:1453:5] case -1: <L12> [INV], [telnet.c:1456:5] case 0: <L13> [INV]>
+
+  <bb 13> :
+[telnet.c:1453:5] <L12>:
+  [telnet.c:1454:14] keepon_80 = 0;
+  [telnet.c:1452:5] // predicted unlikely by continue predictor.
+  [telnet.c:1455:7] goto <bb 45>; [INV]
+
+  <bb 14> :
+[telnet.c:1456:5] <L13>:
+  [telnet.c:1457:22] [telnet.c:1457:13] [telnet.c:1457:10] pfd[0].revents = 0;
+  [telnet.c:1458:22] [telnet.c:1458:13] [telnet.c:1458:10] pfd[1].revents = 0;
+
+  <bb 15> :
+[telnet.c:1460:5] <L14>:
+  [telnet.c:1461:16] _8 = [telnet.c:1461:16] [telnet.c:1461:13] pfd[0].revents;
+  [telnet.c:1461:25] _9 = (int) _8;
+  [telnet.c:1461:25] _10 = _9 & 1;
+  [telnet.c:1461:9] if (_10 != 0)
+    goto <bb 16>; [INV]
+  else
+    goto <bb 28>; [INV]
+
+  <bb 16> :
+  [telnet.c:1464:18] result_82 = Curl_xfer_recv (data_51(D), [telnet.c:1464:39] &buffer, 4096, [telnet.c:1464:18] &nread);
+  [telnet.c:1466:11] if (result_82 == 81)
+    goto <bb 27>; [INV]
+  else
+    goto <bb 17>; [INV]
+
+  <bb 17> :
+  [telnet.c:1469:11] if (result_82 != 0)
+    goto <bb 18>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 18> :
+  [telnet.c:1470:18] keepon_91 = 0;
+  [telnet.c:1474:25] _11 = [telnet.c:1474:25] [telnet.c:1474:18] data_51(D)->state.os_errno;
+  [telnet.c:1477:11] goto <bb 27>; [INV]
+
+  <bb 19> :
+  [telnet.c:1481:17] nread.1_12 = nread;
+  [telnet.c:1481:16] if (nread.1_12 == 0)
+    goto <bb 20>; [INV]
+  else
+    goto <bb 21>; [INV]
+
+  <bb 20> :
+  [telnet.c:1482:18] keepon_90 = 0;
+  [telnet.c:1483:11] goto <bb 27>; [INV]
+
+  <bb 21> :
+  [telnet.c:1486:9] nread.2_13 = nread;
+  [telnet.c:1486:9] Curl_pgrs_download_inc (data_51(D), nread.2_13);
+  [telnet.c:1487:18] nread.3_14 = nread;
+  [telnet.c:1487:18] nread.4_15 = (long int) nread.3_14;
+  [telnet.c:1487:18] result_85 = telrcv (data_51(D), tn_60, [telnet.c:1487:52] &buffer, nread.4_15);
+  [telnet.c:1488:11] if (result_85 != 0)
+    goto <bb 22>; [INV]
+  else
+    goto <bb 23>; [INV]
+
+  <bb 22> :
+  [telnet.c:1489:18] keepon_89 = 0;
+  [telnet.c:1490:11] goto <bb 27>; [INV]
+
+  <bb 23> :
+  [telnet.c:1496:14] _16 = [telnet.c:1496:14] tn_60->please_negotiate;
+  [telnet.c:1496:11] if (_16 != 0)
+    goto <bb 24>; [INV]
+  else
+    goto <bb 26>; [INV]
+
+  <bb 24> :
+  [telnet.c:1496:39] _17 = [telnet.c:1496:39] tn_60->already_negotiated;
+  [telnet.c:1496:33] if (_17 == 0)
+    goto <bb 25>; [INV]
+  else
+    goto <bb 26>; [INV]
+
+  <bb 25> :
+  [telnet.c:1497:11] telnet_negotiate (data_51(D), tn_60);
+  [telnet.c:1498:34] [telnet.c:1498:13] tn_60->already_negotiated = 1;
+
+  <bb 26> :
+  nread ={v} {CLOBBER};
+  [0:0] goto <bb 28>; [INV]
+
+  <bb 27> :
+  # result_28 = PHI <[telnet.c:1464:18] result_82(16), [telnet.c:1464:18] result_82(18), [telnet.c:1464:18] result_82(20), [telnet.c:1487:18] result_85(22)>
+  # keepon_36 = PHI <keepon_39(16), [telnet.c:1470:18] keepon_91(18), [telnet.c:1482:18] keepon_90(20), [telnet.c:1489:18] keepon_89(22)>
+  nread ={v} {CLOBBER};
+  goto <bb 40>; [INV]
+
+  <bb 28> :
+  # result_29 = PHI <result_32(15), [telnet.c:1487:18] result_85(26)>
+  [telnet.c:1502:14] snread_93 = 0;
+  [telnet.c:1503:9] if (poll_cnt_34 == 2)
+    goto <bb 29>; [INV]
+  else
+    goto <bb 31>; [INV]
+
+  <bb 29> :
+  [telnet.c:1504:18] _18 = [telnet.c:1504:18] [telnet.c:1504:15] pfd[1].revents;
+  [telnet.c:1504:27] _19 = (int) _18;
+  [telnet.c:1504:27] _20 = _19 & 1;
+  [telnet.c:1504:11] if (_20 != 0)
+    goto <bb 30>; [INV]
+  else
+    goto <bb 34>; [INV]
+
+  <bb 30> :
+  [telnet.c:1505:20] _21 = [telnet.c:1505:20] [telnet.c:1505:28] pfd[1].fd;
+  [telnet.c:1505:20] snread_98 = read (_21, [telnet.c:1505:36] &buffer, 4096);
+  goto <bb 34>; [INV]
+
+  <bb 31> :
+  [telnet.c:1510:34] _22 = [telnet.c:1510:34] [telnet.c:1510:27] data_51(D)->state.fread_func;
+  [telnet.c:1510:23] _23 = [telnet.c:1510:23] [telnet.c:1511:50] data_51(D)->state.in;
+  [telnet.c:1510:23] _24 = _22 ([telnet.c:1510:23] &buffer, 1, 4096, _23);
+  [telnet.c:1510:18] _25 = (int) _24;
+  [telnet.c:1510:16] snread_95 = (ssize_t) _25;
+  [telnet.c:1512:11] if (snread_95 == 268435456)
+    goto <bb 32>; [INV]
+  else
+    goto <bb 33>; [INV]
+
+  <bb 32> :
+  [telnet.c:1513:18] keepon_96 = 0;
+  [telnet.c:1514:11] goto <bb 40>; [INV]
+
+  <bb 33> :
+  [telnet.c:1516:11] if (snread_95 == 268435457)
+    goto <bb 40>; [INV]
+  else
+    goto <bb 34>; [INV]
+
+  <bb 34> :
+  # snread_35 = PHI <[telnet.c:1505:20] snread_98(30), [telnet.c:1510:16] snread_95(33), [telnet.c:1502:14] snread_93(29)>
+  [telnet.c:1520:9] if (snread_35 > 0)
+    goto <bb 35>; [INV]
+  else
+    goto <bb 38>; [INV]
+
+  <bb 35> :
+  [telnet.c:1521:18] result_101 = send_telnet_data (data_51(D), tn_60, [telnet.c:1521:45] &buffer, snread_35);
+  [telnet.c:1522:11] if (result_101 != 0)
+    goto <bb 36>; [INV]
+  else
+    goto <bb 37>; [INV]
+
+  <bb 36> :
+  [telnet.c:1523:18] keepon_103 = 0;
+  [telnet.c:1524:11] goto <bb 40>; [INV]
+
+  <bb 37> :
+  [telnet.c:1526:9] snread.5_26 = (long unsigned int) snread_35;
+  [telnet.c:1526:9] Curl_pgrs_upload_inc (data_51(D), snread.5_26);
+  [0:0] goto <bb 40>; [INV]
+
+  <bb 38> :
+  [telnet.c:1528:14] if (snread_35 < 0)
+    goto <bb 39>; [INV]
+  else
+    goto <bb 40>; [INV]
+
+  <bb 39> :
+  [telnet.c:1529:16] keepon_99 = 0;
+
+  <bb 40> :
+  # result_30 = PHI <result_28(27), result_29(32), result_29(33), [telnet.c:1521:18] result_101(36), result_29(38), [telnet.c:1521:18] result_101(37), result_29(39)>
+  # keepon_37 = PHI <keepon_36(27), [telnet.c:1513:18] keepon_96(32), keepon_39(33), [telnet.c:1523:18] keepon_103(36), keepon_39(38), keepon_39(37), [telnet.c:1529:16] keepon_99(39)>
+  [telnet.c:1534:8] _27 = Curl_timeleft_ms (data_51(D));
+  [telnet.c:1534:7] if (_27 < 0)
+    goto <bb 41>; [INV]
+  else
+    goto <bb 42>; [INV]
+
+  <bb 41> :
+  [telnet.c:1535:7] Curl_failf (data_51(D), [telnet.c:1535:19] "Time-out");
+  [telnet.c:1536:14] result_106 = 28;
+  [telnet.c:1537:14] keepon_107 = 0;
+
+  <bb 42> :
+  # result_31 = PHI <result_30(40), [telnet.c:1536:14] result_106(41)>
+  # keepon_38 = PHI <keepon_37(40), [telnet.c:1537:14] keepon_107(41)>
+  [telnet.c:1540:7] if (result_31 == 0)
+    goto <bb 43>; [INV]
+  else
+    goto <bb 45>; [INV]
+
+  <bb 43> :
+  [telnet.c:1541:16] result_109 = Curl_pgrsUpdate (data_51(D));
+  [telnet.c:1542:9] if (result_109 != 0)
+    goto <bb 44>; [INV]
+  else
+    goto <bb 45>; [INV]
+
+  <bb 44> :
+  [telnet.c:1543:16] keepon_110 = 0;
+
+  <bb 45> :
+  # result_32 = PHI <[telnet.c:1253:12] result_62(10), result_32(13), result_31(42), [telnet.c:1541:16] result_109(43), [telnet.c:1541:16] result_109(44), [telnet.c:1253:12] result_62(9), [telnet.c:1445:14] result_71(11)>
+  # interval_ms_33 = PHI <[telnet.c:1442:17] interval_ms_69(10), interval_ms_33(13), interval_ms_33(42), interval_ms_33(43), interval_ms_33(44), [telnet.c:1435:17] interval_ms_74(9), [telnet.c:1442:17] interval_ms_69(11)>
+  # poll_cnt_34 = PHI <[telnet.c:1441:14] poll_cnt_68(10), poll_cnt_34(13), poll_cnt_34(42), poll_cnt_34(43), poll_cnt_34(44), [telnet.c:1434:14] poll_cnt_73(9), [telnet.c:1441:14] poll_cnt_68(11)>
+  # keepon_39 = PHI <[telnet.c:1239:8] keepon_54(10), [telnet.c:1454:14] keepon_80(13), keepon_38(42), keepon_38(43), [telnet.c:1543:16] keepon_110(44), [telnet.c:1239:8] keepon_54(9), [telnet.c:1446:14] keepon_72(11)>
+  [telnet.c:1450:9] if (keepon_39 != 0)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 46>; [INV]
+
+  <bb 46> :
+  [telnet.c:1548:3] Curl_xfer_setup_nop (data_51(D));
+  [telnet.c:1550:10] _76 = result_32;
+
+  <bb 47> :
+  # _40 = PHI <[telnet.c:1247:12] _113(3), [telnet.c:1251:12] _112(5), [telnet.c:1255:12] _111(7), [telnet.c:1550:10] _76(46)>
+  pfd ={v} {CLOBBER};
+  buffer ={v} {CLOBBER};
+  return _40;
+
+}
+
+

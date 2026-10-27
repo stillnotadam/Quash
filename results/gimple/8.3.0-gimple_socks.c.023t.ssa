@@ -1,0 +1,3159 @@
+
+;; Function memcpy (memcpy, funcdef_no=28, decl_uid=892, cgraph_uid=29, symbol_order=28)
+
+__attribute__((artificial, gnu_inline, always_inline, leaf, nothrow))
+__attribute__((nonnull, nonnull (1, 2)))
+void * memcpy (void * restrict __dest, const void * restrict __src, size_t __len)
+{
+  long unsigned int _1;
+  void * _7;
+
+  <bb 2> :
+  [/usr/include/x86_64-linux-gnu/bits/string_fortified.h:29:10] _1 = __builtin_object_size (__dest_2(D), 0);
+  [/usr/include/x86_64-linux-gnu/bits/string_fortified.h:29:10] _7 = __builtin___memcpy_chk (__dest_2(D), __src_4(D), __len_5(D), _1);
+  [/usr/include/x86_64-linux-gnu/bits/string_fortified.h:29:10] return _7;
+
+}
+
+
+
+;; Function strcpy (strcpy, funcdef_no=32, decl_uid=914, cgraph_uid=33, symbol_order=32)
+
+__attribute__((artificial, gnu_inline, always_inline, leaf, nothrow))
+__attribute__((nonnull, nonnull (1, 2)))
+char * strcpy (char * restrict __dest, const char * restrict __src)
+{
+  long unsigned int _1;
+  char * _6;
+
+  <bb 2> :
+  [/usr/include/x86_64-linux-gnu/bits/string_fortified.h:79:10] _1 = __builtin_object_size (__dest_2(D), 1);
+  [/usr/include/x86_64-linux-gnu/bits/string_fortified.h:79:10] _6 = __builtin___strcpy_chk (__dest_2(D), __src_4(D), _1);
+  [/usr/include/x86_64-linux-gnu/bits/string_fortified.h:79:10] return _6;
+
+}
+
+
+
+;; Function socks_cf_get_host (socks_cf_get_host, funcdef_no=92, decl_uid=10420, cgraph_uid=93, symbol_order=92)
+
+void socks_cf_get_host (struct Curl_cfilter * cf, struct Curl_easy * data, const char * * phost, const char * * pdisplay_host, int * pport)
+{
+  unsigned char _1;
+  unsigned char _2;
+  struct connectdata * _3;
+  char * _4;
+  struct connectdata * _5;
+  const char * _6;
+  struct connectdata * _7;
+  int _8;
+  struct Curl_cfilter * _9;
+  const struct Curl_cftype * _10;
+  void (*<Teb9>) (struct Curl_cfilter *, struct Curl_easy *, const char * *, const char * *, int *) _11;
+  struct Curl_cfilter * _12;
+
+  <bb 2> :
+  [socks.c:1212:6] _1 = [socks.c:1212:6] BIT_FIELD_REF <[socks.c:1212:9] *cf_15(D), 8, 288>;
+  [socks.c:1212:6] _2 = _1 & 1;
+  [socks.c:1212:5] if (_2 == 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  [socks.c:1213:16] _3 = [socks.c:1213:16] cf_15(D)->conn;
+  [socks.c:1213:40] _4 = [socks.c:1213:40] [socks.c:1213:35] [socks.c:1213:22] _3->socks_proxy.host.name;
+  [socks.c:1213:12] [socks.c:1213:5] *phost_17(D) = _4;
+  [socks.c:1214:24] _5 = [socks.c:1214:24] cf_15(D)->conn;
+  [socks.c:1214:47] _6 = [socks.c:1214:47] [socks.c:1214:42] [socks.c:1214:30] _5->http_proxy.host.dispname;
+  [socks.c:1214:20] [socks.c:1214:5] *pdisplay_host_18(D) = _6;
+  [socks.c:1215:21] _7 = [socks.c:1215:21] cf_15(D)->conn;
+  [socks.c:1215:14] _8 = [socks.c:1215:14] [socks.c:1215:27] _7->socks_proxy.port;
+  [socks.c:1215:12] [socks.c:1215:5] *pport_19(D) = _8;
+  [0:0] goto <bb 5>; [INV]
+
+  <bb 4> :
+  [socks.c:1218:7] _9 = [socks.c:1218:7] cf_15(D)->next;
+  [socks.c:1218:13] _10 = [socks.c:1218:13] _9->cft;
+  [socks.c:1218:18] _11 = [socks.c:1218:18] _10->get_host;
+  [socks.c:1218:5] _12 = [socks.c:1218:5] cf_15(D)->next;
+  [socks.c:1218:5] _11 (_12, data_16(D), phost_17(D), pdisplay_host_18(D), pport_19(D));
+
+  <bb 5> :
+  [socks.c:1220:1] return;
+
+}
+
+
+
+;; Function socks_cf_get_select_socks (socks_cf_get_select_socks, funcdef_no=89, decl_uid=10395, cgraph_uid=90, symbol_order=89)
+
+int socks_cf_get_select_socks (struct Curl_cfilter * cf, struct Curl_easy * data, curl_socket_t * socks)
+{
+  int fds;
+  struct socks_state * sx;
+  struct Curl_cfilter * _1;
+  const struct Curl_cftype * _2;
+  int (*<Tebb>) (struct Curl_cfilter *, struct Curl_easy *, curl_socket_t *) _3;
+  struct Curl_cfilter * _4;
+  struct Curl_cfilter * _5;
+  unsigned char _6;
+  unsigned char _7;
+  unsigned char _8;
+  unsigned char _9;
+  int _10;
+  connect_t _11;
+  int _25;
+
+  <bb 2> :
+  [socks.c:1164:23] sx_16 = [socks.c:1164:30] cf_15(D)->ctx;
+  [socks.c:1167:11] _1 = [socks.c:1167:11] cf_15(D)->next;
+  [socks.c:1167:17] _2 = [socks.c:1167:17] _1->cft;
+  [socks.c:1167:22] _3 = [socks.c:1167:22] _2->get_select_socks;
+  [socks.c:1167:9] _4 = [socks.c:1167:9] cf_15(D)->next;
+  [socks.c:1167:9] fds_20 = _3 (_4, data_17(D), socks_18(D));
+  [socks.c:1168:5] if (fds_20 == 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 3> :
+  [socks.c:1168:16] _5 = [socks.c:1168:16] cf_15(D)->next;
+  [socks.c:1168:11] _6 = [socks.c:1168:11] BIT_FIELD_REF <[socks.c:1168:22] *_5, 8, 288>;
+  [socks.c:1168:11] _7 = _6 & 1;
+  [socks.c:1168:11] if (_7 != 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 4> :
+  [socks.c:1168:37] _8 = [socks.c:1168:37] BIT_FIELD_REF <[socks.c:1168:40] *cf_15(D), 8, 288>;
+  [socks.c:1168:37] _9 = _8 & 1;
+  [socks.c:1168:34] if (_9 == 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 5> :
+  [socks.c:1168:52] if (sx_16 != 0B)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 6> :
+  [socks.c:1171:16] _10 = Curl_conn_cf_get_socket (cf_15(D), data_17(D));
+  [socks.c:1171:14] [socks.c:1171:10] *socks_18(D) = _10;
+  [socks.c:1172:14] _11 = [socks.c:1172:14] sx_16->state;
+  [socks.c:1172:5] switch (_11) <[socks.c:1180:5] default: <L9> [INV], [socks.c:1174:5] case 4: <L4> [INV], [socks.c:1175:5] case 8: <L4> [INV], [socks.c:1173:5] case 10: <L4> [INV], [socks.c:1176:5] case 15 ... 16: <L4> [INV]>
+
+  <bb 7> :
+[socks.c:1173:5] <L4>:
+  [socks.c:1178:11] fds_23 = 1;
+  [socks.c:1179:7] goto <bb 9>; [INV]
+
+  <bb 8> :
+[socks.c:1180:5] <L9>:
+  [socks.c:1181:11] fds_24 = 65536;
+
+  <bb 9> :
+  # fds_12 = PHI <[socks.c:1167:9] fds_20(2), [socks.c:1167:9] fds_20(3), [socks.c:1167:9] fds_20(4), [socks.c:1167:9] fds_20(5), [socks.c:1178:11] fds_23(7), [socks.c:1181:11] fds_24(8)>
+  [socks.c:1185:10] _25 = fds_12;
+  [socks.c:1185:10] return _25;
+
+}
+
+
+
+;; Function socks_proxy_cf_free (socks_proxy_cf_free, funcdef_no=87, decl_uid=10379, cgraph_uid=88, symbol_order=87)
+
+void socks_proxy_cf_free (struct Curl_cfilter * cf)
+{
+  struct socks_state * sxstate;
+
+  <bb 2> :
+  [socks.c:1089:23] sxstate_4 = [socks.c:1089:35] cf_3(D)->ctx;
+  [socks.c:1090:5] if (sxstate_4 != 0B)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  [socks.c:1091:5] curl_dbg_free (sxstate_4, 1091, [socks.c:1091:5] "socks.c");
+  [socks.c:1092:13] [socks.c:1092:7] cf_3(D)->ctx = 0B;
+
+  <bb 4> :
+  [socks.c:1094:1] return;
+
+}
+
+
+
+;; Function socks_proxy_cf_close (socks_proxy_cf_close, funcdef_no=90, decl_uid=10408, cgraph_uid=91, symbol_order=90)
+
+void socks_proxy_cf_close (struct Curl_cfilter * cf, struct Curl_easy * data)
+{
+  static const char __PRETTY_FUNCTION__[21] = "socks_proxy_cf_close";
+  struct Curl_cfilter * _1;
+  struct Curl_cfilter * _2;
+  const struct Curl_cftype * _3;
+  void (*<Teb8>) (struct Curl_cfilter *, struct Curl_easy *) _4;
+  struct Curl_cfilter * _5;
+
+  <bb 2> :
+  [socks.c:1192:3] _1 = [socks.c:1192:3] cf_7(D)->next;
+  [socks.c:1192:3] if (_1 != 0B)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 3>; [INV]
+
+  <bb 3> :
+  [socks.c:1192:3] __assert_fail ([socks.c:1192:3] "cf->next", [socks.c:1192:3] "socks.c", 1192, [socks.c:1192:3] &__PRETTY_FUNCTION__);
+
+  <bb 4> :
+  [socks.c:1193:17] [socks.c:1193:5] cf_7(D)->connected = 0;
+  [socks.c:1194:3] socks_proxy_cf_free (cf_7(D));
+  [socks.c:1195:5] _2 = [socks.c:1195:5] cf_7(D)->next;
+  [socks.c:1195:11] _3 = [socks.c:1195:11] _2->cft;
+  [socks.c:1195:16] _4 = [socks.c:1195:16] _3->do_close;
+  [socks.c:1195:3] _5 = [socks.c:1195:3] cf_7(D)->next;
+  [socks.c:1195:3] _4 (_5, data_11(D));
+  [socks.c:1196:1] return;
+
+}
+
+
+
+;; Function socks_proxy_cf_destroy (socks_proxy_cf_destroy, funcdef_no=91, decl_uid=10413, cgraph_uid=92, symbol_order=91)
+
+void socks_proxy_cf_destroy (struct Curl_cfilter * cf, struct Curl_easy * data)
+{
+  <bb 2> :
+  [socks.c:1202:3] socks_proxy_cf_free (cf_2(D));
+  [socks.c:1203:1] return;
+
+}
+
+
+
+;; Function socksstate (socksstate, funcdef_no=81, decl_uid=10209, cgraph_uid=82, symbol_order=81)
+
+void socksstate (struct socks_state * sx, struct Curl_easy * data, connect_t state, int lineno)
+{
+  static const char * const socks_statename[18] = {[socks.c:165:5] "INIT", [socks.c:166:5] "SOCKS_INIT", [socks.c:167:5] "SOCKS_SEND", [socks.c:168:5] "SOCKS_READ_INIT", [socks.c:169:5] "SOCKS_READ", [socks.c:170:5] "GSSAPI_INIT", [socks.c:171:5] "AUTH_INIT", [socks.c:172:5] "AUTH_SEND", [socks.c:173:5] "AUTH_READ", [socks.c:174:5] "REQ_INIT", [socks.c:175:5] "RESOLVING", [socks.c:176:5] "RESOLVED", [socks.c:177:5] "RESOLVE_REMOTE", [socks.c:178:5] "REQ_SEND", [socks.c:179:5] "REQ_SENDING", [socks.c:180:5] "REQ_READ", [socks.c:181:5] "REQ_READ_MORE", [socks.c:183:3] "DONE"};
+  connect_t oldstate;
+  unsigned char _1;
+  unsigned char _2;
+  connect_t _3;
+  const char * _4;
+  const char * _5;
+
+  <bb 2> :
+  [socks.c:161:18] oldstate_9 = [socks.c:161:31] sx_8(D)->state;
+  [socks.c:187:5] if (oldstate_9 == state_10(D))
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  [socks.c:189:5] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:189:5] goto <bb 7>; [INV]
+
+  <bb 4> :
+  [socks.c:191:13] [socks.c:191:5] sx_8(D)->state = state_10(D);
+  [socks.c:194:3] if (data_12(D) != 0B)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 5> :
+  [socks.c:194:3] _1 = [socks.c:194:3] BIT_FIELD_REF <[socks.c:194:3] data_12(D)->set, 8, 17904>;
+  [socks.c:194:3] _2 = _1 & 16;
+  [socks.c:194:3] if (_2 != 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 6> :
+  [socks.c:194:3] _3 = [socks.c:194:3] sx_8(D)->state;
+  [socks.c:194:3] _4 = [socks.c:194:3] socks_statename[_3];
+  [socks.c:194:3] _5 = [socks.c:194:3] socks_statename[oldstate_9];
+  [socks.c:194:3] Curl_infof (data_12(D), [socks.c:194:3] "SXSTATE: %s => %s; line %d", _5, _4, lineno_13(D));
+
+  <bb 7> :
+  return;
+
+}
+
+
+
+;; Function socks_state_send (socks_state_send, funcdef_no=82, decl_uid=10220, cgraph_uid=83, symbol_order=82)
+
+CURLproxycode socks_state_send (struct Curl_cfilter * cf, struct socks_state * sx, struct Curl_easy * data, CURLproxycode failcode, const char * description)
+{
+  static const char __PRETTY_FUNCTION__[17] = "socks_state_send";
+  CURLcode result;
+  ssize_t nwritten;
+  long int _1;
+  long unsigned int _2;
+  unsigned char * _3;
+  struct Curl_cfilter * _4;
+  <unnamed type> result.65_5;
+  <unnamed type> result.66_6;
+  <unnamed type> result.67_7;
+  const char * _8;
+  long int _9;
+  long int _10;
+  long int _11;
+  unsigned char * _12;
+  sizetype nwritten.68_13;
+  unsigned char * _14;
+  CURLproxycode _15;
+  CURLproxycode _26;
+  CURLproxycode _31;
+  CURLproxycode _33;
+  CURLproxycode _34;
+
+  <bb 2> :
+  [socks.c:211:34] _1 = [socks.c:211:34] sx_18(D)->outstanding;
+  [socks.c:210:14] _2 = (long unsigned int) _1;
+  [socks.c:210:58] _3 = [socks.c:210:58] sx_18(D)->outp;
+  [socks.c:210:14] _4 = [socks.c:210:14] cf_19(D)->next;
+  [socks.c:210:14] nwritten_22 = Curl_conn_cf_send (_4, data_20(D), _3, _2, [socks.c:210:14] &result);
+  [socks.c:212:5] if (nwritten_22 <= 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 3> :
+  [socks.c:213:20] result.65_5 = result;
+  [socks.c:213:7] if (result.65_5 == 81)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  [socks.c:214:14] _34 = 0;
+  [socks.c:214:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:214:14] goto <bb 11>; [INV]
+
+  <bb 5> :
+  [socks.c:216:22] result.66_6 = result;
+  [socks.c:216:12] if (result.66_6 == 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 6> :
+  [socks.c:218:7] Curl_failf (data_20(D), [socks.c:218:19] "connection to proxy closed");
+  [socks.c:219:14] _33 = 3;
+  [socks.c:219:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:219:14] goto <bb 11>; [INV]
+
+  <bb 7> :
+  [socks.c:221:5] result.67_7 = result;
+  [socks.c:221:5] _8 = curl_easy_strerror (result.67_7);
+  [socks.c:221:5] Curl_failf (data_20(D), [socks.c:221:17] "Failed to send %s: %s", description_28(D), _8);
+  [socks.c:223:12] _31 = failcode_30(D);
+  [socks.c:223:12] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:223:12] goto <bb 11>; [INV]
+
+  <bb 8> :
+  [socks.c:225:3] _9 = [socks.c:225:3] sx_18(D)->outstanding;
+  [socks.c:225:3] if (nwritten_22 <= _9)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 9> :
+  [socks.c:225:3] __assert_fail ([socks.c:225:3] "sx->outstanding >= nwritten", [socks.c:225:3] "socks.c", 225, [socks.c:225:3] &__PRETTY_FUNCTION__);
+
+  <bb 10> :
+  [socks.c:227:19] _10 = sx_18(D)->outstanding;
+  [socks.c:227:19] _11 = _10 - nwritten_22;
+  [socks.c:227:19] sx_18(D)->outstanding = _11;
+  [socks.c:228:12] _12 = sx_18(D)->outp;
+  [socks.c:228:12] nwritten.68_13 = (sizetype) nwritten_22;
+  [socks.c:228:12] _14 = _12 + nwritten.68_13;
+  [socks.c:228:12] sx_18(D)->outp = _14;
+  [socks.c:229:10] _26 = 0;
+
+  <bb 11> :
+  # _15 = PHI <[socks.c:214:14] _34(4), [socks.c:219:14] _33(6), [socks.c:223:12] _31(7), [socks.c:229:10] _26(10)>
+  result ={v} {CLOBBER};
+  return _15;
+
+}
+
+
+
+;; Function socks_state_recv (socks_state_recv, funcdef_no=83, decl_uid=10230, cgraph_uid=84, symbol_order=83)
+
+CURLproxycode socks_state_recv (struct Curl_cfilter * cf, struct socks_state * sx, struct Curl_easy * data, CURLproxycode failcode, const char * description)
+{
+  static const char __PRETTY_FUNCTION__[17] = "socks_state_recv";
+  CURLcode result;
+  ssize_t nread;
+  long int _1;
+  long unsigned int _2;
+  unsigned char * _3;
+  struct Curl_cfilter * _4;
+  <unnamed type> result.69_5;
+  <unnamed type> result.70_6;
+  <unnamed type> result.71_7;
+  const char * _8;
+  long int _9;
+  long int _10;
+  long int _11;
+  unsigned char * _12;
+  sizetype nread.72_13;
+  unsigned char * _14;
+  CURLproxycode _15;
+  CURLproxycode _26;
+  CURLproxycode _31;
+  CURLproxycode _33;
+  CURLproxycode _34;
+
+  <bb 2> :
+  [socks.c:242:31] _1 = [socks.c:242:31] sx_18(D)->outstanding;
+  [socks.c:241:11] _2 = (long unsigned int) _1;
+  [socks.c:241:55] _3 = [socks.c:241:55] sx_18(D)->outp;
+  [socks.c:241:11] _4 = [socks.c:241:11] cf_19(D)->next;
+  [socks.c:241:11] nread_22 = Curl_conn_cf_recv (_4, data_20(D), _3, _2, [socks.c:241:11] &result);
+  [socks.c:243:5] if (nread_22 <= 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 3> :
+  [socks.c:244:20] result.69_5 = result;
+  [socks.c:244:7] if (result.69_5 == 81)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  [socks.c:245:14] _34 = 0;
+  [socks.c:245:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:245:14] goto <bb 11>; [INV]
+
+  <bb 5> :
+  [socks.c:247:22] result.70_6 = result;
+  [socks.c:247:12] if (result.70_6 == 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 6> :
+  [socks.c:249:7] Curl_failf (data_20(D), [socks.c:249:19] "connection to proxy closed");
+  [socks.c:250:14] _33 = 3;
+  [socks.c:250:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:250:14] goto <bb 11>; [INV]
+
+  <bb 7> :
+  [socks.c:252:5] result.71_7 = result;
+  [socks.c:252:5] _8 = curl_easy_strerror (result.71_7);
+  [socks.c:252:5] Curl_failf (data_20(D), [socks.c:252:17] "SOCKS4: Failed receiving %s: %s", description_28(D), _8);
+  [socks.c:254:12] _31 = failcode_30(D);
+  [socks.c:254:12] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:254:12] goto <bb 11>; [INV]
+
+  <bb 8> :
+  [socks.c:257:3] _9 = [socks.c:257:3] sx_18(D)->outstanding;
+  [socks.c:257:3] if (nread_22 <= _9)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 9> :
+  [socks.c:257:3] __assert_fail ([socks.c:257:3] "sx->outstanding >= nread", [socks.c:257:3] "socks.c", 257, [socks.c:257:3] &__PRETTY_FUNCTION__);
+
+  <bb 10> :
+  [socks.c:258:19] _10 = sx_18(D)->outstanding;
+  [socks.c:258:19] _11 = _10 - nread_22;
+  [socks.c:258:19] sx_18(D)->outstanding = _11;
+  [socks.c:259:12] _12 = sx_18(D)->outp;
+  [socks.c:259:12] nread.72_13 = (sizetype) nread_22;
+  [socks.c:259:12] _14 = _12 + nread.72_13;
+  [socks.c:259:12] sx_18(D)->outp = _14;
+  [socks.c:260:10] _26 = 0;
+
+  <bb 11> :
+  # _15 = PHI <[socks.c:245:14] _34(4), [socks.c:250:14] _33(6), [socks.c:254:12] _31(7), [socks.c:260:10] _26(10)>
+  result ={v} {CLOBBER};
+  return _15;
+
+}
+
+
+
+;; Function do_SOCKS5 (do_SOCKS5, funcdef_no=85, decl_uid=10288, cgraph_uid=86, symbol_order=85)
+
+CURLproxycode do_SOCKS5 (struct Curl_cfilter * cf, struct socks_state * sx, struct Curl_easy * data)
+{
+  int addrlen;
+  static const CURLproxycode lookup[9] = {0, 20, 23, 22, 21, 19, 24, 18, 17};
+  int code;
+  CURLproxycode rc;
+  char ip6[16];
+  unsigned char ip4[4];
+  struct sockaddr_in6 * saddr_in6;
+  int i;
+  struct sockaddr_in * saddr_in;
+  int i;
+  struct Curl_addrinfo * hp;
+  char dest[46];
+  resolve_t rc;
+  size_t proxy_password_len;
+  size_t proxy_user_len;
+  static const char __PRETTY_FUNCTION__[10] = "do_SOCKS5";
+  struct Curl_dns_entry * dns;
+  _Bool allow_gssapi;
+  const unsigned char auth;
+  ssize_t len;
+  const size_t hostname_len;
+  _Bool socks5_resolve_local;
+  CURLproxycode presult;
+  CURLcode result;
+  int idx;
+  unsigned char * socksreq;
+  struct connectdata * conn;
+  unsigned char _1;
+  const char * _2;
+  long unsigned int _3;
+  long unsigned int _4;
+  connect_t _5;
+  unsigned char _6;
+  unsigned char _7;
+  unsigned char _8;
+  unsigned char _9;
+  int _10;
+  const char * _11;
+  _Bool _12;
+  _Bool _13;
+  _Bool _14;
+  unsigned char _15;
+  unsigned char _16;
+  long unsigned int _17;
+  long unsigned int _18;
+  unsigned char _19;
+  unsigned char _20;
+  int _21;
+  long unsigned int _22;
+  long unsigned int _23;
+  int idx.6_24;
+  sizetype _25;
+  unsigned char * _26;
+  int idx.7_27;
+  sizetype _28;
+  unsigned char * _29;
+  int idx.8_30;
+  sizetype _31;
+  unsigned char * _32;
+  const char * _33;
+  int idx.9_34;
+  sizetype _35;
+  unsigned char * _36;
+  unsigned char _37;
+  unsigned char * _38;
+  unsigned char _39;
+  long int _40;
+  long int _41;
+  long int _42;
+  long int _43;
+  unsigned char _44;
+  unsigned char * _45;
+  unsigned char _46;
+  unsigned char * _47;
+  unsigned char _48;
+  _Bool _49;
+  unsigned char * _50;
+  unsigned char _51;
+  unsigned char * _52;
+  unsigned char _53;
+  const char * _54;
+  const char * _55;
+  const char * _56;
+  const char * _57;
+  long int len.10_58;
+  sizetype len.11_59;
+  unsigned char * _60;
+  long int len.12_61;
+  sizetype len.13_62;
+  unsigned char * _63;
+  unsigned char _64;
+  const char * _65;
+  const char * _66;
+  sizetype len.14_67;
+  unsigned char * _68;
+  long unsigned int len.15_69;
+  long unsigned int _70;
+  long int len.16_71;
+  sizetype len.17_72;
+  unsigned char * _73;
+  unsigned char _74;
+  const char * _75;
+  const char * _76;
+  sizetype len.18_77;
+  unsigned char * _78;
+  long unsigned int len.19_79;
+  long unsigned int _80;
+  long int _81;
+  long int _82;
+  unsigned char * _83;
+  unsigned char _84;
+  unsigned char * _85;
+  unsigned char _86;
+  int _87;
+  unsigned char _88;
+  int _89;
+  int _90;
+  const char * _91;
+  int _92;
+  const char * _93;
+  struct Curl_dns_entry * _94;
+  struct Curl_dns_entry * dns.20_95;
+  struct Curl_dns_entry * dns.21_96;
+  unsigned char _97;
+  unsigned char _98;
+  const char * _99;
+  struct Curl_dns_entry * dns.22_100;
+  struct Curl_dns_entry * dns.23_101;
+  struct Curl_dns_entry * dns.24_102;
+  struct Curl_dns_entry * dns.25_103;
+  const char * _104;
+  long int len.26_105;
+  sizetype len.27_106;
+  unsigned char * _107;
+  long int len.28_108;
+  sizetype len.29_109;
+  unsigned char * _110;
+  long int len.30_111;
+  sizetype len.31_112;
+  unsigned char * _113;
+  int _114;
+  long int len.32_115;
+  sizetype len.33_116;
+  unsigned char * _117;
+  in_addr_t * _118;
+  sizetype _119;
+  unsigned char * _120;
+  long int len.34_121;
+  sizetype len.35_122;
+  unsigned char * _123;
+  unsigned char _124;
+  unsigned char _125;
+  unsigned char _126;
+  int _127;
+  int _128;
+  long int len.36_129;
+  sizetype len.37_130;
+  unsigned char * _131;
+  uint8_t[16] * _132;
+  sizetype _133;
+  unsigned char * _134;
+  long int len.38_135;
+  sizetype len.39_136;
+  unsigned char * _137;
+  unsigned char _138;
+  unsigned char _139;
+  unsigned char _140;
+  int _141;
+  struct Curl_dns_entry * dns.40_142;
+  long int len.41_143;
+  sizetype len.42_144;
+  unsigned char * _145;
+  long int len.43_146;
+  sizetype len.44_147;
+  unsigned char * _148;
+  long int len.45_149;
+  sizetype len.46_150;
+  unsigned char * _151;
+  _Bool _152;
+  unsigned char _153;
+  unsigned char _154;
+  const char * _155;
+  int _156;
+  long int len.47_157;
+  sizetype len.48_158;
+  unsigned char * _159;
+  sizetype len.49_160;
+  unsigned char * _161;
+  long unsigned int len.50_162;
+  long unsigned int _163;
+  const char * _164;
+  int _165;
+  long int len.51_166;
+  sizetype len.52_167;
+  unsigned char * _168;
+  sizetype len.53_169;
+  unsigned char * _170;
+  long unsigned int len.54_171;
+  long unsigned int _172;
+  long int len.55_173;
+  sizetype len.56_174;
+  unsigned char * _175;
+  long int len.57_176;
+  sizetype len.58_177;
+  unsigned char * _178;
+  unsigned char _179;
+  const char * _180;
+  sizetype len.59_181;
+  unsigned char * _182;
+  long unsigned int len.60_183;
+  long unsigned int _184;
+  unsigned char _185;
+  unsigned char _186;
+  int _187;
+  const char * _188;
+  int _189;
+  int _190;
+  long int len.61_191;
+  sizetype len.62_192;
+  unsigned char * _193;
+  unsigned char _194;
+  int _195;
+  long int len.63_196;
+  sizetype len.64_197;
+  unsigned char * _198;
+  unsigned char _199;
+  long int _200;
+  long int _201;
+  unsigned char _202;
+  unsigned char * _203;
+  unsigned char _204;
+  unsigned char * _205;
+  unsigned char _206;
+  unsigned char * _207;
+  unsigned char _208;
+  int _209;
+  const char * _210;
+  unsigned char * _211;
+  unsigned char _212;
+  unsigned char * _213;
+  unsigned char _214;
+  int _215;
+  unsigned char * _216;
+  unsigned char _217;
+  unsigned char * _218;
+  unsigned char _219;
+  long int _220;
+  unsigned char * _221;
+  long int _222;
+  unsigned char _223;
+  unsigned char _224;
+  CURLproxycode _247;
+  CURLproxycode _298;
+  CURLproxycode _299;
+  CURLproxycode _302;
+  CURLproxycode _303;
+  CURLproxycode _325;
+  CURLproxycode _326;
+  CURLproxycode _332;
+  CURLproxycode _334;
+  CURLproxycode _336;
+  CURLproxycode _340;
+  CURLproxycode _341;
+  CURLproxycode _342;
+  CURLproxycode _354;
+  CURLproxycode _360;
+  CURLproxycode _370;
+  CURLproxycode _371;
+  CURLproxycode _376;
+  CURLproxycode _377;
+  CURLproxycode _378;
+  CURLproxycode _383;
+  CURLproxycode _384;
+  CURLproxycode _409;
+  CURLproxycode _446;
+  CURLproxycode _460;
+  CURLproxycode _461;
+  CURLproxycode _465;
+  CURLproxycode _478;
+  CURLproxycode _480;
+  CURLproxycode _481;
+  CURLproxycode _482;
+  CURLproxycode _486;
+  CURLproxycode _487;
+  CURLproxycode _489;
+
+  <bb 2> :
+  [socks.c:568:23] conn_280 = [socks.c:568:32] cf_279(D)->conn;
+  [socks.c:569:18] socksreq_282 = [socks.c:569:57] [socks.c:569:50] data_281(D)->state.buffer;
+  [socks.c:574:23] _1 = [socks.c:574:23] [socks.c:574:10] conn_280->socks_proxy.proxytype;
+  [socks.c:573:8] socks5_resolve_local_283 = _1 == 5;
+  [socks.c:575:31] _2 = [socks.c:575:31] sx_284(D)->hostname;
+  [socks.c:575:31] hostname_len_285 = strlen (_2);
+  [socks.c:576:11] len_286 = 0;
+  [socks.c:577:23] auth_287 = [socks.c:577:39] [socks.c:577:34] data_281(D)->set.socks5auth;
+  [socks.c:578:8] allow_gssapi_288 = 0;
+  [socks.c:579:26] dns = 0B;
+  [socks.c:581:3] _3 = (long unsigned int) auth_287;
+  [socks.c:581:3] _4 = _3 & 5;
+  [socks.c:581:3] if (_4 != 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 3>; [INV]
+
+  <bb 3> :
+  [socks.c:581:3] __assert_fail ([socks.c:581:3] "auth & ((((unsigned long)1)<<0) | (((unsigned long)1)<<2))", [socks.c:581:3] "socks.c", 581, [socks.c:581:3] &__PRETTY_FUNCTION__);
+
+  <bb 4> :
+  [socks.c:582:12] _5 = [socks.c:582:12] sx_284(D)->state;
+  [socks.c:582:3] switch (_5) <[socks.c:699:3] default: <L197> [INV], [socks.c:583:3] case 1: <L3> [INV], [socks.c:630:3] case 2: <L32> [INV], [socks.c:641:3] case 3: <L38> [INV], [socks.c:645:3] case 4: <L39> [INV], [socks.c:703:3] case 6: <L57> [INV], [socks.c:749:3] case 7: <L74> [INV], [socks.c:762:3] case 8: <L79> [INV], [socks.c:782:3] case 9: <L87> [INV], [socks.c:799:3] case 10: <L94> [INV], [socks.c:821:3] case 11: <L108> [INV], [socks.c:876:3] case 12: <L136> [INV], [socks.c:916:3] case 13: <L156> [INV], [socks.c:932:3] case 14: <L157> [INV], [socks.c:951:3] case 15: <L162> [INV], [socks.c:1040:3] case 16: <L184> [INV]>
+
+  <bb 5> :
+[socks.c:583:3] <L3>:
+  [socks.c:584:8] _6 = [socks.c:584:8] BIT_FIELD_REF <[socks.c:584:12] conn_280->bits, 8, 0>;
+  [socks.c:584:8] _7 = _6 & 1;
+  [socks.c:584:7] if (_7 != 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 6> :
+  [socks.c:585:7] if (data_281(D) != 0B)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 7> :
+  [socks.c:585:7] _8 = [socks.c:585:7] BIT_FIELD_REF <[socks.c:585:7] data_281(D)->set, 8, 17904>;
+  [socks.c:585:7] _9 = _8 & 16;
+  [socks.c:585:7] if (_9 != 0)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 8> :
+  [socks.c:585:7] _10 = [socks.c:585:7] sx_284(D)->remote_port;
+  [socks.c:585:7] _11 = [socks.c:585:7] sx_284(D)->hostname;
+  [socks.c:585:7] Curl_infof (data_281(D), [socks.c:585:7] "SOCKS5: connecting to HTTP proxy %s port %d", _11, _10);
+
+  <bb 9> :
+  [socks.c:589:8] _12 = ~socks5_resolve_local_283;
+  [socks.c:589:46] _13 = hostname_len_285 > 255;
+  [socks.c:589:30] _14 = _12 & _13;
+  [socks.c:589:7] if (_14 != 0)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 10> :
+  [socks.c:590:7] if (data_281(D) != 0B)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 11> :
+  [socks.c:590:7] _15 = [socks.c:590:7] BIT_FIELD_REF <[socks.c:590:7] data_281(D)->set, 8, 17904>;
+  [socks.c:590:7] _16 = _15 & 16;
+  [socks.c:590:7] if (_16 != 0)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 12> :
+  [socks.c:590:7] Curl_infof (data_281(D), [socks.c:590:7] "SOCKS5: server resolving disabled for hostnames of length > 255 [actual len=%zu]", hostname_len_285);
+
+  <bb 13> :
+  [socks.c:592:28] socks5_resolve_local_306 = 1;
+
+  <bb 14> :
+  # socks5_resolve_local_227 = PHI <[socks.c:573:8] socks5_resolve_local_283(9), [socks.c:592:28] socks5_resolve_local_306(13)>
+  [socks.c:595:13] _17 = (long unsigned int) auth_287;
+  [socks.c:595:13] _18 = _17 & 18446744073709551610;
+  [socks.c:595:7] if (_18 != 0)
+    goto <bb 15>; [INV]
+  else
+    goto <bb 18>; [INV]
+
+  <bb 15> :
+  [socks.c:596:7] if (data_281(D) != 0B)
+    goto <bb 16>; [INV]
+  else
+    goto <bb 18>; [INV]
+
+  <bb 16> :
+  [socks.c:596:7] _19 = [socks.c:596:7] BIT_FIELD_REF <[socks.c:596:7] data_281(D)->set, 8, 17904>;
+  [socks.c:596:7] _20 = _19 & 16;
+  [socks.c:596:7] if (_20 != 0)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 18>; [INV]
+
+  <bb 17> :
+  [socks.c:596:7] _21 = (int) auth_287;
+  [socks.c:596:7] Curl_infof (data_281(D), [socks.c:596:7] "warning: unsupported value passed to CURLOPT_SOCKS5_AUTH: %u", _21);
+
+  <bb 18> :
+  [socks.c:599:15] _22 = (long unsigned int) auth_287;
+  [socks.c:599:15] _23 = _22 & 1;
+  [socks.c:599:7] if (_23 == 0)
+    goto <bb 19>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 19> :
+  [socks.c:601:22] [socks.c:601:9] sx_284(D)->proxy_user = 0B;
+
+  <bb 20> :
+  [socks.c:607:9] idx_309 = 0;
+  [socks.c:608:17] idx.6_24 = idx_309;
+  [socks.c:608:17] idx_310 = idx.6_24 + 1;
+  [socks.c:608:17] _25 = (sizetype) idx.6_24;
+  [socks.c:608:13] _26 = socksreq_282 + _25;
+  [socks.c:608:21] [socks.c:608:13] *_26 = 5;
+  [socks.c:609:8] idx_312 = idx_310 + 1;
+  [socks.c:610:17] idx.7_27 = idx_312;
+  [socks.c:610:17] idx_313 = idx.7_27 + 1;
+  [socks.c:610:17] _28 = (sizetype) idx.7_27;
+  [socks.c:610:13] _29 = socksreq_282 + _28;
+  [socks.c:610:21] [socks.c:610:13] *_29 = 0;
+  [socks.c:611:7] if (allow_gssapi_288 != 0)
+    goto <bb 21>; [INV]
+  else
+    goto <bb 22>; [INV]
+
+  <bb 21> :
+  [socks.c:612:19] idx.8_30 = idx_313;
+  [socks.c:612:19] idx_315 = idx.8_30 + 1;
+  [socks.c:612:19] _31 = (sizetype) idx.8_30;
+  [socks.c:612:15] _32 = socksreq_282 + _31;
+  [socks.c:612:23] [socks.c:612:15] *_32 = 1;
+
+  <bb 22> :
+  # idx_225 = PHI <[socks.c:610:17] idx_313(20), [socks.c:612:19] idx_315(21)>
+  [socks.c:613:10] _33 = [socks.c:613:10] sx_284(D)->proxy_user;
+  [socks.c:613:7] if (_33 != 0B)
+    goto <bb 23>; [INV]
+  else
+    goto <bb 24>; [INV]
+
+  <bb 23> :
+  [socks.c:614:19] idx.9_34 = idx_225;
+  [socks.c:614:19] idx_317 = idx.9_34 + 1;
+  [socks.c:614:19] _35 = (sizetype) idx.9_34;
+  [socks.c:614:15] _36 = socksreq_282 + _35;
+  [socks.c:614:23] [socks.c:614:15] *_36 = 2;
+
+  <bb 24> :
+  # idx_226 = PHI <idx_225(22), [socks.c:614:19] idx_317(23)>
+  [socks.c:616:19] _37 = (unsigned char) idx_226;
+  [socks.c:616:13] _38 = socksreq_282 + 1;
+  [socks.c:616:19] _39 = _37 + 254;
+  [socks.c:616:17] [socks.c:616:13] *_38 = _39;
+  [socks.c:618:14] [socks.c:618:7] sx_284(D)->outp = socksreq_282;
+  [socks.c:619:21] _40 = (long int) idx_226;
+  [socks.c:619:21] [socks.c:619:7] sx_284(D)->outstanding = _40;
+  [socks.c:620:15] presult_323 = socks_state_send (cf_279(D), sx_284(D), data_281(D), 29, [socks.c:621:32] "initial SOCKS5 request");
+  [socks.c:622:7] if (presult_323 != 0)
+    goto <bb 25>; [INV]
+  else
+    goto <bb 26>; [INV]
+
+  <bb 25> :
+  [socks.c:623:14] _326 = presult_323;
+  [socks.c:623:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:623:14] goto <bb 160>; [INV]
+
+  <bb 26> :
+  [socks.c:624:15] _41 = [socks.c:624:15] sx_284(D)->outstanding;
+  [socks.c:624:12] if (_41 != 0)
+    goto <bb 27>; [INV]
+  else
+    goto <bb 28>; [INV]
+
+  <bb 27> :
+  [socks.c:626:14] _325 = 0;
+  [socks.c:626:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:626:14] goto <bb 160>; [INV]
+
+  <bb 28> :
+  [socks.c:628:5] socksstate (sx_284(D), data_281(D), 4, 628);
+  [socks.c:629:5] // predicted unlikely by goto predictor.
+  [socks.c:629:5] goto <bb 33>; [INV]
+
+  <bb 29> :
+[socks.c:630:3] <L32>:
+  [socks.c:631:15] presult_301 = socks_state_send (cf_279(D), sx_284(D), data_281(D), 29, [socks.c:632:32] "initial SOCKS5 request");
+  [socks.c:633:7] if (presult_301 != 0)
+    goto <bb 30>; [INV]
+  else
+    goto <bb 31>; [INV]
+
+  <bb 30> :
+  [socks.c:634:14] _303 = presult_301;
+  [socks.c:634:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:634:14] goto <bb 160>; [INV]
+
+  <bb 31> :
+  [socks.c:635:15] _42 = [socks.c:635:15] sx_284(D)->outstanding;
+  [socks.c:635:12] if (_42 != 0)
+    goto <bb 32>; [INV]
+  else
+    goto <bb 33>; [INV]
+
+  <bb 32> :
+  [socks.c:637:14] _302 = 0;
+  [socks.c:637:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:637:14] goto <bb 160>; [INV]
+
+  <bb 33> :
+  # socks5_resolve_local_228 = PHI <[socks.c:573:8] socks5_resolve_local_283(4), [socks.c:573:8] socks5_resolve_local_283(31), socks5_resolve_local_227(28)>
+[socks.c:640:1] CONNECT_SOCKS_READ_INIT:
+[socks.c:641:3] <L38>:
+  [socks.c:642:21] [socks.c:642:7] sx_284(D)->outstanding = 2;
+  [socks.c:643:14] [socks.c:643:7] sx_284(D)->outp = socksreq_282;
+
+  <bb 34> :
+  # socks5_resolve_local_229 = PHI <[socks.c:573:8] socks5_resolve_local_283(4), socks5_resolve_local_228(33)>
+[socks.c:645:3] <L39>:
+  [socks.c:646:15] presult_330 = socks_state_recv (cf_279(D), sx_284(D), data_281(D), 15, [socks.c:647:32] "initial SOCKS5 response");
+  [socks.c:648:7] if (presult_330 != 0)
+    goto <bb 35>; [INV]
+  else
+    goto <bb 36>; [INV]
+
+  <bb 35> :
+  [socks.c:649:14] _342 = presult_330;
+  [socks.c:649:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:649:14] goto <bb 160>; [INV]
+
+  <bb 36> :
+  [socks.c:650:15] _43 = [socks.c:650:15] sx_284(D)->outstanding;
+  [socks.c:650:12] if (_43 != 0)
+    goto <bb 37>; [INV]
+  else
+    goto <bb 38>; [INV]
+
+  <bb 37> :
+  [socks.c:652:14] _341 = 0;
+  [socks.c:652:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:652:14] goto <bb 160>; [INV]
+
+  <bb 38> :
+  [socks.c:654:21] _44 = [socks.c:654:21] *socksreq_282;
+  [socks.c:654:12] if (_44 != 5)
+    goto <bb 39>; [INV]
+  else
+    goto <bb 40>; [INV]
+
+  <bb 39> :
+  [socks.c:655:7] Curl_failf (data_281(D), [socks.c:655:19] "Received invalid version in initial SOCKS5 response.");
+  [socks.c:656:14] _340 = 2;
+  [socks.c:656:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:656:14] goto <bb 160>; [INV]
+
+  <bb 40> :
+  [socks.c:658:21] _45 = socksreq_282 + 1;
+  [socks.c:658:21] _46 = [socks.c:658:21] *_45;
+  [socks.c:658:12] if (_46 == 0)
+    goto <bb 41>; [INV]
+  else
+    goto <bb 42>; [INV]
+
+  <bb 41> :
+  [socks.c:660:7] socksstate (sx_284(D), data_281(D), 9, 660);
+  [socks.c:661:7] // predicted unlikely by goto predictor.
+  [socks.c:661:7] goto <bb 77>; [INV]
+
+  <bb 42> :
+  [socks.c:663:21] _47 = socksreq_282 + 1;
+  [socks.c:663:21] _48 = [socks.c:663:21] *_47;
+  [socks.c:663:12] if (_48 == 2)
+    goto <bb 43>; [INV]
+  else
+    goto <bb 44>; [INV]
+
+  <bb 43> :
+  [socks.c:665:7] socksstate (sx_284(D), data_281(D), 6, 665);
+  [socks.c:666:7] // predicted unlikely by goto predictor.
+  goto <bb 50>; [INV]
+
+  <bb 44> :
+  [socks.c:680:10] _49 = ~allow_gssapi_288;
+  [socks.c:680:9] if (_49 != 0)
+    goto <bb 45>; [INV]
+  else
+    goto <bb 47>; [INV]
+
+  <bb 45> :
+  [socks.c:680:36] _50 = socksreq_282 + 1;
+  [socks.c:680:36] _51 = [socks.c:680:36] *_50;
+  [socks.c:680:24] if (_51 == 1)
+    goto <bb 46>; [INV]
+  else
+    goto <bb 47>; [INV]
+
+  <bb 46> :
+  [socks.c:681:9] Curl_failf (data_281(D), [socks.c:682:15] "SOCKS5 GSSAPI per-message authentication is not supported.");
+  [socks.c:683:16] _332 = 5;
+  [socks.c:683:16] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:683:16] goto <bb 160>; [INV]
+
+  <bb 47> :
+  [socks.c:685:23] _52 = socksreq_282 + 1;
+  [socks.c:685:23] _53 = [socks.c:685:23] *_52;
+  [socks.c:685:14] if (_53 == 255)
+    goto <bb 48>; [INV]
+  else
+    goto <bb 49>; [INV]
+
+  <bb 48> :
+  [socks.c:686:9] Curl_failf (data_281(D), [socks.c:686:21] "No authentication method was acceptable.");
+  [socks.c:687:16] _336 = 12;
+  [socks.c:687:16] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:687:16] goto <bb 160>; [INV]
+
+  <bb 49> :
+  [socks.c:690:5] Curl_failf (data_281(D), [socks.c:691:11] "Undocumented SOCKS5 mode attempted to be used by server.");
+  [socks.c:692:12] _334 = 32;
+  [socks.c:692:12] goto <bb 160>; [INV]
+
+  <bb 50> :
+  # socks5_resolve_local_230 = PHI <[socks.c:573:8] socks5_resolve_local_283(4), socks5_resolve_local_229(43)>
+[socks.c:703:3] <L57>:
+  [socks.c:706:10] _54 = [socks.c:706:10] sx_284(D)->proxy_user;
+  [socks.c:706:7] if (_54 != 0B)
+    goto <bb 51>; [INV]
+  else
+    goto <bb 53>; [INV]
+
+  <bb 51> :
+  [socks.c:706:28] _55 = [socks.c:706:28] sx_284(D)->proxy_password;
+  [socks.c:706:23] if (_55 != 0B)
+    goto <bb 52>; [INV]
+  else
+    goto <bb 53>; [INV]
+
+  <bb 52> :
+  [socks.c:707:24] _56 = [socks.c:707:24] sx_284(D)->proxy_user;
+  [socks.c:707:24] proxy_user_len_343 = strlen (_56);
+  [socks.c:708:28] _57 = [socks.c:708:28] sx_284(D)->proxy_password;
+  [socks.c:708:28] proxy_password_len_344 = strlen (_57);
+  [socks.c:708:26] goto <bb 54>; [INV]
+
+  <bb 53> :
+  [socks.c:711:22] proxy_user_len_345 = 0;
+  [socks.c:712:26] proxy_password_len_346 = 0;
+
+  <bb 54> :
+  # proxy_user_len_241 = PHI <[socks.c:707:24] proxy_user_len_343(52), [socks.c:711:22] proxy_user_len_345(53)>
+  # proxy_password_len_242 = PHI <[socks.c:708:28] proxy_password_len_344(52), [socks.c:712:26] proxy_password_len_346(53)>
+  [socks.c:722:9] len_347 = 0;
+  [socks.c:723:17] len.10_58 = len_347;
+  [socks.c:723:17] len_348 = len.10_58 + 1;
+  [socks.c:723:17] len.11_59 = (sizetype) len.10_58;
+  [socks.c:723:13] _60 = socksreq_282 + len.11_59;
+  [socks.c:723:21] [socks.c:723:13] *_60 = 1;
+  [socks.c:724:17] len.12_61 = len_348;
+  [socks.c:724:17] len_350 = len.12_61 + 1;
+  [socks.c:724:17] len.13_62 = (sizetype) len.12_61;
+  [socks.c:724:13] _63 = socksreq_282 + len.13_62;
+  [socks.c:724:23] _64 = (unsigned char) proxy_user_len_241;
+  [socks.c:724:21] [socks.c:724:13] *_63 = _64;
+  [socks.c:725:10] _65 = [socks.c:725:10] sx_284(D)->proxy_user;
+  [socks.c:725:7] if (_65 != 0B)
+    goto <bb 55>; [INV]
+  else
+    goto <bb 59>; [INV]
+
+  <bb 55> :
+  [socks.c:725:23] if (proxy_user_len_241 != 0)
+    goto <bb 56>; [INV]
+  else
+    goto <bb 59>; [INV]
+
+  <bb 56> :
+  [socks.c:727:9] if (proxy_user_len_241 > 255)
+    goto <bb 57>; [INV]
+  else
+    goto <bb 58>; [INV]
+
+  <bb 57> :
+  [socks.c:728:9] Curl_failf (data_281(D), [socks.c:728:21] "Excessive user name length for proxy auth");
+  [socks.c:729:16] _354 = 11;
+  [socks.c:729:16] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:729:16] goto <bb 160>; [INV]
+
+  <bb 58> :
+  [socks.c:731:32] _66 = [socks.c:731:32] sx_284(D)->proxy_user;
+  [socks.c:731:7] len.14_67 = (sizetype) len_350;
+  [socks.c:731:23] _68 = socksreq_282 + len.14_67;
+  [socks.c:731:7] memcpy (_68, _66, proxy_user_len_241);
+
+  <bb 59> :
+  [socks.c:733:9] len.15_69 = (long unsigned int) len_350;
+  [socks.c:733:9] _70 = proxy_user_len_241 + len.15_69;
+  [socks.c:733:9] len_355 = (ssize_t) _70;
+  [socks.c:734:17] len.16_71 = len_355;
+  [socks.c:734:17] len_356 = len.16_71 + 1;
+  [socks.c:734:17] len.17_72 = (sizetype) len.16_71;
+  [socks.c:734:13] _73 = socksreq_282 + len.17_72;
+  [socks.c:734:23] _74 = (unsigned char) proxy_password_len_242;
+  [socks.c:734:21] [socks.c:734:13] *_73 = _74;
+  [socks.c:735:10] _75 = [socks.c:735:10] sx_284(D)->proxy_password;
+  [socks.c:735:7] if (_75 != 0B)
+    goto <bb 60>; [INV]
+  else
+    goto <bb 64>; [INV]
+
+  <bb 60> :
+  [socks.c:735:27] if (proxy_password_len_242 != 0)
+    goto <bb 61>; [INV]
+  else
+    goto <bb 64>; [INV]
+
+  <bb 61> :
+  [socks.c:737:9] if (proxy_password_len_242 > 255)
+    goto <bb 62>; [INV]
+  else
+    goto <bb 63>; [INV]
+
+  <bb 62> :
+  [socks.c:738:9] Curl_failf (data_281(D), [socks.c:738:21] "Excessive password length for proxy auth");
+  [socks.c:739:16] _360 = 10;
+  [socks.c:739:16] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:739:16] goto <bb 160>; [INV]
+
+  <bb 63> :
+  [socks.c:741:32] _76 = [socks.c:741:32] sx_284(D)->proxy_password;
+  [socks.c:741:7] len.18_77 = (sizetype) len_356;
+  [socks.c:741:23] _78 = socksreq_282 + len.18_77;
+  [socks.c:741:7] memcpy (_78, _76, proxy_password_len_242);
+
+  <bb 64> :
+  [socks.c:743:9] len.19_79 = (long unsigned int) len_356;
+  [socks.c:743:9] _80 = proxy_password_len_242 + len.19_79;
+  [socks.c:743:9] len_361 = (ssize_t) _80;
+  [socks.c:744:5] socksstate (sx_284(D), data_281(D), 7, 744);
+  [socks.c:745:21] [socks.c:745:7] sx_284(D)->outstanding = len_361;
+  [socks.c:746:14] [socks.c:746:7] sx_284(D)->outp = socksreq_282;
+
+  <bb 65> :
+  # socks5_resolve_local_231 = PHI <[socks.c:573:8] socks5_resolve_local_283(4), socks5_resolve_local_230(64)>
+[socks.c:749:3] <L74>:
+  [socks.c:750:15] presult_366 = socks_state_send (cf_279(D), sx_284(D), data_281(D), 28, [socks.c:751:32] "SOCKS5 sub-negotiation request");
+  [socks.c:752:7] if (presult_366 != 0)
+    goto <bb 66>; [INV]
+  else
+    goto <bb 67>; [INV]
+
+  <bb 66> :
+  [socks.c:753:14] _371 = presult_366;
+  [socks.c:753:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:753:14] goto <bb 160>; [INV]
+
+  <bb 67> :
+  [socks.c:754:15] _81 = [socks.c:754:15] sx_284(D)->outstanding;
+  [socks.c:754:12] if (_81 != 0)
+    goto <bb 68>; [INV]
+  else
+    goto <bb 69>; [INV]
+
+  <bb 68> :
+  [socks.c:756:14] _370 = 0;
+  [socks.c:756:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:756:14] goto <bb 160>; [INV]
+
+  <bb 69> :
+  [socks.c:758:14] [socks.c:758:7] sx_284(D)->outp = socksreq_282;
+  [socks.c:759:21] [socks.c:759:7] sx_284(D)->outstanding = 2;
+  [socks.c:760:5] socksstate (sx_284(D), data_281(D), 8, 760);
+
+  <bb 70> :
+  # socks5_resolve_local_232 = PHI <[socks.c:573:8] socks5_resolve_local_283(4), socks5_resolve_local_231(69)>
+[socks.c:762:3] <L79>:
+  [socks.c:763:15] presult_373 = socks_state_recv (cf_279(D), sx_284(D), data_281(D), 14, [socks.c:764:32] "SOCKS5 sub-negotiation response");
+  [socks.c:765:7] if (presult_373 != 0)
+    goto <bb 71>; [INV]
+  else
+    goto <bb 72>; [INV]
+
+  <bb 71> :
+  [socks.c:766:14] _378 = presult_373;
+  [socks.c:766:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:766:14] goto <bb 160>; [INV]
+
+  <bb 72> :
+  [socks.c:767:15] _82 = [socks.c:767:15] sx_284(D)->outstanding;
+  [socks.c:767:12] if (_82 != 0)
+    goto <bb 73>; [INV]
+  else
+    goto <bb 74>; [INV]
+
+  <bb 73> :
+  [socks.c:769:14] _377 = 0;
+  [socks.c:769:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:769:14] goto <bb 160>; [INV]
+
+  <bb 74> :
+  [socks.c:772:21] _83 = socksreq_282 + 1;
+  [socks.c:772:21] _84 = [socks.c:772:21] *_83;
+  [socks.c:772:12] if (_84 != 0)
+    goto <bb 75>; [INV]
+  else
+    goto <bb 76>; [INV]
+
+  <bb 75> :
+  [socks.c:774:34] _85 = socksreq_282 + 1;
+  [socks.c:774:34] _86 = [socks.c:774:34] *_85;
+  [socks.c:773:7] _87 = (int) _86;
+  [socks.c:774:21] _88 = [socks.c:774:21] *socksreq_282;
+  [socks.c:773:7] _89 = (int) _88;
+  [socks.c:773:7] Curl_failf (data_281(D), [socks.c:773:19] "User was rejected by the SOCKS5 server (%d %d).", _89, _87);
+  [socks.c:775:14] _376 = 33;
+  [socks.c:775:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:775:14] goto <bb 160>; [INV]
+
+  <bb 76> :
+  [socks.c:779:5] socksstate (sx_284(D), data_281(D), 9, 779);
+
+  <bb 77> :
+  # socks5_resolve_local_233 = PHI <[socks.c:573:8] socks5_resolve_local_283(4), socks5_resolve_local_232(76), socks5_resolve_local_229(41)>
+[socks.c:781:1] CONNECT_REQ_INIT:
+[socks.c:782:3] <L87>:
+  [socks.c:783:7] if (socks5_resolve_local_233 != 0)
+    goto <bb 78>; [INV]
+  else
+    goto <bb 83>; [INV]
+
+  <bb 78> :
+  [socks.c:784:27] _90 = [socks.c:784:27] sx_284(D)->remote_port;
+  [socks.c:784:27] _91 = [socks.c:784:27] sx_284(D)->hostname;
+  [socks.c:784:27] rc_380 = Curl_resolv (data_281(D), _91, _90, 1, [socks.c:784:27] &dns);
+  [socks.c:787:9] if (rc_380 == -1)
+    goto <bb 79>; [INV]
+  else
+    goto <bb 80>; [INV]
+
+  <bb 79> :
+  [socks.c:788:16] _384 = 27;
+  [socks.c:788:16] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:788:16] goto <bb 160>; [INV]
+
+  <bb 80> :
+  [socks.c:790:9] if (rc_380 == 1)
+    goto <bb 81>; [INV]
+  else
+    goto <bb 82>; [INV]
+
+  <bb 81> :
+  [socks.c:791:9] socksstate (sx_284(D), data_281(D), 10, 791);
+  [socks.c:792:16] _383 = 0;
+  [socks.c:792:16] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:792:16] goto <bb 160>; [INV]
+
+  <bb 82> :
+  [socks.c:794:7] socksstate (sx_284(D), data_281(D), 11, 794);
+  [socks.c:795:7] // predicted unlikely by goto predictor.
+  [socks.c:795:7] goto <bb 93>; [INV]
+
+  <bb 83> :
+  [socks.c:797:5] // predicted unlikely by goto predictor.
+  goto <bb 113>; [INV]
+
+  <bb 84> :
+[socks.c:799:3] <L94>:
+  [socks.c:801:11] _92 = [socks.c:801:11] sx_284(D)->remote_port;
+  [socks.c:801:11] _93 = [socks.c:801:11] sx_284(D)->hostname;
+  [socks.c:801:11] _94 = Curl_fetch_addr (data_281(D), _93, _92);
+  [socks.c:801:9] dns = _94;
+  [socks.c:803:8] dns.20_95 = dns;
+  [socks.c:803:7] if (dns.20_95 != 0B)
+    goto <bb 85>; [INV]
+  else
+    goto <bb 88>; [INV]
+
+  <bb 85> :
+  [socks.c:805:29] dns.21_96 = dns;
+  [socks.c:805:29] [socks.c:805:24] [socks.c:805:18] [socks.c:805:11] data_281(D)->state.async.dns = dns.21_96;
+  [socks.c:806:30] [socks.c:806:24] [socks.c:806:18] [socks.c:806:11] data_281(D)->state.async.done = 1;
+  [socks.c:808:7] if (data_281(D) != 0B)
+    goto <bb 86>; [INV]
+  else
+    goto <bb 88>; [INV]
+
+  <bb 86> :
+  [socks.c:808:7] _97 = [socks.c:808:7] BIT_FIELD_REF <[socks.c:808:7] data_281(D)->set, 8, 17904>;
+  [socks.c:808:7] _98 = _97 & 16;
+  [socks.c:808:7] if (_98 != 0)
+    goto <bb 87>; [INV]
+  else
+    goto <bb 88>; [INV]
+
+  <bb 87> :
+  [socks.c:808:7] _99 = [socks.c:808:7] sx_284(D)->hostname;
+  [socks.c:808:7] Curl_infof (data_281(D), [socks.c:808:7] "SOCKS5: hostname \'%s\' found", _99);
+
+  <bb 88> :
+  [socks.c:811:8] dns.22_100 = dns;
+  [socks.c:811:7] if (dns.22_100 == 0B)
+    goto <bb 89>; [INV]
+  else
+    goto <bb 93>; [INV]
+
+  <bb 89> :
+  [socks.c:812:16] result_297 = Curl_resolv_check (data_281(D), [socks.c:812:16] &dns);
+  [socks.c:813:10] dns.23_101 = dns;
+  [socks.c:813:9] if (dns.23_101 == 0B)
+    goto <bb 90>; [INV]
+  else
+    goto <bb 93>; [INV]
+
+  <bb 90> :
+  [socks.c:814:11] if (result_297 != 0)
+    goto <bb 91>; [INV]
+  else
+    goto <bb 92>; [INV]
+
+  <bb 91> :
+  [socks.c:815:18] _299 = 27;
+  [socks.c:815:18] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:815:18] goto <bb 160>; [INV]
+
+  <bb 92> :
+  [socks.c:816:16] _298 = 0;
+  [socks.c:816:16] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:816:16] goto <bb 160>; [INV]
+
+  <bb 93> :
+[socks.c:820:1] CONNECT_RESOLVED:
+[socks.c:821:3] <L108>:
+  [socks.c:822:10] dest = "unknown";
+  [socks.c:823:27] hp_415 = 0B;
+  [socks.c:824:8] dns.24_102 = dns;
+  [socks.c:824:7] if (dns.24_102 != 0B)
+    goto <bb 94>; [INV]
+  else
+    goto <bb 95>; [INV]
+
+  <bb 94> :
+  [socks.c:825:15] dns.25_103 = dns;
+  [socks.c:825:10] hp_416 = [socks.c:825:15] dns.25_103->addr;
+
+  <bb 95> :
+  # hp_243 = PHI <[socks.c:823:27] hp_415(93), [socks.c:825:10] hp_416(94)>
+  [socks.c:826:7] if (hp_243 == 0B)
+    goto <bb 96>; [INV]
+  else
+    goto <bb 97>; [INV]
+
+  <bb 96> :
+  [socks.c:827:7] _104 = [socks.c:827:7] sx_284(D)->hostname;
+  [socks.c:827:7] Curl_failf (data_281(D), [socks.c:827:19] "Failed to resolve \"%s\" for SOCKS5 connect.", _104);
+  [socks.c:829:14] _446 = 27;
+  [socks.c:829:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:829:14] dest ={v} {CLOBBER};
+  goto <bb 160>; [INV]
+
+  <bb 97> :
+  [socks.c:832:5] Curl_printable_address (hp_243, [socks.c:832:32] &dest, 46);
+  [socks.c:834:9] len_418 = 0;
+  [socks.c:835:17] len.26_105 = len_418;
+  [socks.c:835:17] len_419 = len.26_105 + 1;
+  [socks.c:835:17] len.27_106 = (sizetype) len.26_105;
+  [socks.c:835:13] _107 = socksreq_282 + len.27_106;
+  [socks.c:835:21] [socks.c:835:13] *_107 = 5;
+  [socks.c:836:17] len.28_108 = len_419;
+  [socks.c:836:17] len_421 = len.28_108 + 1;
+  [socks.c:836:17] len.29_109 = (sizetype) len.28_108;
+  [socks.c:836:13] _110 = socksreq_282 + len.29_109;
+  [socks.c:836:21] [socks.c:836:13] *_110 = 1;
+  [socks.c:837:17] len.30_111 = len_421;
+  [socks.c:837:17] len_423 = len.30_111 + 1;
+  [socks.c:837:17] len.31_112 = (sizetype) len.30_111;
+  [socks.c:837:13] _113 = socksreq_282 + len.31_112;
+  [socks.c:837:21] [socks.c:837:13] *_113 = 0;
+  [socks.c:838:10] _114 = [socks.c:838:10] hp_243->ai_family;
+  [socks.c:838:7] if (_114 == 2)
+    goto <bb 98>; [INV]
+  else
+    goto <bb 104>; [INV]
+
+  <bb 98> :
+  [socks.c:841:19] len.32_115 = len_423;
+  [socks.c:841:19] len_435 = len.32_115 + 1;
+  [socks.c:841:19] len.33_116 = (sizetype) len.32_115;
+  [socks.c:841:15] _117 = socksreq_282 + len.33_116;
+  [socks.c:841:23] [socks.c:841:15] *_117 = 1;
+  [socks.c:843:16] saddr_in_437 = [socks.c:843:50] hp_243->ai_addr;
+  [socks.c:844:13] i_438 = 0;
+  [socks.c:844:7] goto <bb 100>; [INV]
+
+  <bb 99> :
+  [socks.c:845:45] _118 = [socks.c:845:45] &[socks.c:845:64] [socks.c:845:54] saddr_in_437->sin_addr.s_addr;
+  [socks.c:845:72] _119 = (sizetype) i_244;
+  [socks.c:845:72] _120 = _118 + _119;
+  [socks.c:845:21] len.34_121 = len_235;
+  [socks.c:845:21] len_440 = len.34_121 + 1;
+  [socks.c:845:21] len.35_122 = (sizetype) len.34_121;
+  [socks.c:845:17] _123 = socksreq_282 + len.35_122;
+  [socks.c:845:72] _124 = [socks.c:845:72] *_120;
+  [socks.c:845:25] [socks.c:845:17] *_123 = _124;
+  [socks.c:844:26] i_442 = i_244 + 1;
+
+  <bb 100> :
+  # len_235 = PHI <[socks.c:841:19] len_435(98), [socks.c:845:21] len_440(99)>
+  # i_244 = PHI <[socks.c:844:13] i_438(98), [socks.c:844:26] i_442(99)>
+  [socks.c:844:20] if (i_244 <= 3)
+    goto <bb 99>; [INV]
+  else
+    goto <bb 101>; [INV]
+
+  <bb 101> :
+  [socks.c:848:7] if (data_281(D) != 0B)
+    goto <bb 102>; [INV]
+  else
+    goto <bb 112>; [INV]
+
+  <bb 102> :
+  [socks.c:848:7] _125 = [socks.c:848:7] BIT_FIELD_REF <[socks.c:848:7] data_281(D)->set, 8, 17904>;
+  [socks.c:848:7] _126 = _125 & 16;
+  [socks.c:848:7] if (_126 != 0)
+    goto <bb 103>; [INV]
+  else
+    goto <bb 112>; [INV]
+
+  <bb 103> :
+  [socks.c:848:7] _127 = [socks.c:848:7] sx_284(D)->remote_port;
+  [socks.c:848:7] Curl_infof (data_281(D), [socks.c:848:7] "SOCKS5 connect to %s:%d (locally resolved)", [socks.c:848:7] &dest, _127);
+  goto <bb 112>; [INV]
+
+  <bb 104> :
+  [socks.c:852:15] _128 = [socks.c:852:15] hp_243->ai_family;
+  [socks.c:852:12] if (_128 == 10)
+    goto <bb 105>; [INV]
+  else
+    goto <bb 111>; [INV]
+
+  <bb 105> :
+  [socks.c:855:19] len.36_129 = len_423;
+  [socks.c:855:19] len_427 = len.36_129 + 1;
+  [socks.c:855:19] len.37_130 = (sizetype) len.36_129;
+  [socks.c:855:15] _131 = socksreq_282 + len.37_130;
+  [socks.c:855:23] [socks.c:855:15] *_131 = 4;
+  [socks.c:857:17] saddr_in6_429 = [socks.c:857:52] hp_243->ai_addr;
+  [socks.c:858:13] i_430 = 0;
+  [socks.c:858:7] goto <bb 107>; [INV]
+
+  <bb 106> :
+  [socks.c:860:29] _132 = [socks.c:860:29] &[socks.c:860:51] [socks.c:860:50] [socks.c:860:39] saddr_in6_429->sin6_addr.__in6_u.__u6_addr8;
+  [socks.c:860:59] _133 = (sizetype) i_245;
+  [socks.c:860:59] _134 = _132 + _133;
+  [socks.c:859:21] len.38_135 = len_236;
+  [socks.c:859:21] len_432 = len.38_135 + 1;
+  [socks.c:859:21] len.39_136 = (sizetype) len.38_135;
+  [socks.c:859:17] _137 = socksreq_282 + len.39_136;
+  [socks.c:860:59] _138 = [socks.c:860:59] *_134;
+  [socks.c:859:25] [socks.c:859:17] *_137 = _138;
+  [socks.c:858:27] i_434 = i_245 + 1;
+
+  <bb 107> :
+  # len_236 = PHI <[socks.c:855:19] len_427(105), [socks.c:859:21] len_432(106)>
+  # i_245 = PHI <[socks.c:858:13] i_430(105), [socks.c:858:27] i_434(106)>
+  [socks.c:858:20] if (i_245 <= 15)
+    goto <bb 106>; [INV]
+  else
+    goto <bb 108>; [INV]
+
+  <bb 108> :
+  [socks.c:863:7] if (data_281(D) != 0B)
+    goto <bb 109>; [INV]
+  else
+    goto <bb 112>; [INV]
+
+  <bb 109> :
+  [socks.c:863:7] _139 = [socks.c:863:7] BIT_FIELD_REF <[socks.c:863:7] data_281(D)->set, 8, 17904>;
+  [socks.c:863:7] _140 = _139 & 16;
+  [socks.c:863:7] if (_140 != 0)
+    goto <bb 110>; [INV]
+  else
+    goto <bb 112>; [INV]
+
+  <bb 110> :
+  [socks.c:863:7] _141 = [socks.c:863:7] sx_284(D)->remote_port;
+  [socks.c:863:7] Curl_infof (data_281(D), [socks.c:863:7] "SOCKS5 connect to [%s]:%d (locally resolved)", [socks.c:863:7] &dest, _141);
+  goto <bb 112>; [INV]
+
+  <bb 111> :
+  [socks.c:868:10] hp_425 = 0B;
+  [socks.c:869:7] Curl_failf (data_281(D), [socks.c:869:19] "SOCKS5 connection to %s not supported", [socks.c:869:60] &dest);
+
+  <bb 112> :
+  # len_237 = PHI <len_235(102), len_236(109), [socks.c:837:17] len_423(111), len_235(101), len_235(103), len_236(108), len_236(110)>
+  [socks.c:872:5] dns.40_142 = dns;
+  [socks.c:872:5] Curl_resolv_unlock (data_281(D), dns.40_142);
+  [socks.c:873:5] // predicted unlikely by goto predictor.
+  [socks.c:873:5] dest ={v} {CLOBBER};
+  goto <bb 125>; [INV]
+
+  <bb 113> :
+  # socks5_resolve_local_234 = PHI <[socks.c:573:8] socks5_resolve_local_283(4), socks5_resolve_local_233(83)>
+[socks.c:876:3] <L136>:
+  [socks.c:878:9] len_385 = 0;
+  [socks.c:879:17] len.41_143 = len_385;
+  [socks.c:879:17] len_386 = len.41_143 + 1;
+  [socks.c:879:17] len.42_144 = (sizetype) len.41_143;
+  [socks.c:879:13] _145 = socksreq_282 + len.42_144;
+  [socks.c:879:21] [socks.c:879:13] *_145 = 5;
+  [socks.c:880:17] len.43_146 = len_386;
+  [socks.c:880:17] len_388 = len.43_146 + 1;
+  [socks.c:880:17] len.44_147 = (sizetype) len.43_146;
+  [socks.c:880:13] _148 = socksreq_282 + len.44_147;
+  [socks.c:880:21] [socks.c:880:13] *_148 = 1;
+  [socks.c:881:17] len.45_149 = len_388;
+  [socks.c:881:17] len_390 = len.45_149 + 1;
+  [socks.c:881:17] len.46_150 = (sizetype) len.45_149;
+  [socks.c:881:13] _151 = socksreq_282 + len.46_150;
+  [socks.c:881:21] [socks.c:881:13] *_151 = 0;
+  [socks.c:883:8] _152 = ~socks5_resolve_local_234;
+  [socks.c:883:7] if (_152 != 0)
+    goto <bb 114>; [INV]
+  else
+    goto <bb 125>; [INV]
+
+  <bb 114> :
+  [socks.c:889:10] _153 = [socks.c:889:10] BIT_FIELD_REF <[socks.c:889:14] conn_280->bits, 8, 8>;
+  [socks.c:889:10] _154 = _153 & 8;
+  [socks.c:889:9] if (_154 != 0)
+    goto <bb 115>; [INV]
+  else
+    goto <bb 118>; [INV]
+
+  <bb 115> :
+  [socks.c:891:17] _155 = [socks.c:891:17] sx_284(D)->hostname;
+  [socks.c:891:17] _156 = inet_pton (10, _155, [socks.c:891:17] &ip6);
+  [socks.c:891:11] if (_156 != 1)
+    goto <bb 116>; [INV]
+  else
+    goto <bb 117>; [INV]
+
+  <bb 116> :
+  [socks.c:892:18] _409 = 1;
+  [socks.c:892:18] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:892:18] ip6 ={v} {CLOBBER};
+  ip4 ={v} {CLOBBER};
+  goto <bb 160>; [INV]
+
+  <bb 117> :
+  [socks.c:893:21] len.47_157 = len_390;
+  [socks.c:893:21] len_404 = len.47_157 + 1;
+  [socks.c:893:21] len.48_158 = (sizetype) len.47_157;
+  [socks.c:893:17] _159 = socksreq_282 + len.48_158;
+  [socks.c:893:25] [socks.c:893:17] *_159 = 4;
+  [socks.c:894:9] len.49_160 = (sizetype) len_404;
+  [socks.c:894:16] _161 = socksreq_282 + len.49_160;
+  [socks.c:894:9] memcpy (_161, [socks.c:894:32] &ip6, 16);
+  [socks.c:895:13] len.50_162 = (long unsigned int) len_404;
+  [socks.c:895:13] _163 = len.50_162 + 16;
+  [socks.c:895:13] len_407 = (ssize_t) _163;
+  ip6 ={v} {CLOBBER};
+  [0:0] goto <bb 121>; [INV]
+
+  <bb 118> :
+  [socks.c:899:15] _164 = [socks.c:899:15] sx_284(D)->hostname;
+  [socks.c:899:15] _165 = inet_pton (2, _164, [socks.c:899:15] &ip4);
+  [socks.c:899:9] if (_165 == 1)
+    goto <bb 119>; [INV]
+  else
+    goto <bb 120>; [INV]
+
+  <bb 119> :
+  [socks.c:900:21] len.51_166 = len_390;
+  [socks.c:900:21] len_399 = len.51_166 + 1;
+  [socks.c:900:21] len.52_167 = (sizetype) len.51_166;
+  [socks.c:900:17] _168 = socksreq_282 + len.52_167;
+  [socks.c:900:25] [socks.c:900:17] *_168 = 1;
+  [socks.c:901:9] len.53_169 = (sizetype) len_399;
+  [socks.c:901:16] _170 = socksreq_282 + len.53_169;
+  [socks.c:901:9] memcpy (_170, [socks.c:901:32] &ip4, 4);
+  [socks.c:902:13] len.54_171 = (long unsigned int) len_399;
+  [socks.c:902:13] _172 = len.54_171 + 4;
+  [socks.c:902:13] len_402 = (ssize_t) _172;
+  [0:0] goto <bb 121>; [INV]
+
+  <bb 120> :
+  [socks.c:905:21] len.55_173 = len_390;
+  [socks.c:905:21] len_393 = len.55_173 + 1;
+  [socks.c:905:21] len.56_174 = (sizetype) len.55_173;
+  [socks.c:905:17] _175 = socksreq_282 + len.56_174;
+  [socks.c:905:25] [socks.c:905:17] *_175 = 3;
+  [socks.c:906:21] len.57_176 = len_393;
+  [socks.c:906:21] len_395 = len.57_176 + 1;
+  [socks.c:906:21] len.58_177 = (sizetype) len.57_176;
+  [socks.c:906:17] _178 = socksreq_282 + len.58_177;
+  [socks.c:906:27] _179 = (unsigned char) hostname_len_285;
+  [socks.c:906:25] [socks.c:906:17] *_178 = _179;
+  [socks.c:907:34] _180 = [socks.c:907:34] sx_284(D)->hostname;
+  [socks.c:907:9] len.59_181 = (sizetype) len_395;
+  [socks.c:907:16] _182 = socksreq_282 + len.59_181;
+  [socks.c:907:9] memcpy (_182, _180, hostname_len_285);
+  [socks.c:908:13] len.60_183 = (long unsigned int) len_395;
+  [socks.c:908:13] _184 = hostname_len_285 + len.60_183;
+  [socks.c:908:13] len_398 = (ssize_t) _184;
+
+  <bb 121> :
+  # len_238 = PHI <[socks.c:895:13] len_407(117), [socks.c:902:13] len_402(119), [socks.c:908:13] len_398(120)>
+  [socks.c:910:7] if (data_281(D) != 0B)
+    goto <bb 122>; [INV]
+  else
+    goto <bb 124>; [INV]
+
+  <bb 122> :
+  [socks.c:910:7] _185 = [socks.c:910:7] BIT_FIELD_REF <[socks.c:910:7] data_281(D)->set, 8, 17904>;
+  [socks.c:910:7] _186 = _185 & 16;
+  [socks.c:910:7] if (_186 != 0)
+    goto <bb 123>; [INV]
+  else
+    goto <bb 124>; [INV]
+
+  <bb 123> :
+  [socks.c:910:7] _187 = [socks.c:910:7] sx_284(D)->remote_port;
+  [socks.c:910:7] _188 = [socks.c:910:7] sx_284(D)->hostname;
+  [socks.c:910:7] Curl_infof (data_281(D), [socks.c:910:7] "SOCKS5 connect to %s:%d (remotely resolved)", _188, _187);
+
+  <bb 124> :
+  ip4 ={v} {CLOBBER};
+
+  <bb 125> :
+  # len_239 = PHI <[socks.c:576:11] len_286(4), [socks.c:881:17] len_390(113), len_237(112), len_238(124)>
+[socks.c:915:1] CONNECT_REQ_SEND:
+[socks.c:916:3] <L156>:
+  [socks.c:918:42] _189 = [socks.c:918:42] sx_284(D)->remote_port;
+  [socks.c:918:56] _190 = _189 >> 8;
+  [socks.c:918:17] len.61_191 = len_239;
+  [socks.c:918:17] len_448 = len.61_191 + 1;
+  [socks.c:918:17] len.62_192 = (sizetype) len.61_191;
+  [socks.c:918:13] _193 = socksreq_282 + len.62_192;
+  [socks.c:918:23] _194 = (unsigned char) _190;
+  [socks.c:918:21] [socks.c:918:13] *_193 = _194;
+  [socks.c:920:41] _195 = [socks.c:920:41] sx_284(D)->remote_port;
+  [socks.c:920:17] len.63_196 = len_448;
+  [socks.c:920:17] len_450 = len.63_196 + 1;
+  [socks.c:920:17] len.64_197 = (sizetype) len.63_196;
+  [socks.c:920:13] _198 = socksreq_282 + len.64_197;
+  [socks.c:920:23] _199 = (unsigned char) _195;
+  [socks.c:920:21] [socks.c:920:13] *_198 = _199;
+  [socks.c:928:14] [socks.c:928:7] sx_284(D)->outp = socksreq_282;
+  [socks.c:929:21] [socks.c:929:7] sx_284(D)->outstanding = len_450;
+  [socks.c:930:5] socksstate (sx_284(D), data_281(D), 14, 930);
+
+  <bb 126> :
+[socks.c:932:3] <L157>:
+  [socks.c:933:15] presult_456 = socks_state_send (cf_279(D), sx_284(D), data_281(D), 30, [socks.c:934:32] "SOCKS5 connect request");
+  [socks.c:935:7] if (presult_456 != 0)
+    goto <bb 127>; [INV]
+  else
+    goto <bb 128>; [INV]
+
+  <bb 127> :
+  [socks.c:936:14] _461 = presult_456;
+  [socks.c:936:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:936:14] goto <bb 160>; [INV]
+
+  <bb 128> :
+  [socks.c:937:15] _200 = [socks.c:937:15] sx_284(D)->outstanding;
+  [socks.c:937:12] if (_200 != 0)
+    goto <bb 129>; [INV]
+  else
+    goto <bb 130>; [INV]
+
+  <bb 129> :
+  [socks.c:939:14] _460 = 0;
+  [socks.c:939:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:939:14] goto <bb 160>; [INV]
+
+  <bb 130> :
+  [socks.c:947:21] [socks.c:947:7] sx_284(D)->outstanding = 10;
+  [socks.c:948:14] [socks.c:948:7] sx_284(D)->outp = socksreq_282;
+  [socks.c:949:5] socksstate (sx_284(D), data_281(D), 15, 949);
+
+  <bb 131> :
+[socks.c:951:3] <L162>:
+  [socks.c:952:15] presult_463 = socks_state_recv (cf_279(D), sx_284(D), data_281(D), 16, [socks.c:953:32] "SOCKS5 connect request ack");
+  [socks.c:954:7] if (presult_463 != 0)
+    goto <bb 132>; [INV]
+  else
+    goto <bb 133>; [INV]
+
+  <bb 132> :
+  [socks.c:955:14] _482 = presult_463;
+  [socks.c:955:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:955:14] goto <bb 160>; [INV]
+
+  <bb 133> :
+  [socks.c:956:15] _201 = [socks.c:956:15] sx_284(D)->outstanding;
+  [socks.c:956:12] if (_201 != 0)
+    goto <bb 134>; [INV]
+  else
+    goto <bb 135>; [INV]
+
+  <bb 134> :
+  [socks.c:958:14] _481 = 0;
+  [socks.c:958:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:958:14] goto <bb 160>; [INV]
+
+  <bb 135> :
+  [socks.c:960:21] _202 = [socks.c:960:21] *socksreq_282;
+  [socks.c:960:12] if (_202 != 5)
+    goto <bb 136>; [INV]
+  else
+    goto <bb 137>; [INV]
+
+  <bb 136> :
+  [socks.c:961:7] Curl_failf (data_281(D), [socks.c:962:13] "SOCKS5 reply has wrong version, version should be 5.");
+  [socks.c:963:14] _480 = 2;
+  [socks.c:963:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:963:14] goto <bb 160>; [INV]
+
+  <bb 137> :
+  [socks.c:965:21] _203 = socksreq_282 + 1;
+  [socks.c:965:21] _204 = [socks.c:965:21] *_203;
+  [socks.c:965:12] if (_204 != 0)
+    goto <bb 138>; [INV]
+  else
+    goto <bb 141>; [INV]
+
+  <bb 138> :
+  [socks.c:966:21] rc_474 = 25;
+  [socks.c:967:26] _205 = socksreq_282 + 1;
+  [socks.c:967:26] _206 = [socks.c:967:26] *_205;
+  [socks.c:967:11] code_475 = (int) _206;
+  [socks.c:969:50] _207 = socksreq_282 + 1;
+  [socks.c:969:27] _208 = [socks.c:969:27] *_207;
+  [socks.c:968:7] _209 = (int) _208;
+  [socks.c:968:7] _210 = [socks.c:968:7] sx_284(D)->hostname;
+  [socks.c:968:7] Curl_failf (data_281(D), [socks.c:968:19] "Can\'t complete SOCKS5 connection to %s. (%d)", _210, _209);
+  [socks.c:970:9] if (code_475 <= 8)
+    goto <bb 139>; [INV]
+  else
+    goto <bb 140>; [INV]
+
+  <bb 139> :
+  [socks.c:983:12] rc_477 = [socks.c:983:20] lookup[code_475];
+
+  <bb 140> :
+  # rc_246 = PHI <[socks.c:966:21] rc_474(138), [socks.c:983:12] rc_477(139)>
+  [socks.c:985:14] _478 = rc_246;
+  [socks.c:985:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:985:14] goto <bb 160>; [INV]
+
+  <bb 141> :
+  [socks.c:1005:16] _211 = socksreq_282 + 3;
+  [socks.c:1005:16] _212 = [socks.c:1005:16] *_211;
+  [socks.c:1005:7] if (_212 == 3)
+    goto <bb 142>; [INV]
+  else
+    goto <bb 143>; [INV]
+
+  <bb 142> :
+  [socks.c:1007:35] _213 = socksreq_282 + 4;
+  [socks.c:1007:35] _214 = [socks.c:1007:35] *_213;
+  [socks.c:1007:11] addrlen_468 = (int) _214;
+  [socks.c:1008:25] _215 = addrlen_468 + 7;
+  [socks.c:1008:11] len_469 = (ssize_t) _215;
+  [0:0] goto <bb 148>; [INV]
+
+  <bb 143> :
+  [socks.c:1010:21] _216 = socksreq_282 + 3;
+  [socks.c:1010:21] _217 = [socks.c:1010:21] *_216;
+  [socks.c:1010:12] if (_217 == 4)
+    goto <bb 144>; [INV]
+  else
+    goto <bb 145>; [INV]
+
+  <bb 144> :
+  [socks.c:1012:11] len_467 = 22;
+  [0:0] goto <bb 148>; [INV]
+
+  <bb 145> :
+  [socks.c:1014:21] _218 = socksreq_282 + 3;
+  [socks.c:1014:21] _219 = [socks.c:1014:21] *_218;
+  [socks.c:1014:12] if (_219 == 1)
+    goto <bb 146>; [INV]
+  else
+    goto <bb 147>; [INV]
+
+  <bb 146> :
+  [socks.c:1015:11] len_466 = 10;
+  [0:0] goto <bb 148>; [INV]
+
+  <bb 147> :
+  [socks.c:1018:7] Curl_failf (data_281(D), [socks.c:1018:19] "SOCKS5 reply has wrong address type.");
+  [socks.c:1019:14] _465 = 1;
+  [socks.c:1019:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:1019:14] goto <bb 160>; [INV]
+
+  <bb 148> :
+  # len_240 = PHI <[socks.c:1008:11] len_469(142), [socks.c:1012:11] len_467(144), [socks.c:1015:11] len_466(146)>
+  [socks.c:1027:9] if (len_240 > 10)
+    goto <bb 149>; [INV]
+  else
+    goto <bb 150>; [INV]
+
+  <bb 149> :
+  [socks.c:1028:31] _220 = len_240 + -10;
+  [socks.c:1028:25] [socks.c:1028:11] sx_284(D)->outstanding = _220;
+  [socks.c:1029:20] _221 = socksreq_282 + 10;
+  [socks.c:1029:18] [socks.c:1029:11] sx_284(D)->outp = _221;
+  [socks.c:1030:9] socksstate (sx_284(D), data_281(D), 16, 1030);
+  [0:0] goto <bb 151>; [INV]
+
+  <bb 150> :
+  [socks.c:1033:9] socksstate (sx_284(D), data_281(D), 17, 1033);
+  [socks.c:1034:9] goto <bb 156>; [INV]
+
+  <bb 151> :
+<L184>:
+  [socks.c:1041:15] presult_484 = socks_state_recv (cf_279(D), sx_284(D), data_281(D), 13, [socks.c:1042:32] "SOCKS5 connect request address");
+  [socks.c:1043:7] if (presult_484 != 0)
+    goto <bb 152>; [INV]
+  else
+    goto <bb 153>; [INV]
+
+  <bb 152> :
+  [socks.c:1044:14] _487 = presult_484;
+  [socks.c:1044:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:1044:14] goto <bb 160>; [INV]
+
+  <bb 153> :
+  [socks.c:1045:15] _222 = [socks.c:1045:15] sx_284(D)->outstanding;
+  [socks.c:1045:12] if (_222 != 0)
+    goto <bb 154>; [INV]
+  else
+    goto <bb 155>; [INV]
+
+  <bb 154> :
+  [socks.c:1047:14] _486 = 0;
+  [socks.c:1047:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:1047:14] goto <bb 160>; [INV]
+
+  <bb 155> :
+  [socks.c:1049:5] socksstate (sx_284(D), data_281(D), 17, 1049);
+
+  <bb 156> :
+<L197>:
+  [socks.c:1051:3] if (data_281(D) != 0B)
+    goto <bb 157>; [INV]
+  else
+    goto <bb 159>; [INV]
+
+  <bb 157> :
+  [socks.c:1051:3] _223 = [socks.c:1051:3] BIT_FIELD_REF <[socks.c:1051:3] data_281(D)->set, 8, 17904>;
+  [socks.c:1051:3] _224 = _223 & 16;
+  [socks.c:1051:3] if (_224 != 0)
+    goto <bb 158>; [INV]
+  else
+    goto <bb 159>; [INV]
+
+  <bb 158> :
+  [socks.c:1051:3] Curl_infof (data_281(D), [socks.c:1051:3] "SOCKS5 request granted.");
+
+  <bb 159> :
+  [socks.c:1053:10] _489 = 0;
+
+  <bb 160> :
+  # _247 = PHI <[socks.c:623:14] _326(25), [socks.c:626:14] _325(27), [socks.c:634:14] _303(30), [socks.c:637:14] _302(32), [socks.c:649:14] _342(35), [socks.c:652:14] _341(37), [socks.c:656:14] _340(39), [socks.c:683:16] _332(46), [socks.c:687:16] _336(48), [socks.c:692:12] _334(49), [socks.c:729:16] _354(57), [socks.c:739:16] _360(62), [socks.c:753:14] _371(66), [socks.c:756:14] _370(68), [socks.c:766:14] _378(71), [socks.c:769:14] _377(73), [socks.c:775:14] _376(75), [socks.c:788:16] _384(79), [socks.c:792:16] _383(81), [socks.c:815:18] _299(91), [socks.c:816:16] _298(92), [socks.c:829:14] _446(96), [socks.c:892:18] _409(116), [socks.c:936:14] _461(127), [socks.c:939:14] _460(129), [socks.c:955:14] _482(132), [socks.c:958:14] _481(134), [socks.c:963:14] _480(136), [socks.c:985:14] _478(140), [socks.c:1019:14] _465(147), [socks.c:1044:14] _487(152), [socks.c:1047:14] _486(154), [socks.c:1053:10] _489(159)>
+  dns ={v} {CLOBBER};
+  return _247;
+
+}
+
+
+
+;; Function do_SOCKS4 (do_SOCKS4, funcdef_no=84, decl_uid=10238, cgraph_uid=85, symbol_order=84)
+
+CURLproxycode do_SOCKS4 (struct Curl_cfilter * cf, struct socks_state * sx, struct Curl_easy * data)
+{
+  size_t hostnamelen;
+  size_t packetsize;
+  size_t plen;
+  char buf[64];
+  struct sockaddr_in * saddr_in;
+  struct Curl_addrinfo * hp;
+  resolve_t rc;
+  struct Curl_dns_entry * dns;
+  CURLproxycode presult;
+  CURLcode result;
+  unsigned char * socksreq;
+  const _Bool protocol4a;
+  struct connectdata * conn;
+  unsigned char _1;
+  connect_t _2;
+  unsigned char _3;
+  unsigned char _4;
+  unsigned char _5;
+  unsigned char _6;
+  int _7;
+  const char * _8;
+  unsigned char _9;
+  unsigned char _10;
+  int _11;
+  const char * _12;
+  unsigned char * _13;
+  int _14;
+  int _15;
+  unsigned char * _16;
+  unsigned char _17;
+  int _18;
+  unsigned char * _19;
+  unsigned char _20;
+  _Bool _21;
+  int _22;
+  const char * _23;
+  unsigned char _24;
+  unsigned char _25;
+  const char * _26;
+  int _27;
+  const char * _28;
+  struct Curl_dns_entry * _29;
+  struct Curl_dns_entry * dns.74_30;
+  struct Curl_dns_entry * dns.75_31;
+  unsigned char _32;
+  unsigned char _33;
+  const char * _34;
+  struct Curl_dns_entry * dns.76_35;
+  struct Curl_dns_entry * dns.77_36;
+  struct Curl_dns_entry * dns.78_37;
+  int _38;
+  in_addr_t * _39;
+  unsigned char * _40;
+  unsigned char _41;
+  in_addr_t * _42;
+  unsigned char * _43;
+  unsigned char * _44;
+  unsigned char _45;
+  in_addr_t * _46;
+  unsigned char * _47;
+  unsigned char * _48;
+  unsigned char _49;
+  in_addr_t * _50;
+  unsigned char * _51;
+  unsigned char * _52;
+  unsigned char _53;
+  unsigned char _54;
+  unsigned char _55;
+  struct Curl_dns_entry * dns.79_56;
+  const char * _57;
+  const char * _58;
+  unsigned char * _59;
+  const char * _60;
+  const char * _61;
+  unsigned int _62;
+  long unsigned int _63;
+  long unsigned int _64;
+  long unsigned int _65;
+  const char * _66;
+  unsigned char * _67;
+  const char * _68;
+  long unsigned int _69;
+  unsigned char * _70;
+  unsigned char * _71;
+  unsigned char * _72;
+  unsigned char * _73;
+  const char * _74;
+  long unsigned int _75;
+  const char * _76;
+  char * _77;
+  long int packetsize.80_78;
+  long int _79;
+  long int _80;
+  unsigned char _81;
+  unsigned char * _82;
+  unsigned char _83;
+  int _84;
+  unsigned char _85;
+  unsigned char _86;
+  unsigned char * _87;
+  unsigned char _88;
+  int _89;
+  unsigned char * _90;
+  unsigned char _91;
+  int _92;
+  int _93;
+  unsigned char * _94;
+  unsigned char _95;
+  int _96;
+  int _97;
+  unsigned char * _98;
+  unsigned char _99;
+  int _100;
+  unsigned char * _101;
+  unsigned char _102;
+  int _103;
+  unsigned char * _104;
+  unsigned char _105;
+  int _106;
+  unsigned char * _107;
+  unsigned char _108;
+  int _109;
+  unsigned char * _110;
+  unsigned char _111;
+  int _112;
+  unsigned char * _113;
+  unsigned char _114;
+  int _115;
+  int _116;
+  unsigned char * _117;
+  unsigned char _118;
+  int _119;
+  int _120;
+  unsigned char * _121;
+  unsigned char _122;
+  int _123;
+  unsigned char * _124;
+  unsigned char _125;
+  int _126;
+  unsigned char * _127;
+  unsigned char _128;
+  int _129;
+  unsigned char * _130;
+  unsigned char _131;
+  int _132;
+  unsigned char * _133;
+  unsigned char _134;
+  int _135;
+  unsigned char * _136;
+  unsigned char _137;
+  int _138;
+  int _139;
+  unsigned char * _140;
+  unsigned char _141;
+  int _142;
+  int _143;
+  unsigned char * _144;
+  unsigned char _145;
+  int _146;
+  unsigned char * _147;
+  unsigned char _148;
+  int _149;
+  unsigned char * _150;
+  unsigned char _151;
+  int _152;
+  unsigned char * _153;
+  unsigned char _154;
+  int _155;
+  unsigned char * _156;
+  unsigned char _157;
+  int _158;
+  unsigned char * _159;
+  unsigned char _160;
+  int _161;
+  int _162;
+  unsigned char * _163;
+  unsigned char _164;
+  int _165;
+  int _166;
+  unsigned char * _167;
+  unsigned char _168;
+  int _169;
+  unsigned char * _170;
+  unsigned char _171;
+  int _172;
+  unsigned char * _173;
+  unsigned char _174;
+  int _175;
+  unsigned char * _176;
+  unsigned char _177;
+  int _178;
+  char * iftmp.73_182;
+  CURLproxycode _183;
+  char * iftmp.81_184;
+  CURLproxycode _212;
+  CURLproxycode _213;
+  char * iftmp.73_219;
+  char * iftmp.73_220;
+  CURLproxycode _233;
+  CURLproxycode _234;
+  CURLproxycode _249;
+  CURLproxycode _254;
+  CURLproxycode _263;
+  CURLproxycode _274;
+  CURLproxycode _275;
+  CURLproxycode _279;
+  CURLproxycode _280;
+  CURLproxycode _282;
+  CURLproxycode _284;
+  CURLproxycode _286;
+  char * iftmp.81_287;
+  char * iftmp.81_288;
+  CURLproxycode _290;
+  CURLproxycode _292;
+  CURLproxycode _294;
+
+  <bb 2> :
+  [socks.c:278:23] conn_202 = [socks.c:278:32] cf_201(D)->conn;
+  [socks.c:280:23] _1 = [socks.c:280:23] [socks.c:280:10] conn_202->socks_proxy.proxytype;
+  [socks.c:279:14] protocol4a_203 = _1 == 6;
+  [socks.c:281:18] socksreq_205 = [socks.c:281:57] [socks.c:281:50] data_204(D)->state.buffer;
+  [socks.c:284:26] dns = 0B;
+  [socks.c:289:12] _2 = [socks.c:289:12] sx_207(D)->state;
+  [socks.c:289:3] switch (_2) <[socks.c:470:3] default: <L97> [INV], [socks.c:290:3] case 1: <L3> [INV], [socks.c:458:3] case 4: <L73> [INV], [socks.c:398:3] case 9: <L58> [INV], [socks.c:336:3] case 10: <L27> [INV], [socks.c:358:3] case 11: <L40> [INV], [socks.c:442:3] case 14: <L68> [INV]>
+
+  <bb 3> :
+[socks.c:290:3] <L3>:
+  [socks.c:292:22] [socks.c:292:9] conn_202->ip_version = 1;
+  [socks.c:293:8] _3 = [socks.c:293:8] BIT_FIELD_REF <[socks.c:293:12] conn_202->bits, 8, 0>;
+  [socks.c:293:8] _4 = _3 & 1;
+  [socks.c:293:7] if (_4 != 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 4> :
+  [socks.c:294:7] if (data_204(D) != 0B)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 5> :
+  [socks.c:294:7] _5 = [socks.c:294:7] BIT_FIELD_REF <[socks.c:294:7] data_204(D)->set, 8, 17904>;
+  [socks.c:294:7] _6 = _5 & 16;
+  [socks.c:294:7] if (_6 != 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 6> :
+  [socks.c:294:7] _7 = [socks.c:294:7] sx_207(D)->remote_port;
+  [socks.c:294:7] _8 = [socks.c:294:7] sx_207(D)->hostname;
+  [socks.c:294:7] if (protocol4a_203 != 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  [socks.c:294:7] iftmp.73_220 = [socks.c:294:7] "a";
+  [0:0] goto <bb 9>; [INV]
+
+  <bb 8> :
+  [socks.c:294:7] iftmp.73_219 = [socks.c:294:7] "";
+
+  <bb 9> :
+  # iftmp.73_182 = PHI <[socks.c:294:7] iftmp.73_220(7), [socks.c:294:7] iftmp.73_219(8)>
+  [socks.c:294:7] Curl_infof (data_204(D), [socks.c:294:7] "SOCKS4%s: connecting to HTTP proxy %s port %d", iftmp.73_182, _8, _7);
+
+  <bb 10> :
+  [socks.c:297:5] if (data_204(D) != 0B)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 11> :
+  [socks.c:297:5] _9 = [socks.c:297:5] BIT_FIELD_REF <[socks.c:297:5] data_204(D)->set, 8, 17904>;
+  [socks.c:297:5] _10 = _9 & 16;
+  [socks.c:297:5] if (_10 != 0)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 12> :
+  [socks.c:297:5] _11 = [socks.c:297:5] sx_207(D)->remote_port;
+  [socks.c:297:5] _12 = [socks.c:297:5] sx_207(D)->hostname;
+  [socks.c:297:5] Curl_infof (data_204(D), [socks.c:297:5] "SOCKS4 communication to %s:%d", _12, _11);
+
+  <bb 13> :
+  [socks.c:311:17] [socks.c:311:13] *socksreq_205 = 4;
+  [socks.c:312:13] _13 = socksreq_205 + 1;
+  [socks.c:312:17] [socks.c:312:13] *_13 = 1;
+  [socks.c:313:38] _14 = [socks.c:313:38] sx_207(D)->remote_port;
+  [socks.c:313:52] _15 = _14 >> 8;
+  [socks.c:313:13] _16 = socksreq_205 + 2;
+  [socks.c:313:19] _17 = (unsigned char) _15;
+  [socks.c:313:17] [socks.c:313:13] *_16 = _17;
+  [socks.c:314:37] _18 = [socks.c:314:37] sx_207(D)->remote_port;
+  [socks.c:314:13] _19 = socksreq_205 + 3;
+  [socks.c:314:19] _20 = (unsigned char) _18;
+  [socks.c:314:17] [socks.c:314:13] *_19 = _20;
+  [socks.c:317:8] _21 = ~protocol4a_203;
+  [socks.c:317:7] if (_21 != 0)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 22>; [INV]
+
+  <bb 14> :
+  [socks.c:319:9] _22 = [socks.c:319:9] sx_207(D)->remote_port;
+  [socks.c:319:9] _23 = [socks.c:319:9] sx_207(D)->hostname;
+  [socks.c:319:9] rc_229 = Curl_resolv (data_204(D), _23, _22, 1, [socks.c:319:9] &dns);
+  [socks.c:321:9] if (rc_229 == -1)
+    goto <bb 15>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 15> :
+  [socks.c:322:16] _234 = 27;
+  [socks.c:322:16] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:322:16] goto <bb 79>; [INV]
+
+  <bb 16> :
+  [socks.c:323:14] if (rc_229 == 1)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 21>; [INV]
+
+  <bb 17> :
+  [socks.c:324:9] socksstate (sx_207(D), data_204(D), 10, 324);
+  [socks.c:325:9] if (data_204(D) != 0B)
+    goto <bb 18>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 18> :
+  [socks.c:325:9] _24 = [socks.c:325:9] BIT_FIELD_REF <[socks.c:325:9] data_204(D)->set, 8, 17904>;
+  [socks.c:325:9] _25 = _24 & 16;
+  [socks.c:325:9] if (_25 != 0)
+    goto <bb 19>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 19> :
+  [socks.c:325:9] _26 = [socks.c:325:9] sx_207(D)->hostname;
+  [socks.c:325:9] Curl_infof (data_204(D), [socks.c:325:9] "SOCKS4 non-blocking resolve of %s", _26);
+
+  <bb 20> :
+  [socks.c:326:16] _233 = 0;
+  [socks.c:326:16] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:326:16] goto <bb 79>; [INV]
+
+  <bb 21> :
+  [socks.c:328:7] socksstate (sx_207(D), data_204(D), 11, 328);
+  [socks.c:329:7] // predicted unlikely by goto predictor.
+  [socks.c:329:7] goto <bb 32>; [INV]
+
+  <bb 22> :
+  [socks.c:333:5] socksstate (sx_207(D), data_204(D), 9, 333);
+  [socks.c:334:5] // predicted unlikely by goto predictor.
+  [socks.c:334:5] goto <bb 46>; [INV]
+
+  <bb 23> :
+[socks.c:336:3] <L27>:
+  [socks.c:338:11] _27 = [socks.c:338:11] conn_202->port;
+  [socks.c:338:11] _28 = [socks.c:338:11] sx_207(D)->hostname;
+  [socks.c:338:11] _29 = Curl_fetch_addr (data_204(D), _28, _27);
+  [socks.c:338:9] dns = _29;
+  [socks.c:340:8] dns.74_30 = dns;
+  [socks.c:340:7] if (dns.74_30 != 0B)
+    goto <bb 24>; [INV]
+  else
+    goto <bb 28>; [INV]
+
+  <bb 24> :
+  [socks.c:342:29] dns.75_31 = dns;
+  [socks.c:342:29] [socks.c:342:24] [socks.c:342:18] [socks.c:342:11] data_204(D)->state.async.dns = dns.75_31;
+  [socks.c:343:30] [socks.c:343:24] [socks.c:343:18] [socks.c:343:11] data_204(D)->state.async.done = 1;
+  [socks.c:345:7] if (data_204(D) != 0B)
+    goto <bb 25>; [INV]
+  else
+    goto <bb 27>; [INV]
+
+  <bb 25> :
+  [socks.c:345:7] _32 = [socks.c:345:7] BIT_FIELD_REF <[socks.c:345:7] data_204(D)->set, 8, 17904>;
+  [socks.c:345:7] _33 = _32 & 16;
+  [socks.c:345:7] if (_33 != 0)
+    goto <bb 26>; [INV]
+  else
+    goto <bb 27>; [INV]
+
+  <bb 26> :
+  [socks.c:345:7] _34 = [socks.c:345:7] sx_207(D)->hostname;
+  [socks.c:345:7] Curl_infof (data_204(D), [socks.c:345:7] "Hostname \'%s\' was found", _34);
+
+  <bb 27> :
+  [socks.c:346:7] socksstate (sx_207(D), data_204(D), 11, 346);
+  [0:0] goto <bb 32>; [INV]
+
+  <bb 28> :
+  [socks.c:349:16] result_211 = Curl_resolv_check (data_204(D), [socks.c:349:16] &dns);
+  [socks.c:350:10] dns.76_35 = dns;
+  [socks.c:350:9] if (dns.76_35 == 0B)
+    goto <bb 29>; [INV]
+  else
+    goto <bb 32>; [INV]
+
+  <bb 29> :
+  [socks.c:351:11] if (result_211 != 0)
+    goto <bb 30>; [INV]
+  else
+    goto <bb 31>; [INV]
+
+  <bb 30> :
+  [socks.c:352:18] _213 = 27;
+  [socks.c:352:18] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:352:18] goto <bb 79>; [INV]
+
+  <bb 31> :
+  [socks.c:353:16] _212 = 0;
+  [socks.c:353:16] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:353:16] goto <bb 79>; [INV]
+
+  <bb 32> :
+[socks.c:357:1] CONNECT_RESOLVED:
+[socks.c:358:3] <L40>:
+  [socks.c:359:27] hp_235 = 0B;
+  [socks.c:364:8] dns.77_36 = dns;
+  [socks.c:364:7] if (dns.77_36 != 0B)
+    goto <bb 33>; [INV]
+  else
+    goto <bb 43>; [INV]
+
+  <bb 33> :
+  [socks.c:365:15] dns.78_37 = dns;
+  [socks.c:365:10] hp_237 = [socks.c:365:15] dns.78_37->addr;
+  [socks.c:368:12] goto <bb 35>; [INV]
+
+  <bb 34> :
+  [socks.c:369:12] hp_238 = [socks.c:369:16] hp_179->ai_next;
+
+  <bb 35> :
+  # hp_179 = PHI <[socks.c:365:10] hp_237(33), [socks.c:369:12] hp_238(34)>
+  [socks.c:368:16] if (hp_179 != 0B)
+    goto <bb 36>; [INV]
+  else
+    goto <bb 37>; [INV]
+
+  <bb 36> :
+  [socks.c:368:22] _38 = [socks.c:368:22] hp_179->ai_family;
+  [socks.c:368:16] if (_38 != 2)
+    goto <bb 34>; [INV]
+  else
+    goto <bb 37>; [INV]
+
+  <bb 37> :
+  [socks.c:371:9] if (hp_179 != 0B)
+    goto <bb 38>; [INV]
+  else
+    goto <bb 42>; [INV]
+
+  <bb 38> :
+  [socks.c:374:9] Curl_printable_address (hp_179, [socks.c:374:36] &buf, 64);
+  [socks.c:376:18] saddr_in_241 = [socks.c:376:52] hp_179->ai_addr;
+  [socks.c:377:41] _39 = [socks.c:377:41] &[socks.c:377:60] [socks.c:377:50] saddr_in_241->sin_addr.s_addr;
+  [socks.c:377:17] _40 = socksreq_205 + 4;
+  [socks.c:377:68] _41 = [socks.c:377:68] MEM[(unsigned char *)_39];
+  [socks.c:377:21] [socks.c:377:17] *_40 = _41;
+  [socks.c:378:41] _42 = [socks.c:378:41] &[socks.c:378:60] [socks.c:378:50] saddr_in_241->sin_addr.s_addr;
+  [socks.c:378:68] _43 = _42 + 1;
+  [socks.c:378:17] _44 = socksreq_205 + 5;
+  [socks.c:378:68] _45 = [socks.c:378:68] *_43;
+  [socks.c:378:21] [socks.c:378:17] *_44 = _45;
+  [socks.c:379:41] _46 = [socks.c:379:41] &[socks.c:379:60] [socks.c:379:50] saddr_in_241->sin_addr.s_addr;
+  [socks.c:379:68] _47 = _46 + 2;
+  [socks.c:379:17] _48 = socksreq_205 + 6;
+  [socks.c:379:68] _49 = [socks.c:379:68] *_47;
+  [socks.c:379:21] [socks.c:379:17] *_48 = _49;
+  [socks.c:380:41] _50 = [socks.c:380:41] &[socks.c:380:60] [socks.c:380:50] saddr_in_241->sin_addr.s_addr;
+  [socks.c:380:68] _51 = _50 + 3;
+  [socks.c:380:17] _52 = socksreq_205 + 7;
+  [socks.c:380:68] _53 = [socks.c:380:68] *_51;
+  [socks.c:380:21] [socks.c:380:17] *_52 = _53;
+  [socks.c:382:9] if (data_204(D) != 0B)
+    goto <bb 39>; [INV]
+  else
+    goto <bb 41>; [INV]
+
+  <bb 39> :
+  [socks.c:382:9] _54 = [socks.c:382:9] BIT_FIELD_REF <[socks.c:382:9] data_204(D)->set, 8, 17904>;
+  [socks.c:382:9] _55 = _54 & 16;
+  [socks.c:382:9] if (_55 != 0)
+    goto <bb 40>; [INV]
+  else
+    goto <bb 41>; [INV]
+
+  <bb 40> :
+  [socks.c:382:9] Curl_infof (data_204(D), [socks.c:382:9] "SOCKS4 connect to IPv4 %s (locally resolved)", [socks.c:382:9] &buf);
+
+  <bb 41> :
+  [socks.c:384:9] dns.79_56 = dns;
+  [socks.c:384:9] Curl_resolv_unlock (data_204(D), dns.79_56);
+  buf ={v} {CLOBBER};
+  [0:0] goto <bb 44>; [INV]
+
+  <bb 42> :
+  [socks.c:387:9] _57 = [socks.c:387:9] sx_207(D)->hostname;
+  [socks.c:387:9] Curl_failf (data_204(D), [socks.c:387:21] "SOCKS4 connection to %s not supported", _57);
+  goto <bb 44>; [INV]
+
+  <bb 43> :
+  [socks.c:390:7] _58 = [socks.c:390:7] sx_207(D)->hostname;
+  [socks.c:390:7] Curl_failf (data_204(D), [socks.c:390:19] "Failed to resolve \"%s\" for SOCKS4 connect.", _58);
+
+  <bb 44> :
+  # hp_180 = PHI <hp_179(42), [socks.c:359:27] hp_235(43), hp_179(41)>
+  [socks.c:393:7] if (hp_180 == 0B)
+    goto <bb 45>; [INV]
+  else
+    goto <bb 46>; [INV]
+
+  <bb 45> :
+  [socks.c:394:14] _249 = 27;
+  [socks.c:394:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:394:14] goto <bb 79>; [INV]
+
+  <bb 46> :
+[socks.c:397:1] CONNECT_REQ_INIT:
+[socks.c:398:3] <L58>:
+  [socks.c:402:13] _59 = socksreq_205 + 8;
+  [socks.c:402:17] [socks.c:402:13] *_59 = 0;
+  [socks.c:403:10] _60 = [socks.c:403:10] sx_207(D)->proxy_user;
+  [socks.c:403:7] if (_60 != 0B)
+    goto <bb 47>; [INV]
+  else
+    goto <bb 50>; [INV]
+
+  <bb 47> :
+  [socks.c:404:21] _61 = [socks.c:404:21] sx_207(D)->proxy_user;
+  [socks.c:404:21] plen_251 = strlen (_61);
+  [socks.c:405:35] _62 = [socks.c:405:35] [socks.c:405:30] data_204(D)->set.buffer_size;
+  [socks.c:405:18] _63 = (long unsigned int) _62;
+  [socks.c:405:48] _64 = _63 + 18446744073709551608;
+  [socks.c:405:9] if (plen_251 >= _64)
+    goto <bb 48>; [INV]
+  else
+    goto <bb 49>; [INV]
+
+  <bb 48> :
+  [socks.c:406:9] Curl_failf (data_204(D), [socks.c:406:21] "Too long SOCKS proxy user name, can\'t use");
+  [socks.c:407:16] _254 = 11;
+  [socks.c:407:16] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:407:16] goto <bb 79>; [INV]
+
+  <bb 49> :
+  [socks.c:410:7] _65 = plen_251 + 1;
+  [socks.c:410:30] _66 = [socks.c:410:30] sx_207(D)->proxy_user;
+  [socks.c:410:23] _67 = socksreq_205 + 8;
+  [socks.c:410:7] memcpy (_67, _66, _65);
+
+  <bb 50> :
+  [socks.c:418:9] _68 = socksreq_205 + 8;
+  [socks.c:418:9] _69 = strlen (_68);
+  [socks.c:417:14] packetsize_255 = _69 + 9;
+  [socks.c:421:9] if (protocol4a_203 != 0)
+    goto <bb 51>; [INV]
+  else
+    goto <bb 54>; [INV]
+
+  <bb 51> :
+  [socks.c:422:16] hostnamelen_256 = 0;
+  [socks.c:423:17] _70 = socksreq_205 + 4;
+  [socks.c:423:21] [socks.c:423:17] *_70 = 0;
+  [socks.c:424:17] _71 = socksreq_205 + 5;
+  [socks.c:424:21] [socks.c:424:17] *_71 = 0;
+  [socks.c:425:17] _72 = socksreq_205 + 6;
+  [socks.c:425:21] [socks.c:425:17] *_72 = 0;
+  [socks.c:426:17] _73 = socksreq_205 + 7;
+  [socks.c:426:21] [socks.c:426:17] *_73 = 1;
+  [socks.c:428:23] _74 = [socks.c:428:23] sx_207(D)->hostname;
+  [socks.c:428:23] _75 = strlen (_74);
+  [socks.c:428:21] hostnamelen_261 = _75 + 1;
+  [socks.c:429:11] if (hostnamelen_261 <= 255)
+    goto <bb 52>; [INV]
+  else
+    goto <bb 53>; [INV]
+
+  <bb 52> :
+  [socks.c:430:11] _76 = [socks.c:430:11] sx_207(D)->hostname;
+  [socks.c:430:11] _77 = socksreq_205 + packetsize_255;
+  [socks.c:430:11] strcpy (_77, _76);
+  [socks.c:435:20] packetsize_265 = packetsize_255 + hostnamelen_261;
+  goto <bb 54>; [INV]
+
+  <bb 53> :
+  [socks.c:432:11] Curl_failf (data_204(D), [socks.c:432:23] "SOCKS4: too long host name");
+  [socks.c:433:18] _263 = 9;
+  [socks.c:433:18] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:433:18] goto <bb 79>; [INV]
+
+  <bb 54> :
+  # packetsize_181 = PHI <[socks.c:417:14] packetsize_255(50), [socks.c:435:20] packetsize_265(52)>
+  [socks.c:437:16] [socks.c:437:9] sx_207(D)->outp = socksreq_205;
+  [socks.c:438:23] packetsize.80_78 = (long int) packetsize_181;
+  [socks.c:438:23] [socks.c:438:9] sx_207(D)->outstanding = packetsize.80_78;
+  [socks.c:439:7] socksstate (sx_207(D), data_204(D), 14, 439);
+
+  <bb 55> :
+[socks.c:442:3] <L68>:
+  [socks.c:444:15] presult_270 = socks_state_send (cf_201(D), sx_207(D), data_204(D), 29, [socks.c:445:32] "SOCKS4 connect request");
+  [socks.c:446:7] if (presult_270 != 0)
+    goto <bb 56>; [INV]
+  else
+    goto <bb 57>; [INV]
+
+  <bb 56> :
+  [socks.c:447:14] _275 = presult_270;
+  [socks.c:447:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:447:14] goto <bb 79>; [INV]
+
+  <bb 57> :
+  [socks.c:448:15] _79 = [socks.c:448:15] sx_207(D)->outstanding;
+  [socks.c:448:12] if (_79 != 0)
+    goto <bb 58>; [INV]
+  else
+    goto <bb 59>; [INV]
+
+  <bb 58> :
+  [socks.c:450:14] _274 = 0;
+  [socks.c:450:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:450:14] goto <bb 79>; [INV]
+
+  <bb 59> :
+  [socks.c:453:21] [socks.c:453:7] sx_207(D)->outstanding = 8;
+  [socks.c:454:14] [socks.c:454:7] sx_207(D)->outp = socksreq_205;
+  [socks.c:455:5] socksstate (sx_207(D), data_204(D), 4, 455);
+
+  <bb 60> :
+[socks.c:458:3] <L73>:
+  [socks.c:460:15] presult_277 = socks_state_recv (cf_201(D), sx_207(D), data_204(D), 15, [socks.c:461:32] "connect request ack");
+  [socks.c:462:7] if (presult_277 != 0)
+    goto <bb 61>; [INV]
+  else
+    goto <bb 62>; [INV]
+
+  <bb 61> :
+  [socks.c:463:14] _280 = presult_277;
+  [socks.c:463:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:463:14] goto <bb 79>; [INV]
+
+  <bb 62> :
+  [socks.c:464:15] _80 = [socks.c:464:15] sx_207(D)->outstanding;
+  [socks.c:464:12] if (_80 != 0)
+    goto <bb 63>; [INV]
+  else
+    goto <bb 64>; [INV]
+
+  <bb 63> :
+  [socks.c:466:14] _279 = 0;
+  [socks.c:466:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:466:14] goto <bb 79>; [INV]
+
+  <bb 64> :
+  [socks.c:468:5] socksstate (sx_207(D), data_204(D), 17, 468);
+
+  <bb 65> :
+<L97>:
+  [socks.c:494:14] _81 = [socks.c:494:14] *socksreq_205;
+  [socks.c:494:5] if (_81 != 0)
+    goto <bb 66>; [INV]
+  else
+    goto <bb 67>; [INV]
+
+  <bb 66> :
+  [socks.c:495:5] Curl_failf (data_204(D), [socks.c:496:11] "SOCKS4 reply has wrong version, version should be 0.");
+  [socks.c:497:12] _294 = 2;
+  [socks.c:497:12] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:497:12] goto <bb 79>; [INV]
+
+  <bb 67> :
+  [socks.c:501:18] _82 = socksreq_205 + 1;
+  [socks.c:501:18] _83 = [socks.c:501:18] *_82;
+  [socks.c:501:18] _84 = (int) _83;
+  [socks.c:501:3] switch (_84) <[socks.c:531:3] default: <L93> [INV], [socks.c:502:3] case 90: <L82> [INV], [socks.c:505:3] case 91: <L90> [INV], [socks.c:513:3] case 92: <L91> [INV], [socks.c:522:3] case 93: <L92> [INV]>
+
+  <bb 68> :
+[socks.c:502:3] <L82>:
+  [socks.c:503:5] if (data_204(D) != 0B)
+    goto <bb 69>; [INV]
+  else
+    goto <bb 78>; [INV]
+
+  <bb 69> :
+  [socks.c:503:5] _85 = [socks.c:503:5] BIT_FIELD_REF <[socks.c:503:5] data_204(D)->set, 8, 17904>;
+  [socks.c:503:5] _86 = _85 & 16;
+  [socks.c:503:5] if (_86 != 0)
+    goto <bb 70>; [INV]
+  else
+    goto <bb 78>; [INV]
+
+  <bb 70> :
+  [socks.c:503:5] if (protocol4a_203 != 0)
+    goto <bb 71>; [INV]
+  else
+    goto <bb 72>; [INV]
+
+  <bb 71> :
+  [socks.c:503:5] iftmp.81_288 = [socks.c:503:5] "a";
+  [0:0] goto <bb 73>; [INV]
+
+  <bb 72> :
+  [socks.c:503:5] iftmp.81_287 = [socks.c:503:5] "";
+
+  <bb 73> :
+  # iftmp.81_184 = PHI <[socks.c:503:5] iftmp.81_288(71), [socks.c:503:5] iftmp.81_287(72)>
+  [socks.c:503:5] Curl_infof (data_204(D), [socks.c:503:5] "SOCKS4%s request granted.", iftmp.81_184);
+  goto <bb 78>; [INV]
+
+  <bb 74> :
+[socks.c:505:3] <L90>:
+  [socks.c:511:34] _87 = socksreq_205 + 1;
+  [socks.c:511:11] _88 = [socks.c:511:11] *_87;
+  [socks.c:506:5] _89 = (int) _88;
+  [socks.c:510:36] _90 = socksreq_205 + 2;
+  [socks.c:510:36] _91 = [socks.c:510:36] *_90;
+  [socks.c:510:36] _92 = (int) _91;
+  [socks.c:510:40] _93 = _92 << 8;
+  [socks.c:510:71] _94 = socksreq_205 + 3;
+  [socks.c:510:71] _95 = [socks.c:510:71] *_94;
+  [socks.c:510:71] _96 = (int) _95;
+  [socks.c:506:5] _97 = _93 | _96;
+  [socks.c:509:58] _98 = socksreq_205 + 7;
+  [socks.c:509:58] _99 = [socks.c:509:58] *_98;
+  [socks.c:506:5] _100 = (int) _99;
+  [socks.c:509:45] _101 = socksreq_205 + 6;
+  [socks.c:509:45] _102 = [socks.c:509:45] *_101;
+  [socks.c:506:5] _103 = (int) _102;
+  [socks.c:509:32] _104 = socksreq_205 + 5;
+  [socks.c:509:32] _105 = [socks.c:509:32] *_104;
+  [socks.c:506:5] _106 = (int) _105;
+  [socks.c:509:19] _107 = socksreq_205 + 4;
+  [socks.c:509:19] _108 = [socks.c:509:19] *_107;
+  [socks.c:506:5] _109 = (int) _108;
+  [socks.c:506:5] Curl_failf (data_204(D), [socks.c:507:11] "Can\'t complete SOCKS4 connection to %d.%d.%d.%d:%d. (%d), request rejected or failed.", _109, _106, _103, _100, _97, _89);
+  [socks.c:512:12] _286 = 26;
+  [socks.c:512:12] goto <bb 79>; [INV]
+
+  <bb 75> :
+[socks.c:513:3] <L91>:
+  [socks.c:520:34] _110 = socksreq_205 + 1;
+  [socks.c:520:11] _111 = [socks.c:520:11] *_110;
+  [socks.c:514:5] _112 = (int) _111;
+  [socks.c:519:36] _113 = socksreq_205 + 2;
+  [socks.c:519:36] _114 = [socks.c:519:36] *_113;
+  [socks.c:519:36] _115 = (int) _114;
+  [socks.c:519:40] _116 = _115 << 8;
+  [socks.c:519:71] _117 = socksreq_205 + 3;
+  [socks.c:519:71] _118 = [socks.c:519:71] *_117;
+  [socks.c:519:71] _119 = (int) _118;
+  [socks.c:514:5] _120 = _116 | _119;
+  [socks.c:518:58] _121 = socksreq_205 + 7;
+  [socks.c:518:58] _122 = [socks.c:518:58] *_121;
+  [socks.c:514:5] _123 = (int) _122;
+  [socks.c:518:45] _124 = socksreq_205 + 6;
+  [socks.c:518:45] _125 = [socks.c:518:45] *_124;
+  [socks.c:514:5] _126 = (int) _125;
+  [socks.c:518:32] _127 = socksreq_205 + 5;
+  [socks.c:518:32] _128 = [socks.c:518:32] *_127;
+  [socks.c:514:5] _129 = (int) _128;
+  [socks.c:518:19] _130 = socksreq_205 + 4;
+  [socks.c:518:19] _131 = [socks.c:518:19] *_130;
+  [socks.c:514:5] _132 = (int) _131;
+  [socks.c:514:5] Curl_failf (data_204(D), [socks.c:515:11] "Can\'t complete SOCKS4 connection to %d.%d.%d.%d:%d. (%d), request rejected because SOCKS server cannot connect to identd on the client.", _132, _129, _126, _123, _120, _112);
+  [socks.c:521:12] _284 = 7;
+  [socks.c:521:12] goto <bb 79>; [INV]
+
+  <bb 76> :
+[socks.c:522:3] <L92>:
+  [socks.c:529:34] _133 = socksreq_205 + 1;
+  [socks.c:529:11] _134 = [socks.c:529:11] *_133;
+  [socks.c:523:5] _135 = (int) _134;
+  [socks.c:528:36] _136 = socksreq_205 + 2;
+  [socks.c:528:36] _137 = [socks.c:528:36] *_136;
+  [socks.c:528:36] _138 = (int) _137;
+  [socks.c:528:40] _139 = _138 << 8;
+  [socks.c:528:71] _140 = socksreq_205 + 3;
+  [socks.c:528:71] _141 = [socks.c:528:71] *_140;
+  [socks.c:528:71] _142 = (int) _141;
+  [socks.c:523:5] _143 = _139 | _142;
+  [socks.c:527:58] _144 = socksreq_205 + 7;
+  [socks.c:527:58] _145 = [socks.c:527:58] *_144;
+  [socks.c:523:5] _146 = (int) _145;
+  [socks.c:527:45] _147 = socksreq_205 + 6;
+  [socks.c:527:45] _148 = [socks.c:527:45] *_147;
+  [socks.c:523:5] _149 = (int) _148;
+  [socks.c:527:32] _150 = socksreq_205 + 5;
+  [socks.c:527:32] _151 = [socks.c:527:32] *_150;
+  [socks.c:523:5] _152 = (int) _151;
+  [socks.c:527:19] _153 = socksreq_205 + 4;
+  [socks.c:527:19] _154 = [socks.c:527:19] *_153;
+  [socks.c:523:5] _155 = (int) _154;
+  [socks.c:523:5] Curl_failf (data_204(D), [socks.c:524:11] "Can\'t complete SOCKS4 connection to %d.%d.%d.%d:%d. (%d), request rejected because the client program and identd report different user-ids.", _155, _152, _149, _146, _143, _135);
+  [socks.c:530:12] _282 = 8;
+  [socks.c:530:12] goto <bb 79>; [INV]
+
+  <bb 77> :
+[socks.c:531:3] <L93>:
+  [socks.c:537:34] _156 = socksreq_205 + 1;
+  [socks.c:537:11] _157 = [socks.c:537:11] *_156;
+  [socks.c:532:5] _158 = (int) _157;
+  [socks.c:536:36] _159 = socksreq_205 + 2;
+  [socks.c:536:36] _160 = [socks.c:536:36] *_159;
+  [socks.c:536:36] _161 = (int) _160;
+  [socks.c:536:40] _162 = _161 << 8;
+  [socks.c:536:71] _163 = socksreq_205 + 3;
+  [socks.c:536:71] _164 = [socks.c:536:71] *_163;
+  [socks.c:536:71] _165 = (int) _164;
+  [socks.c:532:5] _166 = _162 | _165;
+  [socks.c:535:58] _167 = socksreq_205 + 7;
+  [socks.c:535:58] _168 = [socks.c:535:58] *_167;
+  [socks.c:532:5] _169 = (int) _168;
+  [socks.c:535:45] _170 = socksreq_205 + 6;
+  [socks.c:535:45] _171 = [socks.c:535:45] *_170;
+  [socks.c:532:5] _172 = (int) _171;
+  [socks.c:535:32] _173 = socksreq_205 + 5;
+  [socks.c:535:32] _174 = [socks.c:535:32] *_173;
+  [socks.c:532:5] _175 = (int) _174;
+  [socks.c:535:19] _176 = socksreq_205 + 4;
+  [socks.c:535:19] _177 = [socks.c:535:19] *_176;
+  [socks.c:532:5] _178 = (int) _177;
+  [socks.c:532:5] Curl_failf (data_204(D), [socks.c:533:11] "Can\'t complete SOCKS4 connection to %d.%d.%d.%d:%d. (%d), Unknown.", _178, _175, _172, _169, _166, _158);
+  [socks.c:538:12] _292 = 31;
+  [socks.c:538:12] goto <bb 79>; [INV]
+
+  <bb 78> :
+  [socks.c:541:10] _290 = 0;
+
+  <bb 79> :
+  # _183 = PHI <[socks.c:322:16] _234(15), [socks.c:326:16] _233(20), [socks.c:352:18] _213(30), [socks.c:353:16] _212(31), [socks.c:394:14] _249(45), [socks.c:407:16] _254(48), [socks.c:433:18] _263(53), [socks.c:447:14] _275(56), [socks.c:450:14] _274(58), [socks.c:463:14] _280(61), [socks.c:466:14] _279(63), [socks.c:497:12] _294(66), [socks.c:512:12] _286(74), [socks.c:521:12] _284(75), [socks.c:530:12] _282(76), [socks.c:538:12] _292(77), [socks.c:541:10] _290(78)>
+  dns ={v} {CLOBBER};
+  return _183;
+
+}
+
+
+
+;; Function connect_SOCKS (connect_SOCKS, funcdef_no=86, decl_uid=10367, cgraph_uid=87, symbol_order=86)
+
+CURLcode connect_SOCKS (struct Curl_cfilter * cf, struct socks_state * sxstate, struct Curl_easy * data)
+{
+  struct connectdata * conn;
+  CURLproxycode pxresult;
+  CURLcode result;
+  unsigned char _1;
+  int _2;
+  CURLcode _23;
+
+  <bb 2> :
+  [socks.c:1060:12] result_8 = 0;
+  [socks.c:1061:17] pxresult_9 = 0;
+  [socks.c:1062:23] conn_12 = [socks.c:1062:32] cf_11(D)->conn;
+  [socks.c:1064:27] _1 = [socks.c:1064:27] [socks.c:1064:14] conn_12->socks_proxy.proxytype;
+  [socks.c:1064:27] _2 = (int) _1;
+  [socks.c:1064:3] switch (_2) <[socks.c:1075:3] default: <L4> [INV], [socks.c:1070:3] case 4: <L2> [INV], [socks.c:1065:3] case 5: <L0> [INV], [socks.c:1071:3] case 6: <L2> [INV], [socks.c:1066:3] case 7: <L0> [INV]>
+
+  <bb 3> :
+[socks.c:1065:3] <L0>:
+  [socks.c:1067:16] pxresult_16 = do_SOCKS5 (cf_11(D), sxstate_13(D), data_14(D));
+  [socks.c:1068:5] goto <bb 6>; [INV]
+
+  <bb 4> :
+[socks.c:1070:3] <L2>:
+  [socks.c:1072:16] pxresult_18 = do_SOCKS4 (cf_11(D), sxstate_13(D), data_14(D));
+  [socks.c:1073:5] goto <bb 6>; [INV]
+
+  <bb 5> :
+[socks.c:1075:3] <L4>:
+  [socks.c:1076:5] Curl_failf (data_14(D), [socks.c:1076:17] "unknown proxytype option given");
+  [socks.c:1077:12] result_20 = 7;
+
+  <bb 6> :
+  # result_3 = PHI <[socks.c:1060:12] result_8(3), [socks.c:1060:12] result_8(4), [socks.c:1077:12] result_20(5)>
+  # pxresult_5 = PHI <[socks.c:1067:16] pxresult_16(3), [socks.c:1072:16] pxresult_18(4), [socks.c:1061:17] pxresult_9(5)>
+  [socks.c:1079:5] if (pxresult_5 != 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  [socks.c:1080:12] result_21 = 97;
+  [socks.c:1081:23] [socks.c:1081:15] [socks.c:1081:9] data_14(D)->info.pxcode = pxresult_5;
+
+  <bb 8> :
+  # result_4 = PHI <result_3(6), [socks.c:1080:12] result_21(7)>
+  [socks.c:1084:10] _23 = result_4;
+  [socks.c:1084:10] return _23;
+
+}
+
+
+
+;; Function socks_proxy_cf_connect (socks_proxy_cf_connect, funcdef_no=88, decl_uid=10386, cgraph_uid=89, symbol_order=88)
+
+CURLcode socks_proxy_cf_connect (struct Curl_cfilter * cf, struct Curl_easy * data, _Bool blocking, _Bool * done)
+{
+  struct socks_state * sx;
+  int sockindex;
+  struct connectdata * conn;
+  CURLcode result;
+  unsigned char _1;
+  unsigned char _2;
+  struct Curl_cfilter * _3;
+  const struct Curl_cftype * _4;
+  CURLcode (*<Teb6>) (struct Curl_cfilter *, struct Curl_easy *, _Bool, _Bool *) _5;
+  int _6;
+  struct Curl_cfilter * _7;
+  _Bool _8;
+  _Bool _9;
+  connect_t _10;
+  unsigned char _11;
+  unsigned char _12;
+  unsigned char _13;
+  unsigned char _14;
+  unsigned char _15;
+  unsigned char _16;
+  short unsigned int _17;
+  unsigned char _18;
+  unsigned char _19;
+  char * _20;
+  char * _21;
+  connect_t _22;
+  <unnamed-unsigned:1> _23;
+  int _24;
+  _Bool _25;
+  CURLcode _27;
+  char * iftmp.0_28;
+  char * iftmp.1_29;
+  char * iftmp.2_30;
+  int iftmp.3_31;
+  int iftmp.4_32;
+  int iftmp.5_33;
+  CURLcode _51;
+  char * iftmp.2_53;
+  char * iftmp.2_54;
+  char * iftmp.1_55;
+  char * iftmp.1_56;
+  char * iftmp.0_57;
+  char * iftmp.0_58;
+  int iftmp.5_60;
+  int iftmp.5_61;
+  int iftmp.4_62;
+  int iftmp.4_63;
+  int iftmp.3_64;
+  int iftmp.3_65;
+  CURLcode _75;
+  CURLcode _76;
+  CURLcode _78;
+
+  <bb 2> :
+  [socks.c:1108:23] conn_40 = [socks.c:1108:32] cf_39(D)->conn;
+  [socks.c:1109:7] sockindex_41 = [socks.c:1109:21] cf_39(D)->sockindex;
+  [socks.c:1110:23] sx_42 = [socks.c:1110:30] cf_39(D)->ctx;
+  [socks.c:1112:6] _1 = [socks.c:1112:6] BIT_FIELD_REF <[socks.c:1112:8] *cf_39(D), 8, 288>;
+  [socks.c:1112:6] _2 = _1 & 1;
+  [socks.c:1112:5] if (_2 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  [socks.c:1113:11] [socks.c:1113:5] *done_45(D) = 1;
+  [socks.c:1114:12] _78 = 0;
+  [socks.c:1114:12] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:1114:12] goto <bb 35>; [INV]
+
+  <bb 4> :
+  [socks.c:1117:14] _3 = [socks.c:1117:14] cf_39(D)->next;
+  [socks.c:1117:20] _4 = [socks.c:1117:20] _3->cft;
+  [socks.c:1117:25] _5 = [socks.c:1117:25] _4->do_connect;
+  [socks.c:1117:12] _6 = (int) blocking_43(D);
+  [socks.c:1117:12] _7 = [socks.c:1117:12] cf_39(D)->next;
+  [socks.c:1117:12] result_47 = _5 (_7, data_44(D), _6, done_45(D));
+  [socks.c:1118:5] if (result_47 != 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 5> :
+  [socks.c:1118:17] _8 = [socks.c:1118:17] *done_45(D);
+  [socks.c:1118:16] _9 = ~_8;
+  [socks.c:1118:13] if (_9 != 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 6> :
+  [socks.c:1119:12] _76 = result_47;
+  [socks.c:1119:12] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:1119:12] goto <bb 35>; [INV]
+
+  <bb 7> :
+  [socks.c:1121:5] if (sx_42 == 0B)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 8> :
+  [socks.c:1122:10] sx_49 = curl_dbg_calloc (56, 1, 1122, [socks.c:1122:10] "socks.c");
+  [socks.c:1123:7] if (sx_49 == 0B)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 9> :
+  [socks.c:1124:14] _51 = 27;
+  [socks.c:1124:14] // predicted unlikely by early return (on trees) predictor.
+  [socks.c:1124:14] goto <bb 35>; [INV]
+
+  <bb 10> :
+  [socks.c:1125:13] [socks.c:1125:7] cf_39(D)->ctx = sx_49;
+
+  <bb 11> :
+  # sx_26 = PHI <[socks.c:1110:23] sx_42(7), [socks.c:1122:10] sx_49(10)>
+  [socks.c:1128:8] _10 = [socks.c:1128:8] sx_26->state;
+  [socks.c:1128:5] if (_10 == 0)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 31>; [INV]
+
+  <bb 12> :
+  [socks.c:1132:5] socksstate (sx_26, data_44(D), 1, 1132);
+  [socks.c:1134:28] _11 = [socks.c:1134:28] BIT_FIELD_REF <[socks.c:1134:11] conn_40->bits, 8, 0>;
+  [socks.c:1134:28] _12 = _11 & 1;
+  [socks.c:1133:18] if (_12 != 0)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 13> :
+  [socks.c:1133:18] iftmp.0_58 = [socks.c:1135:28] [socks.c:1135:23] [socks.c:1135:11] conn_40->http_proxy.host.name;
+  [0:0] goto <bb 21>; [INV]
+
+  <bb 14> :
+  [socks.c:1136:31] _13 = [socks.c:1136:31] BIT_FIELD_REF <[socks.c:1136:11] conn_40->bits, 8, 8>;
+  [socks.c:1136:31] _14 = _13 & 2;
+  [socks.c:1133:18] if (_14 != 0)
+    goto <bb 15>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 15> :
+  [socks.c:1133:18] iftmp.1_56 = [socks.c:1137:25] [socks.c:1137:11] conn_40->conn_to_host.name;
+  [0:0] goto <bb 20>; [INV]
+
+  <bb 16> :
+  [socks.c:1133:18] if (sockindex_41 == 1)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 18>; [INV]
+
+  <bb 17> :
+  [socks.c:1133:18] iftmp.2_54 = [socks.c:1139:11] conn_40->secondaryhostname;
+  [0:0] goto <bb 19>; [INV]
+
+  <bb 18> :
+  [socks.c:1133:18] iftmp.2_53 = [socks.c:1139:43] [socks.c:1139:37] conn_40->host.name;
+
+  <bb 19> :
+  # iftmp.2_30 = PHI <[socks.c:1133:18] iftmp.2_54(17), [socks.c:1133:18] iftmp.2_53(18)>
+  [socks.c:1133:18] iftmp.1_55 = iftmp.2_30;
+
+  <bb 20> :
+  # iftmp.1_29 = PHI <[socks.c:1133:18] iftmp.1_56(15), [socks.c:1133:18] iftmp.1_55(19)>
+  [socks.c:1133:18] iftmp.0_57 = iftmp.1_29;
+
+  <bb 21> :
+  # iftmp.0_28 = PHI <[socks.c:1133:18] iftmp.0_58(13), [socks.c:1133:18] iftmp.0_57(20)>
+  [socks.c:1133:18] [socks.c:1133:7] sx_26->hostname = iftmp.0_28;
+  [socks.c:1141:28] _15 = [socks.c:1141:28] BIT_FIELD_REF <[socks.c:1141:11] conn_40->bits, 8, 0>;
+  [socks.c:1141:28] _16 = _15 & 1;
+  [socks.c:1141:57] if (_16 != 0)
+    goto <bb 22>; [INV]
+  else
+    goto <bb 23>; [INV]
+
+  <bb 22> :
+  [socks.c:1141:57] iftmp.3_65 = [socks.c:1141:51] [socks.c:1141:39] conn_40->http_proxy.port;
+  [0:0] goto <bb 30>; [INV]
+
+  <bb 23> :
+  [socks.c:1142:59] if (sockindex_41 == 1)
+    goto <bb 24>; [INV]
+  else
+    goto <bb 25>; [INV]
+
+  <bb 24> :
+  [socks.c:1142:42] _17 = [socks.c:1142:42] conn_40->secondary_port;
+  [socks.c:1142:59] iftmp.4_63 = (int) _17;
+  [0:0] goto <bb 29>; [INV]
+
+  <bb 25> :
+  [socks.c:1143:31] _18 = [socks.c:1143:31] BIT_FIELD_REF <[socks.c:1143:11] conn_40->bits, 8, 8>;
+  [socks.c:1143:31] _19 = _18 & 4;
+  [socks.c:1143:52] if (_19 != 0)
+    goto <bb 26>; [INV]
+  else
+    goto <bb 27>; [INV]
+
+  <bb 26> :
+  [socks.c:1143:52] iftmp.5_61 = [socks.c:1143:37] conn_40->conn_to_port;
+  [0:0] goto <bb 28>; [INV]
+
+  <bb 27> :
+  [socks.c:1143:52] iftmp.5_60 = [socks.c:1144:11] conn_40->remote_port;
+
+  <bb 28> :
+  # iftmp.5_33 = PHI <[socks.c:1143:52] iftmp.5_61(26), [socks.c:1143:52] iftmp.5_60(27)>
+  [socks.c:1142:59] iftmp.4_62 = iftmp.5_33;
+
+  <bb 29> :
+  # iftmp.4_32 = PHI <[socks.c:1142:59] iftmp.4_63(24), [socks.c:1142:59] iftmp.4_62(28)>
+  [socks.c:1141:57] iftmp.3_64 = iftmp.4_32;
+
+  <bb 30> :
+  # iftmp.3_31 = PHI <[socks.c:1141:57] iftmp.3_65(22), [socks.c:1141:57] iftmp.3_64(29)>
+  [socks.c:1140:21] [socks.c:1140:7] sx_26->remote_port = iftmp.3_31;
+  [socks.c:1145:39] _20 = [socks.c:1145:39] [socks.c:1145:26] conn_40->socks_proxy.user;
+  [socks.c:1145:20] [socks.c:1145:7] sx_26->proxy_user = _20;
+  [socks.c:1146:43] _21 = [socks.c:1146:43] [socks.c:1146:30] conn_40->socks_proxy.passwd;
+  [socks.c:1146:24] [socks.c:1146:7] sx_26->proxy_password = _21;
+
+  <bb 31> :
+  [socks.c:1149:12] result_70 = connect_SOCKS (cf_39(D), sx_26, data_44(D));
+  [socks.c:1150:5] if (result_70 == 0)
+    goto <bb 32>; [INV]
+  else
+    goto <bb 34>; [INV]
+
+  <bb 32> :
+  [socks.c:1150:19] _22 = [socks.c:1150:19] sx_26->state;
+  [socks.c:1150:14] if (_22 == 17)
+    goto <bb 33>; [INV]
+  else
+    goto <bb 34>; [INV]
+
+  <bb 33> :
+  [socks.c:1151:19] [socks.c:1151:7] cf_39(D)->connected = 1;
+  [socks.c:1152:5] Curl_verboseconnect (data_44(D), conn_40);
+  [socks.c:1153:5] socks_proxy_cf_free (cf_39(D));
+
+  <bb 34> :
+  [socks.c:1156:13] _23 = [socks.c:1156:13] cf_39(D)->connected;
+  [socks.c:1156:13] _24 = (int) _23;
+  [socks.c:1156:13] _25 = _24 != 0;
+  [socks.c:1156:9] [socks.c:1156:3] *done_45(D) = _25;
+  [socks.c:1157:10] _75 = result_70;
+
+  <bb 35> :
+  # _27 = PHI <[socks.c:1114:12] _78(3), [socks.c:1119:12] _76(6), [socks.c:1124:14] _51(9), [socks.c:1157:10] _75(34)>
+  return _27;
+
+}
+
+
+
+;; Function Curl_cf_socks_proxy_insert_after (Curl_cf_socks_proxy_insert_after, funcdef_no=93, decl_uid=9961, cgraph_uid=94, symbol_order=94)
+
+CURLcode Curl_cf_socks_proxy_insert_after (struct Curl_cfilter * cf_at, struct Curl_easy * data)
+{
+  CURLcode result;
+  struct Curl_cfilter * cf;
+  struct Curl_cfilter * cf.82_1;
+  CURLcode _8;
+
+  <bb 2> :
+  [socks.c:1247:12] result_5 = Curl_cf_create ([socks.c:1247:12] &cf, [socks.c:1247:32] &Curl_cft_socks_proxy, 0B);
+  [socks.c:1248:5] if (result_5 == 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  [socks.c:1249:5] cf.82_1 = cf;
+  [socks.c:1249:5] Curl_conn_cf_insert_after (cf_at_6(D), cf.82_1);
+
+  <bb 4> :
+  [socks.c:1250:10] _8 = result_5;
+  cf ={v} {CLOBBER};
+  [socks.c:1250:10] return _8;
+
+}
+
+

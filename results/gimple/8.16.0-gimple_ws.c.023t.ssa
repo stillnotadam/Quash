@@ -1,0 +1,6280 @@
+
+;; Function memcpy (memcpy, funcdef_no=28, decl_uid=892, cgraph_uid=29, symbol_order=28)
+
+__attribute__((artificial, gnu_inline, always_inline, leaf, nothrow))
+__attribute__((nonnull, nonnull (1, 2)))
+void * memcpy (void * restrict __dest, const void * restrict __src, size_t __len)
+{
+  long unsigned int _1;
+  void * _7;
+
+  <bb 2> :
+  [/usr/include/x86_64-linux-gnu/bits/string_fortified.h:29:10] _1 = __builtin_object_size (__dest_2(D), 0);
+  [/usr/include/x86_64-linux-gnu/bits/string_fortified.h:29:10] _7 = __builtin___memcpy_chk (__dest_2(D), __src_4(D), __len_5(D), _1);
+  [/usr/include/x86_64-linux-gnu/bits/string_fortified.h:29:10] return _7;
+
+}
+
+
+
+;; Function memset (memset, funcdef_no=30, decl_uid=898, cgraph_uid=31, symbol_order=30)
+
+__attribute__((artificial, gnu_inline, always_inline, leaf, nothrow))
+__attribute__((nonnull, nonnull (1)))
+void * memset (void * __dest, int __ch, size_t __len)
+{
+  long unsigned int _1;
+  void * _7;
+
+  <bb 2> :
+  [/usr/include/x86_64-linux-gnu/bits/string_fortified.h:59:10] _1 = __builtin_object_size (__dest_2(D), 0);
+  [/usr/include/x86_64-linux-gnu/bits/string_fortified.h:59:10] _7 = __builtin___memset_chk (__dest_2(D), __ch_4(D), __len_5(D), _1);
+  [/usr/include/x86_64-linux-gnu/bits/string_fortified.h:59:10] return _7;
+
+}
+
+
+
+;; Function strcpy (strcpy, funcdef_no=32, decl_uid=914, cgraph_uid=33, symbol_order=32)
+
+__attribute__((artificial, gnu_inline, always_inline, leaf, nothrow))
+__attribute__((nonnull, nonnull (1, 2)))
+char * strcpy (char * restrict __dest, const char * restrict __src)
+{
+  long unsigned int _1;
+  char * _6;
+
+  <bb 2> :
+  [/usr/include/x86_64-linux-gnu/bits/string_fortified.h:79:10] _1 = __builtin_object_size (__dest_2(D), 1);
+  [/usr/include/x86_64-linux-gnu/bits/string_fortified.h:79:10] _6 = __builtin___strcpy_chk (__dest_2(D), __src_4(D), _1);
+  [/usr/include/x86_64-linux-gnu/bits/string_fortified.h:79:10] return _6;
+
+}
+
+
+
+;; Function ws_frame_name_of_op (ws_frame_name_of_op, funcdef_no=104, decl_uid=11024, cgraph_uid=105, symbol_order=104)
+
+const char * ws_frame_name_of_op (unsigned char firstbyte)
+{
+  int _1;
+  int _2;
+  const char * _3;
+  const char * _5;
+  const char * _6;
+  const char * _7;
+  const char * _8;
+  const char * _9;
+  const char * _10;
+  const char * _11;
+
+  <bb 2> :
+  [ws.c:136:20] _1 = (int) firstbyte_4(D);
+  [ws.c:136:20] _2 = _1 & 15;
+  [ws.c:136:3] switch (_2) <[ws.c:149:5] default: <L6> [INV], [ws.c:137:5] case 0: <L0> [INV], [ws.c:139:5] case 1: <L1> [INV], [ws.c:141:5] case 2: <L2> [INV], [ws.c:143:5] case 8: <L3> [INV], [ws.c:145:5] case 9: <L4> [INV], [ws.c:147:5] case 10: <L5> [INV]>
+
+  <bb 3> :
+[ws.c:137:5] <L0>:
+  [ws.c:138:14] _10 = [ws.c:138:14] "CONT";
+  [ws.c:138:14] goto <bb 10>; [INV]
+
+  <bb 4> :
+[ws.c:139:5] <L1>:
+  [ws.c:140:14] _9 = [ws.c:140:14] "TEXT";
+  [ws.c:140:14] goto <bb 10>; [INV]
+
+  <bb 5> :
+[ws.c:141:5] <L2>:
+  [ws.c:142:14] _8 = [ws.c:142:14] "BIN";
+  [ws.c:142:14] goto <bb 10>; [INV]
+
+  <bb 6> :
+[ws.c:143:5] <L3>:
+  [ws.c:144:14] _7 = [ws.c:144:14] "CLOSE";
+  [ws.c:144:14] goto <bb 10>; [INV]
+
+  <bb 7> :
+[ws.c:145:5] <L4>:
+  [ws.c:146:14] _6 = [ws.c:146:14] "PING";
+  [ws.c:146:14] goto <bb 10>; [INV]
+
+  <bb 8> :
+[ws.c:147:5] <L5>:
+  [ws.c:148:14] _5 = [ws.c:148:14] "PONG";
+  [ws.c:148:14] goto <bb 10>; [INV]
+
+  <bb 9> :
+[ws.c:149:5] <L6>:
+  [ws.c:150:14] _11 = [ws.c:150:14] "???";
+
+  <bb 10> :
+  # _3 = PHI <[ws.c:138:14] _10(3), [ws.c:140:14] _9(4), [ws.c:142:14] _8(5), [ws.c:144:14] _7(6), [ws.c:146:14] _6(7), [ws.c:148:14] _5(8), [ws.c:150:14] _11(9)>
+  return _3;
+
+}
+
+
+
+;; Function ws_dec_next_frame (ws_dec_next_frame, funcdef_no=108, decl_uid=11107, cgraph_uid=109, symbol_order=108)
+
+void ws_dec_next_frame (struct ws_decoder * dec)
+{
+  int _1;
+
+  <bb 2> :
+  [ws.c:338:18] [ws.c:338:6] dec_3(D)->frame_age = 0;
+  [ws.c:339:20] [ws.c:339:6] dec_3(D)->frame_flags = 0;
+  [ws.c:340:23] [ws.c:340:6] dec_3(D)->payload_offset = 0;
+  [ws.c:341:20] [ws.c:341:6] dec_3(D)->payload_len = 0;
+  [ws.c:342:35] [ws.c:342:22] dec_3(D)->head_total = 0;
+  [ws.c:342:22] _1 = [ws.c:342:22] dec_3(D)->head_total;
+  [ws.c:342:17] [ws.c:342:6] dec_3(D)->head_len = _1;
+  [ws.c:343:14] [ws.c:343:6] dec_3(D)->state = 0;
+  [ws.c:345:1] return;
+
+}
+
+
+
+;; Function ws_dec_reset (ws_dec_reset, funcdef_no=109, decl_uid=11110, cgraph_uid=110, symbol_order=109)
+
+void ws_dec_reset (struct ws_decoder * dec)
+{
+  int _1;
+
+  <bb 2> :
+  [ws.c:349:18] [ws.c:349:6] dec_3(D)->frame_age = 0;
+  [ws.c:350:20] [ws.c:350:6] dec_3(D)->frame_flags = 0;
+  [ws.c:351:23] [ws.c:351:6] dec_3(D)->payload_offset = 0;
+  [ws.c:352:20] [ws.c:352:6] dec_3(D)->payload_len = 0;
+  [ws.c:353:35] [ws.c:353:22] dec_3(D)->head_total = 0;
+  [ws.c:353:22] _1 = [ws.c:353:22] dec_3(D)->head_total;
+  [ws.c:353:17] [ws.c:353:6] dec_3(D)->head_len = _1;
+  [ws.c:354:14] [ws.c:354:6] dec_3(D)->state = 0;
+  [ws.c:355:19] [ws.c:355:6] dec_3(D)->cont_flags = 0;
+  [ws.c:356:1] return;
+
+}
+
+
+
+;; Function ws_dec_init (ws_dec_init, funcdef_no=110, decl_uid=11113, cgraph_uid=111, symbol_order=110)
+
+void ws_dec_init (struct ws_decoder * dec)
+{
+  <bb 2> :
+  [ws.c:360:3] ws_dec_reset (dec_2(D));
+  [ws.c:361:1] return;
+
+}
+
+
+
+;; Function update_meta (update_meta, funcdef_no=114, decl_uid=11174, cgraph_uid=115, symbol_order=114)
+
+void update_meta (struct websocket * ws, int frame_age, int frame_flags, curl_off_t payload_offset, curl_off_t payload_len, size_t cur_len)
+{
+  curl_off_t bytesleft;
+  long int _1;
+  long unsigned int _2;
+  long unsigned int _3;
+
+  <bb 2> :
+  [ws.c:576:39] _1 = payload_len_4(D) - payload_offset_5(D);
+  [ws.c:576:39] _2 = (long unsigned int) _1;
+  [ws.c:576:56] _3 = _2 - cur_len_6(D);
+  [ws.c:576:14] bytesleft_7 = (curl_off_t) _3;
+  [ws.c:578:21] [ws.c:578:16] [ws.c:578:5] ws_9(D)->recvframe.age = frame_age_10(D);
+  [ws.c:579:23] [ws.c:579:16] [ws.c:579:5] ws_9(D)->recvframe.flags = frame_flags_12(D);
+  [ws.c:580:24] [ws.c:580:16] [ws.c:580:5] ws_9(D)->recvframe.offset = payload_offset_5(D);
+  [ws.c:581:21] [ws.c:581:16] [ws.c:581:5] ws_9(D)->recvframe.len = cur_len_6(D);
+  [ws.c:582:27] [ws.c:582:16] [ws.c:582:5] ws_9(D)->recvframe.bytesleft = bytesleft_7;
+  [ws.c:583:1] return;
+
+}
+
+
+
+;; Function ws_enc_reset (ws_enc_reset, funcdef_no=121, decl_uid=11266, cgraph_uid=122, symbol_order=122)
+
+void ws_enc_reset (struct ws_encoder * enc)
+{
+  <bb 2> :
+  [ws.c:771:23] [ws.c:771:6] enc_2(D)->payload_remain = 0;
+  [ws.c:772:13] [ws.c:772:6] enc_2(D)->xori = 0;
+  [ws.c:773:21] [ws.c:773:6] enc_2(D)->contfragment = 0;
+  [ws.c:774:1] return;
+
+}
+
+
+
+;; Function ws_enc_init (ws_enc_init, funcdef_no=122, decl_uid=11269, cgraph_uid=123, symbol_order=123)
+
+void ws_enc_init (struct ws_encoder * enc)
+{
+  <bb 2> :
+  [ws.c:778:3] ws_enc_reset (enc_2(D));
+  [ws.c:779:1] return;
+
+}
+
+
+
+;; Function cr_ws_init (cr_ws_init, funcdef_no=128, decl_uid=11357, cgraph_uid=129, symbol_order=129)
+
+CURLcode cr_ws_init (struct Curl_easy * data, struct Curl_creader * reader)
+{
+  CURLcode _1;
+
+  <bb 2> :
+  [ws.c:1102:10] _1 = 0;
+  [ws.c:1102:10] return _1;
+
+}
+
+
+
+;; Function cr_ws_close (cr_ws_close, funcdef_no=129, decl_uid=11361, cgraph_uid=130, symbol_order=130)
+
+void cr_ws_close (struct Curl_easy * data, struct Curl_creader * reader)
+{
+  <bb 2> :
+  [ws.c:1109:1] return;
+
+}
+
+
+
+;; Function ws_enc_info (ws_enc_info, funcdef_no=120, decl_uid=11261, cgraph_uid=121, symbol_order=121)
+
+void ws_enc_info (struct ws_encoder * enc, struct Curl_easy * data, const char * msg)
+{
+  unsigned char _1;
+  unsigned char _2;
+  struct curl_trc_feat * _3;
+  struct curl_trc_feat * _4;
+  int _5;
+  int _6;
+  long int _7;
+  long int _8;
+  long int _9;
+  long int _10;
+  unsigned char _11;
+  signed char _12;
+  unsigned char _13;
+  int _14;
+  const char * _15;
+  char * iftmp.28_16;
+  char * iftmp.28_21;
+  char * iftmp.28_22;
+
+  <bb 2> :
+  [ws.c:762:3] if (data_18(D) != 0B)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 3> :
+  [ws.c:762:3] _1 = [ws.c:762:3] BIT_FIELD_REF <[ws.c:762:3] data_18(D)->set, 8, 16808>;
+  [ws.c:762:3] _2 = _1 & 32;
+  [ws.c:762:3] if (_2 != 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 4> :
+  [ws.c:762:3] _3 = [ws.c:762:3] [ws.c:762:3] data_18(D)->state.feat;
+  [ws.c:762:3] if (_3 == 0B)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 5> :
+  [ws.c:762:3] _4 = [ws.c:762:3] [ws.c:762:3] data_18(D)->state.feat;
+  [ws.c:762:3] _5 = [ws.c:762:3] _4->log_level;
+  [ws.c:762:3] if (_5 > 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 6> :
+  [ws.c:762:3] _6 = [ws.c:762:3] Curl_trc_feat_ws.log_level;
+  [ws.c:762:3] if (_6 > 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 7> :
+  [ws.c:762:3] _7 = [ws.c:762:3] enc_20(D)->payload_len;
+  [ws.c:762:3] _8 = [ws.c:762:3] enc_20(D)->payload_len;
+  [ws.c:762:3] _9 = [ws.c:762:3] enc_20(D)->payload_remain;
+  [ws.c:762:3] _10 = _8 - _9;
+  [ws.c:762:3] _11 = [ws.c:762:3] enc_20(D)->firstbyte;
+  [ws.c:762:3] _12 = (signed char) _11;
+  [ws.c:762:3] if (_12 < 0)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 8> :
+  [ws.c:762:3] iftmp.28_22 = [ws.c:762:3] "";
+  [0:0] goto <bb 10>; [INV]
+
+  <bb 9> :
+  [ws.c:762:3] iftmp.28_21 = [ws.c:762:3] " NON-FIN";
+
+  <bb 10> :
+  # iftmp.28_16 = PHI <[ws.c:762:3] iftmp.28_22(8), [ws.c:762:3] iftmp.28_21(9)>
+  [ws.c:762:3] _13 = [ws.c:762:3] enc_20(D)->firstbyte;
+  [ws.c:762:3] _14 = (int) _13;
+  [ws.c:762:3] _15 = ws_frame_name_of_op (_14);
+  [ws.c:762:3] Curl_trc_ws (data_18(D), [ws.c:762:3] "WS-ENC: %s [%s%s payload=%ld/%ld]", msg_24(D), _15, iftmp.28_16, _10, _7);
+
+  <bb 11> :
+  [ws.c:767:1] return;
+
+}
+
+
+
+;; Function ws_dec_info (ws_dec_info, funcdef_no=107, decl_uid=11080, cgraph_uid=108, symbol_order=107)
+
+void ws_dec_info (struct ws_decoder * dec, struct Curl_easy * data, const char * msg)
+{
+  int _1;
+  unsigned char _2;
+  unsigned char _3;
+  struct curl_trc_feat * _4;
+  struct curl_trc_feat * _5;
+  int _6;
+  int _7;
+  unsigned char _8;
+  signed char _9;
+  unsigned char _10;
+  int _11;
+  const char * _12;
+  int _13;
+  int _14;
+  unsigned char _15;
+  unsigned char _16;
+  struct curl_trc_feat * _17;
+  struct curl_trc_feat * _18;
+  int _19;
+  int _20;
+  int _21;
+  int _22;
+  unsigned char _23;
+  signed char _24;
+  unsigned char _25;
+  int _26;
+  const char * _27;
+  unsigned char _28;
+  unsigned char _29;
+  struct curl_trc_feat * _30;
+  struct curl_trc_feat * _31;
+  int _32;
+  int _33;
+  long int _34;
+  long int _35;
+  unsigned char _36;
+  signed char _37;
+  unsigned char _38;
+  int _39;
+  const char * _40;
+  char * iftmp.61_41;
+  char * iftmp.62_42;
+  char * iftmp.63_43;
+  char * iftmp.61_48;
+  char * iftmp.61_49;
+  char * iftmp.63_53;
+  char * iftmp.63_54;
+  char * iftmp.62_57;
+  char * iftmp.62_58;
+
+  <bb 2> :
+  [ws.c:299:13] _1 = [ws.c:299:13] dec_46(D)->head_len;
+  [ws.c:299:3] switch (_1) <[ws.c:307:3] default: <L14> [INV], [ws.c:300:3] case 0: <L43> [INV], [ws.c:302:3] case 1: <L1> [INV]>
+
+  <bb 3> :
+[ws.c:302:3] <L1>:
+  [ws.c:303:5] if (data_47(D) != 0B)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 31>; [INV]
+
+  <bb 4> :
+  [ws.c:303:5] _2 = [ws.c:303:5] BIT_FIELD_REF <[ws.c:303:5] data_47(D)->set, 8, 16808>;
+  [ws.c:303:5] _3 = _2 & 32;
+  [ws.c:303:5] if (_3 != 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 31>; [INV]
+
+  <bb 5> :
+  [ws.c:303:5] _4 = [ws.c:303:5] [ws.c:303:5] data_47(D)->state.feat;
+  [ws.c:303:5] if (_4 == 0B)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 6> :
+  [ws.c:303:5] _5 = [ws.c:303:5] [ws.c:303:5] data_47(D)->state.feat;
+  [ws.c:303:5] _6 = [ws.c:303:5] _5->log_level;
+  [ws.c:303:5] if (_6 > 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 31>; [INV]
+
+  <bb 7> :
+  [ws.c:303:5] _7 = [ws.c:303:5] Curl_trc_feat_ws.log_level;
+  [ws.c:303:5] if (_7 > 0)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 31>; [INV]
+
+  <bb 8> :
+  [ws.c:303:5] _8 = [ws.c:303:5] [ws.c:303:5] dec_46(D)->head[0];
+  [ws.c:303:5] _9 = (signed char) _8;
+  [ws.c:303:5] if (_9 < 0)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 9> :
+  [ws.c:303:5] iftmp.61_49 = [ws.c:303:5] "";
+  [0:0] goto <bb 11>; [INV]
+
+  <bb 10> :
+  [ws.c:303:5] iftmp.61_48 = [ws.c:303:5] " NON-FINAL";
+
+  <bb 11> :
+  # iftmp.61_41 = PHI <[ws.c:303:5] iftmp.61_49(9), [ws.c:303:5] iftmp.61_48(10)>
+  [ws.c:303:5] _10 = [ws.c:303:5] [ws.c:303:5] dec_46(D)->head[0];
+  [ws.c:303:5] _11 = (int) _10;
+  [ws.c:303:5] _12 = ws_frame_name_of_op (_11);
+  [ws.c:303:5] Curl_trc_ws (data_47(D), [ws.c:303:5] "decoded %s [%s%s]", msg_51(D), _12, iftmp.61_41);
+  goto <bb 31>; [INV]
+
+  <bb 12> :
+[ws.c:307:3] <L14>:
+  [ws.c:308:11] _13 = [ws.c:308:11] dec_46(D)->head_len;
+  [ws.c:308:27] _14 = [ws.c:308:27] dec_46(D)->head_total;
+  [ws.c:308:7] if (_13 < _14)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 22>; [INV]
+
+  <bb 13> :
+  [ws.c:309:7] if (data_47(D) != 0B)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 31>; [INV]
+
+  <bb 14> :
+  [ws.c:309:7] _15 = [ws.c:309:7] BIT_FIELD_REF <[ws.c:309:7] data_47(D)->set, 8, 16808>;
+  [ws.c:309:7] _16 = _15 & 32;
+  [ws.c:309:7] if (_16 != 0)
+    goto <bb 15>; [INV]
+  else
+    goto <bb 31>; [INV]
+
+  <bb 15> :
+  [ws.c:309:7] _17 = [ws.c:309:7] [ws.c:309:7] data_47(D)->state.feat;
+  [ws.c:309:7] if (_17 == 0B)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 16> :
+  [ws.c:309:7] _18 = [ws.c:309:7] [ws.c:309:7] data_47(D)->state.feat;
+  [ws.c:309:7] _19 = [ws.c:309:7] _18->log_level;
+  [ws.c:309:7] if (_19 > 0)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 31>; [INV]
+
+  <bb 17> :
+  [ws.c:309:7] _20 = [ws.c:309:7] Curl_trc_feat_ws.log_level;
+  [ws.c:309:7] if (_20 > 0)
+    goto <bb 18>; [INV]
+  else
+    goto <bb 31>; [INV]
+
+  <bb 18> :
+  [ws.c:309:7] _21 = [ws.c:309:7] dec_46(D)->head_total;
+  [ws.c:309:7] _22 = [ws.c:309:7] dec_46(D)->head_len;
+  [ws.c:309:7] _23 = [ws.c:309:7] [ws.c:309:7] dec_46(D)->head[0];
+  [ws.c:309:7] _24 = (signed char) _23;
+  [ws.c:309:7] if (_24 < 0)
+    goto <bb 19>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 19> :
+  [ws.c:309:7] iftmp.62_58 = [ws.c:309:7] "";
+  [0:0] goto <bb 21>; [INV]
+
+  <bb 20> :
+  [ws.c:309:7] iftmp.62_57 = [ws.c:309:7] " NON-FINAL";
+
+  <bb 21> :
+  # iftmp.62_42 = PHI <[ws.c:309:7] iftmp.62_58(19), [ws.c:309:7] iftmp.62_57(20)>
+  [ws.c:309:7] _25 = [ws.c:309:7] [ws.c:309:7] dec_46(D)->head[0];
+  [ws.c:309:7] _26 = (int) _25;
+  [ws.c:309:7] _27 = ws_frame_name_of_op (_26);
+  [ws.c:309:7] Curl_trc_ws (data_47(D), [ws.c:309:7] "decoded %s [%s%s](%d/%d)", msg_51(D), _27, iftmp.62_42, _22, _21);
+  goto <bb 31>; [INV]
+
+  <bb 22> :
+  [ws.c:315:7] if (data_47(D) != 0B)
+    goto <bb 23>; [INV]
+  else
+    goto <bb 31>; [INV]
+
+  <bb 23> :
+  [ws.c:315:7] _28 = [ws.c:315:7] BIT_FIELD_REF <[ws.c:315:7] data_47(D)->set, 8, 16808>;
+  [ws.c:315:7] _29 = _28 & 32;
+  [ws.c:315:7] if (_29 != 0)
+    goto <bb 24>; [INV]
+  else
+    goto <bb 31>; [INV]
+
+  <bb 24> :
+  [ws.c:315:7] _30 = [ws.c:315:7] [ws.c:315:7] data_47(D)->state.feat;
+  [ws.c:315:7] if (_30 == 0B)
+    goto <bb 26>; [INV]
+  else
+    goto <bb 25>; [INV]
+
+  <bb 25> :
+  [ws.c:315:7] _31 = [ws.c:315:7] [ws.c:315:7] data_47(D)->state.feat;
+  [ws.c:315:7] _32 = [ws.c:315:7] _31->log_level;
+  [ws.c:315:7] if (_32 > 0)
+    goto <bb 26>; [INV]
+  else
+    goto <bb 31>; [INV]
+
+  <bb 26> :
+  [ws.c:315:7] _33 = [ws.c:315:7] Curl_trc_feat_ws.log_level;
+  [ws.c:315:7] if (_33 > 0)
+    goto <bb 27>; [INV]
+  else
+    goto <bb 31>; [INV]
+
+  <bb 27> :
+  [ws.c:315:7] _34 = [ws.c:315:7] dec_46(D)->payload_len;
+  [ws.c:315:7] _35 = [ws.c:315:7] dec_46(D)->payload_offset;
+  [ws.c:315:7] _36 = [ws.c:315:7] [ws.c:315:7] dec_46(D)->head[0];
+  [ws.c:315:7] _37 = (signed char) _36;
+  [ws.c:315:7] if (_37 < 0)
+    goto <bb 28>; [INV]
+  else
+    goto <bb 29>; [INV]
+
+  <bb 28> :
+  [ws.c:315:7] iftmp.63_54 = [ws.c:315:7] "";
+  [0:0] goto <bb 30>; [INV]
+
+  <bb 29> :
+  [ws.c:315:7] iftmp.63_53 = [ws.c:315:7] " NON-FINAL";
+
+  <bb 30> :
+  # iftmp.63_43 = PHI <[ws.c:315:7] iftmp.63_54(28), [ws.c:315:7] iftmp.63_53(29)>
+  [ws.c:315:7] _38 = [ws.c:315:7] [ws.c:315:7] dec_46(D)->head[0];
+  [ws.c:315:7] _39 = (int) _38;
+  [ws.c:315:7] _40 = ws_frame_name_of_op (_39);
+  [ws.c:315:7] Curl_trc_ws (data_47(D), [ws.c:315:7] "decoded %s [%s%s payload=%ld/%ld]", msg_51(D), _40, iftmp.63_43, _35, _34);
+
+  <bb 31> :
+<L43>:
+  [ws.c:323:1] return;
+
+}
+
+
+
+;; Function ws_cw_init (ws_cw_init, funcdef_no=115, decl_uid=11182, cgraph_uid=116, symbol_order=115)
+
+CURLcode ws_cw_init (struct Curl_easy * data, struct Curl_cwriter * writer)
+{
+  struct ws_cw_ctx * ctx;
+  struct bufq * _1;
+  CURLcode _6;
+
+  <bb 2> :
+  [ws.c:594:21] ctx_4 = [ws.c:594:33] writer_3(D)->ctx;
+  [ws.c:596:3] _1 = [ws.c:596:3] &[ws.c:596:23] ctx_4->buf;
+  [ws.c:596:3] Curl_bufq_init2 (_1, 65535, 1, 1);
+  [ws.c:597:10] _6 = 0;
+  [ws.c:597:10] return _6;
+
+}
+
+
+
+;; Function ws_frame_flags2firstbyte (ws_frame_flags2firstbyte, funcdef_no=106, decl_uid=11057, cgraph_uid=107, symbol_order=106)
+
+CURLcode ws_frame_flags2firstbyte (struct Curl_easy * data, unsigned int flags, _Bool contfragment, unsigned char * pfirstbyte)
+{
+  unsigned int _1;
+  unsigned char _2;
+  unsigned char _3;
+  struct curl_trc_feat * _4;
+  struct curl_trc_feat * _5;
+  int _6;
+  int _7;
+  unsigned char _8;
+  unsigned char _9;
+  struct curl_trc_feat * _10;
+  struct curl_trc_feat * _11;
+  int _12;
+  _Bool _13;
+  unsigned char _14;
+  CURLcode _15;
+  unsigned char iftmp.25_16;
+  unsigned char iftmp.26_17;
+  unsigned char iftmp.27_18;
+  CURLcode _28;
+  CURLcode _30;
+  CURLcode _32;
+  CURLcode _34;
+  CURLcode _36;
+  CURLcode _38;
+  unsigned char iftmp.27_40;
+  unsigned char iftmp.27_41;
+  CURLcode _43;
+  CURLcode _45;
+  CURLcode _47;
+  CURLcode _50;
+  unsigned char iftmp.26_51;
+  unsigned char iftmp.26_52;
+  CURLcode _54;
+  unsigned char iftmp.25_55;
+  unsigned char iftmp.25_56;
+  CURLcode _58;
+  CURLcode _60;
+  CURLcode _63;
+  CURLcode _65;
+
+  <bb 2> :
+  [ws.c:238:15] [ws.c:238:3] *pfirstbyte_23(D) = 0;
+  [ws.c:239:16] _1 = flags_25(D) & 4294967263;
+  [ws.c:239:3] switch (_1) <[ws.c:290:5] default: <L41> [INV], [ws.c:240:5] case 0: <L0> [INV], [ws.c:258:5] case 1: <L22> [INV], [ws.c:265:5] case 2: <L27> [INV], [ws.c:249:5] case 4: <L12> [INV], [ws.c:262:5] case 5: <L26> [INV], [ws.c:269:5] case 6: <L31> [INV], [ws.c:272:5] case 8: <L35> [INV], [ws.c:275:5] case 12: <L36> [INV], [ws.c:278:5] case 16: <L37> [INV], [ws.c:281:5] case 20: <L38> [INV], [ws.c:284:5] case 64: <L39> [INV], [ws.c:287:5] case 68: <L40> [INV]>
+
+  <bb 3> :
+[ws.c:240:5] <L0>:
+  [ws.c:241:9] if (contfragment_39(D) != 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 4> :
+  [ws.c:242:9] if (data_26(D) != 0B)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 5> :
+  [ws.c:242:9] _2 = [ws.c:242:9] BIT_FIELD_REF <[ws.c:242:9] data_26(D)->set, 8, 16808>;
+  [ws.c:242:9] _3 = _2 & 32;
+  [ws.c:242:9] if (_3 != 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 6> :
+  [ws.c:242:9] _4 = [ws.c:242:9] [ws.c:242:9] data_26(D)->state.feat;
+  [ws.c:242:9] if (_4 == 0B)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 7> :
+  [ws.c:242:9] _5 = [ws.c:242:9] [ws.c:242:9] data_26(D)->state.feat;
+  [ws.c:242:9] _6 = [ws.c:242:9] _5->log_level;
+  [ws.c:242:9] if (_6 > 0)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 8> :
+  [ws.c:242:9] _7 = [ws.c:242:9] Curl_trc_feat_ws.log_level;
+  [ws.c:242:9] if (_7 > 0)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 9> :
+  [ws.c:242:9] Curl_trc_ws (data_26(D), [ws.c:242:9] "no flags given; interpreting as continuation fragment for compatibility");
+
+  <bb 10> :
+  [ws.c:244:21] [ws.c:244:9] *pfirstbyte_23(D) = 128;
+  [ws.c:245:16] _63 = 0;
+  [ws.c:245:16] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:245:16] goto <bb 40>; [INV]
+
+  <bb 11> :
+  [ws.c:247:7] Curl_failf (data_26(D), [ws.c:247:19] "[WS] no flags given");
+  [ws.c:248:14] _60 = 43;
+  [ws.c:248:14] goto <bb 40>; [INV]
+
+  <bb 12> :
+[ws.c:249:5] <L12>:
+  [ws.c:250:9] if (contfragment_39(D) != 0)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 13> :
+  [ws.c:251:9] if (data_26(D) != 0B)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 18>; [INV]
+
+  <bb 14> :
+  [ws.c:251:9] _8 = [ws.c:251:9] BIT_FIELD_REF <[ws.c:251:9] data_26(D)->set, 8, 16808>;
+  [ws.c:251:9] _9 = _8 & 32;
+  [ws.c:251:9] if (_9 != 0)
+    goto <bb 15>; [INV]
+  else
+    goto <bb 18>; [INV]
+
+  <bb 15> :
+  [ws.c:251:9] _10 = [ws.c:251:9] [ws.c:251:9] data_26(D)->state.feat;
+  [ws.c:251:9] if (_10 == 0B)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 16> :
+  [ws.c:251:9] _11 = [ws.c:251:9] [ws.c:251:9] data_26(D)->state.feat;
+  [ws.c:251:9] _12 = [ws.c:251:9] _11->log_level;
+  [ws.c:251:9] if (_12 > 0)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 18>; [INV]
+
+  <bb 17> :
+  [ws.c:251:9] Curl_infof (data_26(D), [ws.c:251:9] "[WS] setting CURLWS_CONT flag without message type is supported for compatibility but highly discouraged");
+
+  <bb 18> :
+  [ws.c:253:21] [ws.c:253:9] *pfirstbyte_23(D) = 0;
+  [ws.c:254:16] _50 = 0;
+  [ws.c:254:16] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:254:16] goto <bb 40>; [INV]
+
+  <bb 19> :
+  [ws.c:256:7] Curl_failf (data_26(D), [ws.c:256:19] "[WS] No ongoing fragmented message to continue");
+  [ws.c:257:14] _47 = 43;
+  [ws.c:257:14] goto <bb 40>; [INV]
+
+  <bb 20> :
+[ws.c:258:5] <L22>:
+  [ws.c:259:19] if (contfragment_39(D) != 0)
+    goto <bb 21>; [INV]
+  else
+    goto <bb 22>; [INV]
+
+  <bb 21> :
+  [ws.c:259:19] iftmp.25_56 = 128;
+  [0:0] goto <bb 23>; [INV]
+
+  <bb 22> :
+  [ws.c:259:19] iftmp.25_55 = 129;
+
+  <bb 23> :
+  # iftmp.25_16 = PHI <[ws.c:259:19] iftmp.25_56(21), [ws.c:259:19] iftmp.25_55(22)>
+  [ws.c:259:19] [ws.c:259:7] *pfirstbyte_23(D) = iftmp.25_16;
+  [ws.c:261:14] _58 = 0;
+  [ws.c:261:14] goto <bb 40>; [INV]
+
+  <bb 24> :
+[ws.c:262:5] <L26>:
+  [ws.c:263:54] _13 = ~contfragment_39(D);
+  [ws.c:263:54] _14 = (unsigned char) _13;
+  [ws.c:263:19] [ws.c:263:7] *pfirstbyte_23(D) = _14;
+  [ws.c:264:14] _45 = 0;
+  [ws.c:264:14] goto <bb 40>; [INV]
+
+  <bb 25> :
+[ws.c:265:5] <L27>:
+  [ws.c:266:19] if (contfragment_39(D) != 0)
+    goto <bb 26>; [INV]
+  else
+    goto <bb 27>; [INV]
+
+  <bb 26> :
+  [ws.c:266:19] iftmp.26_52 = 128;
+  [0:0] goto <bb 28>; [INV]
+
+  <bb 27> :
+  [ws.c:266:19] iftmp.26_51 = 130;
+
+  <bb 28> :
+  # iftmp.26_17 = PHI <[ws.c:266:19] iftmp.26_52(26), [ws.c:266:19] iftmp.26_51(27)>
+  [ws.c:266:19] [ws.c:266:7] *pfirstbyte_23(D) = iftmp.26_17;
+  [ws.c:268:14] _54 = 0;
+  [ws.c:268:14] goto <bb 40>; [INV]
+
+  <bb 29> :
+[ws.c:269:5] <L31>:
+  [ws.c:270:19] if (contfragment_39(D) != 0)
+    goto <bb 30>; [INV]
+  else
+    goto <bb 31>; [INV]
+
+  <bb 30> :
+  [ws.c:270:19] iftmp.27_41 = 0;
+  [0:0] goto <bb 32>; [INV]
+
+  <bb 31> :
+  [ws.c:270:19] iftmp.27_40 = 2;
+
+  <bb 32> :
+  # iftmp.27_18 = PHI <[ws.c:270:19] iftmp.27_41(30), [ws.c:270:19] iftmp.27_40(31)>
+  [ws.c:270:19] [ws.c:270:7] *pfirstbyte_23(D) = iftmp.27_18;
+  [ws.c:271:14] _43 = 0;
+  [ws.c:271:14] goto <bb 40>; [INV]
+
+  <bb 33> :
+[ws.c:272:5] <L35>:
+  [ws.c:273:19] [ws.c:273:7] *pfirstbyte_23(D) = 136;
+  [ws.c:274:14] _38 = 0;
+  [ws.c:274:14] goto <bb 40>; [INV]
+
+  <bb 34> :
+[ws.c:275:5] <L36>:
+  [ws.c:276:7] Curl_failf (data_26(D), [ws.c:276:19] "[WS] CLOSE frame must not be fragmented");
+  [ws.c:277:14] _36 = 43;
+  [ws.c:277:14] goto <bb 40>; [INV]
+
+  <bb 35> :
+[ws.c:278:5] <L37>:
+  [ws.c:279:19] [ws.c:279:7] *pfirstbyte_23(D) = 137;
+  [ws.c:280:14] _34 = 0;
+  [ws.c:280:14] goto <bb 40>; [INV]
+
+  <bb 36> :
+[ws.c:281:5] <L38>:
+  [ws.c:282:7] Curl_failf (data_26(D), [ws.c:282:19] "[WS] PING frame must not be fragmented");
+  [ws.c:283:14] _32 = 43;
+  [ws.c:283:14] goto <bb 40>; [INV]
+
+  <bb 37> :
+[ws.c:284:5] <L39>:
+  [ws.c:285:19] [ws.c:285:7] *pfirstbyte_23(D) = 138;
+  [ws.c:286:14] _30 = 0;
+  [ws.c:286:14] goto <bb 40>; [INV]
+
+  <bb 38> :
+[ws.c:287:5] <L40>:
+  [ws.c:288:7] Curl_failf (data_26(D), [ws.c:288:19] "[WS] PONG frame must not be fragmented");
+  [ws.c:289:14] _28 = 43;
+  [ws.c:289:14] goto <bb 40>; [INV]
+
+  <bb 39> :
+[ws.c:290:5] <L41>:
+  [ws.c:291:7] Curl_failf (data_26(D), [ws.c:291:19] "[WS] unknown flags: %x", flags_25(D));
+  [ws.c:292:14] _65 = 43;
+
+  <bb 40> :
+  # _15 = PHI <[ws.c:245:16] _63(10), [ws.c:248:14] _60(11), [ws.c:254:16] _50(18), [ws.c:257:14] _47(19), [ws.c:261:14] _58(23), [ws.c:264:14] _45(24), [ws.c:268:14] _54(28), [ws.c:271:14] _43(32), [ws.c:274:14] _38(33), [ws.c:277:14] _36(34), [ws.c:280:14] _34(35), [ws.c:283:14] _32(36), [ws.c:286:14] _30(37), [ws.c:289:14] _28(38), [ws.c:292:14] _65(39)>
+  return _15;
+
+}
+
+
+
+;; Function ws_enc_add_frame (ws_enc_add_frame, funcdef_no=123, decl_uid=11276, cgraph_uid=124, symbol_order=124)
+
+CURLcode ws_enc_add_frame (struct Curl_easy * data, struct ws_encoder * enc, unsigned int flags, curl_off_t payload_len, struct bufq * out)
+{
+  size_t nwritten;
+  size_t hlen;
+  CURLcode result;
+  unsigned char head[14];
+  unsigned char firstb;
+  long int _1;
+  long int _2;
+  unsigned char _3;
+  unsigned char _4;
+  _Bool _5;
+  int _6;
+  unsigned int _7;
+  unsigned int _8;
+  <unnamed-unsigned:1> _9;
+  unsigned int _10;
+  unsigned int _11;
+  unsigned int _12;
+  unsigned char firstb.23_13;
+  unsigned char _14;
+  long int _15;
+  unsigned char _16;
+  long int _17;
+  unsigned char _18;
+  long int _19;
+  unsigned char _20;
+  long int _21;
+  unsigned char _22;
+  long int _23;
+  unsigned char _24;
+  long int _25;
+  unsigned char _26;
+  long int _27;
+  unsigned char _28;
+  unsigned char _29;
+  long int _30;
+  unsigned char _31;
+  unsigned char _32;
+  unsigned char _33;
+  unsigned char _34;
+  long int _35;
+  unsigned char[4] * _36;
+  unsigned char[4] * _37;
+  unsigned char * _38;
+  long unsigned int nwritten.24_39;
+  CURLcode _41;
+  CURLcode _55;
+  CURLcode _57;
+  CURLcode _59;
+  CURLcode _89;
+  CURLcode _90;
+  CURLcode _91;
+  CURLcode _92;
+  CURLcode _93;
+  CURLcode _95;
+  CURLcode _97;
+
+  <bb 2> :
+  [ws.c:810:17] firstb = 0;
+  [ws.c:815:5] if (payload_len_47(D) < 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  [ws.c:816:5] Curl_failf (data_49(D), [ws.c:816:17] "[WS] starting new frame with negative payload length %ld", payload_len_47(D));
+  [ws.c:818:12] _97 = 55;
+  [ws.c:818:12] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:818:12] goto <bb 31>; [INV]
+
+  <bb 4> :
+  [ws.c:821:9] _1 = [ws.c:821:9] enc_48(D)->payload_remain;
+  [ws.c:821:5] if (_1 > 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  [ws.c:824:53] _2 = [ws.c:824:53] enc_48(D)->payload_remain;
+  [ws.c:823:5] Curl_failf (data_49(D), [ws.c:823:17] "[WS] starting new frame with %zd bytes from last one remaining to be sent", _2);
+  [ws.c:825:12] _95 = 55;
+  [ws.c:825:12] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:825:12] goto <bb 31>; [INV]
+
+  <bb 6> :
+  [ws.c:828:53] _3 = [ws.c:828:53] BIT_FIELD_REF <[ws.c:828:53] *enc_48(D), 8, 200>;
+  [ws.c:828:12] _4 = _3 & 1;
+  [ws.c:828:12] _5 = _4 != 0;
+  [ws.c:828:12] _6 = (int) _5;
+  [ws.c:828:12] result_52 = ws_frame_flags2firstbyte (data_49(D), flags_50(D), _6, [ws.c:828:12] &firstb);
+  [ws.c:829:5] if (result_52 != 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  [ws.c:830:12] _93 = result_52;
+  [ws.c:830:12] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:830:12] goto <bb 31>; [INV]
+
+  <bb 8> :
+  [ws.c:834:12] _7 = flags_50(D) & 3;
+  [ws.c:834:5] if (_7 != 0)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 9> :
+  [ws.c:835:59] _8 = flags_50(D) >> 2;
+  [ws.c:835:59] _9 = (<unnamed-unsigned:1>) _8;
+  [ws.c:835:23] [ws.c:835:8] enc_48(D)->contfragment = _9;
+
+  <bb 10> :
+  [ws.c:838:12] _10 = flags_50(D) & 16;
+  [ws.c:838:5] if (_10 != 0)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 11> :
+  [ws.c:838:26] if (payload_len_47(D) > 125)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 12> :
+  [ws.c:839:5] Curl_failf (data_49(D), [ws.c:839:17] "[WS] given PING frame is too big");
+  [ws.c:840:12] _55 = 100;
+  [ws.c:840:12] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:840:12] goto <bb 31>; [INV]
+
+  <bb 13> :
+  [ws.c:842:12] _11 = flags_50(D) & 64;
+  [ws.c:842:5] if (_11 != 0)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 14> :
+  [ws.c:842:26] if (payload_len_47(D) > 125)
+    goto <bb 15>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 15> :
+  [ws.c:843:5] Curl_failf (data_49(D), [ws.c:843:17] "[WS] given PONG frame is too big");
+  [ws.c:844:12] _57 = 100;
+  [ws.c:844:12] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:844:12] goto <bb 31>; [INV]
+
+  <bb 16> :
+  [ws.c:846:12] _12 = flags_50(D) & 8;
+  [ws.c:846:5] if (_12 != 0)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 17> :
+  [ws.c:846:27] if (payload_len_47(D) > 125)
+    goto <bb 18>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 18> :
+  [ws.c:847:5] Curl_failf (data_49(D), [ws.c:847:17] "[WS] given CLOSE frame is too big");
+  [ws.c:848:12] _59 = 100;
+  [ws.c:848:12] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:848:12] goto <bb 31>; [INV]
+
+  <bb 19> :
+  [ws.c:851:28] firstb.23_13 = firstb;
+  [ws.c:851:28] [ws.c:851:16] enc_48(D)->firstbyte = firstb.23_13;
+  [ws.c:851:16] _14 = [ws.c:851:16] enc_48(D)->firstbyte;
+  [ws.c:851:11] [ws.c:851:7] head[0] = _14;
+  [ws.c:852:5] if (payload_len_47(D) > 65535)
+    goto <bb 20>; [INV]
+  else
+    goto <bb 21>; [INV]
+
+  <bb 20> :
+  [ws.c:853:13] [ws.c:853:9] head[1] = 255;
+  [ws.c:854:44] _15 = payload_len_47(D) >> 56;
+  [ws.c:854:15] _16 = (unsigned char) _15;
+  [ws.c:854:13] [ws.c:854:9] head[2] = _16;
+  [ws.c:855:44] _17 = payload_len_47(D) >> 48;
+  [ws.c:855:15] _18 = (unsigned char) _17;
+  [ws.c:855:13] [ws.c:855:9] head[3] = _18;
+  [ws.c:856:44] _19 = payload_len_47(D) >> 40;
+  [ws.c:856:15] _20 = (unsigned char) _19;
+  [ws.c:856:13] [ws.c:856:9] head[4] = _20;
+  [ws.c:857:44] _21 = payload_len_47(D) >> 32;
+  [ws.c:857:15] _22 = (unsigned char) _21;
+  [ws.c:857:13] [ws.c:857:9] head[5] = _22;
+  [ws.c:858:44] _23 = payload_len_47(D) >> 24;
+  [ws.c:858:15] _24 = (unsigned char) _23;
+  [ws.c:858:13] [ws.c:858:9] head[6] = _24;
+  [ws.c:859:44] _25 = payload_len_47(D) >> 16;
+  [ws.c:859:15] _26 = (unsigned char) _25;
+  [ws.c:859:13] [ws.c:859:9] head[7] = _26;
+  [ws.c:860:44] _27 = payload_len_47(D) >> 8;
+  [ws.c:860:15] _28 = (unsigned char) _27;
+  [ws.c:860:13] [ws.c:860:9] head[8] = _28;
+  [ws.c:861:15] _29 = (unsigned char) payload_len_47(D);
+  [ws.c:861:13] [ws.c:861:9] head[9] = _29;
+  [ws.c:862:10] hlen_77 = 10;
+  [0:0] goto <bb 24>; [INV]
+
+  <bb 21> :
+  [ws.c:864:10] if (payload_len_47(D) > 125)
+    goto <bb 22>; [INV]
+  else
+    goto <bb 23>; [INV]
+
+  <bb 22> :
+  [ws.c:865:13] [ws.c:865:9] head[1] = 254;
+  [ws.c:866:44] _30 = payload_len_47(D) >> 8;
+  [ws.c:866:15] _31 = (unsigned char) _30;
+  [ws.c:866:13] [ws.c:866:9] head[2] = _31;
+  [ws.c:867:15] _32 = (unsigned char) payload_len_47(D);
+  [ws.c:867:13] [ws.c:867:9] head[3] = _32;
+  [ws.c:868:10] hlen_67 = 4;
+  [0:0] goto <bb 24>; [INV]
+
+  <bb 23> :
+  [ws.c:871:15] _33 = (unsigned char) payload_len_47(D);
+  [ws.c:871:13] _34 = _33 | 128;
+  [ws.c:871:13] [ws.c:871:9] head[1] = _34;
+  [ws.c:872:10] hlen_63 = 2;
+
+  <bb 24> :
+  # hlen_40 = PHI <[ws.c:862:10] hlen_77(20), [ws.c:868:10] hlen_67(22), [ws.c:872:10] hlen_63(23)>
+  [ws.c:875:42] [ws.c:875:28] enc_48(D)->payload_len = payload_len_47(D);
+  [ws.c:875:28] _35 = [ws.c:875:28] enc_48(D)->payload_len;
+  [ws.c:875:23] [ws.c:875:6] enc_48(D)->payload_remain = _35;
+  [ws.c:876:3] ws_enc_info (enc_48(D), data_49(D), [ws.c:876:26] "sending");
+  [ws.c:880:12] _36 = [ws.c:880:12] &[ws.c:880:12] enc_48(D)->mask;
+  [ws.c:880:12] result_82 = Curl_rand_bytes (data_49(D), _36, 4);
+  [ws.c:881:5] if (result_82 != 0)
+    goto <bb 25>; [INV]
+  else
+    goto <bb 26>; [INV]
+
+  <bb 25> :
+  [ws.c:882:12] _92 = result_82;
+  [ws.c:882:12] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:882:12] goto <bb 31>; [INV]
+
+  <bb 26> :
+  [ws.c:891:23] _37 = [ws.c:891:23] &[ws.c:891:27] enc_48(D)->mask;
+  [ws.c:891:10] _38 = [ws.c:891:10] &[ws.c:891:15] head[hlen_40];
+  [ws.c:891:3] memcpy (_38, _37, 4);
+  [ws.c:892:8] hlen_84 = hlen_40 + 4;
+  [ws.c:894:13] [ws.c:894:6] enc_48(D)->xori = 0;
+  [ws.c:896:12] result_88 = Curl_bufq_write (out_86(D), [ws.c:896:33] &head, hlen_84, [ws.c:896:12] &nwritten);
+  [ws.c:897:5] if (result_88 != 0)
+    goto <bb 27>; [INV]
+  else
+    goto <bb 28>; [INV]
+
+  <bb 27> :
+  [ws.c:898:12] _91 = result_88;
+  [ws.c:898:12] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:898:12] goto <bb 31>; [INV]
+
+  <bb 28> :
+  [ws.c:899:15] nwritten.24_39 = nwritten;
+  [ws.c:899:5] if (hlen_84 != nwritten.24_39)
+    goto <bb 29>; [INV]
+  else
+    goto <bb 30>; [INV]
+
+  <bb 29> :
+  [ws.c:902:12] _90 = 55;
+  [ws.c:902:12] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:902:12] goto <bb 31>; [INV]
+
+  <bb 30> :
+  [ws.c:904:10] _89 = 0;
+
+  <bb 31> :
+  # _41 = PHI <[ws.c:818:12] _97(3), [ws.c:825:12] _95(5), [ws.c:830:12] _93(7), [ws.c:840:12] _55(12), [ws.c:844:12] _57(15), [ws.c:848:12] _59(18), [ws.c:882:12] _92(25), [ws.c:898:12] _91(27), [ws.c:902:12] _90(29), [ws.c:904:10] _89(30)>
+  firstb ={v} {CLOBBER};
+  head ={v} {CLOBBER};
+  nwritten ={v} {CLOBBER};
+  return _41;
+
+}
+
+
+
+;; Function ws_frame_firstbyte2flags (ws_frame_firstbyte2flags, funcdef_no=105, decl_uid=11037, cgraph_uid=106, symbol_order=105)
+
+int ws_frame_firstbyte2flags (struct Curl_easy * data, unsigned char firstbyte, int cont_flags)
+{
+  int _1;
+  int _2;
+  int _3;
+  int _4;
+  int _5;
+  int _6;
+  int _7;
+  int _8;
+  int _9;
+  int _10;
+  int _11;
+  int _12;
+  int _16;
+  int _18;
+  int _19;
+  int _21;
+  int _24;
+  int _25;
+  int _27;
+  int _28;
+  int _30;
+  int _32;
+  int _34;
+  int _36;
+  int _37;
+  int _39;
+  int _40;
+  int _42;
+  int _43;
+  int _45;
+  int _48;
+
+  <bb 2> :
+  [ws.c:157:3] _1 = (int) firstbyte_15(D);
+  [ws.c:157:3] switch (_1) <[ws.c:222:5] default: <L24> [INV], [ws.c:159:5] case 0: <L0> [INV], [ws.c:173:5] case 1: <L6> [INV], [ws.c:187:5] case 2: <L12> [INV], [ws.c:201:5] case 8: <L18> [INV], [ws.c:208:5] case 9: <L20> [INV], [ws.c:215:5] case 10: <L22> [INV], [ws.c:166:5] case 128: <L3> [INV], [ws.c:180:5] case 129: <L9> [INV], [ws.c:194:5] case 130: <L15> [INV], [ws.c:205:5] case 136: <L19> [INV], [ws.c:212:5] case 137: <L21> [INV], [ws.c:219:5] case 138: <L23> [INV]>
+
+  <bb 3> :
+[ws.c:159:5] <L0>:
+  [ws.c:160:23] _2 = cont_flags_20(D) & 4;
+  [ws.c:160:9] if (_2 == 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  [ws.c:161:9] Curl_failf (data_22(D), [ws.c:161:21] "[WS] no ongoing fragmented message to resume");
+  [ws.c:162:16] _45 = 0;
+  [ws.c:162:16] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:162:16] goto <bb 31>; [INV]
+
+  <bb 5> :
+  [ws.c:164:25] _43 = cont_flags_20(D) | 4;
+  [ws.c:164:25] goto <bb 31>; [INV]
+
+  <bb 6> :
+[ws.c:166:5] <L3>:
+  [ws.c:167:23] _3 = cont_flags_20(D) & 4;
+  [ws.c:167:9] if (_3 == 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  [ws.c:168:9] Curl_failf (data_22(D), [ws.c:168:21] "[WS] no ongoing fragmented message to resume");
+  [ws.c:169:16] _30 = 0;
+  [ws.c:169:16] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:169:16] goto <bb 31>; [INV]
+
+  <bb 8> :
+  [ws.c:171:25] _28 = cont_flags_20(D) & -5;
+  [ws.c:171:25] goto <bb 31>; [INV]
+
+  <bb 9> :
+[ws.c:173:5] <L6>:
+  [ws.c:174:21] _4 = cont_flags_20(D) & 4;
+  [ws.c:174:9] if (_4 != 0)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 10> :
+  [ws.c:175:9] Curl_failf (data_22(D), [ws.c:175:21] "[WS] fragmented message interrupted by new TEXT msg");
+  [ws.c:176:16] _42 = 0;
+  [ws.c:176:16] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:176:16] goto <bb 31>; [INV]
+
+  <bb 11> :
+  [ws.c:178:14] _40 = 5;
+  [ws.c:178:14] goto <bb 31>; [INV]
+
+  <bb 12> :
+[ws.c:180:5] <L9>:
+  [ws.c:181:21] _5 = cont_flags_20(D) & 4;
+  [ws.c:181:9] if (_5 != 0)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 13> :
+  [ws.c:182:9] Curl_failf (data_22(D), [ws.c:182:21] "[WS] fragmented message interrupted by new TEXT msg");
+  [ws.c:183:16] _27 = 0;
+  [ws.c:183:16] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:183:16] goto <bb 31>; [INV]
+
+  <bb 14> :
+  [ws.c:185:14] _25 = 1;
+  [ws.c:185:14] goto <bb 31>; [INV]
+
+  <bb 15> :
+[ws.c:187:5] <L12>:
+  [ws.c:188:21] _6 = cont_flags_20(D) & 4;
+  [ws.c:188:9] if (_6 != 0)
+    goto <bb 16>; [INV]
+  else
+    goto <bb 17>; [INV]
+
+  <bb 16> :
+  [ws.c:189:9] Curl_failf (data_22(D), [ws.c:189:21] "[WS] fragmented message interrupted by new BINARY msg");
+  [ws.c:190:16] _39 = 0;
+  [ws.c:190:16] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:190:16] goto <bb 31>; [INV]
+
+  <bb 17> :
+  [ws.c:192:14] _37 = 6;
+  [ws.c:192:14] goto <bb 31>; [INV]
+
+  <bb 18> :
+[ws.c:194:5] <L15>:
+  [ws.c:195:21] _7 = cont_flags_20(D) & 4;
+  [ws.c:195:9] if (_7 != 0)
+    goto <bb 19>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 19> :
+  [ws.c:196:9] Curl_failf (data_22(D), [ws.c:196:21] "[WS] fragmented message interrupted by new BINARY msg");
+  [ws.c:197:16] _24 = 0;
+  [ws.c:197:16] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:197:16] goto <bb 31>; [INV]
+
+  <bb 20> :
+  [ws.c:199:14] _21 = 2;
+  [ws.c:199:14] goto <bb 31>; [INV]
+
+  <bb 21> :
+[ws.c:201:5] <L18>:
+  [ws.c:202:7] Curl_failf (data_22(D), [ws.c:202:19] "[WS] invalid fragmented CLOSE frame");
+  [ws.c:203:14] _36 = 0;
+  [ws.c:203:14] goto <bb 31>; [INV]
+
+  <bb 22> :
+[ws.c:205:5] <L19>:
+  [ws.c:206:14] _19 = 8;
+  [ws.c:206:14] goto <bb 31>; [INV]
+
+  <bb 23> :
+[ws.c:208:5] <L20>:
+  [ws.c:209:7] Curl_failf (data_22(D), [ws.c:209:19] "[WS] invalid fragmented PING frame");
+  [ws.c:210:14] _34 = 0;
+  [ws.c:210:14] goto <bb 31>; [INV]
+
+  <bb 24> :
+[ws.c:212:5] <L21>:
+  [ws.c:213:14] _18 = 16;
+  [ws.c:213:14] goto <bb 31>; [INV]
+
+  <bb 25> :
+[ws.c:215:5] <L22>:
+  [ws.c:216:7] Curl_failf (data_22(D), [ws.c:216:19] "[WS] invalid fragmented PONG frame");
+  [ws.c:217:14] _32 = 0;
+  [ws.c:217:14] goto <bb 31>; [INV]
+
+  <bb 26> :
+[ws.c:219:5] <L23>:
+  [ws.c:220:14] _16 = 64;
+  [ws.c:220:14] goto <bb 31>; [INV]
+
+  <bb 27> :
+[ws.c:222:5] <L24>:
+  [ws.c:223:20] _8 = (int) firstbyte_15(D);
+  [ws.c:223:20] _9 = _8 & 112;
+  [ws.c:223:9] if (_9 != 0)
+    goto <bb 28>; [INV]
+  else
+    goto <bb 29>; [INV]
+
+  <bb 28> :
+  [ws.c:225:9] _10 = (int) firstbyte_15(D);
+  [ws.c:225:9] Curl_failf (data_22(D), [ws.c:225:21] "[WS] invalid reserved bits: %02x", _10);
+  [0:0] goto <bb 30>; [INV]
+
+  <bb 29> :
+  [ws.c:228:9] _11 = (int) firstbyte_15(D);
+  [ws.c:228:9] Curl_failf (data_22(D), [ws.c:228:21] "[WS] invalid opcode: %02x", _11);
+
+  <bb 30> :
+  [ws.c:229:14] _48 = 0;
+
+  <bb 31> :
+  # _12 = PHI <[ws.c:162:16] _45(4), [ws.c:164:25] _43(5), [ws.c:169:16] _30(7), [ws.c:171:25] _28(8), [ws.c:176:16] _42(10), [ws.c:178:14] _40(11), [ws.c:183:16] _27(13), [ws.c:185:14] _25(14), [ws.c:190:16] _39(16), [ws.c:192:14] _37(17), [ws.c:197:16] _24(19), [ws.c:199:14] _21(20), [ws.c:203:14] _36(21), [ws.c:206:14] _19(22), [ws.c:210:14] _34(23), [ws.c:213:14] _18(24), [ws.c:217:14] _32(25), [ws.c:220:14] _16(26), [ws.c:229:14] _48(30)>
+  return _12;
+
+}
+
+
+
+;; Function ws_enc_write_payload (ws_enc_write_payload, funcdef_no=125, decl_uid=11300, cgraph_uid=126, symbol_order=126)
+
+CURLcode ws_enc_write_payload (struct ws_encoder * enc, struct Curl_easy * data, const unsigned char * buf, size_t buflen, struct bufq * out, size_t * pnwritten)
+{
+  unsigned char c;
+  size_t n;
+  size_t len;
+  size_t i;
+  CURLcode result;
+  _Bool _1;
+  long int _2;
+  long int len.29_3;
+  long int _4;
+  const unsigned char * _5;
+  unsigned char _6;
+  unsigned int _7;
+  unsigned char _8;
+  unsigned char _9;
+  _Bool _10;
+  _Bool _11;
+  _Bool _12;
+  unsigned int _13;
+  unsigned int _14;
+  unsigned int _15;
+  unsigned int _16;
+  long int _17;
+  long int i.30_18;
+  long int _19;
+  CURLcode _22;
+  CURLcode _45;
+  CURLcode _51;
+  CURLcode _52;
+
+  <bb 2> :
+  [ws.c:932:14] [ws.c:932:3] *pnwritten_27(D) = 0;
+  [ws.c:933:6] _1 = Curl_bufq_is_full (out_29(D));
+  [ws.c:933:5] if (_1 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  [ws.c:934:12] _52 = 81;
+  [ws.c:934:12] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:934:12] goto <bb 14>; [INV]
+
+  <bb 4> :
+  [ws.c:937:7] len_32 = buflen_31(D);
+  [ws.c:938:27] _2 = [ws.c:938:27] enc_33(D)->payload_remain;
+  [ws.c:938:22] len.29_3 = (long int) len_32;
+  [ws.c:938:5] if (_2 < len.29_3)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  [ws.c:939:22] _4 = [ws.c:939:22] enc_33(D)->payload_remain;
+  [ws.c:939:9] len_34 = (size_t) _4;
+
+  <bb 6> :
+  # len_21 = PHI <[ws.c:937:7] len_32(4), [ws.c:939:9] len_34(5)>
+  [ws.c:941:9] i_35 = 0;
+  [ws.c:941:3] goto <bb 12>; [INV]
+
+  <bb 7> :
+  [ws.c:942:26] _5 = buf_36(D) + i_20;
+  [ws.c:942:26] _6 = [ws.c:942:26] *_5;
+  [ws.c:942:45] _7 = [ws.c:942:45] enc_33(D)->xori;
+  [ws.c:942:41] _8 = [ws.c:942:41] [ws.c:942:35] enc_33(D)->mask[_7];
+  [ws.c:942:19] _9 = _6 ^ _8;
+  [ws.c:942:19] c = _9;
+  [ws.c:943:14] result_39 = Curl_bufq_write (out_29(D), [ws.c:943:35] &c, 1, [ws.c:943:14] &n);
+  [ws.c:944:7] if (result_39 != 0)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 8> :
+  [ws.c:945:18] _10 = result_39 != 81;
+  [ws.c:945:37] _11 = i_20 == 0;
+  [ws.c:945:34] _12 = _10 | _11;
+  [ws.c:945:9] if (_12 != 0)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 9> :
+  [ws.c:946:16] _45 = result_39;
+  [ws.c:946:16] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:946:16] c ={v} {CLOBBER};
+  goto <bb 14>; [INV]
+
+  <bb 10> :
+  [ws.c:949:8] _13 = [ws.c:949:8] enc_33(D)->xori;
+  [ws.c:949:14] _14 = _13 + 1;
+  [ws.c:949:14] [ws.c:949:8] enc_33(D)->xori = _14;
+  [ws.c:950:15] _15 = enc_33(D)->xori;
+  [ws.c:950:15] _16 = _15 & 3;
+  [ws.c:950:15] enc_33(D)->xori = _16;
+  c ={v} {CLOBBER};
+  [ws.c:941:23] i_43 = i_20 + 1;
+  goto <bb 12>; [INV]
+
+  <bb 11> :
+  [ws.c:947:7] c ={v} {CLOBBER};
+  goto <bb 13>; [INV]
+
+  <bb 12> :
+  # i_20 = PHI <[ws.c:941:9] i_35(6), [ws.c:941:23] i_43(10)>
+  [ws.c:941:16] if (i_20 < len_21)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 13> :
+  [ws.c:952:14] [ws.c:952:3] *pnwritten_27(D) = i_20;
+  [ws.c:953:23] _17 = enc_33(D)->payload_remain;
+  [ws.c:953:26] i.30_18 = (long int) i_20;
+  [ws.c:953:23] _19 = _17 - i.30_18;
+  [ws.c:953:23] enc_33(D)->payload_remain = _19;
+  [ws.c:954:3] ws_enc_info (enc_33(D), data_49(D), [ws.c:954:26] "buffered");
+  [ws.c:955:10] _51 = 0;
+
+  <bb 14> :
+  # _22 = PHI <[ws.c:934:12] _52(3), [ws.c:946:16] _45(9), [ws.c:955:10] _51(13)>
+  n ={v} {CLOBBER};
+  return _22;
+
+}
+
+
+
+;; Function ws_enc_add_pending (ws_enc_add_pending, funcdef_no=126, decl_uid=11209, cgraph_uid=127, symbol_order=127)
+
+CURLcode ws_enc_add_pending (struct Curl_easy * data, struct websocket * ws)
+{
+  size_t n;
+  CURLcode result;
+  unsigned int _1;
+  long int _2;
+  struct bufq * _3;
+  long unsigned int _4;
+  long int _5;
+  unsigned int _6;
+  struct ws_encoder * _7;
+  unsigned char _8;
+  unsigned char _9;
+  struct curl_trc_feat * _10;
+  struct curl_trc_feat * _11;
+  int _12;
+  int _13;
+  struct bufq * _14;
+  long unsigned int _15;
+  unsigned char[125] * _16;
+  struct ws_encoder * _17;
+  unsigned char _18;
+  unsigned char _19;
+  struct curl_trc_feat * _20;
+  struct curl_trc_feat * _21;
+  int _22;
+  int _23;
+  struct ws_cntrl_frame * _24;
+  CURLcode _26;
+  CURLcode _41;
+  CURLcode _42;
+  CURLcode _43;
+
+  <bb 2> :
+  [ws.c:964:18] _1 = [ws.c:964:18] [ws.c:964:9] ws_32(D)->pending.type;
+  [ws.c:964:5] if (_1 == 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  [ws.c:965:12] _43 = 0;
+  [ws.c:965:12] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:965:12] goto <bb 23>; [INV]
+
+  <bb 4> :
+  [ws.c:966:13] _2 = [ws.c:966:13] [ws.c:966:8] ws_32(D)->enc.payload_remain;
+  [ws.c:966:5] if (_2 != 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  [ws.c:967:12] _42 = 81;
+  [ws.c:967:12] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:967:12] goto <bb 23>; [INV]
+
+  <bb 6> :
+  [ws.c:969:12] _3 = [ws.c:969:12] &[ws.c:971:32] ws_32(D)->sendbuf;
+  [ws.c:970:52] _4 = [ws.c:970:52] [ws.c:970:43] ws_32(D)->pending.payload_len;
+  [ws.c:969:12] _5 = (long int) _4;
+  [ws.c:969:12] _6 = [ws.c:969:12] [ws.c:969:47] ws_32(D)->pending.type;
+  [ws.c:969:12] _7 = [ws.c:969:12] &[ws.c:969:38] ws_32(D)->enc;
+  [ws.c:969:12] result_35 = ws_enc_add_frame (data_33(D), _7, _6, _5, _3);
+  [ws.c:972:5] if (result_35 != 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 7> :
+  [ws.c:973:5] if (data_33(D) != 0B)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 8> :
+  [ws.c:973:5] _8 = [ws.c:973:5] BIT_FIELD_REF <[ws.c:973:5] data_33(D)->set, 8, 16808>;
+  [ws.c:973:5] _9 = _8 & 32;
+  [ws.c:973:5] if (_9 != 0)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 9> :
+  [ws.c:973:5] _10 = [ws.c:973:5] [ws.c:973:5] data_33(D)->state.feat;
+  [ws.c:973:5] if (_10 == 0B)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 10> :
+  [ws.c:973:5] _11 = [ws.c:973:5] [ws.c:973:5] data_33(D)->state.feat;
+  [ws.c:973:5] _12 = [ws.c:973:5] _11->log_level;
+  [ws.c:973:5] if (_12 > 0)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 11> :
+  [ws.c:973:5] _13 = [ws.c:973:5] Curl_trc_feat_ws.log_level;
+  [ws.c:973:5] if (_13 > 0)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 12> :
+  [ws.c:973:5] Curl_trc_ws (data_33(D), [ws.c:973:5] "ws_enc_cntrl(), error addiong head: %d", result_35);
+
+  <bb 13> :
+  [ws.c:975:5] // predicted unlikely by goto predictor.
+  [ws.c:975:5] goto <bb 22>; [INV]
+
+  <bb 14> :
+  [ws.c:977:12] _14 = [ws.c:977:12] &[ws.c:979:36] ws_32(D)->sendbuf;
+  [ws.c:977:12] _15 = [ws.c:977:12] [ws.c:978:35] ws_32(D)->pending.payload_len;
+  [ws.c:977:60] _16 = [ws.c:977:60] &[ws.c:977:60] [ws.c:977:51] ws_32(D)->pending.payload;
+  [ws.c:977:12] _17 = [ws.c:977:12] &[ws.c:977:36] ws_32(D)->enc;
+  [ws.c:977:12] result_37 = ws_enc_write_payload (_17, data_33(D), _16, _15, _14, [ws.c:977:12] &n);
+  [ws.c:980:5] if (result_37 != 0)
+    goto <bb 15>; [INV]
+  else
+    goto <bb 22>; [INV]
+
+  <bb 15> :
+  [ws.c:981:5] if (data_33(D) != 0B)
+    goto <bb 16>; [INV]
+  else
+    goto <bb 21>; [INV]
+
+  <bb 16> :
+  [ws.c:981:5] _18 = [ws.c:981:5] BIT_FIELD_REF <[ws.c:981:5] data_33(D)->set, 8, 16808>;
+  [ws.c:981:5] _19 = _18 & 32;
+  [ws.c:981:5] if (_19 != 0)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 21>; [INV]
+
+  <bb 17> :
+  [ws.c:981:5] _20 = [ws.c:981:5] [ws.c:981:5] data_33(D)->state.feat;
+  [ws.c:981:5] if (_20 == 0B)
+    goto <bb 19>; [INV]
+  else
+    goto <bb 18>; [INV]
+
+  <bb 18> :
+  [ws.c:981:5] _21 = [ws.c:981:5] [ws.c:981:5] data_33(D)->state.feat;
+  [ws.c:981:5] _22 = [ws.c:981:5] _21->log_level;
+  [ws.c:981:5] if (_22 > 0)
+    goto <bb 19>; [INV]
+  else
+    goto <bb 21>; [INV]
+
+  <bb 19> :
+  [ws.c:981:5] _23 = [ws.c:981:5] Curl_trc_feat_ws.log_level;
+  [ws.c:981:5] if (_23 > 0)
+    goto <bb 20>; [INV]
+  else
+    goto <bb 21>; [INV]
+
+  <bb 20> :
+  [ws.c:981:5] Curl_trc_ws (data_33(D), [ws.c:981:5] "ws_enc_cntrl(), error adding payload: %d", result_37);
+
+  <bb 21> :
+  [ws.c:983:5] // predicted unlikely by goto predictor.
+
+  <bb 22> :
+  # result_25 = PHI <[ws.c:969:12] result_35(13), [ws.c:977:12] result_37(14), [ws.c:977:12] result_37(21)>
+[ws.c:989:1] out:
+  [ws.c:990:10] _24 = [ws.c:990:10] &[ws.c:990:13] ws_32(D)->pending;
+  [ws.c:990:3] memset (_24, 0, 144);
+  [ws.c:991:10] _41 = result_25;
+
+  <bb 23> :
+  # _26 = PHI <[ws.c:965:12] _43(3), [ws.c:967:12] _42(5), [ws.c:991:10] _41(22)>
+  n ={v} {CLOBBER};
+  return _26;
+
+}
+
+
+
+;; Function ws_enc_write_head (ws_enc_write_head, funcdef_no=124, decl_uid=11291, cgraph_uid=125, symbol_order=125)
+
+CURLcode ws_enc_write_head (struct Curl_easy * data, struct websocket * ws, struct ws_encoder * enc, unsigned int flags, curl_off_t payload_len, struct bufq * out)
+{
+  CURLcode result;
+  unsigned int _1;
+  CURLcode _2;
+  CURLcode _10;
+  CURLcode _16;
+
+  <bb 2> :
+  [ws.c:916:17] _1 = [ws.c:916:17] [ws.c:916:8] ws_6(D)->pending.type;
+  [ws.c:916:5] if (_1 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 3> :
+  [ws.c:917:23] result_9 = ws_enc_add_pending (data_7(D), ws_6(D));
+  [ws.c:918:7] if (result_9 != 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  [ws.c:919:14] _10 = result_9;
+  [ws.c:919:14] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:919:14] goto <bb 6>; [INV]
+
+  <bb 5> :
+  [ws.c:921:10] _16 = ws_enc_add_frame (data_7(D), enc_11(D), flags_12(D), payload_len_13(D), out_14(D));
+
+  <bb 6> :
+  # _2 = PHI <[ws.c:919:14] _10(4), [ws.c:921:10] _16(5)>
+  return _2;
+
+}
+
+
+
+;; Function cr_ws_read (cr_ws_read, funcdef_no=130, decl_uid=11369, cgraph_uid=131, symbol_order=131)
+
+CURLcode cr_ws_read (struct Curl_easy * data, struct Curl_creader * reader, char * buf, size_t blen, size_t * pnread, _Bool * peos)
+{
+  _Bool eos;
+  struct websocket * ws;
+  size_t n;
+  size_t nread;
+  CURLcode result;
+  struct cr_ws_ctx * ctx;
+  unsigned char _1;
+  unsigned char _2;
+  struct connectdata * _3;
+  struct bufq * _4;
+  _Bool _5;
+  unsigned char _6;
+  unsigned char _7;
+  long int _8;
+  unsigned char _9;
+  unsigned char _10;
+  struct curl_trc_feat * _11;
+  struct curl_trc_feat * _12;
+  int _13;
+  int _14;
+  long int _15;
+  long int _16;
+  long int blen.14_17;
+  long int _18;
+  struct Curl_creader * _19;
+  _Bool eos.15_20;
+  struct bufq * _21;
+  _Bool _22;
+  _Bool _23;
+  struct Curl_creader * _24;
+  long unsigned int nread.16_25;
+  unsigned char _26;
+  unsigned char _27;
+  long unsigned int nread.17_28;
+  <unnamed-unsigned:1> _29;
+  int _30;
+  _Bool _31;
+  long int _32;
+  struct bufq * _33;
+  _Bool _34;
+  struct bufq * _35;
+  long unsigned int nread.18_36;
+  long int nread.19_37;
+  struct ws_encoder * _38;
+  struct bufq * _39;
+  long unsigned int nread.20_40;
+  struct ws_encoder * _41;
+  unsigned char _42;
+  unsigned char _43;
+  struct curl_trc_feat * _44;
+  struct curl_trc_feat * _45;
+  int _46;
+  int _47;
+  long unsigned int n.21_48;
+  long unsigned int nread.22_49;
+  struct bufq * _50;
+  unsigned char _51;
+  unsigned char _52;
+  struct bufq * _53;
+  _Bool _54;
+  unsigned char _55;
+  unsigned char _56;
+  struct curl_trc_feat * _57;
+  struct curl_trc_feat * _58;
+  int _59;
+  int _60;
+  _Bool _61;
+  int _62;
+  long unsigned int _63;
+  CURLcode _68;
+  CURLcode _108;
+  CURLcode _111;
+  CURLcode _119;
+  CURLcode _121;
+  CURLcode _123;
+
+  <bb 2> :
+  [ws.c:1116:21] ctx_80 = [ws.c:1116:33] reader_79(D)->ctx;
+  [ws.c:1117:12] result_81 = 0;
+  [ws.c:1122:11] [ws.c:1122:3] *pnread_82(D) = 0;
+  [ws.c:1123:6] _1 = [ws.c:1123:6] BIT_FIELD_REF <[ws.c:1123:9] *ctx_80, 8, 256>;
+  [ws.c:1123:6] _2 = _1 & 2;
+  [ws.c:1123:5] if (_2 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  [ws.c:1124:11] [ws.c:1124:5] *peos_98(D) = 1;
+  [ws.c:1125:12] _123 = 0;
+  [ws.c:1125:12] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1125:12] goto <bb 49>; [INV]
+
+  <bb 4> :
+  [ws.c:1128:8] _3 = [ws.c:1128:8] data_84(D)->conn;
+  [ws.c:1128:8] ws_86 = Curl_conn_meta_get (_3, [ws.c:1128:39] "meta:proto:ws:conn");
+  [ws.c:1129:5] if (ws_86 == 0B)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  [ws.c:1130:5] Curl_failf (data_84(D), [ws.c:1130:17] "[WS] not a websocket transfer");
+  [ws.c:1131:12] _121 = 2;
+  [ws.c:1131:12] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1131:12] goto <bb 49>; [INV]
+
+  <bb 6> :
+  [ws.c:1134:25] _4 = [ws.c:1134:25] &[ws.c:1134:28] ws_86->sendbuf;
+  [ws.c:1134:6] _5 = Curl_bufq_is_empty (_4);
+  [ws.c:1134:5] if (_5 != 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 38>; [INV]
+
+  <bb 7> :
+  [ws.c:1135:8] _6 = [ws.c:1135:8] BIT_FIELD_REF <[ws.c:1135:11] *ctx_80, 8, 256>;
+  [ws.c:1135:8] _7 = _6 & 1;
+  [ws.c:1135:7] if (_7 != 0)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 8> :
+  [ws.c:1136:16] [ws.c:1136:10] ctx_80->eos = 1;
+  [ws.c:1137:13] [ws.c:1137:7] *peos_98(D) = 1;
+  [ws.c:1138:14] _111 = 0;
+  [ws.c:1138:14] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1138:14] goto <bb 49>; [INV]
+
+  <bb 9> :
+  [ws.c:1141:15] _8 = [ws.c:1141:15] [ws.c:1141:10] ws_86->enc.payload_remain;
+  [ws.c:1141:7] if (_8 != 0)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 18>; [INV]
+
+  <bb 10> :
+  [ws.c:1142:7] if (data_84(D) != 0B)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 11> :
+  [ws.c:1142:7] _9 = [ws.c:1142:7] BIT_FIELD_REF <[ws.c:1142:7] data_84(D)->set, 8, 16808>;
+  [ws.c:1142:7] _10 = _9 & 32;
+  [ws.c:1142:7] if (_10 != 0)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 12> :
+  [ws.c:1142:7] _11 = [ws.c:1142:7] [ws.c:1142:7] data_84(D)->state.feat;
+  [ws.c:1142:7] if (_11 == 0B)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 13> :
+  [ws.c:1142:7] _12 = [ws.c:1142:7] [ws.c:1142:7] data_84(D)->state.feat;
+  [ws.c:1142:7] _13 = [ws.c:1142:7] _12->log_level;
+  [ws.c:1142:7] if (_13 > 0)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 14> :
+  [ws.c:1142:7] _14 = [ws.c:1142:7] Curl_trc_feat_ws.log_level;
+  [ws.c:1142:7] if (_14 > 0)
+    goto <bb 15>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 15> :
+  [ws.c:1142:7] _15 = [ws.c:1142:7] [ws.c:1142:7] ws_86->enc.payload_remain;
+  [ws.c:1142:7] Curl_trc_ws (data_84(D), [ws.c:1142:7] "current frame, %ld remaining", _15);
+
+  <bb 16> :
+  [ws.c:1144:17] _16 = [ws.c:1144:17] [ws.c:1144:12] ws_86->enc.payload_remain;
+  [ws.c:1144:33] blen.14_17 = (long int) blen_88(D);
+  [ws.c:1144:9] if (_16 < blen.14_17)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 18>; [INV]
+
+  <bb 17> :
+  [ws.c:1145:31] _18 = [ws.c:1145:31] [ws.c:1145:26] ws_86->enc.payload_remain;
+  [ws.c:1145:14] blen_90 = (size_t) _18;
+
+  <bb 18> :
+  # blen_64 = PHI <blen_88(D)(9), blen_88(D)(16), [ws.c:1145:14] blen_90(17)>
+  [ws.c:1148:14] _19 = [ws.c:1148:14] reader_79(D)->next;
+  [ws.c:1148:14] result_93 = Curl_creader_read (data_84(D), _19, buf_91(D), blen_64, [ws.c:1148:14] &nread, [ws.c:1148:14] &eos);
+  [ws.c:1149:7] if (result_93 != 0)
+    goto <bb 19>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 19> :
+  [ws.c:1150:14] _108 = result_93;
+  [ws.c:1150:14] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1150:14] goto <bb 49>; [INV]
+
+  <bb 20> :
+  [ws.c:1151:19] eos.15_20 = eos;
+  [ws.c:1151:19] [ws.c:1151:8] ctx_80->read_eos = eos.15_20;
+  [ws.c:1153:28] _21 = [ws.c:1153:28] &[ws.c:1153:31] ws_86->sendbuf;
+  [ws.c:1153:9] _22 = Curl_bufq_is_empty (_21);
+  [ws.c:1153:8] _23 = ~_22;
+  [ws.c:1153:7] if (_23 != 0)
+    goto <bb 21>; [INV]
+  else
+    goto <bb 22>; [INV]
+
+  <bb 21> :
+  [ws.c:1155:21] [ws.c:1155:10] ctx_80->read_eos = 0;
+  [ws.c:1156:7] _24 = [ws.c:1156:7] reader_79(D)->next;
+  [ws.c:1156:7] Curl_creader_clear_eos (data_84(D), _24);
+  [0:0] goto <bb 26>; [INV]
+
+  <bb 22> :
+  [ws.c:1158:13] nread.16_25 = nread;
+  [ws.c:1158:12] if (nread.16_25 == 0)
+    goto <bb 23>; [INV]
+  else
+    goto <bb 26>; [INV]
+
+  <bb 23> :
+  [ws.c:1160:10] _26 = [ws.c:1160:10] BIT_FIELD_REF <[ws.c:1160:13] *ctx_80, 8, 256>;
+  [ws.c:1160:10] _27 = _26 & 1;
+  [ws.c:1160:9] if (_27 != 0)
+    goto <bb 24>; [INV]
+  else
+    goto <bb 25>; [INV]
+
+  <bb 24> :
+  [ws.c:1161:18] [ws.c:1161:12] ctx_80->eos = 1;
+
+  <bb 25> :
+  [ws.c:1162:15] nread.17_28 = nread;
+  [ws.c:1162:15] [ws.c:1162:7] *pnread_82(D) = nread.17_28;
+  [ws.c:1163:18] _29 = [ws.c:1163:18] ctx_80->eos;
+  [ws.c:1163:18] _30 = (int) _29;
+  [ws.c:1163:18] _31 = _30 != 0;
+  [ws.c:1163:13] [ws.c:1163:7] *peos_98(D) = _31;
+  [ws.c:1164:7] // predicted unlikely by goto predictor.
+  [ws.c:1164:7] goto <bb 42>; [INV]
+
+  <bb 26> :
+  [ws.c:1167:16] _32 = [ws.c:1167:16] [ws.c:1167:11] ws_86->enc.payload_remain;
+  [ws.c:1167:7] if (_32 == 0)
+    goto <bb 27>; [INV]
+  else
+    goto <bb 30>; [INV]
+
+  <bb 27> :
+  [ws.c:1167:54] _33 = [ws.c:1167:54] &[ws.c:1167:57] ws_86->sendbuf;
+  [ws.c:1167:35] _34 = Curl_bufq_is_empty (_33);
+  [ws.c:1167:32] if (_34 != 0)
+    goto <bb 28>; [INV]
+  else
+    goto <bb 30>; [INV]
+
+  <bb 28> :
+  [ws.c:1169:16] _35 = [ws.c:1169:16] &[ws.c:1170:37] ws_86->sendbuf;
+  [ws.c:1169:16] nread.18_36 = nread;
+  [ws.c:1169:16] nread.19_37 = (long int) nread.18_36;
+  [ws.c:1169:16] _38 = [ws.c:1169:16] &[ws.c:1169:47] ws_86->enc;
+  [ws.c:1169:16] result_104 = ws_enc_write_head (data_84(D), ws_86, _38, 2, nread.19_37, _35);
+  [ws.c:1171:9] if (result_104 != 0)
+    goto <bb 29>; [INV]
+  else
+    goto <bb 30>; [INV]
+
+  <bb 29> :
+  [ws.c:1172:9] // predicted unlikely by goto predictor.
+  [ws.c:1172:9] goto <bb 42>; [INV]
+
+  <bb 30> :
+  [ws.c:1175:14] _39 = [ws.c:1175:14] &[ws.c:1176:45] ws_86->sendbuf;
+  [ws.c:1175:14] nread.20_40 = nread;
+  [ws.c:1175:14] _41 = [ws.c:1175:14] &[ws.c:1175:38] ws_86->enc;
+  [ws.c:1175:14] result_106 = ws_enc_write_payload (_41, data_84(D), buf_91(D), nread.20_40, _39, [ws.c:1175:14] &n);
+  [ws.c:1177:7] if (result_106 != 0)
+    goto <bb 31>; [INV]
+  else
+    goto <bb 32>; [INV]
+
+  <bb 31> :
+  [ws.c:1178:7] // predicted unlikely by goto predictor.
+  [ws.c:1178:7] goto <bb 42>; [INV]
+
+  <bb 32> :
+  [ws.c:1179:5] if (data_84(D) != 0B)
+    goto <bb 33>; [INV]
+  else
+    goto <bb 38>; [INV]
+
+  <bb 33> :
+  [ws.c:1179:5] _42 = [ws.c:1179:5] BIT_FIELD_REF <[ws.c:1179:5] data_84(D)->set, 8, 16808>;
+  [ws.c:1179:5] _43 = _42 & 32;
+  [ws.c:1179:5] if (_43 != 0)
+    goto <bb 34>; [INV]
+  else
+    goto <bb 38>; [INV]
+
+  <bb 34> :
+  [ws.c:1179:5] _44 = [ws.c:1179:5] [ws.c:1179:5] data_84(D)->state.feat;
+  [ws.c:1179:5] if (_44 == 0B)
+    goto <bb 36>; [INV]
+  else
+    goto <bb 35>; [INV]
+
+  <bb 35> :
+  [ws.c:1179:5] _45 = [ws.c:1179:5] [ws.c:1179:5] data_84(D)->state.feat;
+  [ws.c:1179:5] _46 = [ws.c:1179:5] _45->log_level;
+  [ws.c:1179:5] if (_46 > 0)
+    goto <bb 36>; [INV]
+  else
+    goto <bb 38>; [INV]
+
+  <bb 36> :
+  [ws.c:1179:5] _47 = [ws.c:1179:5] Curl_trc_feat_read.log_level;
+  [ws.c:1179:5] if (_47 > 0)
+    goto <bb 37>; [INV]
+  else
+    goto <bb 38>; [INV]
+
+  <bb 37> :
+  [ws.c:1179:5] n.21_48 = n;
+  [ws.c:1179:5] nread.22_49 = nread;
+  [ws.c:1179:5] Curl_trc_read (data_84(D), [ws.c:1179:5] "cr_ws_read, added %zu payload, len=%zu", nread.22_49, n.21_48);
+
+  <bb 38> :
+  # blen_65 = PHI <blen_88(D)(6), blen_64(32), blen_64(33), blen_64(35), blen_64(36), blen_64(37)>
+  [ws.c:1183:9] [ws.c:1183:3] *peos_98(D) = 0;
+  [ws.c:1184:12] _50 = [ws.c:1184:12] &[ws.c:1184:31] ws_86->sendbuf;
+  [ws.c:1184:12] result_114 = Curl_bufq_cread (_50, buf_91(D), blen_65, pnread_82(D));
+  [ws.c:1185:5] if (result_114 == 0)
+    goto <bb 39>; [INV]
+  else
+    goto <bb 42>; [INV]
+
+  <bb 39> :
+  [ws.c:1185:14] _51 = [ws.c:1185:14] BIT_FIELD_REF <[ws.c:1185:20] *ctx_80, 8, 256>;
+  [ws.c:1185:14] _52 = _51 & 1;
+  [ws.c:1185:14] if (_52 != 0)
+    goto <bb 40>; [INV]
+  else
+    goto <bb 42>; [INV]
+
+  <bb 40> :
+  [ws.c:1185:53] _53 = [ws.c:1185:53] &[ws.c:1185:56] ws_86->sendbuf;
+  [ws.c:1185:34] _54 = Curl_bufq_is_empty (_53);
+  [ws.c:1185:31] if (_54 != 0)
+    goto <bb 41>; [INV]
+  else
+    goto <bb 42>; [INV]
+
+  <bb 41> :
+  [ws.c:1187:14] [ws.c:1187:8] ctx_80->eos = 1;
+  [ws.c:1188:11] [ws.c:1188:5] *peos_98(D) = 1;
+
+  <bb 42> :
+  # blen_66 = PHI <blen_64(25), blen_64(29), blen_64(31), blen_65(38), blen_65(39), blen_65(40), blen_65(41)>
+  # result_67 = PHI <[ws.c:1148:14] result_93(25), [ws.c:1169:16] result_104(29), [ws.c:1175:14] result_106(31), [ws.c:1184:12] result_114(38), [ws.c:1184:12] result_114(39), [ws.c:1184:12] result_114(40), [ws.c:1184:12] result_114(41)>
+[ws.c:1191:1] out:
+  [ws.c:1192:3] if (data_84(D) != 0B)
+    goto <bb 43>; [INV]
+  else
+    goto <bb 48>; [INV]
+
+  <bb 43> :
+  [ws.c:1192:3] _55 = [ws.c:1192:3] BIT_FIELD_REF <[ws.c:1192:3] data_84(D)->set, 8, 16808>;
+  [ws.c:1192:3] _56 = _55 & 32;
+  [ws.c:1192:3] if (_56 != 0)
+    goto <bb 44>; [INV]
+  else
+    goto <bb 48>; [INV]
+
+  <bb 44> :
+  [ws.c:1192:3] _57 = [ws.c:1192:3] [ws.c:1192:3] data_84(D)->state.feat;
+  [ws.c:1192:3] if (_57 == 0B)
+    goto <bb 46>; [INV]
+  else
+    goto <bb 45>; [INV]
+
+  <bb 45> :
+  [ws.c:1192:3] _58 = [ws.c:1192:3] [ws.c:1192:3] data_84(D)->state.feat;
+  [ws.c:1192:3] _59 = [ws.c:1192:3] _58->log_level;
+  [ws.c:1192:3] if (_59 > 0)
+    goto <bb 46>; [INV]
+  else
+    goto <bb 48>; [INV]
+
+  <bb 46> :
+  [ws.c:1192:3] _60 = [ws.c:1192:3] Curl_trc_feat_read.log_level;
+  [ws.c:1192:3] if (_60 > 0)
+    goto <bb 47>; [INV]
+  else
+    goto <bb 48>; [INV]
+
+  <bb 47> :
+  [ws.c:1192:3] _61 = [ws.c:1192:3] *peos_98(D);
+  [ws.c:1192:3] _62 = (int) _61;
+  [ws.c:1192:3] _63 = [ws.c:1192:3] *pnread_82(D);
+  [ws.c:1192:3] Curl_trc_read (data_84(D), [ws.c:1192:3] "cr_ws_read(len=%zu) -> %d, nread=%zu, eos=%d", blen_66, result_67, _63, _62);
+
+  <bb 48> :
+  [ws.c:1194:10] _119 = result_67;
+
+  <bb 49> :
+  # _68 = PHI <[ws.c:1125:12] _123(3), [ws.c:1131:12] _121(5), [ws.c:1138:14] _111(8), [ws.c:1150:14] _108(19), [ws.c:1194:10] _119(48)>
+  nread ={v} {CLOBBER};
+  n ={v} {CLOBBER};
+  eos ={v} {CLOBBER};
+  return _68;
+
+}
+
+
+
+;; Function ws_cw_close (ws_cw_close, funcdef_no=116, decl_uid=11187, cgraph_uid=117, symbol_order=116)
+
+void ws_cw_close (struct Curl_easy * data, struct Curl_cwriter * writer)
+{
+  struct ws_cw_ctx * ctx;
+  struct bufq * _1;
+
+  <bb 2> :
+  [ws.c:602:21] ctx_4 = [ws.c:602:33] writer_3(D)->ctx;
+  [ws.c:604:3] _1 = [ws.c:604:3] &[ws.c:604:22] ctx_4->buf;
+  [ws.c:604:3] Curl_bufq_free (_1);
+  [ws.c:605:1] return;
+
+}
+
+
+
+;; Function ws_conn_dtor (ws_conn_dtor, funcdef_no=132, decl_uid=11411, cgraph_uid=133, symbol_order=134)
+
+void ws_conn_dtor (void * key, size_t klen, void * entry)
+{
+  struct websocket * ws;
+  struct bufq * _1;
+  struct bufq * _2;
+  void (*<Tee>) (void *) Curl_cfree.64_3;
+
+  <bb 2> :
+  [ws.c:1276:21] ws_5 = entry_4(D);
+  [ws.c:1279:3] _1 = [ws.c:1279:3] &[ws.c:1279:21] ws_5->recvbuf;
+  [ws.c:1279:3] Curl_bufq_free (_1);
+  [ws.c:1280:3] _2 = [ws.c:1280:3] &[ws.c:1280:21] ws_5->sendbuf;
+  [ws.c:1280:3] Curl_bufq_free (_2);
+  [ws.c:1281:3] Curl_cfree.64_3 = Curl_cfree;
+  [ws.c:1281:3] Curl_cfree.64_3 (ws_5);
+  [ws.c:1282:1] return;
+
+}
+
+
+
+;; Function ws_dec_read_head (ws_dec_read_head, funcdef_no=111, decl_uid=11118, cgraph_uid=112, symbol_order=111)
+
+CURLcode ws_dec_read_head (struct ws_decoder * dec, struct Curl_easy * data, struct bufq * inraw)
+{
+  size_t inlen;
+  const unsigned char * inbuf;
+  int _1;
+  const unsigned char * inbuf.49_2;
+  unsigned char _3;
+  int _4;
+  unsigned char _5;
+  int _6;
+  int _7;
+  int _8;
+  int _9;
+  int _10;
+  int _11;
+  int _12;
+  const unsigned char * inbuf.50_13;
+  unsigned char _14;
+  unsigned char _15;
+  signed char _16;
+  int _17;
+  int _18;
+  unsigned char _19;
+  int _20;
+  int _21;
+  unsigned char _22;
+  int _23;
+  int _24;
+  unsigned char _25;
+  unsigned char _26;
+  unsigned char _27;
+  int _28;
+  int _29;
+  const unsigned char * inbuf.51_30;
+  int _31;
+  unsigned char _32;
+  int _33;
+  int _34;
+  int _35;
+  int _36;
+  int _37;
+  unsigned char _38;
+  long int _39;
+  unsigned char _40;
+  int _41;
+  int _42;
+  unsigned char _43;
+  int _44;
+  int _45;
+  long int _46;
+  unsigned char _47;
+  signed char _48;
+  unsigned char _49;
+  long int _50;
+  long int _51;
+  unsigned char _52;
+  long int _53;
+  long int _54;
+  long int _55;
+  unsigned char _56;
+  long int _57;
+  long int _58;
+  long int _59;
+  unsigned char _60;
+  long int _61;
+  long int _62;
+  long int _63;
+  unsigned char _64;
+  long int _65;
+  long int _66;
+  long int _67;
+  unsigned char _68;
+  long int _69;
+  long int _70;
+  long int _71;
+  unsigned char _72;
+  long int _73;
+  long int _74;
+  long int _75;
+  unsigned char _76;
+  long int _77;
+  long int _78;
+  _Bool _79;
+  CURLcode _80;
+  CURLcode _90;
+  CURLcode _98;
+  CURLcode _101;
+  CURLcode _104;
+  CURLcode _110;
+  CURLcode _116;
+  CURLcode _122;
+  CURLcode _124;
+  CURLcode _132;
+
+  <bb 2> :
+  [ws.c:370:8] goto <bb 37>; [INV]
+
+  <bb 3> :
+  [ws.c:371:11] _1 = [ws.c:371:11] dec_91(D)->head_len;
+  [ws.c:371:7] if (_1 == 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 4> :
+  [ws.c:372:22] inbuf.49_2 = inbuf;
+  [ws.c:372:22] _3 = [ws.c:372:22] *inbuf.49_2;
+  [ws.c:372:20] [ws.c:372:16] [ws.c:372:10] dec_91(D)->head[0] = _3;
+  [ws.c:373:7] Curl_bufq_skip (inraw_88(D), 1);
+  [ws.c:375:26] _4 = [ws.c:375:26] dec_91(D)->cont_flags;
+  [ws.c:375:66] _5 = [ws.c:375:66] [ws.c:375:60] dec_91(D)->head[0];
+  [ws.c:375:26] _6 = (int) _5;
+  [ws.c:375:26] _7 = ws_frame_firstbyte2flags (data_95(D), _6, _4);
+  [ws.c:375:24] [ws.c:375:10] dec_91(D)->frame_flags = _7;
+  [ws.c:377:14] _8 = [ws.c:377:14] dec_91(D)->frame_flags;
+  [ws.c:377:9] if (_8 == 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  [ws.c:378:9] ws_dec_reset (dec_91(D));
+  [ws.c:379:16] _132 = 56;
+  [ws.c:379:16] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:379:16] goto <bb 39>; [INV]
+
+  <bb 6> :
+  [ws.c:384:13] _9 = [ws.c:384:13] dec_91(D)->frame_flags;
+  [ws.c:384:27] _10 = _9 & 3;
+  [ws.c:384:9] if (_10 != 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  [ws.c:385:30] _11 = [ws.c:385:30] dec_91(D)->frame_flags;
+  [ws.c:385:25] [ws.c:385:12] dec_91(D)->cont_flags = _11;
+
+  <bb 8> :
+  [ws.c:388:21] [ws.c:388:10] dec_91(D)->head_len = 1;
+  [ws.c:371:7] // predicted unlikely by continue predictor.
+  [ws.c:390:7] goto <bb 37>; [INV]
+
+  <bb 9> :
+  [ws.c:392:16] _12 = [ws.c:392:16] dec_91(D)->head_len;
+  [ws.c:392:12] if (_12 == 1)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 26>; [INV]
+
+  <bb 10> :
+  [ws.c:393:22] inbuf.50_13 = inbuf;
+  [ws.c:393:22] _14 = [ws.c:393:22] *inbuf.50_13;
+  [ws.c:393:20] [ws.c:393:16] [ws.c:393:10] dec_91(D)->head[1] = _14;
+  [ws.c:394:7] Curl_bufq_skip (inraw_88(D), 1);
+  [ws.c:395:21] [ws.c:395:10] dec_91(D)->head_len = 2;
+  [ws.c:397:19] _15 = [ws.c:397:19] [ws.c:397:13] dec_91(D)->head[1];
+  [ws.c:397:10] _16 = (signed char) _15;
+  [ws.c:397:9] if (_16 < 0)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 11> :
+  [ws.c:399:9] Curl_failf (data_95(D), [ws.c:399:21] "[WS] masked input frame");
+  [ws.c:400:9] ws_dec_reset (dec_91(D));
+  [ws.c:401:16] _110 = 56;
+  [ws.c:401:16] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:401:16] goto <bb 39>; [INV]
+
+  <bb 12> :
+  [ws.c:403:13] _17 = [ws.c:403:13] dec_91(D)->frame_flags;
+  [ws.c:403:27] _18 = _17 & 16;
+  [ws.c:403:9] if (_18 != 0)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 13> :
+  [ws.c:403:53] _19 = [ws.c:403:53] [ws.c:403:47] dec_91(D)->head[1];
+  [ws.c:403:41] if (_19 > 125)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 14> :
+  [ws.c:406:9] Curl_failf (data_95(D), [ws.c:406:21] "[WS] received PING frame is too big");
+  [ws.c:407:9] ws_dec_reset (dec_91(D));
+  [ws.c:408:16] _98 = 56;
+  [ws.c:408:16] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:408:16] goto <bb 39>; [INV]
+
+  <bb 15> :
+  [ws.c:410:13] _20 = [ws.c:410:13] dec_91(D)->frame_flags;
+  [ws.c:410:27] _21 = _20 & 64;
+  [ws.c:410:9] if (_21 != 0)
+    goto <bb 16>; [INV]
+  else
+    goto <bb 18>; [INV]
+
+  <bb 16> :
+  [ws.c:410:53] _22 = [ws.c:410:53] [ws.c:410:47] dec_91(D)->head[1];
+  [ws.c:410:41] if (_22 > 125)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 18>; [INV]
+
+  <bb 17> :
+  [ws.c:412:9] Curl_failf (data_95(D), [ws.c:412:21] "[WS] received PONG frame is too big");
+  [ws.c:413:9] ws_dec_reset (dec_91(D));
+  [ws.c:414:16] _101 = 56;
+  [ws.c:414:16] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:414:16] goto <bb 39>; [INV]
+
+  <bb 18> :
+  [ws.c:416:13] _23 = [ws.c:416:13] dec_91(D)->frame_flags;
+  [ws.c:416:27] _24 = _23 & 8;
+  [ws.c:416:9] if (_24 != 0)
+    goto <bb 19>; [INV]
+  else
+    goto <bb 21>; [INV]
+
+  <bb 19> :
+  [ws.c:416:54] _25 = [ws.c:416:54] [ws.c:416:48] dec_91(D)->head[1];
+  [ws.c:416:42] if (_25 > 125)
+    goto <bb 20>; [INV]
+  else
+    goto <bb 21>; [INV]
+
+  <bb 20> :
+  [ws.c:417:9] Curl_failf (data_95(D), [ws.c:417:21] "[WS] received CLOSE frame is too big");
+  [ws.c:418:9] ws_dec_reset (dec_91(D));
+  [ws.c:419:16] _104 = 56;
+  [ws.c:419:16] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:419:16] goto <bb 39>; [INV]
+
+  <bb 21> :
+  [ws.c:423:19] _26 = [ws.c:423:19] [ws.c:423:13] dec_91(D)->head[1];
+  [ws.c:423:9] if (_26 == 126)
+    goto <bb 22>; [INV]
+  else
+    goto <bb 23>; [INV]
+
+  <bb 22> :
+  [ws.c:424:25] [ws.c:424:12] dec_91(D)->head_total = 4;
+  [ws.c:423:9] // predicted unlikely by continue predictor.
+  [ws.c:425:9] goto <bb 37>; [INV]
+
+  <bb 23> :
+  [ws.c:427:24] _27 = [ws.c:427:24] [ws.c:427:18] dec_91(D)->head[1];
+  [ws.c:427:14] if (_27 == 127)
+    goto <bb 24>; [INV]
+  else
+    goto <bb 25>; [INV]
+
+  <bb 24> :
+  [ws.c:428:25] [ws.c:428:12] dec_91(D)->head_total = 10;
+  [ws.c:427:14] // predicted unlikely by continue predictor.
+  [ws.c:429:9] goto <bb 37>; [INV]
+
+  <bb 25> :
+  [ws.c:432:25] [ws.c:432:12] dec_91(D)->head_total = 2;
+
+  <bb 26> :
+  [ws.c:436:11] _28 = [ws.c:436:11] dec_91(D)->head_len;
+  [ws.c:436:27] _29 = [ws.c:436:27] dec_91(D)->head_total;
+  [ws.c:436:7] if (_28 < _29)
+    goto <bb 27>; [INV]
+  else
+    goto <bb 29>; [INV]
+
+  <bb 27> :
+  [ws.c:437:34] inbuf.51_30 = inbuf;
+  [ws.c:437:20] _31 = [ws.c:437:20] dec_91(D)->head_len;
+  [ws.c:437:34] _32 = [ws.c:437:34] *inbuf.51_30;
+  [ws.c:437:32] [ws.c:437:16] [ws.c:437:10] dec_91(D)->head[_31] = _32;
+  [ws.c:438:7] Curl_bufq_skip (inraw_88(D), 1);
+  [ws.c:439:12] _33 = [ws.c:439:12] dec_91(D)->head_len;
+  [ws.c:439:7] _34 = _33 + 1;
+  [ws.c:439:7] [ws.c:439:12] dec_91(D)->head_len = _34;
+  [ws.c:440:13] _35 = [ws.c:440:13] dec_91(D)->head_len;
+  [ws.c:440:29] _36 = [ws.c:440:29] dec_91(D)->head_total;
+  [ws.c:440:9] if (_35 < _36)
+    goto <bb 28>; [INV]
+  else
+    goto <bb 29>; [INV]
+
+  <bb 28> :
+  [ws.c:440:9] // predicted unlikely by continue predictor.
+  [ws.c:442:9] goto <bb 37>; [INV]
+
+  <bb 29> :
+  [ws.c:447:15] _37 = [ws.c:447:15] dec_91(D)->head_total;
+  [ws.c:447:5] switch (_37) <[ws.c:468:5] default: <L36> [INV], [ws.c:448:5] case 2: <L31> [INV], [ws.c:451:5] case 4: <L32> [INV], [ws.c:454:5] case 10: <L33> [INV]>
+
+  <bb 30> :
+[ws.c:448:5] <L31>:
+  [ws.c:449:35] _38 = [ws.c:449:35] [ws.c:449:29] dec_91(D)->head[1];
+  [ws.c:449:35] _39 = (long int) _38;
+  [ws.c:449:24] [ws.c:449:10] dec_91(D)->payload_len = _39;
+  [ws.c:450:7] goto <bb 36>; [INV]
+
+  <bb 31> :
+[ws.c:451:5] <L32>:
+  [ws.c:452:36] _40 = [ws.c:452:36] [ws.c:452:30] dec_91(D)->head[2];
+  [ws.c:452:36] _41 = (int) _40;
+  [ws.c:452:40] _42 = _41 << 8;
+  [ws.c:452:57] _43 = [ws.c:452:57] [ws.c:452:51] dec_91(D)->head[3];
+  [ws.c:452:57] _44 = (int) _43;
+  [ws.c:452:46] _45 = _42 | _44;
+  [ws.c:452:46] _46 = (long int) _45;
+  [ws.c:452:24] [ws.c:452:10] dec_91(D)->payload_len = _46;
+  [ws.c:453:7] goto <bb 36>; [INV]
+
+  <bb 32> :
+[ws.c:454:5] <L33>:
+  [ws.c:455:19] _47 = [ws.c:455:19] [ws.c:455:13] dec_91(D)->head[2];
+  [ws.c:455:23] _48 = (signed char) _47;
+  [ws.c:455:9] if (_48 < 0)
+    goto <bb 33>; [INV]
+  else
+    goto <bb 34>; [INV]
+
+  <bb 33> :
+  [ws.c:456:9] Curl_failf (data_95(D), [ws.c:456:21] "[WS] frame length longer than 64 signed not supported");
+  [ws.c:457:16] _116 = 56;
+  [ws.c:457:16] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:457:16] goto <bb 39>; [INV]
+
+  <bb 34> :
+  [ws.c:459:48] _49 = [ws.c:459:48] [ws.c:459:42] dec_91(D)->head[2];
+  [ws.c:459:27] _50 = (long int) _49;
+  [ws.c:459:52] _51 = _50 << 56;
+  [ws.c:460:30] _52 = [ws.c:460:30] [ws.c:460:24] dec_91(D)->head[3];
+  [ws.c:460:9] _53 = (long int) _52;
+  [ws.c:460:34] _54 = _53 << 48;
+  [ws.c:459:59] _55 = _51 | _54;
+  [ws.c:461:30] _56 = [ws.c:461:30] [ws.c:461:24] dec_91(D)->head[4];
+  [ws.c:461:9] _57 = (long int) _56;
+  [ws.c:461:34] _58 = _57 << 40;
+  [ws.c:460:40] _59 = _55 | _58;
+  [ws.c:462:30] _60 = [ws.c:462:30] [ws.c:462:24] dec_91(D)->head[5];
+  [ws.c:462:9] _61 = (long int) _60;
+  [ws.c:462:34] _62 = _61 << 32;
+  [ws.c:461:40] _63 = _59 | _62;
+  [ws.c:463:30] _64 = [ws.c:463:30] [ws.c:463:24] dec_91(D)->head[6];
+  [ws.c:463:9] _65 = (long int) _64;
+  [ws.c:463:34] _66 = _65 << 24;
+  [ws.c:462:40] _67 = _63 | _66;
+  [ws.c:464:30] _68 = [ws.c:464:30] [ws.c:464:24] dec_91(D)->head[7];
+  [ws.c:464:9] _69 = (long int) _68;
+  [ws.c:464:34] _70 = _69 << 16;
+  [ws.c:463:40] _71 = _67 | _70;
+  [ws.c:465:30] _72 = [ws.c:465:30] [ws.c:465:24] dec_91(D)->head[8];
+  [ws.c:465:9] _73 = (long int) _72;
+  [ws.c:465:34] _74 = _73 << 8;
+  [ws.c:464:40] _75 = _71 | _74;
+  [ws.c:466:18] _76 = [ws.c:466:18] [ws.c:466:12] dec_91(D)->head[9];
+  [ws.c:466:18] _77 = (long int) _76;
+  [ws.c:465:39] _78 = _75 | _77;
+  [ws.c:459:24] [ws.c:459:10] dec_91(D)->payload_len = _78;
+  [ws.c:467:7] goto <bb 36>; [INV]
+
+  <bb 35> :
+[ws.c:468:5] <L36>:
+  [ws.c:471:7] Curl_failf (data_95(D), [ws.c:471:19] "[WS] unexpected frame header length");
+  [ws.c:472:14] _124 = 56;
+  [ws.c:472:14] goto <bb 39>; [INV]
+
+  <bb 36> :
+  [ws.c:475:20] [ws.c:475:8] dec_91(D)->frame_age = 0;
+  [ws.c:476:25] [ws.c:476:8] dec_91(D)->payload_offset = 0;
+  [ws.c:477:5] ws_dec_info (dec_91(D), data_95(D), [ws.c:477:28] "decoded");
+  [ws.c:478:12] _122 = 0;
+  [ws.c:478:12] goto <bb 39>; [INV]
+
+  <bb 37> :
+  [ws.c:370:9] _79 = Curl_bufq_peek (inraw_88(D), [ws.c:370:9] &inbuf, [ws.c:370:9] &inlen);
+  [ws.c:370:9] if (_79 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 38>; [INV]
+
+  <bb 38> :
+  [ws.c:480:10] _90 = 81;
+
+  <bb 39> :
+  # _80 = PHI <[ws.c:379:16] _132(5), [ws.c:401:16] _110(11), [ws.c:408:16] _98(14), [ws.c:414:16] _101(17), [ws.c:419:16] _104(20), [ws.c:457:16] _116(33), [ws.c:472:14] _124(35), [ws.c:478:12] _122(36), [ws.c:480:10] _90(38)>
+  inbuf ={v} {CLOBBER};
+  inlen ={v} {CLOBBER};
+  return _80;
+
+}
+
+
+
+;; Function ws_dec_pass_payload (ws_dec_pass_payload, funcdef_no=112, decl_uid=11139, cgraph_uid=113, symbol_order=112)
+
+CURLcode ws_dec_pass_payload (struct ws_decoder * dec, struct Curl_easy * data, struct bufq * inraw, CURLcode (*<T118f>) (const unsigned char *, size_t, int, int, curl_off_t, curl_off_t, void *, size_t *) write_cb, void * write_ctx)
+{
+  curl_off_t remain;
+  CURLcode result;
+  size_t nwritten;
+  size_t inlen;
+  const unsigned char * inbuf;
+  long int _1;
+  long int _2;
+  long unsigned int inlen.52_3;
+  long int inlen.53_4;
+  long unsigned int remain.54_5;
+  long int _6;
+  long int _7;
+  int _8;
+  int _9;
+  long unsigned int inlen.55_10;
+  const unsigned char * inbuf.56_11;
+  long unsigned int nwritten.57_12;
+  long int _13;
+  long unsigned int _14;
+  long unsigned int nwritten.58_15;
+  long unsigned int _16;
+  long int _17;
+  long int _18;
+  long int _19;
+  unsigned char _20;
+  unsigned char _21;
+  struct curl_trc_feat * _22;
+  struct curl_trc_feat * _23;
+  int _24;
+  int _25;
+  long unsigned int nwritten.59_26;
+  _Bool _27;
+  CURLcode _29;
+  CURLcode iftmp.60_30;
+  CURLcode _50;
+  CURLcode iftmp.60_51;
+  CURLcode iftmp.60_52;
+  CURLcode _53;
+
+  <bb 2> :
+  [ws.c:493:26] _1 = [ws.c:493:26] dec_36(D)->payload_len;
+  [ws.c:493:45] _2 = [ws.c:493:45] dec_36(D)->payload_offset;
+  [ws.c:493:14] remain_37 = _1 - _2;
+  [ws.c:496:8] goto <bb 13>; [INV]
+
+  <bb 3> :
+  [ws.c:497:8] inlen.52_3 = inlen;
+  [ws.c:497:8] inlen.53_4 = (long int) inlen.52_3;
+  [ws.c:497:7] if (remain_28 < inlen.53_4)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  [ws.c:498:15] remain.54_5 = (long unsigned int) remain_28;
+  [ws.c:498:13] inlen = remain.54_5;
+
+  <bb 5> :
+  [ws.c:499:14] _6 = [ws.c:499:14] dec_36(D)->payload_len;
+  [ws.c:499:14] _7 = [ws.c:499:14] dec_36(D)->payload_offset;
+  [ws.c:499:14] _8 = [ws.c:499:14] dec_36(D)->frame_flags;
+  [ws.c:499:14] _9 = [ws.c:499:14] dec_36(D)->frame_age;
+  [ws.c:499:14] inlen.55_10 = inlen;
+  [ws.c:499:14] inbuf.56_11 = inbuf;
+  [ws.c:499:14] result_44 = write_cb_41(D) (inbuf.56_11, inlen.55_10, _9, _8, _7, _6, write_ctx_42(D), [ws.c:499:14] &nwritten);
+  [ws.c:502:7] if (result_44 != 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 6> :
+  [ws.c:503:14] _50 = result_44;
+  [ws.c:503:14] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:503:14] goto <bb 19>; [INV]
+
+  <bb 7> :
+  [ws.c:504:5] nwritten.57_12 = nwritten;
+  [ws.c:504:5] Curl_bufq_skip (inraw_38(D), nwritten.57_12);
+  [ws.c:505:25] _13 = dec_36(D)->payload_offset;
+  [ws.c:505:25] _14 = (long unsigned int) _13;
+  [ws.c:505:25] nwritten.58_15 = nwritten;
+  [ws.c:505:25] _16 = _14 + nwritten.58_15;
+  [ws.c:505:25] _17 = (long int) _16;
+  [ws.c:505:25] dec_36(D)->payload_offset = _17;
+  [ws.c:506:17] _18 = [ws.c:506:17] dec_36(D)->payload_len;
+  [ws.c:506:36] _19 = [ws.c:506:36] dec_36(D)->payload_offset;
+  [ws.c:506:12] remain_47 = _18 - _19;
+  [ws.c:507:5] if (data_48(D) != 0B)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 8> :
+  [ws.c:507:5] _20 = [ws.c:507:5] BIT_FIELD_REF <[ws.c:507:5] data_48(D)->set, 8, 16808>;
+  [ws.c:507:5] _21 = _20 & 32;
+  [ws.c:507:5] if (_21 != 0)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 9> :
+  [ws.c:507:5] _22 = [ws.c:507:5] [ws.c:507:5] data_48(D)->state.feat;
+  [ws.c:507:5] if (_22 == 0B)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 10> :
+  [ws.c:507:5] _23 = [ws.c:507:5] [ws.c:507:5] data_48(D)->state.feat;
+  [ws.c:507:5] _24 = [ws.c:507:5] _23->log_level;
+  [ws.c:507:5] if (_24 > 0)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 11> :
+  [ws.c:507:5] _25 = [ws.c:507:5] Curl_trc_feat_ws.log_level;
+  [ws.c:507:5] if (_25 > 0)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 12> :
+  [ws.c:507:5] nwritten.59_26 = nwritten;
+  [ws.c:507:5] Curl_trc_ws (data_48(D), [ws.c:507:5] "passed %zu bytes payload, %ld remain", nwritten.59_26, remain_47);
+
+  <bb 13> :
+  # remain_28 = PHI <[ws.c:493:14] remain_37(2), [ws.c:506:12] remain_47(7), [ws.c:506:12] remain_47(8), [ws.c:506:12] remain_47(10), [ws.c:506:12] remain_47(11), [ws.c:506:12] remain_47(12)>
+  [ws.c:496:16] if (remain_28 != 0)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 14> :
+  [ws.c:496:19] _27 = Curl_bufq_peek (inraw_38(D), [ws.c:496:19] &inbuf, [ws.c:496:19] &inlen);
+  [ws.c:496:16] if (_27 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 15> :
+  [ws.c:511:31] if (remain_28 != 0)
+    goto <bb 16>; [INV]
+  else
+    goto <bb 17>; [INV]
+
+  <bb 16> :
+  [ws.c:511:31] iftmp.60_52 = 81;
+  [0:0] goto <bb 18>; [INV]
+
+  <bb 17> :
+  [ws.c:511:31] iftmp.60_51 = 0;
+
+  <bb 18> :
+  # iftmp.60_30 = PHI <[ws.c:511:31] iftmp.60_52(16), [ws.c:511:31] iftmp.60_51(17)>
+  [ws.c:511:31] _53 = iftmp.60_30;
+
+  <bb 19> :
+  # _29 = PHI <[ws.c:503:14] _50(6), [ws.c:511:31] _53(18)>
+  inbuf ={v} {CLOBBER};
+  inlen ={v} {CLOBBER};
+  nwritten ={v} {CLOBBER};
+  return _29;
+
+}
+
+
+
+;; Function ws_dec_pass (ws_dec_pass, funcdef_no=113, decl_uid=11156, cgraph_uid=114, symbol_order=113)
+
+CURLcode ws_dec_pass (struct ws_decoder * dec, struct Curl_easy * data, struct bufq * inraw, CURLcode (*<T118f>) (const unsigned char *, size_t, int, int, curl_off_t, curl_off_t, void *, size_t *) write_cb, void * write_ctx)
+{
+  const unsigned char tmp;
+  size_t nwritten;
+  CURLcode result;
+  _Bool _1;
+  ws_dec_state _2;
+  int result.48_3;
+  long int _4;
+  int _5;
+  int _6;
+  CURLcode _8;
+  CURLcode _31;
+  CURLcode _39;
+  CURLcode _41;
+  CURLcode _42;
+
+  <bb 2> :
+  [ws.c:522:6] _1 = Curl_bufq_is_empty (inraw_14(D));
+  [ws.c:522:5] if (_1 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  [ws.c:523:12] _42 = 81;
+  [ws.c:523:12] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:523:12] goto <bb 18>; [INV]
+
+  <bb 4> :
+  [ws.c:525:13] _2 = [ws.c:525:13] dec_16(D)->state;
+  [ws.c:525:3] switch (_2) <[ws.c:563:3] default: <L17> [INV], [ws.c:526:3] case 0: <L2> [INV], [ws.c:530:3] case 1: <L3> [INV], [ws.c:555:3] case 2: <L13> [INV]>
+
+  <bb 5> :
+[ws.c:526:3] <L2>:
+  [ws.c:527:5] ws_dec_next_frame (dec_16(D));
+  [ws.c:528:16] [ws.c:528:8] dec_16(D)->state = 1;
+
+  <bb 6> :
+[ws.c:530:3] <L3>:
+  [ws.c:531:14] result_21 = ws_dec_read_head (dec_16(D), data_19(D), inraw_14(D));
+  [ws.c:532:7] if (result_21 != 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 7> :
+  [ws.c:533:9] if (result_21 != 81)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 17>; [INV]
+
+  <bb 8> :
+  [ws.c:534:9] result.48_3 = (int) result_21;
+  [ws.c:534:9] Curl_failf (data_19(D), [ws.c:534:21] "[WS] decode frame error %d", result.48_3);
+  [ws.c:535:9] goto <bb 17>; [INV]
+
+  <bb 9> :
+  [ws.c:542:16] [ws.c:542:8] dec_16(D)->state = 2;
+  [ws.c:543:11] _4 = [ws.c:543:11] dec_16(D)->payload_len;
+  [ws.c:543:7] if (_4 == 0)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 10> :
+  [ws.c:545:27] tmp = 0;
+  [ws.c:547:16] _5 = [ws.c:547:16] dec_16(D)->frame_flags;
+  [ws.c:547:16] _6 = [ws.c:547:16] dec_16(D)->frame_age;
+  [ws.c:547:16] result_27 = write_cb_24(D) ([ws.c:547:16] &tmp, 0, _6, _5, 0, 0, write_ctx_25(D), [ws.c:547:16] &nwritten);
+  [ws.c:549:9] if (result_27 != 0)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 11> :
+  [ws.c:550:16] _31 = result_27;
+  [ws.c:550:16] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:550:16] nwritten ={v} {CLOBBER};
+  [ws.c:550:16] tmp ={v} {CLOBBER};
+  goto <bb 18>; [INV]
+
+  <bb 12> :
+  [ws.c:551:18] [ws.c:551:10] dec_16(D)->state = 0;
+  [ws.c:552:7] nwritten ={v} {CLOBBER};
+  [ws.c:552:7] tmp ={v} {CLOBBER};
+  goto <bb 17>; [INV]
+
+  <bb 13> :
+<L13>:
+  [ws.c:556:14] result_36 = ws_dec_pass_payload (dec_16(D), data_19(D), inraw_14(D), write_cb_24(D), write_ctx_25(D));
+  [ws.c:557:5] ws_dec_info (dec_16(D), data_19(D), [ws.c:557:28] "passing");
+  [ws.c:558:7] if (result_36 != 0)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 14> :
+  [ws.c:559:14] _39 = result_36;
+  [ws.c:559:14] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:559:14] goto <bb 18>; [INV]
+
+  <bb 15> :
+  [ws.c:561:16] [ws.c:561:8] dec_16(D)->state = 0;
+  [ws.c:562:5] goto <bb 17>; [INV]
+
+  <bb 16> :
+[ws.c:563:3] <L17>:
+  [ws.c:565:12] result_40 = 2;
+
+  <bb 17> :
+  # result_7 = PHI <[ws.c:531:14] result_21(8), [ws.c:531:14] result_21(7), [ws.c:547:16] result_27(12), [ws.c:556:14] result_36(15), [ws.c:565:12] result_40(16)>
+  [ws.c:567:10] _41 = result_7;
+
+  <bb 18> :
+  # _8 = PHI <[ws.c:523:12] _42(3), [ws.c:550:16] _31(11), [ws.c:559:14] _39(14), [ws.c:567:10] _41(17)>
+  return _8;
+
+}
+
+
+
+;; Function ws_cw_write (ws_cw_write, funcdef_no=119, decl_uid=11243, cgraph_uid=120, symbol_order=119)
+
+CURLcode ws_cw_write (struct Curl_easy * data, struct Curl_cwriter * writer, int type, const char * buf, size_t nbytes)
+{
+  struct ws_cw_dec_ctx pass_ctx;
+  size_t nwritten;
+  CURLcode result;
+  struct websocket * ws;
+  struct ws_cw_ctx * ctx;
+  unsigned char _1;
+  unsigned char _2;
+  struct curl_trc_feat * _3;
+  struct curl_trc_feat * _4;
+  int _5;
+  int _6;
+  int _7;
+  unsigned char _8;
+  unsigned char _9;
+  struct Curl_cwriter * _10;
+  struct connectdata * _11;
+  struct bufq * _12;
+  unsigned char _13;
+  unsigned char _14;
+  struct curl_trc_feat * _15;
+  struct curl_trc_feat * _16;
+  int _17;
+  struct Curl_cwriter * _18;
+  struct bufq * _19;
+  struct ws_decoder * _20;
+  int result.31_21;
+  struct bufq * _22;
+  _Bool _23;
+  _Bool _24;
+  int _25;
+  struct bufq * _26;
+  _Bool _27;
+  _Bool _28;
+  struct bufq * _29;
+  long unsigned int _30;
+  CURLcode _31;
+  CURLcode _32;
+  CURLcode _53;
+  CURLcode _59;
+  CURLcode _60;
+  CURLcode _69;
+  CURLcode _70;
+  CURLcode _73;
+  CURLcode _75;
+
+  <bb 2> :
+  [ws.c:696:21] ctx_41 = [ws.c:696:33] writer_40(D)->ctx;
+  [ws.c:700:3] if (data_42(D) != 0B)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 3> :
+  [ws.c:700:3] _1 = [ws.c:700:3] BIT_FIELD_REF <[ws.c:700:3] data_42(D)->set, 8, 16808>;
+  [ws.c:700:3] _2 = _1 & 32;
+  [ws.c:700:3] if (_2 != 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 4> :
+  [ws.c:700:3] _3 = [ws.c:700:3] [ws.c:700:3] data_42(D)->state.feat;
+  [ws.c:700:3] if (_3 == 0B)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 5> :
+  [ws.c:700:3] _4 = [ws.c:700:3] [ws.c:700:3] data_42(D)->state.feat;
+  [ws.c:700:3] _5 = [ws.c:700:3] _4->log_level;
+  [ws.c:700:3] if (_5 > 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 6> :
+  [ws.c:700:3] _6 = [ws.c:700:3] Curl_trc_feat_write.log_level;
+  [ws.c:700:3] if (_6 > 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  [ws.c:700:3] Curl_trc_write (data_42(D), [ws.c:700:3] "ws_cw_write(len=%zu, type=%d)", nbytes_43(D), type_44(D));
+
+  <bb 8> :
+  [ws.c:701:13] _7 = type_44(D) & 1;
+  [ws.c:701:5] if (_7 == 0)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 9> :
+  [ws.c:701:33] _8 = [ws.c:701:33] BIT_FIELD_REF <[ws.c:701:40] data_42(D)->set, 8, 16832>;
+  [ws.c:701:33] _9 = _8 & 64;
+  [ws.c:701:33] if (_9 != 0)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 10> :
+  [ws.c:702:12] _10 = [ws.c:702:12] writer_40(D)->next;
+  [ws.c:702:12] _75 = Curl_cwriter_write (data_42(D), _10, type_44(D), buf_48(D), nbytes_43(D));
+  [ws.c:702:12] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:702:12] goto <bb 33>; [INV]
+
+  <bb 11> :
+  [ws.c:704:8] _11 = [ws.c:704:8] data_42(D)->conn;
+  [ws.c:704:8] ws_47 = Curl_conn_meta_get (_11, [ws.c:704:39] "meta:proto:ws:conn");
+  [ws.c:705:5] if (ws_47 == 0B)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 12> :
+  [ws.c:706:5] Curl_failf (data_42(D), [ws.c:706:17] "[WS] not a websocket transfer");
+  [ws.c:707:12] _73 = 2;
+  [ws.c:707:12] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:707:12] goto <bb 33>; [INV]
+
+  <bb 13> :
+  [ws.c:710:5] if (nbytes_43(D) != 0)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 28>; [INV]
+
+  <bb 14> :
+  [ws.c:712:14] _12 = [ws.c:712:14] &[ws.c:712:34] ctx_41->buf;
+  [ws.c:712:14] result_50 = Curl_bufq_write (_12, buf_48(D), nbytes_43(D), [ws.c:712:14] &nwritten);
+  [ws.c:714:7] if (result_50 != 0)
+    goto <bb 15>; [INV]
+  else
+    goto <bb 21>; [INV]
+
+  <bb 15> :
+  [ws.c:715:7] if (data_42(D) != 0B)
+    goto <bb 16>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 16> :
+  [ws.c:715:7] _13 = [ws.c:715:7] BIT_FIELD_REF <[ws.c:715:7] data_42(D)->set, 8, 16808>;
+  [ws.c:715:7] _14 = _13 & 32;
+  [ws.c:715:7] if (_14 != 0)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 17> :
+  [ws.c:715:7] _15 = [ws.c:715:7] [ws.c:715:7] data_42(D)->state.feat;
+  [ws.c:715:7] if (_15 == 0B)
+    goto <bb 19>; [INV]
+  else
+    goto <bb 18>; [INV]
+
+  <bb 18> :
+  [ws.c:715:7] _16 = [ws.c:715:7] [ws.c:715:7] data_42(D)->state.feat;
+  [ws.c:715:7] _17 = [ws.c:715:7] _16->log_level;
+  [ws.c:715:7] if (_17 > 0)
+    goto <bb 19>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 19> :
+  [ws.c:715:7] Curl_infof (data_42(D), [ws.c:715:7] "[WS] error adding data to buffer %d", result_50);
+
+  <bb 20> :
+  [ws.c:716:14] _53 = result_50;
+  [ws.c:716:14] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:716:14] nwritten ={v} {CLOBBER};
+  goto <bb 33>; [INV]
+
+  <bb 21> :
+  nwritten ={v} {CLOBBER};
+  [0:0] goto <bb 28>; [INV]
+
+  <bb 22> :
+  [ws.c:722:19] [ws.c:722:13] pass_ctx.data = data_42(D);
+  [ws.c:723:17] [ws.c:723:13] pass_ctx.ws = ws_47;
+  [ws.c:724:34] _18 = [ws.c:724:34] writer_40(D)->next;
+  [ws.c:724:26] [ws.c:724:13] pass_ctx.next_writer = _18;
+  [ws.c:725:22] [ws.c:725:13] pass_ctx.cw_type = type_44(D);
+  [ws.c:726:14] _19 = [ws.c:726:14] &[ws.c:726:46] ctx_41->buf;
+  [ws.c:726:14] _20 = [ws.c:726:14] &[ws.c:726:29] ws_47->dec;
+  [ws.c:726:14] result_66 = ws_dec_pass (_20, data_42(D), _19, [ws.c:727:26] ws_cw_dec_next, [ws.c:727:42] &pass_ctx);
+  [ws.c:728:7] if (result_66 == 81)
+    goto <bb 23>; [INV]
+  else
+    goto <bb 24>; [INV]
+
+  <bb 23> :
+  [ws.c:731:14] _70 = 0;
+  [ws.c:731:14] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:731:14] goto <bb 27>; [INV]
+
+  <bb 24> :
+  [ws.c:733:12] if (result_66 != 0)
+    goto <bb 25>; [INV]
+  else
+    goto <bb 26>; [INV]
+
+  <bb 25> :
+  [ws.c:734:7] result.31_21 = (int) result_66;
+  [ws.c:734:7] Curl_failf (data_42(D), [ws.c:734:19] "[WS] decode payload error %d", result.31_21);
+  [ws.c:735:14] _69 = result_66;
+  [ws.c:735:14] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:735:14] goto <bb 27>; [INV]
+
+  <bb 26> :
+  pass_ctx ={v} {CLOBBER};
+  [0:0] goto <bb 28>; [INV]
+
+  <bb 27> :
+  # _31 = PHI <[ws.c:731:14] _70(23), [ws.c:735:14] _69(25)>
+  [ws.c:731:14] pass_ctx ={v} {CLOBBER};
+  goto <bb 33>; [INV]
+
+  <bb 28> :
+  [ws.c:720:29] _22 = [ws.c:720:29] &[ws.c:720:33] ctx_41->buf;
+  [ws.c:720:10] _23 = Curl_bufq_is_empty (_22);
+  [ws.c:720:9] _24 = ~_23;
+  [ws.c:720:9] if (_24 != 0)
+    goto <bb 22>; [INV]
+  else
+    goto <bb 29>; [INV]
+
+  <bb 29> :
+  [ws.c:739:12] _25 = type_44(D) & 128;
+  [ws.c:739:5] if (_25 != 0)
+    goto <bb 30>; [INV]
+  else
+    goto <bb 32>; [INV]
+
+  <bb 30> :
+  [ws.c:739:54] _26 = [ws.c:739:54] &[ws.c:739:58] ctx_41->buf;
+  [ws.c:739:35] _27 = Curl_bufq_is_empty (_26);
+  [ws.c:739:34] _28 = ~_27;
+  [ws.c:739:31] if (_28 != 0)
+    goto <bb 31>; [INV]
+  else
+    goto <bb 32>; [INV]
+
+  <bb 31> :
+  [ws.c:741:25] _29 = [ws.c:741:25] &[ws.c:741:29] ctx_41->buf;
+  [ws.c:740:5] _30 = Curl_bufq_len (_29);
+  [ws.c:740:5] Curl_failf (data_42(D), [ws.c:740:17] "[WS] decode ending with %zd frame bytes remaining", _30);
+  [ws.c:742:12] _59 = 56;
+  [ws.c:742:12] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:742:12] goto <bb 33>; [INV]
+
+  <bb 32> :
+  [ws.c:745:10] _60 = 0;
+
+  <bb 33> :
+  # _32 = PHI <[ws.c:702:12] _75(10), [ws.c:707:12] _73(12), [ws.c:716:14] _53(20), _31(27), [ws.c:742:12] _59(31), [ws.c:745:10] _60(32)>
+  return _32;
+
+}
+
+
+
+;; Function ws_send_raw_blocking (ws_send_raw_blocking, funcdef_no=138, decl_uid=11096, cgraph_uid=139, symbol_order=140)
+
+CURLcode ws_send_raw_blocking (struct Curl_easy * data, struct websocket * ws, const char * buffer, size_t buflen)
+{
+  int ev;
+  timediff_t left_ms;
+  curl_socket_t sock;
+  size_t nwritten;
+  CURLcode result;
+  long unsigned int nwritten.45_1;
+  long unsigned int nwritten.46_2;
+  struct connectdata * _3;
+  unsigned char _4;
+  unsigned char _5;
+  struct curl_trc_feat * _6;
+  struct curl_trc_feat * _7;
+  int _8;
+  int _9;
+  CURLcode _13;
+  timediff_t iftmp.47_14;
+  CURLcode _22;
+  timediff_t iftmp.47_32;
+  timediff_t iftmp.47_33;
+  CURLcode _37;
+  CURLcode _38;
+  CURLcode _40;
+  CURLcode _41;
+
+  <bb 2> :
+  [ws.c:1654:12] result_18 = 0;
+  [ws.c:1658:8] goto <bb 21>; [INV]
+
+  <bb 3> :
+  [ws.c:1659:14] result_25 = Curl_xfer_send (data_23(D), buffer_10, buflen_11, 0, [ws.c:1659:14] &nwritten);
+  [ws.c:1660:7] if (result_25 != 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  [ws.c:1661:14] _41 = result_25;
+  [ws.c:1661:14] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1661:14] goto <bb 23>; [INV]
+
+  <bb 5> :
+  [ws.c:1663:12] nwritten.45_1 = nwritten;
+  [ws.c:1663:12] buffer_26 = buffer_10 + nwritten.45_1;
+  [ws.c:1664:12] nwritten.46_2 = nwritten;
+  [ws.c:1664:12] buflen_27 = buflen_11 - nwritten.46_2;
+  [ws.c:1665:7] if (buflen_27 != 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 21>; [INV]
+
+  <bb 6> :
+  [ws.c:1666:32] _3 = [ws.c:1666:32] data_23(D)->conn;
+  [ws.c:1666:21] sock_28 = [ws.c:1666:44] [ws.c:1666:38] _3->sock[0];
+  [ws.c:1670:7] if (data_23(D) != 0B)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 7> :
+  [ws.c:1670:7] _4 = [ws.c:1670:7] BIT_FIELD_REF <[ws.c:1670:7] data_23(D)->set, 8, 16808>;
+  [ws.c:1670:7] _5 = _4 & 32;
+  [ws.c:1670:7] if (_5 != 0)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 8> :
+  [ws.c:1670:7] _6 = [ws.c:1670:7] [ws.c:1670:7] data_23(D)->state.feat;
+  [ws.c:1670:7] if (_6 == 0B)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 9> :
+  [ws.c:1670:7] _7 = [ws.c:1670:7] [ws.c:1670:7] data_23(D)->state.feat;
+  [ws.c:1670:7] _8 = [ws.c:1670:7] _7->log_level;
+  [ws.c:1670:7] if (_8 > 0)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 10> :
+  [ws.c:1670:7] _9 = [ws.c:1670:7] Curl_trc_feat_ws.log_level;
+  [ws.c:1670:7] if (_9 > 0)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 11> :
+  [ws.c:1670:7] Curl_trc_ws (data_23(D), [ws.c:1670:7] "ws_send_raw_blocking() partial, %zu left to send", buflen_27);
+
+  <bb 12> :
+  [ws.c:1672:17] left_ms_31 = Curl_timeleft (data_23(D), 0B, 0);
+  [ws.c:1673:9] if (left_ms_31 < 0)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 13> :
+  [ws.c:1674:9] Curl_failf (data_23(D), [ws.c:1674:21] "[WS] Timeout waiting for socket becoming writable");
+  [ws.c:1675:16] _40 = 55;
+  [ws.c:1675:16] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1675:16] goto <bb 23>; [INV]
+
+  <bb 14> :
+  [ws.c:1679:9] if (sock_28 == -1)
+    goto <bb 15>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 15> :
+  [ws.c:1680:16] _38 = 55;
+  [ws.c:1680:16] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1680:16] goto <bb 23>; [INV]
+
+  <bb 16> :
+  [ws.c:1681:12] if (left_ms_31 != 0)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 18>; [INV]
+
+  <bb 17> :
+  [ws.c:1681:12] iftmp.47_33 = left_ms_31;
+  [0:0] goto <bb 19>; [INV]
+
+  <bb 18> :
+  [ws.c:1681:12] iftmp.47_32 = 500;
+
+  <bb 19> :
+  # iftmp.47_14 = PHI <[ws.c:1681:12] iftmp.47_33(17), [ws.c:1681:12] iftmp.47_32(18)>
+  [ws.c:1681:12] ev_35 = Curl_socket_check (-1, -1, sock_28, iftmp.47_14);
+  [ws.c:1683:9] if (ev_35 < 0)
+    goto <bb 20>; [INV]
+  else
+    goto <bb 21>; [INV]
+
+  <bb 20> :
+  [ws.c:1684:9] Curl_failf (data_23(D), [ws.c:1684:21] "[WS] Error while waiting for socket becoming writable");
+  [ws.c:1685:16] _37 = 55;
+  [ws.c:1685:16] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1685:16] goto <bb 23>; [INV]
+
+  <bb 21> :
+  # buffer_10 = PHI <buffer_19(D)(2), [ws.c:1663:12] buffer_26(5), [ws.c:1663:12] buffer_26(19)>
+  # buflen_11 = PHI <buflen_20(D)(2), [ws.c:1664:12] buflen_27(5), [ws.c:1664:12] buflen_27(19)>
+  # result_12 = PHI <[ws.c:1654:12] result_18(2), [ws.c:1659:14] result_25(5), [ws.c:1659:14] result_25(19)>
+  [ws.c:1658:9] if (buflen_11 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 22>; [INV]
+
+  <bb 22> :
+  [ws.c:1689:10] _22 = result_12;
+
+  <bb 23> :
+  # _13 = PHI <[ws.c:1661:14] _41(4), [ws.c:1675:16] _40(13), [ws.c:1680:16] _38(15), [ws.c:1685:16] _37(20), [ws.c:1689:10] _22(22)>
+  nwritten ={v} {CLOBBER};
+  return _13;
+
+}
+
+
+
+;; Function ws_flush (ws_flush, funcdef_no=137, decl_uid=11198, cgraph_uid=138, symbol_order=139)
+
+CURLcode ws_flush (struct Curl_easy * data, struct websocket * ws, _Bool blocking)
+{
+  size_t n;
+  size_t outlen;
+  const unsigned char * out;
+  CURLcode result;
+  struct bufq * _1;
+  _Bool _2;
+  _Bool _3;
+  long unsigned int outlen.34_4;
+  const unsigned char * out.35_5;
+  unsigned char _6;
+  unsigned char _7;
+  _Bool _8;
+  long unsigned int outlen.37_9;
+  const unsigned char * out.38_10;
+  long unsigned int outlen.39_11;
+  const unsigned char * out.40_12;
+  long unsigned int n.41_13;
+  long unsigned int outlen.42_14;
+  unsigned char _15;
+  unsigned char _16;
+  struct curl_trc_feat * _17;
+  struct curl_trc_feat * _18;
+  int _19;
+  int _20;
+  struct bufq * _21;
+  long unsigned int _22;
+  unsigned char _23;
+  unsigned char _24;
+  struct curl_trc_feat * _25;
+  struct curl_trc_feat * _26;
+  int _27;
+  int _28;
+  long unsigned int n.43_29;
+  long unsigned int n.44_30;
+  struct bufq * _31;
+  struct bufq * _32;
+  _Bool _33;
+  size_t iftmp.36_35;
+  CURLcode _36;
+  CURLcode _37;
+  size_t iftmp.36_63;
+  size_t iftmp.36_64;
+  CURLcode _69;
+  CURLcode _72;
+  CURLcode _76;
+
+  <bb 2> :
+  [ws.c:1595:26] _1 = [ws.c:1595:26] &[ws.c:1595:29] ws_46(D)->sendbuf;
+  [ws.c:1595:7] _2 = Curl_bufq_is_empty (_1);
+  [ws.c:1595:6] _3 = ~_2;
+  [ws.c:1595:5] if (_3 != 0)
+    goto <bb 32>; [INV]
+  else
+    goto <bb 35>; [INV]
+
+  <bb 3> :
+  [ws.c:1620:9] if (blocking_53(D) != 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 4> :
+  [ws.c:1621:18] outlen.34_4 = outlen;
+  [ws.c:1621:18] out.35_5 = out;
+  [ws.c:1621:18] result_62 = ws_send_raw_blocking (data_54(D), ws_46(D), out.35_5, outlen.34_4);
+  [ws.c:1622:24] if (result_62 == 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  [ws.c:1622:24] iftmp.36_64 = outlen;
+  [0:0] goto <bb 7>; [INV]
+
+  <bb 6> :
+  [ws.c:1622:24] iftmp.36_63 = 0;
+
+  <bb 7> :
+  # iftmp.36_35 = PHI <[ws.c:1622:24] iftmp.36_64(5), [ws.c:1622:24] iftmp.36_63(6)>
+  [ws.c:1622:11] n = iftmp.36_35;
+  [0:0] goto <bb 15>; [INV]
+
+  <bb 8> :
+  [ws.c:1624:15] _6 = [ws.c:1624:15] BIT_FIELD_REF <[ws.c:1624:19] data_54(D)->set, 8, 16784>;
+  [ws.c:1624:15] _7 = _6 & 1;
+  [ws.c:1624:14] if (_7 != 0)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 9> :
+  [ws.c:1624:41] _8 = Curl_is_in_callback (data_54(D));
+  [ws.c:1624:38] if (_8 != 0)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 10> :
+  [ws.c:1625:18] outlen.37_9 = outlen;
+  [ws.c:1625:18] out.38_10 = out;
+  [ws.c:1625:18] result_60 = Curl_senddata (data_54(D), out.38_10, outlen.37_9, [ws.c:1625:18] &n);
+  [ws.c:1625:16] goto <bb 15>; [INV]
+
+  <bb 11> :
+  [ws.c:1627:18] outlen.39_11 = outlen;
+  [ws.c:1627:18] out.40_12 = out;
+  [ws.c:1627:18] result_57 = Curl_xfer_send (data_54(D), out.40_12, outlen.39_11, 0, [ws.c:1627:18] &n);
+  [ws.c:1628:11] if (result_57 == 0)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 12> :
+  [ws.c:1628:23] n.41_13 = n;
+  [ws.c:1628:20] if (n.41_13 == 0)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 13> :
+  [ws.c:1628:26] outlen.42_14 = outlen;
+  [ws.c:1628:26] if (outlen.42_14 != 0)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 14> :
+  [ws.c:1629:18] result_58 = 81;
+
+  <bb 15> :
+  # result_34 = PHI <[ws.c:1621:18] result_62(7), [ws.c:1625:18] result_60(10), [ws.c:1627:18] result_57(11), [ws.c:1627:18] result_57(12), [ws.c:1627:18] result_57(13), [ws.c:1629:18] result_58(14)>
+  [ws.c:1632:9] if (result_34 == 81)
+    goto <bb 16>; [INV]
+  else
+    goto <bb 23>; [INV]
+
+  <bb 16> :
+  [ws.c:1633:9] if (data_54(D) != 0B)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 22>; [INV]
+
+  <bb 17> :
+  [ws.c:1633:9] _15 = [ws.c:1633:9] BIT_FIELD_REF <[ws.c:1633:9] data_54(D)->set, 8, 16808>;
+  [ws.c:1633:9] _16 = _15 & 32;
+  [ws.c:1633:9] if (_16 != 0)
+    goto <bb 18>; [INV]
+  else
+    goto <bb 22>; [INV]
+
+  <bb 18> :
+  [ws.c:1633:9] _17 = [ws.c:1633:9] [ws.c:1633:9] data_54(D)->state.feat;
+  [ws.c:1633:9] if (_17 == 0B)
+    goto <bb 20>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 19> :
+  [ws.c:1633:9] _18 = [ws.c:1633:9] [ws.c:1633:9] data_54(D)->state.feat;
+  [ws.c:1633:9] _19 = [ws.c:1633:9] _18->log_level;
+  [ws.c:1633:9] if (_19 > 0)
+    goto <bb 20>; [INV]
+  else
+    goto <bb 22>; [INV]
+
+  <bb 20> :
+  [ws.c:1633:9] _20 = [ws.c:1633:9] Curl_trc_feat_ws.log_level;
+  [ws.c:1633:9] if (_20 > 0)
+    goto <bb 21>; [INV]
+  else
+    goto <bb 22>; [INV]
+
+  <bb 21> :
+  [ws.c:1633:9] _21 = [ws.c:1633:9] &[ws.c:1633:9] ws_46(D)->sendbuf;
+  [ws.c:1633:9] _22 = Curl_bufq_len (_21);
+  [ws.c:1633:9] Curl_trc_ws (data_54(D), [ws.c:1633:9] "flush EAGAIN, %zu bytes remain in buffer", _22);
+
+  <bb 22> :
+  [ws.c:1635:16] _72 = result_34;
+  [ws.c:1635:16] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1635:16] goto <bb 34>; [INV]
+
+  <bb 23> :
+  [ws.c:1637:14] if (result_34 != 0)
+    goto <bb 24>; [INV]
+  else
+    goto <bb 25>; [INV]
+
+  <bb 24> :
+  [ws.c:1638:9] Curl_failf (data_54(D), [ws.c:1638:21] "[WS] flush, write error %d", result_34);
+  [ws.c:1639:16] _69 = result_34;
+  [ws.c:1639:16] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1639:16] goto <bb 34>; [INV]
+
+  <bb 25> :
+  [ws.c:1642:9] if (data_54(D) != 0B)
+    goto <bb 26>; [INV]
+  else
+    goto <bb 31>; [INV]
+
+  <bb 26> :
+  [ws.c:1642:9] _23 = [ws.c:1642:9] BIT_FIELD_REF <[ws.c:1642:9] data_54(D)->set, 8, 16808>;
+  [ws.c:1642:9] _24 = _23 & 32;
+  [ws.c:1642:9] if (_24 != 0)
+    goto <bb 27>; [INV]
+  else
+    goto <bb 31>; [INV]
+
+  <bb 27> :
+  [ws.c:1642:9] _25 = [ws.c:1642:9] [ws.c:1642:9] data_54(D)->state.feat;
+  [ws.c:1642:9] if (_25 == 0B)
+    goto <bb 29>; [INV]
+  else
+    goto <bb 28>; [INV]
+
+  <bb 28> :
+  [ws.c:1642:9] _26 = [ws.c:1642:9] [ws.c:1642:9] data_54(D)->state.feat;
+  [ws.c:1642:9] _27 = [ws.c:1642:9] _26->log_level;
+  [ws.c:1642:9] if (_27 > 0)
+    goto <bb 29>; [INV]
+  else
+    goto <bb 31>; [INV]
+
+  <bb 29> :
+  [ws.c:1642:9] _28 = [ws.c:1642:9] Curl_trc_feat_ws.log_level;
+  [ws.c:1642:9] if (_28 > 0)
+    goto <bb 30>; [INV]
+  else
+    goto <bb 31>; [INV]
+
+  <bb 30> :
+  [ws.c:1642:9] n.43_29 = n;
+  [ws.c:1642:9] Curl_trc_ws (data_54(D), [ws.c:1642:9] "flushed %zu bytes", n.43_29);
+
+  <bb 31> :
+  [ws.c:1643:9] n.44_30 = n;
+  [ws.c:1643:9] _31 = [ws.c:1643:9] &[ws.c:1643:27] ws_46(D)->sendbuf;
+  [ws.c:1643:9] Curl_bufq_skip (_31, n.44_30);
+
+  <bb 32> :
+  [ws.c:1611:11] _32 = [ws.c:1611:11] &[ws.c:1611:29] ws_46(D)->sendbuf;
+  [ws.c:1611:11] _33 = Curl_bufq_peek (_32, [ws.c:1611:11] &out, [ws.c:1611:11] &outlen);
+  [ws.c:1611:11] if (_33 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 33>; [INV]
+
+  <bb 33> :
+  out ={v} {CLOBBER};
+  outlen ={v} {CLOBBER};
+  n ={v} {CLOBBER};
+  [0:0] goto <bb 35>; [INV]
+
+  <bb 34> :
+  # _36 = PHI <[ws.c:1635:16] _72(22), [ws.c:1639:16] _69(24)>
+  [ws.c:1635:16] out ={v} {CLOBBER};
+  [ws.c:1635:16] outlen ={v} {CLOBBER};
+  [ws.c:1635:16] n ={v} {CLOBBER};
+  goto <bb 36>; [INV]
+
+  <bb 35> :
+  [ws.c:1647:10] _76 = 0;
+
+  <bb 36> :
+  # _37 = PHI <_36(34), [ws.c:1647:10] _76(35)>
+  return _37;
+
+}
+
+
+
+;; Function ws_enc_add_cntrl (ws_enc_add_cntrl, funcdef_no=117, decl_uid=11215, cgraph_uid=118, symbol_order=117)
+
+CURLcode ws_enc_add_cntrl (struct Curl_easy * data, struct websocket * ws, const unsigned char * payload, size_t plen, unsigned int frame_type)
+{
+  CURLcode result;
+  unsigned char[125] * _1;
+  long int _2;
+  _Bool _3;
+  int _4;
+  CURLcode _5;
+  CURLcode _16;
+  CURLcode _22;
+  CURLcode _23;
+
+  <bb 2> :
+  [ws.c:633:5] if (plen_8(D) > 125)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  [ws.c:634:12] _23 = 43;
+  [ws.c:634:12] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:634:12] goto <bb 9>; [INV]
+
+  <bb 4> :
+  [ws.c:638:20] [ws.c:638:14] [ws.c:638:5] ws_10(D)->pending.type = frame_type_11(D);
+  [ws.c:639:27] [ws.c:639:14] [ws.c:639:5] ws_10(D)->pending.payload_len = plen_8(D);
+  [ws.c:640:21] _1 = [ws.c:640:21] &[ws.c:640:21] [ws.c:640:12] ws_10(D)->pending.payload;
+  [ws.c:640:3] memcpy (_1, payload_14(D), plen_8(D));
+  [ws.c:642:14] _2 = [ws.c:642:14] [ws.c:642:9] ws_10(D)->enc.payload_remain;
+  [ws.c:642:5] if (_2 == 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 5> :
+  [ws.c:643:23] result_19 = ws_enc_add_pending (data_17(D), ws_10(D));
+  [ws.c:644:7] if (result_19 == 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 6> :
+  [ws.c:645:32] _3 = Curl_is_in_callback (data_17(D));
+  [ws.c:645:13] _4 = (int) _3;
+  [ws.c:645:13] ws_flush (data_17(D), ws_10(D), _4);
+
+  <bb 7> :
+  [ws.c:646:12] _22 = result_19;
+  [ws.c:646:12] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:646:12] goto <bb 9>; [INV]
+
+  <bb 8> :
+  [ws.c:648:10] _16 = 0;
+
+  <bb 9> :
+  # _5 = PHI <[ws.c:634:12] _23(3), [ws.c:646:12] _22(7), [ws.c:648:10] _16(8)>
+  return _5;
+
+}
+
+
+
+;; Function ws_cw_dec_next (ws_cw_dec_next, funcdef_no=118, decl_uid=11228, cgraph_uid=119, symbol_order=118)
+
+CURLcode ws_cw_dec_next (const unsigned char * buf, size_t buflen, int frame_age, int frame_flags, curl_off_t payload_offset, curl_off_t payload_len, void * user_data, size_t * pnwritten)
+{
+  CURLcode result;
+  curl_off_t remain;
+  _Bool auto_pong;
+  struct websocket * ws;
+  struct Curl_easy * data;
+  struct ws_cw_dec_ctx * ctx;
+  unsigned char _1;
+  unsigned char _2;
+  long unsigned int payload_len.32_3;
+  long unsigned int payload_offset.33_4;
+  long unsigned int _5;
+  long unsigned int _6;
+  int _7;
+  unsigned char _8;
+  unsigned char _9;
+  struct curl_trc_feat * _10;
+  struct curl_trc_feat * _11;
+  int _12;
+  int _13;
+  _Bool _14;
+  _Bool _15;
+  _Bool _16;
+  int _17;
+  int _18;
+  struct Curl_cwriter * _19;
+  CURLcode _20;
+  CURLcode _41;
+  CURLcode _46;
+  CURLcode _48;
+
+  <bb 2> :
+  [ws.c:658:25] ctx_25 = user_data_24(D);
+  [ws.c:659:21] data_27 = [ws.c:659:31] ctx_25->data;
+  [ws.c:660:21] ws_28 = [ws.c:660:29] ctx_25->ws;
+  [ws.c:661:20] _1 = [ws.c:661:20] BIT_FIELD_REF <[ws.c:661:25] data_27->set, 8, 16832>;
+  [ws.c:661:20] _2 = _1 & 128;
+  [ws.c:661:8] auto_pong_29 = _2 == 0;
+  [ws.c:662:36] payload_len.32_3 = (long unsigned int) payload_len_30(D);
+  [ws.c:662:54] payload_offset.33_4 = (long unsigned int) payload_offset_31(D);
+  [ws.c:662:54] _5 = buflen_32(D) + payload_offset.33_4;
+  [ws.c:662:36] _6 = payload_len.32_3 - _5;
+  [ws.c:662:14] remain_33 = (curl_off_t) _6;
+  [ws.c:666:14] [ws.c:666:3] *pnwritten_34(D) = 0;
+  [ws.c:668:5] if (auto_pong_29 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 3> :
+  [ws.c:668:32] _7 = frame_flags_36(D) & 16;
+  [ws.c:668:16] if (_7 != 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 4> :
+  [ws.c:668:47] if (remain_33 == 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 5> :
+  [ws.c:670:5] if (data_27 != 0B)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 6> :
+  [ws.c:670:5] _8 = [ws.c:670:5] BIT_FIELD_REF <[ws.c:670:5] data_27->set, 8, 16808>;
+  [ws.c:670:5] _9 = _8 & 32;
+  [ws.c:670:5] if (_9 != 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 7> :
+  [ws.c:670:5] _10 = [ws.c:670:5] [ws.c:670:5] data_27->state.feat;
+  [ws.c:670:5] if (_10 == 0B)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 8> :
+  [ws.c:670:5] _11 = [ws.c:670:5] [ws.c:670:5] data_27->state.feat;
+  [ws.c:670:5] _12 = [ws.c:670:5] _11->log_level;
+  [ws.c:670:5] if (_12 > 0)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 9> :
+  [ws.c:670:5] _13 = [ws.c:670:5] Curl_trc_feat_ws.log_level;
+  [ws.c:670:5] if (_13 > 0)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 10> :
+  [ws.c:670:5] Curl_trc_ws (data_27, [ws.c:670:5] "auto PONG to [PING payload=%ld/%ld]", payload_offset_31(D), payload_len_30(D));
+
+  <bb 11> :
+  [ws.c:673:14] result_40 = ws_enc_add_cntrl (data_27, ws_28, buf_38(D), buflen_32(D), 64);
+  [ws.c:674:7] if (result_40 != 0)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 12> :
+  [ws.c:675:14] _41 = result_40;
+  [ws.c:675:14] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:675:14] goto <bb 17>; [INV]
+
+  <bb 13> :
+  [ws.c:677:11] _14 = buflen_32(D) != 0;
+  [ws.c:677:21] _15 = remain_33 == 0;
+  [ws.c:677:18] _16 = _14 | _15;
+  [ws.c:677:10] if (_16 != 0)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 14> :
+  [ws.c:679:5] update_meta (ws_28, frame_age_42(D), frame_flags_36(D), payload_offset_31(D), payload_len_30(D), buflen_32(D));
+  [ws.c:683:35] _17 = [ws.c:683:35] ctx_25->cw_type;
+  [ws.c:682:14] _18 = _17 | 256;
+  [ws.c:682:14] _19 = [ws.c:682:14] ctx_25->next_writer;
+  [ws.c:682:14] result_45 = Curl_cwriter_write (data_27, _19, _18, buf_38(D), buflen_32(D));
+  [ws.c:685:7] if (result_45 != 0)
+    goto <bb 15>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 15> :
+  [ws.c:686:14] _46 = result_45;
+  [ws.c:686:14] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:686:14] goto <bb 17>; [INV]
+
+  <bb 16> :
+  [ws.c:688:14] [ws.c:688:3] *pnwritten_34(D) = buflen_32(D);
+  [ws.c:689:10] _48 = 0;
+
+  <bb 17> :
+  # _20 = PHI <[ws.c:675:14] _41(12), [ws.c:686:14] _46(15), [ws.c:689:10] _48(16)>
+  return _20;
+
+}
+
+
+
+;; Function ws_client_collect (ws_client_collect, funcdef_no=134, decl_uid=11460, cgraph_uid=135, symbol_order=136)
+
+CURLcode ws_client_collect (const unsigned char * buf, size_t buflen, int frame_age, int frame_flags, curl_off_t payload_offset, curl_off_t payload_len, void * userp, size_t * pnwritten)
+{
+  size_t write_len;
+  CURLcode result;
+  curl_off_t remain;
+  _Bool auto_pong;
+  struct Curl_easy * data;
+  struct ws_collect * ctx;
+  unsigned char _1;
+  unsigned char _2;
+  long unsigned int payload_len.69_3;
+  long unsigned int payload_offset.70_4;
+  long unsigned int _5;
+  long unsigned int _6;
+  long unsigned int _7;
+  int _8;
+  unsigned char _9;
+  unsigned char _10;
+  struct curl_trc_feat * _11;
+  struct curl_trc_feat * _12;
+  int _13;
+  int _14;
+  struct websocket * _15;
+  struct Curl_easy * _16;
+  long unsigned int _17;
+  long unsigned int _18;
+  long unsigned int _19;
+  unsigned char * _20;
+  long unsigned int _21;
+  unsigned char * _22;
+  long unsigned int _23;
+  long unsigned int _24;
+  CURLcode _26;
+  CURLcode _54;
+  CURLcode _60;
+  CURLcode _61;
+  CURLcode _62;
+
+  <bb 2> :
+  [ws.c:1443:22] ctx_32 = userp_31(D);
+  [ws.c:1444:21] data_34 = [ws.c:1444:31] ctx_32->data;
+  [ws.c:1445:20] _1 = [ws.c:1445:20] BIT_FIELD_REF <[ws.c:1445:25] data_34->set, 8, 16832>;
+  [ws.c:1445:20] _2 = _1 & 128;
+  [ws.c:1445:8] auto_pong_35 = _2 == 0;
+  [ws.c:1446:36] payload_len.69_3 = (long unsigned int) payload_len_36(D);
+  [ws.c:1446:54] payload_offset.70_4 = (long unsigned int) payload_offset_37(D);
+  [ws.c:1446:54] _5 = buflen_38(D) + payload_offset.70_4;
+  [ws.c:1446:36] _6 = payload_len.69_3 - _5;
+  [ws.c:1446:14] remain_39 = (curl_off_t) _6;
+  [ws.c:1447:12] result_40 = 0;
+  [ws.c:1449:14] [ws.c:1449:3] *pnwritten_41(D) = 0;
+  [ws.c:1450:10] _7 = [ws.c:1450:10] ctx_32->bufidx;
+  [ws.c:1450:5] if (_7 == 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  [ws.c:1452:20] [ws.c:1452:8] ctx_32->frame_age = frame_age_43(D);
+  [ws.c:1453:22] [ws.c:1453:8] ctx_32->frame_flags = frame_flags_45(D);
+  [ws.c:1454:25] [ws.c:1454:8] ctx_32->payload_offset = payload_offset_37(D);
+  [ws.c:1455:22] [ws.c:1455:8] ctx_32->payload_len = payload_len_36(D);
+
+  <bb 4> :
+  [ws.c:1458:5] if (auto_pong_35 != 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 5> :
+  [ws.c:1458:32] _8 = frame_flags_45(D) & 16;
+  [ws.c:1458:16] if (_8 != 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 6> :
+  [ws.c:1458:47] if (remain_39 == 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 7> :
+  [ws.c:1460:5] if (data_34 != 0B)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 8> :
+  [ws.c:1460:5] _9 = [ws.c:1460:5] BIT_FIELD_REF <[ws.c:1460:5] data_34->set, 8, 16808>;
+  [ws.c:1460:5] _10 = _9 & 32;
+  [ws.c:1460:5] if (_10 != 0)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 9> :
+  [ws.c:1460:5] _11 = [ws.c:1460:5] [ws.c:1460:5] data_34->state.feat;
+  [ws.c:1460:5] if (_11 == 0B)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 10> :
+  [ws.c:1460:5] _12 = [ws.c:1460:5] [ws.c:1460:5] data_34->state.feat;
+  [ws.c:1460:5] _13 = [ws.c:1460:5] _12->log_level;
+  [ws.c:1460:5] if (_13 > 0)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 11> :
+  [ws.c:1460:5] _14 = [ws.c:1460:5] Curl_trc_feat_ws.log_level;
+  [ws.c:1460:5] if (_14 > 0)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 12> :
+  [ws.c:1460:5] Curl_trc_ws (data_34, [ws.c:1460:5] "auto PONG to [PING payload=%ld/%ld]", payload_offset_37(D), payload_len_36(D));
+
+  <bb 13> :
+  [ws.c:1463:14] _15 = [ws.c:1463:14] ctx_32->ws;
+  [ws.c:1463:14] _16 = [ws.c:1463:14] ctx_32->data;
+  [ws.c:1463:14] result_52 = ws_enc_add_cntrl (_16, _15, buf_50(D), buflen_38(D), 64);
+  [ws.c:1464:7] if (result_52 != 0)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 14> :
+  [ws.c:1465:14] _54 = result_52;
+  [ws.c:1465:14] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1465:14] goto <bb 22>; [INV]
+
+  <bb 15> :
+  [ws.c:1466:16] [ws.c:1466:5] *pnwritten_41(D) = buflen_38(D);
+  [ws.c:1466:16] goto <bb 21>; [INV]
+
+  <bb 16> :
+  [ws.c:1471:18] [ws.c:1471:8] ctx_32->written = 1;
+  [ws.c:1473:17] _17 = [ws.c:1473:17] ctx_32->buflen;
+  [ws.c:1473:17] _18 = [ws.c:1473:17] ctx_32->bufidx;
+  [ws.c:1473:17] _19 = _17 - _18;
+  [ws.c:1473:15] write_len_56 = MIN_EXPR <buflen_38(D), _19>;
+  [ws.c:1474:7] if (write_len_56 == 0)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 17> :
+  [ws.c:1475:9] if (buflen_38(D) == 0)
+    goto <bb 18>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 18> :
+  [ws.c:1476:16] _61 = 0;
+  [ws.c:1476:16] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1476:16] goto <bb 22>; [INV]
+
+  <bb 19> :
+  [ws.c:1477:14] _60 = 81;
+  [ws.c:1477:14] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1477:14] goto <bb 22>; [INV]
+
+  <bb 20> :
+  [ws.c:1479:15] _20 = [ws.c:1479:15] ctx_32->buffer;
+  [ws.c:1479:29] _21 = [ws.c:1479:29] ctx_32->bufidx;
+  [ws.c:1479:24] _22 = _20 + _21;
+  [ws.c:1479:5] memcpy (_22, buf_50(D), write_len_56);
+  [ws.c:1480:17] _23 = ctx_32->bufidx;
+  [ws.c:1480:17] _24 = write_len_56 + _23;
+  [ws.c:1480:17] ctx_32->bufidx = _24;
+  [ws.c:1481:16] [ws.c:1481:5] *pnwritten_41(D) = write_len_56;
+
+  <bb 21> :
+  # result_25 = PHI <[ws.c:1463:14] result_52(15), [ws.c:1447:12] result_40(20)>
+  [ws.c:1483:10] _62 = result_25;
+
+  <bb 22> :
+  # _26 = PHI <[ws.c:1465:14] _54(14), [ws.c:1476:16] _61(18), [ws.c:1477:14] _60(19), [ws.c:1483:10] _62(21)>
+  return _26;
+
+}
+
+
+
+;; Function ws_enc_send (ws_enc_send, funcdef_no=127, decl_uid=11206, cgraph_uid=128, symbol_order=128)
+
+CURLcode ws_enc_send (struct Curl_easy * data, struct websocket * ws, const unsigned char * buffer, size_t buflen, curl_off_t fragsize, unsigned int flags, size_t * pnsent)
+{
+  size_t flushed;
+  size_t prev_len;
+  CURLcode result;
+  size_t n;
+  long int _1;
+  struct bufq * _2;
+  _Bool _3;
+  _Bool _4;
+  long unsigned int _5;
+  long unsigned int _6;
+  long int _7;
+  long unsigned int _8;
+  long int _9;
+  long int _10;
+  long int buflen.72_11;
+  long int _12;
+  long unsigned int _13;
+  long unsigned int _14;
+  long unsigned int _15;
+  _Bool _16;
+  int _17;
+  struct bufq * _18;
+  unsigned int _19;
+  struct ws_encoder * _20;
+  unsigned char _21;
+  unsigned char _22;
+  struct curl_trc_feat * _23;
+  struct curl_trc_feat * _24;
+  int _25;
+  int _26;
+  long unsigned int _27;
+  struct bufq * _28;
+  struct bufq * _29;
+  long unsigned int _30;
+  long unsigned int _31;
+  long unsigned int _32;
+  const unsigned char * _33;
+  struct ws_encoder * _34;
+  _Bool _35;
+  _Bool _36;
+  _Bool _37;
+  struct bufq * _38;
+  long unsigned int _39;
+  long unsigned int _40;
+  long unsigned int _41;
+  long unsigned int _42;
+  _Bool _43;
+  int _44;
+  long unsigned int _45;
+  long unsigned int _46;
+  long unsigned int _47;
+  long unsigned int _48;
+  long unsigned int _49;
+  long unsigned int _50;
+  long unsigned int _51;
+  struct bufq * _52;
+  long unsigned int _53;
+  long unsigned int _54;
+  struct bufq * _55;
+  long unsigned int _56;
+  long unsigned int _57;
+  long unsigned int _58;
+  long unsigned int _59;
+  long unsigned int _60;
+  unsigned char _61;
+  unsigned char _62;
+  struct curl_trc_feat * _63;
+  struct curl_trc_feat * _64;
+  int _65;
+  int _66;
+  long unsigned int _67;
+  struct bufq * _68;
+  _Bool _69;
+  _Bool _70;
+  long unsigned int _71;
+  CURLcode _74;
+  long int iftmp.73_75;
+  long int iftmp.73_94;
+  long int iftmp.73_96;
+  CURLcode _101;
+  CURLcode _102;
+  CURLcode _104;
+  CURLcode _106;
+  CURLcode _108;
+  long unsigned int _114;
+  CURLcode _116;
+  CURLcode _117;
+  CURLcode _125;
+  CURLcode _128;
+  CURLcode _133;
+
+  <bb 2> :
+  [ws.c:1003:12] result_82 = 0;
+  [ws.c:1006:11] [ws.c:1006:3] *pnsent_84(D) = 0;
+  [ws.c:1008:13] _1 = [ws.c:1008:13] [ws.c:1008:8] ws_86(D)->enc.payload_remain;
+  [ws.c:1008:5] if (_1 != 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 3>; [INV]
+
+  <bb 3> :
+  [ws.c:1008:52] _2 = [ws.c:1008:52] &[ws.c:1008:55] ws_86(D)->sendbuf;
+  [ws.c:1008:33] _3 = Curl_bufq_is_empty (_2);
+  [ws.c:1008:32] _4 = ~_3;
+  [ws.c:1008:29] if (_4 != 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 4> :
+  [ws.c:1011:19] _5 = [ws.c:1011:19] ws_86(D)->sendbuf_payload;
+  [ws.c:1011:7] if (buflen_93(D) < _5)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  [ws.c:1014:7] _6 = [ws.c:1014:7] ws_86(D)->sendbuf_payload;
+  [ws.c:1014:7] Curl_failf (data_88(D), [ws.c:1014:19] "[WS] curl_ws_send() called with smaller \'buflen\' than bytes already buffered in previous call, %zu vs %zu", buflen_93(D), _6);
+  [ws.c:1017:14] _106 = 43;
+  [ws.c:1017:14] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1017:14] goto <bb 43>; [INV]
+
+  <bb 6> :
+  [ws.c:1020:16] _7 = [ws.c:1020:16] [ws.c:1020:11] ws_86(D)->enc.payload_remain;
+  [ws.c:1020:48] _8 = [ws.c:1020:48] ws_86(D)->sendbuf_payload;
+  [ws.c:1020:34] _9 = (long int) _8;
+  [ws.c:1020:32] _10 = _7 + _9;
+  [ws.c:1019:8] buflen.72_11 = (long int) buflen_93(D);
+  [ws.c:1019:7] if (_10 < buflen.72_11)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 40>; [INV]
+
+  <bb 7> :
+  [ws.c:1024:28] _12 = [ws.c:1024:28] [ws.c:1024:23] ws_86(D)->enc.payload_remain;
+  [ws.c:1024:28] _13 = (long unsigned int) _12;
+  [ws.c:1024:48] _14 = [ws.c:1024:48] ws_86(D)->sendbuf_payload;
+  [ws.c:1022:7] _15 = _13 + _14;
+  [ws.c:1022:7] Curl_failf (data_88(D), [ws.c:1022:19] "[WS] unaligned frame size (sending %zu instead of %ld)", buflen_93(D), _15);
+  [ws.c:1025:14] _104 = 43;
+  [ws.c:1025:14] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1025:14] goto <bb 43>; [INV]
+
+  <bb 8> :
+  [ws.c:1029:33] _16 = Curl_is_in_callback (data_88(D));
+  [ws.c:1029:14] _17 = (int) _16;
+  [ws.c:1029:14] result_91 = ws_flush (data_88(D), ws_86(D), _17);
+  [ws.c:1030:7] if (result_91 != 0)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 9> :
+  [ws.c:1031:14] _102 = result_91;
+  [ws.c:1031:14] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1031:14] goto <bb 43>; [INV]
+
+  <bb 10> :
+  [ws.c:1033:14] _18 = [ws.c:1033:14] &[ws.c:1036:35] ws_86(D)->sendbuf;
+  [ws.c:1034:39] _19 = flags_92(D) & 32;
+  [ws.c:1033:14] if (_19 != 0)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 11> :
+  [ws.c:1033:14] iftmp.73_96 = fragsize_95(D);
+  [0:0] goto <bb 13>; [INV]
+
+  <bb 12> :
+  [ws.c:1033:14] iftmp.73_94 = (long int) buflen_93(D);
+
+  <bb 13> :
+  # iftmp.73_75 = PHI <[ws.c:1033:14] iftmp.73_96(11), [ws.c:1033:14] iftmp.73_94(12)>
+  [ws.c:1033:14] _20 = [ws.c:1033:14] &[ws.c:1033:45] ws_86(D)->enc;
+  [ws.c:1033:14] result_98 = ws_enc_write_head (data_88(D), ws_86(D), _20, flags_92(D), iftmp.73_75, _18);
+  [ws.c:1037:7] if (result_98 != 0)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 40>; [INV]
+
+  <bb 14> :
+  [ws.c:1038:7] if (data_88(D) != 0B)
+    goto <bb 15>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 15> :
+  [ws.c:1038:7] _21 = [ws.c:1038:7] BIT_FIELD_REF <[ws.c:1038:7] data_88(D)->set, 8, 16808>;
+  [ws.c:1038:7] _22 = _21 & 32;
+  [ws.c:1038:7] if (_22 != 0)
+    goto <bb 16>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 16> :
+  [ws.c:1038:7] _23 = [ws.c:1038:7] [ws.c:1038:7] data_88(D)->state.feat;
+  [ws.c:1038:7] if (_23 == 0B)
+    goto <bb 18>; [INV]
+  else
+    goto <bb 17>; [INV]
+
+  <bb 17> :
+  [ws.c:1038:7] _24 = [ws.c:1038:7] [ws.c:1038:7] data_88(D)->state.feat;
+  [ws.c:1038:7] _25 = [ws.c:1038:7] _24->log_level;
+  [ws.c:1038:7] if (_25 > 0)
+    goto <bb 18>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 18> :
+  [ws.c:1038:7] _26 = [ws.c:1038:7] Curl_trc_feat_ws.log_level;
+  [ws.c:1038:7] if (_26 > 0)
+    goto <bb 19>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 19> :
+  [ws.c:1038:7] Curl_trc_ws (data_88(D), [ws.c:1038:7] "curl_ws_send(), error writing frame head %d", result_98);
+
+  <bb 20> :
+  [ws.c:1039:14] _101 = result_98;
+  [ws.c:1039:14] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1039:14] goto <bb 43>; [INV]
+
+  <bb 21> :
+  [ws.c:1046:19] _27 = [ws.c:1046:19] ws_86(D)->sendbuf_payload;
+  [ws.c:1046:7] if (buflen_73 > _27)
+    goto <bb 22>; [INV]
+  else
+    goto <bb 26>; [INV]
+
+  <bb 22> :
+  [ws.c:1047:39] _28 = [ws.c:1047:39] &[ws.c:1047:42] ws_86(D)->sendbuf;
+  [ws.c:1047:25] prev_len_110 = Curl_bufq_len (_28);
+  [ws.c:1048:16] _29 = [ws.c:1048:16] &[ws.c:1051:40] ws_86(D)->sendbuf;
+  [ws.c:1050:48] _30 = [ws.c:1050:48] ws_86(D)->sendbuf_payload;
+  [ws.c:1048:16] _31 = buflen_73 - _30;
+  [ws.c:1049:48] _32 = [ws.c:1049:48] ws_86(D)->sendbuf_payload;
+  [ws.c:1048:16] _33 = buffer_72 + _32;
+  [ws.c:1048:16] _34 = [ws.c:1048:16] &[ws.c:1048:40] ws_86(D)->enc;
+  [ws.c:1048:16] result_112 = ws_enc_write_payload (_34, data_88(D), _33, _31, _29, [ws.c:1048:16] &n);
+  [ws.c:1052:10] _35 = result_112 != 0;
+  [ws.c:1052:28] _36 = result_112 != 81;
+  [ws.c:1052:17] _37 = _35 & _36;
+  [ws.c:1052:9] if (_37 != 0)
+    goto <bb 23>; [INV]
+  else
+    goto <bb 24>; [INV]
+
+  <bb 23> :
+  [ws.c:1053:16] _117 = result_112;
+  [ws.c:1053:16] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1053:16] goto <bb 43>; [INV]
+
+  <bb 24> :
+  [ws.c:1054:44] _38 = [ws.c:1054:44] &[ws.c:1054:47] ws_86(D)->sendbuf;
+  [ws.c:1054:30] _39 = Curl_bufq_len (_38);
+  [ws.c:1054:58] _114 = _39 - prev_len_110;
+  [ws.c:1054:27] _40 = ws_86(D)->sendbuf_payload;
+  [ws.c:1054:27] _41 = _114 + _40;
+  [ws.c:1054:27] ws_86(D)->sendbuf_payload = _41;
+  [ws.c:1055:13] _42 = [ws.c:1055:13] ws_86(D)->sendbuf_payload;
+  [ws.c:1055:9] if (_42 == 0)
+    goto <bb 25>; [INV]
+  else
+    goto <bb 26>; [INV]
+
+  <bb 25> :
+  [ws.c:1056:16] _116 = 81;
+  [ws.c:1056:16] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1056:16] goto <bb 43>; [INV]
+
+  <bb 26> :
+  [ws.c:1061:33] _43 = Curl_is_in_callback (data_88(D));
+  [ws.c:1061:14] _44 = (int) _43;
+  [ws.c:1061:14] result_120 = ws_flush (data_88(D), ws_86(D), _44);
+  [ws.c:1062:7] if (result_120 == 0)
+    goto <bb 27>; [INV]
+  else
+    goto <bb 29>; [INV]
+
+  <bb 27> :
+  [ws.c:1062:21] _45 = [ws.c:1062:21] ws_86(D)->sendbuf_payload;
+  [ws.c:1062:16] if (_45 != 0)
+    goto <bb 28>; [INV]
+  else
+    goto <bb 29>; [INV]
+
+  <bb 28> :
+  [ws.c:1063:15] _46 = [ws.c:1063:15] *pnsent_84(D);
+  [ws.c:1063:20] _47 = [ws.c:1063:20] ws_86(D)->sendbuf_payload;
+  [ws.c:1063:15] _48 = _46 + _47;
+  [ws.c:1063:15] [ws.c:1063:15] *pnsent_84(D) = _48;
+  [ws.c:1064:19] _49 = [ws.c:1064:19] ws_86(D)->sendbuf_payload;
+  [ws.c:1064:14] buffer_122 = buffer_72 + _49;
+  [ws.c:1065:19] _50 = [ws.c:1065:19] ws_86(D)->sendbuf_payload;
+  [ws.c:1065:14] buflen_123 = buflen_73 - _50;
+  [ws.c:1066:27] [ws.c:1066:9] ws_86(D)->sendbuf_payload = 0;
+  [ws.c:1066:27] goto <bb 40>; [INV]
+
+  <bb 29> :
+  [ws.c:1068:12] if (result_120 == 81)
+    goto <bb 30>; [INV]
+  else
+    goto <bb 39>; [INV]
+
+  <bb 30> :
+  [ws.c:1069:12] _51 = [ws.c:1069:12] ws_86(D)->sendbuf_payload;
+  [ws.c:1069:46] _52 = [ws.c:1069:46] &[ws.c:1069:49] ws_86(D)->sendbuf;
+  [ws.c:1069:32] _53 = Curl_bufq_len (_52);
+  [ws.c:1069:9] if (_51 > _53)
+    goto <bb 31>; [INV]
+  else
+    goto <bb 32>; [INV]
+
+  <bb 31> :
+  [ws.c:1072:29] _54 = [ws.c:1072:29] ws_86(D)->sendbuf_payload;
+  [ws.c:1072:63] _55 = [ws.c:1072:63] &[ws.c:1072:66] ws_86(D)->sendbuf;
+  [ws.c:1072:49] _56 = Curl_bufq_len (_55);
+  [ws.c:1072:16] flushed_130 = _54 - _56;
+  [ws.c:1073:17] _57 = [ws.c:1073:17] *pnsent_84(D);
+  [ws.c:1073:17] _58 = flushed_130 + _57;
+  [ws.c:1073:17] [ws.c:1073:17] *pnsent_84(D) = _58;
+  [ws.c:1074:29] _59 = ws_86(D)->sendbuf_payload;
+  [ws.c:1074:29] _60 = _59 - flushed_130;
+  [ws.c:1074:29] ws_86(D)->sendbuf_payload = _60;
+  [ws.c:1075:16] _133 = 0;
+  [ws.c:1075:16] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1075:16] goto <bb 43>; [INV]
+
+  <bb 32> :
+  [ws.c:1080:9] if (data_88(D) != 0B)
+    goto <bb 33>; [INV]
+  else
+    goto <bb 38>; [INV]
+
+  <bb 33> :
+  [ws.c:1080:9] _61 = [ws.c:1080:9] BIT_FIELD_REF <[ws.c:1080:9] data_88(D)->set, 8, 16808>;
+  [ws.c:1080:9] _62 = _61 & 32;
+  [ws.c:1080:9] if (_62 != 0)
+    goto <bb 34>; [INV]
+  else
+    goto <bb 38>; [INV]
+
+  <bb 34> :
+  [ws.c:1080:9] _63 = [ws.c:1080:9] [ws.c:1080:9] data_88(D)->state.feat;
+  [ws.c:1080:9] if (_63 == 0B)
+    goto <bb 36>; [INV]
+  else
+    goto <bb 35>; [INV]
+
+  <bb 35> :
+  [ws.c:1080:9] _64 = [ws.c:1080:9] [ws.c:1080:9] data_88(D)->state.feat;
+  [ws.c:1080:9] _65 = [ws.c:1080:9] _64->log_level;
+  [ws.c:1080:9] if (_65 > 0)
+    goto <bb 36>; [INV]
+  else
+    goto <bb 38>; [INV]
+
+  <bb 36> :
+  [ws.c:1080:9] _66 = [ws.c:1080:9] Curl_trc_feat_ws.log_level;
+  [ws.c:1080:9] if (_66 > 0)
+    goto <bb 37>; [INV]
+  else
+    goto <bb 38>; [INV]
+
+  <bb 37> :
+  [ws.c:1080:9] _67 = [ws.c:1080:9] ws_86(D)->sendbuf_payload;
+  [ws.c:1080:9] Curl_trc_ws (data_88(D), [ws.c:1080:9] "EAGAIN flushing sendbuf, payload_encoded: %zu/%zu", _67, buflen_73);
+
+  <bb 38> :
+  [ws.c:1083:16] _128 = 81;
+  [ws.c:1083:16] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1083:16] goto <bb 43>; [INV]
+
+  <bb 39> :
+  [ws.c:1087:14] _125 = result_120;
+  [ws.c:1087:14] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1087:14] goto <bb 43>; [INV]
+
+  <bb 40> :
+  # buffer_72 = PHI <buffer_99(D)(13), [ws.c:1064:14] buffer_122(28), buffer_99(D)(6)>
+  # buflen_73 = PHI <buflen_93(D)(13), [ws.c:1065:14] buflen_123(28), buflen_93(D)(6)>
+  [ws.c:1044:29] _68 = [ws.c:1044:29] &[ws.c:1044:32] ws_86(D)->sendbuf;
+  [ws.c:1044:10] _69 = Curl_bufq_is_empty (_68);
+  [ws.c:1044:9] _70 = ~_69;
+  [ws.c:1044:43] if (_70 != 0)
+    goto <bb 21>; [INV]
+  else
+    goto <bb 41>; [INV]
+
+  <bb 41> :
+  [ws.c:1044:58] _71 = [ws.c:1044:58] ws_86(D)->sendbuf_payload;
+  [ws.c:1044:43] if (buflen_73 > _71)
+    goto <bb 21>; [INV]
+  else
+    goto <bb 42>; [INV]
+
+  <bb 42> :
+  [ws.c:1089:10] _108 = 0;
+
+  <bb 43> :
+  # _74 = PHI <[ws.c:1017:14] _106(5), [ws.c:1025:14] _104(7), [ws.c:1031:14] _102(9), [ws.c:1039:14] _101(20), [ws.c:1053:16] _117(23), [ws.c:1056:16] _116(25), [ws.c:1075:16] _133(31), [ws.c:1083:16] _128(38), [ws.c:1087:14] _125(39), [ws.c:1089:10] _108(42)>
+  n ={v} {CLOBBER};
+  return _74;
+
+}
+
+
+
+;; Function ws_send_raw (ws_send_raw, funcdef_no=139, decl_uid=11540, cgraph_uid=140, symbol_order=141)
+
+CURLcode ws_send_raw (struct Curl_easy * data, const void * buffer, size_t buflen, size_t * pnwritten)
+{
+  CURLcode result;
+  struct websocket * ws;
+  struct connectdata * _1;
+  _Bool _2;
+  unsigned char _3;
+  unsigned char _4;
+  struct curl_trc_feat * _5;
+  struct curl_trc_feat * _6;
+  int _7;
+  int _8;
+  long unsigned int _9;
+  CURLcode _11;
+  CURLcode _27;
+  CURLcode _32;
+  CURLcode _34;
+  CURLcode _35;
+  CURLcode _37;
+
+  <bb 2> :
+  [ws.c:1698:8] _1 = [ws.c:1698:8] data_16(D)->conn;
+  [ws.c:1698:8] ws_18 = Curl_conn_meta_get (_1, [ws.c:1698:39] "meta:proto:ws:conn");
+  [ws.c:1699:5] if (ws_18 == 0B)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  [ws.c:1700:5] Curl_failf (data_16(D), [ws.c:1700:17] "[WS] Not a websocket transfer");
+  [ws.c:1701:12] _37 = 55;
+  [ws.c:1701:12] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1701:12] goto <bb 20>; [INV]
+
+  <bb 4> :
+  [ws.c:1703:5] if (buflen_19(D) == 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  [ws.c:1704:12] _35 = 0;
+  [ws.c:1704:12] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1704:12] goto <bb 20>; [INV]
+
+  <bb 6> :
+  [ws.c:1706:6] _2 = Curl_is_in_callback (data_16(D));
+  [ws.c:1706:5] if (_2 != 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 7> :
+  [ws.c:1711:14] result_29 = ws_flush (data_16(D), ws_18, 1);
+  [ws.c:1712:7] if (result_29 != 0)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 8> :
+  [ws.c:1713:14] _32 = result_29;
+  [ws.c:1713:14] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1713:14] goto <bb 20>; [INV]
+
+  <bb 9> :
+  [ws.c:1714:14] result_31 = ws_send_raw_blocking (data_16(D), ws_18, buffer_23(D), buflen_19(D));
+  [0:0] goto <bb 13>; [INV]
+
+  <bb 10> :
+  [ws.c:1718:14] result_22 = ws_flush (data_16(D), ws_18, 0);
+  [ws.c:1719:7] if (result_22 != 0)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 11> :
+  [ws.c:1720:14] _27 = result_22;
+  [ws.c:1720:14] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1720:14] goto <bb 20>; [INV]
+
+  <bb 12> :
+  [ws.c:1721:14] result_26 = Curl_senddata (data_16(D), buffer_23(D), buflen_19(D), pnwritten_24(D));
+
+  <bb 13> :
+  # result_10 = PHI <[ws.c:1714:14] result_31(9), [ws.c:1721:14] result_26(12)>
+  [ws.c:1724:3] if (data_16(D) != 0B)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 14> :
+  [ws.c:1724:3] _3 = [ws.c:1724:3] BIT_FIELD_REF <[ws.c:1724:3] data_16(D)->set, 8, 16808>;
+  [ws.c:1724:3] _4 = _3 & 32;
+  [ws.c:1724:3] if (_4 != 0)
+    goto <bb 15>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 15> :
+  [ws.c:1724:3] _5 = [ws.c:1724:3] [ws.c:1724:3] data_16(D)->state.feat;
+  [ws.c:1724:3] if (_5 == 0B)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 16> :
+  [ws.c:1724:3] _6 = [ws.c:1724:3] [ws.c:1724:3] data_16(D)->state.feat;
+  [ws.c:1724:3] _7 = [ws.c:1724:3] _6->log_level;
+  [ws.c:1724:3] if (_7 > 0)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 17> :
+  [ws.c:1724:3] _8 = [ws.c:1724:3] Curl_trc_feat_ws.log_level;
+  [ws.c:1724:3] if (_8 > 0)
+    goto <bb 18>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 18> :
+  [ws.c:1724:3] _9 = [ws.c:1724:3] *pnwritten_24(D);
+  [ws.c:1724:3] Curl_trc_ws (data_16(D), [ws.c:1724:3] "ws_send_raw(len=%zu) -> %d, %zu", buflen_19(D), result_10, _9);
+
+  <bb 19> :
+  [ws.c:1726:10] _34 = result_10;
+
+  <bb 20> :
+  # _11 = PHI <[ws.c:1701:12] _37(3), [ws.c:1704:12] _35(5), [ws.c:1713:14] _32(8), [ws.c:1720:14] _27(11), [ws.c:1726:10] _34(19)>
+  return _11;
+
+}
+
+
+
+;; Function nw_in_recv (nw_in_recv, funcdef_no=135, decl_uid=11476, cgraph_uid=136, symbol_order=137)
+
+CURLcode nw_in_recv (void * reader_ctx, unsigned char * buf, size_t buflen, size_t * pnread)
+{
+  struct Curl_easy * data;
+  CURLcode _8;
+
+  <bb 2> :
+  [ws.c:1490:21] data_2 = reader_ctx_1(D);
+  [ws.c:1491:10] _8 = curl_easy_recv (data_2, buf_4(D), buflen_5(D), pnread_6(D));
+  [ws.c:1491:10] return _8;
+
+}
+
+
+
+;; Function ws_setup_conn (ws_setup_conn, funcdef_no=141, decl_uid=11567, cgraph_uid=142, symbol_order=143)
+
+CURLcode ws_setup_conn (struct Curl_easy * data, struct connectdata * conn)
+{
+  CURLcode _9;
+
+  <bb 2> :
+  [ws.c:1810:34] [ws.c:1810:23] [ws.c:1810:14] [ws.c:1810:7] data_2(D)->state.http_neg.accept_09 = 0;
+  [ws.c:1811:32] [ws.c:1811:23] [ws.c:1811:14] [ws.c:1811:7] data_2(D)->state.http_neg.only_10 = 0;
+  [ws.c:1812:31] [ws.c:1812:23] [ws.c:1812:14] [ws.c:1812:7] data_2(D)->state.http_neg.wanted = 1;
+  [ws.c:1813:32] [ws.c:1813:23] [ws.c:1813:14] [ws.c:1813:7] data_2(D)->state.http_neg.allowed = 1;
+  [ws.c:1814:10] _9 = Curl_http_setup_conn (data_2(D), conn_7(D));
+  [ws.c:1814:10] return _9;
+
+}
+
+
+
+;; Function Curl_ws_request (Curl_ws_request, funcdef_no=131, decl_uid=8852, cgraph_uid=132, symbol_order=133)
+
+No longer having address taken: heads
+CURLcode Curl_ws_request (struct Curl_easy * data, struct dynbuf * req)
+{
+  struct wsfield heads[3];
+  struct SingleRequest * k;
+  char keyval[40];
+  size_t randlen;
+  char * randstr;
+  unsigned char rand[16];
+  CURLcode result;
+  unsigned int i;
+  long unsigned int randlen.0_1;
+  void (*<Tee>) (void *) Curl_cfree.1_2;
+  char * randstr.2_3;
+  char * randstr.3_4;
+  void (*<Tee>) (void *) Curl_cfree.4_5;
+  char * randstr.5_6;
+  const char * _7;
+  long unsigned int _8;
+  const char * _9;
+  char * _10;
+  const char * _11;
+  const char * _12;
+  _Bool _13;
+  _Bool _14;
+  _Bool _15;
+  CURLcode _19;
+  CURLcode _43;
+  CURLcode _50;
+  CURLcode _51;
+  CURLcode _52;
+
+  <bb 2> :
+  [ws.c:1220:12] result_23 = 0;
+  [ws.c:1225:25] k_25 = [ws.c:1225:29] &[ws.c:1225:34] data_24(D)->req;
+  [ws.c:1226:18] heads[0].name = [ws.c:1230:7] "Upgrade";
+  [ws.c:1226:18] heads[0].val = [ws.c:1231:5] "websocket";
+  [ws.c:1226:18] heads[1].name = [ws.c:1236:7] "Sec-WebSocket-Version";
+  [ws.c:1226:18] heads[1].val = [ws.c:1236:7] "13";
+  [ws.c:1226:18] heads[2].name = [ws.c:1244:7] "Sec-WebSocket-Key";
+  [ws.c:1226:18] heads[2].val = 0B;
+  [ws.c:1247:16] [ws.c:1247:11] [ws.c:1247:8] heads[2].val = [ws.c:1247:18] &[ws.c:1247:25] keyval[0];
+  [ws.c:1250:12] result_35 = Curl_rand_bytes (data_24(D), [ws.c:1250:12] &rand, 16);
+  [ws.c:1251:5] if (result_35 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  [ws.c:1252:12] _52 = result_35;
+  [ws.c:1252:12] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1252:12] goto <bb 14>; [INV]
+
+  <bb 4> :
+  [ws.c:1253:12] result_37 = curlx_base64_encode ([ws.c:1253:40] &rand, 16, [ws.c:1253:12] &randstr, [ws.c:1253:12] &randlen);
+  [ws.c:1254:5] if (result_37 != 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  [ws.c:1255:12] _51 = result_37;
+  [ws.c:1255:12] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1255:12] goto <bb 14>; [INV]
+
+  <bb 6> :
+  [ws.c:1257:14] randlen.0_1 = randlen;
+  [ws.c:1257:5] if (randlen.0_1 > 39)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  [ws.c:1258:5] Curl_cfree.1_2 = Curl_cfree;
+  [ws.c:1258:5] randstr.2_3 = randstr;
+  [ws.c:1258:5] Curl_cfree.1_2 (randstr.2_3);
+  [ws.c:1259:12] _50 = 2;
+  [ws.c:1259:12] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1259:12] goto <bb 14>; [INV]
+
+  <bb 8> :
+  [ws.c:1261:3] randstr.3_4 = randstr;
+  [ws.c:1261:3] strcpy ([ws.c:1261:10] &keyval, randstr.3_4);
+  [ws.c:1262:3] Curl_cfree.4_5 = Curl_cfree;
+  [ws.c:1262:3] randstr.5_6 = randstr;
+  [ws.c:1262:3] Curl_cfree.4_5 (randstr.5_6);
+  [ws.c:1263:9] i_40 = 0;
+  [ws.c:1263:3] goto <bb 12>; [INV]
+
+  <bb 9> :
+  [ws.c:1264:9] _7 = [ws.c:1264:9] [ws.c:1264:60] heads[i_16].name;
+  [ws.c:1264:9] _8 = strlen (_7);
+  [ws.c:1264:9] _9 = [ws.c:1264:9] [ws.c:1264:38] heads[i_16].name;
+  [ws.c:1264:9] _10 = Curl_checkheaders (data_24(D), _9, _8);
+  [ws.c:1264:7] if (_10 == 0B)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 10> :
+  [ws.c:1265:16] _11 = [ws.c:1265:16] [ws.c:1266:36] heads[i_16].val;
+  [ws.c:1265:16] _12 = [ws.c:1265:16] [ws.c:1265:55] heads[i_16].name;
+  [ws.c:1265:16] result_47 = curlx_dyn_addf (req_45(D), [ws.c:1265:36] "%s: %s\r\n", _12, _11);
+
+  <bb 11> :
+  # result_17 = PHI <result_18(9), [ws.c:1265:16] result_47(10)>
+  [ws.c:1263:55] i_48 = i_16 + 1;
+
+  <bb 12> :
+  # i_16 = PHI <[ws.c:1263:9] i_40(8), [ws.c:1263:55] i_48(11)>
+  # result_18 = PHI <[ws.c:1253:12] result_37(8), result_17(11)>
+  [ws.c:1263:14] _13 = result_18 == 0;
+  [ws.c:1263:28] _14 = i_16 <= 2;
+  [ws.c:1263:22] _15 = _13 & _14;
+  [ws.c:1263:22] if (_15 != 0)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 13> :
+  [ws.c:1269:31] [ws.c:1269:14] [ws.c:1269:7] data_24(D)->state.http_hd_upgrade = 1;
+  [ws.c:1270:14] [ws.c:1270:4] k_25->upgr101 = 1;
+  [ws.c:1271:10] _43 = result_18;
+
+  <bb 14> :
+  # _19 = PHI <[ws.c:1252:12] _52(3), [ws.c:1255:12] _51(5), [ws.c:1259:12] _50(7), [ws.c:1271:10] _43(13)>
+  rand ={v} {CLOBBER};
+  randstr ={v} {CLOBBER};
+  randlen ={v} {CLOBBER};
+  keyval ={v} {CLOBBER};
+  heads ={v} {CLOBBER};
+  return _19;
+
+}
+
+
+
+;; Function Curl_ws_accept (Curl_ws_accept, funcdef_no=133, decl_uid=8856, cgraph_uid=134, symbol_order=135)
+
+CURLcode Curl_ws_accept (struct Curl_easy * data, const char * mem, size_t nread)
+{
+  size_t nwritten;
+  size_t chunk_size;
+  CURLcode result;
+  struct Curl_creader * ws_enc_reader;
+  struct Curl_cwriter * ws_dec_writer;
+  struct websocket * ws;
+  struct SingleRequest * k;
+  struct connectdata * _1;
+  void * (*<T9f6>) (size_t, size_t) Curl_ccalloc.6_2;
+  unsigned char _3;
+  unsigned char _4;
+  struct curl_trc_feat * _5;
+  struct curl_trc_feat * _6;
+  int _7;
+  int _8;
+  struct bufq * _9;
+  struct bufq * _10;
+  struct ws_decoder * _11;
+  struct ws_encoder * _12;
+  struct connectdata * _13;
+  struct bufq * _14;
+  struct ws_decoder * _15;
+  struct ws_encoder * _16;
+  unsigned char _17;
+  unsigned char _18;
+  struct curl_trc_feat * _19;
+  struct curl_trc_feat * _20;
+  int _21;
+  struct Curl_cwriter * ws_dec_writer.7_22;
+  unsigned char _23;
+  unsigned char _24;
+  struct bufq * _25;
+  int _26;
+  int _27;
+  unsigned char _28;
+  unsigned char _29;
+  unsigned char _30;
+  struct curl_trc_feat * _31;
+  struct curl_trc_feat * _32;
+  int _33;
+  int _34;
+  unsigned char _35;
+  unsigned char _36;
+  struct Curl_creader * ws_enc_reader.8_37;
+  int _38;
+  int _39;
+  struct Curl_cwriter * ws_dec_writer.9_40;
+  struct Curl_cwriter * ws_dec_writer.10_41;
+  struct Curl_creader * ws_enc_reader.11_42;
+  struct Curl_creader * ws_enc_reader.12_43;
+  unsigned char _44;
+  unsigned char _45;
+  struct curl_trc_feat * _46;
+  struct curl_trc_feat * _47;
+  int _48;
+  int _49;
+  unsigned char _50;
+  unsigned char _51;
+  struct curl_trc_feat * _52;
+  struct curl_trc_feat * _53;
+  int _54;
+  int _55;
+  unsigned char _56;
+  unsigned char _57;
+  CURLcode _63;
+  char * iftmp.13_64;
+  CURLcode _97;
+  CURLcode _98;
+  char * iftmp.13_129;
+  char * iftmp.13_130;
+  CURLcode _133;
+
+  <bb 2> :
+  [ws.c:1291:25] k_78 = [ws.c:1291:29] &[ws.c:1291:34] data_77(D)->req;
+  [ws.c:1293:24] ws_dec_writer = 0B;
+  [ws.c:1294:24] ws_enc_reader = 0B;
+  [ws.c:1298:8] _1 = [ws.c:1298:8] data_77(D)->conn;
+  [ws.c:1298:8] ws_83 = Curl_conn_meta_get (_1, [ws.c:1298:39] "meta:proto:ws:conn");
+  [ws.c:1299:5] if (ws_83 == 0B)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 3> :
+  [ws.c:1300:12] chunk_size_87 = 65535;
+  [ws.c:1301:10] Curl_ccalloc.6_2 = Curl_ccalloc;
+  [ws.c:1301:10] ws_89 = Curl_ccalloc.6_2 (1, 408);
+  [ws.c:1302:7] if (ws_89 == 0B)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  [ws.c:1303:14] _98 = 27;
+  [ws.c:1303:14] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1303:14] goto <bb 68>; [INV]
+
+  <bb 5> :
+  [ws.c:1314:5] if (data_77(D) != 0B)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 6> :
+  [ws.c:1314:5] _3 = [ws.c:1314:5] BIT_FIELD_REF <[ws.c:1314:5] data_77(D)->set, 8, 16808>;
+  [ws.c:1314:5] _4 = _3 & 32;
+  [ws.c:1314:5] if (_4 != 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 7> :
+  [ws.c:1314:5] _5 = [ws.c:1314:5] [ws.c:1314:5] data_77(D)->state.feat;
+  [ws.c:1314:5] if (_5 == 0B)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 8> :
+  [ws.c:1314:5] _6 = [ws.c:1314:5] [ws.c:1314:5] data_77(D)->state.feat;
+  [ws.c:1314:5] _7 = [ws.c:1314:5] _6->log_level;
+  [ws.c:1314:5] if (_7 > 0)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 9> :
+  [ws.c:1314:5] _8 = [ws.c:1314:5] Curl_trc_feat_ws.log_level;
+  [ws.c:1314:5] if (_8 > 0)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 10> :
+  [ws.c:1314:5] Curl_trc_ws (data_77(D), [ws.c:1314:5] "WS, using chunk size %zu", chunk_size_87);
+
+  <bb 11> :
+  [ws.c:1315:5] _9 = [ws.c:1315:5] &[ws.c:1315:24] ws_89->recvbuf;
+  [ws.c:1315:5] Curl_bufq_init2 (_9, chunk_size_87, 2, 1);
+  [ws.c:1317:5] _10 = [ws.c:1317:5] &[ws.c:1317:24] ws_89->sendbuf;
+  [ws.c:1317:5] Curl_bufq_init2 (_10, chunk_size_87, 2, 1);
+  [ws.c:1319:5] _11 = [ws.c:1319:5] &[ws.c:1319:20] ws_89->dec;
+  [ws.c:1319:5] ws_dec_init (_11);
+  [ws.c:1320:5] _12 = [ws.c:1320:5] &[ws.c:1320:20] ws_89->enc;
+  [ws.c:1320:5] ws_enc_init (_12);
+  [ws.c:1321:14] _13 = [ws.c:1321:14] data_77(D)->conn;
+  [ws.c:1321:14] result_96 = Curl_conn_meta_set (_13, [ws.c:1321:45] "meta:proto:ws:conn", ws_89, [ws.c:1322:37] ws_conn_dtor);
+  [ws.c:1323:7] if (result_96 != 0)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 12> :
+  [ws.c:1324:14] _97 = result_96;
+  [ws.c:1324:14] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1324:14] goto <bb 68>; [INV]
+
+  <bb 13> :
+  [ws.c:1327:5] _14 = [ws.c:1327:5] &[ws.c:1327:24] ws_83->recvbuf;
+  [ws.c:1327:5] Curl_bufq_reset (_14);
+  [ws.c:1328:5] _15 = [ws.c:1328:5] &[ws.c:1328:21] ws_83->dec;
+  [ws.c:1328:5] ws_dec_reset (_15);
+  [ws.c:1329:5] _16 = [ws.c:1329:5] &[ws.c:1329:21] ws_83->enc;
+  [ws.c:1329:5] ws_enc_reset (_16);
+
+  <bb 14> :
+  # ws_58 = PHI <[ws.c:1301:10] ws_89(11), [ws.c:1298:8] ws_83(13)>
+  [ws.c:1350:3] if (data_77(D) != 0B)
+    goto <bb 15>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 15> :
+  [ws.c:1350:3] _17 = [ws.c:1350:3] BIT_FIELD_REF <[ws.c:1350:3] data_77(D)->set, 8, 16808>;
+  [ws.c:1350:3] _18 = _17 & 32;
+  [ws.c:1350:3] if (_18 != 0)
+    goto <bb 16>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 16> :
+  [ws.c:1350:3] _19 = [ws.c:1350:3] [ws.c:1350:3] data_77(D)->state.feat;
+  [ws.c:1350:3] if (_19 == 0B)
+    goto <bb 18>; [INV]
+  else
+    goto <bb 17>; [INV]
+
+  <bb 17> :
+  [ws.c:1350:3] _20 = [ws.c:1350:3] [ws.c:1350:3] data_77(D)->state.feat;
+  [ws.c:1350:3] _21 = [ws.c:1350:3] _20->log_level;
+  [ws.c:1350:3] if (_21 > 0)
+    goto <bb 18>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 18> :
+  [ws.c:1350:3] Curl_infof (data_77(D), [ws.c:1350:3] "[WS] Received 101, switch to WebSocket");
+
+  <bb 19> :
+  [ws.c:1353:12] result_101 = Curl_cwriter_create ([ws.c:1353:12] &ws_dec_writer, data_77(D), [ws.c:1353:12] &ws_cw_decode, 3);
+  [ws.c:1355:5] if (result_101 != 0)
+    goto <bb 20>; [INV]
+  else
+    goto <bb 21>; [INV]
+
+  <bb 20> :
+  [ws.c:1356:5] // predicted unlikely by goto predictor.
+  [ws.c:1356:5] goto <bb 47>; [INV]
+
+  <bb 21> :
+  [ws.c:1357:12] ws_dec_writer.7_22 = ws_dec_writer;
+  [ws.c:1357:12] result_103 = Curl_cwriter_add (data_77(D), ws_dec_writer.7_22);
+  [ws.c:1358:5] if (result_103 != 0)
+    goto <bb 22>; [INV]
+  else
+    goto <bb 23>; [INV]
+
+  <bb 22> :
+  [ws.c:1359:5] // predicted unlikely by goto predictor.
+  [ws.c:1359:5] goto <bb 47>; [INV]
+
+  <bb 23> :
+  [ws.c:1360:17] ws_dec_writer = 0B;
+  [ws.c:1362:6] _23 = [ws.c:1362:6] BIT_FIELD_REF <[ws.c:1362:10] data_77(D)->set, 8, 16784>;
+  [ws.c:1362:6] _24 = _23 & 1;
+  [ws.c:1362:5] if (_24 != 0)
+    goto <bb 24>; [INV]
+  else
+    goto <bb 27>; [INV]
+
+  <bb 24> :
+  [ws.c:1367:14] _25 = [ws.c:1367:14] &[ws.c:1367:33] ws_58->recvbuf;
+  [ws.c:1367:14] result_121 = Curl_bufq_write (_25, mem_117(D), nread_116(D), [ws.c:1367:14] &nwritten);
+  [ws.c:1369:7] if (result_121 != 0)
+    goto <bb 25>; [INV]
+  else
+    goto <bb 26>; [INV]
+
+  <bb 25> :
+  [ws.c:1370:7] // predicted unlikely by goto predictor.
+  [ws.c:1370:7] nwritten ={v} {CLOBBER};
+  goto <bb 47>; [INV]
+
+  <bb 26> :
+  [ws.c:1372:15] _26 = k_78->keepon;
+  [ws.c:1372:15] _27 = _26 & -2;
+  [ws.c:1372:15] k_78->keepon = _27;
+  nwritten ={v} {CLOBBER};
+  [0:0] goto <bb 46>; [INV]
+
+  <bb 27> :
+  [ws.c:1375:17] _28 = [ws.c:1375:17] [ws.c:1375:12] data_77(D)->set.method;
+  [ws.c:1375:7] if (_28 == 4)
+    goto <bb 28>; [INV]
+  else
+    goto <bb 43>; [INV]
+
+  <bb 28> :
+  [ws.c:1376:7] if (data_77(D) != 0B)
+    goto <bb 29>; [INV]
+  else
+    goto <bb 34>; [INV]
+
+  <bb 29> :
+  [ws.c:1376:7] _29 = [ws.c:1376:7] BIT_FIELD_REF <[ws.c:1376:7] data_77(D)->set, 8, 16808>;
+  [ws.c:1376:7] _30 = _29 & 32;
+  [ws.c:1376:7] if (_30 != 0)
+    goto <bb 30>; [INV]
+  else
+    goto <bb 34>; [INV]
+
+  <bb 30> :
+  [ws.c:1376:7] _31 = [ws.c:1376:7] [ws.c:1376:7] data_77(D)->state.feat;
+  [ws.c:1376:7] if (_31 == 0B)
+    goto <bb 32>; [INV]
+  else
+    goto <bb 31>; [INV]
+
+  <bb 31> :
+  [ws.c:1376:7] _32 = [ws.c:1376:7] [ws.c:1376:7] data_77(D)->state.feat;
+  [ws.c:1376:7] _33 = [ws.c:1376:7] _32->log_level;
+  [ws.c:1376:7] if (_33 > 0)
+    goto <bb 32>; [INV]
+  else
+    goto <bb 34>; [INV]
+
+  <bb 32> :
+  [ws.c:1376:7] _34 = [ws.c:1376:7] Curl_trc_feat_ws.log_level;
+  [ws.c:1376:7] if (_34 > 0)
+    goto <bb 33>; [INV]
+  else
+    goto <bb 34>; [INV]
+
+  <bb 33> :
+  [ws.c:1376:7] Curl_trc_ws (data_77(D), [ws.c:1376:7] "UPLOAD set, add ws-encode reader");
+
+  <bb 34> :
+  [ws.c:1377:16] result_107 = Curl_creader_set_fread (data_77(D), -1);
+  [ws.c:1378:9] if (result_107 != 0)
+    goto <bb 35>; [INV]
+  else
+    goto <bb 36>; [INV]
+
+  <bb 35> :
+  [ws.c:1379:9] // predicted unlikely by goto predictor.
+  [ws.c:1379:9] goto <bb 47>; [INV]
+
+  <bb 36> :
+  [ws.c:1381:10] _35 = [ws.c:1381:10] BIT_FIELD_REF <[ws.c:1381:15] data_77(D)->set, 8, 16832>;
+  [ws.c:1381:10] _36 = _35 & 64;
+  [ws.c:1381:9] if (_36 == 0)
+    goto <bb 37>; [INV]
+  else
+    goto <bb 42>; [INV]
+
+  <bb 37> :
+  [ws.c:1383:18] result_109 = Curl_creader_create ([ws.c:1383:18] &ws_enc_reader, data_77(D), [ws.c:1383:18] &ws_cr_encode, 3);
+  [ws.c:1385:11] if (result_109 != 0)
+    goto <bb 38>; [INV]
+  else
+    goto <bb 39>; [INV]
+
+  <bb 38> :
+  [ws.c:1386:11] // predicted unlikely by goto predictor.
+  [ws.c:1386:11] goto <bb 47>; [INV]
+
+  <bb 39> :
+  [ws.c:1387:18] ws_enc_reader.8_37 = ws_enc_reader;
+  [ws.c:1387:18] result_111 = Curl_creader_add (data_77(D), ws_enc_reader.8_37);
+  [ws.c:1388:11] if (result_111 != 0)
+    goto <bb 40>; [INV]
+  else
+    goto <bb 41>; [INV]
+
+  <bb 40> :
+  [ws.c:1389:11] // predicted unlikely by goto predictor.
+  [ws.c:1389:11] goto <bb 47>; [INV]
+
+  <bb 41> :
+  [ws.c:1390:23] ws_enc_reader = 0B;
+
+  <bb 42> :
+  # result_59 = PHI <[ws.c:1377:16] result_107(36), [ws.c:1387:18] result_111(41)>
+  [ws.c:1394:26] [ws.c:1394:16] [ws.c:1394:11] data_77(D)->req.eos_read = 0;
+  [ws.c:1395:29] [ws.c:1395:16] [ws.c:1395:11] data_77(D)->req.upload_done = 0;
+  [ws.c:1396:17] _38 = k_78->keepon;
+  [ws.c:1396:17] _39 = _38 | 2;
+  [ws.c:1396:17] k_78->keepon = _39;
+
+  <bb 43> :
+  # result_60 = PHI <[ws.c:1357:12] result_103(27), result_59(42)>
+  [ws.c:1400:7] if (nread_116(D) != 0)
+    goto <bb 44>; [INV]
+  else
+    goto <bb 46>; [INV]
+
+  <bb 44> :
+  [ws.c:1401:16] result_119 = Curl_client_write (data_77(D), 1, mem_117(D), nread_116(D));
+  [ws.c:1402:9] if (result_119 != 0)
+    goto <bb 45>; [INV]
+  else
+    goto <bb 46>; [INV]
+
+  <bb 45> :
+  [ws.c:1403:9] // predicted unlikely by goto predictor.
+  [ws.c:1403:9] goto <bb 47>; [INV]
+
+  <bb 46> :
+  # result_61 = PHI <[ws.c:1367:14] result_121(26), result_60(43), [ws.c:1401:16] result_119(44)>
+  [ws.c:1407:14] [ws.c:1407:4] k_78->upgr101 = 3;
+  [ws.c:1408:13] [ws.c:1408:4] k_78->header = 0;
+
+  <bb 47> :
+  # result_62 = PHI <[ws.c:1353:12] result_101(20), [ws.c:1357:12] result_103(22), [ws.c:1367:14] result_121(25), [ws.c:1377:16] result_107(35), [ws.c:1383:18] result_109(38), [ws.c:1387:18] result_111(40), [ws.c:1401:16] result_119(45), result_61(46)>
+[ws.c:1410:1] out:
+  [ws.c:1411:6] ws_dec_writer.9_40 = ws_dec_writer;
+  [ws.c:1411:5] if (ws_dec_writer.9_40 != 0B)
+    goto <bb 48>; [INV]
+  else
+    goto <bb 49>; [INV]
+
+  <bb 48> :
+  [ws.c:1412:5] ws_dec_writer.10_41 = ws_dec_writer;
+  [ws.c:1412:5] Curl_cwriter_free (data_77(D), ws_dec_writer.10_41);
+
+  <bb 49> :
+  [ws.c:1413:6] ws_enc_reader.11_42 = ws_enc_reader;
+  [ws.c:1413:5] if (ws_enc_reader.11_42 != 0B)
+    goto <bb 50>; [INV]
+  else
+    goto <bb 51>; [INV]
+
+  <bb 50> :
+  [ws.c:1414:5] ws_enc_reader.12_43 = ws_enc_reader;
+  [ws.c:1414:5] Curl_creader_free (data_77(D), ws_enc_reader.12_43);
+
+  <bb 51> :
+  [ws.c:1415:5] if (result_62 != 0)
+    goto <bb 52>; [INV]
+  else
+    goto <bb 58>; [INV]
+
+  <bb 52> :
+  [ws.c:1416:5] if (data_77(D) != 0B)
+    goto <bb 53>; [INV]
+  else
+    goto <bb 67>; [INV]
+
+  <bb 53> :
+  [ws.c:1416:5] _44 = [ws.c:1416:5] BIT_FIELD_REF <[ws.c:1416:5] data_77(D)->set, 8, 16808>;
+  [ws.c:1416:5] _45 = _44 & 32;
+  [ws.c:1416:5] if (_45 != 0)
+    goto <bb 54>; [INV]
+  else
+    goto <bb 67>; [INV]
+
+  <bb 54> :
+  [ws.c:1416:5] _46 = [ws.c:1416:5] [ws.c:1416:5] data_77(D)->state.feat;
+  [ws.c:1416:5] if (_46 == 0B)
+    goto <bb 56>; [INV]
+  else
+    goto <bb 55>; [INV]
+
+  <bb 55> :
+  [ws.c:1416:5] _47 = [ws.c:1416:5] [ws.c:1416:5] data_77(D)->state.feat;
+  [ws.c:1416:5] _48 = [ws.c:1416:5] _47->log_level;
+  [ws.c:1416:5] if (_48 > 0)
+    goto <bb 56>; [INV]
+  else
+    goto <bb 67>; [INV]
+
+  <bb 56> :
+  [ws.c:1416:5] _49 = [ws.c:1416:5] Curl_trc_feat_ws.log_level;
+  [ws.c:1416:5] if (_49 > 0)
+    goto <bb 57>; [INV]
+  else
+    goto <bb 67>; [INV]
+
+  <bb 57> :
+  [ws.c:1416:5] Curl_trc_ws (data_77(D), [ws.c:1416:5] "Curl_ws_accept() failed -> %d", result_62);
+  goto <bb 67>; [INV]
+
+  <bb 58> :
+  [ws.c:1418:5] if (data_77(D) != 0B)
+    goto <bb 59>; [INV]
+  else
+    goto <bb 67>; [INV]
+
+  <bb 59> :
+  [ws.c:1418:5] _50 = [ws.c:1418:5] BIT_FIELD_REF <[ws.c:1418:5] data_77(D)->set, 8, 16808>;
+  [ws.c:1418:5] _51 = _50 & 32;
+  [ws.c:1418:5] if (_51 != 0)
+    goto <bb 60>; [INV]
+  else
+    goto <bb 67>; [INV]
+
+  <bb 60> :
+  [ws.c:1418:5] _52 = [ws.c:1418:5] [ws.c:1418:5] data_77(D)->state.feat;
+  [ws.c:1418:5] if (_52 == 0B)
+    goto <bb 62>; [INV]
+  else
+    goto <bb 61>; [INV]
+
+  <bb 61> :
+  [ws.c:1418:5] _53 = [ws.c:1418:5] [ws.c:1418:5] data_77(D)->state.feat;
+  [ws.c:1418:5] _54 = [ws.c:1418:5] _53->log_level;
+  [ws.c:1418:5] if (_54 > 0)
+    goto <bb 62>; [INV]
+  else
+    goto <bb 67>; [INV]
+
+  <bb 62> :
+  [ws.c:1418:5] _55 = [ws.c:1418:5] Curl_trc_feat_ws.log_level;
+  [ws.c:1418:5] if (_55 > 0)
+    goto <bb 63>; [INV]
+  else
+    goto <bb 67>; [INV]
+
+  <bb 63> :
+  [ws.c:1418:5] _56 = [ws.c:1418:5] BIT_FIELD_REF <[ws.c:1418:5] data_77(D)->set, 8, 16784>;
+  [ws.c:1418:5] _57 = _56 & 1;
+  [ws.c:1418:5] if (_57 != 0)
+    goto <bb 64>; [INV]
+  else
+    goto <bb 65>; [INV]
+
+  <bb 64> :
+  [ws.c:1418:5] iftmp.13_130 = [ws.c:1418:5] "connect-only";
+  [0:0] goto <bb 66>; [INV]
+
+  <bb 65> :
+  [ws.c:1418:5] iftmp.13_129 = [ws.c:1418:5] "callback";
+
+  <bb 66> :
+  # iftmp.13_64 = PHI <[ws.c:1418:5] iftmp.13_130(64), [ws.c:1418:5] iftmp.13_129(65)>
+  [ws.c:1418:5] Curl_trc_ws (data_77(D), [ws.c:1418:5] "websocket established, %s mode", iftmp.13_64);
+
+  <bb 67> :
+  [ws.c:1420:10] _133 = result_62;
+
+  <bb 68> :
+  # _63 = PHI <[ws.c:1303:14] _98(4), [ws.c:1324:14] _97(12), [ws.c:1420:10] _133(67)>
+  ws_dec_writer ={v} {CLOBBER};
+  ws_enc_reader ={v} {CLOBBER};
+  return _63;
+
+}
+
+
+
+;; Function curl_ws_recv (curl_ws_recv, funcdef_no=136, decl_uid=6579, cgraph_uid=137, symbol_order=138)
+
+__attribute__((visibility ("default")))
+CURLcode curl_ws_recv (CURL * d, void * buffer, size_t buflen, size_t * nread, const struct curl_ws_frame * * metap)
+{
+  CURLcode r2;
+  size_t n;
+  CURLcode result;
+  struct ws_collect ctx;
+  struct websocket * ws;
+  struct connectdata * conn;
+  struct Curl_easy * data;
+  unsigned int _1;
+  struct connectdata * _2;
+  struct connectdata * conn.65_3;
+  unsigned char _4;
+  unsigned char _5;
+  struct connectdata * conn.66_6;
+  struct connectdata * conn.67_7;
+  struct bufq * _8;
+  _Bool _9;
+  struct bufq * _10;
+  long unsigned int n.68_11;
+  unsigned char _12;
+  unsigned char _13;
+  struct curl_trc_feat * _14;
+  struct curl_trc_feat * _15;
+  int _16;
+  unsigned char _17;
+  unsigned char _18;
+  struct curl_trc_feat * _19;
+  struct curl_trc_feat * _20;
+  int _21;
+  int _22;
+  struct bufq * _23;
+  long unsigned int _24;
+  struct bufq * _25;
+  struct ws_decoder * _26;
+  _Bool _27;
+  _Bool _28;
+  struct ws_decoder * _29;
+  _Bool _30;
+  long unsigned int _31;
+  long int _32;
+  long int _33;
+  int _34;
+  int _35;
+  struct curl_ws_frame * _36;
+  long unsigned int _37;
+  unsigned char _38;
+  unsigned char _39;
+  struct curl_trc_feat * _40;
+  struct curl_trc_feat * _41;
+  int _42;
+  int _43;
+  long int _44;
+  long int _45;
+  long unsigned int _46;
+  unsigned char _47;
+  unsigned char _48;
+  unsigned int _49;
+  _Bool _50;
+  int _51;
+  CURLcode _52;
+  CURLcode _53;
+  CURLcode _73;
+  CURLcode _75;
+  CURLcode _92;
+  CURLcode _93;
+  CURLcode _97;
+  CURLcode _107;
+  CURLcode _109;
+  CURLcode _110;
+
+  <bb 2> :
+  [ws.c:1498:21] data_64 = d_63(D);
+  [ws.c:1503:10] [ws.c:1503:3] *nread_66(D) = 0;
+  [ws.c:1504:10] [ws.c:1504:3] *metap_68(D) = 0B;
+  [ws.c:1505:5] if (data_64 == 0B)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 3>; [INV]
+
+  <bb 3> :
+  [ws.c:1505:7] _1 = [ws.c:1505:7] data_64->magic;
+  [ws.c:1505:6] if (_1 != 3235830701)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  [ws.c:1506:12] _110 = 43;
+  [ws.c:1506:12] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1506:12] goto <bb 48>; [INV]
+
+  <bb 5> :
+  [ws.c:1508:14] _2 = [ws.c:1508:14] data_64->conn;
+  [ws.c:1508:8] conn = _2;
+  [ws.c:1509:6] conn.65_3 = conn;
+  [ws.c:1509:5] if (conn.65_3 == 0B)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 6> :
+  [ws.c:1511:8] _4 = [ws.c:1511:8] BIT_FIELD_REF <[ws.c:1511:13] data_64->set, 8, 16784>;
+  [ws.c:1511:8] _5 = _4 & 1;
+  [ws.c:1511:7] if (_5 == 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  [ws.c:1512:7] Curl_failf (data_64, [ws.c:1512:19] "[WS] CONNECT_ONLY is required");
+  [ws.c:1513:14] _75 = 1;
+  [ws.c:1513:14] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1513:14] goto <bb 48>; [INV]
+
+  <bb 8> :
+  [ws.c:1516:5] Curl_getconnectinfo (data_64, [ws.c:1516:5] &conn);
+  [ws.c:1517:8] conn.66_6 = conn;
+  [ws.c:1517:7] if (conn.66_6 == 0B)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 9> :
+  [ws.c:1518:7] Curl_failf (data_64, [ws.c:1518:19] "[WS] connection not found");
+  [ws.c:1519:14] _73 = 43;
+  [ws.c:1519:14] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1519:14] goto <bb 48>; [INV]
+
+  <bb 10> :
+  [ws.c:1522:8] conn.67_7 = conn;
+  [ws.c:1522:8] ws_77 = Curl_conn_meta_get (conn.67_7, [ws.c:1522:33] "meta:proto:ws:conn");
+  [ws.c:1523:5] if (ws_77 == 0B)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 11> :
+  [ws.c:1524:5] Curl_failf (data_64, [ws.c:1524:17] "[WS] connection is not setup for websocket");
+  [ws.c:1525:12] _109 = 43;
+  [ws.c:1525:12] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1525:12] goto <bb 48>; [INV]
+
+  <bb 12> :
+  [ws.c:1529:3] memset ([ws.c:1529:10] &ctx, 0, 72);
+  [ws.c:1530:12] [ws.c:1530:6] ctx.data = data_64;
+  [ws.c:1531:10] [ws.c:1531:6] ctx.ws = ws_77;
+  [ws.c:1532:14] [ws.c:1532:6] ctx.buffer = buffer_81(D);
+  [ws.c:1533:14] [ws.c:1533:6] ctx.buflen = buflen_83(D);
+
+  <bb 13> :
+  [ws.c:1539:27] _8 = [ws.c:1539:27] &[ws.c:1539:30] ws_77->recvbuf;
+  [ws.c:1539:8] _9 = Curl_bufq_is_empty (_8);
+  [ws.c:1539:7] if (_9 != 0)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 31>; [INV]
+
+  <bb 14> :
+  [ws.c:1541:16] _10 = [ws.c:1541:16] &[ws.c:1541:35] ws_77->recvbuf;
+  [ws.c:1541:16] result_87 = Curl_bufq_slurp (_10, [ws.c:1541:46] nw_in_recv, data_64, [ws.c:1541:16] &n);
+  [ws.c:1542:9] if (result_87 != 0)
+    goto <bb 15>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 15> :
+  [ws.c:1543:16] _93 = result_87;
+  [ws.c:1543:16] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1543:16] goto <bb 30>; [INV]
+
+  <bb 16> :
+  [ws.c:1544:17] n.68_11 = n;
+  [ws.c:1544:14] if (n.68_11 == 0)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 23>; [INV]
+
+  <bb 17> :
+  [ws.c:1546:9] if (data_64 != 0B)
+    goto <bb 18>; [INV]
+  else
+    goto <bb 22>; [INV]
+
+  <bb 18> :
+  [ws.c:1546:9] _12 = [ws.c:1546:9] BIT_FIELD_REF <[ws.c:1546:9] data_64->set, 8, 16808>;
+  [ws.c:1546:9] _13 = _12 & 32;
+  [ws.c:1546:9] if (_13 != 0)
+    goto <bb 19>; [INV]
+  else
+    goto <bb 22>; [INV]
+
+  <bb 19> :
+  [ws.c:1546:9] _14 = [ws.c:1546:9] [ws.c:1546:9] data_64->state.feat;
+  [ws.c:1546:9] if (_14 == 0B)
+    goto <bb 21>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 20> :
+  [ws.c:1546:9] _15 = [ws.c:1546:9] [ws.c:1546:9] data_64->state.feat;
+  [ws.c:1546:9] _16 = [ws.c:1546:9] _15->log_level;
+  [ws.c:1546:9] if (_16 > 0)
+    goto <bb 21>; [INV]
+  else
+    goto <bb 22>; [INV]
+
+  <bb 21> :
+  [ws.c:1546:9] Curl_infof (data_64, [ws.c:1546:9] "[WS] connection expectedly closed?");
+
+  <bb 22> :
+  [ws.c:1547:16] _92 = 52;
+  [ws.c:1547:16] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1547:16] goto <bb 30>; [INV]
+
+  <bb 23> :
+  [ws.c:1549:7] if (data_64 != 0B)
+    goto <bb 24>; [INV]
+  else
+    goto <bb 29>; [INV]
+
+  <bb 24> :
+  [ws.c:1549:7] _17 = [ws.c:1549:7] BIT_FIELD_REF <[ws.c:1549:7] data_64->set, 8, 16808>;
+  [ws.c:1549:7] _18 = _17 & 32;
+  [ws.c:1549:7] if (_18 != 0)
+    goto <bb 25>; [INV]
+  else
+    goto <bb 29>; [INV]
+
+  <bb 25> :
+  [ws.c:1549:7] _19 = [ws.c:1549:7] [ws.c:1549:7] data_64->state.feat;
+  [ws.c:1549:7] if (_19 == 0B)
+    goto <bb 27>; [INV]
+  else
+    goto <bb 26>; [INV]
+
+  <bb 26> :
+  [ws.c:1549:7] _20 = [ws.c:1549:7] [ws.c:1549:7] data_64->state.feat;
+  [ws.c:1549:7] _21 = [ws.c:1549:7] _20->log_level;
+  [ws.c:1549:7] if (_21 > 0)
+    goto <bb 27>; [INV]
+  else
+    goto <bb 29>; [INV]
+
+  <bb 27> :
+  [ws.c:1549:7] _22 = [ws.c:1549:7] Curl_trc_feat_ws.log_level;
+  [ws.c:1549:7] if (_22 > 0)
+    goto <bb 28>; [INV]
+  else
+    goto <bb 29>; [INV]
+
+  <bb 28> :
+  [ws.c:1549:7] _23 = [ws.c:1549:7] &[ws.c:1549:7] ws_77->recvbuf;
+  [ws.c:1549:7] _24 = Curl_bufq_len (_23);
+  [ws.c:1549:7] Curl_trc_ws (data_64, [ws.c:1549:7] "curl_ws_recv, added %zu bytes from network", _24);
+
+  <bb 29> :
+  n ={v} {CLOBBER};
+  [0:0] goto <bb 31>; [INV]
+
+  <bb 30> :
+  # _52 = PHI <[ws.c:1543:16] _93(15), [ws.c:1547:16] _92(22)>
+  [ws.c:1543:16] n ={v} {CLOBBER};
+  goto <bb 48>; [INV]
+
+  <bb 31> :
+  [ws.c:1553:14] _25 = [ws.c:1553:14] &[ws.c:1553:45] ws_77->recvbuf;
+  [ws.c:1553:14] _26 = [ws.c:1553:14] &[ws.c:1553:29] ws_77->dec;
+  [ws.c:1553:14] result_96 = ws_dec_pass (_26, data_64, _25, [ws.c:1554:26] ws_client_collect, [ws.c:1554:45] &ctx);
+  [ws.c:1555:7] if (result_96 == 81)
+    goto <bb 32>; [INV]
+  else
+    goto <bb 34>; [INV]
+
+  <bb 32> :
+  [ws.c:1556:14] _27 = [ws.c:1556:14] ctx.written;
+  [ws.c:1556:10] _28 = ~_27;
+  [ws.c:1556:9] if (_28 != 0)
+    goto <bb 33>; [INV]
+  else
+    goto <bb 37>; [INV]
+
+  <bb 33> :
+  [ws.c:1557:9] _29 = [ws.c:1557:9] &[ws.c:1557:24] ws_77->dec;
+  [ws.c:1557:9] ws_dec_info (_29, data_64, [ws.c:1557:37] "need more input");
+  [ws.c:1556:9] // predicted unlikely by continue predictor.
+  [ws.c:1558:9] goto <bb 13>; [INV]
+
+  <bb 34> :
+  [ws.c:1562:12] if (result_96 != 0)
+    goto <bb 35>; [INV]
+  else
+    goto <bb 36>; [INV]
+
+  <bb 35> :
+  [ws.c:1563:14] _97 = result_96;
+  [ws.c:1563:14] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1563:14] goto <bb 48>; [INV]
+
+  <bb 36> :
+  [ws.c:1565:16] _30 = [ws.c:1565:16] ctx.written;
+  [ws.c:1565:12] if (_30 != 0)
+    goto <bb 37>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 37> :
+  [ws.c:1574:3] _31 = [ws.c:1574:3] ctx.bufidx;
+  [ws.c:1574:3] _32 = [ws.c:1574:3] ctx.payload_len;
+  [ws.c:1574:3] _33 = [ws.c:1574:3] ctx.payload_offset;
+  [ws.c:1574:3] _34 = [ws.c:1574:3] ctx.frame_flags;
+  [ws.c:1574:3] _35 = [ws.c:1574:3] ctx.frame_age;
+  [ws.c:1574:3] update_meta (ws_77, _35, _34, _33, _32, _31);
+  [ws.c:1576:12] _36 = [ws.c:1576:12] &[ws.c:1576:15] ws_77->recvframe;
+  [ws.c:1576:10] [ws.c:1576:3] *metap_68(D) = _36;
+  [ws.c:1577:25] _37 = [ws.c:1577:25] [ws.c:1577:14] ws_77->recvframe.len;
+  [ws.c:1577:10] [ws.c:1577:3] *nread_66(D) = _37;
+  [ws.c:1578:3] if (data_64 != 0B)
+    goto <bb 38>; [INV]
+  else
+    goto <bb 43>; [INV]
+
+  <bb 38> :
+  [ws.c:1578:3] _38 = [ws.c:1578:3] BIT_FIELD_REF <[ws.c:1578:3] data_64->set, 8, 16808>;
+  [ws.c:1578:3] _39 = _38 & 32;
+  [ws.c:1578:3] if (_39 != 0)
+    goto <bb 39>; [INV]
+  else
+    goto <bb 43>; [INV]
+
+  <bb 39> :
+  [ws.c:1578:3] _40 = [ws.c:1578:3] [ws.c:1578:3] data_64->state.feat;
+  [ws.c:1578:3] if (_40 == 0B)
+    goto <bb 41>; [INV]
+  else
+    goto <bb 40>; [INV]
+
+  <bb 40> :
+  [ws.c:1578:3] _41 = [ws.c:1578:3] [ws.c:1578:3] data_64->state.feat;
+  [ws.c:1578:3] _42 = [ws.c:1578:3] _41->log_level;
+  [ws.c:1578:3] if (_42 > 0)
+    goto <bb 41>; [INV]
+  else
+    goto <bb 43>; [INV]
+
+  <bb 41> :
+  [ws.c:1578:3] _43 = [ws.c:1578:3] Curl_trc_feat_ws.log_level;
+  [ws.c:1578:3] if (_43 > 0)
+    goto <bb 42>; [INV]
+  else
+    goto <bb 43>; [INV]
+
+  <bb 42> :
+  [ws.c:1578:3] _44 = [ws.c:1578:3] [ws.c:1578:3] ws_77->recvframe.bytesleft;
+  [ws.c:1578:3] _45 = [ws.c:1578:3] [ws.c:1578:3] ws_77->recvframe.offset;
+  [ws.c:1578:3] _46 = [ws.c:1578:3] *nread_66(D);
+  [ws.c:1578:3] Curl_trc_ws (data_64, [ws.c:1578:3] "curl_ws_recv(len=%zu) -> %zu bytes (frame at %ld, %ld left)", buflen_83(D), _46, _45, _44);
+
+  <bb 43> :
+  [ws.c:1584:6] _47 = [ws.c:1584:6] BIT_FIELD_REF <[ws.c:1584:11] data_64->set, 8, 16832>;
+  [ws.c:1584:6] _48 = _47 & 64;
+  [ws.c:1584:5] if (_48 == 0)
+    goto <bb 44>; [INV]
+  else
+    goto <bb 47>; [INV]
+
+  <bb 44> :
+  [ws.c:1584:43] _49 = [ws.c:1584:43] [ws.c:1584:34] ws_77->pending.type;
+  [ws.c:1584:29] if (_49 != 0)
+    goto <bb 45>; [INV]
+  else
+    goto <bb 47>; [INV]
+
+  <bb 45> :
+  [ws.c:1585:19] r2_104 = ws_enc_add_pending (data_64, ws_77);
+  [ws.c:1586:7] if (r2_104 == 0)
+    goto <bb 46>; [INV]
+  else
+    goto <bb 47>; [INV]
+
+  <bb 46> :
+  [ws.c:1587:32] _50 = Curl_is_in_callback (data_64);
+  [ws.c:1587:13] _51 = (int) _50;
+  [ws.c:1587:13] ws_flush (data_64, ws_77, _51);
+
+  <bb 47> :
+  [ws.c:1589:10] _107 = 0;
+
+  <bb 48> :
+  # _53 = PHI <[ws.c:1506:12] _110(4), [ws.c:1513:14] _75(7), [ws.c:1519:14] _73(9), [ws.c:1525:12] _109(11), _52(30), [ws.c:1563:14] _97(35), [ws.c:1589:10] _107(47)>
+  conn ={v} {CLOBBER};
+  ctx ={v} {CLOBBER};
+  return _53;
+
+}
+
+
+
+;; Function curl_ws_send (curl_ws_send, funcdef_no=140, decl_uid=6586, cgraph_uid=141, symbol_order=142)
+
+__attribute__((visibility ("default")))
+CURLcode curl_ws_send (CURL * d, const void * buffer_arg, size_t buflen, size_t * sent, curl_off_t fragsize, unsigned int flags)
+{
+  size_t * pnsent;
+  size_t ndummy;
+  struct Curl_easy * data;
+  CURLcode result;
+  const unsigned char * buffer;
+  struct websocket * ws;
+  unsigned int _1;
+  unsigned char _2;
+  unsigned char _3;
+  struct curl_trc_feat * _4;
+  struct curl_trc_feat * _5;
+  int _6;
+  int _7;
+  <unnamed-unsigned:1> _8;
+  int _9;
+  _Bool _10;
+  _Bool _11;
+  _Bool _12;
+  struct connectdata * _13;
+  unsigned char _14;
+  unsigned char _15;
+  struct connectdata * _16;
+  struct connectdata * _17;
+  unsigned char _18;
+  unsigned char _19;
+  _Bool _20;
+  _Bool _21;
+  _Bool _22;
+  unsigned char _23;
+  unsigned char _24;
+  struct curl_trc_feat * _25;
+  struct curl_trc_feat * _26;
+  int _27;
+  int _28;
+  long unsigned int _29;
+  <unnamed-unsigned:1> _30;
+  int _31;
+  size_t * iftmp.71_33;
+  CURLcode _34;
+  size_t * iftmp.71_46;
+  size_t * iftmp.71_47;
+  CURLcode _66;
+  CURLcode _68;
+  CURLcode _70;
+  CURLcode _78;
+  CURLcode _79;
+
+  <bb 2> :
+  [ws.c:1735:24] buffer_41 = buffer_arg_40(D);
+  [ws.c:1736:12] result_42 = 0;
+  [ws.c:1737:21] data_44 = d_43(D);
+  [ws.c:1739:32] if (sent_45(D) == 0B)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  [ws.c:1739:32] iftmp.71_47 = [ws.c:1739:34] &ndummy;
+  [0:0] goto <bb 5>; [INV]
+
+  <bb 4> :
+  [ws.c:1739:32] iftmp.71_46 = sent_45(D);
+
+  <bb 5> :
+  # iftmp.71_33 = PHI <[ws.c:1739:32] iftmp.71_47(3), [ws.c:1739:32] iftmp.71_46(4)>
+  [ws.c:1739:11] pnsent_48 = iftmp.71_33;
+  [ws.c:1741:5] if (data_44 == 0B)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 6> :
+  [ws.c:1741:7] _1 = [ws.c:1741:7] data_44->magic;
+  [ws.c:1741:6] if (_1 != 3235830701)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  [ws.c:1742:12] _79 = 43;
+  [ws.c:1742:12] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1742:12] goto <bb 42>; [INV]
+
+  <bb 8> :
+  [ws.c:1743:3] if (data_44 != 0B)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 9> :
+  [ws.c:1743:3] _2 = [ws.c:1743:3] BIT_FIELD_REF <[ws.c:1743:3] data_44->set, 8, 16808>;
+  [ws.c:1743:3] _3 = _2 & 32;
+  [ws.c:1743:3] if (_3 != 0)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 10> :
+  [ws.c:1743:3] _4 = [ws.c:1743:3] [ws.c:1743:3] data_44->state.feat;
+  [ws.c:1743:3] if (_4 == 0B)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 11> :
+  [ws.c:1743:3] _5 = [ws.c:1743:3] [ws.c:1743:3] data_44->state.feat;
+  [ws.c:1743:3] _6 = [ws.c:1743:3] _5->log_level;
+  [ws.c:1743:3] if (_6 > 0)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 12> :
+  [ws.c:1743:3] _7 = [ws.c:1743:3] Curl_trc_feat_ws.log_level;
+  [ws.c:1743:3] if (_7 > 0)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 13> :
+  [ws.c:1743:3] _8 = [ws.c:1743:3] [ws.c:1743:3] data_44->set.ws_raw_mode;
+  [ws.c:1743:3] _9 = (int) _8;
+  [ws.c:1743:3] Curl_trc_ws (data_44, [ws.c:1743:3] "curl_ws_send(len=%zu, fragsize=%ld, flags=%x), raw=%d", buflen_50(D), fragsize_51(D), flags_52(D), _9);
+
+  <bb 14> :
+  [ws.c:1747:11] [ws.c:1747:3] *pnsent_48 = 0;
+  [ws.c:1749:6] _10 = buffer_41 == 0B;
+  [ws.c:1749:14] _11 = buflen_50(D) != 0;
+  [ws.c:1749:14] _12 = _10 & _11;
+  [ws.c:1749:5] if (_12 != 0)
+    goto <bb 15>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 15> :
+  [ws.c:1750:5] Curl_failf (data_44, [ws.c:1750:17] "[WS] buffer is NULL when buflen is not");
+  [ws.c:1751:12] result_76 = 43;
+  [ws.c:1752:5] // predicted unlikely by goto predictor.
+  [ws.c:1752:5] goto <bb 35>; [INV]
+
+  <bb 16> :
+  [ws.c:1755:11] _13 = [ws.c:1755:11] data_44->conn;
+  [ws.c:1755:5] if (_13 == 0B)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 17> :
+  [ws.c:1755:18] _14 = [ws.c:1755:18] BIT_FIELD_REF <[ws.c:1755:25] data_44->set, 8, 16784>;
+  [ws.c:1755:18] _15 = _14 & 1;
+  [ws.c:1755:18] if (_15 != 0)
+    goto <bb 18>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 18> :
+  [ws.c:1756:14] result_56 = Curl_connect_only_attach (data_44);
+  [ws.c:1757:7] if (result_56 != 0)
+    goto <bb 19>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 19> :
+  [ws.c:1758:7] // predicted unlikely by goto predictor.
+  [ws.c:1758:7] goto <bb 35>; [INV]
+
+  <bb 20> :
+  [ws.c:1760:11] _16 = [ws.c:1760:11] data_44->conn;
+  [ws.c:1760:5] if (_16 == 0B)
+    goto <bb 21>; [INV]
+  else
+    goto <bb 22>; [INV]
+
+  <bb 21> :
+  [ws.c:1761:5] Curl_failf (data_44, [ws.c:1761:17] "[WS] No associated connection");
+  [ws.c:1762:12] result_74 = 55;
+  [ws.c:1763:5] // predicted unlikely by goto predictor.
+  [ws.c:1763:5] goto <bb 35>; [INV]
+
+  <bb 22> :
+  [ws.c:1765:8] _17 = [ws.c:1765:8] data_44->conn;
+  [ws.c:1765:8] ws_58 = Curl_conn_meta_get (_17, [ws.c:1765:39] "meta:proto:ws:conn");
+  [ws.c:1766:5] if (ws_58 == 0B)
+    goto <bb 23>; [INV]
+  else
+    goto <bb 24>; [INV]
+
+  <bb 23> :
+  [ws.c:1767:5] Curl_failf (data_44, [ws.c:1767:17] "[WS] Not a websocket transfer");
+  [ws.c:1768:12] result_72 = 55;
+  [ws.c:1769:5] // predicted unlikely by goto predictor.
+  [ws.c:1769:5] goto <bb 35>; [INV]
+
+  <bb 24> :
+  [ws.c:1772:6] _18 = [ws.c:1772:6] BIT_FIELD_REF <[ws.c:1772:10] data_44->set, 8, 16832>;
+  [ws.c:1772:6] _19 = _18 & 64;
+  [ws.c:1772:5] if (_19 != 0)
+    goto <bb 25>; [INV]
+  else
+    goto <bb 34>; [INV]
+
+  <bb 25> :
+  [ws.c:1775:14] result_62 = ws_flush (data_44, ws_58, 0);
+  [ws.c:1776:7] if (result_62 != 0)
+    goto <bb 26>; [INV]
+  else
+    goto <bb 27>; [INV]
+
+  <bb 26> :
+  [ws.c:1777:7] // predicted unlikely by goto predictor.
+  [ws.c:1777:7] goto <bb 35>; [INV]
+
+  <bb 27> :
+  [ws.c:1779:7] if (buffer_41 == 0B)
+    goto <bb 28>; [INV]
+  else
+    goto <bb 29>; [INV]
+
+  <bb 28> :
+  [ws.c:1780:7] Curl_failf (data_44, [ws.c:1780:19] "[WS] buffer is NULL in raw mode");
+  [ws.c:1781:14] _70 = 43;
+  [ws.c:1781:14] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1781:14] goto <bb 42>; [INV]
+
+  <bb 29> :
+  [ws.c:1783:7] if (sent_45(D) == 0B)
+    goto <bb 30>; [INV]
+  else
+    goto <bb 31>; [INV]
+
+  <bb 30> :
+  [ws.c:1784:7] Curl_failf (data_44, [ws.c:1784:19] "[WS] sent is NULL in raw mode");
+  [ws.c:1785:14] _68 = 43;
+  [ws.c:1785:14] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1785:14] goto <bb 42>; [INV]
+
+  <bb 31> :
+  [ws.c:1787:8] _20 = fragsize_51(D) != 0;
+  [ws.c:1787:17] _21 = flags_52(D) != 0;
+  [ws.c:1787:17] _22 = _20 | _21;
+  [ws.c:1787:7] if (_22 != 0)
+    goto <bb 32>; [INV]
+  else
+    goto <bb 33>; [INV]
+
+  <bb 32> :
+  [ws.c:1788:7] Curl_failf (data_44, [ws.c:1788:19] "[WS] fragsize and flags must be zero in raw mode");
+  [ws.c:1789:14] _66 = 43;
+  [ws.c:1789:14] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1789:14] goto <bb 42>; [INV]
+
+  <bb 33> :
+  [ws.c:1791:14] result_64 = ws_send_raw (data_44, buffer_41, buflen_50(D), pnsent_48);
+  [ws.c:1792:5] // predicted unlikely by goto predictor.
+  [ws.c:1792:5] goto <bb 35>; [INV]
+
+  <bb 34> :
+  [ws.c:1796:12] result_60 = ws_enc_send (data_44, ws_58, buffer_41, buflen_50(D), fragsize_51(D), flags_52(D), pnsent_48);
+
+  <bb 35> :
+  # result_32 = PHI <[ws.c:1751:12] result_76(15), [ws.c:1756:14] result_56(19), [ws.c:1762:12] result_74(21), [ws.c:1768:12] result_72(23), [ws.c:1775:14] result_62(26), [ws.c:1791:14] result_64(33), [ws.c:1796:12] result_60(34)>
+[ws.c:1798:1] out:
+  [ws.c:1799:3] if (data_44 != 0B)
+    goto <bb 36>; [INV]
+  else
+    goto <bb 41>; [INV]
+
+  <bb 36> :
+  [ws.c:1799:3] _23 = [ws.c:1799:3] BIT_FIELD_REF <[ws.c:1799:3] data_44->set, 8, 16808>;
+  [ws.c:1799:3] _24 = _23 & 32;
+  [ws.c:1799:3] if (_24 != 0)
+    goto <bb 37>; [INV]
+  else
+    goto <bb 41>; [INV]
+
+  <bb 37> :
+  [ws.c:1799:3] _25 = [ws.c:1799:3] [ws.c:1799:3] data_44->state.feat;
+  [ws.c:1799:3] if (_25 == 0B)
+    goto <bb 39>; [INV]
+  else
+    goto <bb 38>; [INV]
+
+  <bb 38> :
+  [ws.c:1799:3] _26 = [ws.c:1799:3] [ws.c:1799:3] data_44->state.feat;
+  [ws.c:1799:3] _27 = [ws.c:1799:3] _26->log_level;
+  [ws.c:1799:3] if (_27 > 0)
+    goto <bb 39>; [INV]
+  else
+    goto <bb 41>; [INV]
+
+  <bb 39> :
+  [ws.c:1799:3] _28 = [ws.c:1799:3] Curl_trc_feat_ws.log_level;
+  [ws.c:1799:3] if (_28 > 0)
+    goto <bb 40>; [INV]
+  else
+    goto <bb 41>; [INV]
+
+  <bb 40> :
+  [ws.c:1799:3] _29 = [ws.c:1799:3] *pnsent_48;
+  [ws.c:1799:3] _30 = [ws.c:1799:3] [ws.c:1799:3] data_44->set.ws_raw_mode;
+  [ws.c:1799:3] _31 = (int) _30;
+  [ws.c:1799:3] Curl_trc_ws (data_44, [ws.c:1799:3] "curl_ws_send(len=%zu, fragsize=%ld, flags=%x, raw=%d) -> %d, %zu", buflen_50(D), fragsize_51(D), flags_52(D), _31, result_32, _29);
+
+  <bb 41> :
+  [ws.c:1803:10] _78 = result_32;
+
+  <bb 42> :
+  # _34 = PHI <[ws.c:1742:12] _79(7), [ws.c:1781:14] _70(28), [ws.c:1785:14] _68(30), [ws.c:1789:14] _66(32), [ws.c:1803:10] _78(41)>
+  ndummy ={v} {CLOBBER};
+  return _34;
+
+}
+
+
+
+;; Function curl_ws_meta (curl_ws_meta, funcdef_no=142, decl_uid=6592, cgraph_uid=143, symbol_order=144)
+
+__attribute__((visibility ("default")))
+const struct curl_ws_frame * curl_ws_meta (CURL * d)
+{
+  struct websocket * ws;
+  struct Curl_easy * data;
+  unsigned int _1;
+  _Bool _2;
+  struct connectdata * _3;
+  unsigned char _4;
+  unsigned char _5;
+  struct connectdata * _6;
+  const struct curl_ws_frame * _7;
+  const struct curl_ws_frame * _16;
+  const struct curl_ws_frame * _17;
+
+  <bb 2> :
+  [ws.c:1822:21] data_11 = d_10(D);
+  [ws.c:1823:5] if (data_11 != 0B)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 3> :
+  [ws.c:1823:6] _1 = [ws.c:1823:6] data_11->magic;
+  [ws.c:1823:6] if (_1 == 3235830701)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 4> :
+  [ws.c:1823:32] _2 = Curl_is_in_callback (data_11);
+  [ws.c:1823:29] if (_2 != 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 5> :
+  [ws.c:1824:10] _3 = [ws.c:1824:10] data_11->conn;
+  [ws.c:1823:58] if (_3 != 0B)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 6> :
+  [ws.c:1824:20] _4 = [ws.c:1824:20] BIT_FIELD_REF <[ws.c:1824:25] data_11->set, 8, 16832>;
+  [ws.c:1824:20] _5 = _4 & 64;
+  [ws.c:1824:17] if (_5 == 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 7> :
+  [ws.c:1826:10] _6 = [ws.c:1826:10] data_11->conn;
+  [ws.c:1826:10] ws_15 = Curl_conn_meta_get (_6, [ws.c:1826:41] "meta:proto:ws:conn");
+  [ws.c:1827:7] if (ws_15 != 0B)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 8> :
+  [ws.c:1828:14] _16 = [ws.c:1828:14] &[ws.c:1828:17] ws_15->recvframe;
+  [ws.c:1828:14] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1828:14] goto <bb 10>; [INV]
+
+  <bb 9> :
+  [ws.c:1831:10] _17 = 0B;
+
+  <bb 10> :
+  # _7 = PHI <[ws.c:1828:14] _16(8), [ws.c:1831:10] _17(9)>
+  return _7;
+
+}
+
+
+
+;; Function curl_ws_start_frame (curl_ws_start_frame, funcdef_no=143, decl_uid=6590, cgraph_uid=144, symbol_order=145)
+
+__attribute__((visibility ("default")))
+CURLcode curl_ws_start_frame (CURL * d, unsigned int flags, curl_off_t frame_len)
+{
+  struct Curl_easy * data;
+  CURLcode result;
+  struct websocket * ws;
+  unsigned int _1;
+  unsigned char _2;
+  unsigned char _3;
+  unsigned char _4;
+  unsigned char _5;
+  struct curl_trc_feat * _6;
+  struct curl_trc_feat * _7;
+  int _8;
+  int _9;
+  struct connectdata * _10;
+  struct connectdata * _11;
+  unsigned char _12;
+  unsigned char _13;
+  long int _14;
+  struct bufq * _15;
+  struct ws_encoder * _16;
+  unsigned char _17;
+  unsigned char _18;
+  struct curl_trc_feat * _19;
+  struct curl_trc_feat * _20;
+  int _21;
+  int _22;
+  CURLcode _24;
+  CURLcode _48;
+  CURLcode _50;
+  CURLcode _51;
+
+  <bb 2> :
+  [ws.c:1839:12] result_28 = 0;
+  [ws.c:1840:21] data_30 = d_29(D);
+  [ws.c:1842:5] if (data_30 == 0B)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 3>; [INV]
+
+  <bb 3> :
+  [ws.c:1842:7] _1 = [ws.c:1842:7] data_30->magic;
+  [ws.c:1842:6] if (_1 != 3235830701)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  [ws.c:1843:12] _51 = 43;
+  [ws.c:1843:12] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1843:12] goto <bb 29>; [INV]
+
+  <bb 5> :
+  [ws.c:1844:6] _2 = [ws.c:1844:6] BIT_FIELD_REF <[ws.c:1844:10] data_30->set, 8, 16832>;
+  [ws.c:1844:6] _3 = _2 & 64;
+  [ws.c:1844:5] if (_3 != 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 6> :
+  [ws.c:1845:5] Curl_failf (data_30, [ws.c:1845:17] "cannot curl_ws_start_frame() with CURLWS_RAW_MODE enabled");
+  [ws.c:1846:12] _50 = 2;
+  [ws.c:1846:12] // predicted unlikely by early return (on trees) predictor.
+  [ws.c:1846:12] goto <bb 29>; [INV]
+
+  <bb 7> :
+  [ws.c:1849:3] if (data_30 != 0B)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 8> :
+  [ws.c:1849:3] _4 = [ws.c:1849:3] BIT_FIELD_REF <[ws.c:1849:3] data_30->set, 8, 16808>;
+  [ws.c:1849:3] _5 = _4 & 32;
+  [ws.c:1849:3] if (_5 != 0)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 9> :
+  [ws.c:1849:3] _6 = [ws.c:1849:3] [ws.c:1849:3] data_30->state.feat;
+  [ws.c:1849:3] if (_6 == 0B)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 10> :
+  [ws.c:1849:3] _7 = [ws.c:1849:3] [ws.c:1849:3] data_30->state.feat;
+  [ws.c:1849:3] _8 = [ws.c:1849:3] _7->log_level;
+  [ws.c:1849:3] if (_8 > 0)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 11> :
+  [ws.c:1849:3] _9 = [ws.c:1849:3] Curl_trc_feat_ws.log_level;
+  [ws.c:1849:3] if (_9 > 0)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 12> :
+  [ws.c:1849:3] Curl_trc_ws (data_30, [ws.c:1849:3] "curl_ws_start_frame(flags=%x, frame_len=%ld", flags_32(D), frame_len_33(D));
+
+  <bb 13> :
+  [ws.c:1852:11] _10 = [ws.c:1852:11] data_30->conn;
+  [ws.c:1852:5] if (_10 == 0B)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 14> :
+  [ws.c:1853:5] Curl_failf (data_30, [ws.c:1853:17] "[WS] No associated connection");
+  [ws.c:1854:12] result_47 = 55;
+  [ws.c:1855:5] // predicted unlikely by goto predictor.
+  [ws.c:1855:5] goto <bb 28>; [INV]
+
+  <bb 15> :
+  [ws.c:1857:8] _11 = [ws.c:1857:8] data_30->conn;
+  [ws.c:1857:8] ws_36 = Curl_conn_meta_get (_11, [ws.c:1857:39] "meta:proto:ws:conn");
+  [ws.c:1858:5] if (ws_36 == 0B)
+    goto <bb 16>; [INV]
+  else
+    goto <bb 17>; [INV]
+
+  <bb 16> :
+  [ws.c:1859:5] Curl_failf (data_30, [ws.c:1859:17] "[WS] Not a websocket transfer");
+  [ws.c:1860:12] result_45 = 55;
+  [ws.c:1861:5] // predicted unlikely by goto predictor.
+  [ws.c:1861:5] goto <bb 28>; [INV]
+
+  <bb 17> :
+  [ws.c:1864:6] _12 = [ws.c:1864:6] BIT_FIELD_REF <[ws.c:1864:10] data_30->set, 8, 16832>;
+  [ws.c:1864:6] _13 = _12 & 64;
+  [ws.c:1864:5] if (_13 != 0)
+    goto <bb 18>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 18> :
+  [ws.c:1865:5] Curl_failf (data_30, [ws.c:1865:17] "[WS] cannot start frame in raw mode");
+  [ws.c:1866:12] result_43 = 55;
+  [ws.c:1867:5] // predicted unlikely by goto predictor.
+  [ws.c:1867:5] goto <bb 28>; [INV]
+
+  <bb 19> :
+  [ws.c:1870:13] _14 = [ws.c:1870:13] [ws.c:1870:8] ws_36->enc.payload_remain;
+  [ws.c:1870:5] if (_14 != 0)
+    goto <bb 20>; [INV]
+  else
+    goto <bb 21>; [INV]
+
+  <bb 20> :
+  [ws.c:1871:5] Curl_failf (data_30, [ws.c:1871:17] "[WS] previous frame not finished");
+  [ws.c:1872:12] result_41 = 55;
+  [ws.c:1873:5] // predicted unlikely by goto predictor.
+  [ws.c:1873:5] goto <bb 28>; [INV]
+
+  <bb 21> :
+  [ws.c:1876:12] _15 = [ws.c:1876:12] &[ws.c:1877:33] ws_36->sendbuf;
+  [ws.c:1876:12] _16 = [ws.c:1876:12] &[ws.c:1876:43] ws_36->enc;
+  [ws.c:1876:12] result_38 = ws_enc_write_head (data_30, ws_36, _16, flags_32(D), frame_len_33(D), _15);
+  [ws.c:1878:5] if (result_38 != 0)
+    goto <bb 22>; [INV]
+  else
+    goto <bb 28>; [INV]
+
+  <bb 22> :
+  [ws.c:1879:5] if (data_30 != 0B)
+    goto <bb 23>; [INV]
+  else
+    goto <bb 28>; [INV]
+
+  <bb 23> :
+  [ws.c:1879:5] _17 = [ws.c:1879:5] BIT_FIELD_REF <[ws.c:1879:5] data_30->set, 8, 16808>;
+  [ws.c:1879:5] _18 = _17 & 32;
+  [ws.c:1879:5] if (_18 != 0)
+    goto <bb 24>; [INV]
+  else
+    goto <bb 28>; [INV]
+
+  <bb 24> :
+  [ws.c:1879:5] _19 = [ws.c:1879:5] [ws.c:1879:5] data_30->state.feat;
+  [ws.c:1879:5] if (_19 == 0B)
+    goto <bb 26>; [INV]
+  else
+    goto <bb 25>; [INV]
+
+  <bb 25> :
+  [ws.c:1879:5] _20 = [ws.c:1879:5] [ws.c:1879:5] data_30->state.feat;
+  [ws.c:1879:5] _21 = [ws.c:1879:5] _20->log_level;
+  [ws.c:1879:5] if (_21 > 0)
+    goto <bb 26>; [INV]
+  else
+    goto <bb 28>; [INV]
+
+  <bb 26> :
+  [ws.c:1879:5] _22 = [ws.c:1879:5] Curl_trc_feat_ws.log_level;
+  [ws.c:1879:5] if (_22 > 0)
+    goto <bb 27>; [INV]
+  else
+    goto <bb 28>; [INV]
+
+  <bb 27> :
+  [ws.c:1879:5] Curl_trc_ws (data_30, [ws.c:1879:5] "curl_start_frame(), error  adding frame head %d", result_38);
+
+  <bb 28> :
+  # result_23 = PHI <[ws.c:1854:12] result_47(14), [ws.c:1860:12] result_45(16), [ws.c:1866:12] result_43(18), [ws.c:1872:12] result_41(20), [ws.c:1876:12] result_38(21), [ws.c:1876:12] result_38(22), [ws.c:1876:12] result_38(23), [ws.c:1876:12] result_38(25), [ws.c:1876:12] result_38(26), [ws.c:1876:12] result_38(27)>
+[ws.c:1882:1] out:
+  [ws.c:1883:10] _48 = result_23;
+
+  <bb 29> :
+  # _24 = PHI <[ws.c:1843:12] _51(4), [ws.c:1846:12] _50(6), [ws.c:1883:10] _48(28)>
+  return _24;
+
+}
+
+

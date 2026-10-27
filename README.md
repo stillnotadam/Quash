@@ -7,6 +7,22 @@ GCC GIMPLE), validated by a differential fix-commit oracle. Study subject: curl.
 
 The paper is in `paper/paper.pdf` (compile `paper/paper.tex`, or read `paper/paper.html`).
 
+## Try it in 60 seconds
+No curl build needed; the reference checker runs on committed GIMPLE for the example claims.
+```
+git clone https://github.com/stillnotadam/proof-carrying-triage
+cd proof-carrying-triage
+pip install -r requirements.txt
+python code/ccvr_check.py paper/examples/slop_bounds_telnet.json       # REFUTED + "verified-unsat"
+python code/ccvr_check.py paper/examples/slop_bounds_ws.json           # REFUTED + "verified-unsat"
+python code/ccvr_check.py paper/examples/slop_reuse_host.json          # REFUTED + "verified-unsat"
+python code/ccvr_check.py paper/examples/genuine_CVE-2026-19931.json   # ESCALATE (genuine preserved)
+python code/ccvr_check.py paper/examples/genuine_bounds_CVE-2023-38545.json  # ESCALATE
+```
+Each REFUTED verdict prints a standalone SMT-LIB proof obligation and re-verifies it in a fresh solver
+(`"independent_verification": "verified-unsat"`); the two genuine CVEs are escalated, not refuted. Write your own
+claim by copying a file in `paper/examples/` (format: `paper/claim_schema.json`).
+
 ## Safety and scope
 This repository is **defense only**. It contains no grounded-slop generator (none was built). It does **not**
 redistribute raw HackerOne report bodies; it ships report **IDs and labels** plus fetch scripts, so anyone can
